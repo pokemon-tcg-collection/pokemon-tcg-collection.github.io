@@ -2,9 +2,10 @@ import { fileURLToPath, URL } from 'node:url'
 
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import Vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
-import Fonts from 'unplugin-fonts/vite'
+import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
+import fonts from 'unplugin-fonts/vite'
 import vueDevTools from 'vite-plugin-vue-devtools'
+import { visualizer } from 'rollup-plugin-visualizer'
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -13,24 +14,34 @@ export default defineConfig({
       template: { transformAssetUrls },
     }),
     // https://github.com/vuetifyjs/vuetify-loader/tree/master/packages/vite-plugin#readme
-    Vuetify({
+    vuetify({
       styles: {
         configFile: 'src/styles/settings.scss',
       },
     }),
-    Fonts({
+    fonts({
       fontsource: {
         families: [
           {
             name: 'Roboto',
             weights: [100, 300, 400, 500, 700, 900],
-            styles: ['normal', 'italic']
+            styles: ['normal', 'italic'],
           },
         ],
       },
     }),
     vueDevTools(),
+    visualizer({
+      open: false,
+      filename: 'bundle-visualization.html',
+      emitFile: false,
+      gzipSize: true,
+      brotliSize: true,
+    }),
   ],
+  build: {
+    sourcemap: 'hidden',
+  },
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),

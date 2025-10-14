@@ -27,6 +27,8 @@ export default defineConfig({
             weights: [100, 300, 400, 500, 700, 900],
             styles: ['normal', 'italic'],
           },
+          // support of japanese/chinese/korean
+          // https://github.com/podlove/podlove-subscribe-button/issues/110#issuecomment-292117885
         ],
       },
     }),

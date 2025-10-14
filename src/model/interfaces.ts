@@ -6,35 +6,57 @@ export type TransactionPlace = 'online-store' | 'store'
 export interface Transaction {
   /** internal id */
   id: string
+
   /** label for transaction */
   name?: string
   /** note/description */
   description?: string
   /** type of transaction */
+
   type: TransactionType
   /** date and time */
   date?: string
   /** type of location for transaction (online or in-person) */
   place?: TransactionPlace
-  /** contents */
-  items: Item[]
   /** price/cost */
   cost: number
+
+  /** contents */
+  items: Item[]
+
+  /** binary attachments (e.g. images, pdf) */
+  attachments?: Attachment[]
 }
 
-export type ItemType = 'booster' | 'booster-display' | 'mini-tin'
+export type ItemType = 'booster' | 'booster-display' | 'tin' | 'mini-tin' | 'etb' | 'blister'
 
 export interface Item {
   /** internal id */
   id: string
+
   /** type of item */
   type: ItemType
   /** label */
   label?: string
   /** single item cost */
   cost: number
+
   /** contents, e.g. number of boosters, accessories */
-  contents: unknown[]
+  contents: ItemPart[]
+}
+
+export interface ItemPart {
+  amount: number
+  /** item type (booster, coin, card-savers, ...) */
+  type: string
+}
+
+export interface BoosterItemPart extends ItemPart {
+  /** number of pokemon cards */
+  card_count: number
+
+  language: CardLanguageID
+  set: string
 }
 
 // -------------------------------------------------------------------------
@@ -45,7 +67,7 @@ export type CardLanguageID = (typeof CARD_LANGUAGES)[number]['code']
 export const CARD_LANGUAGES = [
   // inter languages
   { code: 'en', short: 'ENG', name: 'English' },
-  { code: 'fr', short: 'FRA', name: 'Frensh' },
+  { code: 'fr', short: 'FRA', name: 'French' },
   { code: 'es', short: 'SPA', name: 'Spanish' },
   { code: 'es-mx', short: 'SPA', name: 'Spanish (Mexican)' }, // ?
   { code: 'it', short: 'ITA', name: 'Italian' },
@@ -75,20 +97,29 @@ export interface Card {
   name: string
   number: string
   set: string
-  boosters: string[]
-  rarity: string
+  boosters?: string[]
+  rarity?: string
 
   /** total number of cards */
   amount: number
   /** card details */
-  cards: unknown[]
+  cards?: unknown[]
 
   // related transactions/items/...
+  item_ids?: string[]
+  transaction_ids?: string[]
 
   // availability? (for statistics (pull-rates), but e.g. card might have been sold/gifted-away)
 
   /** TCGDex API identifier for metadata */
-  pcgdex_id?: string
+  tcgdex_id?: string
 }
 
 // -------------------------------------------------------------------------
+
+export interface Attachment {
+  id: string
+  filename: string
+  mimetype: string
+  blob: Blob
+}

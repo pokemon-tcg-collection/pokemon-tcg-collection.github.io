@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <h1>Cards</h1>
+  <h1>Card List</h1>
   <v-row>
     <v-col v-for="n in 24" :key="n" cols="3">
       <v-card height="200" class="d-flex flex-column">

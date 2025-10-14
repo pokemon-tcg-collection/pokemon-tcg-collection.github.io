@@ -1,7 +1,35 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
+import type { RouteLocationAsPathGeneric, RouteLocationAsRelativeGeneric } from 'vue-router'
+import { useRoute, useRouter } from 'vue-router'
+
+const router = useRouter()
+console.log('router', router)
+const route = useRoute()
+console.log('route', route)
 
 const drawer = ref(false)
+
+const breadcrumbs = computed(() =>
+  (
+    [{ to: { name: 'home' }, title: 'Home' }] as {
+      to: string | RouteLocationAsPathGeneric | RouteLocationAsRelativeGeneric | undefined
+      title: string
+    }[]
+  ).concat(
+    route.matched
+      .filter(
+        (route, idx, allRoutes) =>
+          route.name !== 'home' &&
+          (route.name !== undefined ||
+            (allRoutes.length > idx + 1 && allRoutes[idx + 1]?.path !== route.path)),
+      )
+      .map((route) => ({
+        to: { path: route.path },
+        title: (route.meta.breadcrumb_name as unknown as string) ?? route.name ?? 'a',
+      })),
+  ),
+)
 </script>
 
 <template>
@@ -21,8 +49,13 @@ const drawer = ref(false)
       </v-list>
     </v-navigation-drawer>
 
-    <v-main class="d-flex">
+    <v-main>
       <v-container>
+        <v-breadcrumbs :items="breadcrumbs" v-if="breadcrumbs.length > 1">
+          <template v-slot:divider
+            ><v-icon icon="mdi-pokeball"></v-icon><span class="d-sr-only">/</span></template
+          >
+        </v-breadcrumbs>
         <router-view />
       </v-container>
     </v-main>

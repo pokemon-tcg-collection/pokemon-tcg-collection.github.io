@@ -11,6 +11,8 @@ import 'vuetify/styles'
 // Composables
 import { createVuetify } from 'vuetify'
 
+// TODO: check how we use/import MDI icons: https://vuetifyjs.com/en/features/icon-fonts/#mdi-js-svg
+
 // https://vuetifyjs.com/en/introduction/why-vuetify/#feature-guides
 export default createVuetify({
   theme: {

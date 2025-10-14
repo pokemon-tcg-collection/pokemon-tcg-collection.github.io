@@ -63,7 +63,17 @@ export const useWorkInProgressStore = defineStore('workInProgress', () => {
 
   // -------------------------------------------------------------------------
 
-  return { add, has, getWithInfo, get, finish, clear }
+  return {
+    // state
+    objects,
+    // actions
+    add,
+    has,
+    getWithInfo,
+    get,
+    finish,
+    clear,
+  }
 })
 
 if (import.meta.hot) {

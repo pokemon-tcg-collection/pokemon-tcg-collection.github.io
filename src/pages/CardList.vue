@@ -1,16 +1,44 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { computed } from 'vue'
+
+import { useCardsStore } from '@/stores/cards'
+
+const cardsStore = useCardsStore()
+
+const cards = computed(() =>
+  Array.from(cardsStore.cards.values()).map((card) => ({
+    id: card.id,
+    name: card.name,
+    card: card,
+  })),
+)
+</script>
 
 <template>
   <h1>Card List</h1>
-  <v-row>
-    <v-col v-for="n in 24" :key="n" cols="3">
+  <v-list>
+    <v-list-item v-for="card in cards" :key="card.id" :value="card.id" :title="card.name">
+      <template v-slot:prepend>
+        <v-chip class="me-2">{{ card.card.amount }}x</v-chip>
+      </template>
+      <template v-slot:append>
+        <!-- <span>{{ card.card.set }}</span> -->
+        <v-btn-group>
+          <v-btn :to="{ name: 'card', params: { id: card.id } }">View</v-btn>
+          <v-btn :to="{ name: 'card-edit', params: { id: card.id } }">Edit</v-btn>
+        </v-btn-group>
+      </template>
+    </v-list-item>
+  </v-list>
+  <!-- <v-row>
+    <v-col v-for="card in cards" :key="card.id" cols="3">
       <v-card height="200" class="d-flex flex-column">
-        <v-card-title>Card {{ n }}</v-card-title>
+        <v-card-title>{{ card.name }}</v-card-title>
         <v-spacer></v-spacer>
         <v-card-actions>
-          <v-btn :to="{ name: 'card', params: { id: n } }">Card Details</v-btn>
+          <v-btn :to="{ name: 'card', params: { id: card.id } }">Card Details</v-btn>
         </v-card-actions>
       </v-card>
     </v-col>
-  </v-row>
+  </v-row> -->
 </template>

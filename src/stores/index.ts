@@ -1,4 +1,11 @@
 // Utilities
 import { createPinia } from 'pinia'
+import type { PiniaPluginContext } from 'pinia'
 
-export default createPinia()
+const pinia = createPinia()
+
+pinia.use((context: PiniaPluginContext) => {
+  console.log('pinia plugin', context)
+})
+
+export default pinia

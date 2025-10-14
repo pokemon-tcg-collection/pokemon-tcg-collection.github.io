@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue'
+import { computed, onMounted, ref } from 'vue'
 import type { RouteLocationAsPathGeneric, RouteLocationAsRelativeGeneric } from 'vue-router'
 import { useRoute, useRouter } from 'vue-router'
+import { useCardsStore } from './stores/cards'
 
 const router = useRouter()
 console.log('router', router)
@@ -30,6 +31,29 @@ const breadcrumbs = computed(() =>
       })),
   ),
 )
+
+onMounted(() => {
+  const cardsStore = useCardsStore()
+
+  // TODO: mock data
+  cardsStore.add({
+    id: 'd68d1ba7-52e9-4c3b-a134-787f40f8823d',
+    language: 'en',
+    name: 'Dark Charizard',
+    number: '4',
+    set: 'base5',
+    amount: 5,
+    tcgdex_id: 'base5-4',
+  })
+  cardsStore.add({
+    id: 'f12475de-024c-457a-9d3d-dee8c86f4468',
+    language: 'de',
+    name: 'Pikachu',
+    number: '11 12',
+    set: '',
+    amount: 2,
+  })
+})
 </script>
 
 <template>

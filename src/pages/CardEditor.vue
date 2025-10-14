@@ -9,8 +9,10 @@ import { useRoute, useRouter } from 'vue-router'
 import type { Card } from '@/model/interfaces'
 import { CARD_LANGUAGES } from '@/model/interfaces'
 import { useWorkInProgressStore } from '@/stores/workInProgress'
+import { useCardsStore } from '@/stores/cards'
 
 const wipStore = useWorkInProgressStore()
+const cardsStore = useCardsStore()
 
 const router = useRouter()
 console.log('router', router)
@@ -25,14 +27,16 @@ const returnLocation = (
 const card = ref<Card>(
   cardIdFromParam !== undefined && wipStore.has(cardIdFromParam)
     ? wipStore.get<Card>(cardIdFromParam)!
-    : {
-        id: uuidv4(),
-        language: 'en',
-        name: '',
-        number: '',
-        set: '',
-        amount: 1,
-      },
+    : cardIdFromParam !== undefined && cardsStore.has(cardIdFromParam)
+      ? cardsStore.get(cardIdFromParam)!
+      : {
+          id: uuidv4(),
+          language: 'en',
+          name: '',
+          number: '',
+          set: '',
+          amount: 1,
+        },
 )
 
 const tcgdex_languages = ['en', 'fr', 'es', 'it', 'pt', 'de'] // NOTE: manually since not exported
@@ -128,6 +132,7 @@ async function onCardSelected(cardId: string) {
 
   card.value.number = tcgCard.localId
   card.value.name = tcgCard.name
+  card.value.tcgdex_id = tcgCard.id
 }
 
 function onAddNewTransaction() {
@@ -146,7 +151,7 @@ function onAddNewTransaction() {
 function onSave() {
   console.log('Save Card', toRaw(card.value))
 
-  // TODO: maybe only remove if finished saving?
+  cardsStore.add(card.value)
   if (wipStore.has(card.value.id)) wipStore.finish(card.value.id)
 
   if (returnLocation === undefined) {
@@ -162,6 +167,8 @@ watch(
   (n, o) => {
     if (n === o || !n) return
     updateTCGData()
+    // if card already has a set selected
+    updateTCGCardData()
   },
   { immediate: true },
 )

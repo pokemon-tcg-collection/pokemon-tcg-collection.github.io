@@ -5,14 +5,14 @@ import CardEditor from '@/pages/CardEditor.vue'
 import CardList from '@/pages/CardList.vue'
 import CardOverview from '@/pages/CardOverview.vue'
 import Home from '@/pages/Home.vue'
-import Settings from '@/pages/Settings.vue'
-import SettingsDatabase from '@/pages/SettingsDatabase.vue'
-import SettingsTCGDex from '@/pages/SettingsTCGDex.vue'
+import ManagementAuditLog from '@/pages/ManagementAuditLog.vue'
+import ManagementDatabase from '@/pages/ManagementDatabase.vue'
+import ManagementOverview from '@/pages/ManagementOverview.vue'
+import ManagementTCGDex from '@/pages/ManagementTCGDex.vue'
 import Transaction from '@/pages/Transaction.vue'
 import TransactionEditor from '@/pages/TransactionEditor.vue'
 import TransactionList from '@/pages/TransactionList.vue'
 import TransactionOverview from '@/pages/TransactionOverview.vue'
-import SettingsAuditLog from '@/pages/SettingsAuditLog.vue'
 
 export type EditRouteNames = 'card-edit' | 'transaction-edit'
 
@@ -93,32 +93,32 @@ export default [
     ],
   },
   {
-    path: '/settings',
-    meta: { breadcrumb_name: 'Settings' },
-    redirect: { name: 'settings' },
+    path: '/control',
+    meta: { breadcrumb_name: 'Management' },
+    redirect: { name: 'management' },
     children: [
       {
         path: 'overview',
-        name: 'settings',
-        component: Settings,
-        meta: { breadcrumb_name: 'Settings' },
+        name: 'management',
+        component: ManagementOverview,
+        meta: { breadcrumb_name: 'Management' },
       },
       {
         path: 'database',
         name: 'database',
-        component: SettingsDatabase,
+        component: ManagementDatabase,
         meta: { breadcrumb_name: 'Database' },
       },
       {
         path: 'tcgdex',
         name: 'tcgdex',
-        component: SettingsTCGDex,
+        component: ManagementTCGDex,
         meta: { breadcrumb_name: 'TCGDex API' },
       },
       {
         path: 'audit',
         name: 'audit',
-        component: SettingsAuditLog,
+        component: ManagementAuditLog,
         meta: { breadcrumb_name: 'Audit Log' },
       },
     ],

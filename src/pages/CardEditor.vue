@@ -15,9 +15,7 @@ const wipStore = useWorkInProgressStore()
 const cardsStore = useCardsStore()
 
 const router = useRouter()
-console.log('router', router)
 const route = useRoute()
-console.log('route', route)
 
 const cardIdFromParam = route.params.id as string | undefined
 const returnLocation = (

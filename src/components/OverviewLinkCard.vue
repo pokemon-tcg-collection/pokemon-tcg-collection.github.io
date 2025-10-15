@@ -23,7 +23,7 @@ const props = defineProps<{
       <slot></slot>
     </v-card-text>
     <v-card-actions>
-      <v-btn :to="props.to" :text="props.toLabel"></v-btn>
+      <v-btn :to="props.to" :text="props.toLabel" append-icon="mdi-arrow-right"></v-btn>
     </v-card-actions>
   </v-card>
 

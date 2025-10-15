@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import { computed, onMounted, ref } from 'vue'
 import type { RouteLocationAsPathGeneric, RouteLocationAsRelativeGeneric } from 'vue-router'
-import { useRoute, useRouter } from 'vue-router'
-import { useCardsStore } from './stores/cards'
+import { useRoute } from 'vue-router'
 
-const router = useRouter()
-console.log('router', router)
+import { useCardsStore } from '@/stores/cards'
+import { useTransactionsStore } from '@/stores/transactions'
+
 const route = useRoute()
-console.log('route', route)
+console.debug('route', route)
 
 const drawer = ref(false)
 
@@ -34,6 +34,7 @@ const breadcrumbs = computed(() =>
 
 onMounted(() => {
   const cardsStore = useCardsStore()
+  const transactionsStore = useTransactionsStore()
 
   // TODO: mock data
   cardsStore.add({
@@ -53,6 +54,30 @@ onMounted(() => {
     set: '',
     amount: 2,
   })
+
+  transactionsStore.add({
+    id: '123',
+    type: 'purchase',
+    cost: 100,
+    cost_unit: 'EUR',
+    cost_type: 'buy',
+  })
+  transactionsStore.add({
+    id: '456',
+    name: 'Sold my best holo :-(',
+    type: 'sale',
+    cost: 400,
+    cost_unit: 'EUR',
+    cost_type: 'sell',
+  })
+  transactionsStore.add({
+    id: '789',
+    name: 'Happi happi happi ...',
+    type: 'gift',
+    cost: 0,
+    cost_unit: 'EUR',
+    date: new Date(),
+  })
 })
 </script>
 
@@ -69,11 +94,11 @@ onMounted(() => {
         <v-list-item link title="Cards" :to="{ name: 'cards' }"></v-list-item>
         <v-list-item link title="Transactions" :to="{ name: 'transactions' }"></v-list-item>
         <v-spacer></v-spacer>
-        <v-list-group value="Settings" class="mb-3" nav>
+        <v-list-group value="Management" class="mb-3" nav>
           <template v-slot:activator="{ props }">
-            <v-list-item v-bind="props" title="Settings"></v-list-item>
+            <v-list-item v-bind="props" title="Management"></v-list-item>
           </template>
-          <v-list-item link title="Overview" :to="{ name: 'settings' }"></v-list-item>
+          <v-list-item link title="Overview" :to="{ name: 'management' }"></v-list-item>
           <v-list-item link title="Database" :to="{ name: 'database' }"></v-list-item>
           <v-list-item link title="TCGDex API" :to="{ name: 'tcgdex' }"></v-list-item>
           <v-list-item link title="Audit Log" :to="{ name: 'audit' }"></v-list-item>

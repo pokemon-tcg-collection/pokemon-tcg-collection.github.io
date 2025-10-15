@@ -1,7 +1,8 @@
 // -------------------------------------------------------------------------
 
 export type TransactionType = 'purchase' | 'sale' | 'gift'
-export type TransactionPlace = 'online-store' | 'store'
+export type TransactionPlaceType = 'online-store' | 'store'
+export type TransactionCostType = 'buy' | 'sell'
 
 export interface Transaction {
   /** internal id */
@@ -15,18 +16,38 @@ export interface Transaction {
 
   type: TransactionType
   /** date and time */
-  date?: string
+  date?: string | Date
   /** type of location for transaction (online or in-person) */
-  place?: TransactionPlace
+  place?: TransactionPlaceType
+  place_id?: string
+
   /** price/cost */
   cost: number
+  /** unit for price/cost */
+  cost_unit: 'EUR'
+  cost_type?: TransactionCostType
 
   /** contents */
-  items: Item[]
+  items?: Item[]
 
   /** binary attachments (e.g. images, pdf) */
-  attachments?: Attachment[]
+  attachment_ids?: string[]
 }
+
+export interface PlaceLocal {
+  type: 'local'
+  name: string
+  address: string
+  url?: string
+}
+
+export interface PlaceOnline {
+  type: 'online'
+  name: string
+  url: string
+}
+
+export type Place = PlaceLocal | PlaceOnline
 
 export type ItemType = 'booster' | 'booster-display' | 'tin' | 'mini-tin' | 'etb' | 'blister'
 
@@ -119,6 +140,7 @@ export interface Card {
 
 export interface Attachment {
   id: string
+  description?: string
   filename: string
   mimetype: string
   blob: Blob

@@ -1,19 +1,14 @@
 <script setup lang="ts">
 import { computed, onMounted, ref } from 'vue'
 import { onBeforeRouteUpdate, useRoute } from 'vue-router'
-import { useDisplay } from 'vuetify'
 import type { SupportedLanguages, Card as TCGCard } from '@tcgdex/sdk'
 import TCGdex from '@tcgdex/sdk'
 
-import type { Card } from '@/model/interfaces'
 import { useCardsStore } from '@/stores/cards'
 
 const cardsStore = useCardsStore()
 
-const { smAndDown } = useDisplay()
-
 const route = useRoute()
-console.log('route', route)
 
 const cardIdFromParam = route.params.id as string
 const card = cardsStore.get(cardIdFromParam)!

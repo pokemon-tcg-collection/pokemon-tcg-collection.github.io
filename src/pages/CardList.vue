@@ -15,7 +15,10 @@ const cards = computed(() =>
 </script>
 
 <template>
-  <h1>Card List</h1>
+  <h1 class="mb-3">Card List</h1>
+
+  <p class="mb-3">{{ cards.length }} Cards</p>
+
   <v-list>
     <v-list-item v-for="card in cards" :key="card.id" :value="card.id" :title="card.name">
       <template v-slot:prepend>
@@ -24,8 +27,12 @@ const cards = computed(() =>
       <template v-slot:append>
         <!-- <span>{{ card.card.set }}</span> -->
         <v-btn-group>
-          <v-btn :to="{ name: 'card', params: { id: card.id } }">View</v-btn>
-          <v-btn :to="{ name: 'card-edit', params: { id: card.id } }">Edit</v-btn>
+          <v-btn :to="{ name: 'card', params: { id: card.id } }" prepend-icon="mdi-file-eye"
+            >View</v-btn
+          >
+          <v-btn :to="{ name: 'card-edit', params: { id: card.id } }" prepend-icon="mdi-file-edit"
+            >Edit</v-btn
+          >
         </v-btn-group>
       </template>
     </v-list-item>

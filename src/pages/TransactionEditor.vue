@@ -7,9 +7,7 @@ import { ref, toRaw } from 'vue'
 import type { Transaction } from '@/model/interfaces'
 
 const router = useRouter()
-console.log('router', router)
 const route = useRoute()
-console.log('route', route)
 
 const transactionIdFromParam = route.params.id as string | undefined
 const returnLocation = (
@@ -20,7 +18,7 @@ const transaction = ref<Transaction>({
   id: uuidv4(),
   type: 'purchase',
   cost: 0,
-  items: [],
+  cost_unit: 'EUR',
 })
 
 function onSave() {

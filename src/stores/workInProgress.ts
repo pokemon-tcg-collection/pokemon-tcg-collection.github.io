@@ -63,6 +63,12 @@ export const useWorkInProgressStore = defineStore('workInProgress', () => {
 
   // -------------------------------------------------------------------------
 
+  function _reset() {
+    objects.value = new Map()
+  }
+
+  // -------------------------------------------------------------------------
+
   return {
     // state
     objects,
@@ -73,6 +79,8 @@ export const useWorkInProgressStore = defineStore('workInProgress', () => {
     get,
     finish,
     clear,
+    // internals
+    $reset: _reset,
   }
 })
 

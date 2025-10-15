@@ -1,51 +1,50 @@
 import { acceptHMRUpdate, defineStore } from 'pinia'
 import { shallowRef, toRaw, triggerRef } from 'vue'
 
-import type { Card } from '@/model/interfaces'
+import type { Transaction } from '@/model/interfaces'
 
-export const useCardsStore = defineStore('cards', () => {
+export const useTransactionsStore = defineStore('transactions', () => {
   // -----------------------------------------------------------------------
   // state
 
-  const cards = shallowRef<Map<string, Card>>(new Map())
+  const transactions = shallowRef<Map<string, Transaction>>(new Map())
+
+  // TODO: lookup by date/type?
 
   // -----------------------------------------------------------------------
   // actions
 
-  function add(card: Card, { overwrite = true }: { overwrite?: boolean } = {}): boolean {
+  function add(
+    transaction: Transaction,
+    { overwrite = true }: { overwrite?: boolean } = {},
+  ): boolean {
     if (!overwrite) {
-      if (!has(card)) {
-        cards.value.set(card.id, card)
+      if (!has(transaction)) {
+        transactions.value.set(transaction.id, transaction)
         return true
       } else {
-        console.debug('Card with ID exists already!', card.id, card)
+        console.debug('Transaction with ID exists already!', transaction.id, transaction)
         return false
       }
     }
 
-    cards.value.set(card.id, card)
+    transactions.value.set(transaction.id, transaction)
     return true
   }
 
-  function get(id: string): Card | undefined {
-    return cards.value.get(id)
+  function get(id: string): Transaction | undefined {
+    return transactions.value.get(id)
   }
 
-  function has(idOrCard: Card | string): boolean {
-    const id = typeof idOrCard === 'string' ? idOrCard : idOrCard.id
-    return cards.value.has(id)
-  }
-
-  async function fetchInfo(idOrCard: Card | string) {
-    const id = typeof idOrCard === 'string' ? idOrCard : idOrCard.id
-    // TODO ...
-    console.warn('[fetchInfo]', 'Not implemented', id)
+  function has(idOrTransaction: Transaction | string): boolean {
+    const id = typeof idOrTransaction === 'string' ? idOrTransaction : idOrTransaction.id
+    return transactions.value.has(id)
   }
 
   // -----------------------------------------------------------------------
 
   function _serialize(): string {
-    const data = Array.from(cards.value.values()).map((card) => toRaw(card))
+    const data = Array.from(transactions.value.values()).map((card) => toRaw(card))
     return JSON.stringify(data)
   }
 
@@ -56,9 +55,9 @@ export const useCardsStore = defineStore('cards', () => {
       overwriteExisting = false,
     }: { clearBefore?: boolean; overwriteExisting?: boolean } = {},
   ) {
-    let dataDeser: Card[] | undefined = undefined
+    let dataDeser: Transaction[] | undefined = undefined
     try {
-      dataDeser = JSON.parse(data) satisfies Card[]
+      dataDeser = JSON.parse(data) satisfies Transaction[]
     } catch (err) {
       console.error('Unable to deserialize data', err)
       return false
@@ -71,25 +70,24 @@ export const useCardsStore = defineStore('cards', () => {
     dataDeser.forEach((entry) => add(entry, { overwrite: overwriteExisting }))
 
     // trigger a refresh
-    triggerRef(cards)
+    triggerRef(transactions)
 
     return true
   }
 
   function _reset() {
-    cards.value = new Map()
+    transactions.value = new Map()
   }
 
   // -----------------------------------------------------------------------
 
   return {
     // state
-    cards,
+    transactions,
     // actions
     add,
     get,
     has,
-    fetchInfo,
     // internals
     $serialize: _serialize,
     $deserialize: _deserialize,
@@ -98,5 +96,5 @@ export const useCardsStore = defineStore('cards', () => {
 })
 
 if (import.meta.hot) {
-  import.meta.hot.accept(acceptHMRUpdate(useCardsStore, import.meta.hot))
+  import.meta.hot.accept(acceptHMRUpdate(useTransactionsStore, import.meta.hot))
 }

@@ -12,14 +12,19 @@ import { ref } from 'vue'
 
 import { useAuditLogStore } from '@/stores/auditLog'
 import { useCardsStore } from '@/stores/cards'
+import { useTransactionsStore } from '@/stores/transactions'
+import { useWorkInProgressStore } from '@/stores/workInProgress'
 
 const cardsStore = useCardsStore()
+const transactionsStore = useTransactionsStore()
+const wipStore = useWorkInProgressStore()
 const auditLogStore = useAuditLogStore()
 
 type ExportableObjects = 'cards' | 'transactions' | 'audit'
 
 const FILENAME_BAGIT = 'bagit.txt'
 const FILENAME_CARDS = 'data/cards.json'
+const FILENAME_TRANSACTIONS = 'data/transactions.json'
 const FILENAME_AUDITLOG = 'data/auditLog.json'
 
 const exportItems = ref<ExportableObjects[]>(['cards', 'transactions'])
@@ -58,7 +63,14 @@ async function createZipBlob(objects: ExportableObjects[]) {
     await zipWriter.add(filename, reader)
   }
   if (objects.includes('transactions')) {
-    console.warn('Not implemented!', 'transactions') // TODO
+    const data = transactionsStore.$serialize()
+
+    const filename = FILENAME_TRANSACTIONS
+    const dataHash = await digestData(data)
+    hashes.set(filename, dataHash)
+
+    const reader = new TextReader(data)
+    await zipWriter.add(filename, reader)
   }
   if (objects.includes('audit')) {
     const data = auditLogStore.$serialize()
@@ -143,6 +155,26 @@ async function loadData(
     result &&= resultForCards
   }
 
+  const transactionsEntry = entries.find(
+    (entry) =>
+      entry.filename === FILENAME_TRANSACTIONS &&
+      !entry.directory &&
+      Object.hasOwn(entry, 'getData'),
+  )
+  if (transactionsEntry !== undefined) {
+    const writer = new TextWriter()
+    const data = await (transactionsEntry as FileEntry).getData(writer)
+    const resultForTransactions = transactionsStore.$deserialize(data, {
+      clearBefore,
+      overwriteExisting,
+    })
+    if (!resultForTransactions) {
+      console.warn('Unable to cleanly import transactions store!')
+      // TODO: should reset completely?
+    }
+    result &&= resultForTransactions
+  }
+
   await zipReader.close()
 
   return result
@@ -188,6 +220,8 @@ async function onDelete() {
   await auditLogStore.add('Delete database')
 
   cardsStore.$reset()
+  transactionsStore.$reset()
+  wipStore.$reset()
 
   // NOTE: does it make sense to delete audit logs? Let's keep them
   // auditLogStore.$reset()
@@ -200,14 +234,20 @@ async function onDelete() {
   <fieldset class="pa-3 my-2">
     <legend>Statistics</legend>
 
-    <dl>
-      <dt>Cards</dt>
-      <dd>{{ cardsStore.cards.size }} card entries</dd>
-    </dl>
-    <dl>
-      <dt>Audit Log</dt>
-      <dd>{{ auditLogStore.logs.length }} log entries</dd>
-    </dl>
+    <v-container class="d-flex flex-sm-column flex-md-row ga-3">
+      <v-card title="Cards">
+        <v-card-item>{{ cardsStore.cards.size }} card entries</v-card-item>
+      </v-card>
+      <v-card title="Transactions">
+        <v-card-item>{{ transactionsStore.transactions.size }} transaction entries</v-card-item>
+      </v-card>
+      <v-card title="Work in Progress">
+        <v-card-item>{{ wipStore.objects.size }} WIP objects</v-card-item>
+      </v-card>
+      <v-card title="Audit Log">
+        <v-card-item>{{ auditLogStore.logs.length }} log entries</v-card-item>
+      </v-card>
+    </v-container>
   </fieldset>
 
   <v-form>

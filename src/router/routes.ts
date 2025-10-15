@@ -6,10 +6,12 @@ import CardList from '@/pages/CardList.vue'
 import CardOverview from '@/pages/CardOverview.vue'
 import Home from '@/pages/Home.vue'
 import Settings from '@/pages/Settings.vue'
+import SettingsDatabase from '@/pages/SettingsDatabase.vue'
+import SettingsTCGDex from '@/pages/SettingsTCGDex.vue'
 import Transaction from '@/pages/Transaction.vue'
 import TransactionEditor from '@/pages/TransactionEditor.vue'
 import TransactionList from '@/pages/TransactionList.vue'
-import Transactions from '@/pages/Transactions.vue'
+import TransactionOverview from '@/pages/TransactionOverview.vue'
 
 export type EditRouteNames = 'card-edit' | 'transaction-edit'
 
@@ -22,8 +24,14 @@ export default [
   {
     path: '/cards',
     meta: { breadcrumb_name: 'Cards' },
+    redirect: { name: 'cards' },
     children: [
-      { path: '', name: 'cards', component: CardOverview, meta: { breadcrumb_name: 'Cards' } },
+      {
+        path: 'overview',
+        name: 'cards',
+        component: CardOverview,
+        meta: { breadcrumb_name: 'Cards' },
+      },
       {
         path: 'list',
         name: 'card-list',
@@ -51,11 +59,12 @@ export default [
   {
     path: '/transactions',
     meta: { breadcrumb_name: 'Transactions' },
+    redirect: { name: 'transactions' },
     children: [
       {
-        path: '',
+        path: 'overview',
         name: 'transactions',
-        component: Transactions,
+        component: TransactionOverview,
         meta: { breadcrumb_name: 'Transactions' },
       },
       {
@@ -85,12 +94,25 @@ export default [
   {
     path: '/settings',
     meta: { breadcrumb_name: 'Settings' },
+    redirect: { name: 'settings' },
     children: [
       {
-        path: '',
+        path: 'overview',
         name: 'settings',
         component: Settings,
         meta: { breadcrumb_name: 'Settings' },
+      },
+      {
+        path: 'database',
+        name: 'database',
+        component: SettingsDatabase,
+        meta: { breadcrumb_name: 'Database' },
+      },
+      {
+        path: 'tcgdex',
+        name: 'tcgdex',
+        component: SettingsTCGDex,
+        meta: { breadcrumb_name: 'TCGDex API' },
       },
     ],
   },

@@ -64,12 +64,19 @@ onMounted(() => {
     </v-app-bar>
 
     <v-navigation-drawer name="drawer" v-model="drawer" temporary>
-      <v-list class="fill-height d-flex flex-column">
+      <v-list class="fill-height d-flex flex-column" nav>
         <v-list-item link title="Home" :to="{ name: 'home' }"></v-list-item>
         <v-list-item link title="Cards" :to="{ name: 'cards' }"></v-list-item>
         <v-list-item link title="Transactions" :to="{ name: 'transactions' }"></v-list-item>
         <v-spacer></v-spacer>
-        <v-list-item link title="Settings" :to="{ name: 'settings' }" class="mb-3"></v-list-item>
+        <v-list-group value="Settings" class="mb-3">
+          <template v-slot:activator="{ props }">
+            <v-list-item v-bind="props" title="Settings"></v-list-item>
+          </template>
+          <v-list-item link title="Overview" :to="{ name: 'settings' }"></v-list-item>
+          <v-list-item link title="Database" :to="{ name: 'database' }"></v-list-item>
+          <v-list-item link title="TCGDex API" :to="{ name: 'tcgdex' }"></v-list-item>
+        </v-list-group>
       </v-list>
     </v-navigation-drawer>
 

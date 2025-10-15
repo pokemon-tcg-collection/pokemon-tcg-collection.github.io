@@ -1,12 +1,16 @@
 <script setup lang="ts">
-import type { Card } from '@/model/interfaces'
-import { useCardsStore } from '@/stores/cards'
-import type { SupportedLanguages, Card as TCGCard } from '@tcgdex/sdk'
-import TCGdex from '@tcgdex/sdk'
 import { computed, onMounted, ref } from 'vue'
 import { onBeforeRouteUpdate, useRoute } from 'vue-router'
+import { useDisplay } from 'vuetify'
+import type { SupportedLanguages, Card as TCGCard } from '@tcgdex/sdk'
+import TCGdex from '@tcgdex/sdk'
+
+import type { Card } from '@/model/interfaces'
+import { useCardsStore } from '@/stores/cards'
 
 const cardsStore = useCardsStore()
+
+const { smAndDown } = useDisplay()
 
 const route = useRoute()
 console.log('route', route)
@@ -24,11 +28,28 @@ const tcgdex = computed(() => {
   return tcgdex
 })
 
-const cardInfo = ref<TCGCard | undefined>(undefined)
+type TCGCardWithPricing = TCGCard & {
+  pricing?: {
+    cardmarket?: {
+      avg: number
+      unit: string
+      updated: Date | string
+    }
+    tcgplayer?: {
+      'unlimited-holofoil': {
+        marketPrice: number
+      }
+      unit: string
+      updated: Date | string
+    }
+  }
+}
+
+const cardInfo = ref<TCGCardWithPricing | undefined>(undefined)
 const imageUrl = ref<string | undefined>(undefined)
 
 onBeforeRouteUpdate((to, from) => {
-  console.debug('onBeforeRouteUpdate', { to, from })
+  console.debug('onBeforeRouteUpdate', { to, from }) // TODO
 })
 
 onMounted(async () => {
@@ -48,16 +69,16 @@ onMounted(async () => {
 </script>
 
 <template>
-  <h1>Card '{{ $route.params.id }}'</h1>
+  <h1 class="mb-3">{{ card.name }}</h1>
   <v-row>
-    <v-col cols="6">
+    <v-col sm="12" md="6" v-if="imageUrl">
       <v-card border>
         <v-card-text>
-          <v-img :src="imageUrl"></v-img>
+          <v-img :src="imageUrl" min-width="5rem"></v-img>
         </v-card-text>
       </v-card>
     </v-col>
-    <v-col cols="6" class="d-flex flex-column ga-3">
+    <v-col sm="12" md="6" class="d-flex flex-column ga-3">
       <v-card border>
         <v-card-title>{{ card.name }}</v-card-title>
         <v-card-subtitle v-if="cardInfo"
@@ -75,7 +96,7 @@ onMounted(async () => {
           <p v-if="cardInfo">TCGDex ID: {{ cardInfo?.id }}</p>
         </v-card-text>
       </v-card>
-      <v-card border v-if="cardInfo && Object.hasOwn(cardInfo, 'pricing')">
+      <v-card border v-if="cardInfo && Object.hasOwn(cardInfo, 'pricing') && cardInfo.pricing">
         <v-card-title>Pricing</v-card-title>
         <v-card-text>
           <v-table density="compact">

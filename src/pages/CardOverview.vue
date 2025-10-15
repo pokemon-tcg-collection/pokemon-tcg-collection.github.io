@@ -1,61 +1,30 @@
 <script setup lang="ts">
-import { useDisplay } from 'vuetify'
-
+import OverviewLinkCard from '@/components/OverviewLinkCard.vue'
+import OverviewLinkCardContainer from '@/components/OverviewLinkCardContainer.vue'
 import { useCardsStore } from '@/stores/cards'
 
 const cardsStore = useCardsStore()
-
-const { mdAndUp } = useDisplay()
 </script>
 
 <template>
   <h1 class="mb-5">Cards Overview</h1>
 
-  <v-container v-if="!mdAndUp" class="ga-5 d-flex flex-row">
-    <v-card
+  <overview-link-card-container>
+    <overview-link-card
+      icon="mdi-cards"
+      title="Card List"
       :to="{ name: 'card-list' }"
-      class="d-flex flex-column justify-center align-center py-4 px-6"
+      to-label="See Card list"
     >
-      <v-card-title>Card List</v-card-title>
-      <v-card-text class="mt-3 mb-5">
-        <v-sheet class="d-flex justify-center align-center pa-3" :elevation="1" border rounded>
-          <v-icon icon="mdi-cards" :style="{ '--v-icon-size-multiplier': 3 }"></v-icon>
-        </v-sheet>
-      </v-card-text>
-    </v-card>
-    <v-card
+      {{ cardsStore.cards.size }} Cards in collection.
+    </overview-link-card>
+    <overview-link-card
+      icon="mdi-pencil-plus"
+      title="New Card"
       :to="{ name: 'card-new' }"
-      class="d-flex flex-column justify-center align-center py-4 px-6"
+      to-label="Add a new Card"
     >
-      <v-card-title>New Card</v-card-title>
-      <v-card-text class="mt-3 mb-5">
-        <v-sheet class="d-flex justify-center align-center pa-3" :elevation="1" border rounded>
-          <v-icon icon="mdi-pencil-plus" :style="{ '--v-icon-size-multiplier': 3 }"></v-icon>
-        </v-sheet>
-      </v-card-text>
-    </v-card>
-  </v-container>
-
-  <v-row v-else>
-    <v-col cols="4" class="d-flex flex-column">
-      <v-card prepend-icon="mdi-cards" title="Card List" class="flex-grow-1 d-flex flex-column">
-        <v-card-text class="bg-surface-light pt-4 flex-grow-1">
-          {{ cardsStore.cards.size }} Cards in collection.
-        </v-card-text>
-        <v-card-actions><v-btn :to="{ name: 'card-list' }">See Card list</v-btn></v-card-actions>
-      </v-card>
-    </v-col>
-    <v-col cols="4" class="d-flex flex-column">
-      <v-card
-        prepend-icon="mdi-pencil-plus"
-        title="New Card"
-        class="flex-grow-1 d-flex flex-column"
-      >
-        <v-card-text class="bg-surface-light pt-4 flex-grow-1">
-          Create a new Card to add to your collection.
-        </v-card-text>
-        <v-card-actions><v-btn :to="{ name: 'card-new' }">Add a new Card</v-btn></v-card-actions>
-      </v-card>
-    </v-col>
-  </v-row>
+      Create a new Card to add to your collection.
+    </overview-link-card>
+  </overview-link-card-container>
 </template>

@@ -91,9 +91,9 @@ onMounted(() => {
       </v-container>
     </v-main>
 
-    <v-footer name="footer" app
-      ><div class="flex-1-0-100 text-center">© {{ new Date().getFullYear() }}</div></v-footer
-    >
+    <v-footer name="footer" class="flex-1-0-0 align-end">
+      <div class="flex-1-0-100 text-center">© {{ new Date().getFullYear() }}</div>
+    </v-footer>
   </v-app>
 </template>
 

@@ -1,5 +1,5 @@
-import { readonly, shallowRef } from 'vue'
-import { defineStore } from 'pinia'
+import { acceptHMRUpdate, defineStore } from 'pinia'
+import { readonly, ref, toRaw } from 'vue'
 import { useRoute } from 'vue-router'
 
 export interface AuditMessage {
@@ -15,7 +15,7 @@ export const useAuditLogStore = defineStore('auditLog', () => {
   // -----------------------------------------------------------------------
   // state
 
-  const logs = shallowRef<AuditMessage[]>([])
+  const logs = ref<AuditMessage[]>([])
   const logsPublic = readonly(logs)
 
   // -----------------------------------------------------------------------
@@ -34,10 +34,23 @@ export const useAuditLogStore = defineStore('auditLog', () => {
 
   // -----------------------------------------------------------------------
 
+  function _serialize(): string {
+    const data = Array.from(logs.value.values()).map((entry) => toRaw(entry))
+    return JSON.stringify(data)
+  }
+
+  // -----------------------------------------------------------------------
+
   return {
     // state
-    logsPublic,
+    logs: logsPublic,
     // actions
     add,
+    // internals
+    $serialize: _serialize,
   }
 })
+
+if (import.meta.hot) {
+  import.meta.hot.accept(acceptHMRUpdate(useAuditLogStore, import.meta.hot))
+}

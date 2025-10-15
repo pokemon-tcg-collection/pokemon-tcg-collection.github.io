@@ -12,6 +12,7 @@ import Transaction from '@/pages/Transaction.vue'
 import TransactionEditor from '@/pages/TransactionEditor.vue'
 import TransactionList from '@/pages/TransactionList.vue'
 import TransactionOverview from '@/pages/TransactionOverview.vue'
+import SettingsAuditLog from '@/pages/SettingsAuditLog.vue'
 
 export type EditRouteNames = 'card-edit' | 'transaction-edit'
 
@@ -113,6 +114,12 @@ export default [
         name: 'tcgdex',
         component: SettingsTCGDex,
         meta: { breadcrumb_name: 'TCGDex API' },
+      },
+      {
+        path: 'audit',
+        name: 'audit',
+        component: SettingsAuditLog,
+        meta: { breadcrumb_name: 'Audit Log' },
       },
     ],
   },

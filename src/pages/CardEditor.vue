@@ -8,8 +8,8 @@ import { useRoute, useRouter } from 'vue-router'
 
 import type { Card } from '@/model/interfaces'
 import { CARD_LANGUAGES } from '@/model/interfaces'
-import { useWorkInProgressStore } from '@/stores/workInProgress'
 import { useCardsStore } from '@/stores/cards'
+import { useWorkInProgressStore } from '@/stores/workInProgress'
 
 const wipStore = useWorkInProgressStore()
 const cardsStore = useCardsStore()
@@ -183,8 +183,8 @@ watch(
 </script>
 
 <template>
-  <h1>Card Editor</h1>
-  <v-form class="mt-3">
+  <h1 class="mb-3">Card Editor</h1>
+  <v-form>
     <fieldset class="pa-3 my-2">
       <legend>Set info</legend>
       <v-checkbox v-model="setInfoByUser" label="Manual input"></v-checkbox>
@@ -278,7 +278,7 @@ watch(
       <v-text-field v-model="card.id" readonly label="Internal Card ID"></v-text-field>
     </fieldset>
 
-    <v-btn text="Save" @click="onSave"></v-btn>
+    <v-btn color="primary" text="Save" @click="onSave"></v-btn>
   </v-form>
 </template>
 

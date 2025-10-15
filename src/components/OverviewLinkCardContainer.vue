@@ -9,7 +9,7 @@ function getSlotChildren(slot: Slot | undefined): VNode[] {
 function unwrapChildren(rawChildren: VNode[]) {
   const children = [] as VNode[]
   rawChildren.forEach((child) => {
-    console.log(child.type, child.type === Comment)
+    // console.debug(child.type, child.type === Comment)
     // components that are hidden via v-if end up as a Comment <!--v-if--> so we skip over them
     if (child.type === Comment) return
 

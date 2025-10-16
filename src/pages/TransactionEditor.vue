@@ -4,11 +4,12 @@ import type { RouteLocationAsPathGeneric, RouteLocationAsRelativeGeneric } from 
 import { useRoute, useRouter } from 'vue-router'
 import { useDisplay } from 'vuetify'
 
-import type { Place, Transaction } from '@/model/interfaces'
+import type { Item, Place, Transaction } from '@/model/interfaces'
 import { COST_UNITS } from '@/model/interfaces'
 import { createNewTransaction } from '@/model/utils'
 import { useItemsStore } from '@/stores/items'
 import { usePlacesStore } from '@/stores/places'
+import { useSettingsStore } from '@/stores/settings'
 import { useTransactionsStore } from '@/stores/transactions'
 import { useWorkInProgressStore } from '@/stores/workInProgress'
 
@@ -18,6 +19,7 @@ const transactionsStore = useTransactionsStore()
 const placesStore = usePlacesStore()
 const itemsStore = useItemsStore()
 const wipStore = useWorkInProgressStore()
+const settings = useSettingsStore()
 
 const router = useRouter()
 const route = useRoute()
@@ -330,9 +332,10 @@ async function onSave() {
       </v-autocomplete>
     </fieldset>
 
-    <fieldset class="pa-3 my-2">
+    <fieldset class="pa-3 my-2" v-if="settings.editorShowInternalID">
       <legend>Internals</legend>
       <v-text-field
+        v-if="settings.editorShowInternalID"
         v-model="transaction.id"
         readonly
         label="Internal Transaction ID"

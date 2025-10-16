@@ -6,10 +6,12 @@ import { useRoute, useRouter } from 'vue-router'
 import type { Place } from '@/model/interfaces'
 import { createNewPlace } from '@/model/utils'
 import { usePlacesStore } from '@/stores/places'
+import { useSettingsStore } from '@/stores/settings'
 import { useWorkInProgressStore } from '@/stores/workInProgress'
 
 const placesStore = usePlacesStore()
 const wipStore = useWorkInProgressStore()
+const settings = useSettingsStore()
 
 const router = useRouter()
 const route = useRoute()
@@ -93,9 +95,14 @@ async function onSave() {
       <v-textarea v-model="place.notes" label="Notes"></v-textarea>
     </fieldset>
 
-    <fieldset class="pa-3 my-2">
+    <fieldset class="pa-3 my-2" v-if="settings.editorShowInternalID">
       <legend>Internals</legend>
-      <v-text-field v-model="place.id" readonly label="Internal Place ID"></v-text-field>
+      <v-text-field
+        v-if="settings.editorShowInternalID"
+        v-model="place.id"
+        readonly
+        label="Internal Place ID"
+      ></v-text-field>
     </fieldset>
 
     <v-btn color="primary" text="Save" @click="onSave"></v-btn>

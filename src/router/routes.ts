@@ -10,6 +10,7 @@ import ItemList from '@/pages/ItemList.vue'
 import ManagementAuditLog from '@/pages/ManagementAuditLog.vue'
 import ManagementDatabase from '@/pages/ManagementDatabase.vue'
 import ManagementOverview from '@/pages/ManagementOverview.vue'
+import ManagementSettings from '@/pages/ManagementSettings.vue'
 import ManagementTCGDex from '@/pages/ManagementTCGDex.vue'
 import ManagementWIPList from '@/pages/ManagementWIPList.vue'
 import PlaceEditor from '@/pages/PlaceEditor.vue'
@@ -172,6 +173,12 @@ export default [
         name: 'wip',
         component: ManagementWIPList,
         meta: { breadcrumb_name: 'Work in Progress' },
+      },
+      {
+        path: 'settings',
+        name: 'settings',
+        component: ManagementSettings,
+        meta: { breadcrumb_name: 'Settings' },
       },
       {
         path: 'database',

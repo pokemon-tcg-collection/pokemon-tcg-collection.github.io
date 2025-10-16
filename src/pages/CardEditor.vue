@@ -10,6 +10,7 @@ import { CARD_LANGUAGES, TCGDEX_LANGUAGES } from '@/model/interfaces'
 import { createNewCard } from '@/model/utils'
 import { useCardsStore } from '@/stores/cards'
 import { useItemsStore } from '@/stores/items'
+import { useSettingsStore } from '@/stores/settings'
 import { useTransactionsStore } from '@/stores/transactions'
 import { useWorkInProgressStore } from '@/stores/workInProgress'
 
@@ -17,6 +18,7 @@ const wipStore = useWorkInProgressStore()
 const cardsStore = useCardsStore()
 const transactionsStore = useTransactionsStore()
 const itemsStore = useItemsStore()
+const settings = useSettingsStore()
 
 const router = useRouter()
 const route = useRoute()
@@ -332,9 +334,14 @@ watch(
       </v-autocomplete>
     </fieldset>
 
-    <fieldset class="pa-3 my-2">
+    <fieldset class="pa-3 my-2" v-if="settings.editorShowInternalID">
       <legend>Internals</legend>
-      <v-text-field v-model="card.id" readonly label="Internal Card ID"></v-text-field>
+      <v-text-field
+        v-if="settings.editorShowInternalID"
+        v-model="card.id"
+        readonly
+        label="Internal Card ID"
+      ></v-text-field>
     </fieldset>
 
     <v-btn color="primary" text="Save" @click="onSave"></v-btn>

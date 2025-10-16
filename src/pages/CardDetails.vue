@@ -6,8 +6,10 @@ import { onBeforeRouteUpdate, useRoute } from 'vue-router'
 
 import { TCGDEX_LANGUAGES } from '@/model/interfaces'
 import { useCardsStore } from '@/stores/cards'
+import { useSettingsStore } from '@/stores/settings'
 
 const cardsStore = useCardsStore()
+const settings = useSettingsStore()
 
 const route = useRoute()
 
@@ -87,7 +89,7 @@ onMounted(async () => {
         </v-card-text>
         <v-card-text>
           <p class="font-weight-black">Internals</p>
-          <p>ID: {{ card.id }}</p>
+          <p v-if="settings.editorShowInternalID">ID: {{ card.id }}</p>
           <p v-if="cardInfo">TCGDex Card ID: {{ cardInfo?.id }}</p>
         </v-card-text>
       </v-card>

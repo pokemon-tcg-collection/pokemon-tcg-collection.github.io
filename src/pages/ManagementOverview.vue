@@ -20,6 +20,14 @@ const wipStore = useWorkInProgressStore()
       List of work-in-progress objects.
     </OverviewLinkCard>
     <OverviewLinkCard
+      icon="mdi-tune"
+      title="Settings"
+      :to="{ name: 'settings' }"
+      to-label="Application settings"
+    >
+      Configure global app settings.
+    </OverviewLinkCard>
+    <OverviewLinkCard
       icon="mdi-database"
       title="Database"
       :to="{ name: 'database' }"

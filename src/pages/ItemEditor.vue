@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, readonly, ref, toRaw } from 'vue'
+import { readonly, ref, toRaw } from 'vue'
 import type { RouteLocationAsPathGeneric, RouteLocationAsRelativeGeneric } from 'vue-router'
 import { useRoute, useRouter } from 'vue-router'
 import { useDisplay } from 'vuetify'
@@ -8,12 +8,14 @@ import type { Item } from '@/model/interfaces'
 import { COST_UNITS, ITEM_TYPES } from '@/model/interfaces'
 import { createNewItem } from '@/model/utils'
 import { useItemsStore } from '@/stores/items'
+import { useSettingsStore } from '@/stores/settings'
 import { useWorkInProgressStore } from '@/stores/workInProgress'
 
 const { smAndDown, xs } = useDisplay()
 
 const itemsStore = useItemsStore()
 const wipStore = useWorkInProgressStore()
+const settings = useSettingsStore()
 
 const router = useRouter()
 const route = useRoute()
@@ -134,9 +136,14 @@ async function onSave() {
       </v-row>
     </fieldset>
 
-    <fieldset class="pa-3 my-2">
+    <fieldset class="pa-3 my-2" v-if="settings.editorShowInternalID">
       <legend>Internals</legend>
-      <v-text-field v-model="item.id" readonly label="Internal Item ID"></v-text-field>
+      <v-text-field
+        v-if="settings.editorShowInternalID"
+        v-model="item.id"
+        readonly
+        label="Internal Item ID"
+      ></v-text-field>
     </fieldset>
 
     <v-btn color="primary" text="Save" @click="onSave"></v-btn>

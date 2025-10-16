@@ -57,6 +57,7 @@ const breadcrumbs = computed(() =>
               <v-list-item-title>Draft objects</v-list-item-title>
             </v-badge>
           </v-list-item>
+          <v-list-item link title="Settings" :to="{ name: 'settings' }"></v-list-item>
           <v-list-item link title="Database" :to="{ name: 'database' }"></v-list-item>
           <v-list-item link title="TCGDex API" :to="{ name: 'tcgdex' }"></v-list-item>
           <v-list-item link title="Audit Log" :to="{ name: 'audit' }"></v-list-item>

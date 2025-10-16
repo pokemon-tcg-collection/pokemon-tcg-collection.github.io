@@ -8,7 +8,7 @@ export interface WIPObject {
   /** global unique internal id (no duplicates across different object types) */
   id: string
   /** route name to finish editing the object */
-  type: 'card-edit' | 'transaction-edit' | 'place-edit' | string
+  type: 'card-edit' | 'transaction-edit' | 'item-edit' | 'place-edit' | string
   /** date when object was created/saved-for-later */
   date: Date
   /** object data */

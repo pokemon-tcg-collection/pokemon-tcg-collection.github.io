@@ -1,5 +1,10 @@
 // -------------------------------------------------------------------------
 
+export type CostUnits = (typeof COST_UNITS)[number]['id']
+export const COST_UNITS = [{ title: 'Euro (€)', id: 'EUR' }] as const
+
+// -------------------------------------------------------------------------
+
 export type TransactionType = 'purchase' | 'sale' | 'gift'
 export type TransactionPlaceType = 'online-store' | 'store'
 export type TransactionCostType = 'buy' | 'sell'
@@ -24,15 +29,27 @@ export interface Transaction {
   /** price/cost */
   cost: number
   /** unit for price/cost */
-  cost_unit: 'EUR'
+  cost_unit: CostUnits
   cost_type?: TransactionCostType
 
   /** contents */
-  items?: Item[]
+  items: TransactionItem[]
 
   /** binary attachments (e.g. images, pdf) */
   attachment_ids?: string[]
 }
+
+export interface TransactionItem {
+  amount: number
+  item_id: string
+
+  /** price/cost */
+  cost: number
+  /** unit for price/cost */
+  cost_unit: CostUnits
+}
+
+// -------------------------------------------------------------------------
 
 interface PlaceGeneric {
   /** internal id */
@@ -57,7 +74,18 @@ export interface PlaceOnline extends PlaceGeneric {
 
 export type Place = PlaceLocal | PlaceOnline
 
-export type ItemType = 'booster' | 'booster-display' | 'tin' | 'mini-tin' | 'etb' | 'blister'
+// -------------------------------------------------------------------------
+
+export type ItemType = (typeof ITEM_TYPES)[number]['id']
+
+export const ITEM_TYPES = [
+  { id: 'booster', label: 'Booster' },
+  { id: 'booster-display', label: 'Booster Display' },
+  { id: 'tin', label: 'Tin' },
+  { id: 'mini-tin', label: 'Mini Tin' },
+  { id: 'etb', label: 'Etb' },
+  { id: 'blister', label: 'Blister' },
+] as const
 
 export interface Item {
   /** internal id */
@@ -66,21 +94,29 @@ export interface Item {
   /** type of item */
   type: ItemType
   /** label */
-  label?: string
+  label: string
+
   /** single item cost */
-  cost: number
+  msrp_cost?: number
+  msrp_cost_unit?: CostUnits
 
   /** contents, e.g. number of boosters, accessories */
   contents: ItemPart[]
+  /** full-text description */
+  description?: string
 }
 
 export interface ItemPart {
   amount: number
   /** item type (booster, coin, card-savers, ...) */
   type: string
+  /** plain text description */
+  label?: string
 }
 
 export interface BoosterItemPart extends ItemPart {
+  type: 'booster'
+
   /** number of pokemon cards */
   card_count: number
 
@@ -156,3 +192,5 @@ export interface Attachment {
   mimetype: string
   blob: Blob
 }
+
+// -------------------------------------------------------------------------

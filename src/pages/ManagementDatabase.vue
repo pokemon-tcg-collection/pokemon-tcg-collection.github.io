@@ -12,6 +12,7 @@ import { ref } from 'vue'
 
 import { useAuditLogStore } from '@/stores/auditLog'
 import { useCardsStore } from '@/stores/cards'
+import { useItemsStore } from '@/stores/items'
 import { usePlacesStore } from '@/stores/places'
 import { useTransactionsStore } from '@/stores/transactions'
 import { useWorkInProgressStore } from '@/stores/workInProgress'
@@ -19,19 +20,21 @@ import { useWorkInProgressStore } from '@/stores/workInProgress'
 const cardsStore = useCardsStore()
 const transactionsStore = useTransactionsStore()
 const placesStore = usePlacesStore()
+const itemsStore = useItemsStore()
 const wipStore = useWorkInProgressStore()
 const auditLogStore = useAuditLogStore()
 
-type ExportableObjects = 'cards' | 'transactions' | 'places' | 'wip' | 'audit'
+type ExportableObjects = 'cards' | 'transactions' | 'places' | 'items' | 'wip' | 'audit'
 
 const FILENAME_BAGIT = 'bagit.txt'
 const FILENAME_CARDS = 'data/cards.json'
 const FILENAME_TRANSACTIONS = 'data/transactions.json'
 const FILENAME_PLACES = 'data/places.json'
+const FILENAME_ITEMS = 'data/items.json'
 const FILENAME_WIPOBJS = 'data/wipobjs.json'
 const FILENAME_AUDITLOG = 'data/auditLog.json'
 
-const exportItems = ref<ExportableObjects[]>(['cards', 'transactions', 'places'])
+const exportItems = ref<ExportableObjects[]>(['cards', 'transactions', 'places', 'items'])
 const clearBeforeImport = ref(false)
 const overwriteExisting = ref(false)
 const uploadFile = ref<File>()
@@ -80,6 +83,16 @@ async function createZipBlob(objects: ExportableObjects[]) {
     const data = placesStore.$serialize()
 
     const filename = FILENAME_PLACES
+    const dataHash = await digestData(data)
+    hashes.set(filename, dataHash)
+
+    const reader = new TextReader(data)
+    await zipWriter.add(filename, reader)
+  }
+  if (objects.includes('items')) {
+    const data = itemsStore.$serialize()
+
+    const filename = FILENAME_ITEMS
     const dataHash = await digestData(data)
     hashes.set(filename, dataHash)
 
@@ -217,6 +230,24 @@ async function loadData(
     result &&= resultForPlaces
   }
 
+  const itemsEntry = entries.find(
+    (entry) =>
+      entry.filename === FILENAME_ITEMS && !entry.directory && Object.hasOwn(entry, 'getData'),
+  )
+  if (itemsEntry !== undefined) {
+    const writer = new TextWriter()
+    const data = await (itemsEntry as FileEntry).getData(writer)
+    const resultForItems = itemsStore.$deserialize(data, {
+      clearBefore,
+      overwriteExisting,
+    })
+    if (!resultForItems) {
+      console.warn('Unable to cleanly import items store!')
+      // TODO: should reset completely?
+    }
+    result &&= resultForItems
+  }
+
   await zipReader.close()
 
   return result
@@ -262,6 +293,7 @@ async function onDelete() {
   cardsStore.$reset()
   transactionsStore.$reset()
   placesStore.$reset()
+  itemsStore.$reset()
   wipStore.$reset()
 
   // NOTE: does it make sense to delete audit logs? Let's keep them
@@ -275,7 +307,7 @@ async function onDelete() {
   <fieldset class="pa-3 my-2">
     <legend>Statistics</legend>
 
-    <v-container class="d-flex flex-sm-column flex-md-row ga-3">
+    <v-container class="d-flex flex-wrap flex-sm-column flex-md-row ga-3">
       <v-card title="Cards">
         <v-card-item>{{ cardsStore.cards.size }} card entries</v-card-item>
       </v-card>
@@ -284,6 +316,9 @@ async function onDelete() {
       </v-card>
       <v-card title="Places">
         <v-card-item>{{ placesStore.places.size }} place entries</v-card-item>
+      </v-card>
+      <v-card title="Items">
+        <v-card-item>{{ itemsStore.items.size }} item entries</v-card-item>
       </v-card>
       <v-card title="Work in Progress">
         <v-card-item>{{ wipStore.objects.size }} WIP objects</v-card-item>
@@ -317,6 +352,13 @@ async function onDelete() {
         multiple
         hide-details
         label="Places"
+      ></v-checkbox>
+      <v-checkbox
+        v-model="exportItems"
+        value="items"
+        multiple
+        hide-details
+        label="Items"
       ></v-checkbox>
       <v-checkbox
         v-model="exportItems"

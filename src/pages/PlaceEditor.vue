@@ -95,7 +95,7 @@ async function onSave() {
 
     <fieldset class="pa-3 my-2">
       <legend>Internals</legend>
-      <v-text-field v-model="place.id" readonly label="Internal Card ID"></v-text-field>
+      <v-text-field v-model="place.id" readonly label="Internal Place ID"></v-text-field>
     </fieldset>
 
     <v-btn color="primary" text="Save" @click="onSave"></v-btn>

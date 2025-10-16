@@ -1,23 +1,23 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 
-import { usePlacesStore } from '@/stores/places'
+import { useItemsStore } from '@/stores/items'
 
-const placesStore = usePlacesStore()
+const itemsStore = useItemsStore()
 
-const places = computed(() =>
-  Array.from(placesStore.places.values()).map((place) => ({
-    id: place.id,
-    name: place.name,
-    place,
+const items = computed(() =>
+  Array.from(itemsStore.items.values()).map((item) => ({
+    id: item.id,
+    name: item.label,
+    item,
   })),
 )
 </script>
 
 <template>
-  <h1 class="mb-3">Place / Location List</h1>
+  <h1 class="mb-3">Item List</h1>
 
-  <p class="mb-3">{{ places.length }} Places</p>
+  <p class="mb-3">{{ items.length }} Items</p>
 
   <v-table striped="even" fixed-header density="compact">
     <thead>
@@ -28,14 +28,12 @@ const places = computed(() =>
       </tr>
     </thead>
     <tbody>
-      <tr v-for="place in places" :key="place.id">
-        <td class="fit">{{ place.place.type }}</td>
-        <td class="">{{ place.place.name }}</td>
+      <tr v-for="item in items" :key="item.id">
+        <td class="fit">{{ item.item.type }}</td>
+        <td class="">{{ item.item.label }}</td>
         <td class="fit">
           <v-btn-group density="compact" variant="text">
-            <v-btn
-              :to="{ name: 'place-edit', params: { id: place.id } }"
-              prepend-icon="mdi-file-edit"
+            <v-btn :to="{ name: 'item-edit', params: { id: item.id } }" prepend-icon="mdi-file-edit"
               >Edit</v-btn
             >
           </v-btn-group>

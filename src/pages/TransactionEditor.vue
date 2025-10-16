@@ -1,14 +1,15 @@
 <script setup lang="ts">
-import { computed, ref, toRaw } from 'vue'
+import { computed, readonly, ref, toRaw } from 'vue'
 import type { RouteLocationAsPathGeneric, RouteLocationAsRelativeGeneric } from 'vue-router'
 import { useRoute, useRouter } from 'vue-router'
 import { useDisplay } from 'vuetify'
 
 import type { Place, Transaction } from '@/model/interfaces'
+import { COST_UNITS } from '@/model/interfaces'
+import { createNewTransaction } from '@/model/utils'
 import { usePlacesStore } from '@/stores/places'
 import { useTransactionsStore } from '@/stores/transactions'
 import { useWorkInProgressStore } from '@/stores/workInProgress'
-import { createNewTransaction } from '@/model/utils'
 
 const { smAndDown, xs } = useDisplay()
 
@@ -42,6 +43,7 @@ const transactionDate = computed({
       v.setMinutes(oldDate.getMinutes())
       v.setSeconds(oldDate.getSeconds())
     }
+    console.log('[transactionDate:set]', v)
     transaction.value.date = v
   },
 })
@@ -55,10 +57,13 @@ const transactionTime = computed({
     newDate.setHours(Number.parseInt(parts[0]!))
     newDate.setMinutes(Number.parseInt(parts[1]!))
     newDate.setSeconds(parts[2] ? Number.parseInt(parts[2]) : 0)
+    console.log('[transactionTime:set]', newDate)
     transaction.value.date = newDate
   },
 })
 const transactionTimeDisplay = computed(() => transactionTime.value.toLocaleTimeString())
+
+const costUnits = readonly(COST_UNITS)
 
 const place_ids = computed<{ id: string; label: string; place: Place }[]>(() =>
   Array.from(placesStore.places.values()).map((place) => ({
@@ -82,6 +87,25 @@ async function onAddNewLocation() {
   })
   await router.push({
     name: 'place-new',
+    query: {
+      returnTo: JSON.stringify({ name: 'transaction-edit', params: { id: transaction.value.id } }),
+    },
+  })
+}
+async function onAddNewItem() {
+  console.debug('[onAddNewItem]')
+
+  // do temp save to allow to return back here
+  wipStore.add(transaction.value.id, 'transaction-edit', toRaw(transaction.value))
+
+  // do a history replace with transaction-edit to allow returning to this transaction editor
+  await router.replace({
+    name: 'transaction-edit',
+    params: { id: transaction.value.id },
+    query: route.query,
+  })
+  await router.push({
+    name: 'item-new',
     query: {
       returnTo: JSON.stringify({ name: 'transaction-edit', params: { id: transaction.value.id } }),
     },
@@ -147,7 +171,9 @@ async function onSave() {
             <v-col sm="6" cols="12" :class="{ ['pb-0']: smAndDown, ['pt-0']: xs }">
               <v-select
                 v-model="transaction.cost_unit"
-                :items="[{ title: 'Euro (€)', value: 'EUR' }]"
+                :items="costUnits"
+                item-value="id"
+                item-title="title"
                 label="Currency"
               ></v-select>
             </v-col>

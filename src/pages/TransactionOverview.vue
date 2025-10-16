@@ -21,6 +21,7 @@ import OverviewLinkCardContainer from '@/components/OverviewLinkCardContainer.vu
       :to="{ name: 'transaction-new' }"
       to-label="Add a new transaction"
     >
+      Record any purchase or sale.
     </OverviewLinkCard>
   </OverviewLinkCardContainer>
 
@@ -39,6 +40,26 @@ import OverviewLinkCardContainer from '@/components/OverviewLinkCardContainer.vu
       :to="{ name: 'place-new' }"
       to-label="Add a new place"
     >
+      Place where transactions happened.
+    </OverviewLinkCard>
+  </OverviewLinkCardContainer>
+
+  <OverviewLinkCardContainer>
+    <OverviewLinkCard
+      icon="mdi-receipt-text"
+      title="Item List"
+      :to="{ name: 'item-list' }"
+      to-label="See Item list"
+    >
+      The list of item types.
+    </OverviewLinkCard>
+    <OverviewLinkCard
+      icon="mdi-pencil-plus"
+      title="New Item"
+      :to="{ name: 'item-new' }"
+      to-label="Add a new item"
+    >
+      A booster, display, or other type of merchandise.
     </OverviewLinkCard>
   </OverviewLinkCardContainer>
 </template>

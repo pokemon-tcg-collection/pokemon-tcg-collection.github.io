@@ -2,12 +2,14 @@
 import OverviewLinkCard from '@/components/OverviewLinkCard.vue'
 import OverviewLinkCardContainer from '@/components/OverviewLinkCardContainer.vue'
 import { useCardsStore } from '@/stores/cards'
+import { useItemsStore } from '@/stores/items'
 import { usePlacesStore } from '@/stores/places'
 import { useTransactionsStore } from '@/stores/transactions'
 
 const cardsStore = useCardsStore()
 const transactionsStore = useTransactionsStore()
 const placesStore = usePlacesStore()
+const itemsStore = useItemsStore()
 </script>
 
 <template>
@@ -39,6 +41,15 @@ const placesStore = usePlacesStore()
       to-label="See Places list"
     >
       {{ placesStore.places.size }} known Places.
+    </OverviewLinkCard>
+
+    <OverviewLinkCard
+      icon="mdi-receipt-text"
+      title="Item List"
+      :to="{ name: 'item-list' }"
+      to-label="See Items list"
+    >
+      {{ itemsStore.items.size }} known Items.
     </OverviewLinkCard>
   </OverviewLinkCardContainer>
 </template>

@@ -15,7 +15,9 @@ const wipObjects = computed(() =>
           ? 'Card'
           : wipObject.type === 'place-edit'
             ? 'Place'
-            : wipObject.type,
+            : wipObject.type === 'item-edit'
+              ? 'Item'
+              : wipObject.type,
     wipObject,
   })),
 )

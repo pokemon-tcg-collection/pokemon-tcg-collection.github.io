@@ -5,6 +5,8 @@ import CardEditor from '@/pages/CardEditor.vue'
 import CardList from '@/pages/CardList.vue'
 import CardOverview from '@/pages/CardOverview.vue'
 import Home from '@/pages/Home.vue'
+import ItemEditor from '@/pages/ItemEditor.vue'
+import ItemList from '@/pages/ItemList.vue'
 import ManagementAuditLog from '@/pages/ManagementAuditLog.vue'
 import ManagementDatabase from '@/pages/ManagementDatabase.vue'
 import ManagementOverview from '@/pages/ManagementOverview.vue'
@@ -17,7 +19,7 @@ import TransactionEditor from '@/pages/TransactionEditor.vue'
 import TransactionList from '@/pages/TransactionList.vue'
 import TransactionOverview from '@/pages/TransactionOverview.vue'
 
-export type EditRouteNames = 'card-edit' | 'transaction-edit'
+export type EditRouteNames = 'card-edit' | 'transaction-edit' | 'place-edit' | 'item-edit'
 
 export default [
   {
@@ -25,6 +27,7 @@ export default [
     name: 'home',
     component: Home,
   },
+  // cards
   {
     path: '/cards',
     meta: { breadcrumb_name: 'Cards' },
@@ -46,11 +49,13 @@ export default [
         path: 'new',
         name: 'card-new',
         component: CardEditor,
+        meta: { breadcrumb_name: 'New Card' },
       },
       {
         path: ':id/edit',
         name: 'card-edit',
         component: CardEditor,
+        meta: { breadcrumb_name: 'Edit Card' },
       },
       {
         path: ':id',
@@ -60,6 +65,7 @@ export default [
       },
     ],
   },
+  // transactions
   {
     path: '/transactions',
     meta: { breadcrumb_name: 'Transactions' },
@@ -81,11 +87,13 @@ export default [
         path: 'new',
         name: 'transaction-new',
         component: TransactionEditor,
+        meta: { breadcrumb_name: 'New Transaction' },
       },
       {
         path: ':id/edit',
         name: 'transaction-edit',
         component: TransactionEditor,
+        meta: { breadcrumb_name: 'Edit Transaction' },
       },
       {
         path: ':id',
@@ -95,6 +103,7 @@ export default [
       },
     ],
   },
+  // places (transaction)
   {
     path: '/places',
     meta: { breadcrumb_name: 'Places' },
@@ -110,14 +119,43 @@ export default [
         path: 'new',
         name: 'place-new',
         component: PlaceEditor,
+        meta: { breadcrumb_name: 'New Place' },
       },
       {
         path: ':id/edit',
         name: 'place-edit',
         component: PlaceEditor,
+        meta: { breadcrumb_name: 'Edit Place' },
       },
     ],
   },
+  // items (transaction)
+  {
+    path: '/items',
+    meta: { breadcrumb_name: 'Items' },
+    redirect: { name: 'item-list' },
+    children: [
+      {
+        path: 'list',
+        name: 'item-list',
+        component: ItemList,
+        meta: { breadcrumb_name: 'Item List' },
+      },
+      {
+        path: 'new',
+        name: 'item-new',
+        component: ItemEditor,
+        meta: { breadcrumb_name: 'New Item' },
+      },
+      {
+        path: ':id/edit',
+        name: 'item-edit',
+        component: ItemEditor,
+        meta: { breadcrumb_name: 'Edit Item' },
+      },
+    ],
+  },
+  // control/management/admin
   {
     path: '/control',
     meta: { breadcrumb_name: 'Management' },
@@ -127,7 +165,7 @@ export default [
         path: 'overview',
         name: 'management',
         component: ManagementOverview,
-        meta: { breadcrumb_name: 'Management' },
+        meta: { breadcrumb_name: 'Dashboard' },
       },
       {
         path: 'wip',

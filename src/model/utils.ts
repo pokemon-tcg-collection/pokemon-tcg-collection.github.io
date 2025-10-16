@@ -1,5 +1,6 @@
 import { v4 as uuidv4 } from 'uuid'
-import type { Card, Place, Transaction } from './interfaces'
+
+import type { Card, Item, Place, Transaction } from './interfaces'
 
 export function createNewCard() {
   return {
@@ -19,6 +20,7 @@ export function createNewTransaction() {
     cost: 0,
     cost_unit: 'EUR',
     date: new Date(),
+    items: [],
   } satisfies Transaction
 }
 
@@ -29,4 +31,14 @@ export function createNewPlace() {
     name: '',
     url: '',
   } satisfies Place
+}
+
+export function createNewItem() {
+  return {
+    id: uuidv4(),
+    type: 'booster',
+    label: '',
+    msrp_cost_unit: 'EUR',
+    contents: [],
+  } satisfies Item
 }

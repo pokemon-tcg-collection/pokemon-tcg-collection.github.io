@@ -5,6 +5,7 @@ import { useRoute } from 'vue-router'
 
 import { useCardsStore } from '@/stores/cards'
 import { useTransactionsStore } from '@/stores/transactions'
+import { usePlacesStore } from './stores/places'
 
 const route = useRoute()
 console.debug('route', route)
@@ -35,6 +36,7 @@ const breadcrumbs = computed(() =>
 onMounted(() => {
   const cardsStore = useCardsStore()
   const transactionsStore = useTransactionsStore()
+  const placesStore = usePlacesStore()
 
   // TODO: mock data
   cardsStore.add({
@@ -77,6 +79,15 @@ onMounted(() => {
     cost: 0,
     cost_unit: 'EUR',
     date: new Date(),
+  })
+
+  placesStore.add({
+    id: '72864d29-48df-4004-b864-fa675ba92832',
+    type: 'local',
+    name: 'Gate to the Games',
+    url: 'https://www.gate-to-the-games.de/',
+    address:
+      'Richard-Wagner-Straße 9\nObjekt am Hallischen Tor 1\nBrühl 33\n04109 Leipzig\n\nTelefon: 0341 / 91025937\nE-Mail: leipzig@gate-to-the-games.de',
   })
 })
 </script>

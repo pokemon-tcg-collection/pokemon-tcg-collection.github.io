@@ -19,9 +19,26 @@ import OverviewLinkCardContainer from '@/components/OverviewLinkCardContainer.vu
       icon="mdi-pencil-plus"
       title="New Transaction"
       :to="{ name: 'transaction-new' }"
-      to-label="Add a new transaction."
+      to-label="Add a new transaction"
     >
-      The list of your transactions.
+    </OverviewLinkCard>
+  </OverviewLinkCardContainer>
+
+  <OverviewLinkCardContainer>
+    <OverviewLinkCard
+      icon="mdi-map-marker-multiple"
+      title="Place List"
+      :to="{ name: 'place-list' }"
+      to-label="See Places list"
+    >
+      The list of known places (websites, stores).
+    </OverviewLinkCard>
+    <OverviewLinkCard
+      icon="mdi-pencil-plus"
+      title="New Place"
+      :to="{ name: 'place-new' }"
+      to-label="Add a new place"
+    >
     </OverviewLinkCard>
   </OverviewLinkCardContainer>
 </template>

@@ -2,6 +2,7 @@ import { acceptHMRUpdate, defineStore } from 'pinia'
 import { shallowRef, toRaw, triggerRef } from 'vue'
 
 import type { Transaction } from '@/model/interfaces'
+import { toRawDeep } from './utils'
 
 export const useTransactionsStore = defineStore('transactions', () => {
   // -----------------------------------------------------------------------
@@ -18,22 +19,17 @@ export const useTransactionsStore = defineStore('transactions', () => {
     transaction: Transaction,
     { overwrite = true }: { overwrite?: boolean } = {},
   ): boolean {
-    if (!overwrite) {
-      if (!has(transaction)) {
-        transactions.value.set(transaction.id, transaction)
-        return true
-      } else {
-        console.debug('Transaction with ID exists already!', transaction.id, transaction)
-        return false
-      }
+    if (!overwrite && has(transaction)) {
+      console.debug('Transaction with ID exists already!', transaction.id, transaction)
+      return false
     }
 
-    transactions.value.set(transaction.id, transaction)
+    transactions.value.set(transaction.id, structuredClone(toRawDeep(transaction)))
     return true
   }
 
   function get(id: string): Transaction | undefined {
-    return transactions.value.get(id)
+    return structuredClone(toRaw(transactions.value.get(id)))
   }
 
   function has(idOrTransaction: Transaction | string): boolean {
@@ -44,7 +40,7 @@ export const useTransactionsStore = defineStore('transactions', () => {
   // -----------------------------------------------------------------------
 
   function _serialize(): string {
-    const data = Array.from(transactions.value.values()).map((card) => toRaw(card))
+    const data = Array.from(transactions.value.values()).map((transaction) => toRaw(transaction))
     return JSON.stringify(data)
   }
 

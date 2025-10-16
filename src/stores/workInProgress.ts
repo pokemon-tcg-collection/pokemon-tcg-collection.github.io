@@ -1,7 +1,8 @@
 import { acceptHMRUpdate, defineStore } from 'pinia'
-import { shallowRef } from 'vue'
+import { shallowRef, toRaw } from 'vue'
 
 import type { EditRouteNames } from '@/router/routes'
+import { toRawDeep } from './utils'
 
 export interface WIPObject {
   /** global unique internal id (no duplicates across different object types) */
@@ -32,7 +33,7 @@ export const useWorkInProgressStore = defineStore('workInProgress', () => {
       id,
       type: editRouteName,
       date: new Date(),
-      data: wip,
+      data: structuredClone(toRawDeep(wip)),
     } satisfies WIPObject)
   }
 
@@ -45,7 +46,7 @@ export const useWorkInProgressStore = defineStore('workInProgress', () => {
   }
 
   function get<T>(id: string): T | undefined {
-    return getWithInfo(id)?.data as T
+    return structuredClone(toRaw(getWithInfo(id)?.data)) as T
   }
 
   function finish(id: string) {
@@ -62,6 +63,11 @@ export const useWorkInProgressStore = defineStore('workInProgress', () => {
   }
 
   // -------------------------------------------------------------------------
+
+  function _serialize(): string {
+    const data = Array.from(objects.value.values()).map((card) => toRaw(card))
+    return JSON.stringify(data)
+  }
 
   function _reset() {
     objects.value = new Map()
@@ -80,6 +86,7 @@ export const useWorkInProgressStore = defineStore('workInProgress', () => {
     finish,
     clear,
     // internals
+    $serialize: _serialize,
     $reset: _reset,
   }
 })

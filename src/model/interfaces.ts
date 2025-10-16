@@ -34,16 +34,24 @@ export interface Transaction {
   attachment_ids?: string[]
 }
 
-export interface PlaceLocal {
-  type: 'local'
+interface PlaceGeneric {
+  /** internal id */
+  id: string
+
+  type: string
   name: string
-  address: string
   url?: string
+
+  notes?: string
 }
 
-export interface PlaceOnline {
+export interface PlaceLocal extends PlaceGeneric {
+  type: 'local'
+  address: string
+}
+
+export interface PlaceOnline extends PlaceGeneric {
   type: 'online'
-  name: string
   url: string
 }
 

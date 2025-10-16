@@ -1,47 +1,43 @@
 import { acceptHMRUpdate, defineStore } from 'pinia'
 import { shallowRef, toRaw, triggerRef } from 'vue'
 
-import type { Card } from '@/model/interfaces'
+import type { Place } from '@/model/interfaces'
 import { toRawDeep } from './utils'
 
-export const useCardsStore = defineStore('cards', () => {
+export const usePlacesStore = defineStore('places', () => {
   // -----------------------------------------------------------------------
   // state
 
-  const cards = shallowRef<Map<string, Card>>(new Map())
+  const places = shallowRef<Map<string, Place>>(new Map())
+
+  // TODO: lookup by date/type?
 
   // -----------------------------------------------------------------------
   // actions
 
-  function add(card: Card, { overwrite = true }: { overwrite?: boolean } = {}): boolean {
-    if (!overwrite && has(card)) {
-      console.debug('Card with ID exists already!', card.id, card)
+  function add(place: Place, { overwrite = true }: { overwrite?: boolean } = {}): boolean {
+    if (!overwrite && has(place)) {
+      console.debug('Place with ID exists already!', place.id, place)
       return false
     }
 
-    cards.value.set(card.id, structuredClone(toRawDeep(card)))
+    places.value.set(place.id, structuredClone(toRawDeep(place)))
     return true
   }
 
-  function get(id: string): Card | undefined {
-    return structuredClone(toRaw(cards.value.get(id)))
+  function get(id: string): Place | undefined {
+    return structuredClone(toRaw(places.value.get(id)))
   }
 
-  function has(idOrCard: Card | string): boolean {
-    const id = typeof idOrCard === 'string' ? idOrCard : idOrCard.id
-    return cards.value.has(id)
-  }
-
-  async function fetchInfo(idOrCard: Card | string) {
-    const id = typeof idOrCard === 'string' ? idOrCard : idOrCard.id
-    // TODO ...
-    console.warn('[fetchInfo]', 'Not implemented', id)
+  function has(idOrPlace: Place | string): boolean {
+    const id = typeof idOrPlace === 'string' ? idOrPlace : idOrPlace.id
+    return places.value.has(id)
   }
 
   // -----------------------------------------------------------------------
 
   function _serialize(): string {
-    const data = Array.from(cards.value.values()).map((card) => toRaw(card))
+    const data = Array.from(places.value.values()).map((place) => toRaw(place))
     return JSON.stringify(data)
   }
 
@@ -52,9 +48,9 @@ export const useCardsStore = defineStore('cards', () => {
       overwriteExisting = false,
     }: { clearBefore?: boolean; overwriteExisting?: boolean } = {},
   ) {
-    let dataDeser: Card[] | undefined = undefined
+    let dataDeser: Place[] | undefined = undefined
     try {
-      dataDeser = JSON.parse(data) satisfies Card[]
+      dataDeser = JSON.parse(data) satisfies Place[]
     } catch (err) {
       console.error('Unable to deserialize data', err)
       return false
@@ -67,25 +63,24 @@ export const useCardsStore = defineStore('cards', () => {
     dataDeser.forEach((entry) => add(entry, { overwrite: overwriteExisting }))
 
     // trigger a refresh
-    triggerRef(cards)
+    triggerRef(places)
 
     return true
   }
 
   function _reset() {
-    cards.value = new Map()
+    places.value = new Map()
   }
 
   // -----------------------------------------------------------------------
 
   return {
     // state
-    cards,
+    places,
     // actions
     add,
     get,
     has,
-    fetchInfo,
     // internals
     $serialize: _serialize,
     $deserialize: _deserialize,
@@ -94,5 +89,5 @@ export const useCardsStore = defineStore('cards', () => {
 })
 
 if (import.meta.hot) {
-  import.meta.hot.accept(acceptHMRUpdate(useCardsStore, import.meta.hot))
+  import.meta.hot.accept(acceptHMRUpdate(usePlacesStore, import.meta.hot))
 }

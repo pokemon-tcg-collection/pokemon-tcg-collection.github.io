@@ -9,6 +9,8 @@ import ManagementAuditLog from '@/pages/ManagementAuditLog.vue'
 import ManagementDatabase from '@/pages/ManagementDatabase.vue'
 import ManagementOverview from '@/pages/ManagementOverview.vue'
 import ManagementTCGDex from '@/pages/ManagementTCGDex.vue'
+import PlaceEditor from '@/pages/PlaceEditor.vue'
+import PlaceList from '@/pages/PlaceList.vue'
 import Transaction from '@/pages/Transaction.vue'
 import TransactionEditor from '@/pages/TransactionEditor.vue'
 import TransactionList from '@/pages/TransactionList.vue'
@@ -89,6 +91,29 @@ export default [
         name: 'transaction',
         component: Transaction,
         meta: { breadcrumb_name: 'Transaction Details' },
+      },
+    ],
+  },
+  {
+    path: '/places',
+    meta: { breadcrumb_name: 'Places' },
+    redirect: { name: 'place-list' },
+    children: [
+      {
+        path: 'list',
+        name: 'place-list',
+        component: PlaceList,
+        meta: { breadcrumb_name: 'Place List' },
+      },
+      {
+        path: 'new',
+        name: 'place-new',
+        component: PlaceEditor,
+      },
+      {
+        path: ':id/edit',
+        name: 'place-edit',
+        component: PlaceEditor,
       },
     ],
   },

@@ -6,13 +6,15 @@ import { computed, readonly, ref, toRaw, watch } from 'vue'
 import type { RouteLocationAsPathGeneric, RouteLocationAsRelativeGeneric } from 'vue-router'
 import { useRoute, useRouter } from 'vue-router'
 
-import type { Card } from '@/model/interfaces'
+import type { Card, Transaction } from '@/model/interfaces'
 import { CARD_LANGUAGES } from '@/model/interfaces'
 import { useCardsStore } from '@/stores/cards'
 import { useWorkInProgressStore } from '@/stores/workInProgress'
+import { useTransactionsStore } from '@/stores/transactions'
 
 const wipStore = useWorkInProgressStore()
 const cardsStore = useCardsStore()
+const transactionsStore = useTransactionsStore()
 
 const router = useRouter()
 const route = useRoute()
@@ -54,7 +56,13 @@ const cards = ref<{ id: string; label: string; card?: CardResume }[]>([])
 const boosters = computed<{ id: string; label: string }[]>(() => [])
 
 const item_ids = computed<{ id: string; label: string }[]>(() => [])
-const transaction_ids = computed<{ id: string; label: string }[]>(() => [])
+const transaction_ids = computed<{ id: string; label: string; transaction: Transaction }[]>(() =>
+  Array.from(transactionsStore.transactions.values()).map((transaction) => ({
+    id: transaction.id,
+    label: transaction.name ?? 'TODO: generate label',
+    transaction,
+  })),
+)
 
 watch(card.value, (n, o) => console.debug('Card data changed', { new: toRaw(n), old: toRaw(o) }))
 
@@ -133,29 +141,33 @@ async function onCardSelected(cardId: string) {
   card.value.tcgdex_id = tcgCard.id
 }
 
-function onAddNewTransaction() {
+async function onAddNewTransaction() {
   // do temp save to allow to return back here
   wipStore.add(card.value.id, 'card-edit', toRaw(card.value))
 
-  // TODO: maybe do a history replace with card-edit and then use the browser history?
+  // do a history replace with card-edit and then use the browser history?
+  await router.replace({ name: 'card-edit', params: { id: card.value.id }, query: route.query })
   // otherwise, would it work with multiple levels of redirection? --> ToBeTested
-  router.push({
+  await router.push({
     name: 'transaction-new',
     query: {
       returnTo: JSON.stringify({ name: 'card-edit', params: { id: card.value.id } }),
     },
   })
 }
-function onSave() {
+async function onSave() {
   console.log('Save Card', toRaw(card.value))
 
   cardsStore.add(card.value)
   if (wipStore.has(card.value.id)) wipStore.finish(card.value.id)
 
+  // do a history replace with card-edit and then use the browser history?
+  await router.replace({ name: 'card-edit', params: { id: card.value.id }, query: route.query })
+
   if (returnLocation === undefined) {
-    router.push({ name: 'card', params: { id: card.value.id } })
+    await router.push({ name: 'card', params: { id: card.value.id } })
   } else {
-    router.push(returnLocation)
+    await router.push(returnLocation)
   }
 }
 
@@ -182,6 +194,7 @@ watch(
 
 <template>
   <h1 class="mb-3">Card Editor</h1>
+
   <v-form>
     <fieldset class="pa-3 my-2">
       <legend>Set info</legend>
@@ -258,6 +271,11 @@ watch(
       <v-autocomplete
         v-model="card.transaction_ids"
         :items="transaction_ids"
+        item-title="label"
+        item-value="id"
+        chips
+        closable-chips
+        clearable
         multiple
         label="Related Transactions"
       >

@@ -2,6 +2,8 @@ import { acceptHMRUpdate, defineStore } from 'pinia'
 import { readonly, ref, toRaw } from 'vue'
 import { useRoute } from 'vue-router'
 
+import { toRawDeep } from './utils'
+
 export interface AuditMessage {
   date: Date
   msg: string
@@ -24,7 +26,7 @@ export const useAuditLogStore = defineStore('auditLog', () => {
   async function add(msg: string, params?: unknown) {
     const entry = {
       msg,
-      params,
+      params: structuredClone(toRawDeep(params)),
       date: new Date(),
       path: route.path,
     } satisfies AuditMessage

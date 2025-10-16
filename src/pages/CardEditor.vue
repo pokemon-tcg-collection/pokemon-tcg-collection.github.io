@@ -7,10 +7,10 @@ import type { RouteLocationAsPathGeneric, RouteLocationAsRelativeGeneric } from 
 import { useRoute, useRouter } from 'vue-router'
 
 import type { Card, Transaction } from '@/model/interfaces'
-import { CARD_LANGUAGES } from '@/model/interfaces'
+import { CARD_LANGUAGES, TCGDEX_LANGUAGES } from '@/model/interfaces'
 import { useCardsStore } from '@/stores/cards'
-import { useWorkInProgressStore } from '@/stores/workInProgress'
 import { useTransactionsStore } from '@/stores/transactions'
+import { useWorkInProgressStore } from '@/stores/workInProgress'
 
 const wipStore = useWorkInProgressStore()
 const cardsStore = useCardsStore()
@@ -39,9 +39,8 @@ const card = ref<Card>(
         },
 )
 
-const tcgdex_languages = ['en', 'fr', 'es', 'it', 'pt', 'de'] // NOTE: manually since not exported
 const tcgdex = computed(() => {
-  const language = tcgdex_languages.includes(card.value.language) ? card.value.language : 'en'
+  const language = TCGDEX_LANGUAGES.includes(card.value.language) ? card.value.language : 'en'
   const tcgdex = new TCGdex(language as SupportedLanguages)
   console.log('Creating new TCGDex API adapter', tcgdex)
   Object.assign(window, { tcgdex })
@@ -54,6 +53,9 @@ const languages = readonly(CARD_LANGUAGES)
 const sets = ref<{ id: string; label: string; set?: SetResume }[]>([])
 const cards = ref<{ id: string; label: string; card?: CardResume }[]>([])
 const boosters = computed<{ id: string; label: string }[]>(() => [])
+
+const isLoadingSets = ref(false)
+const isLoadingCards = ref(false)
 
 const item_ids = computed<{ id: string; label: string }[]>(() => [])
 const transaction_ids = computed<{ id: string; label: string; transaction: Transaction }[]>(() =>
@@ -74,8 +76,12 @@ async function updateTCGData() {
 
   console.debug('Updating TCG data ...')
 
+  isLoadingSets.value = true
+
   const tcgSets = await tcgdex.value.set.list()
   sets.value = tcgSets.map((set) => ({ id: set.id, label: set.name, set: set }))
+
+  isLoadingSets.value = false
 }
 async function updateTCGCardData() {
   if (!tcgdex.value) {
@@ -90,10 +96,15 @@ async function updateTCGCardData() {
   }
 
   console.debug('Updating TCG card data ...')
+
+  isLoadingCards.value = true
+
   await onSetSelected(newSetId)
 
   const tcgCards = await tcgdex.value.card.list(Query.create().equal('set', newSetId))
   cards.value = tcgCards.map((setCard) => ({ id: setCard.id, label: setCard.name, card: setCard }))
+
+  isLoadingCards.value = false
 }
 
 async function onSetSelected(setId: string) {
@@ -212,6 +223,7 @@ watch(
         :items="sets"
         item-value="id"
         item-title="label"
+        :loading="isLoadingSets"
         label="Name of Set"
         clearable
         hide-no-data
@@ -222,6 +234,7 @@ watch(
         :items="cards"
         item-value="id"
         item-title="label"
+        :loading="isLoadingCards"
         label="Card"
         clearable
         hide-no-data

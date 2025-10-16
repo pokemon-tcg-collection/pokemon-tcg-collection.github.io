@@ -1,9 +1,10 @@
 <script setup lang="ts">
-import { computed, onMounted, ref } from 'vue'
-import { onBeforeRouteUpdate, useRoute } from 'vue-router'
 import type { SupportedLanguages, Card as TCGCard } from '@tcgdex/sdk'
 import TCGdex from '@tcgdex/sdk'
+import { computed, onMounted, ref } from 'vue'
+import { onBeforeRouteUpdate, useRoute } from 'vue-router'
 
+import { TCGDEX_LANGUAGES } from '@/model/interfaces'
 import { useCardsStore } from '@/stores/cards'
 
 const cardsStore = useCardsStore()
@@ -14,9 +15,8 @@ const cardIdFromParam = route.params.id as string
 const card = cardsStore.get(cardIdFromParam)!
 
 const language = 'en' // TODO
-const tcgdex_languages = ['en', 'fr', 'es', 'it', 'pt', 'de']
 const tcgdex = computed(() => {
-  const tcgdex_language = tcgdex_languages.includes(language) ? language : 'en'
+  const tcgdex_language = TCGDEX_LANGUAGES.includes(language) ? language : 'en'
   const tcgdex = new TCGdex(tcgdex_language as SupportedLanguages)
   console.debug('Creating new TCGDex API adapter', tcgdex)
   Object.assign(window, { tcgdex })
@@ -31,7 +31,7 @@ type TCGCardWithPricing = TCGCard & {
       updated: Date | string
     }
     tcgplayer?: {
-      'unlimited-holofoil': {
+      'unlimited-holofoil'?: {
         marketPrice: number
       }
       unit: string
@@ -88,7 +88,7 @@ onMounted(async () => {
         <v-card-text>
           <p class="font-weight-black">Internals</p>
           <p>ID: {{ card.id }}</p>
-          <p v-if="cardInfo">TCGDex ID: {{ cardInfo?.id }}</p>
+          <p v-if="cardInfo">TCGDex Card ID: {{ cardInfo?.id }}</p>
         </v-card-text>
       </v-card>
       <v-card border v-if="cardInfo && Object.hasOwn(cardInfo, 'pricing') && cardInfo.pricing">
@@ -112,7 +112,11 @@ onMounted(async () => {
                   {{ new Date(cardInfo.pricing.cardmarket.updated).toLocaleString() }}
                 </td>
               </tr>
-              <tr v-if="cardInfo.pricing.tcgplayer">
+              <tr
+                v-if="
+                  cardInfo.pricing.tcgplayer && cardInfo.pricing.tcgplayer['unlimited-holofoil']
+                "
+              >
                 <td scope="row">TCGPlayer</td>
                 <td class="font-weight-bold">
                   {{ cardInfo.pricing.tcgplayer['unlimited-holofoil'].marketPrice }}

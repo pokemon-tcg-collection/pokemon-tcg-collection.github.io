@@ -90,6 +90,9 @@ export interface BoosterItemPart extends ItemPart {
 
 // -------------------------------------------------------------------------
 
+// NOTE: manually since not exported
+export const TCGDEX_LANGUAGES = ['en', 'fr', 'es', 'it', 'pt', 'de']
+
 // NOTE: does not work if CARD_LANGUAGES is typed
 export type CardLanguageID = (typeof CARD_LANGUAGES)[number]['code']
 
@@ -108,7 +111,7 @@ export const CARD_LANGUAGES = [
   { code: 'pl', short: 'POL', name: 'Polish' },
   { code: 'ru', short: 'RUS', name: 'Russian' },
   // Asian languages
-  { code: 'ja', short: 'JPN', name: 'Japan' },
+  { code: 'ja', short: 'JPN', name: 'Japanese' },
   { code: 'ko', short: 'KOR', name: 'Korean' },
   // https://iso639-3.sil.org/code/zho ?
   { code: 'zh-tw', short: 'ZHO', name: 'Chinese (Traditional)' },

@@ -35,7 +35,9 @@ export default {
       // console.debug('child', child)
       const childType = (child.type as { __name?: string }).__name
       if (childType !== 'OverviewLinkCard') {
+        // NOTE: conditional nodes (v-if) will also create some artificial nodes we might want to suppress
         console.warn("Child must only be of type 'OverviewLinkCard'!")
+        if (mdAndUp.value) continue
       }
       wrappedChildren.push(child)
     }
@@ -51,7 +53,7 @@ export default {
       <component :is="card"></component>
     </v-col>
   </v-row>
-  <v-container v-else class="ga-5 d-flex flex-row">
+  <v-container v-else class="ga-5 d-flex flex-row flex-wrap">
     <template v-for="(card, i) in linkCards" :key="i">
       <component :is="card"></component>
     </template>

@@ -1,12 +1,24 @@
 <script setup lang="ts">
 import OverviewLinkCard from '@/components/OverviewLinkCard.vue'
 import OverviewLinkCardContainer from '@/components/OverviewLinkCardContainer.vue'
+import { useWorkInProgressStore } from '@/stores/workInProgress'
+
+const wipStore = useWorkInProgressStore()
 </script>
 
 <template>
-  <h1 class="mb-3">Settings</h1>
+  <h1 class="mb-3">Managment Dashboard</h1>
 
   <OverviewLinkCardContainer>
+    <OverviewLinkCard
+      v-if="wipStore.objects.size > 0"
+      icon="mdi-database"
+      title="Work in Progress"
+      :to="{ name: 'wip' }"
+      to-label="Finish edits"
+    >
+      List of work-in-progress objects.
+    </OverviewLinkCard>
     <OverviewLinkCard
       icon="mdi-database"
       title="Database"

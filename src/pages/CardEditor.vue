@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import type { CardResume, Set, SetResume, SupportedLanguages, Card as TCGCard } from '@tcgdex/sdk'
 import TCGdex, { CardResumeModel, Query, SetResumeModel } from '@tcgdex/sdk'
-import { v4 as uuidv4 } from 'uuid'
 import { computed, readonly, ref, toRaw, watch } from 'vue'
 import type { RouteLocationAsPathGeneric, RouteLocationAsRelativeGeneric } from 'vue-router'
 import { useRoute, useRouter } from 'vue-router'
 
 import type { Card, Transaction } from '@/model/interfaces'
 import { CARD_LANGUAGES, TCGDEX_LANGUAGES } from '@/model/interfaces'
+import { createNewCard } from '@/model/utils'
 import { useCardsStore } from '@/stores/cards'
 import { useTransactionsStore } from '@/stores/transactions'
 import { useWorkInProgressStore } from '@/stores/workInProgress'
@@ -29,14 +29,7 @@ const card = ref<Card>(
     ? wipStore.get<Card>(cardIdFromParam)!
     : cardIdFromParam !== undefined && cardsStore.has(cardIdFromParam)
       ? cardsStore.get(cardIdFromParam)!
-      : {
-          id: uuidv4(),
-          language: 'en',
-          name: '',
-          number: '',
-          set: '',
-          amount: 1,
-        },
+      : createNewCard(),
 )
 
 const tcgdex = computed(() => {

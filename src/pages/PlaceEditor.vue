@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import { v4 as uuidv4 } from 'uuid'
 import { ref, toRaw } from 'vue'
 import type { RouteLocationAsPathGeneric, RouteLocationAsRelativeGeneric } from 'vue-router'
 import { useRoute, useRouter } from 'vue-router'
 
 import type { Place } from '@/model/interfaces'
+import { createNewPlace } from '@/model/utils'
 import { usePlacesStore } from '@/stores/places'
 import { useWorkInProgressStore } from '@/stores/workInProgress'
 
@@ -24,12 +24,7 @@ const place = ref<Place>(
     ? wipStore.get<Place>(placeIdFromParam)!
     : placeIdFromParam !== undefined && placesStore.has(placeIdFromParam)
       ? placesStore.get(placeIdFromParam)!
-      : {
-          id: uuidv4(),
-          type: 'online',
-          name: '',
-          url: '',
-        },
+      : createNewPlace(),
 )
 
 function onPlaceTypeChange(placeType: string) {

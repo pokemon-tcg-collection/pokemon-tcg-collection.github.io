@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import { computed, onMounted, ref } from 'vue'
+import { computed, ref } from 'vue'
 import type { RouteLocationAsPathGeneric, RouteLocationAsRelativeGeneric } from 'vue-router'
 import { useRoute } from 'vue-router'
 
-import { useCardsStore } from '@/stores/cards'
-import { useTransactionsStore } from '@/stores/transactions'
-import { usePlacesStore } from './stores/places'
+import { useWorkInProgressStore } from '@/stores/workInProgress'
+
+const wipStore = useWorkInProgressStore()
 
 const route = useRoute()
 console.debug('route', route)
@@ -32,64 +32,6 @@ const breadcrumbs = computed(() =>
       })),
   ),
 )
-
-onMounted(() => {
-  const cardsStore = useCardsStore()
-  const transactionsStore = useTransactionsStore()
-  const placesStore = usePlacesStore()
-
-  // TODO: mock data
-  cardsStore.add({
-    id: 'd68d1ba7-52e9-4c3b-a134-787f40f8823d',
-    language: 'en',
-    name: 'Dark Charizard',
-    number: '4',
-    set: 'base5',
-    amount: 5,
-    tcgdex_id: 'base5-4',
-  })
-  cardsStore.add({
-    id: 'f12475de-024c-457a-9d3d-dee8c86f4468',
-    language: 'de',
-    name: 'Pikachu',
-    number: '11 12',
-    set: '',
-    amount: 2,
-  })
-
-  transactionsStore.add({
-    id: '123',
-    type: 'purchase',
-    cost: 100,
-    cost_unit: 'EUR',
-    cost_type: 'buy',
-  })
-  transactionsStore.add({
-    id: '456',
-    name: 'Sold my best holo :-(',
-    type: 'sale',
-    cost: 400,
-    cost_unit: 'EUR',
-    cost_type: 'sell',
-  })
-  transactionsStore.add({
-    id: '789',
-    name: 'Happi happi happi ...',
-    type: 'gift',
-    cost: 0,
-    cost_unit: 'EUR',
-    date: new Date(),
-  })
-
-  placesStore.add({
-    id: '72864d29-48df-4004-b864-fa675ba92832',
-    type: 'local',
-    name: 'Gate to the Games',
-    url: 'https://www.gate-to-the-games.de/',
-    address:
-      'Richard-Wagner-Straße 9\nObjekt am Hallischen Tor 1\nBrühl 33\n04109 Leipzig\n\nTelefon: 0341 / 91025937\nE-Mail: leipzig@gate-to-the-games.de',
-  })
-})
 </script>
 
 <template>
@@ -110,6 +52,11 @@ onMounted(() => {
             <v-list-item v-bind="props" title="Management"></v-list-item>
           </template>
           <v-list-item link title="Overview" :to="{ name: 'management' }"></v-list-item>
+          <v-list-item v-if="wipStore.objects.size > 0" link :to="{ name: 'wip' }">
+            <v-badge floating location="right center" :offset-x="-10" color="warning" dot>
+              <v-list-item-title>Draft objects</v-list-item-title>
+            </v-badge>
+          </v-list-item>
           <v-list-item link title="Database" :to="{ name: 'database' }"></v-list-item>
           <v-list-item link title="TCGDex API" :to="{ name: 'tcgdex' }"></v-list-item>
           <v-list-item link title="Audit Log" :to="{ name: 'audit' }"></v-list-item>

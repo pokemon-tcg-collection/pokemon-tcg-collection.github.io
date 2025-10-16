@@ -32,6 +32,7 @@ const props = defineProps<{
     :to="props.to"
     class="d-flex flex-column justify-center align-center py-4 px-6"
     :title="props.title"
+    min-width="15rem"
   >
     <v-card-text class="mt-3 mb-5">
       <v-sheet class="d-flex justify-center align-center pa-3" :elevation="1" border rounded>

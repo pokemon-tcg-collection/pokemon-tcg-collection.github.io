@@ -8,7 +8,7 @@ export interface WIPObject {
   /** global unique internal id (no duplicates across different object types) */
   id: string
   /** route name to finish editing the object */
-  type: string
+  type: 'card-edit' | 'transaction-edit' | 'place-edit' | string
   /** date when object was created/saved-for-later */
   date: Date
   /** object data */
@@ -19,7 +19,7 @@ export const useWorkInProgressStore = defineStore('workInProgress', () => {
   // -----------------------------------------------------------------------
   // state
 
-  const objects = shallowRef<Map<string, object>>(new Map())
+  const objects = shallowRef<Map<string, WIPObject>>(new Map())
 
   // -------------------------------------------------------------------------
   // actions

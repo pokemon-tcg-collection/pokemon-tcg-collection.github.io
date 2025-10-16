@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { v4 as uuidv4 } from 'uuid'
 import { computed, ref, toRaw } from 'vue'
 import type { RouteLocationAsPathGeneric, RouteLocationAsRelativeGeneric } from 'vue-router'
 import { useRoute, useRouter } from 'vue-router'
@@ -9,6 +8,7 @@ import type { Place, Transaction } from '@/model/interfaces'
 import { usePlacesStore } from '@/stores/places'
 import { useTransactionsStore } from '@/stores/transactions'
 import { useWorkInProgressStore } from '@/stores/workInProgress'
+import { createNewTransaction } from '@/model/utils'
 
 const { smAndDown, xs } = useDisplay()
 
@@ -29,13 +29,7 @@ const transaction = ref<Transaction>(
     ? wipStore.get<Transaction>(transactionIdFromParam)!
     : transactionIdFromParam !== undefined && transactionsStore.has(transactionIdFromParam)
       ? transactionsStore.get(transactionIdFromParam)!
-      : {
-          id: uuidv4(),
-          type: 'purchase',
-          cost: 0,
-          cost_unit: 'EUR',
-          date: new Date(),
-        },
+      : createNewTransaction(),
 )
 
 const transactionDate = computed({

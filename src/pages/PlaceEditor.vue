@@ -16,7 +16,7 @@ const route = useRoute()
 
 const placeIdFromParam = route.params.id as string | undefined
 const returnLocation = (
-  route.params.returnTo !== undefined ? JSON.parse(route.params.returnTo as string) : undefined
+  route.query.returnTo !== undefined ? JSON.parse(route.query.returnTo as string) : undefined
 ) as string | RouteLocationAsRelativeGeneric | RouteLocationAsPathGeneric | undefined
 
 const place = ref<Place>(

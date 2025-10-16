@@ -7,6 +7,7 @@ import { useDisplay } from 'vuetify'
 import type { Place, Transaction } from '@/model/interfaces'
 import { COST_UNITS } from '@/model/interfaces'
 import { createNewTransaction } from '@/model/utils'
+import { useItemsStore } from '@/stores/items'
 import { usePlacesStore } from '@/stores/places'
 import { useTransactionsStore } from '@/stores/transactions'
 import { useWorkInProgressStore } from '@/stores/workInProgress'
@@ -15,6 +16,7 @@ const { smAndDown, xs } = useDisplay()
 
 const transactionsStore = useTransactionsStore()
 const placesStore = usePlacesStore()
+const itemsStore = useItemsStore()
 const wipStore = useWorkInProgressStore()
 
 const router = useRouter()
@@ -65,6 +67,9 @@ const transactionTimeDisplay = computed(() => transactionTime.value.toLocaleTime
 
 const costUnits = readonly(COST_UNITS)
 
+const item_ids = computed<{ id: string; label: string; item: Item }[]>(() =>
+  Array.from(itemsStore.items.values()).map((item) => ({ id: item.id, label: item.label, item })),
+)
 const place_ids = computed<{ id: string; label: string; place: Place }[]>(() =>
   Array.from(placesStore.places.values()).map((place) => ({
     id: place.id,
@@ -72,10 +77,9 @@ const place_ids = computed<{ id: string; label: string; place: Place }[]>(() =>
     place,
   })),
 )
+const newItemId = ref<string>()
 
 async function onAddNewLocation() {
-  console.debug('[onAddNewLocation]')
-
   // do temp save to allow to return back here
   wipStore.add(transaction.value.id, 'transaction-edit', toRaw(transaction.value))
 
@@ -88,13 +92,15 @@ async function onAddNewLocation() {
   await router.push({
     name: 'place-new',
     query: {
-      returnTo: JSON.stringify({ name: 'transaction-edit', params: { id: transaction.value.id } }),
+      returnTo: JSON.stringify({
+        name: 'transaction-edit',
+        params: { id: transaction.value.id },
+        query: route.query,
+      }),
     },
   })
 }
 async function onAddNewItem() {
-  console.debug('[onAddNewItem]')
-
   // do temp save to allow to return back here
   wipStore.add(transaction.value.id, 'transaction-edit', toRaw(transaction.value))
 
@@ -107,10 +113,31 @@ async function onAddNewItem() {
   await router.push({
     name: 'item-new',
     query: {
-      returnTo: JSON.stringify({ name: 'transaction-edit', params: { id: transaction.value.id } }),
+      returnTo: JSON.stringify({
+        name: 'transaction-edit',
+        params: { id: transaction.value.id },
+        query: route.query,
+      }),
     },
   })
 }
+
+function onRemoveItem(item_idx: number) {
+  transaction.value.items = transaction.value.items?.filter((_val, idx) => idx !== item_idx) ?? []
+}
+function onAddItemToTransaction() {
+  if (!newItemId.value) return
+
+  // TODO: prefill MSRP price if it exists?
+
+  transaction.value.items.push({
+    amount: 1,
+    item_id: newItemId.value,
+    cost: 0,
+    cost_unit: 'EUR',
+  })
+}
+
 async function onSave() {
   console.log('Save Transaction', toRaw(transaction.value))
 
@@ -163,6 +190,7 @@ async function onSave() {
               <!-- decimal-separator="," -->
               <v-number-input
                 v-model="transaction.cost"
+                :control-variant="xs ? 'hidden' : 'default'"
                 :precision="2"
                 :min="0.0"
                 label="Cost"
@@ -227,7 +255,7 @@ async function onSave() {
             <template v-slot:no-data>
               <v-list-item>
                 <v-list-item-action @click="onAddNewLocation"
-                  >Add a new Location</v-list-item-action
+                  >Create a new Location</v-list-item-action
                 >
               </v-list-item>
             </template>
@@ -236,8 +264,70 @@ async function onSave() {
       </v-row>
     </fieldset>
 
-    <fieldset class="pa-3 my-2">
+    <fieldset class="pa-3 my-2 pt-5">
       <legend>Items</legend>
+
+      <v-row class="gc-5 ms-0 me-0" v-for="(item, i) in transaction.items" :key="i">
+        <v-number-input
+          v-model="item.amount"
+          :min="1"
+          :control-variant="xs ? 'hidden' : 'default'"
+          label="Amount"
+          min-width="5rem"
+          width="max-content"
+        ></v-number-input>
+
+        <!-- decimal-separator="," -->
+        <v-number-input
+          v-model="item.cost"
+          :control-variant="xs ? 'hidden' : 'default'"
+          :precision="2"
+          :min="0.0"
+          min-width="5rem"
+          label="Cost"
+        ></v-number-input>
+        <v-select
+          v-model="item.cost_unit"
+          :items="costUnits"
+          item-value="id"
+          item-title="title"
+          min-width="5rem"
+          label="Currency"
+        ></v-select>
+
+        <v-autocomplete
+          v-model="item.item_id"
+          :items="item_ids"
+          item-title="label"
+          item-value="id"
+          readonly
+          label="Item"
+        >
+          <template v-slot:append>
+            <v-btn flat icon="mdi-delete" @click="() => onRemoveItem(i)"></v-btn>
+          </template>
+        </v-autocomplete>
+      </v-row>
+
+      <v-divider class="mt-2 mb-4" v-if="transaction.items.length > 0"></v-divider>
+
+      <v-autocomplete
+        v-model="newItemId"
+        :items="item_ids"
+        item-title="label"
+        item-value="id"
+        clearable
+        label="Items"
+      >
+        <template v-slot:no-data>
+          <v-list-item>
+            <v-list-item-action @click="onAddNewItem">Create new Item</v-list-item-action>
+          </v-list-item>
+        </template>
+        <template v-slot:append>
+          <v-btn @click="onAddItemToTransaction">Add item</v-btn>
+        </template>
+      </v-autocomplete>
     </fieldset>
 
     <fieldset class="pa-3 my-2">

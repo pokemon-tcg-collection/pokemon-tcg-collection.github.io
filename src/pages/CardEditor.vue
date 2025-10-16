@@ -5,23 +5,25 @@ import { computed, readonly, ref, toRaw, watch } from 'vue'
 import type { RouteLocationAsPathGeneric, RouteLocationAsRelativeGeneric } from 'vue-router'
 import { useRoute, useRouter } from 'vue-router'
 
-import type { Card, Transaction } from '@/model/interfaces'
+import type { Card, Item, Transaction } from '@/model/interfaces'
 import { CARD_LANGUAGES, TCGDEX_LANGUAGES } from '@/model/interfaces'
 import { createNewCard } from '@/model/utils'
 import { useCardsStore } from '@/stores/cards'
+import { useItemsStore } from '@/stores/items'
 import { useTransactionsStore } from '@/stores/transactions'
 import { useWorkInProgressStore } from '@/stores/workInProgress'
 
 const wipStore = useWorkInProgressStore()
 const cardsStore = useCardsStore()
 const transactionsStore = useTransactionsStore()
+const itemsStore = useItemsStore()
 
 const router = useRouter()
 const route = useRoute()
 
 const cardIdFromParam = route.params.id as string | undefined
 const returnLocation = (
-  route.params.returnTo !== undefined ? JSON.parse(route.params.returnTo as string) : undefined
+  route.query.returnTo !== undefined ? JSON.parse(route.query.returnTo as string) : undefined
 ) as string | RouteLocationAsRelativeGeneric | RouteLocationAsPathGeneric | undefined
 
 const card = ref<Card>(
@@ -50,7 +52,9 @@ const boosters = computed<{ id: string; label: string }[]>(() => [])
 const isLoadingSets = ref(false)
 const isLoadingCards = ref(false)
 
-const item_ids = computed<{ id: string; label: string }[]>(() => [])
+const item_ids = computed<{ id: string; label: string; item: Item }[]>(() =>
+  Array.from(itemsStore.items.values()).map((item) => ({ id: item.id, label: item.label, item })),
+)
 const transaction_ids = computed<{ id: string; label: string; transaction: Transaction }[]>(() =>
   Array.from(transactionsStore.transactions.values()).map((transaction) => ({
     id: transaction.id,
@@ -145,6 +149,24 @@ async function onCardSelected(cardId: string) {
   card.value.tcgdex_id = tcgCard.id
 }
 
+async function onAddNewItem() {
+  // do temp save to allow to return back here
+  wipStore.add(card.value.id, 'card-edit', toRaw(card.value))
+
+  // do a history replace with card-edit and then use the browser history?
+  await router.replace({ name: 'card-edit', params: { id: card.value.id }, query: route.query })
+  // otherwise, would it work with multiple levels of redirection? --> ToBeTested
+  await router.push({
+    name: 'item-new',
+    query: {
+      returnTo: JSON.stringify({
+        name: 'card-edit',
+        params: { id: card.value.id },
+        query: route.query,
+      }),
+    },
+  })
+}
 async function onAddNewTransaction() {
   // do temp save to allow to return back here
   wipStore.add(card.value.id, 'card-edit', toRaw(card.value))
@@ -155,7 +177,11 @@ async function onAddNewTransaction() {
   await router.push({
     name: 'transaction-new',
     query: {
-      returnTo: JSON.stringify({ name: 'card-edit', params: { id: card.value.id } }),
+      returnTo: JSON.stringify({
+        name: 'card-edit',
+        params: { id: card.value.id },
+        query: route.query,
+      }),
     },
   })
 }
@@ -271,9 +297,20 @@ watch(
       <v-autocomplete
         v-model="card.item_ids"
         :items="item_ids"
+        item-title="label"
+        item-value="id"
+        chips
+        closable-chips
+        clearable
         multiple
         label="Related Items"
-      ></v-autocomplete>
+      >
+        <template v-slot:no-data>
+          <v-list-item>
+            <v-list-item-action @click="onAddNewItem">Create new Item</v-list-item-action>
+          </v-list-item>
+        </template>
+      </v-autocomplete>
       <v-autocomplete
         v-model="card.transaction_ids"
         :items="transaction_ids"
@@ -288,7 +325,7 @@ watch(
         <template v-slot:no-data>
           <v-list-item>
             <v-list-item-action @click="onAddNewTransaction"
-              >Add new Transaction</v-list-item-action
+              >Create new Transaction</v-list-item-action
             >
           </v-list-item>
         </template>

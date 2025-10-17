@@ -10,6 +10,11 @@ const wipStore = useWorkInProgressStore()
 const route = useRoute()
 console.debug('route', route)
 
+const version = import.meta.env.PACKAGE_VERSION
+const gitRepoUrl = import.meta.env.GIT_INFO_REPOSITORY
+const gitInfoSha = import.meta.env.GIT_INFO_SHA
+const gitInfoDate = import.meta.env.GIT_INFO_DATE
+
 const drawer = ref(false)
 
 const breadcrumbs = computed(() =>
@@ -76,8 +81,24 @@ const breadcrumbs = computed(() =>
       </v-container>
     </v-main>
 
-    <v-footer name="footer" class="flex-1-0-0 align-end">
-      <div class="flex-1-0-100 text-center">© {{ new Date().getFullYear() }}</div>
+    <v-footer name="footer" class="flex-1-0-0 align-end px-0 pb-0">
+      <div class="flex-1-0-100 text-center text-caption bg-grey-lighten-4 py-1">
+        <v-icon icon="mdi-source-repository" size="small" />
+        <v-btn variant="text" target="_blank" :href="gitRepoUrl" size="x-small" color="primary">
+          Source Code
+        </v-btn>
+        <v-icon icon="mdi-tag" size="small"></v-icon>
+        Version
+        <span class="text-grey-darken-2">
+          {{ version }}
+        </span>
+        <span v-if="gitInfoSha && gitInfoDate">
+          (<span class="text-grey-darken-2"
+            >{{ gitInfoSha }}, {{ new Date(gitInfoDate).toLocaleString() }}</span
+          >)</span
+        >
+        <span class="ms-5">© {{ new Date().getFullYear() }}</span>
+      </div>
     </v-footer>
   </v-app>
 </template>

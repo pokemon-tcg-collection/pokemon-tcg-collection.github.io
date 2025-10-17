@@ -48,8 +48,8 @@ function onRemovePart(part_idx: number) {
 async function onSave() {
   console.log('Save Item', toRaw(item.value))
 
-  itemsStore.add(item.value)
-  if (wipStore.has(item.value.id)) wipStore.finish(item.value.id)
+  await itemsStore.add(item.value)
+  if (wipStore.has(item.value.id)) await wipStore.finish(item.value.id)
 
   // do a history replace with item-edit and then use the browser history?
   await router.replace({ name: 'item-edit', params: { id: item.value.id }, query: route.query })

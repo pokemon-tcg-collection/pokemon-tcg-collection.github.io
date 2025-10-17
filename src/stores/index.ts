@@ -1,13 +1,39 @@
 // Utilities
 import type { PiniaPluginContext } from 'pinia'
 import { createPinia } from 'pinia'
+import piniaPluginPersistedstate from 'pinia-plugin-persistedstate'
+
+import preloadData from './preloadData'
 
 const pinia = createPinia()
 
-pinia.use((context: PiniaPluginContext) => {
-  console.debug('pinia plugin', context.store.$id, context)
+pinia.use(piniaPluginPersistedstate)
 
-  // TODO: do hydration
+// hydration: load data from IndexedDB
+pinia.use((context: PiniaPluginContext) => {
+  // console.debug('pinia IndexedDB hydration plugin', context.store.$id, context)
+  const store = context.store
+
+  if (Object.hasOwn(store, '$hydrate')) {
+    console.log(`🍍 Hydrating "${store.$id}" store ...`)
+    store.$hydrate({ clearBefore: false, overwriteExisting: false })
+  }
+})
+
+pinia.use((context: PiniaPluginContext) => {
+  // console.debug('pinia preload data plugin', context.store.$id, context)
+  const store = context.store
+  const name = store.$id
+
+  if (Object.hasOwn(preloadData, name)) {
+    const data = (preloadData as unknown as { [key: string]: [] })[name]
+    if (!data || !Array.isArray(data) || data.length === 0) return
+
+    console.log(`🍍 Preloading data for "${store.$id}" store (${data.length} entries) ...`)
+    for (const entry of data) {
+      store.add(entry)
+    }
+  }
 })
 
 if (import.meta.env.DEV) {
@@ -58,18 +84,7 @@ if (import.meta.env.DEV) {
         cost_unit: 'EUR',
         date: new Date(),
       })
-    } else if (store.$id === 'places') {
-      store.add({
-        id: '72864d29-48df-4004-b864-fa675ba92832',
-        type: 'local',
-        name: 'Gate to the Games',
-        url: 'https://www.gate-to-the-games.de/',
-        address:
-          'Richard-Wagner-Straße 9\nObjekt am Hallischen Tor 1\nBrühl 33\n04109 Leipzig\n\nTelefon: 0341 / 91025937\nE-Mail: leipzig@gate-to-the-games.de',
-      })
     }
-
-    // TODO: do hydration
   })
 }
 

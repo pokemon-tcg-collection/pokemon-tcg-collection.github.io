@@ -8,7 +8,7 @@ const settings = useSettingsStore()
   <h1 class="mb-3">Application Settings</h1>
 
   <v-form>
-    <fieldset class="pa-3 my-2" v-if="settings.editorShowInternalID">
+    <fieldset class="pa-3 my-2">
       <legend>Debug Settings</legend>
       <p class="text-medium-emphasis">
         Changing the following checkboxes will take effect immediately.

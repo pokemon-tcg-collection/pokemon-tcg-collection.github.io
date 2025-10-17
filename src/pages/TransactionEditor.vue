@@ -83,7 +83,7 @@ const newItemId = ref<string>()
 
 async function onAddNewLocation() {
   // do temp save to allow to return back here
-  wipStore.add(transaction.value.id, 'transaction-edit', toRaw(transaction.value))
+  await wipStore.add(transaction.value.id, 'transaction-edit', toRaw(transaction.value))
 
   // do a history replace with transaction-edit to allow returning to this transaction editor
   await router.replace({
@@ -104,7 +104,7 @@ async function onAddNewLocation() {
 }
 async function onAddNewItem() {
   // do temp save to allow to return back here
-  wipStore.add(transaction.value.id, 'transaction-edit', toRaw(transaction.value))
+  await wipStore.add(transaction.value.id, 'transaction-edit', toRaw(transaction.value))
 
   // do a history replace with transaction-edit to allow returning to this transaction editor
   await router.replace({
@@ -143,8 +143,8 @@ function onAddItemToTransaction() {
 async function onSave() {
   console.log('Save Transaction', toRaw(transaction.value))
 
-  transactionsStore.add(transaction.value)
-  if (wipStore.has(transaction.value.id)) wipStore.finish(transaction.value.id)
+  await transactionsStore.add(transaction.value)
+  if (wipStore.has(transaction.value.id)) await wipStore.finish(transaction.value.id)
 
   // do a history replace with transaction-edit and then use the browser history?
   await router.replace({

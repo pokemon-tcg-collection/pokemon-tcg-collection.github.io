@@ -1,10 +1,13 @@
 import { acceptHMRUpdate, defineStore } from 'pinia'
 import { shallowRef, toRaw, triggerRef } from 'vue'
 
+import usePokeTCGCollectorIDB from '@/composables/usePokeTCGCollectorIDB'
 import type { Transaction } from '@/model/interfaces'
 import { toRawDeep } from './utils'
 
 export const useTransactionsStore = defineStore('transactions', () => {
+  const { put: idbPut, getAll: idbGetAll } = usePokeTCGCollectorIDB('transactions')
+
   // -----------------------------------------------------------------------
   // state
 
@@ -15,16 +18,19 @@ export const useTransactionsStore = defineStore('transactions', () => {
   // -----------------------------------------------------------------------
   // actions
 
-  function add(
+  async function add(
     transaction: Transaction,
     { overwrite = true }: { overwrite?: boolean } = {},
-  ): boolean {
+  ): Promise<boolean> {
     if (!overwrite && has(transaction)) {
       console.debug('Transaction with ID exists already!', transaction.id, transaction)
       return false
     }
 
-    transactions.value.set(transaction.id, structuredClone(toRawDeep(transaction)))
+    const copy = structuredClone(toRawDeep(transaction))
+    transactions.value.set(transaction.id, copy)
+    await idbPut(copy)
+
     return true
   }
 
@@ -71,6 +77,21 @@ export const useTransactionsStore = defineStore('transactions', () => {
     return true
   }
 
+  async function _hydrate({
+    clearBefore = false,
+    overwriteExisting = false,
+  }: { clearBefore?: boolean; overwriteExisting?: boolean } = {}) {
+    if (clearBefore) _reset()
+
+    const values = await idbGetAll()
+    if (!values) return
+
+    values.forEach((entry) => {
+      if (!overwriteExisting && has(entry)) return
+      transactions.value.set(entry.id, entry)
+    })
+  }
+
   function _reset() {
     transactions.value = new Map()
   }
@@ -87,6 +108,7 @@ export const useTransactionsStore = defineStore('transactions', () => {
     // internals
     $serialize: _serialize,
     $deserialize: _deserialize,
+    $hydrate: _hydrate,
     $reset: _reset,
   }
 })

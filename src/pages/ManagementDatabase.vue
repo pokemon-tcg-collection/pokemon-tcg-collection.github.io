@@ -16,6 +16,7 @@ import { useItemsStore } from '@/stores/items'
 import { usePlacesStore } from '@/stores/places'
 import { useTransactionsStore } from '@/stores/transactions'
 import { useWorkInProgressStore } from '@/stores/workInProgress'
+import usePokeTCGCollectorIDB from '@/composables/usePokeTCGCollectorIDB'
 
 const cardsStore = useCardsStore()
 const transactionsStore = useTransactionsStore()
@@ -296,8 +297,18 @@ async function onDelete() {
   itemsStore.$reset()
   wipStore.$reset()
 
+  const { clear: clearCardsFromIDB } = usePokeTCGCollectorIDB('cards')
+  await clearCardsFromIDB()
+  const { clear: clearTransactionsFromIDB } = usePokeTCGCollectorIDB('transactions')
+  await clearTransactionsFromIDB()
+  const { clear: clearPlacesFromIDB } = usePokeTCGCollectorIDB('places')
+  await clearPlacesFromIDB()
+  const { clear: clearItemsFromIDB } = usePokeTCGCollectorIDB('items')
+  await clearItemsFromIDB()
+  const { clear: clearWIPObjFromIDB } = usePokeTCGCollectorIDB('workInProgress')
+  await clearWIPObjFromIDB()
+
   // NOTE: does it make sense to delete audit logs? Let's keep them
-  // auditLogStore.$reset()
 }
 </script>
 

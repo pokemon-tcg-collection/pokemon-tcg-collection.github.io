@@ -153,7 +153,7 @@ async function onCardSelected(cardId: string) {
 
 async function onAddNewItem() {
   // do temp save to allow to return back here
-  wipStore.add(card.value.id, 'card-edit', toRaw(card.value))
+  await wipStore.add(card.value.id, 'card-edit', toRaw(card.value))
 
   // do a history replace with card-edit and then use the browser history?
   await router.replace({ name: 'card-edit', params: { id: card.value.id }, query: route.query })
@@ -171,7 +171,7 @@ async function onAddNewItem() {
 }
 async function onAddNewTransaction() {
   // do temp save to allow to return back here
-  wipStore.add(card.value.id, 'card-edit', toRaw(card.value))
+  await wipStore.add(card.value.id, 'card-edit', toRaw(card.value))
 
   // do a history replace with card-edit and then use the browser history?
   await router.replace({ name: 'card-edit', params: { id: card.value.id }, query: route.query })
@@ -190,8 +190,8 @@ async function onAddNewTransaction() {
 async function onSave() {
   console.log('Save Card', toRaw(card.value))
 
-  cardsStore.add(card.value)
-  if (wipStore.has(card.value.id)) wipStore.finish(card.value.id)
+  await cardsStore.add(card.value)
+  if (wipStore.has(card.value.id)) await wipStore.finish(card.value.id)
 
   // do a history replace with card-edit and then use the browser history?
   await router.replace({ name: 'card-edit', params: { id: card.value.id }, query: route.query })

@@ -1,10 +1,13 @@
 import { acceptHMRUpdate, defineStore } from 'pinia'
+import { v4 as uuidv4 } from 'uuid'
 import { readonly, ref, toRaw } from 'vue'
 import { useRoute } from 'vue-router'
 
+import usePokeTCGCollectorIDB from '@/composables/usePokeTCGCollectorIDB'
 import { toRawDeep } from './utils'
 
 export interface AuditMessage {
+  id: string
   date: Date
   msg: string
   path: string
@@ -12,6 +15,8 @@ export interface AuditMessage {
 }
 
 export const useAuditLogStore = defineStore('auditLog', () => {
+  const { put: idbPut, getAll: idbGetAll } = usePokeTCGCollectorIDB('auditLog')
+
   const route = useRoute()
 
   // -----------------------------------------------------------------------
@@ -25,6 +30,7 @@ export const useAuditLogStore = defineStore('auditLog', () => {
 
   async function add(msg: string, params?: unknown) {
     const entry = {
+      id: uuidv4(),
       msg,
       params: structuredClone(toRawDeep(params)),
       date: new Date(),
@@ -32,6 +38,7 @@ export const useAuditLogStore = defineStore('auditLog', () => {
     } satisfies AuditMessage
 
     logs.value.push(entry)
+    await idbPut(entry)
   }
 
   // -----------------------------------------------------------------------
@@ -39,6 +46,19 @@ export const useAuditLogStore = defineStore('auditLog', () => {
   function _serialize(): string {
     const data = Array.from(logs.value.values()).map((entry) => toRaw(entry))
     return JSON.stringify(data)
+  }
+
+  async function _hydrate() {
+    const values = await idbGetAll()
+    if (!values) return
+
+    values.forEach((newEntry) => {
+      const isKnown = logs.value.find((entry) => entry.id === newEntry.id)
+      if (isKnown) return
+
+      logs.value.push(newEntry)
+    })
+    values.sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
   }
 
   // -----------------------------------------------------------------------
@@ -50,6 +70,7 @@ export const useAuditLogStore = defineStore('auditLog', () => {
     add,
     // internals
     $serialize: _serialize,
+    $hydrate: _hydrate,
   }
 })
 

@@ -1,10 +1,13 @@
 import { acceptHMRUpdate, defineStore } from 'pinia'
 import { shallowRef, toRaw, triggerRef } from 'vue'
 
+import usePokeTCGCollectorIDB from '@/composables/usePokeTCGCollectorIDB'
 import type { Item } from '@/model/interfaces'
 import { toRawDeep } from './utils'
 
 export const useItemsStore = defineStore('items', () => {
+  const { put: idbPut, getAll: idbGetAll } = usePokeTCGCollectorIDB('items')
+
   // -----------------------------------------------------------------------
   // state
 
@@ -13,13 +16,19 @@ export const useItemsStore = defineStore('items', () => {
   // -----------------------------------------------------------------------
   // actions
 
-  function add(item: Item, { overwrite = true }: { overwrite?: boolean } = {}): boolean {
+  async function add(
+    item: Item,
+    { overwrite = true }: { overwrite?: boolean } = {},
+  ): Promise<boolean> {
     if (!overwrite && has(item)) {
       console.debug('Item with ID exists already!', item.id, item)
       return false
     }
 
-    items.value.set(item.id, structuredClone(toRawDeep(item)))
+    const copy = structuredClone(toRawDeep(item))
+    items.value.set(item.id, copy)
+    await idbPut(copy)
+
     return true
   }
 
@@ -66,6 +75,21 @@ export const useItemsStore = defineStore('items', () => {
     return true
   }
 
+  async function _hydrate({
+    clearBefore = false,
+    overwriteExisting = false,
+  }: { clearBefore?: boolean; overwriteExisting?: boolean } = {}) {
+    if (clearBefore) _reset()
+
+    const values = await idbGetAll()
+    if (!values) return
+
+    values.forEach((entry) => {
+      if (!overwriteExisting && has(entry)) return
+      items.value.set(entry.id, entry)
+    })
+  }
+
   function _reset() {
     items.value = new Map()
   }
@@ -82,6 +106,7 @@ export const useItemsStore = defineStore('items', () => {
     // internals
     $serialize: _serialize,
     $deserialize: _deserialize,
+    $hydrate: _hydrate,
     $reset: _reset,
   }
 })

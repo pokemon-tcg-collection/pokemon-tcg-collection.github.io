@@ -1,21 +1,32 @@
 import { acceptHMRUpdate, defineStore } from 'pinia'
 import { shallowRef, toRaw } from 'vue'
 
+import usePokeTCGCollectorIDB from '@/composables/usePokeTCGCollectorIDB'
+import type { Card, Item, Place, Transaction } from '@/model/interfaces'
 import type { EditRouteNames } from '@/router/routes'
 import { toRawDeep } from './utils'
 
+export type WIPObjectType = 'card-edit' | 'transaction-edit' | 'item-edit' | 'place-edit'
+export type WIPObjectData = Transaction | Card | Place | Item
 export interface WIPObject {
   /** global unique internal id (no duplicates across different object types) */
   id: string
   /** route name to finish editing the object */
-  type: 'card-edit' | 'transaction-edit' | 'item-edit' | 'place-edit' | string
+  type: WIPObjectType
   /** date when object was created/saved-for-later */
   date: Date
   /** object data */
-  data: unknown
+  data: WIPObjectData
 }
 
 export const useWorkInProgressStore = defineStore('workInProgress', () => {
+  const {
+    put: idbPut,
+    getAll: idbGetAll,
+    delete: idbDelete,
+    clear: idbClear,
+  } = usePokeTCGCollectorIDB('workInProgress')
+
   // -----------------------------------------------------------------------
   // state
 
@@ -24,17 +35,19 @@ export const useWorkInProgressStore = defineStore('workInProgress', () => {
   // -------------------------------------------------------------------------
   // actions
 
-  function add(id: string, editRouteName: EditRouteNames, wip: unknown) {
+  async function add(id: string, editRouteName: EditRouteNames, wip: WIPObjectData) {
     if (objects.value.has(id)) {
       console.warn('Already has object with same id!', id, { old: objects.value.get(id), new: wip })
     }
 
-    objects.value.set(id, {
+    const obj = {
       id,
       type: editRouteName,
       date: new Date(),
       data: structuredClone(toRawDeep(wip)),
-    } satisfies WIPObject)
+    } satisfies WIPObject
+    objects.value.set(id, obj)
+    await idbPut(obj)
   }
 
   function has(id: string): boolean {
@@ -49,17 +62,20 @@ export const useWorkInProgressStore = defineStore('workInProgress', () => {
     return structuredClone(toRaw(getWithInfo(id)?.data)) as T
   }
 
-  function finish(id: string) {
+  async function finish(id: string) {
     if (!objects.value.has(id)) {
       console.warn('No WIP object found!', id)
       // return
     }
 
-    return objects.value.delete(id)
+    const deleted = objects.value.delete(id)
+    await idbDelete(id)
+    return deleted
   }
 
-  function clear() {
+  async function clear() {
     objects.value.clear()
+    await idbClear()
   }
 
   // -------------------------------------------------------------------------
@@ -67,6 +83,21 @@ export const useWorkInProgressStore = defineStore('workInProgress', () => {
   function _serialize(): string {
     const data = Array.from(objects.value.values()).map((card) => toRaw(card))
     return JSON.stringify(data)
+  }
+
+  async function _hydrate({
+    clearBefore = false,
+    overwriteExisting = false,
+  }: { clearBefore?: boolean; overwriteExisting?: boolean } = {}) {
+    if (clearBefore) _reset()
+
+    const values = await idbGetAll()
+    if (!values) return
+
+    values.forEach((entry) => {
+      if (!overwriteExisting && has(entry.id)) return
+      objects.value.set(entry.id, entry)
+    })
   }
 
   function _reset() {
@@ -87,6 +118,7 @@ export const useWorkInProgressStore = defineStore('workInProgress', () => {
     clear,
     // internals
     $serialize: _serialize,
+    $hydrate: _hydrate,
     $reset: _reset,
   }
 })

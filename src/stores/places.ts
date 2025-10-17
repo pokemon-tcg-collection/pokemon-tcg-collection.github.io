@@ -1,10 +1,13 @@
 import { acceptHMRUpdate, defineStore } from 'pinia'
 import { shallowRef, toRaw, triggerRef } from 'vue'
 
+import usePokeTCGCollectorIDB from '@/composables/usePokeTCGCollectorIDB'
 import type { Place } from '@/model/interfaces'
 import { toRawDeep } from './utils'
 
 export const usePlacesStore = defineStore('places', () => {
+  const { put: idbPut, getAll: idbGetAll } = usePokeTCGCollectorIDB('places')
+
   // -----------------------------------------------------------------------
   // state
 
@@ -15,13 +18,19 @@ export const usePlacesStore = defineStore('places', () => {
   // -----------------------------------------------------------------------
   // actions
 
-  function add(place: Place, { overwrite = true }: { overwrite?: boolean } = {}): boolean {
+  async function add(
+    place: Place,
+    { overwrite = true }: { overwrite?: boolean } = {},
+  ): Promise<boolean> {
     if (!overwrite && has(place)) {
       console.debug('Place with ID exists already!', place.id, place)
       return false
     }
 
-    places.value.set(place.id, structuredClone(toRawDeep(place)))
+    const copy = structuredClone(toRawDeep(place))
+    places.value.set(place.id, copy)
+    await idbPut(copy)
+
     return true
   }
 
@@ -68,6 +77,21 @@ export const usePlacesStore = defineStore('places', () => {
     return true
   }
 
+  async function _hydrate({
+    clearBefore = false,
+    overwriteExisting = false,
+  }: { clearBefore?: boolean; overwriteExisting?: boolean } = {}) {
+    if (clearBefore) _reset()
+
+    const values = await idbGetAll()
+    if (!values) return
+
+    values.forEach((entry) => {
+      if (!overwriteExisting && has(entry)) return
+      places.value.set(entry.id, entry)
+    })
+  }
+
   function _reset() {
     places.value = new Map()
   }
@@ -84,6 +108,7 @@ export const usePlacesStore = defineStore('places', () => {
     // internals
     $serialize: _serialize,
     $deserialize: _deserialize,
+    $hydrate: _hydrate,
     $reset: _reset,
   }
 })

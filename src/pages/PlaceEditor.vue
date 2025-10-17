@@ -36,8 +36,8 @@ function onPlaceTypeChange(placeType: string) {
 async function onSave() {
   console.log('Save Place', toRaw(place.value))
 
-  placesStore.add(place.value)
-  if (wipStore.has(place.value.id)) wipStore.finish(place.value.id)
+  await placesStore.add(place.value)
+  if (wipStore.has(place.value.id)) await wipStore.finish(place.value.id)
 
   // do a history replace with place-edit and then use the browser history?
   await router.replace({ name: 'place-edit', params: { id: place.value.id }, query: route.query })

@@ -55,7 +55,7 @@ async function onSave() {
   await router.replace({ name: 'item-edit', params: { id: item.value.id }, query: route.query })
 
   if (returnLocation === undefined) {
-    await router.push({ name: 'item-list', params: { id: item.value.id } })
+    await router.push({ name: 'item-list' })
   } else {
     await router.push(returnLocation)
   }

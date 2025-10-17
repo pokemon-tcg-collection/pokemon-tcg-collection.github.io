@@ -17,7 +17,12 @@ const items = computed(() =>
 <template>
   <h1 class="mb-3">Item List</h1>
 
-  <p class="mb-3">{{ items.length }} Items</p>
+  <v-row class="mb-1 align-center">
+    <v-col>{{ items.length }} Items</v-col>
+    <v-col class="d-flex justify-end">
+      <v-btn :to="{ name: 'item-new' }" prepend-icon="mdi-pencil-plus">Add new</v-btn>
+    </v-col>
+  </v-row>
 
   <v-table striped="even" fixed-header density="compact">
     <thead>

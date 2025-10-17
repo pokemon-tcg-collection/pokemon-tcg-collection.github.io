@@ -17,7 +17,12 @@ const cards = computed(() =>
 <template>
   <h1 class="mb-3">Card List</h1>
 
-  <p class="mb-3">{{ cards.length }} Cards</p>
+  <v-row class="mb-1 align-center">
+    <v-col>{{ cards.length }} Cards</v-col>
+    <v-col class="d-flex justify-end">
+      <v-btn :to="{ name: 'card-new' }" prepend-icon="mdi-pencil-plus">Add new</v-btn>
+    </v-col>
+  </v-row>
 
   <v-list>
     <v-list-item v-for="card in cards" :key="card.id" :value="card.id" :title="card.name">

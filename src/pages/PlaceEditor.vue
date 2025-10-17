@@ -5,6 +5,7 @@ import { useRoute, useRouter } from 'vue-router'
 
 import type { Place } from '@/model/interfaces'
 import { createNewPlace } from '@/model/utils'
+import { useAuditLogStore } from '@/stores/auditLog'
 import { usePlacesStore } from '@/stores/places'
 import { useSettingsStore } from '@/stores/settings'
 import { useWorkInProgressStore } from '@/stores/workInProgress'
@@ -12,6 +13,7 @@ import { useWorkInProgressStore } from '@/stores/workInProgress'
 const placesStore = usePlacesStore()
 const wipStore = useWorkInProgressStore()
 const settings = useSettingsStore()
+const auditLog = useAuditLogStore()
 
 const router = useRouter()
 const route = useRoute()
@@ -21,17 +23,14 @@ const returnLocation = (
   route.query.returnTo !== undefined ? JSON.parse(route.query.returnTo as string) : undefined
 ) as string | RouteLocationAsRelativeGeneric | RouteLocationAsPathGeneric | undefined
 
+const existsInStore = placeIdFromParam !== undefined && placesStore.has(placeIdFromParam)
 const place = ref<Place>(
   placeIdFromParam !== undefined && wipStore.has(placeIdFromParam)
     ? wipStore.get<Place>(placeIdFromParam)!
-    : placeIdFromParam !== undefined && placesStore.has(placeIdFromParam)
+    : existsInStore
       ? placesStore.get(placeIdFromParam)!
       : createNewPlace(),
 )
-
-function onPlaceTypeChange(placeType: string) {
-  console.debug('Change of place type', placeType)
-}
 
 async function onSave() {
   console.log('Save Place', toRaw(place.value))
@@ -43,10 +42,19 @@ async function onSave() {
   await router.replace({ name: 'place-edit', params: { id: place.value.id }, query: route.query })
 
   if (returnLocation === undefined) {
-    await router.push({ name: 'place-list', params: { id: place.value.id } })
+    await router.push({ name: 'place-list' })
   } else {
     await router.push(returnLocation)
   }
+}
+async function onDelete() {
+  console.log('Delete Place', toRaw(place.value))
+
+  auditLog.add('Delete place', { place: toRaw(place.value) })
+  await placesStore.remove(place.value)
+  if (wipStore.has(place.value.id)) await wipStore.finish(place.value.id)
+
+  await router.push({ name: 'place-list' })
 }
 </script>
 
@@ -55,7 +63,7 @@ async function onSave() {
 
   <v-form>
     <v-input hide-details>
-      <v-btn-toggle v-model="place.type" @update:model-value="onPlaceTypeChange" divided>
+      <v-btn-toggle v-model="place.type" divided>
         <v-btn value="local">
           <span class="hidden-sm-and-down">Local Store</span>
           <v-icon icon="mdi-store" end></v-icon>
@@ -105,7 +113,10 @@ async function onSave() {
       ></v-text-field>
     </fieldset>
 
-    <v-btn color="primary" text="Save" @click="onSave"></v-btn>
+    <div class="d-flex flex-column flex-sm-row ga-3 mt-3">
+      <v-btn color="primary" text="Save" @click="onSave"></v-btn>
+      <v-btn v-if="existsInStore" color="error" text="Delete" @click="onDelete"></v-btn>
+    </div>
   </v-form>
 </template>
 

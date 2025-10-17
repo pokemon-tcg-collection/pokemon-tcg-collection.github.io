@@ -2,8 +2,11 @@
 import { computed, ref } from 'vue'
 import type { RouteLocationAsPathGeneric, RouteLocationAsRelativeGeneric } from 'vue-router'
 import { useRoute } from 'vue-router'
+import { useDisplay } from 'vuetify'
 
 import { useWorkInProgressStore } from '@/stores/workInProgress'
+
+const { xs } = useDisplay()
 
 const wipStore = useWorkInProgressStore()
 
@@ -84,20 +87,26 @@ const breadcrumbs = computed(() =>
     <v-footer name="footer" class="flex-1-0-0 align-end px-0 pb-0">
       <div class="flex-1-0-100 text-center text-caption bg-grey-lighten-4 py-1">
         <v-icon icon="mdi-source-repository" size="small" />
-        <v-btn variant="text" target="_blank" :href="gitRepoUrl" size="x-small" color="primary">
-          Source Code
+        <v-btn
+          variant="text"
+          target="_blank"
+          :href="gitRepoUrl"
+          text="Source Code"
+          size="x-small"
+          color="primary"
+        >
         </v-btn>
         <v-icon icon="mdi-tag" size="small"></v-icon>
         Version
-        <span class="text-grey-darken-2">
+        <span class="text-grey-darken-2 text-no-wrap">
           {{ version }}
         </span>
-        <span v-if="gitInfoSha && gitInfoDate">
+        <span v-if="gitInfoSha && gitInfoDate && !xs">
           (<span class="text-grey-darken-2"
             >{{ gitInfoSha }}, {{ new Date(gitInfoDate).toLocaleString() }}</span
           >)</span
         >
-        <span class="ms-5">© {{ new Date().getFullYear() }}</span>
+        <span class="ms-5 text-no-wrap">© {{ new Date().getFullYear() }}</span>
       </div>
     </v-footer>
   </v-app>

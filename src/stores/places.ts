@@ -6,7 +6,7 @@ import type { Place } from '@/model/interfaces'
 import { toRawDeep } from './utils'
 
 export const usePlacesStore = defineStore('places', () => {
-  const { put: idbPut, getAll: idbGetAll } = usePokeTCGCollectorIDB('places')
+  const { put: idbPut, getAll: idbGetAll, delete: idbDelete } = usePokeTCGCollectorIDB('places')
 
   // -----------------------------------------------------------------------
   // state
@@ -41,6 +41,13 @@ export const usePlacesStore = defineStore('places', () => {
   function has(idOrPlace: Place | string): boolean {
     const id = typeof idOrPlace === 'string' ? idOrPlace : idOrPlace.id
     return places.value.has(id)
+  }
+
+  async function remove(idOrPlace: Place | string) {
+    const id = typeof idOrPlace === 'string' ? idOrPlace : idOrPlace.id
+    const removed = places.value.delete(id)
+    if (removed) await idbDelete(id)
+    return removed
   }
 
   // -----------------------------------------------------------------------
@@ -105,6 +112,7 @@ export const usePlacesStore = defineStore('places', () => {
     add,
     get,
     has,
+    remove,
     // internals
     $serialize: _serialize,
     $deserialize: _deserialize,

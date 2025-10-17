@@ -17,7 +17,12 @@ const transactions = computed(() =>
 <template>
   <h1 class="mb-3">List of Transaction</h1>
 
-  <p class="mb-3">{{ transactions.length }} Transactions</p>
+  <v-row class="mb-1 align-center">
+    <v-col>{{ transactions.length }} Transactions</v-col>
+    <v-col class="d-flex justify-end">
+      <v-btn :to="{ name: 'transaction-new' }" prepend-icon="mdi-pencil-plus">Add new</v-btn>
+    </v-col>
+  </v-row>
 
   <v-table striped="even" fixed-header density="compact">
     <thead>

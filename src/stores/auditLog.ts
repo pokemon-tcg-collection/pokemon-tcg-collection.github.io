@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from 'uuid'
 import { readonly, ref, toRaw } from 'vue'
 import { useRoute } from 'vue-router'
 
-import usePokeTCGCollectorIDB from '@/composables/usePokeTCGCollectorIDB'
+import usePokemonTCGCollectionIDB from '@/composables/usePokemonTCGCollectionIDB'
 import { toRawDeep } from './utils'
 
 export interface AuditMessage {
@@ -15,7 +15,7 @@ export interface AuditMessage {
 }
 
 export const useAuditLogStore = defineStore('auditLog', () => {
-  const { put: idbPut, getAll: idbGetAll } = usePokeTCGCollectorIDB('auditLog')
+  const { put: idbPut, getAll: idbGetAll } = usePokemonTCGCollectionIDB('auditLog')
 
   const route = useRoute()
 

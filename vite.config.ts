@@ -14,7 +14,7 @@ import pkg from './package.json'
 
 const bannerTemplate = [
   '/*!',
-  '* Pokémon TCG Collector',
+  '* Pokémon TCG Collection',
   '* @module {MODULE}', // will be replaced by chunk filename
   `* @version ${pkg.version}`,
   `* @license ${pkg.license}`,

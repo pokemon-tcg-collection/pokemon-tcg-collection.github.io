@@ -1,12 +1,12 @@
 import { acceptHMRUpdate, defineStore } from 'pinia'
 import { shallowRef, toRaw, triggerRef } from 'vue'
 
-import usePokeTCGCollectorIDB from '@/composables/usePokeTCGCollectorIDB'
+import usePokemonTCGCollectionIDB from '@/composables/usePokemonTCGCollectionIDB'
 import type { Card } from '@/model/interfaces'
 import { toRawDeep } from './utils'
 
 export const useCardsStore = defineStore('cards', () => {
-  const { put: idbPut, getAll: idbGetAll } = usePokeTCGCollectorIDB('cards')
+  const { put: idbPut, getAll: idbGetAll } = usePokemonTCGCollectionIDB('cards')
 
   // -----------------------------------------------------------------------
   // state

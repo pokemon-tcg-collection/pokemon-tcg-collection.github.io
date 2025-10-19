@@ -1,7 +1,7 @@
 import { acceptHMRUpdate, defineStore } from 'pinia'
 import { shallowRef, toRaw } from 'vue'
 
-import usePokeTCGCollectorIDB from '@/composables/usePokeTCGCollectorIDB'
+import usePokemonTCGCollectionIDB from '@/composables/usePokemonTCGCollectionIDB'
 import type { Card, Item, Place, Transaction } from '@/model/interfaces'
 import type { EditRouteNames } from '@/router/routes'
 import { toRawDeep } from './utils'
@@ -25,7 +25,7 @@ export const useWorkInProgressStore = defineStore('workInProgress', () => {
     getAll: idbGetAll,
     delete: idbDelete,
     clear: idbClear,
-  } = usePokeTCGCollectorIDB('workInProgress')
+  } = usePokemonTCGCollectionIDB('workInProgress')
 
   // -----------------------------------------------------------------------
   // state

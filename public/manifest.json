@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/web-manifest-combined.json",
-  "short_name": "PokeTCGCollector",
-  "name": "Pokemon TCG Collector",
+  "short_name": "PokeTCGCollection",
+  "name": "Pokémon TCG Collection",
   "icons": [
     {
       "src": "pwa-64x64.png",

@@ -1,12 +1,12 @@
 import { acceptHMRUpdate, defineStore } from 'pinia'
 import { shallowRef, toRaw, triggerRef } from 'vue'
 
-import usePokeTCGCollectorIDB from '@/composables/usePokeTCGCollectorIDB'
+import usePokemonTCGCollectionIDB from '@/composables/usePokemonTCGCollectionIDB'
 import type { Place } from '@/model/interfaces'
 import { toRawDeep } from './utils'
 
 export const usePlacesStore = defineStore('places', () => {
-  const { put: idbPut, getAll: idbGetAll, delete: idbDelete } = usePokeTCGCollectorIDB('places')
+  const { put: idbPut, getAll: idbGetAll, delete: idbDelete } = usePokemonTCGCollectionIDB('places')
 
   // -----------------------------------------------------------------------
   // state

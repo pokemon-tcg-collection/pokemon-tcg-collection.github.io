@@ -5,7 +5,7 @@ import type { AuditMessage } from '@/stores/auditLog'
 import type { WIPObject } from '@/stores/workInProgress'
 import useIndexedDB from './useIndexedDB'
 
-export interface PokeTCGCollectorDB extends DBSchema {
+export interface PokemonTCGCollectionDB extends DBSchema {
   transactions: {
     key: string
     value: Transaction
@@ -35,13 +35,13 @@ export interface PokeTCGCollectorDB extends DBSchema {
 }
 
 function upgrade(
-  database: IDBPDatabase<PokeTCGCollectorDB>,
+  database: IDBPDatabase<PokemonTCGCollectionDB>,
   oldVersion: number,
   newVersion: number | null,
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   _transaction: IDBPTransaction<
-    PokeTCGCollectorDB,
-    StoreNames<PokeTCGCollectorDB>[],
+    PokemonTCGCollectionDB,
+    StoreNames<PokemonTCGCollectionDB>[],
     'versionchange'
   >,
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -57,20 +57,20 @@ function upgrade(
   database.createObjectStore('auditLog', { keyPath: 'id' })
 }
 
-export default function usePokeTCGCollectorIDB<
-  StoreName extends StoreNames<PokeTCGCollectorDB>,
-  StoreKey extends IDBKeyRange | PokeTCGCollectorDB[StoreName]['key'],
+export default function usePokemonTCGCollectionIDB<
+  StoreName extends StoreNames<PokemonTCGCollectionDB>,
+  StoreKey extends IDBKeyRange | PokemonTCGCollectionDB[StoreName]['key'],
 >(store: StoreName) {
-  const { getDB } = useIndexedDB<PokeTCGCollectorDB>('poketcgcollector', 1, { upgrade })
+  const { getDB } = useIndexedDB<PokemonTCGCollectionDB>('pokemon-tcg-collection', 1, { upgrade })
 
-  async function put(value: StoreValue<PokeTCGCollectorDB, StoreName>) {
+  async function put(value: StoreValue<PokemonTCGCollectionDB, StoreName>) {
     const dbHdl = await getDB()
     const tx = dbHdl.transaction(store, 'readwrite')
     await tx.store.put(value)
     tx.commit()
   }
 
-  async function putWithKey(key: StoreKey, value: StoreValue<PokeTCGCollectorDB, StoreName>) {
+  async function putWithKey(key: StoreKey, value: StoreValue<PokemonTCGCollectionDB, StoreName>) {
     const dbHdl = await getDB()
     const tx = dbHdl.transaction(store, 'readwrite')
     await tx.store.put(value, key)
@@ -79,14 +79,14 @@ export default function usePokeTCGCollectorIDB<
 
   async function get(
     key: StoreKey,
-  ): Promise<StoreValue<PokeTCGCollectorDB, StoreName> | undefined> {
+  ): Promise<StoreValue<PokemonTCGCollectionDB, StoreName> | undefined> {
     const dbHdl = await getDB()
     const tx = dbHdl.transaction(store, 'readonly')
     const value = await tx.store.get(key)
     return value
   }
 
-  async function getAll(): Promise<StoreValue<PokeTCGCollectorDB, StoreName>[] | undefined> {
+  async function getAll(): Promise<StoreValue<PokemonTCGCollectionDB, StoreName>[] | undefined> {
     const dbHdl = await getDB()
     const tx = dbHdl.transaction(store, 'readonly')
     const values = await tx.store.getAll()

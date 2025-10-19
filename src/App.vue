@@ -46,7 +46,7 @@ const breadcrumbs = computed(() =>
   <v-app>
     <v-app-bar name="app-bar">
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
-      <v-app-bar-title>Pokémon TCG Collector</v-app-bar-title>
+      <v-app-bar-title>Pokémon TCG Collection</v-app-bar-title>
     </v-app-bar>
 
     <v-navigation-drawer name="drawer" v-model="drawer" temporary>

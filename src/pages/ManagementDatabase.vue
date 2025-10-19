@@ -16,7 +16,7 @@ import { useItemsStore } from '@/stores/items'
 import { usePlacesStore } from '@/stores/places'
 import { useTransactionsStore } from '@/stores/transactions'
 import { useWorkInProgressStore } from '@/stores/workInProgress'
-import usePokeTCGCollectorIDB from '@/composables/usePokeTCGCollectorIDB'
+import usePokemonTCGCollectionIDB from '@/composables/usePokemonTCGCollectionIDB'
 
 const cardsStore = useCardsStore()
 const transactionsStore = useTransactionsStore()
@@ -128,7 +128,7 @@ async function createZipBlob(objects: ExportableObjects[]) {
   await zipWriter.add('manifest-sha256.txt', manifestReader)
 
   const baginfoData = [
-    'Source-Organization: Pokemon TCG Collector\n',
+    'Source-Organization: Pokémon TCG Collection\n',
     `Bagging-Date: ${new Date().toISOString().slice(0, 10)}\n`,
     'External-Description: Export of application database\n',
   ].join('')
@@ -260,7 +260,8 @@ async function onExport() {
   await auditLogStore.add('Export database', { toExport: exportItems.value })
 
   const zipFileBlob = await createZipBlob(exportItems.value)
-  triggerDownload(zipFileBlob, 'poketcgcollector.zip')
+  const filename = `pokemon-tcg-collection.${new Date().toISOString().substring(0, 10)}.zip`
+  triggerDownload(zipFileBlob, filename)
 }
 async function onImport() {
   console.debug('import', uploadFile.value)
@@ -297,15 +298,15 @@ async function onDelete() {
   itemsStore.$reset()
   wipStore.$reset()
 
-  const { clear: clearCardsFromIDB } = usePokeTCGCollectorIDB('cards')
+  const { clear: clearCardsFromIDB } = usePokemonTCGCollectionIDB('cards')
   await clearCardsFromIDB()
-  const { clear: clearTransactionsFromIDB } = usePokeTCGCollectorIDB('transactions')
+  const { clear: clearTransactionsFromIDB } = usePokemonTCGCollectionIDB('transactions')
   await clearTransactionsFromIDB()
-  const { clear: clearPlacesFromIDB } = usePokeTCGCollectorIDB('places')
+  const { clear: clearPlacesFromIDB } = usePokemonTCGCollectionIDB('places')
   await clearPlacesFromIDB()
-  const { clear: clearItemsFromIDB } = usePokeTCGCollectorIDB('items')
+  const { clear: clearItemsFromIDB } = usePokemonTCGCollectionIDB('items')
   await clearItemsFromIDB()
-  const { clear: clearWIPObjFromIDB } = usePokeTCGCollectorIDB('workInProgress')
+  const { clear: clearWIPObjFromIDB } = usePokemonTCGCollectionIDB('workInProgress')
   await clearWIPObjFromIDB()
 
   // NOTE: does it make sense to delete audit logs? Let's keep them
@@ -422,7 +423,7 @@ async function onDelete() {
         name="importfile"
         density="compact"
         clearable
-        title="Click to browse, or drag and drop PokeTCGCollector ZIP file here"
+        title="Click to browse, or drag and drop Pokemon TCG Collection ZIP file here"
         filter-by-type=".zip,application/x-zip-compressed"
         show-size
         class="mt-3"

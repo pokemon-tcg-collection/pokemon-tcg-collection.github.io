@@ -3,16 +3,15 @@ import { ref, toRaw } from 'vue'
 import type { RouteLocationAsPathGeneric, RouteLocationAsRelativeGeneric } from 'vue-router'
 import { useRoute, useRouter } from 'vue-router'
 
+import EditorFieldsInternals from '@/components/EditorFieldsInternals.vue'
 import type { Place } from '@/model/interfaces'
 import { createNewPlace } from '@/model/utils'
 import { useAuditLogStore } from '@/stores/auditLog'
 import { usePlacesStore } from '@/stores/places'
-import { useSettingsStore } from '@/stores/settings'
 import { useWorkInProgressStore } from '@/stores/workInProgress'
 
 const placesStore = usePlacesStore()
 const wipStore = useWorkInProgressStore()
-const settings = useSettingsStore()
 const auditLog = useAuditLogStore()
 
 const router = useRouter()
@@ -31,6 +30,10 @@ const place = ref<Place>(
       ? placesStore.get(placeIdFromParam)!
       : createNewPlace(),
 )
+
+function isValidURL(val: string) {
+  return URL.canParse(val)
+}
 
 async function onSave() {
   console.log('Save Place', toRaw(place.value))
@@ -54,7 +57,11 @@ async function onDelete() {
   await placesStore.remove(place.value)
   if (wipStore.has(place.value.id)) await wipStore.finish(place.value.id)
 
-  await router.push({ name: 'place-list' })
+  if (returnLocation === undefined) {
+    await router.push({ name: 'place-list' })
+  } else {
+    await router.push(returnLocation)
+  }
 }
 </script>
 
@@ -63,6 +70,7 @@ async function onDelete() {
 
   <v-form>
     <v-input hide-details>
+      <!-- TODO: toggle revalidation? -->
       <v-btn-toggle v-model="place.type" divided>
         <v-btn value="local">
           <span class="hidden-sm-and-down">Local Store</span>
@@ -82,7 +90,11 @@ async function onDelete() {
     <fieldset class="pa-3 my-2">
       <legend>Details</legend>
 
-      <v-text-field v-model="place.name" label="Name" required></v-text-field>
+      <v-text-field
+        v-model="place.name"
+        label="Name"
+        :rules="[(val: string) => !!val && val.trim().length > 0]"
+      ></v-text-field>
 
       <v-textarea
         v-if="place.type === 'local'"
@@ -93,7 +105,7 @@ async function onDelete() {
       <v-text-field
         v-model="place.url"
         label="URL"
-        :required="place.type === 'online'"
+        :rules="[(val: string) => place.type !== 'online' || isValidURL(val)]"
       ></v-text-field>
     </fieldset>
 
@@ -103,15 +115,7 @@ async function onDelete() {
       <v-textarea v-model="place.notes" label="Notes"></v-textarea>
     </fieldset>
 
-    <fieldset class="pa-3 my-2" v-if="settings.editorShowInternalID">
-      <legend>Internals</legend>
-      <v-text-field
-        v-if="settings.editorShowInternalID"
-        v-model="place.id"
-        readonly
-        label="Internal Place ID"
-      ></v-text-field>
-    </fieldset>
+    <EditorFieldsInternals v-model:object="place"></EditorFieldsInternals>
 
     <div class="d-flex flex-column flex-sm-row ga-3 mt-3">
       <v-btn color="primary" text="Save" @click="onSave"></v-btn>

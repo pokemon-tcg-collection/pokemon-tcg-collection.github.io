@@ -8,7 +8,7 @@ const itemsStore = useItemsStore()
 const items = computed(() =>
   Array.from(itemsStore.items.values()).map((item) => ({
     id: item.id,
-    name: item.label,
+    name: item.name,
     item,
   })),
 )
@@ -35,7 +35,7 @@ const items = computed(() =>
     <tbody>
       <tr v-for="item in items" :key="item.id">
         <td class="fit">{{ item.item.type }}</td>
-        <td class="">{{ item.item.label }}</td>
+        <td class="">{{ item.item.name }}</td>
         <td class="fit">
           <v-btn-group density="compact" variant="text">
             <v-btn :to="{ name: 'item-edit', params: { id: item.id } }" prepend-icon="mdi-file-edit"

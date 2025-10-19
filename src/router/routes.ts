@@ -76,7 +76,7 @@ export default [
         path: 'overview',
         name: 'transactions',
         component: TransactionOverview,
-        meta: { breadcrumb_name: 'Transactions' },
+        meta: { breadcrumb_name: 'Dashboard' },
       },
       {
         path: 'list',
@@ -107,8 +107,8 @@ export default [
   // places (transaction)
   {
     path: '/places',
-    meta: { breadcrumb_name: 'Places' },
-    redirect: { name: 'place-list' },
+    meta: { breadcrumb_name: 'Transactions' },
+    redirect: { name: 'transactions' },
     children: [
       {
         path: 'list',
@@ -133,8 +133,8 @@ export default [
   // items (transaction)
   {
     path: '/items',
-    meta: { breadcrumb_name: 'Items' },
-    redirect: { name: 'item-list' },
+    meta: { breadcrumb_name: 'Transactions' },
+    redirect: { name: 'transactions' },
     children: [
       {
         path: 'list',

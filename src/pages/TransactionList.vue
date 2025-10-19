@@ -43,8 +43,13 @@ const transactions = computed(() =>
           }}
         </td>
         <td class="stretch">{{ transaction.name ?? '–' }}</td>
-        <td class="fit money" v-if="transaction.transaction.cost_type">
-          {{ transaction.transaction.cost_type === 'buy' ? '-' : '+'
+        <td class="fit money" v-if="transaction.transaction.type">
+          {{
+            transaction.transaction.type === 'buy'
+              ? '-'
+              : transaction.transaction.type === 'sell'
+                ? '+'
+                : ''
           }}{{ transaction.transaction.cost }} {{ transaction.transaction.cost_unit }}
         </td>
         <td class="fit money" v-else>

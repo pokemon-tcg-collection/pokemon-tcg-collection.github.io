@@ -5,20 +5,21 @@ import { computed, readonly, ref, toRaw, watch } from 'vue'
 import type { RouteLocationAsPathGeneric, RouteLocationAsRelativeGeneric } from 'vue-router'
 import { useRoute, useRouter } from 'vue-router'
 
+import EditorFieldsInternals from '@/components/EditorFieldsInternals.vue'
 import type { Card, Item, Transaction } from '@/model/interfaces'
 import { CARD_LANGUAGES, TCGDEX_LANGUAGES } from '@/model/interfaces'
 import { createNewCard } from '@/model/utils'
+import { useAuditLogStore } from '@/stores/auditLog'
 import { useCardsStore } from '@/stores/cards'
 import { useItemsStore } from '@/stores/items'
-import { useSettingsStore } from '@/stores/settings'
 import { useTransactionsStore } from '@/stores/transactions'
 import { useWorkInProgressStore } from '@/stores/workInProgress'
 
-const wipStore = useWorkInProgressStore()
 const cardsStore = useCardsStore()
 const transactionsStore = useTransactionsStore()
 const itemsStore = useItemsStore()
-const settings = useSettingsStore()
+const wipStore = useWorkInProgressStore()
+const auditLog = useAuditLogStore()
 
 const router = useRouter()
 const route = useRoute()
@@ -28,10 +29,11 @@ const returnLocation = (
   route.query.returnTo !== undefined ? JSON.parse(route.query.returnTo as string) : undefined
 ) as string | RouteLocationAsRelativeGeneric | RouteLocationAsPathGeneric | undefined
 
+const existsInStore = cardIdFromParam !== undefined && cardsStore.has(cardIdFromParam)
 const card = ref<Card>(
   cardIdFromParam !== undefined && wipStore.has(cardIdFromParam)
     ? wipStore.get<Card>(cardIdFromParam)!
-    : cardIdFromParam !== undefined && cardsStore.has(cardIdFromParam)
+    : existsInStore
       ? cardsStore.get(cardIdFromParam)!
       : createNewCard(),
 )
@@ -55,12 +57,12 @@ const isLoadingSets = ref(false)
 const isLoadingCards = ref(false)
 
 const item_ids = computed<{ id: string; label: string; item: Item }[]>(() =>
-  Array.from(itemsStore.items.values()).map((item) => ({ id: item.id, label: item.label, item })),
+  Array.from(itemsStore.items.values()).map((item) => ({ id: item.id, label: item.name, item })),
 )
 const transaction_ids = computed<{ id: string; label: string; transaction: Transaction }[]>(() =>
   Array.from(transactionsStore.transactions.values()).map((transaction) => ({
     id: transaction.id,
-    label: transaction.name ?? 'TODO: generate label',
+    label: transaction.name,
     transaction,
   })),
 )
@@ -187,6 +189,7 @@ async function onAddNewTransaction() {
     },
   })
 }
+
 async function onSave() {
   console.log('Save Card', toRaw(card.value))
 
@@ -198,6 +201,19 @@ async function onSave() {
 
   if (returnLocation === undefined) {
     await router.push({ name: 'card', params: { id: card.value.id } })
+  } else {
+    await router.push(returnLocation)
+  }
+}
+async function onDelete() {
+  console.log('Delete Card', toRaw(card.value))
+
+  auditLog.add('Delete card', { card: toRaw(card.value) })
+  await cardsStore.remove(card.value)
+  if (wipStore.has(card.value.id)) await wipStore.finish(card.value.id)
+
+  if (returnLocation === undefined) {
+    await router.push({ name: 'card-list' })
   } else {
     await router.push(returnLocation)
   }
@@ -283,6 +299,7 @@ watch(
         label="Card Name"
         clearable
         hide-no-data
+        :rules="[(val: string) => !!val && val.trim().length > 0]"
       ></v-combobox>
       <v-text-field v-model="card.number" label="Card Number in Set"></v-text-field>
     </fieldset>
@@ -334,17 +351,12 @@ watch(
       </v-autocomplete>
     </fieldset>
 
-    <fieldset class="pa-3 my-2" v-if="settings.editorShowInternalID">
-      <legend>Internals</legend>
-      <v-text-field
-        v-if="settings.editorShowInternalID"
-        v-model="card.id"
-        readonly
-        label="Internal Card ID"
-      ></v-text-field>
-    </fieldset>
+    <EditorFieldsInternals v-model:object="card"></EditorFieldsInternals>
 
-    <v-btn color="primary" text="Save" @click="onSave"></v-btn>
+    <div class="d-flex flex-column flex-sm-row ga-3 mt-3">
+      <v-btn color="primary" text="Save" @click="onSave"></v-btn>
+      <v-btn v-if="existsInStore" color="error" text="Delete" @click="onDelete"></v-btn>
+    </div>
   </v-form>
 </template>
 

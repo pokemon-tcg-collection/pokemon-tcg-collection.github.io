@@ -52,6 +52,7 @@ export default function useIndexedDB<DB extends DBSchema>(
       console.error('Unable to open IndexedDB', err)
       error.value = err
     }
+    return undefined
   }
 
   async function _getDB(): Promise<IDBPDatabase<DB>> {

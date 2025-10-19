@@ -5,43 +5,66 @@ export const COST_UNITS = [{ title: 'Euro (€)', id: 'EUR' }] as const
 
 // -------------------------------------------------------------------------
 
-export type TransactionType = 'purchase' | 'sale' | 'gift'
-export type TransactionPlaceType = 'online-store' | 'store'
-export type TransactionCostType = 'buy' | 'sell'
+export type RefID = string
 
-export interface Transaction {
-  /** internal id */
-  id: string
+export interface DataEditInfo {
+  /** date of object creation */
+  created: Date
+  /** date of last edit, `undefined` if never edited after creation */
+  edited?: Date
+}
 
-  /** label for transaction */
-  name?: string
+export interface Base {
+  /** internal unique identifier (data relationship, storage, deduplication) */
+  id: RefID
+
+  /** label (display string for inputs, short description) (should be unique per object) */
+  name: string
+
+  /** internal information about creation/edit */
+  _meta: DataEditInfo
+}
+
+// -------------------------------------------------------------------------
+
+export type TransactionType = (typeof TRANSACTION_TYPE)[number]['id']
+
+export const TRANSACTION_TYPE = [
+  { id: 'buy', label: 'Buy' },
+  { id: 'sell', label: 'Sell' },
+  { id: 'gift-receive', label: 'Gift (received)' },
+  { id: 'gift-away', label: 'Gift (gifted away)' },
+]
+
+export interface Transaction extends Base {
   /** note/description */
   description?: string
-  /** type of transaction */
 
-  type: TransactionType
+  /** product/store page url */
+  url?: string
+
   /** date and time */
   date?: string | Date
-  /** type of location for transaction (online or in-person) */
-  place?: TransactionPlaceType
-  place_id?: string
+  /** location for transaction (online or in-person) */
+  place_id?: RefID
 
   /** price/cost */
   cost: number
   /** unit for price/cost */
   cost_unit: CostUnits
-  cost_type?: TransactionCostType
+  /** type of transaction (buy, sell, gift) */
+  type?: TransactionType
 
   /** contents */
   items: TransactionItem[]
 
   /** binary attachments (e.g. images, pdf) */
-  attachment_ids?: string[]
+  attachment_ids?: RefID[]
 }
 
 export interface TransactionItem {
   amount: number
-  item_id: string
+  item_id: RefID
 
   /** price/cost */
   cost: number
@@ -51,12 +74,8 @@ export interface TransactionItem {
 
 // -------------------------------------------------------------------------
 
-interface PlaceGeneric {
-  /** internal id */
-  id: string
-
+interface PlaceGeneric extends Base {
   type: string
-  name: string
   url?: string
 
   notes?: string
@@ -85,35 +104,38 @@ export const ITEM_TYPES = [
   { id: 'mini-tin', label: 'Mini Tin' },
   { id: 'etb', label: 'Etb' },
   { id: 'blister', label: 'Blister' },
+  // etc.
 ] as const
 
-export interface Item {
-  /** internal id */
-  id: string
-
+export interface Item extends Base {
   /** type of item */
   type: ItemType
-  /** label */
-  label: string
 
-  /** single item cost */
-  msrp_cost?: number
-  msrp_cost_unit?: CostUnits
+  /** single item cost (MSRP, UVP) */
+  cost?: number
+  cost_unit?: CostUnits
 
   /** contents, e.g. number of boosters, accessories */
   contents: ItemPart[]
+
   /** full-text description */
   description?: string
 }
 
 export interface ItemPart {
   amount: number
+
   /** item type (booster, coin, card-savers, ...) */
   type: string
+
   /** plain text description */
-  label?: string
+  name?: string
+
+  /** an item as part of another item (collection, e.g. ETB/display) may also be available alone */
+  item_id?: RefID
 }
 
+// TODO: still wip
 export interface BoosterItemPart extends ItemPart {
   type: 'booster'
 
@@ -156,26 +178,28 @@ export const CARD_LANGUAGES = [
   { code: 'zh-cn', short: 'ZHO', name: 'Chinese (Simple)' },
 ] as const
 
-export interface Card {
-  /** unique identifier (see TCGDex ids/names) */
-  id: string
-
+export interface Card extends Base {
   // card info
   language: CardLanguageID
+
+  /** name of card */
   name: string
+  /** number in set (generally a number but may also be more complex so a string) */
   number: string
+
   set: string
   boosters?: string[]
   rarity?: string
 
   /** total number of cards */
   amount: number
-  /** card details */
+
+  /** card details (in collection) */
   cards?: unknown[]
 
   // related transactions/items/...
-  item_ids?: string[]
-  transaction_ids?: string[]
+  item_ids?: RefID[]
+  transaction_ids?: RefID[]
 
   // availability? (for statistics (pull-rates), but e.g. card might have been sold/gifted-away)
 
@@ -185,9 +209,9 @@ export interface Card {
 
 // -------------------------------------------------------------------------
 
-export interface Attachment {
-  id: string
+export interface Attachment extends Base {
   description?: string
+
   filename: string
   mimetype: string
   blob: Blob

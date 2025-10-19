@@ -4,12 +4,13 @@ import type { RouteLocationAsPathGeneric, RouteLocationAsRelativeGeneric } from 
 import { useRoute, useRouter } from 'vue-router'
 import { useDisplay } from 'vuetify'
 
+import EditorFieldsInternals from '@/components/EditorFieldsInternals.vue'
 import type { Item, Place, Transaction } from '@/model/interfaces'
-import { COST_UNITS } from '@/model/interfaces'
+import { COST_UNITS, TRANSACTION_TYPE } from '@/model/interfaces'
 import { createNewTransaction } from '@/model/utils'
+import { useAuditLogStore } from '@/stores/auditLog'
 import { useItemsStore } from '@/stores/items'
 import { usePlacesStore } from '@/stores/places'
-import { useSettingsStore } from '@/stores/settings'
 import { useTransactionsStore } from '@/stores/transactions'
 import { useWorkInProgressStore } from '@/stores/workInProgress'
 
@@ -19,7 +20,7 @@ const transactionsStore = useTransactionsStore()
 const placesStore = usePlacesStore()
 const itemsStore = useItemsStore()
 const wipStore = useWorkInProgressStore()
-const settings = useSettingsStore()
+const auditLog = useAuditLogStore()
 
 const router = useRouter()
 const route = useRoute()
@@ -29,10 +30,12 @@ const returnLocation = (
   route.query.returnTo !== undefined ? JSON.parse(route.query.returnTo as string) : undefined
 ) as string | RouteLocationAsRelativeGeneric | RouteLocationAsPathGeneric | undefined
 
+const existsInStore =
+  transactionIdFromParam !== undefined && transactionsStore.has(transactionIdFromParam)
 const transaction = ref<Transaction>(
   transactionIdFromParam !== undefined && wipStore.has(transactionIdFromParam)
     ? wipStore.get<Transaction>(transactionIdFromParam)!
-    : transactionIdFromParam !== undefined && transactionsStore.has(transactionIdFromParam)
+    : existsInStore
       ? transactionsStore.get(transactionIdFromParam)!
       : createNewTransaction(),
 )
@@ -68,9 +71,10 @@ const transactionTime = computed({
 const transactionTimeDisplay = computed(() => transactionTime.value.toLocaleTimeString())
 
 const costUnits = readonly(COST_UNITS)
+const transactionTypes = readonly(TRANSACTION_TYPE)
 
 const item_ids = computed<{ id: string; label: string; item: Item }[]>(() =>
-  Array.from(itemsStore.items.values()).map((item) => ({ id: item.id, label: item.label, item })),
+  Array.from(itemsStore.items.values()).map((item) => ({ id: item.id, label: item.name, item })),
 )
 const place_ids = computed<{ id: string; label: string; place: Place }[]>(() =>
   Array.from(placesStore.places.values()).map((place) => ({
@@ -79,6 +83,7 @@ const place_ids = computed<{ id: string; label: string; place: Place }[]>(() =>
     place,
   })),
 )
+
 const newItemId = ref<string>()
 
 async function onAddNewLocation() {
@@ -159,6 +164,19 @@ async function onSave() {
     await router.push(returnLocation)
   }
 }
+async function onDelete() {
+  console.log('Delete Transaction', toRaw(transaction.value))
+
+  auditLog.add('Delete transaction', { transaction: toRaw(transaction.value) })
+  await transactionsStore.remove(transaction.value)
+  if (wipStore.has(transaction.value.id)) await wipStore.finish(transaction.value.id)
+
+  if (returnLocation === undefined) {
+    await router.push({ name: 'transaction-list' })
+  } else {
+    await router.push(returnLocation)
+  }
+}
 </script>
 
 <template>
@@ -168,8 +186,19 @@ async function onSave() {
     <fieldset class="pa-3 my-2">
       <legend>Description</legend>
 
-      <v-text-field v-model="transaction.name" label="Short name" clearable></v-text-field>
+      <v-text-field
+        v-model="transaction.name"
+        label="Short name"
+        :rules="[(val: string) => !!val && val.trim().length > 0]"
+        clearable
+      ></v-text-field>
       <v-textarea v-model="transaction.description" label="Description"></v-textarea>
+
+      <v-text-field
+        v-model="transaction.url"
+        label="URL (product or information webpage)"
+        clearable
+      ></v-text-field>
     </fieldset>
 
     <fieldset class="pa-3 my-2">
@@ -178,11 +207,10 @@ async function onSave() {
       <v-row justify="space-around">
         <v-col col="12" md="6">
           <v-select
-            v-model="transaction.cost_type"
-            :items="[
-              { title: 'Buy', value: 'buy' },
-              { title: 'Sell', value: 'sell' },
-            ]"
+            v-model="transaction.type"
+            :items="transactionTypes"
+            item-value="id"
+            item-title="label"
             label="Type of Transaction"
             clearable
           ></v-select>
@@ -332,17 +360,14 @@ async function onSave() {
       </v-autocomplete>
     </fieldset>
 
-    <fieldset class="pa-3 my-2" v-if="settings.editorShowInternalID">
-      <legend>Internals</legend>
-      <v-text-field
-        v-if="settings.editorShowInternalID"
-        v-model="transaction.id"
-        readonly
-        label="Internal Transaction ID"
-      ></v-text-field>
-    </fieldset>
+    <!-- TODO: attachments -->
 
-    <v-btn color="primary" text="Save" @click="onSave"></v-btn>
+    <EditorFieldsInternals v-model:object="transaction"></EditorFieldsInternals>
+
+    <div class="d-flex flex-column flex-sm-row ga-3 mt-3">
+      <v-btn color="primary" text="Save" @click="onSave"></v-btn>
+      <v-btn v-if="existsInStore" color="error" text="Delete" @click="onDelete"></v-btn>
+    </div>
   </v-form>
 </template>
 

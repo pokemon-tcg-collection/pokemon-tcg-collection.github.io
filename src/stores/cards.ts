@@ -6,7 +6,7 @@ import type { Card } from '@/model/interfaces'
 import { toRawDeep } from './utils'
 
 export const useCardsStore = defineStore('cards', () => {
-  const { put: idbPut, getAll: idbGetAll } = usePokemonTCGCollectionIDB('cards')
+  const { put: idbPut, getAll: idbGetAll, delete: idbDelete } = usePokemonTCGCollectionIDB('cards')
 
   // -----------------------------------------------------------------------
   // state
@@ -39,6 +39,13 @@ export const useCardsStore = defineStore('cards', () => {
   function has(idOrCard: Card | string): boolean {
     const id = typeof idOrCard === 'string' ? idOrCard : idOrCard.id
     return cards.value.has(id)
+  }
+
+  async function remove(idOrCard: Card | string) {
+    const id = typeof idOrCard === 'string' ? idOrCard : idOrCard.id
+    const removed = cards.value.delete(id)
+    if (removed) await idbDelete(id)
+    return removed
   }
 
   async function fetchInfo(idOrCard: Card | string) {
@@ -109,6 +116,7 @@ export const useCardsStore = defineStore('cards', () => {
     add,
     get,
     has,
+    remove,
     fetchInfo,
     // internals
     $serialize: _serialize,

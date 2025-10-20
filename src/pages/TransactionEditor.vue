@@ -148,6 +148,7 @@ function onAddItemToTransaction() {
 async function onSave() {
   console.log('Save Transaction', toRaw(transaction.value))
 
+  if (existsInStore) transaction.value._meta.edited = new Date()
   await transactionsStore.add(transaction.value)
   if (wipStore.has(transaction.value.id)) await wipStore.finish(transaction.value.id)
 

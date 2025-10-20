@@ -1,13 +1,12 @@
 <script setup lang="ts">
-import type { CardResume, Set, SetResume, SupportedLanguages, Card as TCGCard } from '@tcgdex/sdk'
-import TCGdex, { CardResumeModel, Query, SetResumeModel } from '@tcgdex/sdk'
-import { computed, readonly, ref, toRaw, watch } from 'vue'
+import type { CardResume, Card as TCGCard } from '@tcgdex/sdk'
+import { computed, ref, toRaw, watch } from 'vue'
 import type { RouteLocationAsPathGeneric, RouteLocationAsRelativeGeneric } from 'vue-router'
 import { useRoute, useRouter } from 'vue-router'
 
 import EditorFieldsInternals from '@/components/EditorFieldsInternals.vue'
+import EditorFieldsTCGDexCardSelector from '@/components/EditorFieldsTCGDexCardSelector.vue'
 import type { Card, Item, Transaction } from '@/model/interfaces'
-import { CARD_LANGUAGES, TCGDEX_LANGUAGES } from '@/model/interfaces'
 import { createNewCard } from '@/model/utils'
 import { useAuditLogStore } from '@/stores/auditLog'
 import { useCardsStore } from '@/stores/cards'
@@ -38,23 +37,8 @@ const card = ref<Card>(
       : createNewCard(),
 )
 
-const tcgdex = computed(() => {
-  const language = TCGDEX_LANGUAGES.includes(card.value.language) ? card.value.language : 'en'
-  const tcgdex = new TCGdex(language as SupportedLanguages)
-  console.log('Creating new TCGDex API adapter', tcgdex)
-  Object.assign(window, { tcgdex })
-  return tcgdex
-})
-
-const setInfoByUser = ref(false)
-
-const languages = readonly(CARD_LANGUAGES)
-const sets = ref<{ id: string; label: string; set?: SetResume }[]>([])
 const cards = ref<{ id: string; label: string; card?: CardResume }[]>([])
 const boosters = computed<{ id: string; label: string }[]>(() => [])
-
-const isLoadingSets = ref(false)
-const isLoadingCards = ref(false)
 
 const item_ids = computed<{ id: string; label: string; item: Item }[]>(() =>
   Array.from(itemsStore.items.values()).map((item) => ({ id: item.id, label: item.name, item })),
@@ -69,88 +53,14 @@ const transaction_ids = computed<{ id: string; label: string; transaction: Trans
 
 watch(card.value, (n, o) => console.debug('Card data changed', { new: toRaw(n), old: toRaw(o) }))
 
-async function updateTCGData() {
-  if (!tcgdex.value) {
-    console.warn('API not ready!')
-    return
-  }
+async function onCardSelected(tcg_card: TCGCard) {
+  if (!tcg_card) return
 
-  console.debug('Updating TCG data ...')
-
-  isLoadingSets.value = true
-
-  const tcgSets = await tcgdex.value.set.list()
-  sets.value = tcgSets.map((set) => ({ id: set.id, label: set.name, set: set }))
-
-  isLoadingSets.value = false
-}
-async function updateTCGCardData() {
-  if (!tcgdex.value) {
-    console.warn('API not ready!')
-    return
-  }
-
-  const newSetId = card.value.set
-  if (!newSetId) {
-    cards.value = []
-    return
-  }
-
-  console.debug('Updating TCG card data ...')
-
-  isLoadingCards.value = true
-
-  await onSetSelected(newSetId)
-
-  const tcgCards = await tcgdex.value.card.list(Query.create().equal('set', newSetId))
-  cards.value = tcgCards.map((setCard) => ({ id: setCard.id, label: setCard.name, card: setCard }))
-
-  isLoadingCards.value = false
-}
-
-async function onSetSelected(setId: string) {
-  if (!tcgdex.value) {
-    console.warn('API not ready!')
-    return
-  }
-
-  let tcgSet: Set | null | undefined = undefined
-
-  if (sets.value.length > 0) {
-    const tcgSetInfo = sets.value.find((set) => set.id === setId)?.set
-    if (tcgSetInfo !== undefined && tcgSetInfo instanceof SetResumeModel) {
-      tcgSet = await tcgSetInfo.getSet()
-    }
-  }
-  if (tcgSet === undefined) {
-    tcgSet = await tcgdex.value.set.get(setId)
-  }
-  console.debug('Set', tcgSet)
-  if (tcgSet === undefined || tcgSet === null) return
-}
-async function onCardSelected(cardId: string) {
-  if (!tcgdex.value) {
-    console.warn('API not ready!')
-    return
-  }
-
-  let tcgCard: TCGCard | null | undefined = undefined
-
-  if (cards.value.length > 0) {
-    const tcgCardInfo = cards.value.find((card) => card.id === cardId)?.card
-    if (tcgCardInfo !== undefined && tcgCardInfo instanceof CardResumeModel) {
-      tcgCard = await tcgCardInfo.getCard()
-    }
-  }
-  if (tcgCard === undefined) {
-    tcgCard = await tcgdex.value.card.get(cardId)
-  }
-  console.debug('Card', tcgCard)
-  if (tcgCard === undefined || tcgCard === null) return
-
-  card.value.number = tcgCard.localId
-  card.value.name = tcgCard.name
-  card.value.tcgdex_id = tcgCard.id
+  // card.value.language = undefined
+  card.value.name = tcg_card.name
+  card.value.number = tcg_card.localId
+  card.value.set = tcg_card.set.id
+  card.value.tcgdex_id = tcg_card.id
 }
 
 async function onAddNewItem() {
@@ -193,6 +103,7 @@ async function onAddNewTransaction() {
 async function onSave() {
   console.log('Save Card', toRaw(card.value))
 
+  if (existsInStore) card.value._meta.edited = new Date()
   await cardsStore.add(card.value)
   if (wipStore.has(card.value.id)) await wipStore.finish(card.value.id)
 
@@ -218,26 +129,6 @@ async function onDelete() {
     await router.push(returnLocation)
   }
 }
-
-// on load and on language change, update set list
-watch(
-  tcgdex,
-  (n, o) => {
-    if (n === o || !n) return
-    updateTCGData()
-    // if card already has a set selected
-    updateTCGCardData()
-  },
-  { immediate: true },
-)
-// on set change, update card list
-watch(
-  () => card.value.set,
-  (n, o) => {
-    if (n === o) return
-    updateTCGCardData()
-  },
-)
 </script>
 
 <template>
@@ -246,38 +137,12 @@ watch(
   <v-form>
     <fieldset class="pa-3 my-2">
       <legend>Set info</legend>
-      <v-checkbox v-model="setInfoByUser" label="Manual input"></v-checkbox>
-      <v-autocomplete
-        v-model="card.language"
-        :items="languages"
-        item-value="code"
-        item-title="name"
-        label="Language"
-      ></v-autocomplete>
-      <v-autocomplete
-        v-model="card.set"
-        @update:model-value="onSetSelected"
-        :items="sets"
-        item-value="id"
-        item-title="label"
-        :loading="isLoadingSets"
-        label="Name of Set"
-        clearable
-        hide-no-data
-      ></v-autocomplete>
-      <v-autocomplete
-        v-model="card.tcgdex_id"
-        @update:model-value="onCardSelected"
-        :items="cards"
-        item-value="id"
-        item-title="label"
-        :loading="isLoadingCards"
-        label="Card"
-        clearable
-        hide-no-data
-      ></v-autocomplete>
 
-      <v-combobox
+      <EditorFieldsTCGDexCardSelector
+        @card-selected="onCardSelected"
+      ></EditorFieldsTCGDexCardSelector>
+
+      <!-- <v-combobox
         v-model="card.boosters"
         :items="boosters"
         multiple
@@ -285,7 +150,7 @@ watch(
         closable-chips
         clearable
         label="Boosters with Card"
-      ></v-combobox>
+      ></v-combobox> -->
     </fieldset>
 
     <fieldset class="pa-3 my-2">

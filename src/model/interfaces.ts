@@ -1,7 +1,13 @@
+import type { SupportedLanguages } from '@tcgdex/sdk'
+
 // -------------------------------------------------------------------------
 
 export type CostUnits = (typeof COST_UNITS)[number]['id']
-export const COST_UNITS = [{ title: 'Euro (€)', id: 'EUR' }] as const
+export const COST_UNITS = [
+  { title: 'Euro (€)', id: 'EUR' },
+  { title: 'US Dollar ($)', id: 'USD' },
+  // Pound, Yen
+] as const
 
 // -------------------------------------------------------------------------
 
@@ -14,12 +20,20 @@ export interface DataEditInfo {
   edited?: Date
 }
 
+export interface RelatedURL {
+  url: string
+  name: string
+}
+
 export interface Base {
   /** internal unique identifier (data relationship, storage, deduplication) */
   id: RefID
 
   /** label (display string for inputs, short description) (should be unique per object) */
   name: string
+
+  /** an optional list of related URLs (images, articles, shop pages, etc.) */
+  related_urls?: RelatedURL[]
 
   /** internal information about creation/edit */
   _meta: DataEditInfo
@@ -34,7 +48,7 @@ export const TRANSACTION_TYPE = [
   { id: 'sell', label: 'Sell' },
   { id: 'gift-receive', label: 'Gift (received)' },
   { id: 'gift-away', label: 'Gift (gifted away)' },
-]
+] as const
 
 export interface Transaction extends Base {
   /** note/description */
@@ -149,7 +163,7 @@ export interface BoosterItemPart extends ItemPart {
 // -------------------------------------------------------------------------
 
 // NOTE: manually since not exported
-export const TCGDEX_LANGUAGES = ['en', 'fr', 'es', 'it', 'pt', 'de']
+export const TCGDEX_LANGUAGES = ['en', 'fr', 'es', 'it', 'pt', 'de'] as SupportedLanguages[]
 
 // NOTE: does not work if CARD_LANGUAGES is typed
 export type CardLanguageID = (typeof CARD_LANGUAGES)[number]['code']

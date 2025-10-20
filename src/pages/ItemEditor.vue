@@ -93,6 +93,7 @@ function onItemPartItemSelected(part: ItemPart) {
 async function onSave() {
   console.log('Save Item', toRaw(item.value))
 
+  if (existsInStore) item.value._meta.edited = new Date()
   await itemsStore.add(item.value)
   if (wipStore.has(item.value.id)) await wipStore.finish(item.value.id)
 

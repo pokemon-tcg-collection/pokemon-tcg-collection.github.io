@@ -38,6 +38,7 @@ function isValidURL(val: string) {
 async function onSave() {
   console.log('Save Place', toRaw(place.value))
 
+  if (existsInStore) place.value._meta.edited = new Date()
   await placesStore.add(place.value)
   if (wipStore.has(place.value.id)) await wipStore.finish(place.value.id)
 

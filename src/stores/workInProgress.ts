@@ -73,6 +73,12 @@ export const useWorkInProgressStore = defineStore('workInProgress', () => {
     return deleted
   }
 
+  async function remove(id: string) {
+    const deleted = objects.value.delete(id)
+    await idbDelete(id)
+    return deleted
+  }
+
   async function clear() {
     objects.value.clear()
     await idbClear()
@@ -114,6 +120,7 @@ export const useWorkInProgressStore = defineStore('workInProgress', () => {
     has,
     getWithInfo,
     get,
+    remove,
     finish,
     clear,
     // internals

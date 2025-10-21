@@ -1,12 +1,16 @@
 <script setup lang="ts">
+import { useNetwork } from '@vueuse/core'
 import { computed, ref } from 'vue'
 import type { RouteLocationAsPathGeneric, RouteLocationAsRelativeGeneric } from 'vue-router'
 import { useRoute } from 'vue-router'
 import { useDisplay } from 'vuetify'
 
 import { useWorkInProgressStore } from '@/stores/workInProgress'
+import usePWA from './composables/usePWA'
 
 const { xs } = useDisplay()
+const { isOnline } = useNetwork()
+const { isInstalled, canBeInstalled, promptInstall } = usePWA({ blockAutomaticPrompt: true })
 
 const wipStore = useWorkInProgressStore()
 
@@ -47,6 +51,15 @@ const breadcrumbs = computed(() =>
     <v-app-bar name="app-bar">
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
       <v-app-bar-title>Pokémon TCG Collection</v-app-bar-title>
+      <template v-slot:append>
+        <v-btn
+          v-if="canBeInstalled || isInstalled"
+          :readonly="isInstalled"
+          :icon="isInstalled ? 'mdi-view-grid' : 'mdi-view-grid-plus'"
+          @click="promptInstall"
+        ></v-btn>
+        <v-icon :icon="isOnline ? 'mdi-wifi' : 'mdi-wifi-off'" class="mx-3"></v-icon>
+      </template>
     </v-app-bar>
 
     <v-navigation-drawer name="drawer" v-model="drawer" temporary>
@@ -80,7 +93,9 @@ const breadcrumbs = computed(() =>
             ><v-icon icon="mdi-pokeball"></v-icon><span class="d-sr-only">/</span></template
           >
         </v-breadcrumbs>
-        <router-view />
+        <router-view v-slot="{ Component, route }">
+          <component :is="Component" :key="route.fullPath"></component>
+        </router-view>
       </v-container>
     </v-main>
 

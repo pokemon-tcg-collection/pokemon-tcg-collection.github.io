@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { readonly, ref, toRaw } from 'vue'
+import { computed, readonly, ref, toRaw } from 'vue'
 import type { RouteLocationAsPathGeneric, RouteLocationAsRelativeGeneric } from 'vue-router'
 import { useRoute, useRouter } from 'vue-router'
 import { useDisplay } from 'vuetify'
@@ -11,7 +11,6 @@ import { createNewItem } from '@/model/utils'
 import { useAuditLogStore } from '@/stores/auditLog'
 import { useItemsStore } from '@/stores/items'
 import { useWorkInProgressStore } from '@/stores/workInProgress'
-import { computed } from 'vue'
 
 const { smAndDown, xs } = useDisplay()
 
@@ -23,9 +22,16 @@ const router = useRouter()
 const route = useRoute()
 
 const itemIdFromParam = route.params.id as string | undefined
-const returnLocation = (
-  route.query.returnTo !== undefined ? JSON.parse(route.query.returnTo as string) : undefined
-) as string | RouteLocationAsRelativeGeneric | RouteLocationAsPathGeneric | undefined
+const returnLocation = computed(
+  () =>
+    (route.query.returnTo !== undefined
+      ? JSON.parse(route.query.returnTo as string)
+      : undefined) as
+      | string
+      | RouteLocationAsRelativeGeneric
+      | RouteLocationAsPathGeneric
+      | undefined,
+)
 
 const existsInStore = itemIdFromParam !== undefined && itemsStore.has(itemIdFromParam)
 const item = ref<Item>(
@@ -63,8 +69,10 @@ async function onAddNewItem() {
 
   // do a history replace with item-edit and then use the browser history?
   await router.replace({ name: 'item-edit', params: { id: item.value.id }, query: route.query })
+
   // otherwise, would it work with multiple levels of redirection? --> ToBeTested
   await router.push({
+    // 'item-new' only works if we set a :key on <router-view> to force rerendering
     name: 'item-new',
     query: {
       returnTo: JSON.stringify({
@@ -100,10 +108,10 @@ async function onSave() {
   // do a history replace with item-edit and then use the browser history?
   await router.replace({ name: 'item-edit', params: { id: item.value.id }, query: route.query })
 
-  if (returnLocation === undefined) {
+  if (returnLocation.value === undefined) {
     await router.push({ name: 'item-list' })
   } else {
-    await router.push(returnLocation)
+    await router.push(returnLocation.value)
   }
 }
 async function onDelete() {
@@ -113,10 +121,10 @@ async function onDelete() {
   await itemsStore.remove(item.value)
   if (wipStore.has(item.value.id)) await wipStore.finish(item.value.id)
 
-  if (returnLocation === undefined) {
+  if (returnLocation.value === undefined) {
     await router.push({ name: 'item-list' })
   } else {
-    await router.push(returnLocation)
+    await router.push(returnLocation.value)
   }
 }
 </script>

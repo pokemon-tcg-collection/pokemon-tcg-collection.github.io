@@ -1,12 +1,15 @@
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, triggerRef } from 'vue'
+import { toRaw } from 'vue'
+import { storeToRefs } from 'pinia'
 
-import { useWorkInProgressStore } from '@/stores/workInProgress'
+import { useWorkInProgressStore, type WIPObject } from '@/stores/workInProgress'
 
 const wipStore = useWorkInProgressStore()
 
+const { objects: wipObjectRef } = storeToRefs(wipStore)
 const wipObjects = computed(() =>
-  Array.from(wipStore.objects.values()).map((wipObject) => ({
+  Array.from(wipObjectRef.value.values()).map((wipObject) => ({
     id: wipObject.id,
     name:
       wipObject.type === 'transaction-edit'
@@ -21,14 +24,21 @@ const wipObjects = computed(() =>
     wipObject,
   })),
 )
+
+async function onDeleteDraftObject(obj: WIPObject) {
+  console.log('Delete WIP object', toRaw(obj))
+
+  await wipStore.remove(obj.id)
+  triggerRef(wipObjectRef)
+}
 </script>
 
 <template>
   <h1 class="mb-3">Works in Progress</h1>
 
-  <p class="mb-3">{{ wipStore.objects.size }} unfinished edits</p>
+  <p class="mb-3">{{ wipObjectRef.size }} unfinished edits</p>
 
-  <v-table v-if="wipStore.objects.size > 0" striped="even" fixed-header density="compact">
+  <v-table v-if="wipObjectRef.size > 0" striped="even" fixed-header density="compact">
     <thead>
       <tr>
         <th scope="col">Date</th>
@@ -48,6 +58,11 @@ const wipObjects = computed(() =>
               :to="{ name: wipObject.wipObject.type, params: { id: wipObject.wipObject.id } }"
               prepend-icon="mdi-file-edit"
               >Edit</v-btn
+            >
+            <v-btn
+              prepend-icon="mdi-file-document-remove"
+              @click="() => onDeleteDraftObject(wipObject.wipObject)"
+              >Delete</v-btn
             >
           </v-btn-group>
         </td>

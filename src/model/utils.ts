@@ -2,6 +2,10 @@ import { v4 as uuidv4 } from 'uuid'
 
 import type { Card, DataEditInfo, Item, Place, Transaction } from './interfaces'
 
+export function createNewRefID() {
+  return uuidv4()
+}
+
 function createEditMeta() {
   return {
     created: new Date(),

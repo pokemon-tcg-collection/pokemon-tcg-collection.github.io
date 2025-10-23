@@ -1,5 +1,5 @@
 import { acceptHMRUpdate, defineStore } from 'pinia'
-import { shallowRef, toRaw } from 'vue'
+import { ref, shallowRef, toRaw } from 'vue'
 
 import usePokemonTCGCollectionIDB from '@/composables/usePokemonTCGCollectionIDB'
 import type { Card, Item, Place, Transaction } from '@/model/interfaces'
@@ -91,6 +91,14 @@ export const useWorkInProgressStore = defineStore('workInProgress', () => {
     return JSON.stringify(data)
   }
 
+  function _reset() {
+    objects.value = new Map()
+  }
+
+  // -------------------------------------------------------------------------
+
+  const _isHydrated = ref<boolean>(false)
+
   async function _hydrate({
     clearBefore = false,
     overwriteExisting = false,
@@ -104,10 +112,8 @@ export const useWorkInProgressStore = defineStore('workInProgress', () => {
       if (!overwriteExisting && has(entry.id)) return
       objects.value.set(entry.id, entry)
     })
-  }
 
-  function _reset() {
-    objects.value = new Map()
+    _isHydrated.value = true
   }
 
   // -------------------------------------------------------------------------
@@ -125,8 +131,9 @@ export const useWorkInProgressStore = defineStore('workInProgress', () => {
     clear,
     // internals
     $serialize: _serialize,
-    $hydrate: _hydrate,
     $reset: _reset,
+    $hydrate: _hydrate,
+    $isHydrated: _isHydrated,
   }
 })
 

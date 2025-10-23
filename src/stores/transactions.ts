@@ -1,5 +1,5 @@
 import { acceptHMRUpdate, defineStore } from 'pinia'
-import { shallowRef, toRaw, triggerRef } from 'vue'
+import { readonly, ref, shallowRef, toRaw, triggerRef } from 'vue'
 
 import usePokemonTCGCollectionIDB from '@/composables/usePokemonTCGCollectionIDB'
 import type { Transaction } from '@/model/interfaces'
@@ -43,11 +43,13 @@ export const useTransactionsStore = defineStore('transactions', () => {
   }
 
   function has(idOrTransaction: Transaction | string): boolean {
+    if (idOrTransaction === undefined) return false
     const id = typeof idOrTransaction === 'string' ? idOrTransaction : idOrTransaction.id
     return transactions.value.has(id)
   }
 
   async function remove(idOrTransaction: Transaction | string) {
+    if (idOrTransaction === undefined) return false
     const id = typeof idOrTransaction === 'string' ? idOrTransaction : idOrTransaction.id
     const removed = transactions.value.delete(id)
     if (removed) await idbDelete(id)
@@ -88,10 +90,22 @@ export const useTransactionsStore = defineStore('transactions', () => {
     return true
   }
 
+  function _reset() {
+    transactions.value = new Map()
+  }
+
+  // -----------------------------------------------------------------------
+
+  const _isHydrating = ref<boolean>(false)
+  const _isHydrated = ref<boolean>(false)
+
   async function _hydrate({
     clearBefore = false,
     overwriteExisting = false,
   }: { clearBefore?: boolean; overwriteExisting?: boolean } = {}) {
+    if (_isHydrating.value) return
+    _isHydrating.value = true
+
     if (clearBefore) _reset()
 
     const values = await idbGetAll()
@@ -101,10 +115,9 @@ export const useTransactionsStore = defineStore('transactions', () => {
       if (!overwriteExisting && has(entry)) return
       transactions.value.set(entry.id, entry)
     })
-  }
 
-  function _reset() {
-    transactions.value = new Map()
+    _isHydrated.value = true
+    _isHydrating.value = false
   }
 
   // -----------------------------------------------------------------------
@@ -120,8 +133,9 @@ export const useTransactionsStore = defineStore('transactions', () => {
     // internals
     $serialize: _serialize,
     $deserialize: _deserialize,
-    $hydrate: _hydrate,
     $reset: _reset,
+    $hydrate: _hydrate,
+    $isHydrated: readonly(_isHydrated),
   }
 })
 

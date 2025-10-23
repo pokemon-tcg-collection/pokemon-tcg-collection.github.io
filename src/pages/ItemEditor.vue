@@ -1,13 +1,17 @@
 <script setup lang="ts">
-import { computed, readonly, ref, toRaw } from 'vue'
+import { until } from '@vueuse/core'
+import { computed, onMounted, readonly, ref, toRaw } from 'vue'
 import type { RouteLocationAsPathGeneric, RouteLocationAsRelativeGeneric } from 'vue-router'
-import { useRoute, useRouter } from 'vue-router'
+import { onBeforeRouteLeave, useRoute, useRouter } from 'vue-router'
 import { useDisplay } from 'vuetify'
 
+import EditorConfirmChangesDialog from '@/components/EditorConfirmChangesDialog.vue'
+import EditorFieldset from '@/components/EditorFieldset.vue'
 import EditorFieldsInternals from '@/components/EditorFieldsInternals.vue'
+import EditorFieldsRelated from '@/components/EditorFieldsRelated.vue'
 import type { Item, ItemPart } from '@/model/interfaces'
 import { COST_UNITS, ITEM_TYPES } from '@/model/interfaces'
-import { createNewItem } from '@/model/utils'
+import { createNewItem, isItemChanged } from '@/model/utils'
 import { useAuditLogStore } from '@/stores/auditLog'
 import { useItemsStore } from '@/stores/items'
 import { useWorkInProgressStore } from '@/stores/workInProgress'
@@ -33,14 +37,36 @@ const returnLocation = computed(
       | undefined,
 )
 
-const existsInStore = itemIdFromParam !== undefined && itemsStore.has(itemIdFromParam)
-const item = ref<Item>(
-  itemIdFromParam !== undefined && wipStore.has(itemIdFromParam)
-    ? wipStore.get<Item>(itemIdFromParam)!
-    : existsInStore
-      ? itemsStore.get(itemIdFromParam)!
-      : createNewItem(),
+const existsAsDraft = computed(() => itemIdFromParam !== undefined && wipStore.has(itemIdFromParam))
+const existsInStore = computed(
+  () => itemIdFromParam !== undefined && itemsStore.has(itemIdFromParam),
 )
+const itemSource = ref<'item-store' | 'wip-store' | 'new'>()
+const itemBase = ref<Item>()
+const item = ref<Item>()
+const itemChanged = computed(() => isItemChanged(itemBase.value, item.value))
+
+onMounted(async () => {
+  let itemGot: Item | undefined = undefined
+  if (itemIdFromParam !== undefined) {
+    await until(() => wipStore.$isHydrated && itemsStore.$isHydrated).toBeTruthy()
+
+    if (existsAsDraft.value) {
+      itemGot = wipStore.get<Item>(itemIdFromParam)!
+      itemSource.value = 'wip-store'
+    } else if (existsInStore.value) {
+      itemGot = itemsStore.get(itemIdFromParam)!
+      itemSource.value = 'item-store'
+    }
+  } else {
+    itemGot = createNewItem()
+    itemSource.value = 'new'
+  }
+  if (itemGot !== undefined) {
+    itemBase.value = structuredClone(itemGot)
+    item.value = itemGot
+  }
+})
 
 const itemTypes = readonly(ITEM_TYPES)
 const costUnits = readonly(COST_UNITS)
@@ -49,26 +75,61 @@ const item_ids = computed<{ id: string; label: string; item: Item }[]>(() =>
   Array.from(itemsStore.items.values())
     // NOTE: remove self from list
     // TODO: remove reference loops?
-    .filter((item2) => item2.id !== item.value.id)
+    .filter((item2) => item2.id !== (item.value?.id ?? itemIdFromParam))
     .map((item) => ({ id: item.id, label: item.name, item })),
 )
 
+async function _safe(replaceHistory: boolean = true) {
+  if (!item.value) return
+
+  // update metadata and add/update in store
+  if (existsInStore.value) item.value._meta.edited = new Date()
+  await itemsStore.add(item.value)
+
+  // finish draft
+  if (wipStore.has(item.value.id)) await wipStore.finish(item.value.id)
+
+  // update base version, so no edit changes should be found
+  itemBase.value = structuredClone(toRaw(item.value))
+  itemSource.value = 'item-store'
+
+  if (replaceHistory && route.name !== 'item-edit') {
+    // do a history replace with item-edit and then use the browser history?
+    await router.replace({ name: 'item-edit', params: { id: item.value.id }, query: route.query })
+  }
+}
+async function _safeWIP(replaceHistory: boolean = true) {
+  if (!item.value) return
+
+  // do temp save to allow to return back here
+  await wipStore.add(item.value.id, 'item-edit', toRaw(item.value))
+
+  // update base version, so no edit changes should be found
+  itemBase.value = structuredClone(toRaw(item.value))
+  itemSource.value = 'wip-store'
+
+  if (replaceHistory) {
+    // do a history replace with item-edit and then use the browser history?
+    await router.replace({ name: 'item-edit', params: { id: item.value.id }, query: route.query })
+  }
+}
+
 function onAddOneMorePart() {
+  if (!item.value) return
   item.value.contents?.push({
     amount: 1,
     type: '',
   })
 }
 function onRemovePart(part_idx: number) {
+  if (!item.value) return
   item.value.contents = item.value.contents?.filter((_val, idx) => idx !== part_idx) ?? []
 }
 
 async function onAddNewItem() {
-  // do temp save to allow to return back here
-  await wipStore.add(item.value.id, 'item-edit', toRaw(item.value))
+  if (!item.value) return
 
-  // do a history replace with item-edit and then use the browser history?
-  await router.replace({ name: 'item-edit', params: { id: item.value.id }, query: route.query })
+  await _safeWIP()
 
   // otherwise, would it work with multiple levels of redirection? --> ToBeTested
   await router.push({
@@ -98,15 +159,29 @@ function onItemPartItemSelected(part: ItemPart) {
   }
 }
 
+async function onRelationEdit(id: string, type: string) {
+  if (!item.value) return
+
+  await _safeWIP()
+
+  router.push({
+    name: `${type}-edit`,
+    params: { id: id },
+    query: {
+      returnTo: JSON.stringify({
+        name: 'item-edit',
+        params: { id: item.value.id },
+        query: route.query,
+      }),
+    },
+  })
+}
+
 async function onSave() {
+  if (!item.value) return
   console.log('Save Item', toRaw(item.value))
 
-  if (existsInStore) item.value._meta.edited = new Date()
-  await itemsStore.add(item.value)
-  if (wipStore.has(item.value.id)) await wipStore.finish(item.value.id)
-
-  // do a history replace with item-edit and then use the browser history?
-  await router.replace({ name: 'item-edit', params: { id: item.value.id }, query: route.query })
+  await _safe()
 
   if (returnLocation.value === undefined) {
     await router.push({ name: 'item-list' })
@@ -115,6 +190,7 @@ async function onSave() {
   }
 }
 async function onDelete() {
+  if (!item.value) return
   console.log('Delete Item', toRaw(item.value))
 
   auditLog.add('Delete item', { item: toRaw(item.value) })
@@ -127,15 +203,39 @@ async function onDelete() {
     await router.push(returnLocation.value)
   }
 }
+
+async function onUserChoiceSave() {
+  await _safe()
+}
+async function onUserChoiceSaveDraft() {
+  await _safeWIP()
+}
+async function onUserChoiceDiscardChanges() {
+  // reset editable object
+  item.value = structuredClone(toRaw(itemBase.value))
+}
+
+const dialogToAskUserAboutChanges = ref<boolean>(false)
+onBeforeRouteLeave(async (to, from) => {
+  if (!item.value) return true
+
+  // console.debug('onBeforeRouteLeave', `${String(from.name)} --> ${String(to.name)}`)
+  if (from.name === 'item-new' && to.name === 'item-edit' && to.params.id === item.value.id) {
+    return true
+  }
+
+  if (itemChanged.value) {
+    dialogToAskUserAboutChanges.value = true
+    return false
+  }
+})
 </script>
 
 <template>
-  <h1 class="mb-3">Item Editor</h1>
+  <h1 class="mb-3">Item Editor<template v-if="itemChanged"> [changed]</template></h1>
 
-  <v-form>
-    <fieldset class="pa-3 my-2">
-      <legend>Details</legend>
-
+  <v-form v-if="item">
+    <EditorFieldset label="Details">
       <v-autocomplete
         v-model="item.type"
         :items="itemTypes"
@@ -150,11 +250,9 @@ async function onDelete() {
         :rules="[(val: string) => !!val && val.trim().length > 0]"
       ></v-text-field>
       <v-textarea v-model="item.description" label="Description"></v-textarea>
-    </fieldset>
+    </EditorFieldset>
 
-    <fieldset class="pa-3 my-2 pt-6">
-      <legend>Parts</legend>
-
+    <EditorFieldset label="Parts">
       <v-row class="ga-5 ms-0 me-0 mb-5" v-for="(part, i) in item.contents" :key="i">
         <v-number-input
           v-model="part.amount"
@@ -203,11 +301,9 @@ async function onDelete() {
       </v-row>
 
       <v-btn @click="onAddOneMorePart">Add more parts</v-btn>
-    </fieldset>
+    </EditorFieldset>
 
-    <fieldset class="pa-3 my-2">
-      <legend>Cost information</legend>
-
+    <EditorFieldset label="Cost information">
       <v-row>
         <!-- TODO: breakpoints with nesting are weird -->
         <v-col sm="6" cols="12" :class="smAndDown && 'pb-0'">
@@ -229,7 +325,13 @@ async function onDelete() {
           ></v-select>
         </v-col>
       </v-row>
-    </fieldset>
+    </EditorFieldset>
+
+    <EditorFieldsRelated
+      :object="item"
+      object-type="item"
+      @edit="onRelationEdit"
+    ></EditorFieldsRelated>
 
     <EditorFieldsInternals v-model:object="item"></EditorFieldsInternals>
 
@@ -238,10 +340,14 @@ async function onDelete() {
       <v-btn v-if="existsInStore" color="error" text="Delete" @click="onDelete"></v-btn>
     </div>
   </v-form>
-</template>
 
-<style lang="css" scoped>
-fieldset > legend {
-  padding-inline: 0.3rem;
-}
-</style>
+  <p v-else>Loading ...</p>
+
+  <EditorConfirmChangesDialog
+    v-model="dialogToAskUserAboutChanges"
+    :is-draft="itemSource === 'wip-store'"
+    @save="onUserChoiceSave"
+    @save-draft="onUserChoiceSaveDraft"
+    @discard="onUserChoiceDiscardChanges"
+  ></EditorConfirmChangesDialog>
+</template>

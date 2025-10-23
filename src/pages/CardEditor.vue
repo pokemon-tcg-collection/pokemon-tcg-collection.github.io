@@ -1,13 +1,17 @@
 <script setup lang="ts">
-import type { CardResume, Card as TCGCard } from '@tcgdex/sdk'
-import { computed, ref, toRaw, watch } from 'vue'
+import type { Card as TCGCard } from '@tcgdex/sdk'
+import { until } from '@vueuse/core'
+import { computed, onMounted, ref, toRaw, watch } from 'vue'
 import type { RouteLocationAsPathGeneric, RouteLocationAsRelativeGeneric } from 'vue-router'
-import { useRoute, useRouter } from 'vue-router'
+import { onBeforeRouteLeave, useRoute, useRouter } from 'vue-router'
 
+import EditorConfirmChangesDialog from '@/components/EditorConfirmChangesDialog.vue'
+import EditorFieldset from '@/components/EditorFieldset.vue'
 import EditorFieldsInternals from '@/components/EditorFieldsInternals.vue'
+import EditorFieldsRelated from '@/components/EditorFieldsRelated.vue'
 import EditorFieldsTCGDexCardSelector from '@/components/EditorFieldsTCGDexCardSelector.vue'
 import type { Card, Item, Transaction } from '@/model/interfaces'
-import { createNewCard } from '@/model/utils'
+import { createNewCard, isCardChanged } from '@/model/utils'
 import { useAuditLogStore } from '@/stores/auditLog'
 import { useCardsStore } from '@/stores/cards'
 import { useItemsStore } from '@/stores/items'
@@ -28,17 +32,39 @@ const returnLocation = (
   route.query.returnTo !== undefined ? JSON.parse(route.query.returnTo as string) : undefined
 ) as string | RouteLocationAsRelativeGeneric | RouteLocationAsPathGeneric | undefined
 
-const existsInStore = cardIdFromParam !== undefined && cardsStore.has(cardIdFromParam)
-const card = ref<Card>(
-  cardIdFromParam !== undefined && wipStore.has(cardIdFromParam)
-    ? wipStore.get<Card>(cardIdFromParam)!
-    : existsInStore
-      ? cardsStore.get(cardIdFromParam)!
-      : createNewCard(),
+const existsAsDraft = computed(() => cardIdFromParam !== undefined && wipStore.has(cardIdFromParam))
+const existsInStore = computed(
+  () => cardIdFromParam !== undefined && cardsStore.has(cardIdFromParam),
 )
+const cardSource = ref<'card-store' | 'wip-store' | 'new'>()
+const cardBase = ref<Card>()
+const card = ref<Card>()
+const cardChanged = computed(() => isCardChanged(cardBase.value, card.value))
 
-const cards = ref<{ id: string; label: string; card?: CardResume }[]>([])
-const boosters = computed<{ id: string; label: string }[]>(() => [])
+onMounted(async () => {
+  let cardGot: Card | undefined = undefined
+  if (cardIdFromParam !== undefined) {
+    await until(() => wipStore.$isHydrated && cardsStore.$isHydrated).toBeTruthy()
+
+    if (existsAsDraft.value) {
+      cardGot = wipStore.get<Card>(cardIdFromParam)!
+      cardSource.value = 'wip-store'
+    } else if (existsInStore.value) {
+      cardGot = cardsStore.get(cardIdFromParam)!
+      cardSource.value = 'card-store'
+    }
+  } else {
+    cardGot = createNewCard()
+    cardSource.value = 'new'
+  }
+  if (cardGot !== undefined) {
+    cardBase.value = structuredClone(cardGot)
+    card.value = cardGot
+  }
+})
+
+// const cards = ref<{ id: string; label: string; card?: CardResume }[]>([])
+// const boosters = computed<{ id: string; label: string }[]>(() => [])
 
 const item_ids = computed<{ id: string; label: string; item: Item }[]>(() =>
   Array.from(itemsStore.items.values()).map((item) => ({ id: item.id, label: item.name, item })),
@@ -51,10 +77,11 @@ const transaction_ids = computed<{ id: string; label: string; transaction: Trans
   })),
 )
 
-watch(card.value, (n, o) => console.debug('Card data changed', { new: toRaw(n), old: toRaw(o) }))
+watch(card, (n, o) => console.debug('Card data changed', { new: toRaw(n), old: toRaw(o) }))
 
 async function onCardSelected(tcg_card: TCGCard) {
   if (!tcg_card) return
+  if (!card.value) return
 
   // card.value.language = undefined
   card.value.name = tcg_card.name
@@ -63,15 +90,45 @@ async function onCardSelected(tcg_card: TCGCard) {
   card.value.tcgdex_id = tcg_card.id
 }
 
-async function onAddNewItem() {
+async function _safe(replaceHistory: boolean = true) {
+  if (!card.value) return
+
+  // update metadata and add/update in store
+  if (existsInStore.value) card.value._meta.edited = new Date()
+  await cardsStore.add(card.value)
+
+  // finish draft
+  if (wipStore.has(card.value.id)) await wipStore.finish(card.value.id)
+
+  // update base version, so no edit changes should be found
+  cardBase.value = structuredClone(toRaw(card.value))
+  cardSource.value = 'card-store'
+
+  if (replaceHistory && route.name !== 'card-edit') {
+    // do a history replace with card-edit and then use the browser history?
+    await router.replace({ name: 'card-edit', params: { id: card.value.id }, query: route.query })
+  }
+}
+async function _safeWIP(replaceHistory: boolean = true) {
+  if (!card.value) return
+
   // do temp save to allow to return back here
   await wipStore.add(card.value.id, 'card-edit', toRaw(card.value))
 
-  // do a history replace with card-edit and then use the browser history?
-  await router.replace({ name: 'card-edit', params: { id: card.value.id }, query: route.query })
-  // otherwise, would it work with multiple levels of redirection? --> ToBeTested
+  // update base version, so no edit changes should be found
+  cardBase.value = structuredClone(toRaw(card.value))
+  cardSource.value = 'wip-store'
+
+  if (replaceHistory) {
+    // do a history replace with card-edit and then use the browser history?
+    await router.replace({ name: 'card-edit', params: { id: card.value.id }, query: route.query })
+  }
+}
+async function _navigateTo(name: 'transaction-new' | 'item-new') {
+  if (!card.value) return
+
   await router.push({
-    name: 'item-new',
+    name: name,
     query: {
       returnTo: JSON.stringify({
         name: 'card-edit',
@@ -81,15 +138,23 @@ async function onAddNewItem() {
     },
   })
 }
-async function onAddNewTransaction() {
-  // do temp save to allow to return back here
-  await wipStore.add(card.value.id, 'card-edit', toRaw(card.value))
 
-  // do a history replace with card-edit and then use the browser history?
-  await router.replace({ name: 'card-edit', params: { id: card.value.id }, query: route.query })
-  // otherwise, would it work with multiple levels of redirection? --> ToBeTested
-  await router.push({
-    name: 'transaction-new',
+async function onAddNewItem() {
+  await _safeWIP()
+  await _navigateTo('item-new')
+}
+async function onAddNewTransaction() {
+  await _safeWIP()
+  await _navigateTo('transaction-new')
+}
+async function onRelationEdit(id: string, type: string) {
+  if (!card.value) return
+
+  await _safeWIP()
+
+  router.push({
+    name: `${type}-edit`,
+    params: { id: id },
     query: {
       returnTo: JSON.stringify({
         name: 'card-edit',
@@ -101,14 +166,10 @@ async function onAddNewTransaction() {
 }
 
 async function onSave() {
+  if (!card.value) return
   console.log('Save Card', toRaw(card.value))
 
-  if (existsInStore) card.value._meta.edited = new Date()
-  await cardsStore.add(card.value)
-  if (wipStore.has(card.value.id)) await wipStore.finish(card.value.id)
-
-  // do a history replace with card-edit and then use the browser history?
-  await router.replace({ name: 'card-edit', params: { id: card.value.id }, query: route.query })
+  await _safe()
 
   if (returnLocation === undefined) {
     await router.push({ name: 'card', params: { id: card.value.id } })
@@ -117,6 +178,7 @@ async function onSave() {
   }
 }
 async function onDelete() {
+  if (!card.value) return
   console.log('Delete Card', toRaw(card.value))
 
   auditLog.add('Delete card', { card: toRaw(card.value) })
@@ -129,15 +191,39 @@ async function onDelete() {
     await router.push(returnLocation)
   }
 }
+
+async function onUserChoiceSave() {
+  await _safe()
+}
+async function onUserChoiceSaveDraft() {
+  await _safeWIP()
+}
+async function onUserChoiceDiscardChanges() {
+  // reset editable object
+  card.value = structuredClone(toRaw(cardBase.value))
+}
+
+const dialogToAskUserAboutChanges = ref<boolean>(false)
+onBeforeRouteLeave(async (to, from) => {
+  if (!card.value) return true
+
+  // console.debug('onBeforeRouteLeave', `${String(from.name)} --> ${String(to.name)}`)
+  if (from.name === 'card-new' && to.name === 'card-edit' && to.params.id === card.value.id) {
+    return true
+  }
+
+  if (cardChanged.value) {
+    dialogToAskUserAboutChanges.value = true
+    return false
+  }
+})
 </script>
 
 <template>
-  <h1 class="mb-3">Card Editor</h1>
+  <h1 class="mb-3">Card Editor<template v-if="cardChanged"> [changed]</template></h1>
 
-  <v-form>
-    <fieldset class="pa-3 my-2">
-      <legend>Set info</legend>
-
+  <v-form v-if="card">
+    <EditorFieldset label="Set info">
       <EditorFieldsTCGDexCardSelector
         @card-selected="onCardSelected"
       ></EditorFieldsTCGDexCardSelector>
@@ -151,33 +237,28 @@ async function onDelete() {
         clearable
         label="Boosters with Card"
       ></v-combobox> -->
-    </fieldset>
+    </EditorFieldset>
 
-    <fieldset class="pa-3 my-2">
-      <legend>Card info</legend>
-
-      <v-combobox
+    <EditorFieldset label="Card info">
+      <v-text-field
         v-model="card.name"
-        :items="cards"
-        item-value="label"
-        item-title="label"
         label="Card Name"
         clearable
         hide-no-data
         :rules="[(val: string) => !!val && val.trim().length > 0]"
-      ></v-combobox>
-      <v-text-field v-model="card.number" label="Card Number in Set"></v-text-field>
-    </fieldset>
+      ></v-text-field>
+      <v-text-field
+        v-model="card.number"
+        label="Card Number in Set"
+        :rules="[(val: string) => !!val && val.trim().length > 0]"
+      ></v-text-field>
+    </EditorFieldset>
 
-    <fieldset class="pa-3 my-2">
-      <legend>Collection info</legend>
-
+    <EditorFieldset label="Collection info">
       <v-number-input v-model="card.amount" label="Amount of Cards" :min="0"></v-number-input>
-    </fieldset>
+    </EditorFieldset>
 
-    <fieldset class="pa-3 my-2">
-      <legend>Relations</legend>
-
+    <EditorFieldset label="Relations">
       <v-autocomplete
         v-model="card.item_ids"
         :items="item_ids"
@@ -214,7 +295,13 @@ async function onDelete() {
           </v-list-item>
         </template>
       </v-autocomplete>
-    </fieldset>
+    </EditorFieldset>
+
+    <EditorFieldsRelated
+      :object="card"
+      object-type="card"
+      @edit="onRelationEdit"
+    ></EditorFieldsRelated>
 
     <EditorFieldsInternals v-model:object="card"></EditorFieldsInternals>
 
@@ -223,10 +310,12 @@ async function onDelete() {
       <v-btn v-if="existsInStore" color="error" text="Delete" @click="onDelete"></v-btn>
     </div>
   </v-form>
-</template>
 
-<style lang="css" scoped>
-fieldset > legend {
-  padding-inline: 0.3rem;
-}
-</style>
+  <EditorConfirmChangesDialog
+    v-model="dialogToAskUserAboutChanges"
+    :is-draft="cardSource === 'wip-store'"
+    @save="onUserChoiceSave"
+    @save-draft="onUserChoiceSaveDraft"
+    @discard="onUserChoiceDiscardChanges"
+  ></EditorConfirmChangesDialog>
+</template>

@@ -173,10 +173,11 @@ watch(
     hide-no-data
   >
     <template v-slot:item="{ item, props }">
-      <v-list-item
-        v-bind="props"
-        :prepend-avatar="item.raw.image || (true as unknown as undefined)"
-      ></v-list-item>
+      <v-list-item v-bind="props">
+        <template v-slot:prepend>
+          <v-avatar :image="item.raw.image"></v-avatar>
+        </template>
+      </v-list-item>
     </template>
   </v-autocomplete>
 

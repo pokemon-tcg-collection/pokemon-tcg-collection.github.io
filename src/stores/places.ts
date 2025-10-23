@@ -1,5 +1,5 @@
 import { acceptHMRUpdate, defineStore } from 'pinia'
-import { shallowRef, toRaw, triggerRef } from 'vue'
+import { readonly, ref, shallowRef, toRaw, triggerRef } from 'vue'
 
 import usePokemonTCGCollectionIDB from '@/composables/usePokemonTCGCollectionIDB'
 import type { Place } from '@/model/interfaces'
@@ -39,11 +39,13 @@ export const usePlacesStore = defineStore('places', () => {
   }
 
   function has(idOrPlace: Place | string): boolean {
+    if (idOrPlace === undefined) return false
     const id = typeof idOrPlace === 'string' ? idOrPlace : idOrPlace.id
     return places.value.has(id)
   }
 
   async function remove(idOrPlace: Place | string) {
+    if (idOrPlace === undefined) return false
     const id = typeof idOrPlace === 'string' ? idOrPlace : idOrPlace.id
     const removed = places.value.delete(id)
     if (removed) await idbDelete(id)
@@ -84,10 +86,22 @@ export const usePlacesStore = defineStore('places', () => {
     return true
   }
 
+  function _reset() {
+    places.value = new Map()
+  }
+
+  // -----------------------------------------------------------------------
+
+  const _isHydrating = ref<boolean>(false)
+  const _isHydrated = ref<boolean>(false)
+
   async function _hydrate({
     clearBefore = false,
     overwriteExisting = false,
   }: { clearBefore?: boolean; overwriteExisting?: boolean } = {}) {
+    if (_isHydrating.value) return
+    _isHydrating.value = true
+
     if (clearBefore) _reset()
 
     const values = await idbGetAll()
@@ -97,10 +111,9 @@ export const usePlacesStore = defineStore('places', () => {
       if (!overwriteExisting && has(entry)) return
       places.value.set(entry.id, entry)
     })
-  }
 
-  function _reset() {
-    places.value = new Map()
+    _isHydrated.value = true
+    _isHydrating.value = false
   }
 
   // -----------------------------------------------------------------------
@@ -116,8 +129,9 @@ export const usePlacesStore = defineStore('places', () => {
     // internals
     $serialize: _serialize,
     $deserialize: _deserialize,
-    $hydrate: _hydrate,
     $reset: _reset,
+    $hydrate: _hydrate,
+    $isHydrated: readonly(_isHydrated),
   }
 })
 

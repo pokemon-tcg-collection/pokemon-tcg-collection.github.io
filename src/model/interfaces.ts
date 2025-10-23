@@ -67,7 +67,7 @@ export interface Transaction extends Base {
   /** unit for price/cost */
   cost_unit: CostUnits
   /** type of transaction (buy, sell, gift) */
-  type?: TransactionType
+  type: TransactionType
 
   /** contents */
   items: TransactionItem[]
@@ -127,7 +127,7 @@ export interface Item extends Base {
 
   /** single item cost (MSRP, UVP) */
   cost?: number
-  cost_unit?: CostUnits
+  cost_unit: CostUnits
 
   /** contents, e.g. number of boosters, accessories */
   contents: ItemPart[]

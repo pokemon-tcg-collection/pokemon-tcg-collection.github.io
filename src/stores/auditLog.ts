@@ -48,7 +48,15 @@ export const useAuditLogStore = defineStore('auditLog', () => {
     return JSON.stringify(data)
   }
 
+  // -----------------------------------------------------------------------
+
+  // const _isHydrating = ref<boolean>(false)
+  const _isHydrated = ref<boolean>(false)
+
   async function _hydrate() {
+    // if (_isHydrating.value) return
+    // _isHydrating.value = true
+
     const values = await idbGetAll()
     if (!values) return
 
@@ -59,6 +67,9 @@ export const useAuditLogStore = defineStore('auditLog', () => {
       logs.value.push(newEntry)
     })
     values.sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
+
+    _isHydrated.value = true
+    // _isHydrating.value = false
   }
 
   // -----------------------------------------------------------------------
@@ -71,6 +82,7 @@ export const useAuditLogStore = defineStore('auditLog', () => {
     // internals
     $serialize: _serialize,
     $hydrate: _hydrate,
+    $isHydrated: readonly(_isHydrated),
   }
 })
 

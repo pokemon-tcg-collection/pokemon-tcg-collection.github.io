@@ -1,5 +1,5 @@
 import { acceptHMRUpdate, defineStore } from 'pinia'
-import { ref, toRaw, triggerRef } from 'vue'
+import { readonly, ref, toRaw, triggerRef } from 'vue'
 
 import usePokemonTCGCollectionIDB from '@/composables/usePokemonTCGCollectionIDB'
 import type { Item } from '@/model/interfaces'
@@ -37,11 +37,13 @@ export const useItemsStore = defineStore('items', () => {
   }
 
   function has(idOrItem: Item | string): boolean {
+    if (idOrItem === undefined) return false
     const id = typeof idOrItem === 'string' ? idOrItem : idOrItem.id
     return items.value.has(id)
   }
 
   async function remove(idOrItem: Item | string) {
+    if (idOrItem === undefined) return false
     const id = typeof idOrItem === 'string' ? idOrItem : idOrItem.id
     const removed = items.value.delete(id)
     if (removed) await idbDelete(id)
@@ -82,10 +84,22 @@ export const useItemsStore = defineStore('items', () => {
     return true
   }
 
+  function _reset() {
+    items.value = new Map()
+  }
+
+  // -----------------------------------------------------------------------
+
+  const _isHydrating = ref<boolean>(false)
+  const _isHydrated = ref<boolean>(false)
+
   async function _hydrate({
     clearBefore = false,
     overwriteExisting = false,
   }: { clearBefore?: boolean; overwriteExisting?: boolean } = {}) {
+    if (_isHydrating.value) return
+    _isHydrating.value = true
+
     if (clearBefore) _reset()
 
     const values = await idbGetAll()
@@ -95,10 +109,9 @@ export const useItemsStore = defineStore('items', () => {
       if (!overwriteExisting && has(entry)) return
       items.value.set(entry.id, entry)
     })
-  }
 
-  function _reset() {
-    items.value = new Map()
+    _isHydrated.value = true
+    _isHydrating.value = false
   }
 
   // -----------------------------------------------------------------------
@@ -114,8 +127,9 @@ export const useItemsStore = defineStore('items', () => {
     // internals
     $serialize: _serialize,
     $deserialize: _deserialize,
-    $hydrate: _hydrate,
     $reset: _reset,
+    $hydrate: _hydrate,
+    $isHydrated: readonly(_isHydrated),
   }
 })
 

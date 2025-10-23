@@ -1,5 +1,5 @@
 import { acceptHMRUpdate, defineStore } from 'pinia'
-import { shallowRef, toRaw, triggerRef } from 'vue'
+import { readonly, ref, shallowRef, toRaw, triggerRef } from 'vue'
 
 import usePokemonTCGCollectionIDB from '@/composables/usePokemonTCGCollectionIDB'
 import type { Card } from '@/model/interfaces'
@@ -37,11 +37,13 @@ export const useCardsStore = defineStore('cards', () => {
   }
 
   function has(idOrCard: Card | string): boolean {
+    if (idOrCard === undefined) return false
     const id = typeof idOrCard === 'string' ? idOrCard : idOrCard.id
     return cards.value.has(id)
   }
 
   async function remove(idOrCard: Card | string) {
+    if (idOrCard === undefined) return false
     const id = typeof idOrCard === 'string' ? idOrCard : idOrCard.id
     const removed = cards.value.delete(id)
     if (removed) await idbDelete(id)
@@ -49,6 +51,7 @@ export const useCardsStore = defineStore('cards', () => {
   }
 
   async function fetchInfo(idOrCard: Card | string) {
+    if (idOrCard === undefined) return undefined
     const id = typeof idOrCard === 'string' ? idOrCard : idOrCard.id
     // TODO ...
     console.warn('[fetchInfo]', 'Not implemented', id)
@@ -88,10 +91,22 @@ export const useCardsStore = defineStore('cards', () => {
     return true
   }
 
+  function _reset() {
+    cards.value = new Map()
+  }
+
+  // -----------------------------------------------------------------------
+
+  const _isHydrating = ref<boolean>(false)
+  const _isHydrated = ref<boolean>(false)
+
   async function _hydrate({
     clearBefore = false,
     overwriteExisting = false,
   }: { clearBefore?: boolean; overwriteExisting?: boolean } = {}) {
+    if (_isHydrating.value) return
+    _isHydrating.value = true
+
     if (clearBefore) _reset()
 
     const values = await idbGetAll()
@@ -101,10 +116,9 @@ export const useCardsStore = defineStore('cards', () => {
       if (!overwriteExisting && has(entry)) return
       cards.value.set(entry.id, entry)
     })
-  }
 
-  function _reset() {
-    cards.value = new Map()
+    _isHydrated.value = true
+    _isHydrating.value = false
   }
 
   // -----------------------------------------------------------------------
@@ -121,8 +135,9 @@ export const useCardsStore = defineStore('cards', () => {
     // internals
     $serialize: _serialize,
     $deserialize: _deserialize,
-    $hydrate: _hydrate,
     $reset: _reset,
+    $hydrate: _hydrate,
+    $isHydrated: readonly(_isHydrated),
   }
 })
 

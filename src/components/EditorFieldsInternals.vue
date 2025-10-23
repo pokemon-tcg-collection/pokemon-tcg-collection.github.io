@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import EditorFieldset from '@/components/EditorFieldset.vue'
 import type { Base } from '@/model/interfaces'
 import { useSettingsStore } from '@/stores/settings'
 
@@ -8,9 +9,7 @@ const settings = useSettingsStore()
 </script>
 
 <template>
-  <fieldset class="pa-3 my-2">
-    <legend>Internals</legend>
-
+  <EditorFieldset label="Internals">
     <v-text-field
       v-if="settings.editorShowInternalID"
       :model-value="object.id"
@@ -29,11 +28,5 @@ const settings = useSettingsStore()
       readonly
       label="Edit date (last modification)"
     ></v-text-field>
-  </fieldset>
+  </EditorFieldset>
 </template>
-
-<style lang="css" scoped>
-fieldset > legend {
-  padding-inline: 0.3rem;
-}
-</style>

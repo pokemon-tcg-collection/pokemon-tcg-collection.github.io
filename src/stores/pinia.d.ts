@@ -8,6 +8,7 @@ declare module 'pinia' {
     $hydrate:
       | ((opts?: { runHooks?: boolean }) => void)
       | ((opts?: { clearBefore?: boolean; overwriteExisting?: boolean }) => Promise<void>)
+    $isHydrated: boolean
 
     // export/import of stores to JSON
     $serialize: () => string

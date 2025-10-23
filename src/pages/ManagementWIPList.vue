@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import { computed, triggerRef } from 'vue'
-import { toRaw } from 'vue'
 import { storeToRefs } from 'pinia'
+import { computed, toRaw, triggerRef } from 'vue'
 
 import { useWorkInProgressStore, type WIPObject } from '@/stores/workInProgress'
 
@@ -11,7 +10,7 @@ const { objects: wipObjectRef } = storeToRefs(wipStore)
 const wipObjects = computed(() =>
   Array.from(wipObjectRef.value.values()).map((wipObject) => ({
     id: wipObject.id,
-    name:
+    typeName:
       wipObject.type === 'transaction-edit'
         ? 'Transaction'
         : wipObject.type === 'card-edit'
@@ -21,6 +20,7 @@ const wipObjects = computed(() =>
             : wipObject.type === 'item-edit'
               ? 'Item'
               : wipObject.type,
+    label: wipObject.data.name,
     wipObject,
   })),
 )
@@ -43,6 +43,7 @@ async function onDeleteDraftObject(obj: WIPObject) {
       <tr>
         <th scope="col">Date</th>
         <th scope="col">Type</th>
+        <th scope="col">Name</th>
         <th scope="col">Actions</th>
       </tr>
     </thead>
@@ -51,7 +52,8 @@ async function onDeleteDraftObject(obj: WIPObject) {
         <td class="fit">
           {{ wipObject.wipObject.date ? new Date(wipObject.wipObject.date).toLocaleString() : '–' }}
         </td>
-        <td class="stretch">{{ wipObject.name }}</td>
+        <td class="fit">{{ wipObject.typeName }}</td>
+        <td class="stretch">{{ wipObject.label }}</td>
         <td class="fit">
           <v-btn-group density="compact" variant="text">
             <v-btn

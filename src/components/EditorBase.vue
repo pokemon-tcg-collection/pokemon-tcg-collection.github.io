@@ -80,6 +80,7 @@ function onUserChoiceDiscardChanges() {
     <EditorFieldsRelated
       :object="object"
       :object-type="objectType"
+      direction="both"
       @edit="onRelationEdit"
     ></EditorFieldsRelated>
 

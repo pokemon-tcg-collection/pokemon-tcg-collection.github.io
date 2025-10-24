@@ -3,6 +3,7 @@ import { computed, readonly, ref, toRaw } from 'vue'
 import { useRouter } from 'vue-router'
 import { useDisplay } from 'vuetify'
 
+import EditorBase from '@/components/EditorBase.vue'
 import EditorFieldset from '@/components/EditorFieldset.vue'
 import useEditorObject from '@/composables/useEditorObject'
 import type { Item, Place } from '@/model/interfaces'

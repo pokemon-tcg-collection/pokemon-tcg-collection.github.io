@@ -1,0 +1,103 @@
+<script setup lang="ts">
+import { ref } from 'vue'
+import { onBeforeRouteLeave } from 'vue-router'
+
+import EditorConfirmChangesDialog from '@/components/EditorConfirmChangesDialog.vue'
+import EditorFieldsInternals from '@/components/EditorFieldsInternals.vue'
+import EditorFieldsRelated from '@/components/EditorFieldsRelated.vue'
+import type { Card, Item, Place, Transaction } from '@/model/interfaces'
+
+const object = defineModel<Item | Transaction | Place | Card>()
+
+const { objectType, objectChanged, existsInStore, title } = defineProps<{
+  objectType: 'item' | 'transaction' | 'place' | 'card'
+  objectChanged: boolean
+  existsInStore: boolean
+  isDraft: boolean
+  title: string
+}>()
+
+const emit = defineEmits<{
+  relationEdit: [id: string, type: string]
+  save: []
+  delete: []
+  leaveAction: [type: 'save' | 'save-draft' | 'discard-changes']
+}>()
+
+// defineSlots<{
+//   default(props: { object: Item | Transaction | Place | Card }): any
+// }>()
+
+const dialogToAskUserAboutChanges = ref<boolean>(false)
+
+onBeforeRouteLeave(async (to, from) => {
+  if (!object.value) return true
+
+  console.debug('onBeforeRouteLeave', `${String(from.name)} --> ${String(to.name)}`)
+  if (
+    from.name === `${objectType}-new` &&
+    to.name === `${objectType}-edit` &&
+    to.params.id === object.value.id
+  ) {
+    return true
+  }
+
+  if (objectChanged) {
+    dialogToAskUserAboutChanges.value = true
+    return false
+  }
+})
+
+// TODO: unused?
+function onRelationEdit(id: string, type: string) {
+  emit('relationEdit', id, type)
+}
+// explicit user save/delete actions
+function onSave() {
+  emit('save')
+}
+function onDelete() {
+  emit('delete')
+}
+// handle user choice from dialog (handle unsaved changes on leave page)
+function onUserChoiceSave() {
+  emit('leaveAction', 'save')
+}
+function onUserChoiceSaveDraft() {
+  emit('leaveAction', 'save-draft')
+}
+function onUserChoiceDiscardChanges() {
+  emit('leaveAction', 'discard-changes')
+}
+</script>
+
+<template>
+  <h1 class="mb-3">{{ title }}<template v-if="objectChanged"> [changed]</template></h1>
+
+  <v-form v-if="object">
+    <slot :object="object" :object-type="objectType"></slot>
+
+    <EditorFieldsRelated
+      :object="object"
+      :object-type="objectType"
+      @edit="onRelationEdit"
+    ></EditorFieldsRelated>
+
+    <EditorFieldsInternals v-model:object="object"></EditorFieldsInternals>
+
+    <div class="d-flex flex-column flex-sm-row ga-3 mt-3">
+      <v-btn color="primary" text="Save" @click="onSave"></v-btn>
+      <v-btn v-if="existsInStore" color="error" text="Delete" @click="onDelete"></v-btn>
+    </div>
+  </v-form>
+
+  <p v-else>Loading ...</p>
+
+  <EditorConfirmChangesDialog
+    v-model="dialogToAskUserAboutChanges"
+    :is-draft="isDraft"
+    @save="onUserChoiceSave"
+    @save-draft="onUserChoiceSaveDraft"
+    @discard="onUserChoiceDiscardChanges"
+  ></EditorConfirmChangesDialog>
+</template>

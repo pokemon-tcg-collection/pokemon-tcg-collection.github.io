@@ -25,7 +25,7 @@ function createEditMeta() {
 
 // -------------------------------------------------------------------------
 
-export function createNewCard() {
+export function createNewCard(): Card {
   return {
     id: uuidv4(),
     name: '',
@@ -37,7 +37,7 @@ export function createNewCard() {
   } satisfies Card
 }
 
-export function createNewTransaction() {
+export function createNewTransaction(): Transaction {
   return {
     id: uuidv4(),
     name: '',
@@ -50,7 +50,7 @@ export function createNewTransaction() {
   } satisfies Transaction
 }
 
-export function createNewPlace() {
+export function createNewPlace(): Place {
   return {
     id: uuidv4(),
     name: '',
@@ -60,7 +60,7 @@ export function createNewPlace() {
   } satisfies Place
 }
 
-export function createNewItem() {
+export function createNewItem(): Item {
   return {
     id: uuidv4(),
     name: '',

@@ -3,6 +3,7 @@ import type { Card as TCGCard } from '@tcgdex/sdk'
 import { computed, toRaw, watch } from 'vue'
 import { useRouter } from 'vue-router'
 
+import AutocompletePokeAPIPokemon from '@/components/AutocompletePokeAPIPokemon.vue'
 import EditorBase from '@/components/EditorBase.vue'
 import EditorFieldset from '@/components/EditorFieldset.vue'
 import EditorFieldsTCGDexCardSelector from '@/components/EditorFieldsTCGDexCardSelector.vue'
@@ -152,6 +153,10 @@ async function onLeave(type: 'save' | 'save-draft' | 'discard-changes') {
         ></v-text-field>
       </EditorFieldset>
 
+      <EditorFieldset label="API info">
+        <AutocompletePokeAPIPokemon v-model="card.pokeapi_pokemon_id"></AutocompletePokeAPIPokemon>
+      </EditorFieldset>
+
       <EditorFieldset label="Collection info">
         <v-number-input v-model="card.amount" label="Amount of Cards" :min="0"></v-number-input>
       </EditorFieldset>
@@ -168,7 +173,7 @@ async function onLeave(type: 'save' | 'save-draft' | 'discard-changes') {
           multiple
           label="Related Items"
         >
-          <template v-slot:no-data>
+          <template #no-data>
             <v-list-item>
               <v-list-item-action @click="onAddNewItem">Create new Item</v-list-item-action>
             </v-list-item>
@@ -185,7 +190,7 @@ async function onLeave(type: 'save' | 'save-draft' | 'discard-changes') {
           multiple
           label="Related Transactions"
         >
-          <template v-slot:no-data>
+          <template #no-data>
             <v-list-item>
               <v-list-item-action @click="onAddNewTransaction"
                 >Create new Transaction</v-list-item-action

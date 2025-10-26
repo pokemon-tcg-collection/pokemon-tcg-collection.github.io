@@ -217,6 +217,8 @@ export interface Card extends Base {
 
   // availability? (for statistics (pull-rates), but e.g. card might have been sold/gifted-away)
 
+  /** PokeAPI pokemon id */
+  pokeapi_pokemon_id?: number
   /** TCGDex API identifier for metadata */
   tcgdex_id?: string
 }

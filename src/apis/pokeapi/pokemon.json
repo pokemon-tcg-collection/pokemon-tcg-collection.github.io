@@ -1,0 +1,9151 @@
+[
+  {
+    "id": 1,
+    "sid": 1,
+    "identifier": "bulbasaur",
+    "name": "Bulbasaur",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 2,
+    "sid": 2,
+    "identifier": "ivysaur",
+    "name": "Ivysaur",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 3,
+    "sid": 3,
+    "identifier": "venusaur",
+    "name": "Venusaur",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 4,
+    "sid": 4,
+    "identifier": "charmander",
+    "name": "Charmander",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 5,
+    "sid": 5,
+    "identifier": "charmeleon",
+    "name": "Charmeleon",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 6,
+    "sid": 6,
+    "identifier": "charizard",
+    "name": "Charizard",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 7,
+    "sid": 7,
+    "identifier": "squirtle",
+    "name": "Squirtle",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 8,
+    "sid": 8,
+    "identifier": "wartortle",
+    "name": "Wartortle",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 9,
+    "sid": 9,
+    "identifier": "blastoise",
+    "name": "Blastoise",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 10,
+    "sid": 10,
+    "identifier": "caterpie",
+    "name": "Caterpie",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 11,
+    "sid": 11,
+    "identifier": "metapod",
+    "name": "Metapod",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 12,
+    "sid": 12,
+    "identifier": "butterfree",
+    "name": "Butterfree",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 13,
+    "sid": 13,
+    "identifier": "weedle",
+    "name": "Weedle",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 14,
+    "sid": 14,
+    "identifier": "kakuna",
+    "name": "Kakuna",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 15,
+    "sid": 15,
+    "identifier": "beedrill",
+    "name": "Beedrill",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 16,
+    "sid": 16,
+    "identifier": "pidgey",
+    "name": "Pidgey",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 17,
+    "sid": 17,
+    "identifier": "pidgeotto",
+    "name": "Pidgeotto",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 18,
+    "sid": 18,
+    "identifier": "pidgeot",
+    "name": "Pidgeot",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 19,
+    "sid": 19,
+    "identifier": "rattata",
+    "name": "Rattata",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 20,
+    "sid": 20,
+    "identifier": "raticate",
+    "name": "Raticate",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 21,
+    "sid": 21,
+    "identifier": "spearow",
+    "name": "Spearow",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 22,
+    "sid": 22,
+    "identifier": "fearow",
+    "name": "Fearow",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 23,
+    "sid": 23,
+    "identifier": "ekans",
+    "name": "Ekans",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 24,
+    "sid": 24,
+    "identifier": "arbok",
+    "name": "Arbok",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 25,
+    "sid": 25,
+    "identifier": "pikachu",
+    "name": "Pikachu",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 26,
+    "sid": 26,
+    "identifier": "raichu",
+    "name": "Raichu",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 27,
+    "sid": 27,
+    "identifier": "sandshrew",
+    "name": "Sandshrew",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 28,
+    "sid": 28,
+    "identifier": "sandslash",
+    "name": "Sandslash",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 29,
+    "sid": 29,
+    "identifier": "nidoran-f",
+    "name": "Nidoran\u2640",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 30,
+    "sid": 30,
+    "identifier": "nidorina",
+    "name": "Nidorina",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 31,
+    "sid": 31,
+    "identifier": "nidoqueen",
+    "name": "Nidoqueen",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 32,
+    "sid": 32,
+    "identifier": "nidoran-m",
+    "name": "Nidoran\u2642",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 33,
+    "sid": 33,
+    "identifier": "nidorino",
+    "name": "Nidorino",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 34,
+    "sid": 34,
+    "identifier": "nidoking",
+    "name": "Nidoking",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 35,
+    "sid": 35,
+    "identifier": "clefairy",
+    "name": "Clefairy",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 36,
+    "sid": 36,
+    "identifier": "clefable",
+    "name": "Clefable",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 37,
+    "sid": 37,
+    "identifier": "vulpix",
+    "name": "Vulpix",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 38,
+    "sid": 38,
+    "identifier": "ninetales",
+    "name": "Ninetales",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 39,
+    "sid": 39,
+    "identifier": "jigglypuff",
+    "name": "Jigglypuff",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 40,
+    "sid": 40,
+    "identifier": "wigglytuff",
+    "name": "Wigglytuff",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 41,
+    "sid": 41,
+    "identifier": "zubat",
+    "name": "Zubat",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 42,
+    "sid": 42,
+    "identifier": "golbat",
+    "name": "Golbat",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 43,
+    "sid": 43,
+    "identifier": "oddish",
+    "name": "Oddish",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 44,
+    "sid": 44,
+    "identifier": "gloom",
+    "name": "Gloom",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 45,
+    "sid": 45,
+    "identifier": "vileplume",
+    "name": "Vileplume",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 46,
+    "sid": 46,
+    "identifier": "paras",
+    "name": "Paras",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 47,
+    "sid": 47,
+    "identifier": "parasect",
+    "name": "Parasect",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 48,
+    "sid": 48,
+    "identifier": "venonat",
+    "name": "Venonat",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 49,
+    "sid": 49,
+    "identifier": "venomoth",
+    "name": "Venomoth",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 50,
+    "sid": 50,
+    "identifier": "diglett",
+    "name": "Diglett",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 51,
+    "sid": 51,
+    "identifier": "dugtrio",
+    "name": "Dugtrio",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 52,
+    "sid": 52,
+    "identifier": "meowth",
+    "name": "Meowth",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 53,
+    "sid": 53,
+    "identifier": "persian",
+    "name": "Persian",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 54,
+    "sid": 54,
+    "identifier": "psyduck",
+    "name": "Psyduck",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 55,
+    "sid": 55,
+    "identifier": "golduck",
+    "name": "Golduck",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 56,
+    "sid": 56,
+    "identifier": "mankey",
+    "name": "Mankey",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 57,
+    "sid": 57,
+    "identifier": "primeape",
+    "name": "Primeape",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 58,
+    "sid": 58,
+    "identifier": "growlithe",
+    "name": "Growlithe",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 59,
+    "sid": 59,
+    "identifier": "arcanine",
+    "name": "Arcanine",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 60,
+    "sid": 60,
+    "identifier": "poliwag",
+    "name": "Poliwag",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 61,
+    "sid": 61,
+    "identifier": "poliwhirl",
+    "name": "Poliwhirl",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 62,
+    "sid": 62,
+    "identifier": "poliwrath",
+    "name": "Poliwrath",
+    "generation": "i",
+    "sprite": true
+  },
+  { "id": 63, "sid": 63, "identifier": "abra", "name": "Abra", "generation": "i", "sprite": true },
+  {
+    "id": 64,
+    "sid": 64,
+    "identifier": "kadabra",
+    "name": "Kadabra",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 65,
+    "sid": 65,
+    "identifier": "alakazam",
+    "name": "Alakazam",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 66,
+    "sid": 66,
+    "identifier": "machop",
+    "name": "Machop",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 67,
+    "sid": 67,
+    "identifier": "machoke",
+    "name": "Machoke",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 68,
+    "sid": 68,
+    "identifier": "machamp",
+    "name": "Machamp",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 69,
+    "sid": 69,
+    "identifier": "bellsprout",
+    "name": "Bellsprout",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 70,
+    "sid": 70,
+    "identifier": "weepinbell",
+    "name": "Weepinbell",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 71,
+    "sid": 71,
+    "identifier": "victreebel",
+    "name": "Victreebel",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 72,
+    "sid": 72,
+    "identifier": "tentacool",
+    "name": "Tentacool",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 73,
+    "sid": 73,
+    "identifier": "tentacruel",
+    "name": "Tentacruel",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 74,
+    "sid": 74,
+    "identifier": "geodude",
+    "name": "Geodude",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 75,
+    "sid": 75,
+    "identifier": "graveler",
+    "name": "Graveler",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 76,
+    "sid": 76,
+    "identifier": "golem",
+    "name": "Golem",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 77,
+    "sid": 77,
+    "identifier": "ponyta",
+    "name": "Ponyta",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 78,
+    "sid": 78,
+    "identifier": "rapidash",
+    "name": "Rapidash",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 79,
+    "sid": 79,
+    "identifier": "slowpoke",
+    "name": "Slowpoke",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 80,
+    "sid": 80,
+    "identifier": "slowbro",
+    "name": "Slowbro",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 81,
+    "sid": 81,
+    "identifier": "magnemite",
+    "name": "Magnemite",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 82,
+    "sid": 82,
+    "identifier": "magneton",
+    "name": "Magneton",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 83,
+    "sid": 83,
+    "identifier": "farfetchd",
+    "name": "Farfetch\u2019d",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 84,
+    "sid": 84,
+    "identifier": "doduo",
+    "name": "Doduo",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 85,
+    "sid": 85,
+    "identifier": "dodrio",
+    "name": "Dodrio",
+    "generation": "i",
+    "sprite": true
+  },
+  { "id": 86, "sid": 86, "identifier": "seel", "name": "Seel", "generation": "i", "sprite": true },
+  {
+    "id": 87,
+    "sid": 87,
+    "identifier": "dewgong",
+    "name": "Dewgong",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 88,
+    "sid": 88,
+    "identifier": "grimer",
+    "name": "Grimer",
+    "generation": "i",
+    "sprite": true
+  },
+  { "id": 89, "sid": 89, "identifier": "muk", "name": "Muk", "generation": "i", "sprite": true },
+  {
+    "id": 90,
+    "sid": 90,
+    "identifier": "shellder",
+    "name": "Shellder",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 91,
+    "sid": 91,
+    "identifier": "cloyster",
+    "name": "Cloyster",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 92,
+    "sid": 92,
+    "identifier": "gastly",
+    "name": "Gastly",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 93,
+    "sid": 93,
+    "identifier": "haunter",
+    "name": "Haunter",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 94,
+    "sid": 94,
+    "identifier": "gengar",
+    "name": "Gengar",
+    "generation": "i",
+    "sprite": true
+  },
+  { "id": 95, "sid": 95, "identifier": "onix", "name": "Onix", "generation": "i", "sprite": true },
+  {
+    "id": 96,
+    "sid": 96,
+    "identifier": "drowzee",
+    "name": "Drowzee",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 97,
+    "sid": 97,
+    "identifier": "hypno",
+    "name": "Hypno",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 98,
+    "sid": 98,
+    "identifier": "krabby",
+    "name": "Krabby",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 99,
+    "sid": 99,
+    "identifier": "kingler",
+    "name": "Kingler",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 100,
+    "sid": 100,
+    "identifier": "voltorb",
+    "name": "Voltorb",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 101,
+    "sid": 101,
+    "identifier": "electrode",
+    "name": "Electrode",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 102,
+    "sid": 102,
+    "identifier": "exeggcute",
+    "name": "Exeggcute",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 103,
+    "sid": 103,
+    "identifier": "exeggutor",
+    "name": "Exeggutor",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 104,
+    "sid": 104,
+    "identifier": "cubone",
+    "name": "Cubone",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 105,
+    "sid": 105,
+    "identifier": "marowak",
+    "name": "Marowak",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 106,
+    "sid": 106,
+    "identifier": "hitmonlee",
+    "name": "Hitmonlee",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 107,
+    "sid": 107,
+    "identifier": "hitmonchan",
+    "name": "Hitmonchan",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 108,
+    "sid": 108,
+    "identifier": "lickitung",
+    "name": "Lickitung",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 109,
+    "sid": 109,
+    "identifier": "koffing",
+    "name": "Koffing",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 110,
+    "sid": 110,
+    "identifier": "weezing",
+    "name": "Weezing",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 111,
+    "sid": 111,
+    "identifier": "rhyhorn",
+    "name": "Rhyhorn",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 112,
+    "sid": 112,
+    "identifier": "rhydon",
+    "name": "Rhydon",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 113,
+    "sid": 113,
+    "identifier": "chansey",
+    "name": "Chansey",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 114,
+    "sid": 114,
+    "identifier": "tangela",
+    "name": "Tangela",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 115,
+    "sid": 115,
+    "identifier": "kangaskhan",
+    "name": "Kangaskhan",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 116,
+    "sid": 116,
+    "identifier": "horsea",
+    "name": "Horsea",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 117,
+    "sid": 117,
+    "identifier": "seadra",
+    "name": "Seadra",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 118,
+    "sid": 118,
+    "identifier": "goldeen",
+    "name": "Goldeen",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 119,
+    "sid": 119,
+    "identifier": "seaking",
+    "name": "Seaking",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 120,
+    "sid": 120,
+    "identifier": "staryu",
+    "name": "Staryu",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 121,
+    "sid": 121,
+    "identifier": "starmie",
+    "name": "Starmie",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 122,
+    "sid": 122,
+    "identifier": "mr-mime",
+    "name": "Mr. Mime",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 123,
+    "sid": 123,
+    "identifier": "scyther",
+    "name": "Scyther",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 124,
+    "sid": 124,
+    "identifier": "jynx",
+    "name": "Jynx",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 125,
+    "sid": 125,
+    "identifier": "electabuzz",
+    "name": "Electabuzz",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 126,
+    "sid": 126,
+    "identifier": "magmar",
+    "name": "Magmar",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 127,
+    "sid": 127,
+    "identifier": "pinsir",
+    "name": "Pinsir",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 128,
+    "sid": 128,
+    "identifier": "tauros",
+    "name": "Tauros",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 129,
+    "sid": 129,
+    "identifier": "magikarp",
+    "name": "Magikarp",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 130,
+    "sid": 130,
+    "identifier": "gyarados",
+    "name": "Gyarados",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 131,
+    "sid": 131,
+    "identifier": "lapras",
+    "name": "Lapras",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 132,
+    "sid": 132,
+    "identifier": "ditto",
+    "name": "Ditto",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 133,
+    "sid": 133,
+    "identifier": "eevee",
+    "name": "Eevee",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 134,
+    "sid": 134,
+    "identifier": "vaporeon",
+    "name": "Vaporeon",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 135,
+    "sid": 135,
+    "identifier": "jolteon",
+    "name": "Jolteon",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 136,
+    "sid": 136,
+    "identifier": "flareon",
+    "name": "Flareon",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 137,
+    "sid": 137,
+    "identifier": "porygon",
+    "name": "Porygon",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 138,
+    "sid": 138,
+    "identifier": "omanyte",
+    "name": "Omanyte",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 139,
+    "sid": 139,
+    "identifier": "omastar",
+    "name": "Omastar",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 140,
+    "sid": 140,
+    "identifier": "kabuto",
+    "name": "Kabuto",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 141,
+    "sid": 141,
+    "identifier": "kabutops",
+    "name": "Kabutops",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 142,
+    "sid": 142,
+    "identifier": "aerodactyl",
+    "name": "Aerodactyl",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 143,
+    "sid": 143,
+    "identifier": "snorlax",
+    "name": "Snorlax",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 144,
+    "sid": 144,
+    "identifier": "articuno",
+    "name": "Articuno",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 145,
+    "sid": 145,
+    "identifier": "zapdos",
+    "name": "Zapdos",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 146,
+    "sid": 146,
+    "identifier": "moltres",
+    "name": "Moltres",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 147,
+    "sid": 147,
+    "identifier": "dratini",
+    "name": "Dratini",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 148,
+    "sid": 148,
+    "identifier": "dragonair",
+    "name": "Dragonair",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 149,
+    "sid": 149,
+    "identifier": "dragonite",
+    "name": "Dragonite",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 150,
+    "sid": 150,
+    "identifier": "mewtwo",
+    "name": "Mewtwo",
+    "generation": "i",
+    "sprite": true
+  },
+  { "id": 151, "sid": 151, "identifier": "mew", "name": "Mew", "generation": "i", "sprite": true },
+  {
+    "id": 152,
+    "sid": 152,
+    "identifier": "chikorita",
+    "name": "Chikorita",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 153,
+    "sid": 153,
+    "identifier": "bayleef",
+    "name": "Bayleef",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 154,
+    "sid": 154,
+    "identifier": "meganium",
+    "name": "Meganium",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 155,
+    "sid": 155,
+    "identifier": "cyndaquil",
+    "name": "Cyndaquil",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 156,
+    "sid": 156,
+    "identifier": "quilava",
+    "name": "Quilava",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 157,
+    "sid": 157,
+    "identifier": "typhlosion",
+    "name": "Typhlosion",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 158,
+    "sid": 158,
+    "identifier": "totodile",
+    "name": "Totodile",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 159,
+    "sid": 159,
+    "identifier": "croconaw",
+    "name": "Croconaw",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 160,
+    "sid": 160,
+    "identifier": "feraligatr",
+    "name": "Feraligatr",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 161,
+    "sid": 161,
+    "identifier": "sentret",
+    "name": "Sentret",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 162,
+    "sid": 162,
+    "identifier": "furret",
+    "name": "Furret",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 163,
+    "sid": 163,
+    "identifier": "hoothoot",
+    "name": "Hoothoot",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 164,
+    "sid": 164,
+    "identifier": "noctowl",
+    "name": "Noctowl",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 165,
+    "sid": 165,
+    "identifier": "ledyba",
+    "name": "Ledyba",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 166,
+    "sid": 166,
+    "identifier": "ledian",
+    "name": "Ledian",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 167,
+    "sid": 167,
+    "identifier": "spinarak",
+    "name": "Spinarak",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 168,
+    "sid": 168,
+    "identifier": "ariados",
+    "name": "Ariados",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 169,
+    "sid": 169,
+    "identifier": "crobat",
+    "name": "Crobat",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 170,
+    "sid": 170,
+    "identifier": "chinchou",
+    "name": "Chinchou",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 171,
+    "sid": 171,
+    "identifier": "lanturn",
+    "name": "Lanturn",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 172,
+    "sid": 172,
+    "identifier": "pichu",
+    "name": "Pichu",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 173,
+    "sid": 173,
+    "identifier": "cleffa",
+    "name": "Cleffa",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 174,
+    "sid": 174,
+    "identifier": "igglybuff",
+    "name": "Igglybuff",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 175,
+    "sid": 175,
+    "identifier": "togepi",
+    "name": "Togepi",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 176,
+    "sid": 176,
+    "identifier": "togetic",
+    "name": "Togetic",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 177,
+    "sid": 177,
+    "identifier": "natu",
+    "name": "Natu",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 178,
+    "sid": 178,
+    "identifier": "xatu",
+    "name": "Xatu",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 179,
+    "sid": 179,
+    "identifier": "mareep",
+    "name": "Mareep",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 180,
+    "sid": 180,
+    "identifier": "flaaffy",
+    "name": "Flaaffy",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 181,
+    "sid": 181,
+    "identifier": "ampharos",
+    "name": "Ampharos",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 182,
+    "sid": 182,
+    "identifier": "bellossom",
+    "name": "Bellossom",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 183,
+    "sid": 183,
+    "identifier": "marill",
+    "name": "Marill",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 184,
+    "sid": 184,
+    "identifier": "azumarill",
+    "name": "Azumarill",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 185,
+    "sid": 185,
+    "identifier": "sudowoodo",
+    "name": "Sudowoodo",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 186,
+    "sid": 186,
+    "identifier": "politoed",
+    "name": "Politoed",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 187,
+    "sid": 187,
+    "identifier": "hoppip",
+    "name": "Hoppip",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 188,
+    "sid": 188,
+    "identifier": "skiploom",
+    "name": "Skiploom",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 189,
+    "sid": 189,
+    "identifier": "jumpluff",
+    "name": "Jumpluff",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 190,
+    "sid": 190,
+    "identifier": "aipom",
+    "name": "Aipom",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 191,
+    "sid": 191,
+    "identifier": "sunkern",
+    "name": "Sunkern",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 192,
+    "sid": 192,
+    "identifier": "sunflora",
+    "name": "Sunflora",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 193,
+    "sid": 193,
+    "identifier": "yanma",
+    "name": "Yanma",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 194,
+    "sid": 194,
+    "identifier": "wooper",
+    "name": "Wooper",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 195,
+    "sid": 195,
+    "identifier": "quagsire",
+    "name": "Quagsire",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 196,
+    "sid": 196,
+    "identifier": "espeon",
+    "name": "Espeon",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 197,
+    "sid": 197,
+    "identifier": "umbreon",
+    "name": "Umbreon",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 198,
+    "sid": 198,
+    "identifier": "murkrow",
+    "name": "Murkrow",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 199,
+    "sid": 199,
+    "identifier": "slowking",
+    "name": "Slowking",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 200,
+    "sid": 200,
+    "identifier": "misdreavus",
+    "name": "Misdreavus",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 201,
+    "sid": 201,
+    "identifier": "unown",
+    "name": "Unown",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 202,
+    "sid": 202,
+    "identifier": "wobbuffet",
+    "name": "Wobbuffet",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 203,
+    "sid": 203,
+    "identifier": "girafarig",
+    "name": "Girafarig",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 204,
+    "sid": 204,
+    "identifier": "pineco",
+    "name": "Pineco",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 205,
+    "sid": 205,
+    "identifier": "forretress",
+    "name": "Forretress",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 206,
+    "sid": 206,
+    "identifier": "dunsparce",
+    "name": "Dunsparce",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 207,
+    "sid": 207,
+    "identifier": "gligar",
+    "name": "Gligar",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 208,
+    "sid": 208,
+    "identifier": "steelix",
+    "name": "Steelix",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 209,
+    "sid": 209,
+    "identifier": "snubbull",
+    "name": "Snubbull",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 210,
+    "sid": 210,
+    "identifier": "granbull",
+    "name": "Granbull",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 211,
+    "sid": 211,
+    "identifier": "qwilfish",
+    "name": "Qwilfish",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 212,
+    "sid": 212,
+    "identifier": "scizor",
+    "name": "Scizor",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 213,
+    "sid": 213,
+    "identifier": "shuckle",
+    "name": "Shuckle",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 214,
+    "sid": 214,
+    "identifier": "heracross",
+    "name": "Heracross",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 215,
+    "sid": 215,
+    "identifier": "sneasel",
+    "name": "Sneasel",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 216,
+    "sid": 216,
+    "identifier": "teddiursa",
+    "name": "Teddiursa",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 217,
+    "sid": 217,
+    "identifier": "ursaring",
+    "name": "Ursaring",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 218,
+    "sid": 218,
+    "identifier": "slugma",
+    "name": "Slugma",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 219,
+    "sid": 219,
+    "identifier": "magcargo",
+    "name": "Magcargo",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 220,
+    "sid": 220,
+    "identifier": "swinub",
+    "name": "Swinub",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 221,
+    "sid": 221,
+    "identifier": "piloswine",
+    "name": "Piloswine",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 222,
+    "sid": 222,
+    "identifier": "corsola",
+    "name": "Corsola",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 223,
+    "sid": 223,
+    "identifier": "remoraid",
+    "name": "Remoraid",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 224,
+    "sid": 224,
+    "identifier": "octillery",
+    "name": "Octillery",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 225,
+    "sid": 225,
+    "identifier": "delibird",
+    "name": "Delibird",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 226,
+    "sid": 226,
+    "identifier": "mantine",
+    "name": "Mantine",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 227,
+    "sid": 227,
+    "identifier": "skarmory",
+    "name": "Skarmory",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 228,
+    "sid": 228,
+    "identifier": "houndour",
+    "name": "Houndour",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 229,
+    "sid": 229,
+    "identifier": "houndoom",
+    "name": "Houndoom",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 230,
+    "sid": 230,
+    "identifier": "kingdra",
+    "name": "Kingdra",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 231,
+    "sid": 231,
+    "identifier": "phanpy",
+    "name": "Phanpy",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 232,
+    "sid": 232,
+    "identifier": "donphan",
+    "name": "Donphan",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 233,
+    "sid": 233,
+    "identifier": "porygon2",
+    "name": "Porygon2",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 234,
+    "sid": 234,
+    "identifier": "stantler",
+    "name": "Stantler",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 235,
+    "sid": 235,
+    "identifier": "smeargle",
+    "name": "Smeargle",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 236,
+    "sid": 236,
+    "identifier": "tyrogue",
+    "name": "Tyrogue",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 237,
+    "sid": 237,
+    "identifier": "hitmontop",
+    "name": "Hitmontop",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 238,
+    "sid": 238,
+    "identifier": "smoochum",
+    "name": "Smoochum",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 239,
+    "sid": 239,
+    "identifier": "elekid",
+    "name": "Elekid",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 240,
+    "sid": 240,
+    "identifier": "magby",
+    "name": "Magby",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 241,
+    "sid": 241,
+    "identifier": "miltank",
+    "name": "Miltank",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 242,
+    "sid": 242,
+    "identifier": "blissey",
+    "name": "Blissey",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 243,
+    "sid": 243,
+    "identifier": "raikou",
+    "name": "Raikou",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 244,
+    "sid": 244,
+    "identifier": "entei",
+    "name": "Entei",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 245,
+    "sid": 245,
+    "identifier": "suicune",
+    "name": "Suicune",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 246,
+    "sid": 246,
+    "identifier": "larvitar",
+    "name": "Larvitar",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 247,
+    "sid": 247,
+    "identifier": "pupitar",
+    "name": "Pupitar",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 248,
+    "sid": 248,
+    "identifier": "tyranitar",
+    "name": "Tyranitar",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 249,
+    "sid": 249,
+    "identifier": "lugia",
+    "name": "Lugia",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 250,
+    "sid": 250,
+    "identifier": "ho-oh",
+    "name": "Ho-Oh",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 251,
+    "sid": 251,
+    "identifier": "celebi",
+    "name": "Celebi",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 252,
+    "sid": 252,
+    "identifier": "treecko",
+    "name": "Treecko",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 253,
+    "sid": 253,
+    "identifier": "grovyle",
+    "name": "Grovyle",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 254,
+    "sid": 254,
+    "identifier": "sceptile",
+    "name": "Sceptile",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 255,
+    "sid": 255,
+    "identifier": "torchic",
+    "name": "Torchic",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 256,
+    "sid": 256,
+    "identifier": "combusken",
+    "name": "Combusken",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 257,
+    "sid": 257,
+    "identifier": "blaziken",
+    "name": "Blaziken",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 258,
+    "sid": 258,
+    "identifier": "mudkip",
+    "name": "Mudkip",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 259,
+    "sid": 259,
+    "identifier": "marshtomp",
+    "name": "Marshtomp",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 260,
+    "sid": 260,
+    "identifier": "swampert",
+    "name": "Swampert",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 261,
+    "sid": 261,
+    "identifier": "poochyena",
+    "name": "Poochyena",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 262,
+    "sid": 262,
+    "identifier": "mightyena",
+    "name": "Mightyena",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 263,
+    "sid": 263,
+    "identifier": "zigzagoon",
+    "name": "Zigzagoon",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 264,
+    "sid": 264,
+    "identifier": "linoone",
+    "name": "Linoone",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 265,
+    "sid": 265,
+    "identifier": "wurmple",
+    "name": "Wurmple",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 266,
+    "sid": 266,
+    "identifier": "silcoon",
+    "name": "Silcoon",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 267,
+    "sid": 267,
+    "identifier": "beautifly",
+    "name": "Beautifly",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 268,
+    "sid": 268,
+    "identifier": "cascoon",
+    "name": "Cascoon",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 269,
+    "sid": 269,
+    "identifier": "dustox",
+    "name": "Dustox",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 270,
+    "sid": 270,
+    "identifier": "lotad",
+    "name": "Lotad",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 271,
+    "sid": 271,
+    "identifier": "lombre",
+    "name": "Lombre",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 272,
+    "sid": 272,
+    "identifier": "ludicolo",
+    "name": "Ludicolo",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 273,
+    "sid": 273,
+    "identifier": "seedot",
+    "name": "Seedot",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 274,
+    "sid": 274,
+    "identifier": "nuzleaf",
+    "name": "Nuzleaf",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 275,
+    "sid": 275,
+    "identifier": "shiftry",
+    "name": "Shiftry",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 276,
+    "sid": 276,
+    "identifier": "taillow",
+    "name": "Taillow",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 277,
+    "sid": 277,
+    "identifier": "swellow",
+    "name": "Swellow",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 278,
+    "sid": 278,
+    "identifier": "wingull",
+    "name": "Wingull",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 279,
+    "sid": 279,
+    "identifier": "pelipper",
+    "name": "Pelipper",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 280,
+    "sid": 280,
+    "identifier": "ralts",
+    "name": "Ralts",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 281,
+    "sid": 281,
+    "identifier": "kirlia",
+    "name": "Kirlia",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 282,
+    "sid": 282,
+    "identifier": "gardevoir",
+    "name": "Gardevoir",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 283,
+    "sid": 283,
+    "identifier": "surskit",
+    "name": "Surskit",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 284,
+    "sid": 284,
+    "identifier": "masquerain",
+    "name": "Masquerain",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 285,
+    "sid": 285,
+    "identifier": "shroomish",
+    "name": "Shroomish",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 286,
+    "sid": 286,
+    "identifier": "breloom",
+    "name": "Breloom",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 287,
+    "sid": 287,
+    "identifier": "slakoth",
+    "name": "Slakoth",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 288,
+    "sid": 288,
+    "identifier": "vigoroth",
+    "name": "Vigoroth",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 289,
+    "sid": 289,
+    "identifier": "slaking",
+    "name": "Slaking",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 290,
+    "sid": 290,
+    "identifier": "nincada",
+    "name": "Nincada",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 291,
+    "sid": 291,
+    "identifier": "ninjask",
+    "name": "Ninjask",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 292,
+    "sid": 292,
+    "identifier": "shedinja",
+    "name": "Shedinja",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 293,
+    "sid": 293,
+    "identifier": "whismur",
+    "name": "Whismur",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 294,
+    "sid": 294,
+    "identifier": "loudred",
+    "name": "Loudred",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 295,
+    "sid": 295,
+    "identifier": "exploud",
+    "name": "Exploud",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 296,
+    "sid": 296,
+    "identifier": "makuhita",
+    "name": "Makuhita",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 297,
+    "sid": 297,
+    "identifier": "hariyama",
+    "name": "Hariyama",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 298,
+    "sid": 298,
+    "identifier": "azurill",
+    "name": "Azurill",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 299,
+    "sid": 299,
+    "identifier": "nosepass",
+    "name": "Nosepass",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 300,
+    "sid": 300,
+    "identifier": "skitty",
+    "name": "Skitty",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 301,
+    "sid": 301,
+    "identifier": "delcatty",
+    "name": "Delcatty",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 302,
+    "sid": 302,
+    "identifier": "sableye",
+    "name": "Sableye",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 303,
+    "sid": 303,
+    "identifier": "mawile",
+    "name": "Mawile",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 304,
+    "sid": 304,
+    "identifier": "aron",
+    "name": "Aron",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 305,
+    "sid": 305,
+    "identifier": "lairon",
+    "name": "Lairon",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 306,
+    "sid": 306,
+    "identifier": "aggron",
+    "name": "Aggron",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 307,
+    "sid": 307,
+    "identifier": "meditite",
+    "name": "Meditite",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 308,
+    "sid": 308,
+    "identifier": "medicham",
+    "name": "Medicham",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 309,
+    "sid": 309,
+    "identifier": "electrike",
+    "name": "Electrike",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 310,
+    "sid": 310,
+    "identifier": "manectric",
+    "name": "Manectric",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 311,
+    "sid": 311,
+    "identifier": "plusle",
+    "name": "Plusle",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 312,
+    "sid": 312,
+    "identifier": "minun",
+    "name": "Minun",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 313,
+    "sid": 313,
+    "identifier": "volbeat",
+    "name": "Volbeat",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 314,
+    "sid": 314,
+    "identifier": "illumise",
+    "name": "Illumise",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 315,
+    "sid": 315,
+    "identifier": "roselia",
+    "name": "Roselia",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 316,
+    "sid": 316,
+    "identifier": "gulpin",
+    "name": "Gulpin",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 317,
+    "sid": 317,
+    "identifier": "swalot",
+    "name": "Swalot",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 318,
+    "sid": 318,
+    "identifier": "carvanha",
+    "name": "Carvanha",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 319,
+    "sid": 319,
+    "identifier": "sharpedo",
+    "name": "Sharpedo",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 320,
+    "sid": 320,
+    "identifier": "wailmer",
+    "name": "Wailmer",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 321,
+    "sid": 321,
+    "identifier": "wailord",
+    "name": "Wailord",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 322,
+    "sid": 322,
+    "identifier": "numel",
+    "name": "Numel",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 323,
+    "sid": 323,
+    "identifier": "camerupt",
+    "name": "Camerupt",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 324,
+    "sid": 324,
+    "identifier": "torkoal",
+    "name": "Torkoal",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 325,
+    "sid": 325,
+    "identifier": "spoink",
+    "name": "Spoink",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 326,
+    "sid": 326,
+    "identifier": "grumpig",
+    "name": "Grumpig",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 327,
+    "sid": 327,
+    "identifier": "spinda",
+    "name": "Spinda",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 328,
+    "sid": 328,
+    "identifier": "trapinch",
+    "name": "Trapinch",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 329,
+    "sid": 329,
+    "identifier": "vibrava",
+    "name": "Vibrava",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 330,
+    "sid": 330,
+    "identifier": "flygon",
+    "name": "Flygon",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 331,
+    "sid": 331,
+    "identifier": "cacnea",
+    "name": "Cacnea",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 332,
+    "sid": 332,
+    "identifier": "cacturne",
+    "name": "Cacturne",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 333,
+    "sid": 333,
+    "identifier": "swablu",
+    "name": "Swablu",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 334,
+    "sid": 334,
+    "identifier": "altaria",
+    "name": "Altaria",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 335,
+    "sid": 335,
+    "identifier": "zangoose",
+    "name": "Zangoose",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 336,
+    "sid": 336,
+    "identifier": "seviper",
+    "name": "Seviper",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 337,
+    "sid": 337,
+    "identifier": "lunatone",
+    "name": "Lunatone",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 338,
+    "sid": 338,
+    "identifier": "solrock",
+    "name": "Solrock",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 339,
+    "sid": 339,
+    "identifier": "barboach",
+    "name": "Barboach",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 340,
+    "sid": 340,
+    "identifier": "whiscash",
+    "name": "Whiscash",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 341,
+    "sid": 341,
+    "identifier": "corphish",
+    "name": "Corphish",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 342,
+    "sid": 342,
+    "identifier": "crawdaunt",
+    "name": "Crawdaunt",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 343,
+    "sid": 343,
+    "identifier": "baltoy",
+    "name": "Baltoy",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 344,
+    "sid": 344,
+    "identifier": "claydol",
+    "name": "Claydol",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 345,
+    "sid": 345,
+    "identifier": "lileep",
+    "name": "Lileep",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 346,
+    "sid": 346,
+    "identifier": "cradily",
+    "name": "Cradily",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 347,
+    "sid": 347,
+    "identifier": "anorith",
+    "name": "Anorith",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 348,
+    "sid": 348,
+    "identifier": "armaldo",
+    "name": "Armaldo",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 349,
+    "sid": 349,
+    "identifier": "feebas",
+    "name": "Feebas",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 350,
+    "sid": 350,
+    "identifier": "milotic",
+    "name": "Milotic",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 351,
+    "sid": 351,
+    "identifier": "castform",
+    "name": "Castform",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 352,
+    "sid": 352,
+    "identifier": "kecleon",
+    "name": "Kecleon",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 353,
+    "sid": 353,
+    "identifier": "shuppet",
+    "name": "Shuppet",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 354,
+    "sid": 354,
+    "identifier": "banette",
+    "name": "Banette",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 355,
+    "sid": 355,
+    "identifier": "duskull",
+    "name": "Duskull",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 356,
+    "sid": 356,
+    "identifier": "dusclops",
+    "name": "Dusclops",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 357,
+    "sid": 357,
+    "identifier": "tropius",
+    "name": "Tropius",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 358,
+    "sid": 358,
+    "identifier": "chimecho",
+    "name": "Chimecho",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 359,
+    "sid": 359,
+    "identifier": "absol",
+    "name": "Absol",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 360,
+    "sid": 360,
+    "identifier": "wynaut",
+    "name": "Wynaut",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 361,
+    "sid": 361,
+    "identifier": "snorunt",
+    "name": "Snorunt",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 362,
+    "sid": 362,
+    "identifier": "glalie",
+    "name": "Glalie",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 363,
+    "sid": 363,
+    "identifier": "spheal",
+    "name": "Spheal",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 364,
+    "sid": 364,
+    "identifier": "sealeo",
+    "name": "Sealeo",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 365,
+    "sid": 365,
+    "identifier": "walrein",
+    "name": "Walrein",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 366,
+    "sid": 366,
+    "identifier": "clamperl",
+    "name": "Clamperl",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 367,
+    "sid": 367,
+    "identifier": "huntail",
+    "name": "Huntail",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 368,
+    "sid": 368,
+    "identifier": "gorebyss",
+    "name": "Gorebyss",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 369,
+    "sid": 369,
+    "identifier": "relicanth",
+    "name": "Relicanth",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 370,
+    "sid": 370,
+    "identifier": "luvdisc",
+    "name": "Luvdisc",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 371,
+    "sid": 371,
+    "identifier": "bagon",
+    "name": "Bagon",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 372,
+    "sid": 372,
+    "identifier": "shelgon",
+    "name": "Shelgon",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 373,
+    "sid": 373,
+    "identifier": "salamence",
+    "name": "Salamence",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 374,
+    "sid": 374,
+    "identifier": "beldum",
+    "name": "Beldum",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 375,
+    "sid": 375,
+    "identifier": "metang",
+    "name": "Metang",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 376,
+    "sid": 376,
+    "identifier": "metagross",
+    "name": "Metagross",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 377,
+    "sid": 377,
+    "identifier": "regirock",
+    "name": "Regirock",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 378,
+    "sid": 378,
+    "identifier": "regice",
+    "name": "Regice",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 379,
+    "sid": 379,
+    "identifier": "registeel",
+    "name": "Registeel",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 380,
+    "sid": 380,
+    "identifier": "latias",
+    "name": "Latias",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 381,
+    "sid": 381,
+    "identifier": "latios",
+    "name": "Latios",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 382,
+    "sid": 382,
+    "identifier": "kyogre",
+    "name": "Kyogre",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 383,
+    "sid": 383,
+    "identifier": "groudon",
+    "name": "Groudon",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 384,
+    "sid": 384,
+    "identifier": "rayquaza",
+    "name": "Rayquaza",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 385,
+    "sid": 385,
+    "identifier": "jirachi",
+    "name": "Jirachi",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 386,
+    "sid": 386,
+    "identifier": "deoxys-normal",
+    "name": "Deoxys",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 387,
+    "sid": 387,
+    "identifier": "turtwig",
+    "name": "Turtwig",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 388,
+    "sid": 388,
+    "identifier": "grotle",
+    "name": "Grotle",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 389,
+    "sid": 389,
+    "identifier": "torterra",
+    "name": "Torterra",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 390,
+    "sid": 390,
+    "identifier": "chimchar",
+    "name": "Chimchar",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 391,
+    "sid": 391,
+    "identifier": "monferno",
+    "name": "Monferno",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 392,
+    "sid": 392,
+    "identifier": "infernape",
+    "name": "Infernape",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 393,
+    "sid": 393,
+    "identifier": "piplup",
+    "name": "Piplup",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 394,
+    "sid": 394,
+    "identifier": "prinplup",
+    "name": "Prinplup",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 395,
+    "sid": 395,
+    "identifier": "empoleon",
+    "name": "Empoleon",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 396,
+    "sid": 396,
+    "identifier": "starly",
+    "name": "Starly",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 397,
+    "sid": 397,
+    "identifier": "staravia",
+    "name": "Staravia",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 398,
+    "sid": 398,
+    "identifier": "staraptor",
+    "name": "Staraptor",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 399,
+    "sid": 399,
+    "identifier": "bidoof",
+    "name": "Bidoof",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 400,
+    "sid": 400,
+    "identifier": "bibarel",
+    "name": "Bibarel",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 401,
+    "sid": 401,
+    "identifier": "kricketot",
+    "name": "Kricketot",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 402,
+    "sid": 402,
+    "identifier": "kricketune",
+    "name": "Kricketune",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 403,
+    "sid": 403,
+    "identifier": "shinx",
+    "name": "Shinx",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 404,
+    "sid": 404,
+    "identifier": "luxio",
+    "name": "Luxio",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 405,
+    "sid": 405,
+    "identifier": "luxray",
+    "name": "Luxray",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 406,
+    "sid": 406,
+    "identifier": "budew",
+    "name": "Budew",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 407,
+    "sid": 407,
+    "identifier": "roserade",
+    "name": "Roserade",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 408,
+    "sid": 408,
+    "identifier": "cranidos",
+    "name": "Cranidos",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 409,
+    "sid": 409,
+    "identifier": "rampardos",
+    "name": "Rampardos",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 410,
+    "sid": 410,
+    "identifier": "shieldon",
+    "name": "Shieldon",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 411,
+    "sid": 411,
+    "identifier": "bastiodon",
+    "name": "Bastiodon",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 412,
+    "sid": 412,
+    "identifier": "burmy",
+    "name": "Burmy",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 413,
+    "sid": 413,
+    "identifier": "wormadam-plant",
+    "name": "Wormadam",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 414,
+    "sid": 414,
+    "identifier": "mothim",
+    "name": "Mothim",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 415,
+    "sid": 415,
+    "identifier": "combee",
+    "name": "Combee",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 416,
+    "sid": 416,
+    "identifier": "vespiquen",
+    "name": "Vespiquen",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 417,
+    "sid": 417,
+    "identifier": "pachirisu",
+    "name": "Pachirisu",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 418,
+    "sid": 418,
+    "identifier": "buizel",
+    "name": "Buizel",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 419,
+    "sid": 419,
+    "identifier": "floatzel",
+    "name": "Floatzel",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 420,
+    "sid": 420,
+    "identifier": "cherubi",
+    "name": "Cherubi",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 421,
+    "sid": 421,
+    "identifier": "cherrim",
+    "name": "Cherrim",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 422,
+    "sid": 422,
+    "identifier": "shellos",
+    "name": "Shellos",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 423,
+    "sid": 423,
+    "identifier": "gastrodon",
+    "name": "Gastrodon",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 424,
+    "sid": 424,
+    "identifier": "ambipom",
+    "name": "Ambipom",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 425,
+    "sid": 425,
+    "identifier": "drifloon",
+    "name": "Drifloon",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 426,
+    "sid": 426,
+    "identifier": "drifblim",
+    "name": "Drifblim",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 427,
+    "sid": 427,
+    "identifier": "buneary",
+    "name": "Buneary",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 428,
+    "sid": 428,
+    "identifier": "lopunny",
+    "name": "Lopunny",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 429,
+    "sid": 429,
+    "identifier": "mismagius",
+    "name": "Mismagius",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 430,
+    "sid": 430,
+    "identifier": "honchkrow",
+    "name": "Honchkrow",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 431,
+    "sid": 431,
+    "identifier": "glameow",
+    "name": "Glameow",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 432,
+    "sid": 432,
+    "identifier": "purugly",
+    "name": "Purugly",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 433,
+    "sid": 433,
+    "identifier": "chingling",
+    "name": "Chingling",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 434,
+    "sid": 434,
+    "identifier": "stunky",
+    "name": "Stunky",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 435,
+    "sid": 435,
+    "identifier": "skuntank",
+    "name": "Skuntank",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 436,
+    "sid": 436,
+    "identifier": "bronzor",
+    "name": "Bronzor",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 437,
+    "sid": 437,
+    "identifier": "bronzong",
+    "name": "Bronzong",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 438,
+    "sid": 438,
+    "identifier": "bonsly",
+    "name": "Bonsly",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 439,
+    "sid": 439,
+    "identifier": "mime-jr",
+    "name": "Mime Jr.",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 440,
+    "sid": 440,
+    "identifier": "happiny",
+    "name": "Happiny",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 441,
+    "sid": 441,
+    "identifier": "chatot",
+    "name": "Chatot",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 442,
+    "sid": 442,
+    "identifier": "spiritomb",
+    "name": "Spiritomb",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 443,
+    "sid": 443,
+    "identifier": "gible",
+    "name": "Gible",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 444,
+    "sid": 444,
+    "identifier": "gabite",
+    "name": "Gabite",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 445,
+    "sid": 445,
+    "identifier": "garchomp",
+    "name": "Garchomp",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 446,
+    "sid": 446,
+    "identifier": "munchlax",
+    "name": "Munchlax",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 447,
+    "sid": 447,
+    "identifier": "riolu",
+    "name": "Riolu",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 448,
+    "sid": 448,
+    "identifier": "lucario",
+    "name": "Lucario",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 449,
+    "sid": 449,
+    "identifier": "hippopotas",
+    "name": "Hippopotas",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 450,
+    "sid": 450,
+    "identifier": "hippowdon",
+    "name": "Hippowdon",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 451,
+    "sid": 451,
+    "identifier": "skorupi",
+    "name": "Skorupi",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 452,
+    "sid": 452,
+    "identifier": "drapion",
+    "name": "Drapion",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 453,
+    "sid": 453,
+    "identifier": "croagunk",
+    "name": "Croagunk",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 454,
+    "sid": 454,
+    "identifier": "toxicroak",
+    "name": "Toxicroak",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 455,
+    "sid": 455,
+    "identifier": "carnivine",
+    "name": "Carnivine",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 456,
+    "sid": 456,
+    "identifier": "finneon",
+    "name": "Finneon",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 457,
+    "sid": 457,
+    "identifier": "lumineon",
+    "name": "Lumineon",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 458,
+    "sid": 458,
+    "identifier": "mantyke",
+    "name": "Mantyke",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 459,
+    "sid": 459,
+    "identifier": "snover",
+    "name": "Snover",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 460,
+    "sid": 460,
+    "identifier": "abomasnow",
+    "name": "Abomasnow",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 461,
+    "sid": 461,
+    "identifier": "weavile",
+    "name": "Weavile",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 462,
+    "sid": 462,
+    "identifier": "magnezone",
+    "name": "Magnezone",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 463,
+    "sid": 463,
+    "identifier": "lickilicky",
+    "name": "Lickilicky",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 464,
+    "sid": 464,
+    "identifier": "rhyperior",
+    "name": "Rhyperior",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 465,
+    "sid": 465,
+    "identifier": "tangrowth",
+    "name": "Tangrowth",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 466,
+    "sid": 466,
+    "identifier": "electivire",
+    "name": "Electivire",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 467,
+    "sid": 467,
+    "identifier": "magmortar",
+    "name": "Magmortar",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 468,
+    "sid": 468,
+    "identifier": "togekiss",
+    "name": "Togekiss",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 469,
+    "sid": 469,
+    "identifier": "yanmega",
+    "name": "Yanmega",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 470,
+    "sid": 470,
+    "identifier": "leafeon",
+    "name": "Leafeon",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 471,
+    "sid": 471,
+    "identifier": "glaceon",
+    "name": "Glaceon",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 472,
+    "sid": 472,
+    "identifier": "gliscor",
+    "name": "Gliscor",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 473,
+    "sid": 473,
+    "identifier": "mamoswine",
+    "name": "Mamoswine",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 474,
+    "sid": 474,
+    "identifier": "porygon-z",
+    "name": "Porygon-Z",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 475,
+    "sid": 475,
+    "identifier": "gallade",
+    "name": "Gallade",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 476,
+    "sid": 476,
+    "identifier": "probopass",
+    "name": "Probopass",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 477,
+    "sid": 477,
+    "identifier": "dusknoir",
+    "name": "Dusknoir",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 478,
+    "sid": 478,
+    "identifier": "froslass",
+    "name": "Froslass",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 479,
+    "sid": 479,
+    "identifier": "rotom",
+    "name": "Rotom",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 480,
+    "sid": 480,
+    "identifier": "uxie",
+    "name": "Uxie",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 481,
+    "sid": 481,
+    "identifier": "mesprit",
+    "name": "Mesprit",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 482,
+    "sid": 482,
+    "identifier": "azelf",
+    "name": "Azelf",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 483,
+    "sid": 483,
+    "identifier": "dialga",
+    "name": "Dialga",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 484,
+    "sid": 484,
+    "identifier": "palkia",
+    "name": "Palkia",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 485,
+    "sid": 485,
+    "identifier": "heatran",
+    "name": "Heatran",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 486,
+    "sid": 486,
+    "identifier": "regigigas",
+    "name": "Regigigas",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 487,
+    "sid": 487,
+    "identifier": "giratina-altered",
+    "name": "Giratina",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 488,
+    "sid": 488,
+    "identifier": "cresselia",
+    "name": "Cresselia",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 489,
+    "sid": 489,
+    "identifier": "phione",
+    "name": "Phione",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 490,
+    "sid": 490,
+    "identifier": "manaphy",
+    "name": "Manaphy",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 491,
+    "sid": 491,
+    "identifier": "darkrai",
+    "name": "Darkrai",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 492,
+    "sid": 492,
+    "identifier": "shaymin-land",
+    "name": "Shaymin",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 493,
+    "sid": 493,
+    "identifier": "arceus",
+    "name": "Arceus",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 494,
+    "sid": 494,
+    "identifier": "victini",
+    "name": "Victini",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 495,
+    "sid": 495,
+    "identifier": "snivy",
+    "name": "Snivy",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 496,
+    "sid": 496,
+    "identifier": "servine",
+    "name": "Servine",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 497,
+    "sid": 497,
+    "identifier": "serperior",
+    "name": "Serperior",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 498,
+    "sid": 498,
+    "identifier": "tepig",
+    "name": "Tepig",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 499,
+    "sid": 499,
+    "identifier": "pignite",
+    "name": "Pignite",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 500,
+    "sid": 500,
+    "identifier": "emboar",
+    "name": "Emboar",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 501,
+    "sid": 501,
+    "identifier": "oshawott",
+    "name": "Oshawott",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 502,
+    "sid": 502,
+    "identifier": "dewott",
+    "name": "Dewott",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 503,
+    "sid": 503,
+    "identifier": "samurott",
+    "name": "Samurott",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 504,
+    "sid": 504,
+    "identifier": "patrat",
+    "name": "Patrat",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 505,
+    "sid": 505,
+    "identifier": "watchog",
+    "name": "Watchog",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 506,
+    "sid": 506,
+    "identifier": "lillipup",
+    "name": "Lillipup",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 507,
+    "sid": 507,
+    "identifier": "herdier",
+    "name": "Herdier",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 508,
+    "sid": 508,
+    "identifier": "stoutland",
+    "name": "Stoutland",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 509,
+    "sid": 509,
+    "identifier": "purrloin",
+    "name": "Purrloin",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 510,
+    "sid": 510,
+    "identifier": "liepard",
+    "name": "Liepard",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 511,
+    "sid": 511,
+    "identifier": "pansage",
+    "name": "Pansage",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 512,
+    "sid": 512,
+    "identifier": "simisage",
+    "name": "Simisage",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 513,
+    "sid": 513,
+    "identifier": "pansear",
+    "name": "Pansear",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 514,
+    "sid": 514,
+    "identifier": "simisear",
+    "name": "Simisear",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 515,
+    "sid": 515,
+    "identifier": "panpour",
+    "name": "Panpour",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 516,
+    "sid": 516,
+    "identifier": "simipour",
+    "name": "Simipour",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 517,
+    "sid": 517,
+    "identifier": "munna",
+    "name": "Munna",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 518,
+    "sid": 518,
+    "identifier": "musharna",
+    "name": "Musharna",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 519,
+    "sid": 519,
+    "identifier": "pidove",
+    "name": "Pidove",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 520,
+    "sid": 520,
+    "identifier": "tranquill",
+    "name": "Tranquill",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 521,
+    "sid": 521,
+    "identifier": "unfezant",
+    "name": "Unfezant",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 522,
+    "sid": 522,
+    "identifier": "blitzle",
+    "name": "Blitzle",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 523,
+    "sid": 523,
+    "identifier": "zebstrika",
+    "name": "Zebstrika",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 524,
+    "sid": 524,
+    "identifier": "roggenrola",
+    "name": "Roggenrola",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 525,
+    "sid": 525,
+    "identifier": "boldore",
+    "name": "Boldore",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 526,
+    "sid": 526,
+    "identifier": "gigalith",
+    "name": "Gigalith",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 527,
+    "sid": 527,
+    "identifier": "woobat",
+    "name": "Woobat",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 528,
+    "sid": 528,
+    "identifier": "swoobat",
+    "name": "Swoobat",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 529,
+    "sid": 529,
+    "identifier": "drilbur",
+    "name": "Drilbur",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 530,
+    "sid": 530,
+    "identifier": "excadrill",
+    "name": "Excadrill",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 531,
+    "sid": 531,
+    "identifier": "audino",
+    "name": "Audino",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 532,
+    "sid": 532,
+    "identifier": "timburr",
+    "name": "Timburr",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 533,
+    "sid": 533,
+    "identifier": "gurdurr",
+    "name": "Gurdurr",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 534,
+    "sid": 534,
+    "identifier": "conkeldurr",
+    "name": "Conkeldurr",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 535,
+    "sid": 535,
+    "identifier": "tympole",
+    "name": "Tympole",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 536,
+    "sid": 536,
+    "identifier": "palpitoad",
+    "name": "Palpitoad",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 537,
+    "sid": 537,
+    "identifier": "seismitoad",
+    "name": "Seismitoad",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 538,
+    "sid": 538,
+    "identifier": "throh",
+    "name": "Throh",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 539,
+    "sid": 539,
+    "identifier": "sawk",
+    "name": "Sawk",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 540,
+    "sid": 540,
+    "identifier": "sewaddle",
+    "name": "Sewaddle",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 541,
+    "sid": 541,
+    "identifier": "swadloon",
+    "name": "Swadloon",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 542,
+    "sid": 542,
+    "identifier": "leavanny",
+    "name": "Leavanny",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 543,
+    "sid": 543,
+    "identifier": "venipede",
+    "name": "Venipede",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 544,
+    "sid": 544,
+    "identifier": "whirlipede",
+    "name": "Whirlipede",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 545,
+    "sid": 545,
+    "identifier": "scolipede",
+    "name": "Scolipede",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 546,
+    "sid": 546,
+    "identifier": "cottonee",
+    "name": "Cottonee",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 547,
+    "sid": 547,
+    "identifier": "whimsicott",
+    "name": "Whimsicott",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 548,
+    "sid": 548,
+    "identifier": "petilil",
+    "name": "Petilil",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 549,
+    "sid": 549,
+    "identifier": "lilligant",
+    "name": "Lilligant",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 550,
+    "sid": 550,
+    "identifier": "basculin-red-striped",
+    "name": "Basculin",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 551,
+    "sid": 551,
+    "identifier": "sandile",
+    "name": "Sandile",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 552,
+    "sid": 552,
+    "identifier": "krokorok",
+    "name": "Krokorok",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 553,
+    "sid": 553,
+    "identifier": "krookodile",
+    "name": "Krookodile",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 554,
+    "sid": 554,
+    "identifier": "darumaka",
+    "name": "Darumaka",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 555,
+    "sid": 555,
+    "identifier": "darmanitan-standard",
+    "name": "Darmanitan",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 556,
+    "sid": 556,
+    "identifier": "maractus",
+    "name": "Maractus",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 557,
+    "sid": 557,
+    "identifier": "dwebble",
+    "name": "Dwebble",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 558,
+    "sid": 558,
+    "identifier": "crustle",
+    "name": "Crustle",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 559,
+    "sid": 559,
+    "identifier": "scraggy",
+    "name": "Scraggy",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 560,
+    "sid": 560,
+    "identifier": "scrafty",
+    "name": "Scrafty",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 561,
+    "sid": 561,
+    "identifier": "sigilyph",
+    "name": "Sigilyph",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 562,
+    "sid": 562,
+    "identifier": "yamask",
+    "name": "Yamask",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 563,
+    "sid": 563,
+    "identifier": "cofagrigus",
+    "name": "Cofagrigus",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 564,
+    "sid": 564,
+    "identifier": "tirtouga",
+    "name": "Tirtouga",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 565,
+    "sid": 565,
+    "identifier": "carracosta",
+    "name": "Carracosta",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 566,
+    "sid": 566,
+    "identifier": "archen",
+    "name": "Archen",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 567,
+    "sid": 567,
+    "identifier": "archeops",
+    "name": "Archeops",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 568,
+    "sid": 568,
+    "identifier": "trubbish",
+    "name": "Trubbish",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 569,
+    "sid": 569,
+    "identifier": "garbodor",
+    "name": "Garbodor",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 570,
+    "sid": 570,
+    "identifier": "zorua",
+    "name": "Zorua",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 571,
+    "sid": 571,
+    "identifier": "zoroark",
+    "name": "Zoroark",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 572,
+    "sid": 572,
+    "identifier": "minccino",
+    "name": "Minccino",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 573,
+    "sid": 573,
+    "identifier": "cinccino",
+    "name": "Cinccino",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 574,
+    "sid": 574,
+    "identifier": "gothita",
+    "name": "Gothita",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 575,
+    "sid": 575,
+    "identifier": "gothorita",
+    "name": "Gothorita",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 576,
+    "sid": 576,
+    "identifier": "gothitelle",
+    "name": "Gothitelle",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 577,
+    "sid": 577,
+    "identifier": "solosis",
+    "name": "Solosis",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 578,
+    "sid": 578,
+    "identifier": "duosion",
+    "name": "Duosion",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 579,
+    "sid": 579,
+    "identifier": "reuniclus",
+    "name": "Reuniclus",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 580,
+    "sid": 580,
+    "identifier": "ducklett",
+    "name": "Ducklett",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 581,
+    "sid": 581,
+    "identifier": "swanna",
+    "name": "Swanna",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 582,
+    "sid": 582,
+    "identifier": "vanillite",
+    "name": "Vanillite",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 583,
+    "sid": 583,
+    "identifier": "vanillish",
+    "name": "Vanillish",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 584,
+    "sid": 584,
+    "identifier": "vanilluxe",
+    "name": "Vanilluxe",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 585,
+    "sid": 585,
+    "identifier": "deerling",
+    "name": "Deerling",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 586,
+    "sid": 586,
+    "identifier": "sawsbuck",
+    "name": "Sawsbuck",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 587,
+    "sid": 587,
+    "identifier": "emolga",
+    "name": "Emolga",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 588,
+    "sid": 588,
+    "identifier": "karrablast",
+    "name": "Karrablast",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 589,
+    "sid": 589,
+    "identifier": "escavalier",
+    "name": "Escavalier",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 590,
+    "sid": 590,
+    "identifier": "foongus",
+    "name": "Foongus",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 591,
+    "sid": 591,
+    "identifier": "amoonguss",
+    "name": "Amoonguss",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 592,
+    "sid": 592,
+    "identifier": "frillish",
+    "name": "Frillish",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 593,
+    "sid": 593,
+    "identifier": "jellicent",
+    "name": "Jellicent",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 594,
+    "sid": 594,
+    "identifier": "alomomola",
+    "name": "Alomomola",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 595,
+    "sid": 595,
+    "identifier": "joltik",
+    "name": "Joltik",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 596,
+    "sid": 596,
+    "identifier": "galvantula",
+    "name": "Galvantula",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 597,
+    "sid": 597,
+    "identifier": "ferroseed",
+    "name": "Ferroseed",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 598,
+    "sid": 598,
+    "identifier": "ferrothorn",
+    "name": "Ferrothorn",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 599,
+    "sid": 599,
+    "identifier": "klink",
+    "name": "Klink",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 600,
+    "sid": 600,
+    "identifier": "klang",
+    "name": "Klang",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 601,
+    "sid": 601,
+    "identifier": "klinklang",
+    "name": "Klinklang",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 602,
+    "sid": 602,
+    "identifier": "tynamo",
+    "name": "Tynamo",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 603,
+    "sid": 603,
+    "identifier": "eelektrik",
+    "name": "Eelektrik",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 604,
+    "sid": 604,
+    "identifier": "eelektross",
+    "name": "Eelektross",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 605,
+    "sid": 605,
+    "identifier": "elgyem",
+    "name": "Elgyem",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 606,
+    "sid": 606,
+    "identifier": "beheeyem",
+    "name": "Beheeyem",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 607,
+    "sid": 607,
+    "identifier": "litwick",
+    "name": "Litwick",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 608,
+    "sid": 608,
+    "identifier": "lampent",
+    "name": "Lampent",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 609,
+    "sid": 609,
+    "identifier": "chandelure",
+    "name": "Chandelure",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 610,
+    "sid": 610,
+    "identifier": "axew",
+    "name": "Axew",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 611,
+    "sid": 611,
+    "identifier": "fraxure",
+    "name": "Fraxure",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 612,
+    "sid": 612,
+    "identifier": "haxorus",
+    "name": "Haxorus",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 613,
+    "sid": 613,
+    "identifier": "cubchoo",
+    "name": "Cubchoo",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 614,
+    "sid": 614,
+    "identifier": "beartic",
+    "name": "Beartic",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 615,
+    "sid": 615,
+    "identifier": "cryogonal",
+    "name": "Cryogonal",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 616,
+    "sid": 616,
+    "identifier": "shelmet",
+    "name": "Shelmet",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 617,
+    "sid": 617,
+    "identifier": "accelgor",
+    "name": "Accelgor",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 618,
+    "sid": 618,
+    "identifier": "stunfisk",
+    "name": "Stunfisk",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 619,
+    "sid": 619,
+    "identifier": "mienfoo",
+    "name": "Mienfoo",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 620,
+    "sid": 620,
+    "identifier": "mienshao",
+    "name": "Mienshao",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 621,
+    "sid": 621,
+    "identifier": "druddigon",
+    "name": "Druddigon",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 622,
+    "sid": 622,
+    "identifier": "golett",
+    "name": "Golett",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 623,
+    "sid": 623,
+    "identifier": "golurk",
+    "name": "Golurk",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 624,
+    "sid": 624,
+    "identifier": "pawniard",
+    "name": "Pawniard",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 625,
+    "sid": 625,
+    "identifier": "bisharp",
+    "name": "Bisharp",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 626,
+    "sid": 626,
+    "identifier": "bouffalant",
+    "name": "Bouffalant",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 627,
+    "sid": 627,
+    "identifier": "rufflet",
+    "name": "Rufflet",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 628,
+    "sid": 628,
+    "identifier": "braviary",
+    "name": "Braviary",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 629,
+    "sid": 629,
+    "identifier": "vullaby",
+    "name": "Vullaby",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 630,
+    "sid": 630,
+    "identifier": "mandibuzz",
+    "name": "Mandibuzz",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 631,
+    "sid": 631,
+    "identifier": "heatmor",
+    "name": "Heatmor",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 632,
+    "sid": 632,
+    "identifier": "durant",
+    "name": "Durant",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 633,
+    "sid": 633,
+    "identifier": "deino",
+    "name": "Deino",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 634,
+    "sid": 634,
+    "identifier": "zweilous",
+    "name": "Zweilous",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 635,
+    "sid": 635,
+    "identifier": "hydreigon",
+    "name": "Hydreigon",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 636,
+    "sid": 636,
+    "identifier": "larvesta",
+    "name": "Larvesta",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 637,
+    "sid": 637,
+    "identifier": "volcarona",
+    "name": "Volcarona",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 638,
+    "sid": 638,
+    "identifier": "cobalion",
+    "name": "Cobalion",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 639,
+    "sid": 639,
+    "identifier": "terrakion",
+    "name": "Terrakion",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 640,
+    "sid": 640,
+    "identifier": "virizion",
+    "name": "Virizion",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 641,
+    "sid": 641,
+    "identifier": "tornadus-incarnate",
+    "name": "Tornadus",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 642,
+    "sid": 642,
+    "identifier": "thundurus-incarnate",
+    "name": "Thundurus",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 643,
+    "sid": 643,
+    "identifier": "reshiram",
+    "name": "Reshiram",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 644,
+    "sid": 644,
+    "identifier": "zekrom",
+    "name": "Zekrom",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 645,
+    "sid": 645,
+    "identifier": "landorus-incarnate",
+    "name": "Landorus",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 646,
+    "sid": 646,
+    "identifier": "kyurem",
+    "name": "Kyurem",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 647,
+    "sid": 647,
+    "identifier": "keldeo-ordinary",
+    "name": "Keldeo",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 648,
+    "sid": 648,
+    "identifier": "meloetta-aria",
+    "name": "Meloetta",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 649,
+    "sid": 649,
+    "identifier": "genesect",
+    "name": "Genesect",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 650,
+    "sid": 650,
+    "identifier": "chespin",
+    "name": "Chespin",
+    "generation": "vi",
+    "sprite": true
+  },
+  {
+    "id": 651,
+    "sid": 651,
+    "identifier": "quilladin",
+    "name": "Quilladin",
+    "generation": "vi",
+    "sprite": true
+  },
+  {
+    "id": 652,
+    "sid": 652,
+    "identifier": "chesnaught",
+    "name": "Chesnaught",
+    "generation": "vi",
+    "sprite": true
+  },
+  {
+    "id": 653,
+    "sid": 653,
+    "identifier": "fennekin",
+    "name": "Fennekin",
+    "generation": "vi",
+    "sprite": true
+  },
+  {
+    "id": 654,
+    "sid": 654,
+    "identifier": "braixen",
+    "name": "Braixen",
+    "generation": "vi",
+    "sprite": true
+  },
+  {
+    "id": 655,
+    "sid": 655,
+    "identifier": "delphox",
+    "name": "Delphox",
+    "generation": "vi",
+    "sprite": true
+  },
+  {
+    "id": 656,
+    "sid": 656,
+    "identifier": "froakie",
+    "name": "Froakie",
+    "generation": "vi",
+    "sprite": true
+  },
+  {
+    "id": 657,
+    "sid": 657,
+    "identifier": "frogadier",
+    "name": "Frogadier",
+    "generation": "vi",
+    "sprite": true
+  },
+  {
+    "id": 658,
+    "sid": 658,
+    "identifier": "greninja",
+    "name": "Greninja",
+    "generation": "vi",
+    "sprite": true
+  },
+  {
+    "id": 659,
+    "sid": 659,
+    "identifier": "bunnelby",
+    "name": "Bunnelby",
+    "generation": "vi",
+    "sprite": true
+  },
+  {
+    "id": 660,
+    "sid": 660,
+    "identifier": "diggersby",
+    "name": "Diggersby",
+    "generation": "vi",
+    "sprite": true
+  },
+  {
+    "id": 661,
+    "sid": 661,
+    "identifier": "fletchling",
+    "name": "Fletchling",
+    "generation": "vi",
+    "sprite": true
+  },
+  {
+    "id": 662,
+    "sid": 662,
+    "identifier": "fletchinder",
+    "name": "Fletchinder",
+    "generation": "vi",
+    "sprite": true
+  },
+  {
+    "id": 663,
+    "sid": 663,
+    "identifier": "talonflame",
+    "name": "Talonflame",
+    "generation": "vi",
+    "sprite": true
+  },
+  {
+    "id": 664,
+    "sid": 664,
+    "identifier": "scatterbug",
+    "name": "Scatterbug",
+    "generation": "vi",
+    "sprite": true
+  },
+  {
+    "id": 665,
+    "sid": 665,
+    "identifier": "spewpa",
+    "name": "Spewpa",
+    "generation": "vi",
+    "sprite": true
+  },
+  {
+    "id": 666,
+    "sid": 666,
+    "identifier": "vivillon",
+    "name": "Vivillon",
+    "generation": "vi",
+    "sprite": true
+  },
+  {
+    "id": 667,
+    "sid": 667,
+    "identifier": "litleo",
+    "name": "Litleo",
+    "generation": "vi",
+    "sprite": true
+  },
+  {
+    "id": 668,
+    "sid": 668,
+    "identifier": "pyroar",
+    "name": "Pyroar",
+    "generation": "vi",
+    "sprite": true
+  },
+  {
+    "id": 669,
+    "sid": 669,
+    "identifier": "flabebe",
+    "name": "Flab\u00e9b\u00e9",
+    "generation": "vi",
+    "sprite": true
+  },
+  {
+    "id": 670,
+    "sid": 670,
+    "identifier": "floette",
+    "name": "Floette",
+    "generation": "vi",
+    "sprite": true
+  },
+  {
+    "id": 671,
+    "sid": 671,
+    "identifier": "florges",
+    "name": "Florges",
+    "generation": "vi",
+    "sprite": true
+  },
+  {
+    "id": 672,
+    "sid": 672,
+    "identifier": "skiddo",
+    "name": "Skiddo",
+    "generation": "vi",
+    "sprite": true
+  },
+  {
+    "id": 673,
+    "sid": 673,
+    "identifier": "gogoat",
+    "name": "Gogoat",
+    "generation": "vi",
+    "sprite": true
+  },
+  {
+    "id": 674,
+    "sid": 674,
+    "identifier": "pancham",
+    "name": "Pancham",
+    "generation": "vi",
+    "sprite": true
+  },
+  {
+    "id": 675,
+    "sid": 675,
+    "identifier": "pangoro",
+    "name": "Pangoro",
+    "generation": "vi",
+    "sprite": true
+  },
+  {
+    "id": 676,
+    "sid": 676,
+    "identifier": "furfrou",
+    "name": "Furfrou",
+    "generation": "vi",
+    "sprite": true
+  },
+  {
+    "id": 677,
+    "sid": 677,
+    "identifier": "espurr",
+    "name": "Espurr",
+    "generation": "vi",
+    "sprite": true
+  },
+  {
+    "id": 678,
+    "sid": 678,
+    "identifier": "meowstic-male",
+    "name": "Meowstic",
+    "generation": "vi",
+    "sprite": true
+  },
+  {
+    "id": 679,
+    "sid": 679,
+    "identifier": "honedge",
+    "name": "Honedge",
+    "generation": "vi",
+    "sprite": true
+  },
+  {
+    "id": 680,
+    "sid": 680,
+    "identifier": "doublade",
+    "name": "Doublade",
+    "generation": "vi",
+    "sprite": true
+  },
+  {
+    "id": 681,
+    "sid": 681,
+    "identifier": "aegislash-shield",
+    "name": "Aegislash",
+    "generation": "vi",
+    "sprite": true
+  },
+  {
+    "id": 682,
+    "sid": 682,
+    "identifier": "spritzee",
+    "name": "Spritzee",
+    "generation": "vi",
+    "sprite": true
+  },
+  {
+    "id": 683,
+    "sid": 683,
+    "identifier": "aromatisse",
+    "name": "Aromatisse",
+    "generation": "vi",
+    "sprite": true
+  },
+  {
+    "id": 684,
+    "sid": 684,
+    "identifier": "swirlix",
+    "name": "Swirlix",
+    "generation": "vi",
+    "sprite": true
+  },
+  {
+    "id": 685,
+    "sid": 685,
+    "identifier": "slurpuff",
+    "name": "Slurpuff",
+    "generation": "vi",
+    "sprite": true
+  },
+  {
+    "id": 686,
+    "sid": 686,
+    "identifier": "inkay",
+    "name": "Inkay",
+    "generation": "vi",
+    "sprite": true
+  },
+  {
+    "id": 687,
+    "sid": 687,
+    "identifier": "malamar",
+    "name": "Malamar",
+    "generation": "vi",
+    "sprite": true
+  },
+  {
+    "id": 688,
+    "sid": 688,
+    "identifier": "binacle",
+    "name": "Binacle",
+    "generation": "vi",
+    "sprite": true
+  },
+  {
+    "id": 689,
+    "sid": 689,
+    "identifier": "barbaracle",
+    "name": "Barbaracle",
+    "generation": "vi",
+    "sprite": true
+  },
+  {
+    "id": 690,
+    "sid": 690,
+    "identifier": "skrelp",
+    "name": "Skrelp",
+    "generation": "vi",
+    "sprite": true
+  },
+  {
+    "id": 691,
+    "sid": 691,
+    "identifier": "dragalge",
+    "name": "Dragalge",
+    "generation": "vi",
+    "sprite": true
+  },
+  {
+    "id": 692,
+    "sid": 692,
+    "identifier": "clauncher",
+    "name": "Clauncher",
+    "generation": "vi",
+    "sprite": true
+  },
+  {
+    "id": 693,
+    "sid": 693,
+    "identifier": "clawitzer",
+    "name": "Clawitzer",
+    "generation": "vi",
+    "sprite": true
+  },
+  {
+    "id": 694,
+    "sid": 694,
+    "identifier": "helioptile",
+    "name": "Helioptile",
+    "generation": "vi",
+    "sprite": true
+  },
+  {
+    "id": 695,
+    "sid": 695,
+    "identifier": "heliolisk",
+    "name": "Heliolisk",
+    "generation": "vi",
+    "sprite": true
+  },
+  {
+    "id": 696,
+    "sid": 696,
+    "identifier": "tyrunt",
+    "name": "Tyrunt",
+    "generation": "vi",
+    "sprite": true
+  },
+  {
+    "id": 697,
+    "sid": 697,
+    "identifier": "tyrantrum",
+    "name": "Tyrantrum",
+    "generation": "vi",
+    "sprite": true
+  },
+  {
+    "id": 698,
+    "sid": 698,
+    "identifier": "amaura",
+    "name": "Amaura",
+    "generation": "vi",
+    "sprite": true
+  },
+  {
+    "id": 699,
+    "sid": 699,
+    "identifier": "aurorus",
+    "name": "Aurorus",
+    "generation": "vi",
+    "sprite": true
+  },
+  {
+    "id": 700,
+    "sid": 700,
+    "identifier": "sylveon",
+    "name": "Sylveon",
+    "generation": "vi",
+    "sprite": true
+  },
+  {
+    "id": 701,
+    "sid": 701,
+    "identifier": "hawlucha",
+    "name": "Hawlucha",
+    "generation": "vi",
+    "sprite": true
+  },
+  {
+    "id": 702,
+    "sid": 702,
+    "identifier": "dedenne",
+    "name": "Dedenne",
+    "generation": "vi",
+    "sprite": true
+  },
+  {
+    "id": 703,
+    "sid": 703,
+    "identifier": "carbink",
+    "name": "Carbink",
+    "generation": "vi",
+    "sprite": true
+  },
+  {
+    "id": 704,
+    "sid": 704,
+    "identifier": "goomy",
+    "name": "Goomy",
+    "generation": "vi",
+    "sprite": true
+  },
+  {
+    "id": 705,
+    "sid": 705,
+    "identifier": "sliggoo",
+    "name": "Sliggoo",
+    "generation": "vi",
+    "sprite": true
+  },
+  {
+    "id": 706,
+    "sid": 706,
+    "identifier": "goodra",
+    "name": "Goodra",
+    "generation": "vi",
+    "sprite": true
+  },
+  {
+    "id": 707,
+    "sid": 707,
+    "identifier": "klefki",
+    "name": "Klefki",
+    "generation": "vi",
+    "sprite": true
+  },
+  {
+    "id": 708,
+    "sid": 708,
+    "identifier": "phantump",
+    "name": "Phantump",
+    "generation": "vi",
+    "sprite": true
+  },
+  {
+    "id": 709,
+    "sid": 709,
+    "identifier": "trevenant",
+    "name": "Trevenant",
+    "generation": "vi",
+    "sprite": true
+  },
+  {
+    "id": 710,
+    "sid": 710,
+    "identifier": "pumpkaboo-average",
+    "name": "Pumpkaboo",
+    "generation": "vi",
+    "sprite": true
+  },
+  {
+    "id": 711,
+    "sid": 711,
+    "identifier": "gourgeist-average",
+    "name": "Gourgeist",
+    "generation": "vi",
+    "sprite": true
+  },
+  {
+    "id": 712,
+    "sid": 712,
+    "identifier": "bergmite",
+    "name": "Bergmite",
+    "generation": "vi",
+    "sprite": true
+  },
+  {
+    "id": 713,
+    "sid": 713,
+    "identifier": "avalugg",
+    "name": "Avalugg",
+    "generation": "vi",
+    "sprite": true
+  },
+  {
+    "id": 714,
+    "sid": 714,
+    "identifier": "noibat",
+    "name": "Noibat",
+    "generation": "vi",
+    "sprite": true
+  },
+  {
+    "id": 715,
+    "sid": 715,
+    "identifier": "noivern",
+    "name": "Noivern",
+    "generation": "vi",
+    "sprite": true
+  },
+  {
+    "id": 716,
+    "sid": 716,
+    "identifier": "xerneas",
+    "name": "Xerneas",
+    "generation": "vi",
+    "sprite": true
+  },
+  {
+    "id": 717,
+    "sid": 717,
+    "identifier": "yveltal",
+    "name": "Yveltal",
+    "generation": "vi",
+    "sprite": true
+  },
+  {
+    "id": 718,
+    "sid": 718,
+    "identifier": "zygarde-50",
+    "name": "Zygarde",
+    "generation": "vi",
+    "sprite": true
+  },
+  {
+    "id": 719,
+    "sid": 719,
+    "identifier": "diancie",
+    "name": "Diancie",
+    "generation": "vi",
+    "sprite": true
+  },
+  {
+    "id": 720,
+    "sid": 720,
+    "identifier": "hoopa",
+    "name": "Hoopa",
+    "generation": "vi",
+    "sprite": true
+  },
+  {
+    "id": 721,
+    "sid": 721,
+    "identifier": "volcanion",
+    "name": "Volcanion",
+    "generation": "vi",
+    "sprite": true
+  },
+  {
+    "id": 722,
+    "sid": 722,
+    "identifier": "rowlet",
+    "name": "Rowlet",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 723,
+    "sid": 723,
+    "identifier": "dartrix",
+    "name": "Dartrix",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 724,
+    "sid": 724,
+    "identifier": "decidueye",
+    "name": "Decidueye",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 725,
+    "sid": 725,
+    "identifier": "litten",
+    "name": "Litten",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 726,
+    "sid": 726,
+    "identifier": "torracat",
+    "name": "Torracat",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 727,
+    "sid": 727,
+    "identifier": "incineroar",
+    "name": "Incineroar",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 728,
+    "sid": 728,
+    "identifier": "popplio",
+    "name": "Popplio",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 729,
+    "sid": 729,
+    "identifier": "brionne",
+    "name": "Brionne",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 730,
+    "sid": 730,
+    "identifier": "primarina",
+    "name": "Primarina",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 731,
+    "sid": 731,
+    "identifier": "pikipek",
+    "name": "Pikipek",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 732,
+    "sid": 732,
+    "identifier": "trumbeak",
+    "name": "Trumbeak",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 733,
+    "sid": 733,
+    "identifier": "toucannon",
+    "name": "Toucannon",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 734,
+    "sid": 734,
+    "identifier": "yungoos",
+    "name": "Yungoos",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 735,
+    "sid": 735,
+    "identifier": "gumshoos",
+    "name": "Gumshoos",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 736,
+    "sid": 736,
+    "identifier": "grubbin",
+    "name": "Grubbin",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 737,
+    "sid": 737,
+    "identifier": "charjabug",
+    "name": "Charjabug",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 738,
+    "sid": 738,
+    "identifier": "vikavolt",
+    "name": "Vikavolt",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 739,
+    "sid": 739,
+    "identifier": "crabrawler",
+    "name": "Crabrawler",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 740,
+    "sid": 740,
+    "identifier": "crabominable",
+    "name": "Crabominable",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 741,
+    "sid": 741,
+    "identifier": "oricorio-baile",
+    "name": "Oricorio",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 742,
+    "sid": 742,
+    "identifier": "cutiefly",
+    "name": "Cutiefly",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 743,
+    "sid": 743,
+    "identifier": "ribombee",
+    "name": "Ribombee",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 744,
+    "sid": 744,
+    "identifier": "rockruff",
+    "name": "Rockruff",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 745,
+    "sid": 745,
+    "identifier": "lycanroc-midday",
+    "name": "Lycanroc",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 746,
+    "sid": 746,
+    "identifier": "wishiwashi-solo",
+    "name": "Wishiwashi",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 747,
+    "sid": 747,
+    "identifier": "mareanie",
+    "name": "Mareanie",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 748,
+    "sid": 748,
+    "identifier": "toxapex",
+    "name": "Toxapex",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 749,
+    "sid": 749,
+    "identifier": "mudbray",
+    "name": "Mudbray",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 750,
+    "sid": 750,
+    "identifier": "mudsdale",
+    "name": "Mudsdale",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 751,
+    "sid": 751,
+    "identifier": "dewpider",
+    "name": "Dewpider",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 752,
+    "sid": 752,
+    "identifier": "araquanid",
+    "name": "Araquanid",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 753,
+    "sid": 753,
+    "identifier": "fomantis",
+    "name": "Fomantis",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 754,
+    "sid": 754,
+    "identifier": "lurantis",
+    "name": "Lurantis",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 755,
+    "sid": 755,
+    "identifier": "morelull",
+    "name": "Morelull",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 756,
+    "sid": 756,
+    "identifier": "shiinotic",
+    "name": "Shiinotic",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 757,
+    "sid": 757,
+    "identifier": "salandit",
+    "name": "Salandit",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 758,
+    "sid": 758,
+    "identifier": "salazzle",
+    "name": "Salazzle",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 759,
+    "sid": 759,
+    "identifier": "stufful",
+    "name": "Stufful",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 760,
+    "sid": 760,
+    "identifier": "bewear",
+    "name": "Bewear",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 761,
+    "sid": 761,
+    "identifier": "bounsweet",
+    "name": "Bounsweet",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 762,
+    "sid": 762,
+    "identifier": "steenee",
+    "name": "Steenee",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 763,
+    "sid": 763,
+    "identifier": "tsareena",
+    "name": "Tsareena",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 764,
+    "sid": 764,
+    "identifier": "comfey",
+    "name": "Comfey",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 765,
+    "sid": 765,
+    "identifier": "oranguru",
+    "name": "Oranguru",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 766,
+    "sid": 766,
+    "identifier": "passimian",
+    "name": "Passimian",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 767,
+    "sid": 767,
+    "identifier": "wimpod",
+    "name": "Wimpod",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 768,
+    "sid": 768,
+    "identifier": "golisopod",
+    "name": "Golisopod",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 769,
+    "sid": 769,
+    "identifier": "sandygast",
+    "name": "Sandygast",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 770,
+    "sid": 770,
+    "identifier": "palossand",
+    "name": "Palossand",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 771,
+    "sid": 771,
+    "identifier": "pyukumuku",
+    "name": "Pyukumuku",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 772,
+    "sid": 772,
+    "identifier": "type-null",
+    "name": "Type: Null",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 773,
+    "sid": 773,
+    "identifier": "silvally",
+    "name": "Silvally",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 774,
+    "sid": 774,
+    "identifier": "minior-red-meteor",
+    "name": "Minior",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 775,
+    "sid": 775,
+    "identifier": "komala",
+    "name": "Komala",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 776,
+    "sid": 776,
+    "identifier": "turtonator",
+    "name": "Turtonator",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 777,
+    "sid": 777,
+    "identifier": "togedemaru",
+    "name": "Togedemaru",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 778,
+    "sid": 778,
+    "identifier": "mimikyu-disguised",
+    "name": "Mimikyu",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 779,
+    "sid": 779,
+    "identifier": "bruxish",
+    "name": "Bruxish",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 780,
+    "sid": 780,
+    "identifier": "drampa",
+    "name": "Drampa",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 781,
+    "sid": 781,
+    "identifier": "dhelmise",
+    "name": "Dhelmise",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 782,
+    "sid": 782,
+    "identifier": "jangmo-o",
+    "name": "Jangmo-o",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 783,
+    "sid": 783,
+    "identifier": "hakamo-o",
+    "name": "Hakamo-o",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 784,
+    "sid": 784,
+    "identifier": "kommo-o",
+    "name": "Kommo-o",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 785,
+    "sid": 785,
+    "identifier": "tapu-koko",
+    "name": "Tapu Koko",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 786,
+    "sid": 786,
+    "identifier": "tapu-lele",
+    "name": "Tapu Lele",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 787,
+    "sid": 787,
+    "identifier": "tapu-bulu",
+    "name": "Tapu Bulu",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 788,
+    "sid": 788,
+    "identifier": "tapu-fini",
+    "name": "Tapu Fini",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 789,
+    "sid": 789,
+    "identifier": "cosmog",
+    "name": "Cosmog",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 790,
+    "sid": 790,
+    "identifier": "cosmoem",
+    "name": "Cosmoem",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 791,
+    "sid": 791,
+    "identifier": "solgaleo",
+    "name": "Solgaleo",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 792,
+    "sid": 792,
+    "identifier": "lunala",
+    "name": "Lunala",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 793,
+    "sid": 793,
+    "identifier": "nihilego",
+    "name": "Nihilego",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 794,
+    "sid": 794,
+    "identifier": "buzzwole",
+    "name": "Buzzwole",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 795,
+    "sid": 795,
+    "identifier": "pheromosa",
+    "name": "Pheromosa",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 796,
+    "sid": 796,
+    "identifier": "xurkitree",
+    "name": "Xurkitree",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 797,
+    "sid": 797,
+    "identifier": "celesteela",
+    "name": "Celesteela",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 798,
+    "sid": 798,
+    "identifier": "kartana",
+    "name": "Kartana",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 799,
+    "sid": 799,
+    "identifier": "guzzlord",
+    "name": "Guzzlord",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 800,
+    "sid": 800,
+    "identifier": "necrozma",
+    "name": "Necrozma",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 801,
+    "sid": 801,
+    "identifier": "magearna",
+    "name": "Magearna",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 802,
+    "sid": 802,
+    "identifier": "marshadow",
+    "name": "Marshadow",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 803,
+    "sid": 803,
+    "identifier": "poipole",
+    "name": "Poipole",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 804,
+    "sid": 804,
+    "identifier": "naganadel",
+    "name": "Naganadel",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 805,
+    "sid": 805,
+    "identifier": "stakataka",
+    "name": "Stakataka",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 806,
+    "sid": 806,
+    "identifier": "blacephalon",
+    "name": "Blacephalon",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 807,
+    "sid": 807,
+    "identifier": "zeraora",
+    "name": "Zeraora",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 808,
+    "sid": 808,
+    "identifier": "meltan",
+    "name": "Meltan",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 809,
+    "sid": 809,
+    "identifier": "melmetal",
+    "name": "Melmetal",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 810,
+    "sid": 810,
+    "identifier": "grookey",
+    "name": "Grookey",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 811,
+    "sid": 811,
+    "identifier": "thwackey",
+    "name": "Thwackey",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 812,
+    "sid": 812,
+    "identifier": "rillaboom",
+    "name": "Rillaboom",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 813,
+    "sid": 813,
+    "identifier": "scorbunny",
+    "name": "Scorbunny",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 814,
+    "sid": 814,
+    "identifier": "raboot",
+    "name": "Raboot",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 815,
+    "sid": 815,
+    "identifier": "cinderace",
+    "name": "Cinderace",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 816,
+    "sid": 816,
+    "identifier": "sobble",
+    "name": "Sobble",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 817,
+    "sid": 817,
+    "identifier": "drizzile",
+    "name": "Drizzile",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 818,
+    "sid": 818,
+    "identifier": "inteleon",
+    "name": "Inteleon",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 819,
+    "sid": 819,
+    "identifier": "skwovet",
+    "name": "Skwovet",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 820,
+    "sid": 820,
+    "identifier": "greedent",
+    "name": "Greedent",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 821,
+    "sid": 821,
+    "identifier": "rookidee",
+    "name": "Rookidee",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 822,
+    "sid": 822,
+    "identifier": "corvisquire",
+    "name": "Corvisquire",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 823,
+    "sid": 823,
+    "identifier": "corviknight",
+    "name": "Corviknight",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 824,
+    "sid": 824,
+    "identifier": "blipbug",
+    "name": "Blipbug",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 825,
+    "sid": 825,
+    "identifier": "dottler",
+    "name": "Dottler",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 826,
+    "sid": 826,
+    "identifier": "orbeetle",
+    "name": "Orbeetle",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 827,
+    "sid": 827,
+    "identifier": "nickit",
+    "name": "Nickit",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 828,
+    "sid": 828,
+    "identifier": "thievul",
+    "name": "Thievul",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 829,
+    "sid": 829,
+    "identifier": "gossifleur",
+    "name": "Gossifleur",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 830,
+    "sid": 830,
+    "identifier": "eldegoss",
+    "name": "Eldegoss",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 831,
+    "sid": 831,
+    "identifier": "wooloo",
+    "name": "Wooloo",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 832,
+    "sid": 832,
+    "identifier": "dubwool",
+    "name": "Dubwool",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 833,
+    "sid": 833,
+    "identifier": "chewtle",
+    "name": "Chewtle",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 834,
+    "sid": 834,
+    "identifier": "drednaw",
+    "name": "Drednaw",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 835,
+    "sid": 835,
+    "identifier": "yamper",
+    "name": "Yamper",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 836,
+    "sid": 836,
+    "identifier": "boltund",
+    "name": "Boltund",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 837,
+    "sid": 837,
+    "identifier": "rolycoly",
+    "name": "Rolycoly",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 838,
+    "sid": 838,
+    "identifier": "carkol",
+    "name": "Carkol",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 839,
+    "sid": 839,
+    "identifier": "coalossal",
+    "name": "Coalossal",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 840,
+    "sid": 840,
+    "identifier": "applin",
+    "name": "Applin",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 841,
+    "sid": 841,
+    "identifier": "flapple",
+    "name": "Flapple",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 842,
+    "sid": 842,
+    "identifier": "appletun",
+    "name": "Appletun",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 843,
+    "sid": 843,
+    "identifier": "silicobra",
+    "name": "Silicobra",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 844,
+    "sid": 844,
+    "identifier": "sandaconda",
+    "name": "Sandaconda",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 845,
+    "sid": 845,
+    "identifier": "cramorant",
+    "name": "Cramorant",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 846,
+    "sid": 846,
+    "identifier": "arrokuda",
+    "name": "Arrokuda",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 847,
+    "sid": 847,
+    "identifier": "barraskewda",
+    "name": "Barraskewda",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 848,
+    "sid": 848,
+    "identifier": "toxel",
+    "name": "Toxel",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 849,
+    "sid": 849,
+    "identifier": "toxtricity-amped",
+    "name": "Toxtricity",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 850,
+    "sid": 850,
+    "identifier": "sizzlipede",
+    "name": "Sizzlipede",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 851,
+    "sid": 851,
+    "identifier": "centiskorch",
+    "name": "Centiskorch",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 852,
+    "sid": 852,
+    "identifier": "clobbopus",
+    "name": "Clobbopus",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 853,
+    "sid": 853,
+    "identifier": "grapploct",
+    "name": "Grapploct",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 854,
+    "sid": 854,
+    "identifier": "sinistea",
+    "name": "Sinistea",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 855,
+    "sid": 855,
+    "identifier": "polteageist",
+    "name": "Polteageist",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 856,
+    "sid": 856,
+    "identifier": "hatenna",
+    "name": "Hatenna",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 857,
+    "sid": 857,
+    "identifier": "hattrem",
+    "name": "Hattrem",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 858,
+    "sid": 858,
+    "identifier": "hatterene",
+    "name": "Hatterene",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 859,
+    "sid": 859,
+    "identifier": "impidimp",
+    "name": "Impidimp",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 860,
+    "sid": 860,
+    "identifier": "morgrem",
+    "name": "Morgrem",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 861,
+    "sid": 861,
+    "identifier": "grimmsnarl",
+    "name": "Grimmsnarl",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 862,
+    "sid": 862,
+    "identifier": "obstagoon",
+    "name": "Obstagoon",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 863,
+    "sid": 863,
+    "identifier": "perrserker",
+    "name": "Perrserker",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 864,
+    "sid": 864,
+    "identifier": "cursola",
+    "name": "Cursola",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 865,
+    "sid": 865,
+    "identifier": "sirfetchd",
+    "name": "Sirfetch\u2019d",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 866,
+    "sid": 866,
+    "identifier": "mr-rime",
+    "name": "Mr. Rime",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 867,
+    "sid": 867,
+    "identifier": "runerigus",
+    "name": "Runerigus",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 868,
+    "sid": 868,
+    "identifier": "milcery",
+    "name": "Milcery",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 869,
+    "sid": 869,
+    "identifier": "alcremie",
+    "name": "Alcremie",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 870,
+    "sid": 870,
+    "identifier": "falinks",
+    "name": "Falinks",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 871,
+    "sid": 871,
+    "identifier": "pincurchin",
+    "name": "Pincurchin",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 872,
+    "sid": 872,
+    "identifier": "snom",
+    "name": "Snom",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 873,
+    "sid": 873,
+    "identifier": "frosmoth",
+    "name": "Frosmoth",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 874,
+    "sid": 874,
+    "identifier": "stonjourner",
+    "name": "Stonjourner",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 875,
+    "sid": 875,
+    "identifier": "eiscue-ice",
+    "name": "Eiscue",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 876,
+    "sid": 876,
+    "identifier": "indeedee-male",
+    "name": "Indeedee",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 877,
+    "sid": 877,
+    "identifier": "morpeko-full-belly",
+    "name": "Morpeko",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 878,
+    "sid": 878,
+    "identifier": "cufant",
+    "name": "Cufant",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 879,
+    "sid": 879,
+    "identifier": "copperajah",
+    "name": "Copperajah",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 880,
+    "sid": 880,
+    "identifier": "dracozolt",
+    "name": "Dracozolt",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 881,
+    "sid": 881,
+    "identifier": "arctozolt",
+    "name": "Arctozolt",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 882,
+    "sid": 882,
+    "identifier": "dracovish",
+    "name": "Dracovish",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 883,
+    "sid": 883,
+    "identifier": "arctovish",
+    "name": "Arctovish",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 884,
+    "sid": 884,
+    "identifier": "duraludon",
+    "name": "Duraludon",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 885,
+    "sid": 885,
+    "identifier": "dreepy",
+    "name": "Dreepy",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 886,
+    "sid": 886,
+    "identifier": "drakloak",
+    "name": "Drakloak",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 887,
+    "sid": 887,
+    "identifier": "dragapult",
+    "name": "Dragapult",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 888,
+    "sid": 888,
+    "identifier": "zacian",
+    "name": "Zacian",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 889,
+    "sid": 889,
+    "identifier": "zamazenta",
+    "name": "Zamazenta",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 890,
+    "sid": 890,
+    "identifier": "eternatus",
+    "name": "Eternatus",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 891,
+    "sid": 891,
+    "identifier": "kubfu",
+    "name": "Kubfu",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 892,
+    "sid": 892,
+    "identifier": "urshifu-single-strike",
+    "name": "Urshifu",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 893,
+    "sid": 893,
+    "identifier": "zarude",
+    "name": "Zarude",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 894,
+    "sid": 894,
+    "identifier": "regieleki",
+    "name": "Regieleki",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 895,
+    "sid": 895,
+    "identifier": "regidrago",
+    "name": "Regidrago",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 896,
+    "sid": 896,
+    "identifier": "glastrier",
+    "name": "Glastrier",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 897,
+    "sid": 897,
+    "identifier": "spectrier",
+    "name": "Spectrier",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 898,
+    "sid": 898,
+    "identifier": "calyrex",
+    "name": "Calyrex",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 899,
+    "sid": 899,
+    "identifier": "wyrdeer",
+    "name": "Wyrdeer",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 900,
+    "sid": 900,
+    "identifier": "kleavor",
+    "name": "Kleavor",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 901,
+    "sid": 901,
+    "identifier": "ursaluna",
+    "name": "Ursaluna",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 902,
+    "sid": 902,
+    "identifier": "basculegion-male",
+    "name": "Basculegion",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 903,
+    "sid": 903,
+    "identifier": "sneasler",
+    "name": "Sneasler",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 904,
+    "sid": 904,
+    "identifier": "overqwil",
+    "name": "Overqwil",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 905,
+    "sid": 905,
+    "identifier": "enamorus-incarnate",
+    "name": "Enamorus",
+    "generation": "viii",
+    "sprite": true
+  },
+  {
+    "id": 906,
+    "sid": 906,
+    "identifier": "sprigatito",
+    "name": "Sprigatito",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 907,
+    "sid": 907,
+    "identifier": "floragato",
+    "name": "Floragato",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 908,
+    "sid": 908,
+    "identifier": "meowscarada",
+    "name": "Meowscarada",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 909,
+    "sid": 909,
+    "identifier": "fuecoco",
+    "name": "Fuecoco",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 910,
+    "sid": 910,
+    "identifier": "crocalor",
+    "name": "Crocalor",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 911,
+    "sid": 911,
+    "identifier": "skeledirge",
+    "name": "Skeledirge",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 912,
+    "sid": 912,
+    "identifier": "quaxly",
+    "name": "Quaxly",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 913,
+    "sid": 913,
+    "identifier": "quaxwell",
+    "name": "Quaxwell",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 914,
+    "sid": 914,
+    "identifier": "quaquaval",
+    "name": "Quaquaval",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 915,
+    "sid": 915,
+    "identifier": "lechonk",
+    "name": "Lechonk",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 916,
+    "sid": 916,
+    "identifier": "oinkologne-male",
+    "name": "Oinkologne",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 917,
+    "sid": 917,
+    "identifier": "tarountula",
+    "name": "Tarountula",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 918,
+    "sid": 918,
+    "identifier": "spidops",
+    "name": "Spidops",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 919,
+    "sid": 919,
+    "identifier": "nymble",
+    "name": "Nymble",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 920,
+    "sid": 920,
+    "identifier": "lokix",
+    "name": "Lokix",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 921,
+    "sid": 921,
+    "identifier": "pawmi",
+    "name": "Pawmi",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 922,
+    "sid": 922,
+    "identifier": "pawmo",
+    "name": "Pawmo",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 923,
+    "sid": 923,
+    "identifier": "pawmot",
+    "name": "Pawmot",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 924,
+    "sid": 924,
+    "identifier": "tandemaus",
+    "name": "Tandemaus",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 925,
+    "sid": 925,
+    "identifier": "maushold-family-of-four",
+    "name": "Maushold",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 926,
+    "sid": 926,
+    "identifier": "fidough",
+    "name": "Fidough",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 927,
+    "sid": 927,
+    "identifier": "dachsbun",
+    "name": "Dachsbun",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 928,
+    "sid": 928,
+    "identifier": "smoliv",
+    "name": "Smoliv",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 929,
+    "sid": 929,
+    "identifier": "dolliv",
+    "name": "Dolliv",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 930,
+    "sid": 930,
+    "identifier": "arboliva",
+    "name": "Arboliva",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 931,
+    "sid": 931,
+    "identifier": "squawkabilly-green-plumage",
+    "name": "Squawkabilly",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 932,
+    "sid": 932,
+    "identifier": "nacli",
+    "name": "Nacli",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 933,
+    "sid": 933,
+    "identifier": "naclstack",
+    "name": "Naclstack",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 934,
+    "sid": 934,
+    "identifier": "garganacl",
+    "name": "Garganacl",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 935,
+    "sid": 935,
+    "identifier": "charcadet",
+    "name": "Charcadet",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 936,
+    "sid": 936,
+    "identifier": "armarouge",
+    "name": "Armarouge",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 937,
+    "sid": 937,
+    "identifier": "ceruledge",
+    "name": "Ceruledge",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 938,
+    "sid": 938,
+    "identifier": "tadbulb",
+    "name": "Tadbulb",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 939,
+    "sid": 939,
+    "identifier": "bellibolt",
+    "name": "Bellibolt",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 940,
+    "sid": 940,
+    "identifier": "wattrel",
+    "name": "Wattrel",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 941,
+    "sid": 941,
+    "identifier": "kilowattrel",
+    "name": "Kilowattrel",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 942,
+    "sid": 942,
+    "identifier": "maschiff",
+    "name": "Maschiff",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 943,
+    "sid": 943,
+    "identifier": "mabosstiff",
+    "name": "Mabosstiff",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 944,
+    "sid": 944,
+    "identifier": "shroodle",
+    "name": "Shroodle",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 945,
+    "sid": 945,
+    "identifier": "grafaiai",
+    "name": "Grafaiai",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 946,
+    "sid": 946,
+    "identifier": "bramblin",
+    "name": "Bramblin",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 947,
+    "sid": 947,
+    "identifier": "brambleghast",
+    "name": "Brambleghast",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 948,
+    "sid": 948,
+    "identifier": "toedscool",
+    "name": "Toedscool",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 949,
+    "sid": 949,
+    "identifier": "toedscruel",
+    "name": "Toedscruel",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 950,
+    "sid": 950,
+    "identifier": "klawf",
+    "name": "Klawf",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 951,
+    "sid": 951,
+    "identifier": "capsakid",
+    "name": "Capsakid",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 952,
+    "sid": 952,
+    "identifier": "scovillain",
+    "name": "Scovillain",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 953,
+    "sid": 953,
+    "identifier": "rellor",
+    "name": "Rellor",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 954,
+    "sid": 954,
+    "identifier": "rabsca",
+    "name": "Rabsca",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 955,
+    "sid": 955,
+    "identifier": "flittle",
+    "name": "Flittle",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 956,
+    "sid": 956,
+    "identifier": "espathra",
+    "name": "Espathra",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 957,
+    "sid": 957,
+    "identifier": "tinkatink",
+    "name": "Tinkatink",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 958,
+    "sid": 958,
+    "identifier": "tinkatuff",
+    "name": "Tinkatuff",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 959,
+    "sid": 959,
+    "identifier": "tinkaton",
+    "name": "Tinkaton",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 960,
+    "sid": 960,
+    "identifier": "wiglett",
+    "name": "Wiglett",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 961,
+    "sid": 961,
+    "identifier": "wugtrio",
+    "name": "Wugtrio",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 962,
+    "sid": 962,
+    "identifier": "bombirdier",
+    "name": "Bombirdier",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 963,
+    "sid": 963,
+    "identifier": "finizen",
+    "name": "Finizen",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 964,
+    "sid": 964,
+    "identifier": "palafin-zero",
+    "name": "Palafin",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 965,
+    "sid": 965,
+    "identifier": "varoom",
+    "name": "Varoom",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 966,
+    "sid": 966,
+    "identifier": "revavroom",
+    "name": "Revavroom",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 967,
+    "sid": 967,
+    "identifier": "cyclizar",
+    "name": "Cyclizar",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 968,
+    "sid": 968,
+    "identifier": "orthworm",
+    "name": "Orthworm",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 969,
+    "sid": 969,
+    "identifier": "glimmet",
+    "name": "Glimmet",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 970,
+    "sid": 970,
+    "identifier": "glimmora",
+    "name": "Glimmora",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 971,
+    "sid": 971,
+    "identifier": "greavard",
+    "name": "Greavard",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 972,
+    "sid": 972,
+    "identifier": "houndstone",
+    "name": "Houndstone",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 973,
+    "sid": 973,
+    "identifier": "flamigo",
+    "name": "Flamigo",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 974,
+    "sid": 974,
+    "identifier": "cetoddle",
+    "name": "Cetoddle",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 975,
+    "sid": 975,
+    "identifier": "cetitan",
+    "name": "Cetitan",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 976,
+    "sid": 976,
+    "identifier": "veluza",
+    "name": "Veluza",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 977,
+    "sid": 977,
+    "identifier": "dondozo",
+    "name": "Dondozo",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 978,
+    "sid": 978,
+    "identifier": "tatsugiri-curly",
+    "name": "Tatsugiri",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 979,
+    "sid": 979,
+    "identifier": "annihilape",
+    "name": "Annihilape",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 980,
+    "sid": 980,
+    "identifier": "clodsire",
+    "name": "Clodsire",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 981,
+    "sid": 981,
+    "identifier": "farigiraf",
+    "name": "Farigiraf",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 982,
+    "sid": 982,
+    "identifier": "dudunsparce-two-segment",
+    "name": "Dudunsparce",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 983,
+    "sid": 983,
+    "identifier": "kingambit",
+    "name": "Kingambit",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 984,
+    "sid": 984,
+    "identifier": "great-tusk",
+    "name": "Great Tusk",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 985,
+    "sid": 985,
+    "identifier": "scream-tail",
+    "name": "Scream Tail",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 986,
+    "sid": 986,
+    "identifier": "brute-bonnet",
+    "name": "Brute Bonnet",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 987,
+    "sid": 987,
+    "identifier": "flutter-mane",
+    "name": "Flutter Mane",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 988,
+    "sid": 988,
+    "identifier": "slither-wing",
+    "name": "Slither Wing",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 989,
+    "sid": 989,
+    "identifier": "sandy-shocks",
+    "name": "Sandy Shocks",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 990,
+    "sid": 990,
+    "identifier": "iron-treads",
+    "name": "Iron Treads",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 991,
+    "sid": 991,
+    "identifier": "iron-bundle",
+    "name": "Iron Bundle",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 992,
+    "sid": 992,
+    "identifier": "iron-hands",
+    "name": "Iron Hands",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 993,
+    "sid": 993,
+    "identifier": "iron-jugulis",
+    "name": "Iron Jugulis",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 994,
+    "sid": 994,
+    "identifier": "iron-moth",
+    "name": "Iron Moth",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 995,
+    "sid": 995,
+    "identifier": "iron-thorns",
+    "name": "Iron Thorns",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 996,
+    "sid": 996,
+    "identifier": "frigibax",
+    "name": "Frigibax",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 997,
+    "sid": 997,
+    "identifier": "arctibax",
+    "name": "Arctibax",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 998,
+    "sid": 998,
+    "identifier": "baxcalibur",
+    "name": "Baxcalibur",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 999,
+    "sid": 999,
+    "identifier": "gimmighoul",
+    "name": "Gimmighoul",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 1000,
+    "sid": 1000,
+    "identifier": "gholdengo",
+    "name": "Gholdengo",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 1001,
+    "sid": 1001,
+    "identifier": "wo-chien",
+    "name": "Wo-Chien",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 1002,
+    "sid": 1002,
+    "identifier": "chien-pao",
+    "name": "Chien-Pao",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 1003,
+    "sid": 1003,
+    "identifier": "ting-lu",
+    "name": "Ting-Lu",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 1004,
+    "sid": 1004,
+    "identifier": "chi-yu",
+    "name": "Chi-Yu",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 1005,
+    "sid": 1005,
+    "identifier": "roaring-moon",
+    "name": "Roaring Moon",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 1006,
+    "sid": 1006,
+    "identifier": "iron-valiant",
+    "name": "Iron Valiant",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 1007,
+    "sid": 1007,
+    "identifier": "koraidon",
+    "name": "Koraidon",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 1008,
+    "sid": 1008,
+    "identifier": "miraidon",
+    "name": "Miraidon",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 1009,
+    "sid": 1009,
+    "identifier": "walking-wake",
+    "name": "Walking Wake",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 1010,
+    "sid": 1010,
+    "identifier": "iron-leaves",
+    "name": "Iron Leaves",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 1011,
+    "sid": 1011,
+    "identifier": "dipplin",
+    "name": "Dipplin",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 1012,
+    "sid": 1012,
+    "identifier": "poltchageist",
+    "name": "Poltchageist",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 1013,
+    "sid": 1013,
+    "identifier": "sinistcha",
+    "name": "Sinistcha",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 1014,
+    "sid": 1014,
+    "identifier": "okidogi",
+    "name": "Okidogi",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 1015,
+    "sid": 1015,
+    "identifier": "munkidori",
+    "name": "Munkidori",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 1016,
+    "sid": 1016,
+    "identifier": "fezandipiti",
+    "name": "Fezandipiti",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 1017,
+    "sid": 1017,
+    "identifier": "ogerpon",
+    "name": "Ogerpon",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 1018,
+    "sid": 1018,
+    "identifier": "archaludon",
+    "name": "Archaludon",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 1019,
+    "sid": 1019,
+    "identifier": "hydrapple",
+    "name": "Hydrapple",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 1020,
+    "sid": 1020,
+    "identifier": "gouging-fire",
+    "name": "Gouging Fire",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 1021,
+    "sid": 1021,
+    "identifier": "raging-bolt",
+    "name": "Raging Bolt",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 1022,
+    "sid": 1022,
+    "identifier": "iron-boulder",
+    "name": "Iron Boulder",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 1023,
+    "sid": 1023,
+    "identifier": "iron-crown",
+    "name": "Iron Crown",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 1024,
+    "sid": 1024,
+    "identifier": "terapagos",
+    "name": "Terapagos",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 1025,
+    "sid": 1025,
+    "identifier": "pecharunt",
+    "name": "Pecharunt",
+    "generation": "ix",
+    "sprite": true
+  },
+  {
+    "id": 10033,
+    "sid": 3,
+    "identifier": "venusaur-mega",
+    "name": "Mega Venusaur",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 10036,
+    "sid": 9,
+    "identifier": "blastoise-mega",
+    "name": "Mega Blastoise",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 10037,
+    "sid": 65,
+    "identifier": "alakazam-mega",
+    "name": "Mega Alakazam",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 10038,
+    "sid": 94,
+    "identifier": "gengar-mega",
+    "name": "Mega Gengar",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 10039,
+    "sid": 115,
+    "identifier": "kangaskhan-mega",
+    "name": "Mega Kangaskhan",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 10040,
+    "sid": 127,
+    "identifier": "pinsir-mega",
+    "name": "Mega Pinsir",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 10041,
+    "sid": 130,
+    "identifier": "gyarados-mega",
+    "name": "Mega Gyarados",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 10042,
+    "sid": 142,
+    "identifier": "aerodactyl-mega",
+    "name": "Mega Aerodactyl",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 10045,
+    "sid": 181,
+    "identifier": "ampharos-mega",
+    "name": "Mega Ampharos",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 10046,
+    "sid": 212,
+    "identifier": "scizor-mega",
+    "name": "Mega Scizor",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 10047,
+    "sid": 214,
+    "identifier": "heracross-mega",
+    "name": "Mega Heracross",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 10048,
+    "sid": 229,
+    "identifier": "houndoom-mega",
+    "name": "Mega Houndoom",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 10049,
+    "sid": 248,
+    "identifier": "tyranitar-mega",
+    "name": "Mega Tyranitar",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 10050,
+    "sid": 257,
+    "identifier": "blaziken-mega",
+    "name": "Mega Blaziken",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 10051,
+    "sid": 282,
+    "identifier": "gardevoir-mega",
+    "name": "Mega Gardevoir",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 10052,
+    "sid": 303,
+    "identifier": "mawile-mega",
+    "name": "Mega Mawile",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 10053,
+    "sid": 306,
+    "identifier": "aggron-mega",
+    "name": "Mega Aggron",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 10054,
+    "sid": 308,
+    "identifier": "medicham-mega",
+    "name": "Mega Medicham",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 10055,
+    "sid": 310,
+    "identifier": "manectric-mega",
+    "name": "Mega Manectric",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 10056,
+    "sid": 354,
+    "identifier": "banette-mega",
+    "name": "Mega Banette",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 10057,
+    "sid": 359,
+    "identifier": "absol-mega",
+    "name": "Mega Absol",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 10058,
+    "sid": 445,
+    "identifier": "garchomp-mega",
+    "name": "Mega Garchomp",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 10059,
+    "sid": 448,
+    "identifier": "lucario-mega",
+    "name": "Mega Lucario",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 10060,
+    "sid": 460,
+    "identifier": "abomasnow-mega",
+    "name": "Mega Abomasnow",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 10062,
+    "sid": 380,
+    "identifier": "latias-mega",
+    "name": "Mega Latias",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 10063,
+    "sid": 381,
+    "identifier": "latios-mega",
+    "name": "Mega Latios",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 10064,
+    "sid": 260,
+    "identifier": "swampert-mega",
+    "name": "Mega Swampert",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 10065,
+    "sid": 254,
+    "identifier": "sceptile-mega",
+    "name": "Mega Sceptile",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 10066,
+    "sid": 302,
+    "identifier": "sableye-mega",
+    "name": "Mega Sableye",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 10067,
+    "sid": 334,
+    "identifier": "altaria-mega",
+    "name": "Mega Altaria",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 10068,
+    "sid": 475,
+    "identifier": "gallade-mega",
+    "name": "Mega Gallade",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 10069,
+    "sid": 531,
+    "identifier": "audino-mega",
+    "name": "Mega Audino",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 10070,
+    "sid": 319,
+    "identifier": "sharpedo-mega",
+    "name": "Mega Sharpedo",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 10071,
+    "sid": 80,
+    "identifier": "slowbro-mega",
+    "name": "Mega Slowbro",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 10072,
+    "sid": 208,
+    "identifier": "steelix-mega",
+    "name": "Mega Steelix",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 10073,
+    "sid": 18,
+    "identifier": "pidgeot-mega",
+    "name": "Mega Pidgeot",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 10074,
+    "sid": 362,
+    "identifier": "glalie-mega",
+    "name": "Mega Glalie",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 10075,
+    "sid": 719,
+    "identifier": "diancie-mega",
+    "name": "Mega Diancie",
+    "generation": "vi",
+    "sprite": true
+  },
+  {
+    "id": 10076,
+    "sid": 376,
+    "identifier": "metagross-mega",
+    "name": "Mega Metagross",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 10079,
+    "sid": 384,
+    "identifier": "rayquaza-mega",
+    "name": "Mega Rayquaza",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 10087,
+    "sid": 323,
+    "identifier": "camerupt-mega",
+    "name": "Mega Camerupt",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 10088,
+    "sid": 428,
+    "identifier": "lopunny-mega",
+    "name": "Mega Lopunny",
+    "generation": "iv",
+    "sprite": true
+  },
+  {
+    "id": 10089,
+    "sid": 373,
+    "identifier": "salamence-mega",
+    "name": "Mega Salamence",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 10090,
+    "sid": 15,
+    "identifier": "beedrill-mega",
+    "name": "Mega Beedrill",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 10091,
+    "sid": 19,
+    "identifier": "rattata-alola",
+    "name": "Alola Rattata",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 10092,
+    "sid": 20,
+    "identifier": "raticate-alola",
+    "name": "Alola Raticate",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 10093,
+    "sid": 20,
+    "identifier": "raticate-totem-alola",
+    "name": "Alola Raticate",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 10100,
+    "sid": 26,
+    "identifier": "raichu-alola",
+    "name": "Alola Raichu",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 10101,
+    "sid": 27,
+    "identifier": "sandshrew-alola",
+    "name": "Alola Sandshrew",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 10102,
+    "sid": 28,
+    "identifier": "sandslash-alola",
+    "name": "Alola Sandslash",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 10103,
+    "sid": 37,
+    "identifier": "vulpix-alola",
+    "name": "Alola Vulpix",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 10104,
+    "sid": 38,
+    "identifier": "ninetales-alola",
+    "name": "Alola Ninetales",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 10105,
+    "sid": 50,
+    "identifier": "diglett-alola",
+    "name": "Alola Diglett",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 10106,
+    "sid": 51,
+    "identifier": "dugtrio-alola",
+    "name": "Alola Dugtrio",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 10107,
+    "sid": 52,
+    "identifier": "meowth-alola",
+    "name": "Alola Meowth",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 10108,
+    "sid": 53,
+    "identifier": "persian-alola",
+    "name": "Alola Persian",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 10109,
+    "sid": 74,
+    "identifier": "geodude-alola",
+    "name": "Alola Geodude",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 10110,
+    "sid": 75,
+    "identifier": "graveler-alola",
+    "name": "Alola Graveler",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 10111,
+    "sid": 76,
+    "identifier": "golem-alola",
+    "name": "Alola Golem",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 10112,
+    "sid": 88,
+    "identifier": "grimer-alola",
+    "name": "Alola Grimer",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 10113,
+    "sid": 89,
+    "identifier": "muk-alola",
+    "name": "Alola Muk",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 10114,
+    "sid": 103,
+    "identifier": "exeggutor-alola",
+    "name": "Alola Exeggutor",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 10115,
+    "sid": 105,
+    "identifier": "marowak-alola",
+    "name": "Alola Marowak",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 10161,
+    "sid": 52,
+    "identifier": "meowth-galar",
+    "name": "Galar Meowth",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 10162,
+    "sid": 77,
+    "identifier": "ponyta-galar",
+    "name": "Galar Ponyta",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 10163,
+    "sid": 78,
+    "identifier": "rapidash-galar",
+    "name": "Galar Rapidash",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 10164,
+    "sid": 79,
+    "identifier": "slowpoke-galar",
+    "name": "Galar Slowpoke",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 10165,
+    "sid": 80,
+    "identifier": "slowbro-galar",
+    "name": "Galar Slowbro",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 10166,
+    "sid": 83,
+    "identifier": "farfetchd-galar",
+    "name": "Galar Farfetch\u2019d",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 10167,
+    "sid": 110,
+    "identifier": "weezing-galar",
+    "name": "Galar Weezing",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 10168,
+    "sid": 122,
+    "identifier": "mr-mime-galar",
+    "name": "Galar Mr. Mime",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 10169,
+    "sid": 144,
+    "identifier": "articuno-galar",
+    "name": "Galar Articuno",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 10170,
+    "sid": 145,
+    "identifier": "zapdos-galar",
+    "name": "Galar Zapdos",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 10171,
+    "sid": 146,
+    "identifier": "moltres-galar",
+    "name": "Galar Moltres",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 10172,
+    "sid": 199,
+    "identifier": "slowking-galar",
+    "name": "Galar Slowking",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 10173,
+    "sid": 222,
+    "identifier": "corsola-galar",
+    "name": "Galar Corsola",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 10174,
+    "sid": 263,
+    "identifier": "zigzagoon-galar",
+    "name": "Galar Zigzagoon",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 10175,
+    "sid": 264,
+    "identifier": "linoone-galar",
+    "name": "Galar Linoone",
+    "generation": "iii",
+    "sprite": true
+  },
+  {
+    "id": 10176,
+    "sid": 554,
+    "identifier": "darumaka-galar",
+    "name": "Galar Darumaka",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 10179,
+    "sid": 562,
+    "identifier": "yamask-galar",
+    "name": "Galar Yamask",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 10180,
+    "sid": 618,
+    "identifier": "stunfisk-galar",
+    "name": "Galar Stunfisk",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 10229,
+    "sid": 58,
+    "identifier": "growlithe-hisui",
+    "name": "Hisui Growlithe",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 10230,
+    "sid": 59,
+    "identifier": "arcanine-hisui",
+    "name": "Hisui Arcanine",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 10231,
+    "sid": 100,
+    "identifier": "voltorb-hisui",
+    "name": "Hisui Voltorb",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 10232,
+    "sid": 101,
+    "identifier": "electrode-hisui",
+    "name": "Hisui Electrode",
+    "generation": "i",
+    "sprite": true
+  },
+  {
+    "id": 10233,
+    "sid": 157,
+    "identifier": "typhlosion-hisui",
+    "name": "Hisui Typhlosion",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 10234,
+    "sid": 211,
+    "identifier": "qwilfish-hisui",
+    "name": "Hisui Qwilfish",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 10235,
+    "sid": 215,
+    "identifier": "sneasel-hisui",
+    "name": "Hisui Sneasel",
+    "generation": "ii",
+    "sprite": true
+  },
+  {
+    "id": 10236,
+    "sid": 503,
+    "identifier": "samurott-hisui",
+    "name": "Hisui Samurott",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 10237,
+    "sid": 549,
+    "identifier": "lilligant-hisui",
+    "name": "Hisui Lilligant",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 10238,
+    "sid": 570,
+    "identifier": "zorua-hisui",
+    "name": "Hisui Zorua",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 10239,
+    "sid": 571,
+    "identifier": "zoroark-hisui",
+    "name": "Hisui Zoroark",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 10240,
+    "sid": 628,
+    "identifier": "braviary-hisui",
+    "name": "Hisui Braviary",
+    "generation": "v",
+    "sprite": true
+  },
+  {
+    "id": 10241,
+    "sid": 705,
+    "identifier": "sliggoo-hisui",
+    "name": "Hisui Sliggoo",
+    "generation": "vi",
+    "sprite": true
+  },
+  {
+    "id": 10242,
+    "sid": 706,
+    "identifier": "goodra-hisui",
+    "name": "Hisui Goodra",
+    "generation": "vi",
+    "sprite": true
+  },
+  {
+    "id": 10243,
+    "sid": 713,
+    "identifier": "avalugg-hisui",
+    "name": "Hisui Avalugg",
+    "generation": "vi",
+    "sprite": true
+  },
+  {
+    "id": 10244,
+    "sid": 724,
+    "identifier": "decidueye-hisui",
+    "name": "Hisui Decidueye",
+    "generation": "vii",
+    "sprite": true
+  },
+  {
+    "id": 10278,
+    "sid": 36,
+    "identifier": "clefable-mega",
+    "name": "Mega Clefable",
+    "generation": "i",
+    "sprite": false
+  },
+  {
+    "id": 10279,
+    "sid": 71,
+    "identifier": "victreebel-mega",
+    "name": "Mega Victreebel",
+    "generation": "i",
+    "sprite": false
+  },
+  {
+    "id": 10280,
+    "sid": 121,
+    "identifier": "starmie-mega",
+    "name": "Mega Starmie",
+    "generation": "i",
+    "sprite": false
+  },
+  {
+    "id": 10281,
+    "sid": 149,
+    "identifier": "dragonite-mega",
+    "name": "Mega Dragonite",
+    "generation": "i",
+    "sprite": false
+  },
+  {
+    "id": 10282,
+    "sid": 154,
+    "identifier": "meganium-mega",
+    "name": "Mega Meganium",
+    "generation": "ii",
+    "sprite": false
+  },
+  {
+    "id": 10283,
+    "sid": 160,
+    "identifier": "feraligatr-mega",
+    "name": "Mega Feraligatr",
+    "generation": "ii",
+    "sprite": false
+  },
+  {
+    "id": 10284,
+    "sid": 227,
+    "identifier": "skarmory-mega",
+    "name": "Mega Skarmory",
+    "generation": "ii",
+    "sprite": false
+  },
+  {
+    "id": 10285,
+    "sid": 478,
+    "identifier": "froslass-mega",
+    "name": "Mega Froslass",
+    "generation": "iv",
+    "sprite": false
+  },
+  {
+    "id": 10286,
+    "sid": 500,
+    "identifier": "emboar-mega",
+    "name": "Mega Emboar",
+    "generation": "v",
+    "sprite": false
+  },
+  {
+    "id": 10287,
+    "sid": 530,
+    "identifier": "excadrill-mega",
+    "name": "Mega Excadrill",
+    "generation": "v",
+    "sprite": false
+  },
+  {
+    "id": 10288,
+    "sid": 545,
+    "identifier": "scolipede-mega",
+    "name": "Mega Scolipede",
+    "generation": "v",
+    "sprite": false
+  },
+  {
+    "id": 10289,
+    "sid": 560,
+    "identifier": "scrafty-mega",
+    "name": "Mega Scrafty",
+    "generation": "v",
+    "sprite": false
+  },
+  {
+    "id": 10290,
+    "sid": 604,
+    "identifier": "eelektross-mega",
+    "name": "Mega Eelektross",
+    "generation": "v",
+    "sprite": false
+  },
+  {
+    "id": 10291,
+    "sid": 609,
+    "identifier": "chandelure-mega",
+    "name": "Mega Chandelure",
+    "generation": "v",
+    "sprite": false
+  },
+  {
+    "id": 10292,
+    "sid": 652,
+    "identifier": "chesnaught-mega",
+    "name": "Mega Chesnaught",
+    "generation": "vi",
+    "sprite": false
+  },
+  {
+    "id": 10293,
+    "sid": 655,
+    "identifier": "delphox-mega",
+    "name": "Mega Delphox",
+    "generation": "vi",
+    "sprite": false
+  },
+  {
+    "id": 10294,
+    "sid": 658,
+    "identifier": "greninja-mega",
+    "name": "Mega Greninja",
+    "generation": "vi",
+    "sprite": false
+  },
+  {
+    "id": 10295,
+    "sid": 668,
+    "identifier": "pyroar-mega",
+    "name": "Mega Pyroar",
+    "generation": "vi",
+    "sprite": false
+  },
+  {
+    "id": 10296,
+    "sid": 670,
+    "identifier": "floette-mega",
+    "name": "Mega Floette",
+    "generation": "vi",
+    "sprite": false
+  },
+  {
+    "id": 10297,
+    "sid": 687,
+    "identifier": "malamar-mega",
+    "name": "Mega Malamar",
+    "generation": "vi",
+    "sprite": false
+  },
+  {
+    "id": 10298,
+    "sid": 689,
+    "identifier": "barbaracle-mega",
+    "name": "Mega Barbaracle",
+    "generation": "vi",
+    "sprite": false
+  },
+  {
+    "id": 10299,
+    "sid": 691,
+    "identifier": "dragalge-mega",
+    "name": "Mega Dragalge",
+    "generation": "vi",
+    "sprite": false
+  },
+  {
+    "id": 10300,
+    "sid": 701,
+    "identifier": "hawlucha-mega",
+    "name": "Mega Hawlucha",
+    "generation": "vi",
+    "sprite": false
+  },
+  {
+    "id": 10301,
+    "sid": 718,
+    "identifier": "zygarde-mega",
+    "name": "Mega Zygarde",
+    "generation": "vi",
+    "sprite": false
+  },
+  {
+    "id": 10302,
+    "sid": 780,
+    "identifier": "drampa-mega",
+    "name": "Mega Drampa",
+    "generation": "vii",
+    "sprite": false
+  },
+  {
+    "id": 10303,
+    "sid": 870,
+    "identifier": "falinks-mega",
+    "name": "Mega Falinks",
+    "generation": "viii",
+    "sprite": false
+  }
+]

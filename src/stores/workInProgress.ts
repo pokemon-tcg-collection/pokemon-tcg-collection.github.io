@@ -4,7 +4,7 @@ import { ref, shallowRef, toRaw } from 'vue'
 import usePokemonTCGCollectionIDB from '@/composables/usePokemonTCGCollectionIDB'
 import type { Card, Item, Place, Transaction } from '@/model/interfaces'
 import type { EditRouteNames } from '@/router/routes'
-import { toRawDeep } from './utils'
+import { toRawDeep } from '@/utils/reactivity'
 
 export type WIPObjectType = 'card-edit' | 'transaction-edit' | 'item-edit' | 'place-edit'
 export type WIPObjectData = Transaction | Card | Place | Item

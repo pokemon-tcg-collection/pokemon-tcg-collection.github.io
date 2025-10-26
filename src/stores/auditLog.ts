@@ -4,7 +4,7 @@ import { readonly, ref, toRaw } from 'vue'
 import { useRoute } from 'vue-router'
 
 import usePokemonTCGCollectionIDB from '@/composables/usePokemonTCGCollectionIDB'
-import { toRawDeep } from './utils'
+import { toRawDeep } from '@/utils/reactivity'
 
 export interface AuditMessage {
   id: string

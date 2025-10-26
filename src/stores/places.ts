@@ -3,7 +3,8 @@ import { readonly, ref, shallowRef, toRaw, triggerRef } from 'vue'
 
 import usePokemonTCGCollectionIDB from '@/composables/usePokemonTCGCollectionIDB'
 import type { Place } from '@/model/interfaces'
-import { toRawDeep } from './utils'
+import { sanitizePlace } from '@/model/utils'
+import { toRawDeep } from '@/utils/reactivity'
 
 export const usePlacesStore = defineStore('places', () => {
   const { put: idbPut, getAll: idbGetAll, delete: idbDelete } = usePokemonTCGCollectionIDB('places')
@@ -28,6 +29,10 @@ export const usePlacesStore = defineStore('places', () => {
     }
 
     const copy = structuredClone(toRawDeep(place))
+
+    // NOTE: sanitize fields that should not exist based on type
+    sanitizePlace(copy)
+
     places.value.set(place.id, copy)
     await idbPut(copy)
 

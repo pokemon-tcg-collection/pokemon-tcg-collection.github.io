@@ -6,6 +6,8 @@ import type {
   Item,
   Place,
   PlaceLocal,
+  PlaceLocalFair,
+  PlaceOnlineMarketplace,
   RelatedURL,
   Transaction,
 } from './interfaces'
@@ -54,7 +56,7 @@ export function createNewPlace(): Place {
   return {
     id: uuidv4(),
     name: '',
-    type: 'online',
+    type: 'online-shop',
     url: '',
     _meta: createEditMeta(),
   } satisfies Place
@@ -289,11 +291,22 @@ export function isPlaceChanged(base: Place | undefined, other: Place | undefined
   if (!areValuesSame(base.url, other.url)) return true
   if (!areValuesSame(base.notes, other.notes)) return true
 
-  if (
-    base.type === 'local' &&
-    !areValuesSame((base as PlaceLocal).address, (other as PlaceLocal).address)
-  )
-    return true
+  if (base.type === 'local-fair') {
+    if (!areValuesSame((base as PlaceLocal).address, (other as PlaceLocal).address)) return true
+    if (!areValuesSame((base as PlaceLocalFair).fair, (other as PlaceLocalFair).fair)) return true
+  } else if (base.type === 'local-store') {
+    if (!areValuesSame((base as PlaceLocal).address, (other as PlaceLocal).address)) return true
+  } else if (base.type === 'online-marketplace') {
+    if (
+      !areValuesSame(
+        (base as PlaceOnlineMarketplace).marketplace,
+        (other as PlaceOnlineMarketplace).marketplace,
+      )
+    )
+      return true
+  } else if (base.type === 'online-shop') {
+    // nothing yet
+  }
 
   return false
 }
@@ -328,4 +341,32 @@ export function isItemChanged(base: Item | undefined, other: Item | undefined) {
     return true
 
   return false
+}
+
+// -------------------------------------------------------------------------
+
+export function sanitizePlace<T extends Place>(place: T): T {
+  if (
+    Object.hasOwn(place, 'marketplace') &&
+    (place.type === 'local-fair' || place.type === 'local-store' || place.type === 'online-shop')
+  ) {
+    delete (place as unknown as { marketplace: unknown })['marketplace']
+  }
+  if (
+    Object.hasOwn(place, 'fair') &&
+    (place.type === 'local-store' ||
+      place.type === 'online-shop' ||
+      place.type === 'online-marketplace')
+  ) {
+    delete (place as unknown as { fair: unknown })['fair']
+  }
+
+  if (
+    Object.hasOwn(place, 'address') &&
+    (place.type === 'online-shop' || place.type === 'online-marketplace')
+  ) {
+    delete (place as unknown as { address: unknown })['address']
+  }
+
+  return place
 }

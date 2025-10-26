@@ -6,6 +6,7 @@ import EditorBase from '@/components/EditorBase.vue'
 import EditorFieldset from '@/components/EditorFieldset.vue'
 import useEditorObject from '@/composables/useEditorObject'
 import type { EditRouteNames } from '@/router/routes'
+import { ONLINE_MARKETPLACE } from '@/model/interfaces'
 
 const router = useRouter()
 
@@ -85,13 +86,21 @@ async function onLeave(type: 'save' | 'save-draft' | 'discard-changes') {
       <v-input hide-details>
         <!-- TODO: toggle revalidation? -->
         <v-btn-toggle v-model="place.type" divided>
-          <v-btn value="local">
+          <v-btn value="local-store">
             <span class="hidden-sm-and-down">Local Store</span>
             <v-icon icon="mdi-store" end></v-icon>
           </v-btn>
-          <v-btn value="online">
+          <v-btn value="local-fair">
+            <span class="hidden-sm-and-down">Trade Fair</span>
+            <v-icon icon="mdi-storefront" end></v-icon>
+          </v-btn>
+          <v-btn value="online-shop">
             <span class="hidden-sm-and-down">Online Store</span>
             <v-icon icon="mdi-web" end></v-icon>
+          </v-btn>
+          <v-btn value="online-marketplace">
+            <span class="hidden-sm-and-down">Online Marketplace</span>
+            <v-icon icon="mdi-shopping" end></v-icon>
           </v-btn>
         </v-btn-toggle>
 
@@ -107,16 +116,36 @@ async function onLeave(type: 'save' | 'save-draft' | 'discard-changes') {
           :rules="[(val: string) => !!val && val.trim().length > 0]"
         ></v-text-field>
 
+        <v-text-field
+          v-if="place.type === 'local-fair'"
+          v-model="place.fair"
+          label="Trade Fair / Show"
+          :rules="[(val: string) => !!val && val.trim().length > 0]"
+        ></v-text-field>
+
         <v-textarea
-          v-if="place.type === 'local'"
+          v-if="place.type === 'local-store' || place.type === 'local-fair'"
           v-model="place.address"
           label="Address"
         ></v-textarea>
 
+        <v-autocomplete
+          v-if="place.type === 'online-marketplace'"
+          v-model="place.marketplace"
+          :items="ONLINE_MARKETPLACE"
+          item-value="id"
+          item-title="label"
+          label="Marketplace"
+        ></v-autocomplete>
+
         <v-text-field
           v-model="place.url"
           label="URL"
-          :rules="[(val: string) => place?.type !== 'online' || isValidURL(val)]"
+          :rules="[
+            (val: string) =>
+              (place?.type !== 'online-shop' && place?.type !== 'online-marketplace') ||
+              isValidURL(val),
+          ]"
         ></v-text-field>
       </EditorFieldset>
 

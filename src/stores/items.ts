@@ -3,7 +3,7 @@ import { readonly, ref, toRaw, triggerRef } from 'vue'
 
 import usePokemonTCGCollectionIDB from '@/composables/usePokemonTCGCollectionIDB'
 import type { Item } from '@/model/interfaces'
-import { toRawDeep } from './utils'
+import { toRawDeep } from '@/utils/reactivity'
 
 export const useItemsStore = defineStore('items', () => {
   const { put: idbPut, getAll: idbGetAll, delete: idbDelete } = usePokemonTCGCollectionIDB('items')

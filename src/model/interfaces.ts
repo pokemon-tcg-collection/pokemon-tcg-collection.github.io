@@ -42,7 +42,6 @@ export interface Base {
 // -------------------------------------------------------------------------
 
 export type TransactionType = (typeof TRANSACTION_TYPE)[number]['id']
-
 export const TRANSACTION_TYPE = [
   { id: 'buy', label: 'Buy' },
   { id: 'sell', label: 'Sell' },
@@ -96,21 +95,45 @@ interface PlaceGeneric extends Base {
 }
 
 export interface PlaceLocal extends PlaceGeneric {
-  type: 'local'
   address: string
 }
 
+export interface PlaceLocalFair extends PlaceLocal {
+  type: 'local-fair'
+  fair: string
+}
+
+export interface PlaceLocalStore extends PlaceLocal {
+  type: 'local-store'
+}
+
 export interface PlaceOnline extends PlaceGeneric {
-  type: 'online'
   url: string
 }
 
-export type Place = PlaceLocal | PlaceOnline
+export interface PlaceOnlineShop extends PlaceOnline {
+  type: 'online-shop'
+}
+
+export type OnlineMarketplace = (typeof ONLINE_MARKETPLACE)[number]['id']
+export const ONLINE_MARKETPLACE = [
+  { id: 'amazon', label: 'Amazon' },
+  { id: 'ebay', label: 'Ebay' },
+  { id: 'etsy', label: 'Etsy' },
+  { id: 'cardmarket', label: 'Cardmarket' },
+  // etc.
+] as const
+
+export interface PlaceOnlineMarketplace extends PlaceOnline {
+  type: 'online-marketplace'
+  marketplace: OnlineMarketplace
+}
+
+export type Place = PlaceLocalStore | PlaceLocalFair | PlaceOnlineShop | PlaceOnlineMarketplace
 
 // -------------------------------------------------------------------------
 
 export type ItemType = (typeof ITEM_TYPES)[number]['id']
-
 export const ITEM_TYPES = [
   { id: 'booster', label: 'Booster' },
   { id: 'booster-display', label: 'Booster Display' },
@@ -167,7 +190,6 @@ export const TCGDEX_LANGUAGES = ['en', 'fr', 'es', 'it', 'pt', 'de'] as Supporte
 
 // NOTE: does not work if CARD_LANGUAGES is typed
 export type CardLanguageID = (typeof CARD_LANGUAGES)[number]['code']
-
 export const CARD_LANGUAGES = [
   // inter languages
   { code: 'en', short: 'ENG', name: 'English' },
@@ -183,13 +205,13 @@ export const CARD_LANGUAGES = [
   { code: 'pl', short: 'POL', name: 'Polish' },
   { code: 'ru', short: 'RUS', name: 'Russian' },
   // Asian languages
-  { code: 'ja', short: 'JPN', name: 'Japanese' },
+  { code: 'ja', short: 'JP', name: 'Japanese' },
   { code: 'ko', short: 'KOR', name: 'Korean' },
   // https://iso639-3.sil.org/code/zho ?
-  { code: 'zh-tw', short: 'ZHO', name: 'Chinese (Traditional)' },
+  { code: 'zh-tw', short: 'T-CHN', name: 'Chinese (Traditional)' },
   { code: 'id', short: 'IND', name: 'Indonesian' },
   { code: 'th', short: 'THA', name: 'Thai' },
-  { code: 'zh-cn', short: 'ZHO', name: 'Chinese (Simple)' },
+  { code: 'zh-cn', short: 'S-CHN', name: 'Chinese (Simple)' },
 ] as const
 
 export interface Card extends Base {

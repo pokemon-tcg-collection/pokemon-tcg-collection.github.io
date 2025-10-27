@@ -12,6 +12,7 @@ import { ref } from 'vue'
 
 import EditorFieldset from '@/components/EditorFieldset.vue'
 import usePokemonTCGCollectionIDB from '@/composables/usePokemonTCGCollectionIDB'
+import type { Card, Item, Place, Transaction } from '@/model/interfaces'
 import { useAuditLogStore } from '@/stores/auditLog'
 import { useCardsStore } from '@/stores/cards'
 import { useItemsStore } from '@/stores/items'
@@ -313,20 +314,33 @@ async function onDelete() {
   // NOTE: does it make sense to delete audit logs? Let's keep them
 }
 async function onLoadPreloadData() {
-  const { default: preloadData } = await import('@/stores/preloadData')
+  const nameWithStores = [
+    { name: 'places', store: placesStore },
+    { name: 'items', store: itemsStore },
+    { name: 'cards', store: cardsStore },
+    { name: 'transactions', store: transactionsStore },
+  ] as const
+  type Dataset = { places?: Place[]; items?: Item[]; transactions?: Transaction[]; cards?: Card[] }
 
-  const name = 'places'
-  const store = placesStore
+  async function loadData(dataset: Dataset) {
+    for (const { name, store } of nameWithStores) {
+      if (Object.hasOwn(dataset, name)) {
+        const data = (dataset as unknown as { [key: string]: [] })[name]
+        if (!data || !Array.isArray(data) || data.length === 0) return
 
-  if (Object.hasOwn(preloadData, name)) {
-    const data = (preloadData as unknown as { [key: string]: [] })[name]
-    if (!data || !Array.isArray(data) || data.length === 0) return
-
-    console.log(`🍍 Preloading data for "${store.$id}" store (${data.length} entries) ...`)
-    for (const entry of data) {
-      await store.add(entry, { overwrite: false })
+        console.log(`🍍 Preloading data for "${store.$id}" store (${data.length} entries) ...`)
+        for (const entry of data) {
+          await store.add(entry, { overwrite: false })
+        }
+      }
     }
   }
+
+  const { default: preloadData } = await import('@/stores/.data/preload')
+  await loadData(preloadData)
+
+  const { default: privateData } = await import(`@/stores/.data/private`)
+  await loadData(privateData)
 }
 </script>
 

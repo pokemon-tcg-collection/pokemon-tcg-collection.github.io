@@ -7,6 +7,9 @@ import EditorFieldsInternals from '@/components/EditorFieldsInternals.vue'
 import EditorFieldsRelated from '@/components/EditorFieldsRelated.vue'
 import EditorFieldsRelatedURLs from '@/components/EditorFieldsRelatedURLs.vue'
 import type { Card, Item, Place, Transaction } from '@/model/interfaces'
+import { useSettingsStore } from '@/stores/settings'
+
+const settings = useSettingsStore()
 
 const object = defineModel<Item | Transaction | Place | Card>()
 
@@ -81,13 +84,17 @@ function onUserChoiceDiscardChanges() {
     <EditorFieldsRelatedURLs v-model="object"></EditorFieldsRelatedURLs>
 
     <EditorFieldsRelated
+      v-if="settings.editorShowObjectRelations"
       :object="object"
       :object-type="objectType"
       direction="both"
       @edit="onRelationEdit"
     ></EditorFieldsRelated>
 
-    <EditorFieldsInternals v-model="object"></EditorFieldsInternals>
+    <EditorFieldsInternals
+      v-if="settings.editorShowObjectInternals"
+      v-model="object"
+    ></EditorFieldsInternals>
 
     <div class="d-flex flex-column flex-sm-row ga-3 mt-3">
       <v-btn color="primary" text="Save" @click="onSave"></v-btn>

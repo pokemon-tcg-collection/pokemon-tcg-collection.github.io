@@ -6,11 +6,18 @@ import type { Base, Card, Item, Transaction } from '@/model/interfaces'
 import { useCardsStore } from '@/stores/cards'
 import { useItemsStore } from '@/stores/items'
 import { usePlacesStore } from '@/stores/places'
+import { useSettingsStore } from '@/stores/settings'
 import { useTransactionsStore } from '@/stores/transactions'
 
 // TODO: + attachment, + image
 export type ObjectType = 'card' | 'item' | 'place' | 'transaction'
-type RelatedIDs = { id: string; type: ObjectType; name: string; direction: 'incoming' | 'outgoing' }
+type RelatedIDs = {
+  id: string
+  type: ObjectType
+  name: string | undefined
+  direction: 'incoming' | 'outgoing'
+  outgoingTargetExists?: boolean
+}
 
 const props = defineProps<{
   object: Base
@@ -19,6 +26,7 @@ const props = defineProps<{
 }>()
 const emit = defineEmits<{ edit: [id: string, type: string] }>()
 
+const settings = useSettingsStore()
 const cardsStore = useCardsStore()
 const itemsStore = useItemsStore()
 const placesStore = usePlacesStore()
@@ -28,6 +36,7 @@ function gatherRelations(
   object: Base,
   objectType: 'item' | 'transaction' | 'place' | 'card',
   direction: 'incoming' | 'outgoing' | 'both' | undefined,
+  checkOutgoingTargetExists: boolean = false,
 ) {
   const objectId = object.id
   if (objectId === undefined) return []
@@ -100,7 +109,18 @@ function gatherRelations(
       item.contents?.forEach((itemContent) => {
         if (!itemContent.item_id) return
         const relItem = itemsStore.get(itemContent.item_id)
-        if (!relItem) return
+        if (!relItem) {
+          if (checkOutgoingTargetExists) {
+            related.push({
+              id: itemContent.item_id,
+              name: undefined,
+              type: 'item',
+              direction: 'outgoing',
+              outgoingTargetExists: false,
+            })
+          }
+          return
+        }
         related.push({ id: relItem.id, name: relItem.name, type: 'item', direction: 'outgoing' })
       })
     } else if (objectType === 'place') {
@@ -113,13 +133,34 @@ function gatherRelations(
         const place = placesStore.get(transaction.place_id)
         if (place) {
           related.push({ id: place.id, name: place.name, type: 'place', direction: 'outgoing' })
+        } else {
+          if (checkOutgoingTargetExists) {
+            related.push({
+              id: transaction.place_id,
+              name: undefined,
+              type: 'place',
+              direction: 'outgoing',
+              outgoingTargetExists: false,
+            })
+          }
         }
       }
 
       // transaction --> n items
       transaction.items?.forEach((transactionItem) => {
         const item = itemsStore.get(transactionItem.item_id)
-        if (!item) return
+        if (!item) {
+          if (checkOutgoingTargetExists) {
+            related.push({
+              id: transactionItem.item_id,
+              name: undefined,
+              type: 'item',
+              direction: 'outgoing',
+              outgoingTargetExists: false,
+            })
+          }
+          return
+        }
         related.push({ id: item.id, name: item.name, type: 'item', direction: 'outgoing' })
       })
     } else if (objectType === 'card') {
@@ -128,14 +169,36 @@ function gatherRelations(
       // card --> n items
       card.item_ids?.forEach((id) => {
         const item = itemsStore.get(id)
-        if (!item) return
+        if (!item) {
+          if (checkOutgoingTargetExists) {
+            related.push({
+              id: id,
+              name: undefined,
+              type: 'item',
+              direction: 'outgoing',
+              outgoingTargetExists: false,
+            })
+          }
+          return
+        }
         related.push({ id: item.id, name: item.name, type: 'item', direction: 'outgoing' })
       })
 
       // card --> n transactions
       card.transaction_ids?.forEach((id) => {
         const transaction = transactionsStore.get(id)
-        if (!transaction) return
+        if (!transaction) {
+          if (checkOutgoingTargetExists) {
+            related.push({
+              id: id,
+              name: undefined,
+              type: 'transaction',
+              direction: 'outgoing',
+              outgoingTargetExists: false,
+            })
+          }
+          return
+        }
         related.push({
           id: transaction.id,
           name: transaction.name,
@@ -149,8 +212,22 @@ function gatherRelations(
   return related
 }
 
+function formatSubtitle(related: RelatedIDs): string {
+  return [
+    related.type,
+    settings.editorShowInternalID ? `${related.id}` : undefined,
+    related.direction,
+    related.outgoingTargetExists === false ? 'invalid!' : undefined,
+  ]
+    .filter(Boolean)
+    .join(' - ')
+}
+function formatColor(related: RelatedIDs): string | undefined {
+  return related.outgoingTargetExists === false ? 'error' : undefined
+}
+
 const related_ids = computed<RelatedIDs[]>(() =>
-  gatherRelations(props.object, props.objectType, props.direction),
+  gatherRelations(props.object, props.objectType, props.direction, true),
 )
 
 function onEdit(id: string, type: string) {
@@ -167,12 +244,14 @@ function onEdit(id: string, type: string) {
       <v-list-item
         v-for="related of related_ids"
         :key="related.id"
-        :value="related.id"
         :title="related.name"
-        :subtitle="`${related.type} - ${related.id} - ${related.direction}`"
+        :subtitle="formatSubtitle(related)"
+        :base-color="formatColor(related)"
+        link
       >
         <template v-slot:prepend>
           <v-icon
+            :color="formatColor(related)"
             :icon="
               related.direction === 'incoming' ? 'mdi-arrow-bottom-right' : 'mdi-arrow-top-right'
             "

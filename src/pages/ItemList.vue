@@ -1,13 +1,25 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 
+import { CARD_LANGUAGES, ITEM_TYPES } from '@/model/interfaces'
 import { useItemsStore } from '@/stores/items'
 
 const itemsStore = useItemsStore()
 
+function languageById(id: string | undefined) {
+  if (id === undefined) return undefined
+  return CARD_LANGUAGES.find((language) => language.code === id)?.short
+}
+function itemTypeById(id: string | undefined) {
+  if (id === undefined) return undefined
+  return ITEM_TYPES.find((item) => item.id === id)?.label ?? id
+}
+
 const items = computed(() =>
   Array.from(itemsStore.items.values()).map((item) => ({
     id: item.id,
+    type: itemTypeById(item.type),
+    language: languageById(item.language),
     name: item.name,
     item,
   })),
@@ -34,8 +46,10 @@ const items = computed(() =>
     </thead>
     <tbody>
       <tr v-for="item in items" :key="item.id">
-        <td class="fit">{{ item.item.type }}</td>
-        <td class="">{{ item.item.name }}</td>
+        <td class="fit">{{ item.type }}</td>
+        <td class="">
+          <template v-if="item.language">[{{ item.language }}] </template>{{ item.name }}
+        </td>
         <td class="fit">
           <v-btn-group density="compact" variant="text">
             <v-btn :to="{ name: 'item-edit', params: { id: item.id } }" prepend-icon="mdi-file-edit"

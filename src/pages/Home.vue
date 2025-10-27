@@ -51,5 +51,14 @@ const itemsStore = useItemsStore()
     >
       {{ itemsStore.items.size }} known Items.
     </OverviewLinkCard>
+
+    <OverviewLinkCard
+      icon="mdi-view-dashboard-edit"
+      title="Management"
+      :to="{ name: 'management' }"
+      to-label="See Dashboard"
+    >
+      Settings, database, APIs
+    </OverviewLinkCard>
   </OverviewLinkCardContainer>
 </template>

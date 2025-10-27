@@ -66,7 +66,6 @@ export function createNewItem(): Item {
   return {
     id: uuidv4(),
     name: '',
-    type: 'booster',
     cost_unit: 'EUR',
     contents: [],
     _meta: createEditMeta(),
@@ -323,20 +322,26 @@ export function isItemChanged(base: Item | undefined, other: Item | undefined) {
   if (base.name !== other.name) return true
   if (!isRelatedURLsSame(base.related_urls, other.related_urls)) return true
 
-  if (base.type !== other.type) return true
   if (base.cost_unit !== other.cost_unit) return true
+  if (!areValuesSame(base.type, other.type)) return true
+  if (!areValuesSame(base.language, other.language)) return true
   if (!areValuesSame(base.description, other.description)) return true
   if (!areNumbersSame(base.cost, other.cost, 0.0)) return true
 
   if (
-    !isObjectListSame(base.contents, other.contents, (contentA, contentB) => {
-      if (contentA.type !== contentB.type) return false
-      if (!areNumbersSame(contentA.amount, contentB.amount, 1)) return false
-      if (!areValuesSame(contentA.item_id, contentB.item_id)) return false
-      if (!areValuesSame(contentA.name, contentB.name)) return false
+    !isObjectListSame(
+      base.contents,
+      other.contents,
+      (contentA, contentB) => {
+        if (contentA.type !== contentB.type) return false
+        if (!areNumbersSame(contentA.amount, contentB.amount, 1)) return false
+        if (!areValuesSame(contentA.item_id, contentB.item_id)) return false
+        if (!areValuesSame(contentA.name, contentB.name)) return false
 
-      return true
-    })
+        return true
+      },
+      true,
+    )
   )
     return true
 

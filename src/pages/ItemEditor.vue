@@ -7,7 +7,7 @@ import EditorBase from '@/components/EditorBase.vue'
 import EditorFieldset from '@/components/EditorFieldset.vue'
 import useEditorObject from '@/composables/useEditorObject'
 import type { Item, ItemPart } from '@/model/interfaces'
-import { COST_UNITS, ITEM_TYPES } from '@/model/interfaces'
+import { CARD_LANGUAGES, COST_UNITS, ITEM_TYPES } from '@/model/interfaces'
 import type { EditRouteNames } from '@/router/routes'
 import { useItemsStore } from '@/stores/items'
 
@@ -44,7 +44,8 @@ const item_ids = computed<{ id: string; label: string; item: Item }[]>(() =>
 
 function onAddOneMorePart() {
   if (!item.value) return
-  item.value.contents?.push({
+  if (item.value.contents === undefined) item.value.contents = []
+  item.value.contents.push({
     amount: 1,
     type: '',
   })
@@ -64,13 +65,14 @@ async function onAddNewItem() {
 function onItemPartItemSelected(part: ItemPart) {
   if (part.item_id !== undefined) {
     const partItem = itemsStore.get(part.item_id)
-    console.log('partItem', partItem)
     if (partItem !== undefined) {
       if (!part.name || part.name.trim().length === 0) {
         part.name = partItem.name
       }
       if (!part.type || part.type.trim().length === 0) {
-        part.type = partItem.type
+        if (partItem.type !== undefined) {
+          part.type = partItem.type
+        }
       }
     }
   }
@@ -133,6 +135,14 @@ async function onLeave(type: 'save' | 'save-draft' | 'discard-changes') {
   >
     <template v-if="item">
       <EditorFieldset label="Details">
+        <v-autocomplete
+          v-model="item.language"
+          :items="CARD_LANGUAGES"
+          item-value="code"
+          item-title="name"
+          label="Language"
+        ></v-autocomplete>
+
         <v-autocomplete
           v-model="item.type"
           :items="itemTypes"

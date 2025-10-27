@@ -38,7 +38,7 @@ const item_ids = computed<{ id: string; label: string; item: Item }[]>(() =>
   Array.from(itemsStore.items.values()).map((item) => ({ id: item.id, label: item.name, item })),
 )
 const transaction_ids = computed<{ id: string; label: string; transaction: Transaction }[]>(() =>
-  Array.from(transactionsStore.transactions.values()).map((transaction) => ({
+  (Array.from(transactionsStore.transactions.values()) as Transaction[]).map((transaction) => ({
     id: transaction.id,
     label: transaction.name,
     transaction,

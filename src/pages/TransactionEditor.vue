@@ -73,7 +73,7 @@ const item_ids = computed<{ id: string; label: string; item: Item }[]>(() =>
   Array.from(itemsStore.items.values()).map((item) => ({ id: item.id, label: item.name, item })),
 )
 const place_ids = computed<{ id: string; label: string; place: Place }[]>(() =>
-  Array.from(placesStore.places.values()).map((place) => ({
+  (Array.from(placesStore.places.values()) as Place[]).map((place) => ({
     id: place.id,
     label: place.name,
     place,
@@ -290,8 +290,8 @@ async function onLeave(type: 'save' | 'save-draft' | 'discard-changes') {
             :control-variant="xs ? 'hidden' : 'default'"
             :precision="2"
             :min="0.0"
-            min-width="5rem"
-            label="Cost"
+            min-width="10rem"
+            label="Cost (per unit)"
           ></v-number-input>
           <v-select
             v-model="item.cost_unit"

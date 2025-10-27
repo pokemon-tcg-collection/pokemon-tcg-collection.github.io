@@ -63,7 +63,7 @@ async function onDeleteDraftObject(obj: WIPObject) {
             >
             <v-btn
               prepend-icon="mdi-file-document-remove"
-              @click="() => onDeleteDraftObject(wipObject.wipObject)"
+              @click="() => onDeleteDraftObject(wipObject.wipObject as WIPObject)"
               >Delete</v-btn
             >
           </v-btn-group>

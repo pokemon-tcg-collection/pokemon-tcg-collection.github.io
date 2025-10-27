@@ -8,6 +8,8 @@ export const useSettingsStore = defineStore(
     // state
 
     const editorShowInternalID = ref(true)
+    const editorShowObjectInternals = ref(true)
+    const editorShowObjectRelations = ref(true)
 
     // -----------------------------------------------------------------------
     // actions
@@ -23,6 +25,8 @@ export const useSettingsStore = defineStore(
     return {
       // state
       editorShowInternalID,
+      editorShowObjectInternals,
+      editorShowObjectRelations,
       // actions
       // internals
       $reset: _reset,

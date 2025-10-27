@@ -6,7 +6,37 @@ export type CostUnits = (typeof COST_UNITS)[number]['id']
 export const COST_UNITS = [
   { title: 'Euro (€)', id: 'EUR' },
   { title: 'US Dollar ($)', id: 'USD' },
+  { title: 'Yen (¥)', id: 'YEN' },
   // Pound, Yen
+] as const
+
+// NOTE: manually since not exported
+export const TCGDEX_LANGUAGES = ['en', 'fr', 'es', 'it', 'pt', 'de'] as SupportedLanguages[]
+
+// NOTE: does not work if CARD_LANGUAGES is typed
+export type CardLanguageID = (typeof CARD_LANGUAGES)[number]['code']
+export const CARD_LANGUAGES = [
+  // inter languages
+  { code: 'en', short: 'ENG', name: 'English' },
+  { code: 'fr', short: 'FRA', name: 'French' },
+  { code: 'es', short: 'SPA', name: 'Spanish' },
+  { code: 'es-mx', short: 'SPA', name: 'Spanish (Mexican)' }, // ?
+  { code: 'it', short: 'ITA', name: 'Italian' },
+  { code: 'pt', short: 'POR', name: 'Portuguese' },
+  { code: 'pt-br', short: 'POR', name: 'Portuguese (Brazilian)' },
+  { code: 'pt-pt', short: 'POR', name: 'Portuguese (Portugal)' },
+  { code: 'de', short: 'DEU', name: 'German' },
+  { code: 'nl', short: 'NLD', name: 'Dutch' },
+  { code: 'pl', short: 'POL', name: 'Polish' },
+  { code: 'ru', short: 'RUS', name: 'Russian' },
+  // Asian languages
+  { code: 'ja', short: 'JP', name: 'Japanese' },
+  { code: 'ko', short: 'KOR', name: 'Korean' },
+  // https://iso639-3.sil.org/code/zho ?
+  { code: 'zh-tw', short: 'T-CHN', name: 'Chinese (Traditional)' },
+  { code: 'id', short: 'IND', name: 'Indonesian' },
+  { code: 'th', short: 'THA', name: 'Thai' },
+  { code: 'zh-cn', short: 'S-CHN', name: 'Chinese (Simple)' },
 ] as const
 
 // -------------------------------------------------------------------------
@@ -87,8 +117,25 @@ export interface TransactionItem {
 
 // -------------------------------------------------------------------------
 
+export type PlaceType = (typeof PLACE_TYPE)[number]['id']
+export const PLACE_TYPE = [
+  { id: 'local-store', label: 'Brick and Mortar Store' },
+  { id: 'local-fair', label: 'Trade Fair' },
+  { id: 'online-shop', label: 'Online Shop' },
+  { id: 'online-marketplace', label: 'Online Marketplace' },
+] as const
+
+export type OnlineMarketplace = (typeof ONLINE_MARKETPLACE)[number]['id']
+export const ONLINE_MARKETPLACE = [
+  { id: 'amazon', label: 'Amazon' },
+  { id: 'ebay', label: 'Ebay' },
+  { id: 'etsy', label: 'Etsy' },
+  { id: 'cardmarket', label: 'Cardmarket' },
+  // etc.
+] as const
+
 interface PlaceGeneric extends Base {
-  type: string
+  type: PlaceType
   url?: string
 
   notes?: string
@@ -115,15 +162,6 @@ export interface PlaceOnlineShop extends PlaceOnline {
   type: 'online-shop'
 }
 
-export type OnlineMarketplace = (typeof ONLINE_MARKETPLACE)[number]['id']
-export const ONLINE_MARKETPLACE = [
-  { id: 'amazon', label: 'Amazon' },
-  { id: 'ebay', label: 'Ebay' },
-  { id: 'etsy', label: 'Etsy' },
-  { id: 'cardmarket', label: 'Cardmarket' },
-  // etc.
-] as const
-
 export interface PlaceOnlineMarketplace extends PlaceOnline {
   type: 'online-marketplace'
   marketplace: OnlineMarketplace
@@ -135,13 +173,15 @@ export type Place = PlaceLocalStore | PlaceLocalFair | PlaceOnlineShop | PlaceOn
 
 export type ItemType = (typeof ITEM_TYPES)[number]['id']
 export const ITEM_TYPES = [
-  { id: 'booster', label: 'Booster' },
+  // https://www.cardmarket.com/de/Pokemon/Products
+  // https://www.cardmarket.com/de/Pokemon/Products/Sealed-Products
+  { id: 'booster', label: 'Booster Pack' },
+  { id: 'jumbo-booster', label: 'Jumbo Booster Pack' },
   { id: 'booster-display', label: 'Booster Display' }, // ? smaller boxes
   { id: 'tin', label: 'Tin' },
-  { id: 'mini-tin', label: 'Mini Tin' },
-  { id: 'etb', label: 'Etb' },
-  { id: 'box', label: 'Box' }, // ?
+  { id: 'etb', label: 'Elite Trainer Box (ETB)' },
   { id: 'collection', label: 'Collection' }, // ?
+  { id: 'box-set', label: 'Box Set' },
   { id: 'blister', label: 'Blister' },
   // ...
   { id: 'sleeves', label: 'Sleeves' },
@@ -152,9 +192,21 @@ export const ITEM_TYPES = [
   // etc.
 ] as const
 
+export type ItemPartType = (typeof ITEM_PART_TYPES)[number]['id']
+export const ITEM_PART_TYPES = [
+  ...ITEM_TYPES,
+  { id: 'coin', label: 'Coin' },
+  { id: 'dice', label: 'Dice' },
+  { id: 'damage-dice-set', label: 'Damage Dice Set' },
+  { id: 'card-set-energy', label: 'Energy Card Set' },
+  { id: 'discount', label: 'Discount' },
+] as const
+
 export interface Item extends Base {
+  /** language of item */
+  language?: CardLanguageID
   /** type of item */
-  type: ItemType
+  type?: ItemType
 
   /** single item cost (MSRP, UVP) */
   cost?: number
@@ -171,7 +223,7 @@ export interface ItemPart {
   amount: number
 
   /** item type (booster, coin, card-savers, ...) */
-  type: string
+  type: ItemPartType | string
 
   /** plain text description */
   name?: string
@@ -192,35 +244,6 @@ export interface BoosterItemPart extends ItemPart {
 }
 
 // -------------------------------------------------------------------------
-
-// NOTE: manually since not exported
-export const TCGDEX_LANGUAGES = ['en', 'fr', 'es', 'it', 'pt', 'de'] as SupportedLanguages[]
-
-// NOTE: does not work if CARD_LANGUAGES is typed
-export type CardLanguageID = (typeof CARD_LANGUAGES)[number]['code']
-export const CARD_LANGUAGES = [
-  // inter languages
-  { code: 'en', short: 'ENG', name: 'English' },
-  { code: 'fr', short: 'FRA', name: 'French' },
-  { code: 'es', short: 'SPA', name: 'Spanish' },
-  { code: 'es-mx', short: 'SPA', name: 'Spanish (Mexican)' }, // ?
-  { code: 'it', short: 'ITA', name: 'Italian' },
-  { code: 'pt', short: 'POR', name: 'Portuguese' },
-  { code: 'pt-br', short: 'POR', name: 'Portuguese (Brazilian)' },
-  { code: 'pt-pt', short: 'POR', name: 'Portuguese (Portugal)' },
-  { code: 'de', short: 'DEU', name: 'German' },
-  { code: 'nl', short: 'NLD', name: 'Dutch' },
-  { code: 'pl', short: 'POL', name: 'Polish' },
-  { code: 'ru', short: 'RUS', name: 'Russian' },
-  // Asian languages
-  { code: 'ja', short: 'JP', name: 'Japanese' },
-  { code: 'ko', short: 'KOR', name: 'Korean' },
-  // https://iso639-3.sil.org/code/zho ?
-  { code: 'zh-tw', short: 'T-CHN', name: 'Chinese (Traditional)' },
-  { code: 'id', short: 'IND', name: 'Indonesian' },
-  { code: 'th', short: 'THA', name: 'Thai' },
-  { code: 'zh-cn', short: 'S-CHN', name: 'Chinese (Simple)' },
-] as const
 
 export interface Card extends Base {
   // card info

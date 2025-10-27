@@ -33,9 +33,11 @@ export default {
     const wrappedChildren = [] as VNode[]
     for (const child of children) {
       // console.debug('child', child)
+      if (typeof child.type === 'symbol' && child.type.description === 'v-cmt') continue
+      // NOTE: conditional nodes (v-if) will also create some artificial nodes we might want to suppress
+
       const childType = (child.type as { __name?: string }).__name
       if (childType !== 'OverviewLinkCard') {
-        // NOTE: conditional nodes (v-if) will also create some artificial nodes we might want to suppress
         console.warn("Child must only be of type 'OverviewLinkCard'!")
         if (mdAndUp.value) continue
       }

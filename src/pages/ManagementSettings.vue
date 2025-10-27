@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import EditorFieldset from '@/components/EditorFieldset.vue'
 import { useSettingsStore } from '@/stores/settings'
 
 const settings = useSettingsStore()
@@ -8,8 +9,7 @@ const settings = useSettingsStore()
   <h1 class="mb-3">Application Settings</h1>
 
   <v-form>
-    <fieldset class="pa-3 my-2">
-      <legend>Debug Settings</legend>
+    <EditorFieldset label="Editor (debug options)">
       <p class="text-medium-emphasis">
         Changing the following checkboxes will take effect immediately.
       </p>
@@ -17,14 +17,19 @@ const settings = useSettingsStore()
       <v-checkbox
         v-model="settings.editorShowInternalID"
         hide-details
-        label="Show internal identifiers in editors"
+        label="Show internal identifiers"
       ></v-checkbox>
-    </fieldset>
+
+      <v-checkbox
+        v-model="settings.editorShowObjectInternals"
+        hide-details
+        label="Show object internals (creation/modification time, ID)"
+      ></v-checkbox>
+      <v-checkbox
+        v-model="settings.editorShowObjectRelations"
+        hide-details
+        label="Show object relations (in-/outgoing)"
+      ></v-checkbox>
+    </EditorFieldset>
   </v-form>
 </template>
-
-<style lang="css" scoped>
-fieldset > legend {
-  padding-inline: 0.3rem;
-}
-</style>

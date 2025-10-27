@@ -25,7 +25,7 @@ const cards = computed(() =>
   </v-row>
 
   <v-list>
-    <v-list-item v-for="card in cards" :key="card.id" :value="card.id" :title="card.name">
+    <v-list-item v-for="card in cards" :key="card.id" link :title="card.name">
       <template v-slot:prepend>
         <v-chip class="me-2">{{ card.card.amount }}x</v-chip>
       </template>

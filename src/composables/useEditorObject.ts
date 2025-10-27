@@ -26,6 +26,7 @@ import { useItemsStore } from '@/stores/items'
 import { usePlacesStore } from '@/stores/places'
 import { useTransactionsStore } from '@/stores/transactions'
 import { useWorkInProgressStore } from '@/stores/workInProgress'
+import { toRawDeep } from '@/utils/reactivity'
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type PiniaStore<T extends (...args: any) => any> = Omit<
@@ -176,7 +177,7 @@ export default function useEditorObject<
     }
 
     // update base version, so no edit changes should be found
-    objectBase.value = structuredClone(toRaw(object.value))
+    objectBase.value = structuredClone(toRawDeep(object.value))
     objectSource.value = 'store'
 
     if (replaceHistory && route.name !== `${type}-edit`) {
@@ -193,10 +194,10 @@ export default function useEditorObject<
     if (!object.value) return
 
     // do temp save to allow to return back here
-    await wipStore.add(object.value.id, `${type}-edit`, toRaw(object.value))
+    await wipStore.add(object.value.id, `${type}-edit`, toRawDeep(object.value))
 
     // update base version, so no edit changes should be found
-    objectBase.value = structuredClone(toRaw(object.value))
+    objectBase.value = structuredClone(toRawDeep(object.value))
     objectSource.value = 'wip'
 
     if (replaceHistory) {
@@ -211,7 +212,7 @@ export default function useEditorObject<
 
   function discardChanges() {
     // reset editable object
-    object.value = structuredClone(toRaw(objectBase.value))
+    object.value = structuredClone(toRawDeep(objectBase.value))
   }
 
   async function remove() {

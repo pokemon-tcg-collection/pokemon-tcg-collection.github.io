@@ -82,11 +82,19 @@ export default defineConfig({
     }),
     fonts({
       fontsource: {
+        // NOTE: math,symbols, ...
         families: [
           {
             name: 'Roboto',
             weights: [100, 300, 400, 500, 700, 900],
             styles: ['normal', 'italic'],
+            subset: 'latin',
+          },
+          {
+            name: 'Roboto',
+            weights: [100, 300, 400, 500, 700, 900],
+            styles: ['normal', 'italic'],
+            subset: 'latin-ext',
           },
           // support of japanese/chinese/korean
           // https://github.com/podlove/podlove-subscribe-button/issues/110#issuecomment-292117885

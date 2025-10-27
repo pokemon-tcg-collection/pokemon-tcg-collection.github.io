@@ -3,7 +3,6 @@ import type { PiniaPluginContext } from 'pinia'
 import { createPinia } from 'pinia'
 import piniaPluginPersistedstate from 'pinia-plugin-persistedstate'
 
-import preloadData from './preloadData'
 import type { Card, Transaction } from '@/model/interfaces'
 
 const pinia = createPinia()
@@ -17,23 +16,7 @@ pinia.use((context: PiniaPluginContext) => {
 
   if (Object.hasOwn(store, '$hydrate')) {
     console.log(`🍍 Hydrating "${store.$id}" store ...`)
-    store.$hydrate({ clearBefore: false, overwriteExisting: false })
-  }
-})
-
-pinia.use((context: PiniaPluginContext) => {
-  // console.debug('pinia preload data plugin', context.store.$id, context)
-  const store = context.store
-  const name = store.$id
-
-  if (Object.hasOwn(preloadData, name)) {
-    const data = (preloadData as unknown as { [key: string]: [] })[name]
-    if (!data || !Array.isArray(data) || data.length === 0) return
-
-    console.log(`🍍 Preloading data for "${store.$id}" store (${data.length} entries) ...`)
-    for (const entry of data) {
-      store.add(entry)
-    }
+    ;(async () => await store.$hydrate({ clearBefore: false, overwriteExisting: false }))()
   }
 })
 

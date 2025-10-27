@@ -1,5 +1,5 @@
 import { acceptHMRUpdate, defineStore } from 'pinia'
-import { ref, shallowRef, toRaw } from 'vue'
+import { readonly, ref, toRaw } from 'vue'
 
 import usePokemonTCGCollectionIDB from '@/composables/usePokemonTCGCollectionIDB'
 import type { Card, Item, Place, Transaction } from '@/model/interfaces'
@@ -30,7 +30,7 @@ export const useWorkInProgressStore = defineStore('workInProgress', () => {
   // -----------------------------------------------------------------------
   // state
 
-  const objects = shallowRef<Map<string, WIPObject>>(new Map())
+  const objects = ref<Map<string, WIPObject>>(new Map())
 
   // -------------------------------------------------------------------------
   // actions
@@ -120,7 +120,7 @@ export const useWorkInProgressStore = defineStore('workInProgress', () => {
 
   return {
     // state
-    objects,
+    objects: readonly(objects),
     // actions
     add,
     has,

@@ -23,7 +23,6 @@ export const useAuditLogStore = defineStore('auditLog', () => {
   // state
 
   const logs = ref<AuditMessage[]>([])
-  const logsPublic = readonly(logs)
 
   // -----------------------------------------------------------------------
   // actions
@@ -76,7 +75,7 @@ export const useAuditLogStore = defineStore('auditLog', () => {
 
   return {
     // state
-    logs: logsPublic,
+    logs: readonly(logs),
     // actions
     add,
     // internals

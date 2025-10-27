@@ -136,11 +136,19 @@ export type Place = PlaceLocalStore | PlaceLocalFair | PlaceOnlineShop | PlaceOn
 export type ItemType = (typeof ITEM_TYPES)[number]['id']
 export const ITEM_TYPES = [
   { id: 'booster', label: 'Booster' },
-  { id: 'booster-display', label: 'Booster Display' },
+  { id: 'booster-display', label: 'Booster Display' }, // ? smaller boxes
   { id: 'tin', label: 'Tin' },
   { id: 'mini-tin', label: 'Mini Tin' },
   { id: 'etb', label: 'Etb' },
+  { id: 'box', label: 'Box' }, // ?
+  { id: 'collection', label: 'Collection' }, // ?
   { id: 'blister', label: 'Blister' },
+  // ...
+  { id: 'sleeves', label: 'Sleeves' },
+  { id: 'toploader', label: 'Toploader' },
+  // ...
+  { id: 'fan-booster', label: 'Fan-made Booster' },
+  { id: 'fan-card', label: 'Fan-made Card' },
   // etc.
 ] as const
 

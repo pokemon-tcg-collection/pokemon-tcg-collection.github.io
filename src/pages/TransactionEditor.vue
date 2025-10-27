@@ -273,7 +273,7 @@ async function onLeave(type: 'save' | 'save-draft' | 'discard-changes') {
         </v-row>
       </EditorFieldset>
 
-      <EditorFieldset label="Items">
+      <EditorFieldset label="Items" :class="{ ['pt-6']: transaction.items.length > 0 }">
         <v-row class="gc-5 ms-0 me-0" v-for="(item, i) in transaction.items" :key="i">
           <v-number-input
             v-model="item.amount"

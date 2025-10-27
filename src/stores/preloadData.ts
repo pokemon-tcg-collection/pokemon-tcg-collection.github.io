@@ -51,6 +51,26 @@ const places = [
       created: new Date(),
     },
   },
+  {
+    id: '3fbaff46-2c95-4ce4-9625-4ea6cc0aba18',
+    name: 'The Superb Collections (cttccommer0)',
+    type: 'online-marketplace',
+    marketplace: 'ebay',
+    url: 'https://www.ebay.com/str/cttccommer1',
+    _meta: {
+      created: new Date(),
+    },
+  },
+  {
+    id: '3a4a0a37-9bd6-4fc1-b52d-3a599ea115cf',
+    name: 'JWillyGuyArt',
+    type: 'online-marketplace',
+    marketplace: 'etsy',
+    url: 'https://www.etsy.com/shop/JWillyGuyArt',
+    _meta: {
+      created: new Date(),
+    },
+  },
 ] satisfies Place[]
 
 export default { places } as const

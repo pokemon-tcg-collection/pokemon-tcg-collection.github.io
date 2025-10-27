@@ -5,6 +5,7 @@ import { onBeforeRouteLeave } from 'vue-router'
 import EditorConfirmChangesDialog from '@/components/EditorConfirmChangesDialog.vue'
 import EditorFieldsInternals from '@/components/EditorFieldsInternals.vue'
 import EditorFieldsRelated from '@/components/EditorFieldsRelated.vue'
+import EditorFieldsRelatedURLs from '@/components/EditorFieldsRelatedURLs.vue'
 import type { Card, Item, Place, Transaction } from '@/model/interfaces'
 
 const object = defineModel<Item | Transaction | Place | Card>()
@@ -77,6 +78,8 @@ function onUserChoiceDiscardChanges() {
   <v-form v-if="object">
     <slot :object="object" :object-type="objectType"></slot>
 
+    <EditorFieldsRelatedURLs v-model="object"></EditorFieldsRelatedURLs>
+
     <EditorFieldsRelated
       :object="object"
       :object-type="objectType"
@@ -84,7 +87,7 @@ function onUserChoiceDiscardChanges() {
       @edit="onRelationEdit"
     ></EditorFieldsRelated>
 
-    <EditorFieldsInternals v-model:object="object"></EditorFieldsInternals>
+    <EditorFieldsInternals v-model="object"></EditorFieldsInternals>
 
     <div class="d-flex flex-column flex-sm-row ga-3 mt-3">
       <v-btn color="primary" text="Save" @click="onSave"></v-btn>

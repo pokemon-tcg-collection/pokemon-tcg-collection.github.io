@@ -8,14 +8,18 @@ const placesStore = usePlacesStore()
 const transactionsStore = useTransactionsStore()
 
 const places = computed(() =>
-  Array.from(placesStore.places.values()).map((place) => ({
-    id: place.id,
-    name: place.name,
-    place,
-    transactions: Array.from(transactionsStore.transactions.values()).filter(
-      (transaction) => transaction.place_id === place.id,
-    ).length,
-  })),
+  Array.from(placesStore.places.values())
+    .map((place) => ({
+      id: place.id,
+      name:
+        place.type === 'online-marketplace' ? `[${place.marketplace}] ${place.name}` : place.name,
+      // TODO: for 'online-parketplace' add marketplace?
+      place,
+      transactions: Array.from(transactionsStore.transactions.values()).filter(
+        (transaction) => transaction.place_id === place.id,
+      ).length,
+    }))
+    .sort((a, b) => b.transactions - a.transactions),
 )
 </script>
 
@@ -41,7 +45,7 @@ const places = computed(() =>
     <tbody>
       <tr v-for="place in places" :key="place.id">
         <td class="fit">{{ place.place.type }}</td>
-        <td class="">{{ place.place.name }}</td>
+        <td class="">{{ place.name }}</td>
         <td class="fit text-right">{{ place.transactions }}</td>
         <td class="fit">
           <v-btn-group density="compact" variant="text">

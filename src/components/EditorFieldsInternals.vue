@@ -3,7 +3,7 @@ import EditorFieldset from '@/components/EditorFieldset.vue'
 import type { Base } from '@/model/interfaces'
 import { useSettingsStore } from '@/stores/settings'
 
-const object = defineModel<Base>('object', { required: true })
+const object = defineModel<Base>({ required: true })
 
 const settings = useSettingsStore()
 </script>

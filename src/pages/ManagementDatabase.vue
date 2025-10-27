@@ -10,13 +10,14 @@ import {
 } from '@zip.js/zip.js'
 import { ref } from 'vue'
 
+import EditorFieldset from '@/components/EditorFieldset.vue'
+import usePokemonTCGCollectionIDB from '@/composables/usePokemonTCGCollectionIDB'
 import { useAuditLogStore } from '@/stores/auditLog'
 import { useCardsStore } from '@/stores/cards'
 import { useItemsStore } from '@/stores/items'
 import { usePlacesStore } from '@/stores/places'
 import { useTransactionsStore } from '@/stores/transactions'
 import { useWorkInProgressStore } from '@/stores/workInProgress'
-import usePokemonTCGCollectionIDB from '@/composables/usePokemonTCGCollectionIDB'
 
 const cardsStore = useCardsStore()
 const transactionsStore = useTransactionsStore()
@@ -311,14 +312,28 @@ async function onDelete() {
 
   // NOTE: does it make sense to delete audit logs? Let's keep them
 }
+async function onLoadPreloadData() {
+  const { default: preloadData } = await import('@/stores/preloadData')
+
+  const name = 'places'
+  const store = placesStore
+
+  if (Object.hasOwn(preloadData, name)) {
+    const data = (preloadData as unknown as { [key: string]: [] })[name]
+    if (!data || !Array.isArray(data) || data.length === 0) return
+
+    console.log(`🍍 Preloading data for "${store.$id}" store (${data.length} entries) ...`)
+    for (const entry of data) {
+      await store.add(entry, { overwrite: false })
+    }
+  }
+}
 </script>
 
 <template>
   <h1 class="mb-3">Database</h1>
 
-  <fieldset class="pa-3 my-2">
-    <legend>Statistics</legend>
-
+  <EditorFieldset label="Statistics">
     <v-container class="d-flex flex-wrap flex-sm-column flex-md-row ga-3">
       <v-card title="Cards">
         <v-card-item>{{ cardsStore.cards.size }} card entries</v-card-item>
@@ -339,11 +354,10 @@ async function onDelete() {
         <v-card-item>{{ auditLogStore.logs.length }} log entries</v-card-item>
       </v-card>
     </v-container>
-  </fieldset>
+  </EditorFieldset>
 
   <v-form>
-    <fieldset class="pa-3 my-2">
-      <legend>Export data</legend>
+    <EditorFieldset label="Export data">
       <v-checkbox
         v-model="exportItems"
         value="cards"
@@ -394,13 +408,11 @@ async function onDelete() {
         @click="onExport"
         text="Export"
       ></v-btn>
-    </fieldset>
+    </EditorFieldset>
   </v-form>
 
   <v-form>
-    <fieldset class="pa-3 my-2">
-      <legend>Import data</legend>
-
+    <EditorFieldset label="Import data">
       <v-checkbox
         v-model="clearBeforeImport"
         value="audit"
@@ -437,20 +449,13 @@ async function onDelete() {
         @click="onImport"
         text="Import"
       ></v-btn>
-    </fieldset>
+    </EditorFieldset>
   </v-form>
 
   <v-form>
-    <fieldset class="pa-3 my-2">
-      <legend>Actions</legend>
-
+    <EditorFieldset label="Actions" class="d-flex flex-wrap ga-3">
       <v-btn color="error" @click="onDelete">Delete all data</v-btn>
-    </fieldset>
+      <v-btn @click="onLoadPreloadData">Preload stores</v-btn>
+    </EditorFieldset>
   </v-form>
 </template>
-
-<style lang="css" scoped>
-fieldset > legend {
-  padding-inline: 0.3rem;
-}
-</style>

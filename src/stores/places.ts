@@ -1,5 +1,5 @@
 import { acceptHMRUpdate, defineStore } from 'pinia'
-import { readonly, ref, shallowRef, toRaw, triggerRef } from 'vue'
+import { readonly, ref, toRaw, triggerRef } from 'vue'
 
 import usePokemonTCGCollectionIDB from '@/composables/usePokemonTCGCollectionIDB'
 import type { Place } from '@/model/interfaces'
@@ -12,7 +12,7 @@ export const usePlacesStore = defineStore('places', () => {
   // -----------------------------------------------------------------------
   // state
 
-  const places = shallowRef<Map<string, Place>>(new Map())
+  const places = ref<Map<string, Place>>(new Map())
 
   // TODO: lookup by date/type?
 
@@ -125,7 +125,7 @@ export const usePlacesStore = defineStore('places', () => {
 
   return {
     // state
-    places,
+    places: readonly(places),
     // actions
     add,
     get,

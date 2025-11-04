@@ -14,23 +14,22 @@ const { isDraft, closeOnClick } = defineProps({
   },
 })
 
+export type ResultTypes = 'save' | 'save-draft' | 'discard-changes'
+
 const emit = defineEmits<{
-  save: []
-  saveDraft: []
-  discard: []
+  result: [type: ResultTypes]
 }>()
 
 function onUserChoiceSave() {
-  emit('save')
+  emit('result', 'save')
   if (closeOnClick) dialog.value = false
 }
 function onUserChoiceSaveDraft() {
-  emit('saveDraft')
-  console.log('closeOnClick', closeOnClick)
+  emit('result', 'save-draft')
   if (closeOnClick) dialog.value = false
 }
 function onUserChoiceDiscardChanges() {
-  emit('discard')
+  emit('result', 'discard-changes')
   if (closeOnClick) dialog.value = false
 }
 </script>

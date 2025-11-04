@@ -189,6 +189,8 @@ function isRelatedURLsSame(
   )
 }
 
+// -------------------------------------------------------------------------
+
 export function isCardChanged(base: Card | undefined, other: Card | undefined) {
   if (base === other) return false
   if (base === undefined || other === undefined) return true
@@ -229,6 +231,7 @@ export function isCardChanged(base: Card | undefined, other: Card | undefined) {
   if (!isValueListSame(base.item_ids, other.item_ids, true)) return true
   if (!isValueListSame(base.transaction_ids, other.transaction_ids, true)) return true
 
+  if (!areNumbersSame(base.pokeapi_pokemon_id, other.pokeapi_pokemon_id, undefined)) return true
   if (!areValuesSame(base.tcgdex_id, other.tcgdex_id)) return true
 
   return false
@@ -350,6 +353,187 @@ export function isItemChanged(base: Item | undefined, other: Item | undefined) {
 
 // -------------------------------------------------------------------------
 
+// [] - no changes
+// ["*"] - one side is undefined
+// ["id"] - IDs are different, so different objects, abort comparison
+// ["<prop1>", "<prop2>", ...] - changes in props (deep but only list base object properties)
+
+export function getCardChanges(base: Card | undefined, other: Card | undefined): string[] {
+  if (base === other) return []
+  if (base === undefined || other === undefined) return ['*']
+
+  if (base.id !== other.id) {
+    console.warn('Trying to compare different places according to ID!')
+    return ['id']
+  }
+
+  const changes = []
+
+  if (base.name !== other.name) changes.push('name')
+  if (!isRelatedURLsSame(base.related_urls, other.related_urls)) changes.push('related_urls')
+
+  if (base.amount !== other.amount) changes.push('amount')
+  if (base.language !== other.language) changes.push('language')
+  if (base.number !== other.number) changes.push('number')
+
+  // NOTE: WIP schema
+  if (!areValuesSame(base.set, other.set)) changes.push('set')
+  if (!areValuesSame(base.rarity, other.rarity)) changes.push('rarity')
+  if (!isValueListSame(base.boosters, other.boosters, true)) changes.push('boosters')
+
+  if (
+    !isObjectListSame(
+      base.cards,
+      other.cards,
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+      (_cardA, _cardB) => {
+        // TODO: detailed comparison of card subobject
+        // NOTE: return false for every change detected to shortcircuit
+
+        return true
+      },
+      true,
+    )
+  )
+    changes.push('cards')
+
+  if (!isValueListSame(base.item_ids, other.item_ids, true)) changes.push('item_ids')
+  if (!isValueListSame(base.transaction_ids, other.transaction_ids, true))
+    changes.push('transaction_ids')
+
+  if (!areNumbersSame(base.pokeapi_pokemon_id, other.pokeapi_pokemon_id, undefined))
+    changes.push('pokeapi_pokemon_id')
+  if (!areValuesSame(base.tcgdex_id, other.tcgdex_id)) changes.push('tcgdex_id')
+
+  return changes
+}
+
+export function getTransactionChanges(
+  base: Transaction | undefined,
+  other: Transaction | undefined,
+): string[] {
+  if (base === other) return []
+  if (base === undefined || other === undefined) return ['*']
+
+  if (base.id !== other.id) {
+    console.warn('Trying to compare different places according to ID!')
+    return ['id']
+  }
+
+  const changes = []
+
+  if (base.name !== other.name) changes.push('name')
+  if (!isRelatedURLsSame(base.related_urls, other.related_urls)) changes.push('related_urls')
+
+  if (base.type !== other.type) changes.push('type')
+  if (base.cost_unit !== other.cost_unit) changes.push('cost_unit')
+  if (!areDatesSame(base.date, other.date)) changes.push('date')
+  if (!areNumbersSame(base.cost, other.cost)) changes.push('cost')
+  if (!areValuesSame(base.place_id, other.place_id)) changes.push('place_id')
+  if (!areValuesSame(base.url, other.url)) changes.push('url')
+  if (!areValuesSame(base.description, other.description)) changes.push('description')
+
+  if (
+    !isObjectListSame(base.items, other.items, (itemA, itemB) => {
+      if (itemA.amount !== itemB.amount) return false
+      if (itemA.item_id !== itemB.item_id) return false
+      if (itemA.cost !== itemB.cost) return false
+      if (itemA.cost_unit !== itemB.cost_unit) return false
+
+      return true
+    })
+  )
+    changes.push('items')
+
+  if (!isValueListSame(base.attachment_ids, other.attachment_ids, true))
+    changes.push('attachment_ids')
+
+  return changes
+}
+
+export function getPlaceChanges(base: Place | undefined, other: Place | undefined): string[] {
+  if (base === other) return []
+  if (base === undefined || other === undefined) return ['*']
+
+  if (base.id !== other.id) {
+    console.warn('Trying to compare different places according to ID!')
+    return ['id']
+  }
+
+  const changes = []
+
+  if (base.name !== other.name) changes.push('name')
+  if (!isRelatedURLsSame(base.related_urls, other.related_urls)) changes.push('related_urls')
+
+  if (base.type !== other.type) changes.push('type')
+  if (!areValuesSame(base.url, other.url)) changes.push('url')
+  if (!areValuesSame(base.notes, other.notes)) changes.push('notes')
+
+  if (base.type === 'local-fair') {
+    if (!areValuesSame((base as PlaceLocal).address, (other as PlaceLocal).address))
+      changes.push('address')
+    if (!areValuesSame((base as PlaceLocalFair).fair, (other as PlaceLocalFair).fair))
+      changes.push('fair')
+  } else if (base.type === 'local-store') {
+    if (!areValuesSame((base as PlaceLocal).address, (other as PlaceLocal).address))
+      changes.push('address')
+  } else if (base.type === 'online-marketplace') {
+    if (
+      !areValuesSame(
+        (base as PlaceOnlineMarketplace).marketplace,
+        (other as PlaceOnlineMarketplace).marketplace,
+      )
+    )
+      changes.push('marketplace')
+  } else if (base.type === 'online-shop') {
+    // nothing yet
+  }
+
+  return changes
+}
+
+export function getItemChanges(base: Item | undefined, other: Item | undefined): string[] {
+  if (base === other) return []
+  if (base === undefined || other === undefined) return ['*']
+
+  if (base.id !== other.id) {
+    console.warn('Trying to compare different items according to ID!')
+    return ['id']
+  }
+
+  const changes = []
+
+  if (base.name !== other.name) changes.push('name')
+  if (!isRelatedURLsSame(base.related_urls, other.related_urls)) changes.push('related_urls')
+
+  if (base.cost_unit !== other.cost_unit) changes.push('cost_unit')
+  if (!areValuesSame(base.type, other.type)) changes.push('type')
+  if (!areValuesSame(base.language, other.language)) changes.push('language')
+  if (!areValuesSame(base.description, other.description)) changes.push('description')
+  if (!areNumbersSame(base.cost, other.cost, 0.0)) changes.push('cost')
+
+  if (
+    !isObjectListSame(
+      base.contents,
+      other.contents,
+      (contentA, contentB) => {
+        if (contentA.type !== contentB.type) return false
+        if (!areNumbersSame(contentA.amount, contentB.amount, 1)) return false
+        if (!areValuesSame(contentA.item_id, contentB.item_id)) return false
+        if (!areValuesSame(contentA.name, contentB.name)) return false
+
+        return true
+      },
+      true,
+    )
+  )
+    changes.push('contents')
+
+  return changes
+}
+
+// -------------------------------------------------------------------------
+
 export function sanitizePlace<T extends Place>(place: T): T {
   if (
     Object.hasOwn(place, 'marketplace') &&
@@ -375,3 +559,5 @@ export function sanitizePlace<T extends Place>(place: T): T {
 
   return place
 }
+
+// TODO: Base object sanitization/normalization (`Date` when de-/serialized?)

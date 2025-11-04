@@ -2,7 +2,9 @@
 import { ref } from 'vue'
 import { onBeforeRouteLeave } from 'vue-router'
 
+import type { ResultTypes } from '@/components/EditorConfirmChangesDialog.vue'
 import EditorConfirmChangesDialog from '@/components/EditorConfirmChangesDialog.vue'
+import EditorConfirmDeletionDialog from '@/components/EditorConfirmDeletionDialog.vue'
 import EditorFieldsInternals from '@/components/EditorFieldsInternals.vue'
 import EditorFieldsRelated from '@/components/EditorFieldsRelated.vue'
 import EditorFieldsRelatedURLs from '@/components/EditorFieldsRelatedURLs.vue'
@@ -25,7 +27,7 @@ const emit = defineEmits<{
   relationEdit: [id: string, type: string]
   save: []
   delete: []
-  leaveAction: [type: 'save' | 'save-draft' | 'discard-changes']
+  leaveAction: [type: ResultTypes]
 }>()
 
 // defineSlots<{
@@ -33,6 +35,7 @@ const emit = defineEmits<{
 // }>()
 
 const dialogToAskUserAboutChanges = ref<boolean>(false)
+const dialogToAskUserToConfirmDeletion = ref<boolean>(false)
 
 onBeforeRouteLeave(async (to, from) => {
   if (!object.value) return true
@@ -61,17 +64,16 @@ function onSave() {
   emit('save')
 }
 function onDelete() {
-  emit('delete')
+  // show confirm deletion dialog
+  dialogToAskUserToConfirmDeletion.value = true
 }
 // handle user choice from dialog (handle unsaved changes on leave page)
-function onUserChoiceSave() {
-  emit('leaveAction', 'save')
+function onUserChoice(type: ResultTypes) {
+  emit('leaveAction', type)
 }
-function onUserChoiceSaveDraft() {
-  emit('leaveAction', 'save-draft')
-}
-function onUserChoiceDiscardChanges() {
-  emit('leaveAction', 'discard-changes')
+// handle user choice from dialog (confirm deletion)
+function onUserConfirmDeletion() {
+  emit('delete')
 }
 </script>
 
@@ -107,8 +109,10 @@ function onUserChoiceDiscardChanges() {
   <EditorConfirmChangesDialog
     v-model="dialogToAskUserAboutChanges"
     :is-draft="isDraft"
-    @save="onUserChoiceSave"
-    @save-draft="onUserChoiceSaveDraft"
-    @discard="onUserChoiceDiscardChanges"
+    @result="onUserChoice"
   ></EditorConfirmChangesDialog>
+  <EditorConfirmDeletionDialog
+    v-model="dialogToAskUserToConfirmDeletion"
+    @confirm="onUserConfirmDeletion"
+  ></EditorConfirmDeletionDialog>
 </template>

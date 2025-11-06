@@ -1,0 +1,14 @@
+# PokeAPI sprites
+
+## Sources
+
+- https://pokeapi.co/
+- https://github.com/pokeapi
+- https://github.com/PokeAPI/pokeapi (pokemon metadata data)
+- https://github.com/PokeAPI/sprites (actual sprites)
+
+## How to build
+
+- Run `scripts/pokeapi-generate.py`.
+- Copy generated sprites: `out/sprites` to `public/pokeapi-sprites`.
+- Copy generated metadata: `out/pokemon.json` to `src/apis/pokeapi/pokemon.json`.

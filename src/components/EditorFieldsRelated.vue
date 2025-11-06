@@ -249,7 +249,7 @@ function onEdit(id: string, type: string) {
         :base-color="formatColor(related)"
         link
       >
-        <template v-slot:prepend>
+        <template #prepend>
           <v-icon
             :color="formatColor(related)"
             :icon="
@@ -257,7 +257,7 @@ function onEdit(id: string, type: string) {
             "
           ></v-icon>
         </template>
-        <template v-slot:append>
+        <template #append>
           <v-btn flat @click="() => onEdit(related.id, related.type)" prepend-icon="mdi-file-edit"
             >Edit</v-btn
           >

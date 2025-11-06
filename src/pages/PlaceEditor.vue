@@ -104,7 +104,7 @@ async function onLeave(type: 'save' | 'save-draft' | 'discard-changes') {
           </v-btn>
         </v-btn-toggle>
 
-        <template v-slot:prepend>
+        <template #prepend>
           <div class="text-subtitle">Select store type:</div>
         </template>
       </v-input>

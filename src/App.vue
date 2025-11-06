@@ -51,7 +51,7 @@ const breadcrumbs = computed(() =>
     <v-app-bar name="app-bar">
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
       <v-app-bar-title>Pokémon TCG Collection</v-app-bar-title>
-      <template v-slot:append>
+      <template #append>
         <v-btn
           v-if="canBeInstalled || isInstalled"
           :readonly="isInstalled"
@@ -69,7 +69,7 @@ const breadcrumbs = computed(() =>
         <v-list-item link title="Transactions" :to="{ name: 'transactions' }"></v-list-item>
         <v-spacer></v-spacer>
         <v-list-group value="Management" class="mb-3" nav>
-          <template v-slot:activator="{ props }">
+          <template #activator="{ props }">
             <v-list-item v-bind="props" title="Management"></v-list-item>
           </template>
           <v-list-item link title="Overview" :to="{ name: 'management' }"></v-list-item>
@@ -89,7 +89,7 @@ const breadcrumbs = computed(() =>
     <v-main>
       <v-container>
         <v-breadcrumbs :items="breadcrumbs" v-if="breadcrumbs.length > 1">
-          <template v-slot:divider
+          <template #divider
             ><v-icon icon="mdi-pokeball"></v-icon><span class="d-sr-only">/</span></template
           >
         </v-breadcrumbs>

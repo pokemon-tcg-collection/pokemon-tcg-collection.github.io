@@ -261,7 +261,7 @@ async function onLeave(type: 'save' | 'save-draft' | 'discard-changes') {
               label="Location"
               prepend-icon="mdi-store-marker"
             >
-              <template v-slot:no-data>
+              <template #no-data>
                 <v-list-item>
                   <v-list-item-action @click="onAddNewLocation"
                     >Create a new Location</v-list-item-action
@@ -310,7 +310,7 @@ async function onLeave(type: 'save' | 'save-draft' | 'discard-changes') {
             readonly
             label="Item"
           >
-            <template v-slot:append>
+            <template #append>
               <v-btn flat icon="mdi-delete" @click="() => onRemoveItem(i)"></v-btn>
             </template>
           </v-autocomplete>
@@ -326,12 +326,12 @@ async function onLeave(type: 'save' | 'save-draft' | 'discard-changes') {
           clearable
           label="Items"
         >
-          <template v-slot:no-data>
+          <template #no-data>
             <v-list-item>
               <v-list-item-action @click="onAddNewItem">Create new Item</v-list-item-action>
             </v-list-item>
           </template>
-          <template v-slot:append>
+          <template #append>
             <v-btn @click="onAddItemToTransaction">Add item</v-btn>
           </template>
         </v-autocomplete>

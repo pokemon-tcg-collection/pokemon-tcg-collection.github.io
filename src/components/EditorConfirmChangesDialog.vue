@@ -42,7 +42,7 @@ function onUserChoiceDiscardChanges() {
       text="Some inputs have changed. Please save or discard before continuing."
       class="pa-2"
     >
-      <template v-slot:actions>
+      <template #actions>
         <v-btn @click="onUserChoiceSave" variant="tonal" color="primary">{{
           isDraft ? 'Save and finish Draft' : 'Save'
         }}</v-btn>

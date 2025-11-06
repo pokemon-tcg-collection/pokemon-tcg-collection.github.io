@@ -172,9 +172,9 @@ watch(
     clearable
     hide-no-data
   >
-    <template v-slot:item="{ item, props }">
+    <template #item="{ item, props }">
       <v-list-item v-bind="props">
-        <template v-slot:prepend>
+        <template #prepend>
           <v-avatar :image="item.raw.image"></v-avatar>
         </template>
       </v-list-item>

@@ -28,7 +28,7 @@ function onRemoveURL(url_idx: number) {
         label="Description"
       ></v-text-field>
       <v-text-field v-model="url.url" min-width="15rem" width="max-content" label="URL">
-        <template v-slot:append>
+        <template #append>
           <v-btn flat icon="mdi-delete" @click="() => onRemoveURL(i)"></v-btn>
         </template>
       </v-text-field>

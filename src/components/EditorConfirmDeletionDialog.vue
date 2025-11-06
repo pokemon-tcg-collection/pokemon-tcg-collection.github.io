@@ -29,7 +29,7 @@ function onModelValueChange() {
       text="Deletion is final and non-reversible. Do you want to continue?"
       class="pa-2"
     >
-      <template v-slot:actions>
+      <template #actions>
         <v-btn @click="onUserConfirm" variant="tonal" color="error">Confirm</v-btn>
         <v-btn @click="onUserAbort" variant="tonal" color="primary">Abort</v-btn>
       </template>

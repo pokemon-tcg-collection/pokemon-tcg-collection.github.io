@@ -196,12 +196,12 @@ async function onLeave(type: 'save' | 'save-draft' | 'discard-changes') {
             min-width="5rem"
             label="Item"
           >
-            <template v-slot:no-data>
+            <template #no-data>
               <v-list-item>
                 <v-list-item-action @click="onAddNewItem">Create new Item</v-list-item-action>
               </v-list-item>
             </template>
-            <template v-slot:append>
+            <template #append>
               <v-btn flat icon="mdi-delete" @click="() => onRemovePart(i)"></v-btn>
             </template>
           </v-autocomplete>

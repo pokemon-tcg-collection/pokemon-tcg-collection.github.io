@@ -26,10 +26,10 @@ const cards = computed(() =>
 
   <v-list>
     <v-list-item v-for="card in cards" :key="card.id" link :title="card.name">
-      <template v-slot:prepend>
+      <template #prepend>
         <v-chip class="me-2">{{ card.card.amount }}x</v-chip>
       </template>
-      <template v-slot:append>
+      <template #append>
         <!-- <span>{{ card.card.set }}</span> -->
         <v-btn-group>
           <v-btn :to="{ name: 'card', params: { id: card.id } }" prepend-icon="mdi-file-eye"

@@ -1,5 +1,7 @@
 import type { SupportedLanguages } from '@tcgdex/sdk'
 
+import type { SeriesID } from './tcg_sets'
+
 // -------------------------------------------------------------------------
 
 export type CostUnits = (typeof COST_UNITS)[number]['id']
@@ -13,29 +15,32 @@ export const COST_UNITS = [
 // NOTE: manually since not exported
 export const TCGDEX_LANGUAGES = ['en', 'fr', 'es', 'it', 'pt', 'de'] as SupportedLanguages[]
 
-// NOTE: does not work if CARD_LANGUAGES is typed
+// https://bulbapedia.bulbagarden.net/wiki/List_of_Pok%C3%A9mon_Trading_Card_Game_expansions_in_other_languages
+// TCGDex API
+// NOTE: does not work if CARD_LANGUAGES is typed?
 export type CardLanguageID = (typeof CARD_LANGUAGES)[number]['code']
 export const CARD_LANGUAGES = [
   // inter languages
   { code: 'en', short: 'ENG', name: 'English' },
-  { code: 'fr', short: 'FRA', name: 'French' },
-  { code: 'es', short: 'SPA', name: 'Spanish' },
-  { code: 'es-mx', short: 'SPA', name: 'Spanish (Mexican)' }, // ?
-  { code: 'it', short: 'ITA', name: 'Italian' },
+  { code: 'fr', short: 'FRA', name: 'French', base: 'en' },
+  { code: 'es', short: 'SPA', name: 'Spanish', base: 'en' },
+  { code: 'es-mx', short: 'SPA', name: 'Spanish (Mexican)', base: 'en' }, // Spanish (Latin America)?
+  { code: 'it', short: 'ITA', name: 'Italian', base: 'en' },
   { code: 'pt', short: 'POR', name: 'Portuguese' },
-  { code: 'pt-br', short: 'POR', name: 'Portuguese (Brazilian)' },
+  { code: 'pt-br', short: 'POR', name: 'Brazilian Portuguese', base: 'en' },
   { code: 'pt-pt', short: 'POR', name: 'Portuguese (Portugal)' },
-  { code: 'de', short: 'DEU', name: 'German' },
-  { code: 'nl', short: 'NLD', name: 'Dutch' },
-  { code: 'pl', short: 'POL', name: 'Polish' },
-  { code: 'ru', short: 'RUS', name: 'Russian' },
+  { code: 'de', short: 'DEU', name: 'German', base: 'en' },
+  { code: 'nl', short: 'NLD', name: 'Dutch', base: 'en' },
+  { code: 'pl', short: 'POL', name: 'Polish', base: 'en' },
+  { code: 'ru', short: 'RUS', name: 'Russian', base: 'en' },
   // Asian languages
+  // catch-up series without JA base
   { code: 'ja', short: 'JP', name: 'Japanese' },
-  { code: 'ko', short: 'KOR', name: 'Korean' },
+  { code: 'ko', short: 'KOR', name: 'Korean', base: 'ja' },
   // https://iso639-3.sil.org/code/zho ?
-  { code: 'zh-tw', short: 'T-CHN', name: 'Chinese (Traditional)' },
-  { code: 'id', short: 'IND', name: 'Indonesian' },
-  { code: 'th', short: 'THA', name: 'Thai' },
+  { code: 'zh-tw', short: 'T-CHN', name: 'Chinese (Traditional)', base: 'ja' },
+  { code: 'id', short: 'IND', name: 'Indonesian', base: 'ja' },
+  { code: 'th', short: 'THA', name: 'Thai', base: 'ja' },
   { code: 'zh-cn', short: 'S-CHN', name: 'Chinese (Simple)' },
 ] as const
 
@@ -178,7 +183,7 @@ export const ITEM_TYPES = [
   { id: 'booster', label: 'Booster Pack' },
   { id: 'jumbo-booster', label: 'Jumbo Booster Pack' },
   { id: 'booster-display', label: 'Booster Display' }, // ? smaller boxes
-  { id: 'tin', label: 'Tin' },
+  { id: 'tin', label: 'Tin' }, // mini-tin?
   { id: 'etb', label: 'Elite Trainer Box (ETB)' },
   { id: 'collection', label: 'Collection' }, // ?
   { id: 'box-set', label: 'Box Set' },
@@ -189,6 +194,10 @@ export const ITEM_TYPES = [
   // ...
   { id: 'fan-booster', label: 'Fan-made Booster' },
   { id: 'fan-card', label: 'Fan-made Card' },
+  // ...
+  { id: 'scam', label: 'Scam' },
+  { id: 'shipping-taxes', label: 'Shipping & Taxes' },
+  { id: 'other', label: 'Other' },
   // etc.
 ] as const
 
@@ -254,7 +263,9 @@ export interface Card extends Base {
   /** number in set (generally a number but may also be more complex so a string) */
   number: string
 
-  set: string
+  /** set/expansion */
+  set: RefID
+
   boosters?: string[]
   rarity?: string
 
@@ -274,6 +285,77 @@ export interface Card extends Base {
   pokeapi_pokemon_id?: number
   /** TCGDex API identifier for metadata */
   tcgdex_id?: string
+  /** bulbapedia/bulbagarden URL */
+  bulbapedia_url?: string
+}
+
+// -------------------------------------------------------------------------
+
+type SetSeriesTypesEN = 'main-series' | 'special'
+type SetSeriesTypesJA =
+  | 'main-series'
+  | 'special'
+  // subsets
+  | 'subset'
+  | 'concept'
+  | 'enhanced-expansion'
+  | 'high-class-expansion'
+  | 'promo'
+
+export interface Set extends Base {
+  // en,ja
+  language: CardLanguageID
+
+  /** name of set/expansion */
+  name: string
+  /** name in original language (e.g., "ja") */
+  name_original?: string
+  name_en_equivalent?: string
+  /** set abbrevation */
+  abbrev: string
+
+  /** series */
+  series: SeriesID
+  series_type: SetSeriesTypesEN | SetSeriesTypesJA
+  /** set number */
+  no: string
+
+  cards_stats: {
+    cards?: number
+    // additional
+    secret?: number
+    holofoil?: number
+    unown?: number
+    shiny?: number
+    rotom?: number
+    arceus?: number
+    'alpha-ligthograph'?: number
+    'shiny-legendary'?: number
+    radiant?: number
+    'shiny-vault'?: number
+    classic?: number
+    'trainer-gallery'?: number
+    'galarian-gallery'?: number
+    // JA
+    'special-holo-energy'?: number
+    'non-standard'?: number
+    unnumbered?: number
+    // rest
+    notes?: string[]
+  }
+
+  release_date: string
+
+  // related set (jp<->en)
+
+  /** symbol/logo images */
+  symbol_url?: string
+  logo_url?: string
+
+  /** TCGDex API identifier for metadata */
+  tcgdex_id?: string
+  /** bulbapedia/bulbagarden URL */
+  bulbapedia_url?: string
 }
 
 // -------------------------------------------------------------------------

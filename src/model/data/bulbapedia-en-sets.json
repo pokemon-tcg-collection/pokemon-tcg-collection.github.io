@@ -1,0 +1,2755 @@
+[
+  {
+    "series": "original",
+    "series_type": "wizards-of-the-coast",
+    "language": "en",
+    "no": "1",
+    "name": "Base Set",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Base_Set_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 102
+    },
+    "release_date": "January 9, 1999",
+    "abbrev": "BS"
+  },
+  {
+    "series": "original",
+    "series_type": "wizards-of-the-coast",
+    "language": "en",
+    "no": "2",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/2/2f/SetSymbolJungle.png/40px-SetSymbolJungle.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/6/69/Jungle_Logo.png/100px-Jungle_Logo.png",
+    "name": "Jungle",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Jungle_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 64
+    },
+    "release_date": "June 16, 1999",
+    "abbrev": "JU"
+  },
+  {
+    "series": "original",
+    "series_type": "wizards-of-the-coast",
+    "language": "en",
+    "no": "3",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/e/e6/SetSymbolFossil.png/40px-SetSymbolFossil.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/7/7f/Fossil_Logo.png/90px-Fossil_Logo.png",
+    "name": "Fossil",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Fossil_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 62
+    },
+    "release_date": "October 10, 1999",
+    "abbrev": "FO"
+  },
+  {
+    "series": "original",
+    "series_type": "wizards-of-the-coast",
+    "language": "en",
+    "no": "4",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/3/36/SetSymbolBase_Set_2.png/40px-SetSymbolBase_Set_2.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/2/20/Base_Set_2_Logo.png/90px-Base_Set_2_Logo.png",
+    "name": "Base Set 2",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Base_Set_2_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 130
+    },
+    "release_date": "February 24, 2000",
+    "abbrev": "B2"
+  },
+  {
+    "series": "original",
+    "series_type": "wizards-of-the-coast",
+    "language": "en",
+    "no": "5",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/7/7e/SetSymbolTeam_Rocket.png/40px-SetSymbolTeam_Rocket.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/5/5d/Team_Rocket_Logo.png/120px-Team_Rocket_Logo.png",
+    "name": "Team Rocket",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Team_Rocket_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 82,
+      "secret": 1
+    },
+    "release_date": "April 24, 2000",
+    "abbrev": "TR"
+  },
+  {
+    "series": "original",
+    "series_type": "wizards-of-the-coast",
+    "language": "en",
+    "no": "6",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/8/8f/SetSymbolGym_Heroes.png/40px-SetSymbolGym_Heroes.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/1/1b/Gym_Heroes_Logo.png/100px-Gym_Heroes_Logo.png",
+    "name": "Gym Heroes",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Gym_Heroes_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 132
+    },
+    "release_date": "August 14, 2000",
+    "abbrev": "G1"
+  },
+  {
+    "series": "original",
+    "series_type": "wizards-of-the-coast",
+    "language": "en",
+    "no": "7",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/c/c4/SetSymbolGym_Challenge.png/40px-SetSymbolGym_Challenge.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/e/e0/Gym_Challenge_Logo.png/100px-Gym_Challenge_Logo.png",
+    "name": "Gym Challenge",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Gym_Challenge_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 132
+    },
+    "release_date": "October 16, 2000",
+    "abbrev": "G2"
+  },
+  {
+    "series": "neo",
+    "series_type": "wizards-of-the-coast",
+    "language": "en",
+    "no": "1",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/7/75/SetSymbolNeo_Genesis.png/40px-SetSymbolNeo_Genesis.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/5/55/Neo_Genesis_Logo_EN.png/100px-Neo_Genesis_Logo_EN.png",
+    "name": "Neo Genesis",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Neo_Genesis_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 111
+    },
+    "release_date": "December 16, 2000",
+    "abbrev": "N1"
+  },
+  {
+    "series": "neo",
+    "series_type": "wizards-of-the-coast",
+    "language": "en",
+    "no": "2",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/f/f8/SetSymbolNeo_Discovery.png/40px-SetSymbolNeo_Discovery.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/9/98/Neo_Discovery_Logo_EN.png/90px-Neo_Discovery_Logo_EN.png",
+    "name": "Neo Discovery",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Neo_Discovery_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 75
+    },
+    "release_date": "June 1, 2001",
+    "abbrev": "N2"
+  },
+  {
+    "series": "neo",
+    "series_type": "wizards-of-the-coast",
+    "language": "en",
+    "no": "3",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/c/c6/SetSymbolNeo_Revelation.png/40px-SetSymbolNeo_Revelation.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/4/49/Neo_Revelation_Logo_EN.png/100px-Neo_Revelation_Logo_EN.png",
+    "name": "Neo Revelation",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Neo_Revelation_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 64,
+      "secret": 2
+    },
+    "release_date": "September 21, 2001",
+    "abbrev": "N3"
+  },
+  {
+    "series": "neo",
+    "series_type": "wizards-of-the-coast",
+    "language": "en",
+    "no": "4",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/8/88/SetSymbolNeo_Destiny.png/40px-SetSymbolNeo_Destiny.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/1/18/Neo_Destiny_Logo_EN.png/100px-Neo_Destiny_Logo_EN.png",
+    "name": "Neo Destiny",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Neo_Destiny_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 105,
+      "secret": 8
+    },
+    "release_date": "February 28, 2002",
+    "abbrev": "N4"
+  },
+  {
+    "series": "legendary-collection",
+    "series_type": "wizards-of-the-coast",
+    "language": "en",
+    "no": "1",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/a/a8/SetSymbolLegendary_Collection.png/20px-SetSymbolLegendary_Collection.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/8/81/Legendary_Collection_Logo.png/120px-Legendary_Collection_Logo.png",
+    "name": "Legendary Collection",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Legendary_Collection_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 110
+    },
+    "release_date": "May 24, 2002",
+    "abbrev": "LC"
+  },
+  {
+    "series": "e-card",
+    "series_type": "wizards-of-the-coast",
+    "language": "en",
+    "no": "1",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/4/4f/SetSymbolExpedition.png/40px-SetSymbolExpedition.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/e/ed/E1_Logo_EN.png/100px-E1_Logo_EN.png",
+    "name": "Expedition Base Set",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Expedition_Base_Set_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 165
+    },
+    "release_date": "September 15, 2002",
+    "abbrev": "EX"
+  },
+  {
+    "series": "e-card",
+    "series_type": "wizards-of-the-coast",
+    "language": "en",
+    "no": "2",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/2/27/SetSymbolAquapolis.png/40px-SetSymbolAquapolis.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/0/0d/E2_Logo_EN.png/100px-E2_Logo_EN.png",
+    "name": "Aquapolis",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Aquapolis_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 147,
+      "holofoil": 32,
+      "secret": 3
+    },
+    "release_date": "January 15, 2003",
+    "abbrev": "AQ"
+  },
+  {
+    "series": "e-card",
+    "series_type": "wizards-of-the-coast",
+    "language": "en",
+    "no": "3",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/5/56/SetSymbolSkyridge.png/40px-SetSymbolSkyridge.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/b/b8/E3_Logo_EN.png/100px-E3_Logo_EN.png",
+    "name": "Skyridge",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Skyridge_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 144,
+      "holofoil": 32,
+      "secret": 6
+    },
+    "release_date": "May 12, 2003",
+    "abbrev": "SK"
+  },
+  {
+    "series": "ex",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "EX1",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/f/f2/SetSymbolRuby_and_Sapphire.png/40px-SetSymbolRuby_and_Sapphire.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/e/ec/EX1_Logo_EN.png/150px-EX1_Logo_EN.png",
+    "name": "EX Ruby & Sapphire",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/EX_Ruby_%26_Sapphire_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 109
+    },
+    "release_date": "July 18, 2003",
+    "abbrev": "RS"
+  },
+  {
+    "series": "ex",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "EX2",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/6/6a/SetSymbolSandstorm.png/40px-SetSymbolSandstorm.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/6/65/EX2_Logo_EN.png/150px-EX2_Logo_EN.png",
+    "name": "EX Sandstorm",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/EX_Sandstorm_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 100
+    },
+    "release_date": "September 18, 2003",
+    "abbrev": "SS"
+  },
+  {
+    "series": "ex",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "EX3",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/0/08/SetSymbolDragon.png/40px-SetSymbolDragon.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/2/24/EX3_Logo_EN.png/150px-EX3_Logo_EN.png",
+    "name": "EX Dragon",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/EX_Dragon_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 97,
+      "secret": 3
+    },
+    "release_date": "November 24, 2003",
+    "abbrev": "DR"
+  },
+  {
+    "series": "ex",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "EX4",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/b/b9/SetSymbolTeam_Magma_vs_Team_Aqua.png/40px-SetSymbolTeam_Magma_vs_Team_Aqua.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/1/10/EX4_Logo_EN.png/150px-EX4_Logo_EN.png",
+    "name": "EX Team Magma vs Team Aqua",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/EX_Team_Magma_vs_Team_Aqua_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 95,
+      "secret": 2
+    },
+    "release_date": "March 15, 2004",
+    "abbrev": "MA"
+  },
+  {
+    "series": "ex",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "EX5",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/6/66/SetSymbolHidden_Legends.png/40px-SetSymbolHidden_Legends.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/0/02/EX5_Logo_EN.png/150px-EX5_Logo_EN.png",
+    "name": "EX Hidden Legends",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/EX_Hidden_Legends_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 101,
+      "secret": 1
+    },
+    "release_date": "June 14, 2004",
+    "abbrev": "HL"
+  },
+  {
+    "series": "ex",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "EX6",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/f/f6/SetSymbolFireRed_and_LeafGreen.png/40px-SetSymbolFireRed_and_LeafGreen.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/a/a4/EX6_Logo_EN.png/150px-EX6_Logo_EN.png",
+    "name": "EX FireRed & LeafGreen",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/EX_FireRed_%26_LeafGreen_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 112,
+      "secret": 4
+    },
+    "release_date": "August 30, 2004",
+    "abbrev": "RG"
+  },
+  {
+    "series": "ex",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "EX7",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/a/a0/SetSymbolTeam_Rocket_Returns.png/40px-SetSymbolTeam_Rocket_Returns.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/9/94/EX7_Logo_EN.png/150px-EX7_Logo_EN.png",
+    "name": "EX Team Rocket Returns",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/EX_Team_Rocket_Returns_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 109,
+      "secret": 2
+    },
+    "release_date": "November 8, 2004",
+    "abbrev": "TRR"
+  },
+  {
+    "series": "ex",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "EX8",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/7/73/SetSymbolDeoxys.png/40px-SetSymbolDeoxys.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/2/2b/EX8_Logo_EN.png/150px-EX8_Logo_EN.png",
+    "name": "EX Deoxys",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/EX_Deoxys_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 107,
+      "secret": 1
+    },
+    "release_date": "February 14, 2005",
+    "abbrev": "DX"
+  },
+  {
+    "series": "ex",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "EX9",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/5/5b/SetSymbolEmerald.png/40px-SetSymbolEmerald.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/e/e5/EX9_Logo_EN.png/150px-EX9_Logo_EN.png",
+    "name": "EX Emerald",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/EX_Emerald_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 106,
+      "secret": 1
+    },
+    "release_date": "May 9, 2005",
+    "abbrev": "EM"
+  },
+  {
+    "series": "ex",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "EX10",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/6/63/SetSymbolUnseen_Forces.png/40px-SetSymbolUnseen_Forces.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/3/31/EX10_Logo_EN.png/150px-EX10_Logo_EN.png",
+    "name": "EX Unseen Forces",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/EX_Unseen_Forces_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 115,
+      "secret": 2,
+      "unown": 28
+    },
+    "release_date": "August 22, 2005",
+    "abbrev": "UF"
+  },
+  {
+    "series": "ex",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "EX11",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/1/14/SetSymbolDelta_Species.png/40px-SetSymbolDelta_Species.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/7/7d/EX11_Logo_EN.png/150px-EX11_Logo_EN.png",
+    "name": "EX Delta Species",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/EX_Delta_Species_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 113,
+      "secret": 1
+    },
+    "release_date": "October 31, 2005",
+    "abbrev": "DS"
+  },
+  {
+    "series": "ex",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "EX12",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/2/2c/SetSymbolLegend_Maker.png/40px-SetSymbolLegend_Maker.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/c/c6/EX12_Logo_EN.png/150px-EX12_Logo_EN.png",
+    "name": "EX Legend Maker",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/EX_Legend_Maker_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 92,
+      "secret": 1
+    },
+    "release_date": "February 13, 2006",
+    "abbrev": "LM"
+  },
+  {
+    "series": "ex",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "EX13",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/b/ba/SetSymbolHolon_Phantoms.png/40px-SetSymbolHolon_Phantoms.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/4/45/EX13_Logo_EN.png/150px-EX13_Logo_EN.png",
+    "name": "EX Holon Phantoms",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/EX_Holon_Phantoms_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 110,
+      "secret": 1
+    },
+    "release_date": "May 3, 2006",
+    "abbrev": "HP"
+  },
+  {
+    "series": "ex",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "EX14",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/e/e9/SetSymbolCrystal_Guardians.png/40px-SetSymbolCrystal_Guardians.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/1/14/EX14_Logo_EN.png/150px-EX14_Logo_EN.png",
+    "name": "EX Crystal Guardians",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/EX_Crystal_Guardians_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 100
+    },
+    "release_date": "August 30, 2006",
+    "abbrev": "CG"
+  },
+  {
+    "series": "ex",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "EX15",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/e/e3/SetSymbolDragon_Frontiers.png/40px-SetSymbolDragon_Frontiers.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/d/d4/EX15_Logo_EN.png/150px-EX15_Logo_EN.png",
+    "name": "EX Dragon Frontiers",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/EX_Dragon_Frontiers_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 101
+    },
+    "release_date": "November 8, 2006",
+    "abbrev": "DF"
+  },
+  {
+    "series": "ex",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "EX16",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/5/5b/SetSymbolPower_Keepers.png/40px-SetSymbolPower_Keepers.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/e/eb/EX16_Logo_EN.png/150px-EX16_Logo_EN.png",
+    "name": "EX Power Keepers",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/EX_Power_Keepers_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 108
+    },
+    "release_date": "February 14, 2007",
+    "abbrev": "PK"
+  },
+  {
+    "series": "diamond-pearl",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "DP1",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/1/1f/SetSymbolDiamond_and_Pearl.png/40px-SetSymbolDiamond_and_Pearl.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/a/a2/DP1_Logo_EN.png/150px-DP1_Logo_EN.png",
+    "name": "Diamond & Pearl",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Diamond_%26_Pearl_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 130
+    },
+    "release_date": "May 23, 2007",
+    "abbrev": "DP"
+  },
+  {
+    "series": "diamond-pearl",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "DP2",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/e/e2/SetSymbolMysterious_Treasures.png/40px-SetSymbolMysterious_Treasures.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/1/1c/DP2_Logo_EN.png/150px-DP2_Logo_EN.png",
+    "name": "Diamond & Pearl—Mysterious Treasures",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Mysterious_Treasures_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 123,
+      "secret": 1
+    },
+    "release_date": "August 22, 2007",
+    "abbrev": "MT"
+  },
+  {
+    "series": "diamond-pearl",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "DP3",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/9/9c/SetSymbolSecret_Wonders.png/40px-SetSymbolSecret_Wonders.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/1/19/DP3_Logo_EN.png/150px-DP3_Logo_EN.png",
+    "name": "Diamond & Pearl—Secret Wonders",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Secret_Wonders_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 132
+    },
+    "release_date": "November 7, 2007",
+    "abbrev": "SW"
+  },
+  {
+    "series": "diamond-pearl",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "DP4",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/e/e8/SetSymbolGreat_Encounters.png/40px-SetSymbolGreat_Encounters.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/c/cc/DP4_Logo_EN.png/150px-DP4_Logo_EN.png",
+    "name": "Diamond & Pearl—Great Encounters",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Great_Encounters_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 106
+    },
+    "release_date": "February 13, 2008",
+    "abbrev": "GE"
+  },
+  {
+    "series": "diamond-pearl",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "DP5",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/7/7b/SetSymbolMajestic_Dawn.png/40px-SetSymbolMajestic_Dawn.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/d/de/DP5_Logo_EN.png/150px-DP5_Logo_EN.png",
+    "name": "Diamond & Pearl—Majestic Dawn",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Majestic_Dawn_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 100
+    },
+    "release_date": "May 21, 2008",
+    "abbrev": "MD"
+  },
+  {
+    "series": "diamond-pearl",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "DP6",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/2/28/SetSymbolLegends_Awakened.png/40px-SetSymbolLegends_Awakened.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/d/d7/DP6_Logo_EN.png/150px-DP6_Logo_EN.png",
+    "name": "Diamond & Pearl—Legends Awakened",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Legends_Awakened_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 146
+    },
+    "release_date": "August 20, 2008",
+    "abbrev": "LA"
+  },
+  {
+    "series": "diamond-pearl",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "DP7",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/7/72/SetSymbolStormfront.png/40px-SetSymbolStormfront.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/d/d5/DP7_Logo_EN.png/150px-DP7_Logo_EN.png",
+    "name": "Diamond & Pearl—Stormfront",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Stormfront_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 100,
+      "secret": 3,
+      "shiny": 3
+    },
+    "release_date": "November 5, 2008",
+    "abbrev": "SF"
+  },
+  {
+    "series": "platinum",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "PL1",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/7/7c/SetSymbolPlatinum.png/40px-SetSymbolPlatinum.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/4/47/PL1_Logo_EN.png/150px-PL1_Logo_EN.png",
+    "name": "Platinum",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Platinum_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 127,
+      "secret": 3,
+      "shiny": 3
+    },
+    "release_date": "February 11, 2009",
+    "abbrev": "PL"
+  },
+  {
+    "series": "platinum",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "PL2",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/6/64/SetSymbolRising_Rivals.png/40px-SetSymbolRising_Rivals.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/c/cd/PL2_Logo_EN.png/150px-PL2_Logo_EN.png",
+    "name": "Platinum—Rising Rivals",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Rising_Rivals_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 111,
+      "secret": 3,
+      "rotom": 6
+    },
+    "release_date": "May 16, 2009",
+    "abbrev": "RR"
+  },
+  {
+    "series": "platinum",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "PL3",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/f/f3/SetSymbolSupreme_Victors.png/40px-SetSymbolSupreme_Victors.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/1/1b/PL3_Logo_EN.png/150px-PL3_Logo_EN.png",
+    "name": "Platinum—Supreme Victors",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Supreme_Victors_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 147,
+      "secret": 3,
+      "shiny": 3
+    },
+    "release_date": "August 19, 2009",
+    "abbrev": "SV"
+  },
+  {
+    "series": "platinum",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "PL4",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/9/96/SetSymbolArceus.png/40px-SetSymbolArceus.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/0/00/PL4_Logo_EN.png/150px-PL4_Logo_EN.png",
+    "name": "Platinum—Arceus",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Platinum:_Arceus_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 99,
+      "arceus": 9,
+      "shiny": 3
+    },
+    "release_date": "November 4, 2009",
+    "abbrev": "AR"
+  },
+  {
+    "series": "heartgold-soulsilver",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "HGSS1",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/3/30/SetSymbolHeartGold_and_SoulSilver.png/40px-SetSymbolHeartGold_and_SoulSilver.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/0/02/HS1_Logo_EN.png/150px-HS1_Logo_EN.png",
+    "name": "HeartGold & SoulSilver",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/HeartGold_%26_SoulSilver_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 123,
+      "alpha-ligthograph": 1
+    },
+    "release_date": "February 10, 2010",
+    "abbrev": "HS"
+  },
+  {
+    "series": "heartgold-soulsilver",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "HGSS2",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/4/42/SetSymbolUnleashed.png/40px-SetSymbolUnleashed.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/2/27/HS2_Logo_EN.png/150px-HS2_Logo_EN.png",
+    "name": "HS—Unleashed",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Unleashed_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 95,
+      "alpha-ligthograph": 1
+    },
+    "release_date": "May 12, 2010",
+    "abbrev": "UL"
+  },
+  {
+    "series": "heartgold-soulsilver",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "HGSS3",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/7/73/SetSymbolUndaunted.png/40px-SetSymbolUndaunted.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/0/06/HS3_Logo_EN.png/150px-HS3_Logo_EN.png",
+    "name": "HS—Undaunted",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Undaunted_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 90,
+      "alpha-ligthograph": 1
+    },
+    "release_date": "August 18, 2010",
+    "abbrev": "UD"
+  },
+  {
+    "series": "heartgold-soulsilver",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "HGSS4",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/0/00/SetSymbolTriumphant.png/40px-SetSymbolTriumphant.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/9/97/HS4_Logo_EN.png/150px-HS4_Logo_EN.png",
+    "name": "HS—Triumphant",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Triumphant_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 102,
+      "alpha-ligthograph": 1
+    },
+    "release_date": "November 3, 2010",
+    "abbrev": "TM"
+  },
+  {
+    "series": "call-of-legends",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "COL1",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/5/5b/SetSymbolCall_of_Legends.png/40px-SetSymbolCall_of_Legends.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/b/b5/COL1_Logo_EN.png/150px-COL1_Logo_EN.png",
+    "name": "Pokémon TCG: Call of Legends",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Call_of_Legends_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 95,
+      "shiny-legendary": 11
+    },
+    "release_date": "February 9, 2011",
+    "abbrev": "CL"
+  },
+  {
+    "series": "black-white",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "BW1",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/6/64/SetSymbolBlack_and_White.png/40px-SetSymbolBlack_and_White.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/6/63/BW1_Logo_EN.png/150px-BW1_Logo_EN.png",
+    "name": "Black & White",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Black_%26_White_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 114,
+      "secret": 1
+    },
+    "release_date": "April 25, 2011",
+    "abbrev": "BLW"
+  },
+  {
+    "series": "black-white",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "BW2",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/4/43/SetSymbolEmerging_Powers.png/40px-SetSymbolEmerging_Powers.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/4/40/BW2_Logo_EN.png/150px-BW2_Logo_EN.png",
+    "name": "Black & White—Emerging Powers",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Emerging_Powers_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 98
+    },
+    "release_date": "August 31, 2011",
+    "abbrev": "EPO"
+  },
+  {
+    "series": "black-white",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "BW3",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/b/b3/SetSymbolNoble_Victories.png/40px-SetSymbolNoble_Victories.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/1/18/BW3_Logo_EN.png/150px-BW3_Logo_EN.png",
+    "name": "Black & White—Noble Victories",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Noble_Victories_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 101,
+      "secret": 1
+    },
+    "release_date": "November 16, 2011",
+    "abbrev": "NVI"
+  },
+  {
+    "series": "black-white",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "BW4",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/6/63/SetSymbolNext_Destinies.png/40px-SetSymbolNext_Destinies.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/1/16/BW4_Logo_EN.png/150px-BW4_Logo_EN.png",
+    "name": "Black & White—Next Destinies",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Next_Destinies_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 99,
+      "secret": 4
+    },
+    "release_date": "February 8, 2012",
+    "abbrev": "NXD"
+  },
+  {
+    "series": "black-white",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "BW5",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/2/25/SetSymbolDark_Explorers.png/40px-SetSymbolDark_Explorers.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/d/d3/BW5_Logo_EN.png/150px-BW5_Logo_EN.png",
+    "name": "Black & White—Dark Explorers",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Dark_Explorers_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 108,
+      "secret": 3
+    },
+    "release_date": "May 9, 2012",
+    "abbrev": "DEX"
+  },
+  {
+    "series": "black-white",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "BW6",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/a/af/SetSymbolDragons_Exalted.png/40px-SetSymbolDragons_Exalted.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/0/08/BW6_Logo_EN.png/150px-BW6_Logo_EN.png",
+    "name": "Black & White—Dragons Exalted",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Dragons_Exalted_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 124,
+      "secret": 4
+    },
+    "release_date": "August 15, 2012",
+    "abbrev": "DRX"
+  },
+  {
+    "series": "black-white",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "DV1",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/0/09/SetSymbolDragon_Vault.png/40px-SetSymbolDragon_Vault.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/0/0e/Dragon_Vault_Logo_EN.png/150px-Dragon_Vault_Logo_EN.png",
+    "name": "Dragon Vault",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Dragon_Vault_(TCG)",
+    "type": "special",
+    "cards_stats": {
+      "cards": 20,
+      "secret": 1
+    },
+    "release_date": "October 5, 2012",
+    "abbrev": "DRV"
+  },
+  {
+    "series": "black-white",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "BW7",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/a/a4/SetSymbolBoundaries_Crossed.png/40px-SetSymbolBoundaries_Crossed.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/8/86/BW7_Logo_EN.png/150px-BW7_Logo_EN.png",
+    "name": "Black & White—Boundaries Crossed",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Boundaries_Crossed_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 149,
+      "secret": 4
+    },
+    "release_date": "November 7, 2012",
+    "abbrev": "BCR"
+  },
+  {
+    "series": "black-white",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "BW8",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/9/93/SetSymbolPlasma_Storm.png/40px-SetSymbolPlasma_Storm.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/2/20/BW8_Logo_EN.png/150px-BW8_Logo_EN.png",
+    "name": "Black & White—Plasma Storm",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Plasma_Storm_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 135,
+      "secret": 3
+    },
+    "release_date": "February 6, 2013",
+    "abbrev": "PLS"
+  },
+  {
+    "series": "black-white",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "BW9",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/4/49/SetSymbolPlasma_Freeze.png/40px-SetSymbolPlasma_Freeze.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/d/d6/BW9_Logo_EN.png/150px-BW9_Logo_EN.png",
+    "name": "Black & White—Plasma Freeze",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Plasma_Freeze_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 116,
+      "secret": 6
+    },
+    "release_date": "May 8, 2013",
+    "abbrev": "PLF"
+  },
+  {
+    "series": "black-white",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "BW10",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/6/60/SetSymbolPlasma_Blast.png/40px-SetSymbolPlasma_Blast.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/c/cc/BW10_Logo_EN.png/150px-BW10_Logo_EN.png",
+    "name": "Black & White—Plasma Blast",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Plasma_Blast_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 101,
+      "secret": 4
+    },
+    "release_date": "August 14, 2013",
+    "abbrev": "PLB"
+  },
+  {
+    "series": "black-white",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "BW11",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/3/3c/SetSymbolLegendary_Treasures.png/40px-SetSymbolLegendary_Treasures.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/4/45/BW11_Logo_EN.png/150px-BW11_Logo_EN.png",
+    "name": "Black & White—Legendary Treasures",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Legendary_Treasures_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 113,
+      "secret": 2,
+      "radiant": 25
+    },
+    "release_date": "November 6, 2013",
+    "abbrev": "LTR"
+  },
+  {
+    "series": "xy",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "XY0",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/0/0b/SetSymbolKalos_Starter_Set.png/40px-SetSymbolKalos_Starter_Set.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/a/a6/Kalos_Starter_Set_Logo_EN.png/150px-Kalos_Starter_Set_Logo_EN.png",
+    "name": "XY—Kalos Starter Set",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Kalos_Starter_Set_(TCG)",
+    "type": "special",
+    "cards_stats": {
+      "cards": 39
+    },
+    "release_date": "November 8, 2013",
+    "abbrev": "KSS"
+  },
+  {
+    "series": "xy",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "XY1",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/6/6b/SetSymbolXY.png/40px-SetSymbolXY.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/4/4b/XY1_Logo_EN.png/150px-XY1_Logo_EN.png",
+    "name": "XY",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/XY_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 146
+    },
+    "release_date": "February 5, 2014",
+    "abbrev": "XY"
+  },
+  {
+    "series": "xy",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "XY2",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/1/1f/SetSymbolFlashfire.png/40px-SetSymbolFlashfire.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/e/ec/XY2_Logo_EN.png/150px-XY2_Logo_EN.png",
+    "name": "XY—Flashfire",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Flashfire_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 106,
+      "secret": 3
+    },
+    "release_date": "May 7, 2014",
+    "abbrev": "FLF"
+  },
+  {
+    "series": "xy",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "XY3",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/0/07/SetSymbolFurious_Fists.png/40px-SetSymbolFurious_Fists.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/1/11/XY3_Logo_EN.png/150px-XY3_Logo_EN.png",
+    "name": "XY—Furious Fists",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Furious_Fists_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 111,
+      "secret": 2
+    },
+    "release_date": "August 13, 2014",
+    "abbrev": "FFI"
+  },
+  {
+    "series": "xy",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "XY4",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/1/10/SetSymbolPhantom_Forces.png/40px-SetSymbolPhantom_Forces.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/7/7b/XY4_Logo_EN.png/150px-XY4_Logo_EN.png",
+    "name": "XY—Phantom Forces",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Phantom_Forces_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 119,
+      "secret": 3
+    },
+    "release_date": "November 5, 2014",
+    "abbrev": "PHF"
+  },
+  {
+    "series": "xy",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "XY5",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/e/e3/SetSymbolPrimal_Clash.png/40px-SetSymbolPrimal_Clash.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/2/2f/XY5_Logo_EN.png/150px-XY5_Logo_EN.png",
+    "name": "XY—Primal Clash",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Primal_Clash_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 160,
+      "secret": 4
+    },
+    "release_date": "February 4, 2015",
+    "abbrev": "PRC"
+  },
+  {
+    "series": "xy",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "DC1",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/0/06/SetSymbolDouble_Crisis.png/40px-SetSymbolDouble_Crisis.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/0/06/Double_Crisis_Logo_EN.png/150px-Double_Crisis_Logo_EN.png",
+    "name": "Double Crisis",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Double_Crisis_(TCG)",
+    "type": "special",
+    "cards_stats": {
+      "cards": 34
+    },
+    "release_date": "March 25, 2015",
+    "abbrev": "DCR"
+  },
+  {
+    "series": "xy",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "XY6",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/b/b1/SetSymbolRoaring_Skies.png/40px-SetSymbolRoaring_Skies.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/1/12/XY6_Logo_EN.png/150px-XY6_Logo_EN.png",
+    "name": "XY—Roaring Skies",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Roaring_Skies_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 108,
+      "secret": 2
+    },
+    "release_date": "May 6, 2015",
+    "abbrev": "ROS"
+  },
+  {
+    "series": "xy",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "XY7",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/4/4e/SetSymbolAncient_Origins.png/40px-SetSymbolAncient_Origins.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/a/a0/XY7_Logo_EN.png/150px-XY7_Logo_EN.png",
+    "name": "XY—Ancient Origins",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Ancient_Origins_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 98,
+      "secret": 2
+    },
+    "release_date": "August 12, 2015",
+    "abbrev": "AOR"
+  },
+  {
+    "series": "xy",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "XY8",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/0/0f/SetSymbolBREAKthrough.png/40px-SetSymbolBREAKthrough.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/c/cf/XY8_Logo_EN.png/150px-XY8_Logo_EN.png",
+    "name": "XY—BREAKthrough",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/BREAKthrough_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 162,
+      "secret": 2
+    },
+    "release_date": "November 4, 2015",
+    "abbrev": "BKT"
+  },
+  {
+    "series": "xy",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "XY9",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/d/d4/SetSymbolBREAKpoint.png/40px-SetSymbolBREAKpoint.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/a/a8/XY9_Logo_EN.png/150px-XY9_Logo_EN.png",
+    "name": "XY—BREAKpoint",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/BREAKpoint_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 122,
+      "secret": 1
+    },
+    "release_date": "February 3, 2016",
+    "abbrev": "BKP"
+  },
+  {
+    "series": "xy",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "G1",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/5/54/SetSymbolGenerations.png/40px-SetSymbolGenerations.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/d/df/Generations_Logo_EN.png/150px-Generations_Logo_EN.png",
+    "name": "Generations",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Generations_(TCG)",
+    "type": "special",
+    "cards_stats": {
+      "cards": 83,
+      "radiant": 32
+    },
+    "release_date": "February 22, 2016",
+    "abbrev": "GEN"
+  },
+  {
+    "series": "xy",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "XY10",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/f/f2/SetSymbolFates_Collide.png/40px-SetSymbolFates_Collide.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/8/88/XY10_Logo_EN.png/150px-XY10_Logo_EN.png",
+    "name": "XY—Fates Collide",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Fates_Collide_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 124,
+      "secret": 1
+    },
+    "release_date": "May 2, 2016",
+    "abbrev": "FCO"
+  },
+  {
+    "series": "xy",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "XY11",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/7/7b/SetSymbolSteam_Siege.png/40px-SetSymbolSteam_Siege.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/2/29/XY11_Logo_EN.png/150px-XY11_Logo_EN.png",
+    "name": "XY—Steam Siege",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Steam_Siege_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 114,
+      "secret": 2
+    },
+    "release_date": "August 3, 2016",
+    "abbrev": "STS"
+  },
+  {
+    "series": "xy",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "XY12",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/2/2b/SetSymbolEvolutions.png/40px-SetSymbolEvolutions.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/9/91/XY12_Logo_EN.png/150px-XY12_Logo_EN.png",
+    "name": "XY—Evolutions",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Evolutions_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 108,
+      "secret": 5
+    },
+    "release_date": "November 2, 2016",
+    "abbrev": "EVO"
+  },
+  {
+    "series": "sun-moon",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "SM1",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/c/cb/SetSymbolSun_and_Moon.png/40px-SetSymbolSun_and_Moon.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/0/0e/SM1_Logo_EN.png/150px-SM1_Logo_EN.png",
+    "name": "Sun & Moon",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Sun_%26_Moon_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 149,
+      "secret": 14
+    },
+    "release_date": "February 3, 2017",
+    "abbrev": "SUM"
+  },
+  {
+    "series": "sun-moon",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "SM2",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/6/68/SetSymbolGuardians_Rising.png/40px-SetSymbolGuardians_Rising.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/f/f9/SM2_Logo_EN.png/150px-SM2_Logo_EN.png",
+    "name": "Sun & Moon—Guardians Rising",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Guardians_Rising_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 145,
+      "secret": 24
+    },
+    "release_date": "May 5, 2017",
+    "abbrev": "GRI"
+  },
+  {
+    "series": "sun-moon",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "SM3",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/5/5f/SetSymbolBurning_Shadows.png/40px-SetSymbolBurning_Shadows.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/4/4a/SM3_Logo_EN.png/150px-SM3_Logo_EN.png",
+    "name": "Sun & Moon—Burning Shadows",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Burning_Shadows_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 147,
+      "secret": 22
+    },
+    "release_date": "August 4, 2017",
+    "abbrev": "BUS"
+  },
+  {
+    "series": "sun-moon",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "SM3.5",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/5/54/SetSymbolShining_Legends.png/40px-SetSymbolShining_Legends.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/3/3e/Shining_Legends_Logo_EN.png/150px-Shining_Legends_Logo_EN.png",
+    "name": "Shining Legends",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Shining_Legends_(TCG)",
+    "type": "special",
+    "cards_stats": {
+      "cards": 73,
+      "secret": 5
+    },
+    "release_date": "October 6, 2017",
+    "abbrev": "SLG"
+  },
+  {
+    "series": "sun-moon",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "SM4",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/4/46/SetSymbolCrimson_Invasion.png/40px-SetSymbolCrimson_Invasion.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/5/5e/SM4_Logo_EN.png/150px-SM4_Logo_EN.png",
+    "name": "Sun & Moon—Crimson Invasion",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Crimson_Invasion_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 111,
+      "secret": 13
+    },
+    "release_date": "November 3, 2017",
+    "abbrev": "CIN"
+  },
+  {
+    "series": "sun-moon",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "SM5",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/b/b8/SetSymbolUltra_Prism.png/40px-SetSymbolUltra_Prism.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/5/5f/SM5_Logo_EN.png/150px-SM5_Logo_EN.png",
+    "name": "Sun & Moon—Ultra Prism",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Ultra_Prism_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 156,
+      "secret": 17
+    },
+    "release_date": "February 2, 2018",
+    "abbrev": "UPR"
+  },
+  {
+    "series": "sun-moon",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "SM6",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/8/8a/SetSymbolForbidden_Light.png/40px-SetSymbolForbidden_Light.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/b/b9/SM6_Logo_EN.png/150px-SM6_Logo_EN.png",
+    "name": "Sun & Moon—Forbidden Light",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Forbidden_Light_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 131,
+      "secret": 15
+    },
+    "release_date": "May 4, 2018",
+    "abbrev": "FLI"
+  },
+  {
+    "series": "sun-moon",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "SM7",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/4/4a/SetSymbolCelestial_Storm.png/40px-SetSymbolCelestial_Storm.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/1/13/SM7_Logo_EN.png/150px-SM7_Logo_EN.png",
+    "name": "Sun & Moon—Celestial Storm",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Celestial_Storm_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 168,
+      "secret": 15
+    },
+    "release_date": "August 3, 2018",
+    "abbrev": "CES"
+  },
+  {
+    "series": "sun-moon",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "SM7.5",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/4/43/SetSymbolDragon_Majesty.png/40px-SetSymbolDragon_Majesty.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/0/04/Dragon_Majesty_Logo_EN.png/150px-Dragon_Majesty_Logo_EN.png",
+    "name": "Dragon Majesty",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Dragon_Majesty_(TCG)",
+    "type": "special",
+    "cards_stats": {
+      "cards": 70,
+      "secret": 8
+    },
+    "release_date": "September 7, 2018",
+    "abbrev": "DRM"
+  },
+  {
+    "series": "sun-moon",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "SM8",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/c/c8/SetSymbolLost_Thunder.png/40px-SetSymbolLost_Thunder.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/c/c5/SM8_Logo_EN.png/150px-SM8_Logo_EN.png",
+    "name": "Sun & Moon—Lost Thunder",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Lost_Thunder_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 214,
+      "secret": 22
+    },
+    "release_date": "November 2, 2018",
+    "abbrev": "LOT"
+  },
+  {
+    "series": "sun-moon",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "SM9",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/2/27/SetSymbolTeam_Up.png/40px-SetSymbolTeam_Up.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/f/fd/SM9_Logo_EN.png/150px-SM9_Logo_EN.png",
+    "name": "Sun & Moon—Team Up",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Team_Up_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 181,
+      "secret": 15
+    },
+    "release_date": "February 1, 2019",
+    "abbrev": "TEU"
+  },
+  {
+    "series": "sun-moon",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "DET*GUM*",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/6/6a/SetSymbolDetective_Pikachu.png/40px-SetSymbolDetective_Pikachu.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/d/df/Detective_Pikachu_movie_logo.png/150px-Detective_Pikachu_movie_logo.png",
+    "name": "Detective Pikachu",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Detective_Pikachu_(TCG)",
+    "type": "special",
+    "cards_stats": {
+      "cards": 18
+    },
+    "release_date": "March 29, 2019",
+    "abbrev": "DET"
+  },
+  {
+    "series": "sun-moon",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "SM10",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/e/eb/SetSymbolUnbroken_Bonds.png/40px-SetSymbolUnbroken_Bonds.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/0/04/SM10_Logo_EN.png/150px-SM10_Logo_EN.png",
+    "name": "Sun & Moon—Unbroken Bonds",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Unbroken_Bonds_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 214,
+      "secret": 20
+    },
+    "release_date": "May 3, 2019",
+    "abbrev": "UNB"
+  },
+  {
+    "series": "sun-moon",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "SM11",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/e/e5/SetSymbolUnified_Minds.png/40px-SetSymbolUnified_Minds.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/9/92/SM11_Logo_EN.png/150px-SM11_Logo_EN.png",
+    "name": "Sun & Moon—Unified Minds",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Unified_Minds_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 236,
+      "secret": 22
+    },
+    "release_date": "August 2, 2019",
+    "abbrev": "UNM"
+  },
+  {
+    "series": "sun-moon",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "SM11.5",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/1/14/SetSymbolHidden_Fates.png/40px-SetSymbolHidden_Fates.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/d/d6/Hidden_Fates_Logo_EN.png/150px-Hidden_Fates_Logo_EN.png",
+    "name": "Hidden Fates",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Hidden_Fates_(TCG)",
+    "type": "special",
+    "cards_stats": {
+      "cards": 68,
+      "secret": 1,
+      "shiny-vault": 94
+    },
+    "release_date": "August 23, 2019",
+    "abbrev": "HIF"
+  },
+  {
+    "series": "sun-moon",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "SM12",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/3/3a/SetSymbolCosmic_Eclipse.png/40px-SetSymbolCosmic_Eclipse.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/8/8a/SM12_Logo_EN.png/150px-SM12_Logo_EN.png",
+    "name": "Sun & Moon—Cosmic Eclipse",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Cosmic_Eclipse_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 236,
+      "secret": 35
+    },
+    "release_date": "November 1, 2019",
+    "abbrev": "CEC"
+  },
+  {
+    "series": "sword-shield",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "SWSH1",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/5/51/SetSymbolSword_and_Shield.png/40px-SetSymbolSword_and_Shield.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/5/50/SWSH1_Logo_EN.png/150px-SWSH1_Logo_EN.png",
+    "name": "Sword & Shield",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Sword_%26_Shield_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 202,
+      "secret": 14
+    },
+    "release_date": "February 7, 2020",
+    "abbrev": "SSH"
+  },
+  {
+    "series": "sword-shield",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "SWSH2",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/0/0f/SetSymbolRebel_Clash.png/40px-SetSymbolRebel_Clash.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/2/29/SWSH2_Logo_EN.png/150px-SWSH2_Logo_EN.png",
+    "name": "Sword & Shield—Rebel Clash",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Rebel_Clash_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 192,
+      "secret": 17
+    },
+    "release_date": "May 1, 2020",
+    "abbrev": "RCL"
+  },
+  {
+    "series": "sword-shield",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "SWSH3",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/d/d9/SetSymbolDarkness_Ablaze.png/40px-SetSymbolDarkness_Ablaze.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/e/e0/SWSH3_Logo_EN.png/150px-SWSH3_Logo_EN.png",
+    "name": "Sword & Shield—Darkness Ablaze",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Darkness_Ablaze_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 189,
+      "secret": 12
+    },
+    "release_date": "August 14, 2020",
+    "abbrev": "DAA"
+  },
+  {
+    "series": "sword-shield",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "SWSH3.5*CP*",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/4/4d/SetSymbolChampion_Path.png/40px-SetSymbolChampion_Path.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/f/f2/Champion_Path_Logo_EN.png/150px-Champion_Path_Logo_EN.png",
+    "name": "Champion's Path",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Champion%27s_Path_(TCG)",
+    "type": "special",
+    "cards_stats": {
+      "cards": 73,
+      "secret": 7
+    },
+    "release_date": "September 25, 2020",
+    "abbrev": "CPA"
+  },
+  {
+    "series": "sword-shield",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "SWSH4",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/9/9b/SetSymbolVivid_Voltage.png/40px-SetSymbolVivid_Voltage.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/c/c1/SWSH4_Logo_EN.png/150px-SWSH4_Logo_EN.png",
+    "name": "Sword & Shield—Vivid Voltage",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Vivid_Voltage_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 185,
+      "secret": 18
+    },
+    "release_date": "November 13, 2020",
+    "abbrev": "VIV"
+  },
+  {
+    "series": "sword-shield",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "SWSH4.5*SF*",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/6/64/SetSymbolShining_Fates.png/40px-SetSymbolShining_Fates.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/6/63/Shining_Fates_Logo_EN.png/150px-Shining_Fates_Logo_EN.png",
+    "name": "Shining Fates",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Shining_Fates_(TCG)",
+    "type": "special",
+    "cards_stats": {
+      "cards": 72,
+      "secret": 1,
+      "shiny-vault": 122
+    },
+    "release_date": "February 19, 2021",
+    "abbrev": "SHF"
+  },
+  {
+    "series": "sword-shield",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "SWSH5",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/1/16/SetSymbolBattle_Styles.png/40px-SetSymbolBattle_Styles.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/b/b3/SWSH5_Logo_EN.png/150px-SWSH5_Logo_EN.png",
+    "name": "Sword & Shield—Battle Styles",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Battle_Styles_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 163,
+      "secret": 20
+    },
+    "release_date": "March 19, 2021",
+    "abbrev": "BST"
+  },
+  {
+    "series": "sword-shield",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "SWSH6",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/0/02/SetSymbolChilling_Reign.png/40px-SetSymbolChilling_Reign.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/0/01/SWSH6_Logo_EN.png/150px-SWSH6_Logo_EN.png",
+    "name": "Sword & Shield—Chilling Reign",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Chilling_Reign_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 198,
+      "secret": 35
+    },
+    "release_date": "June 18, 2021",
+    "abbrev": "CRE"
+  },
+  {
+    "series": "sword-shield",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "SWSH7",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/c/cb/SetSymbolEvolving_Skies.png/40px-SetSymbolEvolving_Skies.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/a/ac/SWSH7_Logo_EN.png/150px-SWSH7_Logo_EN.png",
+    "name": "Sword & Shield—Evolving Skies",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Evolving_Skies_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 203,
+      "secret": 34
+    },
+    "release_date": "August 27, 2021",
+    "abbrev": "EVS"
+  },
+  {
+    "series": "sword-shield",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "CEL25",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/3/32/SetSymbolCelebrations.png/40px-SetSymbolCelebrations.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/3/32/Celebrations_Logo_EN.png/150px-Celebrations_Logo_EN.png",
+    "name": "Celebrations",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Celebrations_(TCG)",
+    "type": "special",
+    "cards_stats": {
+      "cards": 25,
+      "classic": 25
+    },
+    "release_date": "October 8, 2021",
+    "abbrev": "CEL"
+  },
+  {
+    "series": "sword-shield",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "SWSH8",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/7/79/SetSymbolFusion_Strike.png/40px-SetSymbolFusion_Strike.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/9/94/SWSH8_Logo_EN.png/150px-SWSH8_Logo_EN.png",
+    "name": "Sword & Shield—Fusion Strike",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Fusion_Strike_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 264,
+      "secret": 20
+    },
+    "release_date": "November 12, 2021",
+    "abbrev": "FST"
+  },
+  {
+    "series": "sword-shield",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "SWSH9",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/0/00/SetSymbolBrilliant_Stars.png/40px-SetSymbolBrilliant_Stars.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/1/1e/SWSH9_Logo_EN.png/150px-SWSH9_Logo_EN.png",
+    "name": "Sword & Shield—Brilliant Stars",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Brilliant_Stars_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 172,
+      "secret": 14,
+      "trainer-gallery": 30
+    },
+    "release_date": "February 25, 2022",
+    "abbrev": "BRS"
+  },
+  {
+    "series": "sword-shield",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "SWSH10",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/7/7b/SetSymbolAstral_Radiance.png/40px-SetSymbolAstral_Radiance.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/e/e0/SWSH10_Logo_EN.png/150px-SWSH10_Logo_EN.png",
+    "name": "Sword & Shield—Astral Radiance",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Astral_Radiance_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 189,
+      "secret": 27,
+      "trainer-gallery": 30
+    },
+    "release_date": "May 27, 2022",
+    "abbrev": "ASR"
+  },
+  {
+    "series": "sword-shield",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "PGO",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/0/01/SetSymbolPok%C3%A9mon_GO.png/40px-SetSymbolPok%C3%A9mon_GO.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/3/3d/Pokemon_Go_Logo.png/150px-Pokemon_Go_Logo.png",
+    "name": "Pokémon TCG: Pokémon GO",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_GO_(TCG)",
+    "type": "special",
+    "cards_stats": {
+      "cards": 78,
+      "secret": 10
+    },
+    "release_date": "July 1, 2022",
+    "abbrev": "PGO"
+  },
+  {
+    "series": "sword-shield",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "SWSH11",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/7/7e/SetSymbolLost_Origin.png/40px-SetSymbolLost_Origin.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/4/4d/SWSH11_Logo_EN.png/150px-SWSH11_Logo_EN.png",
+    "name": "Sword & Shield—Lost Origin",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Lost_Origin_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 196,
+      "secret": 21,
+      "trainer-gallery": 30
+    },
+    "release_date": "September 9, 2022",
+    "abbrev": "LOR"
+  },
+  {
+    "series": "sword-shield",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "SWSH12",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/5/55/SetSymbolSilver_Tempest.png/40px-SetSymbolSilver_Tempest.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/0/03/SWSH12_Logo_EN.png/150px-SWSH12_Logo_EN.png",
+    "name": "Sword & Shield—Silver Tempest",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Silver_Tempest_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 195,
+      "secret": 20,
+      "trainer-gallery": 30
+    },
+    "release_date": "November 11, 2022",
+    "abbrev": "SIT"
+  },
+  {
+    "series": "sword-shield",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "SWSH12.5*CZ*",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/2/21/SetSymbolCrown_Zenith.png/40px-SetSymbolCrown_Zenith.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/9/9a/Crown_Zenith_Logo_EN.png/150px-Crown_Zenith_Logo_EN.png",
+    "name": "Crown Zenith",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Crown_Zenith_(TCG)",
+    "type": "special",
+    "cards_stats": {
+      "cards": 159,
+      "secret": 1,
+      "galarian-gallery": 70
+    },
+    "release_date": "January 20, 2023",
+    "abbrev": "CRZ"
+  },
+  {
+    "series": "scarlet-violet",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "SV1",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/9/9c/SetSymbolScarlet_and_Violet.png/40px-SetSymbolScarlet_and_Violet.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/7/72/SV1_Logo_EN.png/150px-SV1_Logo_EN.png",
+    "name": "Scarlet & Violet",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Scarlet_%26_Violet_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 198,
+      "secret": 60
+    },
+    "release_date": "March 31, 2023",
+    "abbrev": "SVI"
+  },
+  {
+    "series": "scarlet-violet",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "SV2",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/8/8d/SetSymbolPaldea_Evolved.png/40px-SetSymbolPaldea_Evolved.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/d/d8/SV2_Logo_EN.png/150px-SV2_Logo_EN.png",
+    "name": "Scarlet & Violet—Paldea Evolved",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Paldea_Evolved_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 193,
+      "secret": 86
+    },
+    "release_date": "June 9, 2023",
+    "abbrev": "PAL"
+  },
+  {
+    "series": "scarlet-violet",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "SV3",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/3/3d/SetSymbolObsidian_Flames.png/40px-SetSymbolObsidian_Flames.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/b/bd/SV3_Logo_EN.png/150px-SV3_Logo_EN.png",
+    "name": "Scarlet & Violet—Obsidian Flames",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Obsidian_Flames_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 197,
+      "secret": 33
+    },
+    "release_date": "August 11, 2023",
+    "abbrev": "OBF"
+  },
+  {
+    "series": "scarlet-violet",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "SV3.5",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/7/71/SetSymbol151.png/40px-SetSymbol151.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/2/26/SV3.5_Logo_EN.png/150px-SV3.5_Logo_EN.png",
+    "name": "Scarlet & Violet—151",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/151_(TCG)",
+    "type": "special",
+    "cards_stats": {
+      "cards": 165,
+      "secret": 42
+    },
+    "release_date": "September 22, 2023",
+    "abbrev": "MEW"
+  },
+  {
+    "series": "scarlet-violet",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "SV4",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/f/fa/SetSymbolParadox_Rift.png/40px-SetSymbolParadox_Rift.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/7/7e/SV4_Logo_EN.png/150px-SV4_Logo_EN.png",
+    "name": "Scarlet & Violet—Paradox Rift",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Paradox_Rift_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 182,
+      "secret": 84
+    },
+    "release_date": "November 3, 2023",
+    "abbrev": "PAR"
+  },
+  {
+    "series": "scarlet-violet",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "SV4.5",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/e/ea/SetSymbolPaldean_Fates.png/40px-SetSymbolPaldean_Fates.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/2/20/SV4.5_Logo_EN.png/150px-SV4.5_Logo_EN.png",
+    "name": "Scarlet & Violet—Paldean Fates",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Paldean_Fates_(TCG)",
+    "type": "special",
+    "cards_stats": {
+      "cards": 91,
+      "secret": 154
+    },
+    "release_date": "January 26, 2024",
+    "abbrev": "PAF"
+  },
+  {
+    "series": "scarlet-violet",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "SV5",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/3/33/SetSymbolTemporal_Forces.png/40px-SetSymbolTemporal_Forces.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/d/d9/SV5_Logo_EN.png/150px-SV5_Logo_EN.png",
+    "name": "Scarlet & Violet—Temporal Forces",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Temporal_Forces_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 162,
+      "secret": 56
+    },
+    "release_date": "March 22, 2024",
+    "abbrev": "TEF"
+  },
+  {
+    "series": "scarlet-violet",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "SV6",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/6/65/SetSymbolTwilight_Masquerade.png/40px-SetSymbolTwilight_Masquerade.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/1/15/SV6_Logo_EN.png/150px-SV6_Logo_EN.png",
+    "name": "Scarlet & Violet—Twilight Masquerade",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Twilight_Masquerade_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 167,
+      "secret": 59
+    },
+    "release_date": "May 24, 2024",
+    "abbrev": "TWM"
+  },
+  {
+    "series": "scarlet-violet",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "SV6.5",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/7/74/SetSymbolShrouded_Fable.png/40px-SetSymbolShrouded_Fable.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/4/43/SV6.5_Logo_EN.png/150px-SV6.5_Logo_EN.png",
+    "name": "Scarlet & Violet—Shrouded Fable",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Shrouded_Fable_(TCG)",
+    "type": "special",
+    "cards_stats": {
+      "cards": 64,
+      "secret": 35
+    },
+    "release_date": "August 2, 2024",
+    "abbrev": "SFA"
+  },
+  {
+    "series": "scarlet-violet",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "SV7",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/f/f1/SetSymbolStellar_Crown.png/40px-SetSymbolStellar_Crown.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/8/8d/SV7_Logo_EN.png/150px-SV7_Logo_EN.png",
+    "name": "Scarlet & Violet—Stellar Crown",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Stellar_Crown_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 142,
+      "secret": 33
+    },
+    "release_date": "September 13, 2024",
+    "abbrev": "SCR"
+  },
+  {
+    "series": "scarlet-violet",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "SV8",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/d/de/SetSymbolSurging_Sparks.png/40px-SetSymbolSurging_Sparks.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/d/d1/SV8_Logo_EN.png/150px-SV8_Logo_EN.png",
+    "name": "Scarlet & Violet—Surging Sparks",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Surging_Sparks_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 191,
+      "secret": 61
+    },
+    "release_date": "November 8, 2024",
+    "abbrev": "SSP"
+  },
+  {
+    "series": "scarlet-violet",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "SV8.5",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/a/a2/SetSymbolPrismatic_Evolutions.png/40px-SetSymbolPrismatic_Evolutions.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/b/b8/SV8.5_Logo_EN.png/150px-SV8.5_Logo_EN.png",
+    "name": "Scarlet & Violet—Prismatic Evolutions",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Prismatic_Evolutions_(TCG)",
+    "type": "special",
+    "cards_stats": {
+      "cards": 131,
+      "secret": 49
+    },
+    "release_date": "January 17, 2025",
+    "abbrev": "PRE"
+  },
+  {
+    "series": "scarlet-violet",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "SV9",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/5/51/SetSymbolJourney_Together.png/40px-SetSymbolJourney_Together.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/2/2e/SV9_Logo_EN.png/150px-SV9_Logo_EN.png",
+    "name": "Scarlet & Violet—Journey Together",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Journey_Together_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 159,
+      "secret": 31
+    },
+    "release_date": "March 28, 2025",
+    "abbrev": "JTG"
+  },
+  {
+    "series": "scarlet-violet",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "SV10",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/d/d9/SetSymbolDestined_Rivals.png/40px-SetSymbolDestined_Rivals.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/f/fd/SV10_Logo_EN.png/150px-SV10_Logo_EN.png",
+    "name": "Scarlet & Violet—Destined Rivals",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Destined_Rivals_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 182,
+      "secret": 62
+    },
+    "release_date": "May 30, 2025",
+    "abbrev": "DRI"
+  },
+  {
+    "series": "scarlet-violet",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "ZSV10.5",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/7/78/SetSymbolBlack_Bolt.png/40px-SetSymbolBlack_Bolt.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/a/ab/SV10.5_BLK_Logo_EN.png/150px-SV10.5_BLK_Logo_EN.png",
+    "name": "Scarlet & Violet—Black Bolt",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Black_Bolt_%26_White_Flare_(TCG)",
+    "type": "special",
+    "cards_stats": {
+      "cards": 86,
+      "secret": 86
+    },
+    "release_date": "July 18, 2025",
+    "abbrev": "BLK"
+  },
+  {
+    "series": "scarlet-violet",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "RSV10.5",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/4/49/SetSymbolWhite_Flare.png/40px-SetSymbolWhite_Flare.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/5/5c/SV10.5_WHT_Logo_EN.png/150px-SV10.5_WHT_Logo_EN.png",
+    "name": "Scarlet & Violet—White Flare",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Black_Bolt_%26_White_Flare_(TCG)",
+    "type": "special",
+    "cards_stats": {
+      "cards": 86,
+      "secret": 87
+    },
+    "release_date": "July 18, 2025",
+    "abbrev": "WHT"
+  },
+  {
+    "series": "mega-evolution",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "1",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/f/fc/SetSymbolMega_Evolution.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/b/be/ME1_Logo_EN.png/150px-ME1_Logo_EN.png",
+    "name": "Mega Evolution",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Mega_Evolution_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 132,
+      "secret": 56
+    },
+    "release_date": "September 26, 2025",
+    "abbrev": "MEG"
+  },
+  {
+    "series": "mega-evolution",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "2",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/7/7f/SetSymbolPhantasmal_Flames.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/f/fa/ME2_Logo_EN.png/150px-ME2_Logo_EN.png",
+    "name": "Phantasmal Flames",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Phantasmal_Flames_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 94,
+      "secret": 26,
+      "notes": ["Over 26 Secret cards"]
+    },
+    "release_date": "November 14, 2025",
+    "abbrev": "PFL"
+  },
+  {
+    "series": "basic-energy",
+    "series_type": "other",
+    "language": "en",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/d/d3/SetSymbolSVE_Basic_Energies.png/40px-SetSymbolSVE_Basic_Energies.png",
+    "name": "SVE Basic Energies",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/SVE_Basic_Energies_(TCG)",
+    "cards_stats": {
+      "cards": 24
+    },
+    "release_date": "March 31, 2023",
+    "abbrev": "SVE"
+  },
+  {
+    "series": "basic-energy",
+    "series_type": "other",
+    "language": "en",
+    "name": "MEE Basic Energies",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/MEE_Basic_Energies_(TCG)",
+    "cards_stats": {
+      "cards": 8
+    },
+    "release_date": "September 26, 2025",
+    "abbrev": "MEE"
+  },
+  {
+    "series": "black-star-promo",
+    "series_type": "other",
+    "language": "en",
+    "name": "Wizards Black Star Promos",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Wizards_Black_Star_Promos_(TCG)",
+    "cards_stats": {
+      "cards": 53
+    },
+    "release_date": "July 1999 – March 2003",
+    "abbrev": "WP"
+  },
+  {
+    "series": "black-star-promo",
+    "series_type": "other",
+    "language": "en",
+    "name": "Nintendo Black Star Promos",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Nintendo_Black_Star_Promos_(TCG)",
+    "cards_stats": {
+      "cards": 40
+    },
+    "release_date": "October 2003 – September 2006",
+    "abbrev": "NP"
+  },
+  {
+    "series": "black-star-promo",
+    "series_type": "other",
+    "language": "en",
+    "name": "DP Black Star Promos",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/DP_Black_Star_Promos_(TCG)",
+    "cards_stats": {
+      "cards": 56
+    },
+    "release_date": "May 2007 – December 2009",
+    "abbrev": "DPP"
+  },
+  {
+    "series": "black-star-promo",
+    "series_type": "other",
+    "language": "en",
+    "name": "HGSS Black Star Promos",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/HGSS_Black_Star_Promos_(TCG)",
+    "cards_stats": {
+      "cards": 25
+    },
+    "release_date": "February 2010 – February 2011",
+    "abbrev": "HSP"
+  },
+  {
+    "series": "black-star-promo",
+    "series_type": "other",
+    "language": "en",
+    "name": "BW Black Star Promos",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/BW_Black_Star_Promos_(TCG)",
+    "cards_stats": {
+      "cards": 99,
+      "notes": ["Numbered up to 101, but 2 remain unreleased"]
+    },
+    "release_date": "March 2011 – December 2013",
+    "abbrev": "BWP"
+  },
+  {
+    "series": "black-star-promo",
+    "series_type": "other",
+    "language": "en",
+    "name": "XY Black Star Promos",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/XY_Black_Star_Promos_(TCG)",
+    "cards_stats": {
+      "cards": 211
+    },
+    "release_date": "October 2013 – May 2017",
+    "abbrev": "XYP"
+  },
+  {
+    "series": "black-star-promo",
+    "series_type": "other",
+    "language": "en",
+    "name": "SM Black Star Promos",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/SM_Black_Star_Promos_(TCG)",
+    "cards_stats": {
+      "cards": 248
+    },
+    "release_date": "November 2016 – November 2021",
+    "abbrev": "SMP"
+  },
+  {
+    "series": "black-star-promo",
+    "series_type": "other",
+    "language": "en",
+    "name": "SWSH Black Star Promos",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/SWSH_Black_Star_Promos_(TCG)",
+    "cards_stats": {
+      "cards": 307
+    },
+    "release_date": "November 2019 – August 2023",
+    "abbrev": "SSP"
+  },
+  {
+    "series": "black-star-promo",
+    "series_type": "other",
+    "language": "en",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/d/d8/SetSymbolSVP_Black_Star_Promos.png/40px-SetSymbolSVP_Black_Star_Promos.png",
+    "name": "SVP Black Star Promos",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/SVP_Black_Star_Promos_(TCG)",
+    "cards_stats": {
+      "cards": null
+    },
+    "release_date": "January 2023 – Present",
+    "abbrev": "SVP"
+  },
+  {
+    "series": "black-star-promo",
+    "series_type": "other",
+    "language": "en",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/0/0c/SetSymbolMEP_Black_Star_Promos.png/40px-SetSymbolMEP_Black_Star_Promos.png",
+    "name": "MEP Black Star Promos",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/MEP_Black_Star_Promos_(TCG)",
+    "cards_stats": {
+      "cards": null
+    },
+    "release_date": "September 2025 – Present",
+    "abbrev": "MEP"
+  },
+  {
+    "series": "mcdonalds",
+    "series_type": "other",
+    "language": "en",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/8/8a/SetSymbolMcDonalds_Collection.png/40px-SetSymbolMcDonalds_Collection.png",
+    "name": "McDonald's Collection 2011",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/McDonald%27s_Collection_(TCG)",
+    "cards_stats": {
+      "cards": 12
+    },
+    "release_date": "June 17, 2011",
+    "abbrev": "M11"
+  },
+  {
+    "series": "mcdonalds",
+    "series_type": "other",
+    "language": "en",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/9/9b/SetSymbolMcDonalds_Collection_2012.png/40px-SetSymbolMcDonalds_Collection_2012.png",
+    "name": "McDonald's Collection 2012",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/McDonald%27s_Collection_2012_(TCG)",
+    "cards_stats": {
+      "cards": 12
+    },
+    "release_date": "June 15, 2012",
+    "abbrev": "M12"
+  },
+  {
+    "series": "mcdonalds",
+    "series_type": "other",
+    "language": "en",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/8/8b/SetSymbolMcDonalds_Collection_2013.png/40px-SetSymbolMcDonalds_Collection_2013.png",
+    "name": "McDonald's Collection 2013",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/McDonald%27s_Collection_2013_(TCG)",
+    "cards_stats": {
+      "cards": 12
+    },
+    "release_date": "October 13, 2013",
+    "abbrev": "M13"
+  },
+  {
+    "series": "mcdonalds",
+    "series_type": "other",
+    "language": "en",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/e/ee/SetSymbolMcDonalds_Collection_2014.png/40px-SetSymbolMcDonalds_Collection_2014.png",
+    "name": "McDonald's Collection 2014",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/McDonald%27s_Collection_2014_(TCG)",
+    "cards_stats": {
+      "cards": 12
+    },
+    "release_date": "May 23, 2014",
+    "abbrev": "M14"
+  },
+  {
+    "series": "mcdonalds",
+    "series_type": "other",
+    "language": "en",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/6/6f/SetSymbolMcDonalds_Collection_2015.png/40px-SetSymbolMcDonalds_Collection_2015.png",
+    "name": "McDonald's Collection 2015",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/McDonald%27s_Collection_2015_(TCG)",
+    "cards_stats": {
+      "cards": 12
+    },
+    "release_date": "October 14, 2015",
+    "abbrev": "M15"
+  },
+  {
+    "series": "mcdonalds",
+    "series_type": "other",
+    "language": "en",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/4/4a/SetSymbolMcDonalds_Collection_2016.png/40px-SetSymbolMcDonalds_Collection_2016.png",
+    "name": "McDonald's Collection 2016",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/McDonald%27s_Collection_2016_(TCG)",
+    "cards_stats": {
+      "cards": 12
+    },
+    "release_date": "August 19, 2016",
+    "abbrev": "M16"
+  },
+  {
+    "series": "mcdonalds",
+    "series_type": "other",
+    "language": "en",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/4/41/SetSymbolMcDonalds_Collection_2017.png",
+    "name": "McDonald's Collection 2017",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/McDonald%27s_Collection_2017_(TCG)",
+    "cards_stats": {
+      "cards": 12
+    },
+    "release_date": "July 2017",
+    "abbrev": "M17"
+  },
+  {
+    "series": "mcdonalds",
+    "series_type": "other",
+    "language": "en",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/e/ea/SetSymbolMcDonalds_Collection_2018.png/40px-SetSymbolMcDonalds_Collection_2018.png",
+    "name": "McDonald's Collection 2018",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/McDonald%27s_Collection_2018_(TCG)",
+    "cards_stats": {
+      "cards": 12
+    },
+    "release_date": "October 16, 2018",
+    "abbrev": "M18"
+  },
+  {
+    "series": "mcdonalds",
+    "series_type": "other",
+    "language": "en",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/c/c5/SetSymbolMcDonalds_Collection_2019.png/40px-SetSymbolMcDonalds_Collection_2019.png",
+    "name": "McDonald's Collection 2019",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/McDonald%27s_Collection_2019_(TCG)",
+    "cards_stats": {
+      "cards": 12
+    },
+    "release_date": "October 15, 2019",
+    "abbrev": "M19"
+  },
+  {
+    "series": "mcdonalds",
+    "series_type": "other",
+    "language": "en",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/0/0c/SetSymbolMcDonalds_Collection_2021.png/40px-SetSymbolMcDonalds_Collection_2021.png",
+    "name": "McDonald's Collection 2021",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/McDonald%27s_Collection_2021_(TCG)",
+    "cards_stats": {
+      "cards": 25
+    },
+    "release_date": "February 9, 2021",
+    "abbrev": "M21"
+  },
+  {
+    "series": "mcdonalds",
+    "series_type": "other",
+    "language": "en",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/a/a0/SetSymbolMcDonalds_Collection_2022.png/40px-SetSymbolMcDonalds_Collection_2022.png",
+    "name": "McDonald's Collection 2022",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/McDonald%27s_Collection_2022_(TCG)",
+    "cards_stats": {
+      "cards": 15
+    },
+    "release_date": "August 3, 2022",
+    "abbrev": "M22"
+  },
+  {
+    "series": "mcdonalds",
+    "series_type": "other",
+    "language": "en",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/9/91/SetSymbolMcDonalds_Collection_2023.png/40px-SetSymbolMcDonalds_Collection_2023.png",
+    "name": "McDonald's Collection 2023",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/McDonald%27s_Collection_2023_(TCG)",
+    "cards_stats": {
+      "cards": 15
+    },
+    "release_date": "July 27, 2023",
+    "abbrev": "M23"
+  },
+  {
+    "series": "mcdonalds",
+    "series_type": "other",
+    "language": "en",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/7/71/SetSymbolMcDonalds_Collection_2024.png/40px-SetSymbolMcDonalds_Collection_2024.png",
+    "name": "McDonald's Collection 2024",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/McDonald%27s_Collection_2024_(TCG)",
+    "cards_stats": {
+      "cards": 15
+    },
+    "release_date": "December 4, 2024",
+    "abbrev": "M24"
+  },
+  {
+    "series": "trick-or-trade",
+    "series_type": "other",
+    "language": "en",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/1/18/Trick_or_Trade.png/150px-Trick_or_Trade.png",
+    "name": "Trick or Trade 2022",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Trick_or_Trade_2022_(TCG)",
+    "cards_stats": {
+      "cards": 30
+    },
+    "release_date": "September 1, 2022",
+    "abbrev": "TT22"
+  },
+  {
+    "series": "trick-or-trade",
+    "series_type": "other",
+    "language": "en",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/0/00/Trick_or_Trade_2023.png/150px-Trick_or_Trade_2023.png",
+    "name": "Trick or Trade 2023",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Trick_or_Trade_2023_(TCG)",
+    "cards_stats": {
+      "cards": 30
+    },
+    "release_date": "September 1, 2023",
+    "abbrev": "TT23"
+  },
+  {
+    "series": "trick-or-trade",
+    "series_type": "other",
+    "language": "en",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/e/ed/Trick_or_Trade_2024.png/150px-Trick_or_Trade_2024.png",
+    "name": "Trick or Trade 2024",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Trick_or_Trade_2024_(TCG)",
+    "cards_stats": {
+      "cards": 30
+    },
+    "release_date": "August 30, 2024",
+    "abbrev": "TT24"
+  },
+  {
+    "series": "pop-play",
+    "series_type": "other",
+    "language": "en",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/f/fc/SetSymbolPOP_Series_1.png/40px-SetSymbolPOP_Series_1.png",
+    "name": "POP Series 1",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/POP_Series_1_(TCG)",
+    "cards_stats": {
+      "cards": 17
+    },
+    "release_date": "September 2004",
+    "abbrev": "POP1"
+  },
+  {
+    "series": "pop-play",
+    "series_type": "other",
+    "language": "en",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/4/49/SetSymbolPOP_Series_2.png/40px-SetSymbolPOP_Series_2.png",
+    "name": "POP Series 2",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/POP_Series_2_(TCG)",
+    "cards_stats": {
+      "cards": 17
+    },
+    "release_date": "August 2005",
+    "abbrev": "POP2"
+  },
+  {
+    "series": "pop-play",
+    "series_type": "other",
+    "language": "en",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/4/4c/SetSymbolPOP_Series_3.png/40px-SetSymbolPOP_Series_3.png",
+    "name": "POP Series 3",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/POP_Series_3_(TCG)",
+    "cards_stats": {
+      "cards": 17
+    },
+    "release_date": "April 2006",
+    "abbrev": "POP3"
+  },
+  {
+    "series": "pop-play",
+    "series_type": "other",
+    "language": "en",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/3/3c/SetSymbolPOP_Series_4.png/40px-SetSymbolPOP_Series_4.png",
+    "name": "POP Series 4",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/POP_Series_4_(TCG)",
+    "cards_stats": {
+      "cards": 17
+    },
+    "release_date": "August 2006",
+    "abbrev": "POP4"
+  },
+  {
+    "series": "pop-play",
+    "series_type": "other",
+    "language": "en",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/9/9f/SetSymbolPOP_Series_5.png/40px-SetSymbolPOP_Series_5.png",
+    "name": "POP Series 5",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/POP_Series_5_(TCG)",
+    "cards_stats": {
+      "cards": 17
+    },
+    "release_date": "March 2007",
+    "abbrev": "POP5"
+  },
+  {
+    "series": "pop-play",
+    "series_type": "other",
+    "language": "en",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/4/41/SetSymbolPOP_Series_6.png/40px-SetSymbolPOP_Series_6.png",
+    "name": "POP Series 6",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/POP_Series_6_(TCG)",
+    "cards_stats": {
+      "cards": 17
+    },
+    "release_date": "September 2007",
+    "abbrev": "POP6"
+  },
+  {
+    "series": "pop-play",
+    "series_type": "other",
+    "language": "en",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/7/7b/SetSymbolPOP_Series_7.png/40px-SetSymbolPOP_Series_7.png",
+    "name": "POP Series 7",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/POP_Series_7_(TCG)",
+    "cards_stats": {
+      "cards": 17
+    },
+    "release_date": "March 2008",
+    "abbrev": "POP7"
+  },
+  {
+    "series": "pop-play",
+    "series_type": "other",
+    "language": "en",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/4/4c/SetSymbolPOP_Series_8.png/40px-SetSymbolPOP_Series_8.png",
+    "name": "POP Series 8",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/POP_Series_8_(TCG)",
+    "cards_stats": {
+      "cards": 17
+    },
+    "release_date": "September 2008",
+    "abbrev": "POP8"
+  },
+  {
+    "series": "pop-play",
+    "series_type": "other",
+    "language": "en",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/9/99/SetSymbolPOP_Series_9.png/40px-SetSymbolPOP_Series_9.png",
+    "name": "POP Series 9",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/POP_Series_9_(TCG)",
+    "cards_stats": {
+      "cards": 17
+    },
+    "release_date": "March 2009",
+    "abbrev": "POP9"
+  },
+  {
+    "series": "pop-play",
+    "series_type": "other",
+    "language": "en",
+    "name": "Play! Pokémon Prize Pack Series One",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Play!_Pok%C3%A9mon_Prize_Pack_Series_One_(TCG)",
+    "cards_stats": {
+      "cards": 170
+    },
+    "release_date": "November 9, 2022",
+    "abbrev": "PPS1"
+  },
+  {
+    "series": "pop-play",
+    "series_type": "other",
+    "language": "en",
+    "name": "Play! Pokémon Prize Pack Series Two",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Play!_Pok%C3%A9mon_Prize_Pack_Series_Two_(TCG)",
+    "cards_stats": {
+      "cards": 154
+    },
+    "release_date": "January 19, 2023",
+    "abbrev": "PPS2"
+  },
+  {
+    "series": "pop-play",
+    "series_type": "other",
+    "language": "en",
+    "name": "Play! Pokémon Prize Pack Series Three",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Play!_Pok%C3%A9mon_Prize_Pack_Series_Three_(TCG)",
+    "cards_stats": {
+      "cards": 163
+    },
+    "release_date": "August 14, 2023",
+    "abbrev": "PPS3"
+  },
+  {
+    "series": "pop-play",
+    "series_type": "other",
+    "language": "en",
+    "name": "Play! Pokémon Prize Pack Series Four",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Play!_Pok%C3%A9mon_Prize_Pack_Series_Four_(TCG)",
+    "cards_stats": {
+      "cards": 86
+    },
+    "release_date": "February 14, 2024",
+    "abbrev": "PPS4"
+  },
+  {
+    "series": "pop-play",
+    "series_type": "other",
+    "language": "en",
+    "name": "Play! Pokémon Prize Pack Series Five",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Play!_Pok%C3%A9mon_Prize_Pack_Series_Five_(TCG)",
+    "cards_stats": {
+      "cards": 86
+    },
+    "release_date": "August 14, 2024",
+    "abbrev": "PPS5"
+  },
+  {
+    "series": "pop-play",
+    "series_type": "other",
+    "language": "en",
+    "name": "Play! Pokémon Prize Pack Series Six",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Play!_Pok%C3%A9mon_Prize_Pack_Series_Six_(TCG)",
+    "cards_stats": {
+      "cards": 94
+    },
+    "release_date": "February 14, 2025",
+    "abbrev": "PPS6"
+  },
+  {
+    "series": "pop-play",
+    "series_type": "other",
+    "language": "en",
+    "name": "Play! Pokémon Prize Pack Series Seven",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Play!_Pok%C3%A9mon_Prize_Pack_Series_Seven_(TCG)",
+    "cards_stats": {
+      "cards": 96
+    },
+    "release_date": "August 14, 2025",
+    "abbrev": "PPS7"
+  },
+  {
+    "series": "other-misc",
+    "series_type": "other",
+    "language": "en",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/1/1e/SetSymbolSouthern_IslandsENG.png/40px-SetSymbolSouthern_IslandsENG.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/c/c4/SouthernIslandsLogo.png/150px-SouthernIslandsLogo.png",
+    "name": "Southern Islands",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Southern_Islands_(TCG)",
+    "cards_stats": {
+      "cards": 18
+    },
+    "release_date": "July 31, 2001",
+    "abbrev": "SI"
+  },
+  {
+    "series": "other-misc",
+    "series_type": "other",
+    "language": "en",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/9/9d/SetSymbolBest.png/40px-SetSymbolBest.png",
+    "name": "Best of Game",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Best_of_Game_(TCG)",
+    "cards_stats": {
+      "cards": 9
+    },
+    "release_date": "December 2002",
+    "abbrev": "—"
+  },
+  {
+    "series": "other-misc",
+    "series_type": "other",
+    "language": "en",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/c/cb/Kids_WB_logo.png/40px-Kids_WB_logo.png",
+    "name": "Poké Card Creator Pack",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9_Card_Creator_Pack_(TCG)",
+    "cards_stats": {
+      "cards": 5
+    },
+    "release_date": "July 2004",
+    "abbrev": "CC"
+  },
+  {
+    "series": "other-misc",
+    "series_type": "other",
+    "language": "en",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/6/63/SetSymbolPok%C3%A9mon_Rumble.png/40px-SetSymbolPok%C3%A9mon_Rumble.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/0/07/Pok%C3%A9mon_Rumble_logo.png/150px-Pok%C3%A9mon_Rumble_logo.png",
+    "name": "Pokémon Rumble",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_Rumble_(TCG)",
+    "cards_stats": {
+      "cards": 16
+    },
+    "release_date": "December 2, 2009",
+    "abbrev": "RM"
+  },
+  {
+    "series": "other-misc",
+    "series_type": "other",
+    "language": "en",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/0/09/SetSymbolPok%C3%A9mon_Futsal.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/6/66/Pok%C3%A9mon_Futsal_Logo.png/75px-Pok%C3%A9mon_Futsal_Logo.png",
+    "name": "Pokémon Futsal",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_Futsal_(TCG)",
+    "cards_stats": {
+      "cards": 5
+    },
+    "release_date": "September 11, 2020",
+    "abbrev": "FUT20"
+  },
+  {
+    "series": "other-misc",
+    "series_type": "other",
+    "language": "en",
+    "name": "Pokémon Trading Card Game Classic",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_Trading_Card_Game_Classic_(TCG)",
+    "cards_stats": {
+      "cards": 102,
+      "notes": ["comprised of 3 deck lists, each deck list contains 34 unique cards"]
+    },
+    "release_date": "November 17, 2023",
+    "abbrev": "CL"
+  }
+]

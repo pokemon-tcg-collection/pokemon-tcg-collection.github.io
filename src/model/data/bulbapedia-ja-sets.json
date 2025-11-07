@@ -1,0 +1,3325 @@
+[
+  {
+    "series": "original",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "1",
+    "name_original": "拡張パック",
+    "name": "Expansion Pack",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Expansion_Pack_(TCG)",
+    "name_en_equivalent": "Base Set",
+    "card_stats": {
+      "cards": 102
+    },
+    "release_date": "October 20, 1996"
+  },
+  {
+    "series": "original",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "2",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/2/2f/SetSymbolJungle.png/40px-SetSymbolJungle.png",
+    "name_original": "ポケモンジャングル",
+    "name": "Pokémon Jungle",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_Jungle_(TCG)",
+    "name_en_equivalent": "Jungle",
+    "card_stats": {
+      "cards": 48
+    },
+    "release_date": "March 5, 1997"
+  },
+  {
+    "series": "original",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "3",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/e/e6/SetSymbolFossil.png/40px-SetSymbolFossil.png",
+    "name_original": "化石の秘密",
+    "name": "Mystery of the Fossils",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Mystery_of_the_Fossils_(TCG)",
+    "name_en_equivalent": "Fossil",
+    "card_stats": {
+      "cards": 48
+    },
+    "release_date": "June 21, 1997"
+  },
+  {
+    "series": "original",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "4",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/7/7e/SetSymbolTeam_Rocket.png/40px-SetSymbolTeam_Rocket.png",
+    "name_original": "ロケット団",
+    "name": "Rocket Gang",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Rocket_Gang_(TCG)",
+    "name_en_equivalent": "Team Rocket",
+    "card_stats": {
+      "cards": 65
+    },
+    "release_date": "November 21, 1997"
+  },
+  {
+    "series": "original",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "5",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/3/38/SetSymbolGym_Booster.png/40px-SetSymbolGym_Booster.png",
+    "name_original": "リーダーズスタジアム",
+    "name": "Leaders' Stadium",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Leaders%27_Stadium_(TCG)",
+    "name_en_equivalent": "Gym Heroes",
+    "card_stats": {
+      "cards": 96
+    },
+    "release_date": "October 24, 1998"
+  },
+  {
+    "series": "original",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "6",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/3/38/SetSymbolGym_Booster.png/40px-SetSymbolGym_Booster.png",
+    "name_original": "闇からの挑戦",
+    "name": "Challenge from the Darkness",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Challenge_from_the_Darkness_(TCG)",
+    "name_en_equivalent": "Gym Challenge",
+    "card_stats": {
+      "cards": 98
+    },
+    "release_date": "June 25, 1999"
+  },
+  {
+    "series": "neo",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "1",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/7/75/SetSymbolNeo_Genesis.png/40px-SetSymbolNeo_Genesis.png",
+    "name_original": "金、銀、新世界へ...",
+    "name": "Gold, Silver, to a New World...",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Gold,_Silver,_to_a_New_World..._(TCG)",
+    "name_en_equivalent": "Neo Genesis",
+    "card_stats": {
+      "cards": 96
+    },
+    "release_date": "February 4, 2000"
+  },
+  {
+    "series": "neo",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "2",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/f/f8/SetSymbolNeo_Discovery.png/40px-SetSymbolNeo_Discovery.png",
+    "name_original": "遺跡をこえて...",
+    "name": "Crossing the Ruins...",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Crossing_the_Ruins..._(TCG)",
+    "name_en_equivalent": "Neo Discovery",
+    "card_stats": {
+      "cards": 56
+    },
+    "release_date": "July 7, 2000"
+  },
+  {
+    "series": "neo",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "3",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/c/c6/SetSymbolNeo_Revelation.png/40px-SetSymbolNeo_Revelation.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/5/59/Neo3_Logo.png/100px-Neo3_Logo.png",
+    "name_original": "めざめる伝説",
+    "name": "Awakening Legends",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Awakening_Legends_(TCG)",
+    "name_en_equivalent": "Neo Revelation",
+    "card_stats": {
+      "cards": 57
+    },
+    "release_date": "November 23, 2000"
+  },
+  {
+    "series": "neo",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "4",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/8/88/SetSymbolNeo_Destiny.png/40px-SetSymbolNeo_Destiny.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/1/19/Neo4_Logo.png/100px-Neo4_Logo.png",
+    "name_original": "闇、そして光へ...",
+    "name": "Darkness, and to Light...",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Darkness,_and_to_Light..._(TCG)",
+    "name_en_equivalent": "Neo Destiny",
+    "card_stats": {
+      "cards": 113
+    },
+    "release_date": "April 20, 2001"
+  },
+  {
+    "series": "vs",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "1",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/c/c3/SetSymbolVS.png/40px-SetSymbolVS.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/0/07/Pok%C3%A9mon_Card_VS_Logo.png/75px-Pok%C3%A9mon_Card_VS_Logo.png",
+    "name_original": "ポケモンカード★VS",
+    "name": "Pokémon Card★VS",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_VS_(TCG)",
+    "card_stats": {
+      "cards": 141,
+      "special": 1
+    },
+    "release_date": "July 19, 2001"
+  },
+  {
+    "series": "web",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "1",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/4/44/Pok%C3%A9mon_Card_web_Logo.png/75px-Pok%C3%A9mon_Card_web_Logo.png",
+    "name_original": "ポケモンカード★web",
+    "name": "Pokémon Card★web",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_Web_(TCG)",
+    "card_stats": {
+      "cards": 48
+    },
+    "release_date": "October 20, 2001"
+  },
+  {
+    "series": "e-card",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "1",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/7/7f/SetSymbolBase_Expansion_Pack.png/30px-SetSymbolBase_Expansion_Pack.png",
+    "name_original": "基本拡張パック",
+    "name": "Base Expansion Pack",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Base_Expansion_Pack_(TCG)",
+    "name_en_equivalent": "Expedition Base Set",
+    "card_stats": {
+      "cards": 128
+    },
+    "release_date": "December 1, 2001"
+  },
+  {
+    "series": "e-card",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "2",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/d/de/SetSymbolThe_Town_on_No_Map.png/30px-SetSymbolThe_Town_on_No_Map.png",
+    "name_original": "地図にない町",
+    "name": "The Town on No Map",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/The_Town_on_No_Map_(TCG)",
+    "name_en_equivalent": "Aquapolis",
+    "card_stats": {
+      "cards": 92
+    },
+    "release_date": "March 8, 2002"
+  },
+  {
+    "series": "e-card",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "3",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/1/15/SetSymbolWind_from_the_Sea.png/30px-SetSymbolWind_from_the_Sea.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/b/b0/E3_Logo.png/100px-E3_Logo.png",
+    "name_original": "海からの風",
+    "name": "Wind from the Sea",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Wind_from_the_Sea_(TCG)",
+    "name_en_equivalent": "Aquapolis",
+    "card_stats": {
+      "cards": 87,
+      "special": 3
+    },
+    "release_date": "May 24, 2002"
+  },
+  {
+    "series": "e-card",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "4",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/c/c6/SetSymbolSplit_Earth.png/30px-SetSymbolSplit_Earth.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/0/06/E4_Logo.png/100px-E4_Logo.png",
+    "name_original": "裂けた大地",
+    "name": "Split Earth",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Split_Earth_(TCG)",
+    "name_en_equivalent": "Skyridge",
+    "card_stats": {
+      "cards": 88,
+      "special": 3
+    },
+    "release_date": "August 23, 2002"
+  },
+  {
+    "series": "e-card",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "5",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/5/50/SetSymbolMysterious_Mountains.png/30px-SetSymbolMysterious_Mountains.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/f/fd/E5_Logo.png/100px-E5_Logo.png",
+    "name_original": "神秘なる山",
+    "name": "Mysterious Mountains",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Mysterious_Mountains_(TCG)",
+    "name_en_equivalent": "Skyridge",
+    "card_stats": {
+      "cards": 88,
+      "special": 3
+    },
+    "release_date": "October 4, 2002"
+  },
+  {
+    "series": "adv",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "1",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/f/f2/SetSymbolRuby_and_Sapphire.png/40px-SetSymbolRuby_and_Sapphire.png",
+    "name_original": "拡張パック",
+    "name": "ADV Expansion Pack",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/ADV_Expansion_Pack_(TCG)",
+    "name_en_equivalent": "EX Ruby & Sapphire",
+    "card_stats": {
+      "cards": 55
+    },
+    "release_date": "January 31, 2003"
+  },
+  {
+    "series": "adv",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "2",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/6/6a/SetSymbolSandstorm.png/40px-SetSymbolSandstorm.png",
+    "name_original": "砂漠のきせき",
+    "name": "Miracle of the Desert",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Miracle_of_the_Desert_(TCG)",
+    "name_en_equivalent": "EX Sandstorm",
+    "card_stats": {
+      "cards": 53
+    },
+    "release_date": "April 18, 2003"
+  },
+  {
+    "series": "adv",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "3",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/0/08/SetSymbolDragon.png/40px-SetSymbolDragon.png",
+    "name_original": "天空の覇者",
+    "name": "Rulers of the Heavens",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Rulers_of_the_Heavens_(TCG)",
+    "name_en_equivalent": "EX Dragon",
+    "card_stats": {
+      "cards": 54
+    },
+    "release_date": "June 25, 2003"
+  },
+  {
+    "series": "adv",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "4",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/6/66/SetSymbolHidden_Legends.png/40px-SetSymbolHidden_Legends.png",
+    "name_original": "とかれた封印",
+    "name": "Undone Seal",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Undone_Seal_(TCG)",
+    "name_en_equivalent": "EX Hidden Legends",
+    "card_stats": {
+      "cards": 83
+    },
+    "release_date": "January 16, 2004"
+  },
+  {
+    "series": "pcg",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "1",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/1/1b/SetSymbolFlight_of_Legends.png",
+    "name_original": "伝説の飛翔",
+    "name": "Flight of Legends",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Flight_of_Legends_(TCG)",
+    "name_en_equivalent": "EX FireRed & LeafGreen",
+    "card_stats": {
+      "cards": 82
+    },
+    "release_date": "April 9, 2004"
+  },
+  {
+    "series": "pcg",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "2",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/7/73/SetSymbolDeoxys.png/40px-SetSymbolDeoxys.png",
+    "name_original": "蒼空の激突",
+    "name": "Clash of the Blue Sky",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Clash_of_the_Blue_Sky_(TCG)",
+    "name_en_equivalent": "EX Deoxys",
+    "card_stats": {
+      "cards": 82
+    },
+    "release_date": "July 1, 2004"
+  },
+  {
+    "series": "pcg",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "3",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/a/a0/SetSymbolTeam_Rocket_Returns.png/40px-SetSymbolTeam_Rocket_Returns.png",
+    "name_original": "ロケット団の逆襲",
+    "name": "Rocket Gang Strikes Back",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Rocket_Gang_Strikes_Back_(TCG)",
+    "name_en_equivalent": "EX Team Rocket Returns",
+    "card_stats": {
+      "cards": 84,
+      "special": 1
+    },
+    "release_date": "October 15, 2004"
+  },
+  {
+    "series": "pcg",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "4",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/6/63/SetSymbolUnseen_Forces.png/40px-SetSymbolUnseen_Forces.png",
+    "name_original": "金の空、銀の海",
+    "name": "Golden Sky, Silvery Ocean",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Golden_Sky,_Silvery_Ocean_(TCG)",
+    "name_en_equivalent": "EX Unseen Forces",
+    "card_stats": {
+      "cards": 106
+    },
+    "release_date": "April 8, 2005"
+  },
+  {
+    "series": "pcg",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "5",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/2/2c/SetSymbolLegend_Maker.png/40px-SetSymbolLegend_Maker.png",
+    "name_original": "まぼろしの森",
+    "name": "Mirage Forest",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Mirage_Forest_(TCG)",
+    "name_en_equivalent": "EX Legend Maker",
+    "card_stats": {
+      "cards": 86
+    },
+    "release_date": "June 30, 2005"
+  },
+  {
+    "series": "pcg",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "6",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/1/14/SetSymbolDelta_Species.png/40px-SetSymbolDelta_Species.png",
+    "name_original": "ホロンの研究塔",
+    "name": "Holon Research Tower",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Holon_Research_Tower_(TCG)",
+    "name_en_equivalent": "EX Delta Species",
+    "card_stats": {
+      "cards": 86
+    },
+    "release_date": "October 28, 2005"
+  },
+  {
+    "series": "pcg",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "7",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/b/ba/SetSymbolHolon_Phantoms.png/40px-SetSymbolHolon_Phantoms.png",
+    "name_original": "ホロンの幻影",
+    "name": "Holon Phantom",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Holon_Phantom_(TCG)",
+    "name_en_equivalent": "EX Holon Phantoms",
+    "card_stats": {
+      "cards": 52
+    },
+    "release_date": "January 27, 2006"
+  },
+  {
+    "series": "pcg",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "8",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/e/e9/SetSymbolCrystal_Guardians.png/40px-SetSymbolCrystal_Guardians.png",
+    "name_original": "きせきの結晶",
+    "name": "Miracle Crystal",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Miracle_Crystal_(TCG)",
+    "name_en_equivalent": "EX Crystal Guardians",
+    "card_stats": {
+      "cards": 75
+    },
+    "release_date": "March 10, 2006"
+  },
+  {
+    "series": "pcg",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "9",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/e/e3/SetSymbolDragon_Frontiers.png/40px-SetSymbolDragon_Frontiers.png",
+    "name_original": "さいはての攻防",
+    "name": "Offense and Defense of the Furthest Ends",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Offense_and_Defense_of_the_Furthest_Ends_(TCG)",
+    "name_en_equivalent": "EX Dragon Frontiers",
+    "card_stats": {
+      "cards": 68
+    },
+    "release_date": "June 29, 2006"
+  },
+  {
+    "series": "pcg",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "10",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/5/5b/SetSymbolPower_Keepers.png/40px-SetSymbolPower_Keepers.png",
+    "name_original": "ワールドチャンピオンズパック",
+    "name": "World Champions Pack",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/World_Champions_Pack_(TCG)",
+    "name_en_equivalent": "EX Power Keepers",
+    "card_stats": {
+      "cards": 108
+    },
+    "release_date": "July 5, 2007"
+  },
+  {
+    "series": "diamond-pearl",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "1",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/0/0d/SetSymbolSpace-Time_Creation.png",
+    "name_original": "時空の創造: ダイヤモンドコレクション",
+    "name": "Space-Time Creation: Diamond Collection",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Space-Time_Creation_(TCG)",
+    "name_en_equivalent": "Diamond & Pearl",
+    "card_stats": {
+      "cards": 117
+    },
+    "release_date": "November 30, 2006"
+  },
+  {
+    "series": "diamond-pearl",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "1",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/0/0d/SetSymbolSpace-Time_Creation.png",
+    "name_original": "パールコレクション",
+    "name": "Pearl Collection",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Space-Time_Creation_(TCG)",
+    "name_en_equivalent": "Diamond & Pearl",
+    "card_stats": {
+      "cards": 119
+    },
+    "release_date": "November 30, 2006"
+  },
+  {
+    "series": "diamond-pearl",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "2",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/8/8f/SetSymbolSecret_of_the_Lakes.png",
+    "name_original": "湖の秘密",
+    "name": "Secret of the Lakes",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Secret_of_the_Lakes_(TCG)",
+    "name_en_equivalent": "Mysterious Treasures",
+    "card_stats": {
+      "cards": 123
+    },
+    "release_date": "March 2, 2007"
+  },
+  {
+    "series": "diamond-pearl",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "3",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/e/ef/SetSymbolShining_Darkness.png",
+    "name_original": "ひかる闇",
+    "name": "Shining Darkness",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Shining_Darkness_(TCG)",
+    "name_en_equivalent": "Secret Wonders",
+    "card_stats": {
+      "cards": 119
+    },
+    "release_date": "July 5, 2007"
+  },
+  {
+    "series": "diamond-pearl",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "4",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/2/2f/SetSymbolMoonlit_Pursuit_Dawn_Dash.png",
+    "name_original": "月光の追跡",
+    "name": "Moonlit Pursuit",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Moonlit_Pursuit/Dawn_Dash_(TCG)",
+    "name_en_equivalent": "Great Encounters",
+    "card_stats": {
+      "cards": 70
+    },
+    "release_date": "October 26, 2007"
+  },
+  {
+    "series": "diamond-pearl",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "4",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/2/2f/SetSymbolMoonlit_Pursuit_Dawn_Dash.png",
+    "name_original": "夜明けの疾走",
+    "name": "Dawn Dash",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Moonlit_Pursuit/Dawn_Dash_(TCG)",
+    "name_en_equivalent": "Majestic Dawn",
+    "card_stats": {
+      "cards": 70
+    },
+    "release_date": "October 26, 2007"
+  },
+  {
+    "series": "diamond-pearl",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "5",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/1/18/SetSymbolCry_from_the_Mysterious_Temple_of_Anger.png",
+    "name_original": "秘境の叫び",
+    "name": "Cry from the Mysterious",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Cry_from_the_Mysterious/Temple_of_Anger_(TCG)",
+    "name_en_equivalent": "Legends Awakened",
+    "card_stats": {
+      "cards": 65
+    },
+    "release_date": "March 14, 2008"
+  },
+  {
+    "series": "diamond-pearl",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "5",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/1/18/SetSymbolCry_from_the_Mysterious_Temple_of_Anger.png",
+    "name_original": "怒りの神殿",
+    "name": "Temple of Anger",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Cry_from_the_Mysterious/Temple_of_Anger_(TCG)",
+    "name_en_equivalent": "Legends Awakened",
+    "card_stats": {
+      "cards": 65
+    },
+    "release_date": "March 14, 2008"
+  },
+  {
+    "series": "diamond-pearl",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "6",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/8/84/SetSymbolIntense_Fight_in_the_Destroyed_Sky.png",
+    "name_original": "破空の激闘",
+    "name": "Intense Fight in the Destroyed Sky",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Intense_Fight_in_the_Destroyed_Sky_(TCG)",
+    "name_en_equivalent": "Stormfront",
+    "card_stats": {
+      "cards": 92
+    },
+    "release_date": "July 10, 2008"
+  },
+  {
+    "series": "platinum",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "1",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/8/86/SetSymbolGalactic_Conquest.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/1/1a/DPt1_Logo.png/140px-DPt1_Logo.png",
+    "name_original": "ギンガの覇道",
+    "name": "Galactic's Conquest",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Galactic%27s_Conquest_(TCG)",
+    "name_en_equivalent": "Platinum",
+    "card_stats": {
+      "cards": 96
+    },
+    "release_date": "October 10, 2008"
+  },
+  {
+    "series": "platinum",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "2",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/1/15/SetSymbolBonds_to_the_End_of_Time.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/9/97/DPt2_Logo.png/140px-DPt2_Logo.png",
+    "name_original": "時の果ての絆",
+    "name": "Bonds to the End of Time",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Bonds_to_the_End_of_Time_(TCG)",
+    "name_en_equivalent": "Rising Rivals",
+    "card_stats": {
+      "cards": 90
+    },
+    "release_date": "December 26, 2008"
+  },
+  {
+    "series": "platinum",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "3",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/f/f3/SetSymbolBeat_of_the_Frontier.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/1/1d/DPt3_Logo.png/140px-DPt3_Logo.png",
+    "name_original": "フロンティアの鼓動",
+    "name": "Beat of the Frontier",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Beat_of_the_Frontier_(TCG)",
+    "name_en_equivalent": "Supreme Victors",
+    "card_stats": {
+      "cards": 100
+    },
+    "release_date": "March 6, 2009"
+  },
+  {
+    "series": "platinum",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "4",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/4/4c/SetSymbolAdvent_of_Arceus.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/5/58/DPt4_Logo.png/140px-DPt4_Logo.png",
+    "name_original": "アルセウス光臨",
+    "name": "Advent of Arceus",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Advent_of_Arceus_(TCG)",
+    "name_en_equivalent": "Arceus",
+    "card_stats": {
+      "cards": 90
+    },
+    "release_date": "July 8, 2009"
+  },
+  {
+    "series": "legend",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "1",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/1/1c/SetSymbolHeartGold_Collection.png/40px-SetSymbolHeartGold_Collection.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/3/3c/L1_Logo.png/120px-L1_Logo.png",
+    "name_original": "ハートゴールドコレクション",
+    "name": "HeartGold Collection",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/HeartGold_Collection/SoulSilver_Collection_(TCG)",
+    "name_en_equivalent": "HeartGold & SoulSilver",
+    "card_stats": {
+      "cards": 70,
+      "special": 1
+    },
+    "release_date": "October 9, 2009"
+  },
+  {
+    "series": "legend",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "1",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/e/ec/SetSymbolSoulSilver_Collection.png/40px-SetSymbolSoulSilver_Collection.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/3/3c/L1_Logo.png/120px-L1_Logo.png",
+    "name_original": "ソウルシルバーコレクション",
+    "name": "SoulSilver Collection",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/HeartGold_Collection/SoulSilver_Collection_(TCG)",
+    "name_en_equivalent": "HeartGold & SoulSilver",
+    "card_stats": {
+      "cards": 70,
+      "special": 1
+    },
+    "release_date": "October 9, 2009"
+  },
+  {
+    "series": "legend",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "2",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/8/85/SetSymbolReviving_Legends.png/40px-SetSymbolReviving_Legends.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/6/64/L2_Logo.png/120px-L2_Logo.png",
+    "name_original": "よみがえる伝説",
+    "name": "Reviving Legends",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Reviving_Legends_(TCG)",
+    "name_en_equivalent": "Undaunted",
+    "card_stats": {
+      "cards": 80,
+      "special": 1
+    },
+    "release_date": "February 11, 2010"
+  },
+  {
+    "series": "legend",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "3",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/3/3d/SetSymbolClash_at_the_Summit.png/40px-SetSymbolClash_at_the_Summit.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/5/59/L3_Logo.png/120px-L3_Logo.png",
+    "name_original": "頂上大激突",
+    "name": "Clash at the Summit",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Clash_at_the_Summit_(TCG)",
+    "name_en_equivalent": "Triumphant",
+    "card_stats": {
+      "cards": 80,
+      "special": 1
+    },
+    "release_date": "July 8, 2010"
+  },
+  {
+    "series": "black-white",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "1",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/5/55/SetSymbolBlack_Collection.png/40px-SetSymbolBlack_Collection.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/2/2e/BW1_Logo.png/150px-BW1_Logo.png",
+    "name_original": "ブラックコレクション",
+    "name": "Black Collection",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Black_Collection/White_Collection_(TCG)",
+    "name_en_equivalent": "Emerging Powers",
+    "card_stats": {
+      "cards": 53,
+      "special": 3
+    },
+    "release_date": "December 17, 2010"
+  },
+  {
+    "series": "black-white",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "1",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/f/f1/SetSymbolWhite_Collection.png/40px-SetSymbolWhite_Collection.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/2/2e/BW1_Logo.png/150px-BW1_Logo.png",
+    "name_original": "ホワイトコレクション",
+    "name": "White Collection",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Black_Collection/White_Collection_(TCG)",
+    "name_en_equivalent": "Emerging Powers",
+    "card_stats": {
+      "cards": 53,
+      "special": 3
+    },
+    "release_date": "December 17, 2010"
+  },
+  {
+    "series": "black-white",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "2",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/c/c6/SetSymbolRed_Collection.png/40px-SetSymbolRed_Collection.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/7/74/BW2_Logo.png/160px-BW2_Logo.png",
+    "name_original": "レッドコレクション",
+    "name": "Red Collection",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Red_Collection_(TCG)",
+    "name_en_equivalent": "Noble Victories",
+    "card_stats": {
+      "cards": 66,
+      "special": 6
+    },
+    "release_date": "July 15, 2011"
+  },
+  {
+    "series": "black-white",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "3",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/f/ff/SetSymbolPsycho_Drive.png/40px-SetSymbolPsycho_Drive.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/5/51/BW3_Logo.png/140px-BW3_Logo.png",
+    "name_original": "サイコドライブ",
+    "name": "Psycho Drive",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Psycho_Drive/Hail_Blizzard_(TCG)",
+    "name_en_equivalent": "Next Destinies",
+    "card_stats": {
+      "cards": 52,
+      "special": 5
+    },
+    "release_date": "September 16, 2011"
+  },
+  {
+    "series": "black-white",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "3",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/a/aa/SetSymbolHail_Blizzard.png/40px-SetSymbolHail_Blizzard.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/5/51/BW3_Logo.png/140px-BW3_Logo.png",
+    "name_original": "ヘイルブリザード",
+    "name": "Hail Blizzard",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Psycho_Drive/Hail_Blizzard_(TCG)",
+    "name_en_equivalent": "Next Destinies",
+    "card_stats": {
+      "cards": 52,
+      "special": 5
+    },
+    "release_date": "September 16, 2011"
+  },
+  {
+    "series": "black-white",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "4",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/e/ef/SetSymbolDark_Rush.png/40px-SetSymbolDark_Rush.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/e/e2/BW4_Logo.png/150px-BW4_Logo.png",
+    "name_original": "ダークラッシュ",
+    "name": "Dark Rush",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Dark_Rush_(TCG)",
+    "name_en_equivalent": "Dark Explorers",
+    "card_stats": {
+      "cards": 69,
+      "special": 7
+    },
+    "release_date": "December 16, 2011"
+  },
+  {
+    "series": "black-white",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "5",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/a/a4/SetSymbolDragon_Blast.png/40px-SetSymbolDragon_Blast.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/d/d1/BW5_Logo.png/150px-BW5_Logo.png",
+    "name_original": "リューズブラスト",
+    "name": "Dragon Blast",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Dragon_Blast/Dragon_Blade_(TCG)",
+    "name_en_equivalent": "Dragons Exalted",
+    "card_stats": {
+      "cards": 50,
+      "special": 5
+    },
+    "release_date": "March 16, 2012"
+  },
+  {
+    "series": "black-white",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "5",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/7/73/SetSymbolDragon_Blade.png/40px-SetSymbolDragon_Blade.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/d/d1/BW5_Logo.png/150px-BW5_Logo.png",
+    "name_original": "リューノブレード",
+    "name": "Dragon Blade",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Dragon_Blast/Dragon_Blade_(TCG)",
+    "name_en_equivalent": "Dragons Exalted",
+    "card_stats": {
+      "cards": 50,
+      "special": 5
+    },
+    "release_date": "March 16, 2012"
+  },
+  {
+    "series": "black-white",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "6",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/7/79/SetSymbolFreeze_Bolt.png/40px-SetSymbolFreeze_Bolt.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/7/76/BW6_Logo.png/150px-BW6_Logo.png",
+    "name_original": "フリーズボルト",
+    "name": "Freeze Bolt",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Freeze_Bolt/Cold_Flare_(TCG)",
+    "name_en_equivalent": "Boundaries Crossed",
+    "card_stats": {
+      "cards": 59,
+      "special": 6
+    },
+    "release_date": "July 13, 2012"
+  },
+  {
+    "series": "black-white",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "6",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/2/2d/SetSymbolCold_Flare.png/40px-SetSymbolCold_Flare.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/7/76/BW6_Logo.png/150px-BW6_Logo.png",
+    "name_original": "コールドフレア",
+    "name": "Cold Flare",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Freeze_Bolt/Cold_Flare_(TCG)",
+    "name_en_equivalent": "Boundaries Crossed",
+    "card_stats": {
+      "cards": 59,
+      "special": 6
+    },
+    "release_date": "July 13, 2012"
+  },
+  {
+    "series": "black-white",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "7",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/8/86/SetSymbolPlasma_Gale.png/40px-SetSymbolPlasma_Gale.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/c/c3/BW7_Logo.png/150px-BW7_Logo.png",
+    "name_original": "プラズマゲイル",
+    "name": "Plasma Gale",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Plasma_Gale_(TCG)",
+    "name_en_equivalent": "Plasma Storm",
+    "card_stats": {
+      "cards": 70,
+      "special": 9
+    },
+    "release_date": "September 14, 2012"
+  },
+  {
+    "series": "black-white",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "8",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/b/b5/SetSymbolSpiral_Force.png/40px-SetSymbolSpiral_Force.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/b/b7/BW8_Logo.png",
+    "name_original": "ラセンフォース",
+    "name": "Spiral Force",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Spiral_Force/Thunder_Knuckle_(TCG)",
+    "name_en_equivalent": "Plasma Freeze",
+    "card_stats": {
+      "cards": 51,
+      "special": 7
+    },
+    "release_date": "December 14, 2012"
+  },
+  {
+    "series": "black-white",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "8",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/3/36/SetSymbolThunder_Knuckle.png/40px-SetSymbolThunder_Knuckle.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/b/b7/BW8_Logo.png",
+    "name_original": "ライデンナックル",
+    "name": "Thunder Knuckle",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Spiral_Force/Thunder_Knuckle_(TCG)",
+    "name_en_equivalent": "Plasma Freeze",
+    "card_stats": {
+      "cards": 51,
+      "special": 7
+    },
+    "release_date": "December 14, 2012"
+  },
+  {
+    "series": "black-white",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "9",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/0/03/SetSymbolMegalo_Cannon.png/40px-SetSymbolMegalo_Cannon.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/5/56/BW9_Logo.png/150px-BW9_Logo.png",
+    "name_original": "メガロキャノン",
+    "name": "Megalo Cannon",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Megalo_Cannon_(TCG)",
+    "name_en_equivalent": "Plasma Blast",
+    "card_stats": {
+      "cards": 76,
+      "special": 10
+    },
+    "release_date": "March 15, 2013"
+  },
+  {
+    "series": "xy",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "1",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/a/a1/SetSymbolCollection_X.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/c/c8/XY1_Logo.png/120px-XY1_Logo.png",
+    "name_original": "コレクションX",
+    "name": "Collection X",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Collection_X/Collection_Y_(TCG)",
+    "name_en_equivalent": "XY",
+    "card_stats": {
+      "cards": 60,
+      "special": 3
+    },
+    "release_date": "December 13, 2013"
+  },
+  {
+    "series": "xy",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "1",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/7/74/SetSymbolCollection_Y.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/c/c8/XY1_Logo.png/120px-XY1_Logo.png",
+    "name_original": "コレクションY",
+    "name": "Collection Y",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Collection_X/Collection_Y_(TCG)",
+    "name_en_equivalent": "XY",
+    "card_stats": {
+      "cards": 60,
+      "special": 3
+    },
+    "release_date": "December 13, 2013"
+  },
+  {
+    "series": "xy",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "2",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/4/46/SetSymbolWild_Blaze.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/a/a6/XY2_Logo.png/120px-XY2_Logo.png",
+    "name_original": "ワイルドブレイズ",
+    "name": "Wild Blaze",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Wild_Blaze_(TCG)",
+    "name_en_equivalent": "Flashfire",
+    "card_stats": {
+      "cards": 80,
+      "special": 10
+    },
+    "release_date": "March 15, 2014"
+  },
+  {
+    "series": "xy",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "3",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/5/59/SetSymbolRising_Fist.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/7/7f/XY3_Logo.png/120px-XY3_Logo.png",
+    "name_original": "ライジングフィスト",
+    "name": "Rising Fist",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Rising_Fist_(TCG)",
+    "name_en_equivalent": "Furious Fists",
+    "card_stats": {
+      "cards": 96,
+      "special": 9
+    },
+    "release_date": "June 14, 2014"
+  },
+  {
+    "series": "xy",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "4",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/2/22/SetSymbolPhantom_Gate.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/0/00/XY4_Logo.png/120px-XY4_Logo.png",
+    "name_original": "ファントムゲート",
+    "name": "Phantom Gate",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Phantom_Gate_(TCG)",
+    "name_en_equivalent": "Phantom Forces",
+    "card_stats": {
+      "cards": 88,
+      "special": 9
+    },
+    "release_date": "September 13, 2014"
+  },
+  {
+    "series": "xy",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "5",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/0/09/SetSymbolGaia_Volcano.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/d/d4/XY5_Logo.png/120px-XY5_Logo.png",
+    "name_original": "ガイアボルケーノ",
+    "name": "Gaia Volcano",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Gaia_Volcano/Tidal_Storm_(TCG)",
+    "name_en_equivalent": "Primal Clash",
+    "card_stats": {
+      "cards": 70,
+      "special": 10
+    },
+    "release_date": "December 13, 2014"
+  },
+  {
+    "series": "xy",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "5",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/f/fd/SetSymbolTidal_Storm.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/d/d4/XY5_Logo.png/120px-XY5_Logo.png",
+    "name_original": "タイダルストーム",
+    "name": "Tidal Storm",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Gaia_Volcano/Tidal_Storm_(TCG)",
+    "name_en_equivalent": "Primal Clash",
+    "card_stats": {
+      "cards": 70,
+      "special": 10
+    },
+    "release_date": "December 13, 2014"
+  },
+  {
+    "series": "xy",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "6",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/0/03/SetSymbolEmerald_Break.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/6/66/XY6_Logo.png/120px-XY6_Logo.png",
+    "name_original": "エメラルドブレイク",
+    "name": "Emerald Break",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Emerald_Break_(TCG)",
+    "name_en_equivalent": "Roaring Skies",
+    "card_stats": {
+      "cards": 78,
+      "special": 13
+    },
+    "release_date": "March 14, 2015"
+  },
+  {
+    "series": "xy",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "7",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/6/6d/SetSymbolBandit_Ring.png/40px-SetSymbolBandit_Ring.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/9/9a/XY7_Logo.png/120px-XY7_Logo.png",
+    "name_original": "バンデットリング",
+    "name": "Bandit Ring",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Bandit_Ring_(TCG)",
+    "name_en_equivalent": "Ancient Origins",
+    "card_stats": {
+      "cards": 81,
+      "special": 16
+    },
+    "release_date": "June 20, 2015"
+  },
+  {
+    "series": "xy-break",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "1",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/f/fc/SetSymbolBlue_Shock.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/4/45/XY8_Logo.png/100px-XY8_Logo.png",
+    "name_original": "青い衝撃",
+    "name": "Blue Shock",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Blue_Shock/Red_Flash_(TCG)",
+    "name_en_equivalent": "BREAKthrough",
+    "card_stats": {
+      "cards": 59,
+      "special": 6
+    },
+    "release_date": "September 26, 2015"
+  },
+  {
+    "series": "xy-break",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "1",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/4/41/SetSymbolRed_Flash.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/4/45/XY8_Logo.png/100px-XY8_Logo.png",
+    "name_original": "赤い閃光",
+    "name": "Red Flash",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Blue_Shock/Red_Flash_(TCG)",
+    "name_en_equivalent": "BREAKthrough",
+    "card_stats": {
+      "cards": 59,
+      "special": 6
+    },
+    "release_date": "September 26, 2015"
+  },
+  {
+    "series": "xy-break",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "2",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/d/dd/SetSymbolRage_of_the_Broken_Heavens.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/d/da/XY9_Logo.png/100px-XY9_Logo.png",
+    "name_original": "破天の怒り",
+    "name": "Rage of the Broken Heavens",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Rage_of_the_Broken_Heavens_(TCG)",
+    "name_en_equivalent": "BREAKpoint",
+    "card_stats": {
+      "cards": 80,
+      "special": 9
+    },
+    "release_date": "December 11, 2015"
+  },
+  {
+    "series": "xy-break",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "3",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/5/5a/SetSymbolAwakening_Psychic_King.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/8/8b/XY10_Logo.png/110px-XY10_Logo.png",
+    "name_original": "めざめる超王",
+    "name": "Awakening Psychic King",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Awakening_Psychic_King_(TCG)",
+    "name_en_equivalent": "Fates Collide",
+    "card_stats": {
+      "cards": 78,
+      "special": 10
+    },
+    "release_date": "March 18, 2016"
+  },
+  {
+    "series": "xy-break",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "4",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/c/c7/SetSymbolFever-Burst_Fighter.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/6/68/XY11_Logo.png/100px-XY11_Logo.png",
+    "name_original": "爆熱の闘士",
+    "name": "Fever-Burst Fighter",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Fever-Burst_Fighter/Cruel_Traitor_(TCG)",
+    "name_en_equivalent": "Steam Siege",
+    "card_stats": {
+      "cards": 54,
+      "special": 5
+    },
+    "release_date": "June 17, 2016"
+  },
+  {
+    "series": "xy-break",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "4",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/8/8f/SetSymbolCruel_Traitor.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/6/68/XY11_Logo.png/100px-XY11_Logo.png",
+    "name_original": "冷酷の反逆者",
+    "name": "Cruel Traitor",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Fever-Burst_Fighter/Cruel_Traitor_(TCG)",
+    "name_en_equivalent": "Steam Siege",
+    "card_stats": {
+      "cards": 54,
+      "special": 5
+    },
+    "release_date": "June 17, 2016"
+  },
+  {
+    "series": "sun-moon",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "0",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/f/fd/SetSymbolPikachu_New_Friends.png",
+    "name_original": "ピカチュウと新しい仲間たち",
+    "name": "Pikachu's New Friends",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Pikachu%27s_New_Friends_(TCG)",
+    "card_stats": {
+      "cards": 4
+    },
+    "release_date": "November 18, 2016"
+  },
+  {
+    "series": "sun-moon",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "1",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/6/61/SetSymbolCollection_Sun.png/40px-SetSymbolCollection_Sun.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/a/a2/SM1_Logo.png/130px-SM1_Logo.png",
+    "name_original": "コレクション サン",
+    "name": "Collection Sun",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Collection_Sun/Collection_Moon_(TCG)",
+    "name_en_equivalent": "Sun & Moon",
+    "card_stats": {
+      "cards": 60,
+      "special": 13
+    },
+    "release_date": "December 9, 2016"
+  },
+  {
+    "series": "sun-moon",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "1",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/4/4c/SetSymbolCollection_Moon.png/40px-SetSymbolCollection_Moon.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/a/a2/SM1_Logo.png/130px-SM1_Logo.png",
+    "name_original": "コレクション ムーン",
+    "name": "Collection Moon",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Collection_Sun/Collection_Moon_(TCG)",
+    "name_en_equivalent": "Sun & Moon",
+    "card_stats": {
+      "cards": 60,
+      "special": 13
+    },
+    "release_date": "December 9, 2016"
+  },
+  {
+    "series": "sun-moon",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "2",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/2/25/SetSymbolIslands_Await_You.png/40px-SetSymbolIslands_Await_You.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/e/e4/SM2_Logo.png/100px-SM2_Logo.png",
+    "name_original": "キミを待つ島々",
+    "name": "Islands Await You",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Islands_Await_You/Alolan_Moonlight_(TCG)",
+    "name_en_equivalent": "Guardians Rising",
+    "card_stats": {
+      "cards": 50,
+      "special": 12
+    },
+    "release_date": "March 17, 2017"
+  },
+  {
+    "series": "sun-moon",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "2",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/2/24/SetSymbolAlolan_Moonlight.png/40px-SetSymbolAlolan_Moonlight.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/e/e4/SM2_Logo.png/100px-SM2_Logo.png",
+    "name_original": "アローラの月光",
+    "name": "Alolan Moonlight",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Islands_Await_You/Alolan_Moonlight_(TCG)",
+    "name_en_equivalent": "Guardians Rising",
+    "card_stats": {
+      "cards": 50,
+      "special": 12
+    },
+    "release_date": "March 17, 2017"
+  },
+  {
+    "series": "sun-moon",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "3",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/c/c8/SetSymbolTo_Have_Seen_the_Battle_Rainbow.png/40px-SetSymbolTo_Have_Seen_the_Battle_Rainbow.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/4/45/SM3_Logo.png/100px-SM3_Logo.png",
+    "name_original": "闘う虹を見たか",
+    "name": "To Have Seen the Battle Rainbow",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/To_Have_Seen_the_Battle_Rainbow/Darkness_that_Consumes_Light_(TCG)",
+    "name_en_equivalent": "Burning Shadows",
+    "card_stats": {
+      "cards": 51,
+      "special": 13
+    },
+    "release_date": "June 16, 2017"
+  },
+  {
+    "series": "sun-moon",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "3",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/6/62/SetSymbolDarkness_that_Consumes_Light.png/40px-SetSymbolDarkness_that_Consumes_Light.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/4/45/SM3_Logo.png/100px-SM3_Logo.png",
+    "name_original": "光を喰らう闇",
+    "name": "Darkness that Consumes Light",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/To_Have_Seen_the_Battle_Rainbow/Darkness_that_Consumes_Light_(TCG)",
+    "name_en_equivalent": "Burning Shadows",
+    "card_stats": {
+      "cards": 51,
+      "special": 13
+    },
+    "release_date": "June 16, 2017"
+  },
+  {
+    "series": "sun-moon",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "4",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/8/81/SetSymbolAwakened_Heroes.png/40px-SetSymbolAwakened_Heroes.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/7/70/SM4_Logo.png/100px-SM4_Logo.png",
+    "name_original": "覚醒の勇者",
+    "name": "Awakened Heroes",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Awakened_Heroes/Ultradimensional_Beasts_(TCG)",
+    "name_en_equivalent": "Crimson Invasion",
+    "card_stats": {
+      "cards": 50,
+      "special": 12
+    },
+    "release_date": "September 15, 2017"
+  },
+  {
+    "series": "sun-moon",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "4",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/c/cb/SetSymbolUltradimensional_Beasts.png/40px-SetSymbolUltradimensional_Beasts.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/7/70/SM4_Logo.png/100px-SM4_Logo.png",
+    "name_original": "超次元の暴獣",
+    "name": "Ultradimensional Beasts",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Awakened_Heroes/Ultradimensional_Beasts_(TCG)",
+    "name_en_equivalent": "Crimson Invasion",
+    "card_stats": {
+      "cards": 50,
+      "special": 12
+    },
+    "release_date": "September 15, 2017"
+  },
+  {
+    "series": "sun-moon",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "5",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/d/d0/SetSymbolUltra_Sun.png/40px-SetSymbolUltra_Sun.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/8/81/SM5_Logo.png/140px-SM5_Logo.png",
+    "name_original": "ウルトラサン",
+    "name": "Ultra Sun",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Ultra_Sun/Ultra_Moon_(TCG)",
+    "name_en_equivalent": "Ultra Prism",
+    "card_stats": {
+      "cards": 66,
+      "special": 12
+    },
+    "release_date": "December 8, 2017"
+  },
+  {
+    "series": "sun-moon",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "5",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/d/d6/SetSymbolUltra_Moon.png/40px-SetSymbolUltra_Moon.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/8/81/SM5_Logo.png/140px-SM5_Logo.png",
+    "name_original": "ウルトラムーン",
+    "name": "Ultra Moon",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Ultra_Sun/Ultra_Moon_(TCG)",
+    "name_en_equivalent": "Ultra Prism",
+    "card_stats": {
+      "cards": 66,
+      "special": 12
+    },
+    "release_date": "December 8, 2017"
+  },
+  {
+    "series": "sun-moon",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "6",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/b/be/SetSymbolForbiddenLight.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/2/25/SM6_Logo.png/100px-SM6_Logo.png",
+    "name_original": "禁断の光",
+    "name": "Forbidden Light",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Forbidden_Light_(TCG)",
+    "name_en_equivalent": "Forbidden Light",
+    "card_stats": {
+      "cards": 94,
+      "special": 16
+    },
+    "release_date": "March 2, 2018"
+  },
+  {
+    "series": "sun-moon",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "7",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/5/52/SetSymbolSky-Splitting_Charisma.png/40px-SetSymbolSky-Splitting_Charisma.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/9/90/SM7_Logo.png/100px-SM7_Logo.png",
+    "name_original": "裂空のカリスマ",
+    "name": "Sky-Splitting Charisma",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Sky-Splitting_Charisma_(TCG)",
+    "name_en_equivalent": "Celestial Storm",
+    "card_stats": {
+      "cards": 96,
+      "special": 16
+    },
+    "release_date": "June 1, 2018"
+  },
+  {
+    "series": "sun-moon",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "8",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/f/f8/SetSymbolSuper-Burst_Impact.png/40px-SetSymbolSuper-Burst_Impact.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/2/26/SM8_Logo.png/100px-SM8_Logo.png",
+    "name_original": "超爆インパクト",
+    "name": "Super-Burst Impact",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Super-Burst_Impact_(TCG)",
+    "name_en_equivalent": "Lost Thunder",
+    "card_stats": {
+      "cards": 95,
+      "special": 16
+    },
+    "release_date": "September 7, 2018"
+  },
+  {
+    "series": "sun-moon",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "9",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/8/82/SetSymbolTag_Bolt.png/40px-SetSymbolTag_Bolt.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/c/c0/SM9_Logo.png/100px-SM9_Logo.png",
+    "name_original": "タッグボルト",
+    "name": "Tag Bolt",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Tag_Bolt_(TCG)",
+    "name_en_equivalent": "Team Up",
+    "card_stats": {
+      "cards": 95,
+      "special": 23
+    },
+    "release_date": "December 7, 2018"
+  },
+  {
+    "series": "sun-moon",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "10",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/7/7d/SetSymbolDouble_Blaze.png/40px-SetSymbolDouble_Blaze.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/c/c7/SM10_Logo.png/100px-SM10_Logo.png",
+    "name_original": "ダブルブレイズ",
+    "name": "Double Blaze",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Double_Blaze_(TCG)",
+    "name_en_equivalent": "Unbroken Bonds",
+    "card_stats": {
+      "cards": 95,
+      "special": 21
+    },
+    "release_date": "March 1, 2019"
+  },
+  {
+    "series": "sun-moon",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "11",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/5/50/SetSymbolMiracle_Twin.png/40px-SetSymbolMiracle_Twin.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/2/26/SM11_Logo.png/100px-SM11_Logo.png",
+    "name_original": "ミラクルツイン",
+    "name": "Miracle Twin",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Miracle_Twin_(TCG)",
+    "name_en_equivalent": "Unified Minds",
+    "card_stats": {
+      "cards": 94,
+      "special": 21
+    },
+    "release_date": "May 31, 2019"
+  },
+  {
+    "series": "sun-moon",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "12",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/7/7f/SetSymbolAlter_Genesis.png/40px-SetSymbolAlter_Genesis.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/4/42/SM12_Logo.png/100px-SM12_Logo.png",
+    "name_original": "オルタージェネシス",
+    "name": "Alter Genesis",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Alter_Genesis_(TCG)",
+    "name_en_equivalent": "Cosmic Eclipse",
+    "card_stats": {
+      "cards": 95,
+      "special": 22
+    },
+    "release_date": "September 6, 2019"
+  },
+  {
+    "series": "sword-shield",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "1",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/1/1a/SetSymbolSword.png/40px-SetSymbolSword.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/d/d1/S1_Logo.png/110px-S1_Logo.png",
+    "name_original": "ソード",
+    "name": "Sword",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Sword/Shield_(TCG)",
+    "name_en_equivalent": "Sword & Shield",
+    "card_stats": {
+      "cards": 60,
+      "special": 15
+    },
+    "release_date": "December 6, 2019"
+  },
+  {
+    "series": "sword-shield",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "1",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/9/9b/SetSymbolShield.png/40px-SetSymbolShield.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/d/d1/S1_Logo.png/110px-S1_Logo.png",
+    "name_original": "シールド",
+    "name": "Shield",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Sword/Shield_(TCG)",
+    "name_en_equivalent": "Sword & Shield",
+    "card_stats": {
+      "cards": 60,
+      "special": 15
+    },
+    "release_date": "December 6, 2019"
+  },
+  {
+    "series": "sword-shield",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "2",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/f/fd/SetSymbolRebellion_Crash.png/40px-SetSymbolRebellion_Crash.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/e/e3/S2_Logo.png/120px-S2_Logo.png",
+    "name_original": "反逆クラッシュ",
+    "name": "Rebellion Crash",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Rebellion_Crash_(TCG)",
+    "name_en_equivalent": "Rebel Clash",
+    "card_stats": {
+      "cards": 96,
+      "special": 19
+    },
+    "release_date": "March 6, 2020"
+  },
+  {
+    "series": "sword-shield",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "3",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/d/d4/SetSymbolInfinity_Zone.png/40px-SetSymbolInfinity_Zone.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/d/d9/S3_Logo.png/120px-S3_Logo.png",
+    "name_original": "ムゲンゾーン",
+    "name": "Infinity Zone",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Infinity_Zone_(TCG)",
+    "name_en_equivalent": "Darkness Ablaze",
+    "card_stats": {
+      "cards": 100,
+      "special": 19
+    },
+    "release_date": "June 5, 2020"
+  },
+  {
+    "series": "sword-shield",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "4",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/b/ba/SetSymbolAmazing_Volt_Tackle.png/40px-SetSymbolAmazing_Volt_Tackle.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/2/23/S4_Logo.png/120px-S4_Logo.png",
+    "name_original": "仰天のボルテッカー",
+    "name": "Amazing Volt Tackle",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Amazing_Volt_Tackle_(TCG)",
+    "name_en_equivalent": "Vivid Voltage",
+    "card_stats": {
+      "cards": 100,
+      "special": 21
+    },
+    "release_date": "September 18, 2020"
+  },
+  {
+    "series": "sword-shield",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "5",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/3/3e/SetSymbolSingle_Strike_Master.png/40px-SetSymbolSingle_Strike_Master.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/a/a4/S5_Logo.png/120px-S5_Logo.png",
+    "name_original": "一撃マスター",
+    "name": "Single Strike Master",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Single_Strike_Master/Rapid_Strike_Master_(TCG)",
+    "name_en_equivalent": "Battle Styles",
+    "card_stats": {
+      "cards": 70,
+      "special": 21
+    },
+    "release_date": "January 22, 2021"
+  },
+  {
+    "series": "sword-shield",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "5",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/3/37/SetSymbolRapid_Strike_Master.png/40px-SetSymbolRapid_Strike_Master.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/a/a4/S5_Logo.png/120px-S5_Logo.png",
+    "name_original": "連撃マスター",
+    "name": "Rapid Strike Master",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Single_Strike_Master/Rapid_Strike_Master_(TCG)",
+    "name_en_equivalent": "Battle Styles",
+    "card_stats": {
+      "cards": 70,
+      "special": 21
+    },
+    "release_date": "January 22, 2021"
+  },
+  {
+    "series": "sword-shield",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "6",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/3/3c/SetSymbolSilver_Lance.png/40px-SetSymbolSilver_Lance.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/9/90/S6_Logo.png/120px-S6_Logo.png",
+    "name_original": "白銀のランス",
+    "name": "Silver Lance",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Silver_Lance/Jet-Black_Spirit_(TCG)",
+    "name_en_equivalent": "Chilling Reign",
+    "card_stats": {
+      "cards": 70,
+      "special": 25
+    },
+    "release_date": "April 23, 2021"
+  },
+  {
+    "series": "sword-shield",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "6",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/f/f9/SetSymbolJet-Black_Spirit.png/40px-SetSymbolJet-Black_Spirit.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/9/90/S6_Logo.png/120px-S6_Logo.png",
+    "name_original": "漆黒のガイスト",
+    "name": "Jet-Black Spirit",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Silver_Lance/Jet-Black_Spirit_(TCG)",
+    "name_en_equivalent": "Chilling Reign",
+    "card_stats": {
+      "cards": 70,
+      "special": 25
+    },
+    "release_date": "April 23, 2021"
+  },
+  {
+    "series": "sword-shield",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "7",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/7/70/SetSymbolSkyscraping_Perfection.png/40px-SetSymbolSkyscraping_Perfection.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/5/58/S7_Logo.png/120px-S7_Logo.png",
+    "name_original": "摩天パーフェクト",
+    "name": "Skyscraping Perfection",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Skyscraping_Perfection/Blue_Sky_Stream_(TCG)",
+    "name_en_equivalent": "Evolving Skies",
+    "card_stats": {
+      "cards": 67,
+      "special": 23
+    },
+    "release_date": "July 9, 2021"
+  },
+  {
+    "series": "sword-shield",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "7",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/3/33/SetSymbolBlue_Sky_Stream.png/40px-SetSymbolBlue_Sky_Stream.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/5/58/S7_Logo.png/120px-S7_Logo.png",
+    "name_original": "蒼空ストリーム",
+    "name": "Blue Sky Stream",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Skyscraping_Perfection/Blue_Sky_Stream_(TCG)",
+    "name_en_equivalent": "Evolving Skies",
+    "card_stats": {
+      "cards": 67,
+      "special": 23
+    },
+    "release_date": "July 9, 2021"
+  },
+  {
+    "series": "sword-shield",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "8",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/9/9f/SetSymbolFusion_Arts.png/40px-SetSymbolFusion_Arts.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/d/da/S8_Logo.png/120px-S8_Logo.png",
+    "name_original": "フュージョンアーツ",
+    "name": "Fusion Arts",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Fusion_Arts_(TCG)",
+    "name_en_equivalent": "Fusion Strike",
+    "card_stats": {
+      "cards": 100,
+      "special": 29
+    },
+    "release_date": "September 24, 2021"
+  },
+  {
+    "series": "sword-shield",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "9",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/0/08/SetSymbolStar_Birth.png/40px-SetSymbolStar_Birth.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/c/cd/S9_Logo.png/120px-S9_Logo.png",
+    "name_original": "スターバース",
+    "name": "Star Birth",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Star_Birth_(TCG)",
+    "name_en_equivalent": "Brilliant Stars",
+    "card_stats": {
+      "cards": 100,
+      "special": 27
+    },
+    "release_date": "January 14, 2022"
+  },
+  {
+    "series": "sword-shield",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "10",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/b/be/SetSymbolTime_Gazer.png/40px-SetSymbolTime_Gazer.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/8/89/S10_Logo.png/120px-S10_Logo.png",
+    "name_original": "タイムゲイザー",
+    "name": "Time Gazer",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Time_Gazer/Space_Juggler_(TCG)",
+    "name_en_equivalent": "Astral Radiance",
+    "card_stats": {
+      "cards": 67,
+      "special": 21
+    },
+    "release_date": "April 8, 2022"
+  },
+  {
+    "series": "sword-shield",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "10",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/4/41/SetSymbolSpace_Juggler.png/40px-SetSymbolSpace_Juggler.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/8/89/S10_Logo.png/120px-S10_Logo.png",
+    "name_original": "スペースジャグラー",
+    "name": "Space Juggler",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Time_Gazer/Space_Juggler_(TCG)",
+    "name_en_equivalent": "Astral Radiance",
+    "card_stats": {
+      "cards": 67,
+      "special": 21
+    },
+    "release_date": "April 8, 2022"
+  },
+  {
+    "series": "sword-shield",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "11",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/0/05/SetSymbolLost_Abyss.png/40px-SetSymbolLost_Abyss.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/b/bf/S11_Logo.png/120px-S11_Logo.png",
+    "name_original": "ロストアビス",
+    "name": "Lost Abyss",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Lost_Abyss_(TCG)",
+    "name_en_equivalent": "Lost Origin",
+    "card_stats": {
+      "cards": 100,
+      "special": 27
+    },
+    "release_date": "July 15, 2022"
+  },
+  {
+    "series": "sword-shield",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "12",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/7/73/SetSymbolParadigm_Trigger.png/40px-SetSymbolParadigm_Trigger.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/a/a3/S12_Logo.png/120px-S12_Logo.png",
+    "name_original": "パラダイムトリガー",
+    "name": "Paradigm Trigger",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Paradigm_Trigger_(TCG)",
+    "name_en_equivalent": "Silver Tempest",
+    "card_stats": {
+      "cards": 98,
+      "special": 27
+    },
+    "release_date": "October 21, 2022"
+  },
+  {
+    "series": "scarlet-violet",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "1",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/7/7e/SetSymbolScarlet_ex.png/40px-SetSymbolScarlet_ex.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/f/fb/SV1S_Logo_JP.png/110px-SV1S_Logo_JP.png",
+    "name_original": "スカーレットex",
+    "name": "Scarlet ex",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Scarlet_ex/Violet_ex_(TCG)",
+    "name_en_equivalent": "Scarlet & Violet",
+    "card_stats": {
+      "cards": 78,
+      "special": 30
+    },
+    "release_date": "January 20, 2023"
+  },
+  {
+    "series": "scarlet-violet",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "1",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/6/6a/SetSymbolViolet_ex.png/40px-SetSymbolViolet_ex.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/a/a6/SV1V_Logo_JP.png/110px-SV1V_Logo_JP.png",
+    "name_original": "バイオレットex",
+    "name": "Violet ex",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Scarlet_ex/Violet_ex_(TCG)",
+    "name_en_equivalent": "Scarlet & Violet",
+    "card_stats": {
+      "cards": 78,
+      "special": 30
+    },
+    "release_date": "January 20, 2023"
+  },
+  {
+    "series": "scarlet-violet",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "2",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/b/be/SetSymbolSnow_Hazard.png/40px-SetSymbolSnow_Hazard.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/0/06/SV2_Logo_JP.png/110px-SV2_Logo_JP.png",
+    "name_original": "スノーハザード",
+    "name": "Snow Hazard",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Snow_Hazard/Clay_Burst_(TCG)",
+    "name_en_equivalent": "Paldea Evolved",
+    "card_stats": {
+      "cards": 71,
+      "special": 28
+    },
+    "release_date": "April 14, 2023"
+  },
+  {
+    "series": "scarlet-violet",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "2",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/8/8a/SetSymbolClay_Burst.png/40px-SetSymbolClay_Burst.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/0/06/SV2_Logo_JP.png/110px-SV2_Logo_JP.png",
+    "name_original": "クレイバースト",
+    "name": "Clay Burst",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Snow_Hazard/Clay_Burst_(TCG)",
+    "name_en_equivalent": "Paldea Evolved",
+    "card_stats": {
+      "cards": 71,
+      "special": 28
+    },
+    "release_date": "April 14, 2023"
+  },
+  {
+    "series": "scarlet-violet",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "3",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/1/16/SetSymbolRuler_of_the_Black_Flame.png/40px-SetSymbolRuler_of_the_Black_Flame.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/a/aa/SV3_Logo_JP.png/110px-SV3_Logo_JP.png",
+    "name_original": "黒炎の支配者",
+    "name": "Ruler of the Black Flame",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Ruler_of_the_Black_Flame_(TCG)",
+    "name_en_equivalent": "Obsidian Flames",
+    "card_stats": {
+      "cards": 108,
+      "special": 33
+    },
+    "release_date": "July 28, 2023"
+  },
+  {
+    "series": "scarlet-violet",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "4",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/d/d3/SetSymbolAncient_Roar.png/40px-SetSymbolAncient_Roar.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/8/8e/SV4_Logo_JP.png/110px-SV4_Logo_JP.png",
+    "name_original": "古代の咆哮",
+    "name": "Ancient Roar",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Ancient_Roar/Future_Flash_(TCG)",
+    "name_en_equivalent": "Paradox Rift",
+    "card_stats": {
+      "cards": 66,
+      "special": 29
+    },
+    "release_date": "October 27, 2023"
+  },
+  {
+    "series": "scarlet-violet",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "4",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/3/35/SetSymbolFuture_Flash.png/40px-SetSymbolFuture_Flash.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/8/8e/SV4_Logo_JP.png/110px-SV4_Logo_JP.png",
+    "name_original": "未来の一閃",
+    "name": "Future Flash",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Ancient_Roar/Future_Flash_(TCG)",
+    "name_en_equivalent": "Paradox Rift",
+    "card_stats": {
+      "cards": 66,
+      "special": 29
+    },
+    "release_date": "October 27, 2023"
+  },
+  {
+    "series": "scarlet-violet",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "5",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/0/03/SetSymbolWild_Force.png/40px-SetSymbolWild_Force.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/e/e3/SV5_Logo_JP.png/110px-SV5_Logo_JP.png",
+    "name_original": "ワイルドフォース• サイバージャッジ",
+    "name": "Wild Force",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Wild_Force/Cyber_Judge_(TCG)",
+    "name_en_equivalent": "Temporal Forces",
+    "card_stats": {
+      "cards": 71,
+      "special": 29
+    },
+    "release_date": "January 26, 2024"
+  },
+  {
+    "series": "scarlet-violet",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "5",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/5/53/SetSymbolCyber_Judge.png/40px-SetSymbolCyber_Judge.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/e/e3/SV5_Logo_JP.png/110px-SV5_Logo_JP.png",
+    "name_original": "ワイルドフォース• サイバージャッジ",
+    "name": "Cyber Judge",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Wild_Force/Cyber_Judge_(TCG)",
+    "name_en_equivalent": "Temporal Forces",
+    "card_stats": {
+      "cards": 71,
+      "special": 29
+    },
+    "release_date": "January 26, 2024"
+  },
+  {
+    "series": "scarlet-violet",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "6",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/d/d6/SetSymbolTransformation_Mask.png/40px-SetSymbolTransformation_Mask.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/e/ed/SV6_Logo_JP.png/110px-SV6_Logo_JP.png",
+    "name_original": "変幻の仮面",
+    "name": "Transformation Mask",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Transformation_Mask_(TCG)",
+    "name_en_equivalent": "Twilight Masquerade",
+    "card_stats": {
+      "cards": 101,
+      "special": 32
+    },
+    "release_date": "April 26, 2024"
+  },
+  {
+    "series": "scarlet-violet",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "7",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/c/c8/SetSymbolStellar_Miracle.png/40px-SetSymbolStellar_Miracle.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/6/69/SV7_Logo_JP.png/110px-SV7_Logo_JP.png",
+    "name_original": "ステラミラクル",
+    "name": "Stellar Miracle",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Stellar_Miracle_(TCG)",
+    "name_en_equivalent": "Stellar Crown",
+    "card_stats": {
+      "cards": 102,
+      "special": 33
+    },
+    "release_date": "July 19, 2024"
+  },
+  {
+    "series": "scarlet-violet",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "8",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/c/cc/SetSymbolSuper_Electric_Breaker.png/40px-SetSymbolSuper_Electric_Breaker.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/f/f3/SV8_Logo_JP.png/110px-SV8_Logo_JP.png",
+    "name_original": "超電ブレイカー",
+    "name": "Super Electric Breaker",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Super_Electric_Breaker_(TCG)",
+    "name_en_equivalent": "Surging Sparks",
+    "card_stats": {
+      "cards": 106,
+      "special": 32
+    },
+    "release_date": "October 18, 2024"
+  },
+  {
+    "series": "scarlet-violet",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "9",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/a/a3/SetSymbolBattle_Partners.png/40px-SetSymbolBattle_Partners.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/b/b4/SV9_Logo_JP.png/110px-SV9_Logo_JP.png",
+    "name_original": "バトルパートナーズ",
+    "name": "Battle Partners",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Battle_Partners_(TCG)",
+    "name_en_equivalent": "Journey Together",
+    "card_stats": {
+      "cards": 100,
+      "special": 32
+    },
+    "release_date": "January 24, 2025"
+  },
+  {
+    "series": "scarlet-violet",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "10",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/4/4a/SetSymbolGlory_of_the_Rocket_Gang.png/40px-SetSymbolGlory_of_the_Rocket_Gang.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/9/97/SV10_Logo_JP.png/110px-SV10_Logo_JP.png",
+    "name_original": "ロケット団の栄光",
+    "name": "Glory of the Rocket Gang",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Glory_of_the_Rocket_Gang_(TCG)",
+    "name_en_equivalent": "Destined Rivals",
+    "card_stats": {
+      "cards": 98,
+      "special": 34
+    },
+    "release_date": "April 18, 2025"
+  },
+  {
+    "series": "scarlet-violet",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "11",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/a/a2/SetSymbolBlackBolt.png/40px-SetSymbolBlackBolt.png",
+    "name_original": "ブラックボルト",
+    "name": "Black Bolt",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Black_Bolt/White_Flare_(TCG)",
+    "name_en_equivalent": "Black Bolt & White Flare",
+    "card_stats": {
+      "cards": 172
+    },
+    "release_date": "June 6, 2025"
+  },
+  {
+    "series": "scarlet-violet",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "11",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/1/13/SetSymbolWhiteFlare.png/40px-SetSymbolWhiteFlare.png",
+    "name_original": "ホワイトフレア",
+    "name": "White Flare",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Black_Bolt/White_Flare_(TCG)",
+    "name_en_equivalent": "Black Bolt & White Flare",
+    "card_stats": {
+      "cards": 172
+    },
+    "release_date": "June 6, 2025"
+  },
+  {
+    "series": "mega",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "1",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/e/e9/SetSymbolMega_Brave.png/40px-SetSymbolMega_Brave.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/a/ab/M1_Logo_JP.png/110px-M1_Logo_JP.png",
+    "name_original": "メガブレイブ",
+    "name": "Mega Brave",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Mega_Brave/Mega_Symphonia_(TCG)",
+    "name_en_equivalent": "Mega Evolution",
+    "card_stats": {
+      "cards": 63,
+      "special": 29
+    },
+    "release_date": "August 1, 2025"
+  },
+  {
+    "series": "mega",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "1",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/d/df/SetSymbolMega_Symphonia.png/40px-SetSymbolMega_Symphonia.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/a/ab/M1_Logo_JP.png/110px-M1_Logo_JP.png",
+    "name_original": "メガシンフォニア",
+    "name": "Mega Symphonia",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Mega_Brave/Mega_Symphonia_(TCG)",
+    "name_en_equivalent": "Mega Evolution",
+    "card_stats": {
+      "cards": 63,
+      "special": 29
+    },
+    "release_date": "August 1, 2025"
+  },
+  {
+    "series": "mega",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "2",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/4/46/SetSymbolInferno_X.png/40px-SetSymbolInferno_X.png",
+    "name_original": "インフェルノX",
+    "name": "Inferno X",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Inferno_X_(TCG)",
+    "card_stats": {
+      "cards": 80,
+      "special": null
+    },
+    "release_date": "September 26, 2025"
+  },
+  {
+    "series": "adv",
+    "series_type": "subset",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/b/b9/SetSymbolTeam_Magma_vs_Team_Aqua.png/40px-SetSymbolTeam_Magma_vs_Team_Aqua.png",
+    "name_original": "マグマVSアクア ふたつの野望",
+    "name": "Magma VS Aqua: Two Ambitions",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Magma_VS_Aqua:_Two_Ambitions_(TCG)",
+    "name_en_equivalent": "EX Team Magma vs Team Aqua",
+    "card_stats": {
+      "cards": 80
+    },
+    "release_date": "October 24, 2003"
+  },
+  {
+    "series": "legend",
+    "series_type": "subset",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/9/92/SetSymbolLost_Link.png/40px-SetSymbolLost_Link.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/2/29/Lost_Link_Logo.png/120px-Lost_Link_Logo.png",
+    "name_original": "ロストリンク",
+    "name": "Lost Link",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Lost_Link_(TCG)",
+    "name_en_equivalent": "Parts of Triumphant and Call of Legends",
+    "card_stats": {
+      "cards": 40
+    },
+    "release_date": "April 16, 2010"
+  },
+  {
+    "series": "black-white",
+    "series_type": "subset",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/7/7a/SetSymbolDragon_Selection.png/40px-SetSymbolDragon_Selection.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/0/08/Dragon_Selection_Logo.png/120px-Dragon_Selection_Logo.png",
+    "name_original": "ドラゴンセレクション",
+    "name": "Dragon Selection",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Dragon_Selection_(TCG)",
+    "name_en_equivalent": "Dragon Vault",
+    "card_stats": {
+      "cards": 20
+    },
+    "release_date": "January 27, 2012"
+  },
+  {
+    "series": "black-white",
+    "series_type": "subset",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/e/ef/SetSymbolShiny_Collection.png/40px-SetSymbolShiny_Collection.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/9/94/Shiny_Collection_Logo.png/120px-Shiny_Collection_Logo.png",
+    "name_original": "シャイニーコレクション",
+    "name": "Shiny Collection",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Shiny_Collection_(TCG)",
+    "name_en_equivalent": "Legendary Treasures's Radiant Collection",
+    "card_stats": {
+      "cards": 20,
+      "special": 5
+    },
+    "release_date": "February 1, 2013"
+  },
+  {
+    "series": "black-white",
+    "series_type": "subset",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/f/f2/SetSymbolEX_Battle_Boost.png/40px-SetSymbolEX_Battle_Boost.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/b/bb/EX_Battle_Boost_Logo.png/120px-EX_Battle_Boost_Logo.png",
+    "name_original": "EXバトルブースト",
+    "name": "EX Battle Boost",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/EX_Battle_Boost_(TCG)",
+    "name_en_equivalent": "Legendary Treasures",
+    "card_stats": {
+      "cards": 93,
+      "special": 6
+    },
+    "release_date": "July 13, 2013"
+  },
+  {
+    "series": "xy",
+    "series_type": "concept",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/8/8f/SetSymbolDoubleCrisis.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/f/f0/CP1_Logo.png/120px-CP1_Logo.png",
+    "name_original": "マグマ団VSアクア団 ダブルクライシス",
+    "name": "Magma Gang VS Aqua Gang: Double Crisis",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Magma_Gang_VS_Aqua_Gang:_Double_Crisis_(TCG)",
+    "name_en_equivalent": "Double Crisis",
+    "card_stats": {
+      "cards": 34
+    },
+    "release_date": "January 30, 2015"
+  },
+  {
+    "series": "xy",
+    "series_type": "concept",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/5/51/SetSymbolLegendary_Shine_Collection.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/1/13/CP2_Logo.png/120px-CP2_Logo.png",
+    "name_original": "伝説キラコレクション",
+    "name": "Legendary Shine Collection",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Legendary_Shine_Collection_(TCG)",
+    "name_en_equivalent": "Part of BREAKthrough",
+    "card_stats": {
+      "cards": 27
+    },
+    "release_date": "July 18, 2015"
+  },
+  {
+    "series": "xy-break",
+    "series_type": "concept",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/a/a6/SetSymbolPok%C3%A9Kyun_Collection.png/40px-SetSymbolPok%C3%A9Kyun_Collection.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/3/32/CP3_Logo.png/120px-CP3_Logo.png",
+    "name_original": "ポケキュンコレクション",
+    "name": "PokéKyun Collection",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9Kyun_Collection_(TCG)",
+    "name_en_equivalent": "Generations's Radiant Collection",
+    "card_stats": {
+      "cards": 32
+    },
+    "release_date": "January 29, 2016"
+  },
+  {
+    "series": "xy-break",
+    "series_type": "concept",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/1/1b/SetSymbolPremium_Champion_Pack.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/1/16/CP4_Logo.png/120px-CP4_Logo.png",
+    "name_original": "プレミアムチャンピオンパック EX×M×BREAK",
+    "name": "Premium Champion Pack",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Premium_Champion_Pack_(TCG)",
+    "card_stats": {
+      "cards": 131
+    },
+    "release_date": "April 16, 2016"
+  },
+  {
+    "series": "xy-break",
+    "series_type": "concept",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/d/de/SetSymbolMythical_Legendary_Dream_Shine_Collection.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/5/5a/CP5_Logo.png/120px-CP5_Logo.png",
+    "name_original": "幻・伝説ドリームキラコレクション",
+    "name": "Mythical & Legendary Dream Shine Collection",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Mythical_%26_Legendary_Dream_Shine_Collection_(TCG)",
+    "card_stats": {
+      "cards": 36,
+      "special": 2
+    },
+    "release_date": "July 16, 2016"
+  },
+  {
+    "series": "xy-break",
+    "series_type": "concept",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/1/1b/SetSymbolExpansion_Pack_20th_Anniversary.png/40px-SetSymbolExpansion_Pack_20th_Anniversary.png",
+    "name_original": "拡張パック 20th Anniversary",
+    "name": "Expansion Pack 20th Anniversary",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Expansion_Pack_20th_Anniversary_(TCG)",
+    "name_en_equivalent": "Evolutions",
+    "card_stats": {
+      "cards": 87,
+      "special": 16
+    },
+    "release_date": "September 16, 2016"
+  },
+  {
+    "series": "xy-break",
+    "series_type": "high-class-expansion",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/8/88/SetSymbolXY_reprint.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/b/b5/The_Best_of_XY_Logo.png/120px-The_Best_of_XY_Logo.png",
+    "name_original": "THE BEST OF XY",
+    "name": "THE BEST OF XY",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/The_Best_of_XY_(TCG)",
+    "card_stats": {
+      "cards": 171,
+      "special": 17
+    },
+    "release_date": "April 21, 2017"
+  },
+  {
+    "series": "sun-moon",
+    "series_type": "enhanced-expansion",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/d/dc/SetSymbolSM1Plus.png/40px-SetSymbolSM1Plus.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/d/d1/SM1Plus_Logo.png/120px-SM1Plus_Logo.png",
+    "name_original": "サン＆ムーン",
+    "name": "Sun & Moon",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Enhanced_Expansion_Pack_Sun_%26_Moon_(TCG)",
+    "name_en_equivalent": "Part of Guardians Rising",
+    "card_stats": {
+      "cards": 51,
+      "special": 17
+    },
+    "release_date": "January 27, 2017"
+  },
+  {
+    "series": "sun-moon",
+    "series_type": "enhanced-expansion",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/c/c7/SetSymbolFacing_a_New_Trial.png/40px-SetSymbolFacing_a_New_Trial.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/1/1a/SM2Plus_Logo.png/120px-SM2Plus_Logo.png",
+    "name_original": "新たなる試練の向こう",
+    "name": "Facing a New Trial",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Facing_a_New_Trial_(TCG)",
+    "name_en_equivalent": "Part of Burning Shadows",
+    "card_stats": {
+      "cards": 49,
+      "special": 17
+    },
+    "release_date": "April 21, 2017"
+  },
+  {
+    "series": "sun-moon",
+    "series_type": "enhanced-expansion",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/9/97/SetSymbolShiningLegends.png/40px-SetSymbolShiningLegends.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/7/75/SM3Plus_Logo.png/120px-SM3Plus_Logo.png",
+    "name_original": "ひかる伝説",
+    "name": "Shining Legends",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Shining_Legends_(TCG)",
+    "name_en_equivalent": "Shining Legends",
+    "card_stats": {
+      "cards": 72,
+      "special": 10
+    },
+    "release_date": "July 15, 2017"
+  },
+  {
+    "series": "sun-moon",
+    "series_type": "enhanced-expansion",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/a/aa/SetSymbolUltra_Force.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/f/f9/SM5Plus_Logo.png/120px-SM5Plus_Logo.png",
+    "name_original": "ウルトラフォース",
+    "name": "Ultra Force",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Ultra_Force_(TCG)",
+    "name_en_equivalent": "Part of Forbidden Light",
+    "card_stats": {
+      "cards": 50,
+      "special": 13
+    },
+    "release_date": "January 19, 2018"
+  },
+  {
+    "series": "sun-moon",
+    "series_type": "enhanced-expansion",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/7/74/SetSymbolDragon_Storm.png/40px-SetSymbolDragon_Storm.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/d/db/SM6a_Logo.png/120px-SM6a_Logo.png",
+    "name_original": "ドラゴンストーム",
+    "name": "Dragon Storm",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Dragon_Storm_(TCG)",
+    "name_en_equivalent": "Dragon Majesty",
+    "card_stats": {
+      "cards": 53,
+      "special": 13
+    },
+    "release_date": "April 6, 2018"
+  },
+  {
+    "series": "sun-moon",
+    "series_type": "enhanced-expansion",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/9/93/SetSymbolChampion_Road.png/40px-SetSymbolChampion_Road.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/f/fa/SM6b_Logo.png/120px-SM6b_Logo.png",
+    "name_original": "チャンピオンロード",
+    "name": "Champion Road",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Champion_Road_(TCG)",
+    "name_en_equivalent": "Part of Celestial Storm",
+    "card_stats": {
+      "cards": 66,
+      "special": 20
+    },
+    "release_date": "May 30, 2018"
+  },
+  {
+    "series": "sun-moon",
+    "series_type": "enhanced-expansion",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/c/c0/SetSymbolThunderclap_Spark.png/40px-SetSymbolThunderclap_Spark.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/7/70/SM7a_Logo.png/120px-SM7a_Logo.png",
+    "name_original": "迅雷スパーク",
+    "name": "Thunderclap Spark",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Thunderclap_Spark_(TCG)",
+    "name_en_equivalent": "Part of Lost Thunder",
+    "card_stats": {
+      "cards": 60,
+      "special": 13
+    },
+    "release_date": "July 6, 2018"
+  },
+  {
+    "series": "sun-moon",
+    "series_type": "enhanced-expansion",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/b/b9/SetSymbolFairy_Rise.png/40px-SetSymbolFairy_Rise.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/6/63/SM7b_Logo.png/120px-SM7b_Logo.png",
+    "name_original": "フェアリーライズ",
+    "name": "Fairy Rise",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Fairy_Rise_(TCG)",
+    "name_en_equivalent": "Part of Lost Thunder",
+    "card_stats": {
+      "cards": 50,
+      "special": 13
+    },
+    "release_date": "August 3, 2018"
+  },
+  {
+    "series": "sun-moon",
+    "series_type": "enhanced-expansion",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/c/c6/SetSymbolDark_Order.png/40px-SetSymbolDark_Order.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/4/49/SM8a_Logo.png/120px-SM8a_Logo.png",
+    "name_original": "ダークオーダー",
+    "name": "Dark Order",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Dark_Order_(TCG)",
+    "name_en_equivalent": "Part of Team Up",
+    "card_stats": {
+      "cards": 52,
+      "special": 13
+    },
+    "release_date": "October 5, 2018"
+  },
+  {
+    "series": "sun-moon",
+    "series_type": "enhanced-expansion",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/8/8f/SetSymbolNight_Unison.png/40px-SetSymbolNight_Unison.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/3/35/SM9a_Logo.png/120px-SM9a_Logo.png",
+    "name_original": "ナイトユニゾン",
+    "name": "Night Unison",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Night_Unison_(TCG)",
+    "name_en_equivalent": "Part of Unbroken Bonds",
+    "card_stats": {
+      "cards": 55,
+      "special": 15
+    },
+    "release_date": "January 11, 2019"
+  },
+  {
+    "series": "sun-moon",
+    "series_type": "enhanced-expansion",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/e/e1/SetSymbolFull_Metal_Wall.png/40px-SetSymbolFull_Metal_Wall.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/d/df/SM9b_Logo.png/120px-SM9b_Logo.png",
+    "name_original": "フルメタルウォール",
+    "name": "Full Metal Wall",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Full_Metal_Wall_(TCG)",
+    "name_en_equivalent": "Part of Unbroken Bonds",
+    "card_stats": {
+      "cards": 54,
+      "special": 15
+    },
+    "release_date": "February 1, 2019"
+  },
+  {
+    "series": "sun-moon",
+    "series_type": "enhanced-expansion",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/a/ae/SetSymbolGG_End.png/40px-SetSymbolGG_End.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/4/4b/SM10a_Logo.png/120px-SM10a_Logo.png",
+    "name_original": "ジージーエンド",
+    "name": "GG End",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/GG_End_(TCG)",
+    "name_en_equivalent": "Part of Unified Minds",
+    "card_stats": {
+      "cards": 54,
+      "special": 15
+    },
+    "release_date": "April 5, 2019"
+  },
+  {
+    "series": "sun-moon",
+    "series_type": "enhanced-expansion",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/3/38/SetSymbolSky_Legend.png/40px-SetSymbolSky_Legend.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/5/5d/SM10b_Logo.png/120px-SM10b_Logo.png",
+    "name_original": "スカイレジェンド",
+    "name": "Sky Legend",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Sky_Legend_(TCG)",
+    "name_en_equivalent": "Parts of Hidden Fates and Unified Minds",
+    "card_stats": {
+      "cards": 54,
+      "special": 15
+    },
+    "release_date": "April 26, 2019"
+  },
+  {
+    "series": "sun-moon",
+    "series_type": "enhanced-expansion",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/7/7c/SetSymbolRemix_Bout.png/40px-SetSymbolRemix_Bout.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/0/0a/SM11a_Logo.png/120px-SM11a_Logo.png",
+    "name_original": "リミックスバウト",
+    "name": "Remix Bout",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Remix_Bout_(TCG)",
+    "name_en_equivalent": "Part of Cosmic Eclipse",
+    "card_stats": {
+      "cards": 64,
+      "special": 16
+    },
+    "release_date": "July 5, 2019"
+  },
+  {
+    "series": "sun-moon",
+    "series_type": "enhanced-expansion",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/e/e1/SetSymbolDream_League.png/40px-SetSymbolDream_League.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/d/d3/SM11b_Logo.png/120px-SM11b_Logo.png",
+    "name_original": "ドリームリーグ",
+    "name": "Dream League",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Dream_League_(TCG)",
+    "name_en_equivalent": "Part of Cosmic Eclipse",
+    "card_stats": {
+      "cards": 49,
+      "special": 26
+    },
+    "release_date": "August 2, 2019"
+  },
+  {
+    "series": "sun-moon",
+    "series_type": "high-class-expansion",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/6/6b/SetSymbolGX_Battle_Boost.png/40px-SetSymbolGX_Battle_Boost.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/7/71/SM4Plus_Logo.png/120px-SM4Plus_Logo.png",
+    "name_original": "GXバトルブースト",
+    "name": "GX Battle Boost",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/GX_Battle_Boost_(TCG)",
+    "name_en_equivalent": "Part of Ultra Prism",
+    "card_stats": {
+      "cards": 114,
+      "special": 11
+    },
+    "release_date": "October 20, 2017"
+  },
+  {
+    "series": "sun-moon",
+    "series_type": "high-class-expansion",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/f/fd/SetSymbolGX_Ultra_Shiny.png/40px-SetSymbolGX_Ultra_Shiny.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/8/86/SM8b_Logo.png/120px-SM8b_Logo.png",
+    "name_original": "GXウルトラシャイニー",
+    "name": "GX Ultra Shiny",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/GX_Ultra_Shiny_(TCG)",
+    "name_en_equivalent": "Hidden Fates's Shiny Vault",
+    "card_stats": {
+      "cards": 150,
+      "special": 100
+    },
+    "release_date": "November 2, 2018"
+  },
+  {
+    "series": "sun-moon",
+    "series_type": "high-class-expansion",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/a/ac/SetSymbolTag_All_Stars.png/40px-SetSymbolTag_All_Stars.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/4/44/SM12a_Logo.png/120px-SM12a_Logo.png",
+    "name_original": "TAG TEAM GX タッグオールスターズ",
+    "name": "TAG TEAM GX: Tag All Stars",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Tag_All_Stars_(TCG)",
+    "card_stats": {
+      "cards": 173,
+      "special": 53
+    },
+    "release_date": "October 4, 2019"
+  },
+  {
+    "series": "sword-shield",
+    "series_type": "enhanced-expansion",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/1/15/SetSymbolVMAX_Rising.png/40px-SetSymbolVMAX_Rising.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/2/22/S1a_Logo.png/110px-S1a_Logo.png",
+    "name_original": "VMAXライジング",
+    "name": "VMAX Rising",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/VMAX_Rising_(TCG)",
+    "name_en_equivalent": "Part of Rebel Clash",
+    "card_stats": {
+      "cards": 70,
+      "special": 16
+    },
+    "release_date": "February 7, 2020"
+  },
+  {
+    "series": "sword-shield",
+    "series_type": "enhanced-expansion",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/7/72/SetSymbolExplosive_Walker.png/40px-SetSymbolExplosive_Walker.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/f/ff/S2a_Logo.png/120px-S2a_Logo.png",
+    "name_original": "爆炎ウォーカー",
+    "name": "Explosive Walker",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Explosive_Walker_(TCG)",
+    "name_en_equivalent": "Part of Darkness Ablaze",
+    "card_stats": {
+      "cards": 70,
+      "special": 16
+    },
+    "release_date": "April 24, 2020"
+  },
+  {
+    "series": "sword-shield",
+    "series_type": "enhanced-expansion",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/9/97/SetSymbolLegendary_Heartbeat.png/40px-SetSymbolLegendary_Heartbeat.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/d/d4/S3a_Logo.png/120px-S3a_Logo.png",
+    "name_original": "伝説の鼓動",
+    "name": "Legendary Heartbeat",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Legendary_Heartbeat_(TCG)",
+    "name_en_equivalent": "Part of Vivid Voltage",
+    "card_stats": {
+      "cards": 76,
+      "special": 18
+    },
+    "release_date": "July 10, 2020"
+  },
+  {
+    "series": "sword-shield",
+    "series_type": "enhanced-expansion",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/3/32/SetSymbolPeerless_Fighters.png/40px-SetSymbolPeerless_Fighters.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/5/50/S5a_Peerless_Fighters_Logo.png/120px-S5a_Peerless_Fighters_Logo.png",
+    "name_original": "双璧のファイター",
+    "name": "Peerless Fighters",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Peerless_Fighters_(TCG)",
+    "name_en_equivalent": "Part of Chilling Reign",
+    "card_stats": {
+      "cards": 70,
+      "special": 16
+    },
+    "release_date": "March 19, 2021"
+  },
+  {
+    "series": "sword-shield",
+    "series_type": "enhanced-expansion",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/5/57/SetSymbolEevee_Heroes.png/40px-SetSymbolEevee_Heroes.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/1/1f/S6a_Eevee_Heroes_Logo.png/120px-S6a_Eevee_Heroes_Logo.png",
+    "name_original": "イーブイヒーローズ",
+    "name": "Eevee Heroes",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Eevee_Heroes_(TCG)",
+    "name_en_equivalent": "Parts of Fusion Strike and Evolving Skies",
+    "card_stats": {
+      "cards": 69,
+      "special": 32
+    },
+    "release_date": "May 28, 2021"
+  },
+  {
+    "series": "sword-shield",
+    "series_type": "enhanced-expansion",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/f/f4/SetSymbol25th_Anniversary_Collection.png/40px-SetSymbol25th_Anniversary_Collection.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/a/a3/S8a_25th_Anniversary_Collection_Logo.png/120px-S8a_25th_Anniversary_Collection_Logo.png",
+    "name_original": "25th ANNIVERSARY COLLECTION",
+    "name": "25th Anniversary Collection",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/25th_Anniversary_Collection_(TCG)",
+    "name_en_equivalent": "Celebrations",
+    "card_stats": {
+      "cards": 28,
+      "special": 2,
+      "special-holo-energy": 8
+    },
+    "release_date": "October 22, 2021"
+  },
+  {
+    "series": "sword-shield",
+    "series_type": "enhanced-expansion",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/9/95/SetSymbolBattle_Region.png/40px-SetSymbolBattle_Region.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/c/cb/S9a_Battle_Region_Logo.png/120px-S9a_Battle_Region_Logo.png",
+    "name_original": "バトルリージョン",
+    "name": "Battle Region",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Battle_Region_(TCG)",
+    "name_en_equivalent": "Parts of Astral Radiance and Lost Origin",
+    "card_stats": {
+      "cards": 67,
+      "special": 26
+    },
+    "release_date": "February 25, 2022"
+  },
+  {
+    "series": "sword-shield",
+    "series_type": "enhanced-expansion",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/c/c6/SetSymbolDark_Phantasma.png/40px-SetSymbolDark_Phantasma.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/f/f7/S10a_Dark_Phantasma_Logo.png/120px-S10a_Dark_Phantasma_Logo.png",
+    "name_original": "ダークファンタズマ",
+    "name": "Dark Phantasma",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Dark_Phantasma_(TCG)",
+    "name_en_equivalent": "Part of Lost Origin",
+    "card_stats": {
+      "cards": 71,
+      "special": 28
+    },
+    "release_date": "May 13, 2022"
+  },
+  {
+    "series": "sword-shield",
+    "series_type": "enhanced-expansion",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/3/3b/SetSymbolS10b.png/40px-SetSymbolS10b.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/3/3d/Pokemon_Go_Logo.png/120px-Pokemon_Go_Logo.png",
+    "name_original": "Pokémon GO",
+    "name": "Pokémon GO",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_GO_(TCG)",
+    "name_en_equivalent": "Pokémon GO",
+    "card_stats": {
+      "cards": 71,
+      "special": 22,
+      "special-holo-energy": 8
+    },
+    "release_date": "June 17, 2022"
+  },
+  {
+    "series": "sword-shield",
+    "series_type": "enhanced-expansion",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/6/65/SetSymbolIncandescent_Arcana.png/40px-SetSymbolIncandescent_Arcana.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/6/60/S11a_Incandescent_Arcana_Logo.png/120px-S11a_Incandescent_Arcana_Logo.png",
+    "name_original": "白熱のアルカナ",
+    "name": "Incandescent Arcana",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Incandescent_Arcana_(TCG)",
+    "name_en_equivalent": "Part of Silver Tempest",
+    "card_stats": {
+      "cards": 68,
+      "special": 26
+    },
+    "release_date": "September 2, 2022"
+  },
+  {
+    "series": "sword-shield",
+    "series_type": "high-class-expansion",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/2/22/SetSymbolShiny_Star_V.png/40px-SetSymbolShiny_Star_V.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/1/10/S4a_Logo.png/110px-S4a_Logo.png",
+    "name_original": "シャイニースターV",
+    "name": "Shiny Star V",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Shiny_Star_V_(TCG)",
+    "name_en_equivalent": "Shining Fates",
+    "card_stats": {
+      "cards": 190,
+      "special": 140
+    },
+    "release_date": "November 20, 2020"
+  },
+  {
+    "series": "sword-shield",
+    "series_type": "high-class-expansion",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/2/2f/SetSymbolVMAX_Climax.png/40px-SetSymbolVMAX_Climax.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/4/4d/S8b_VMAX_Climax_Logo.png/110px-S8b_VMAX_Climax_Logo.png",
+    "name_original": "VMAXクライマックス",
+    "name": "VMAX Climax",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/VMAX_Climax_(TCG)",
+    "name_en_equivalent": "Trainer Galleries of Brilliant Stars, Astral Radiance, Lost Origin, and Silver Tempest",
+    "card_stats": {
+      "cards": 184,
+      "special": 101,
+      "special-holo-energy": 8
+    },
+    "release_date": "December 3, 2021"
+  },
+  {
+    "series": "sword-shield",
+    "series_type": "high-class-expansion",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/3/3c/SetSymbolVSTAR_Universe.png/40px-SetSymbolVSTAR_Universe.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/4/42/S12a_VSTAR_Universe_Logo.png/110px-S12a_VSTAR_Universe_Logo.png",
+    "name_original": "VSTARユニバース",
+    "name": "VSTAR Universe",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/VSTAR_Universe_(TCG)",
+    "name_en_equivalent": "Crown Zenith",
+    "card_stats": {
+      "cards": 172,
+      "special": 90
+    },
+    "release_date": "December 2, 2022"
+  },
+  {
+    "series": "scarlet-violet",
+    "series_type": "enhanced-expansion",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/5/51/SetSymbolTriplet_Beat.png/40px-SetSymbolTriplet_Beat.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/7/70/SV1a_Triplet_Beat_Logo.png/120px-SV1a_Triplet_Beat_Logo.png",
+    "name_original": "トリプレットビート",
+    "name": "Triplet Beat",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Triplet_Beat_(TCG)",
+    "name_en_equivalent": "⅓ of Paldea Evolved",
+    "card_stats": {
+      "cards": 73,
+      "special": 30
+    },
+    "release_date": "March 10, 2023"
+  },
+  {
+    "series": "scarlet-violet",
+    "series_type": "enhanced-expansion",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/2/23/SetSymbolPok%C3%A9mon_Card_151.png/40px-SetSymbolPok%C3%A9mon_Card_151.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/1/12/SV2a_Pok%C3%A9mon_Card_151_Logo.png/110px-SV2a_Pok%C3%A9mon_Card_151_Logo.png",
+    "name_original": "ポケモンカード151",
+    "name": "Pokémon Card 151",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_Card_151_(TCG)",
+    "name_en_equivalent": "151",
+    "card_stats": {
+      "cards": 165,
+      "special": 45
+    },
+    "release_date": "June 16, 2023"
+  },
+  {
+    "series": "scarlet-violet",
+    "series_type": "enhanced-expansion",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/a/a2/SetSymbolRaging_Surf.png/40px-SetSymbolRaging_Surf.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/8/8f/SV3a_Raging_Surf_Logo.png/110px-SV3a_Raging_Surf_Logo.png",
+    "name_original": "レイジングサーフ",
+    "name": "Raging Surf",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Raging_Surf_(TCG)",
+    "name_en_equivalent": "⅓ of Paradox Rift",
+    "card_stats": {
+      "cards": 62,
+      "special": 30
+    },
+    "release_date": "September 22, 2023"
+  },
+  {
+    "series": "scarlet-violet",
+    "series_type": "enhanced-expansion",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/a/a0/SetSymbolCrimson_Haze.png/40px-SetSymbolCrimson_Haze.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/9/96/SV5a_Crimson_Haze_Logo.png/120px-SV5a_Crimson_Haze_Logo.png",
+    "name_original": "クリムゾンヘイズ",
+    "name": "Crimson Haze",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Crimson_Haze_(TCG)",
+    "name_en_equivalent": "⅓ of Twilight Masquerade",
+    "card_stats": {
+      "cards": 66,
+      "special": 30
+    },
+    "release_date": "March 22, 2024"
+  },
+  {
+    "series": "scarlet-violet",
+    "series_type": "enhanced-expansion",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/d/d5/SetSymbolNight_Wanderer.png/40px-SetSymbolNight_Wanderer.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/5/5e/SV6a_Night_Wanderer_Logo.png/120px-SV6a_Night_Wanderer_Logo.png",
+    "name_original": "ナイトワンダラー",
+    "name": "Night Wanderer",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Night_Wanderer_(TCG)",
+    "name_en_equivalent": "Shrouded Fable",
+    "card_stats": {
+      "cards": 64,
+      "special": 30
+    },
+    "release_date": "June 7, 2024"
+  },
+  {
+    "series": "scarlet-violet",
+    "series_type": "enhanced-expansion",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/c/cd/SetSymbolParadise_Dragona.png/40px-SetSymbolParadise_Dragona.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/1/1c/SV7a_Paradise_Dragona_Logo.png/120px-SV7a_Paradise_Dragona_Logo.png",
+    "name_original": "楽園ドラゴーナ",
+    "name": "Paradise Dragona",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Paradise_Dragona_(TCG)",
+    "name_en_equivalent": "⅓ of Surging Sparks",
+    "card_stats": {
+      "cards": 64,
+      "special": 30
+    },
+    "release_date": "September 13, 2024"
+  },
+  {
+    "series": "scarlet-violet",
+    "series_type": "enhanced-expansion",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/7/74/SetSymbolHot_Wind_Arena.png/40px-SetSymbolHot_Wind_Arena.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/a/a6/SV9a_Hot_Wind_Arena_Logo.png/120px-SV9a_Hot_Wind_Arena_Logo.png",
+    "name_original": "熱風のアリーナ",
+    "name": "Hot Wind Arena",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Hot_Wind_Arena_(TCG)",
+    "name_en_equivalent": "⅓ of Destined Rivals",
+    "card_stats": {
+      "cards": 63,
+      "special": 29
+    },
+    "release_date": "March 14, 2025"
+  },
+  {
+    "series": "scarlet-violet",
+    "series_type": "high-class-expansion",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/c/c7/SetSymbolShiny_Treasure_ex.png/40px-SetSymbolShiny_Treasure_ex.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/f/fa/SV4a_Shiny_Treasure_ex_Logo.png/110px-SV4a_Shiny_Treasure_ex_Logo.png",
+    "name_original": "シャイニートレジャーex",
+    "name": "Shiny Treasure ex",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Shiny_Treasure_ex_(TCG)",
+    "name_en_equivalent": "Paldean Fates",
+    "card_stats": {
+      "cards": 190,
+      "special": 170
+    },
+    "release_date": "December 1, 2023"
+  },
+  {
+    "series": "scarlet-violet",
+    "series_type": "high-class-expansion",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/c/ce/SetSymbolTerastal_Fest_ex.png/40px-SetSymbolTerastal_Fest_ex.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/9/9c/SV8a_Terastal_Fest_ex_Logo.png/120px-SV8a_Terastal_Fest_ex_Logo.png",
+    "name_original": "テラスタルフェスex",
+    "name": "Terastal Fest ex",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Terastal_Fest_ex_(TCG)",
+    "name_en_equivalent": "Prismatic Evolutions",
+    "card_stats": {
+      "cards": 187,
+      "special": 50
+    },
+    "release_date": "December 6, 2024"
+  },
+  {
+    "series": "mega",
+    "series_type": "high-class-expansion",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/c/cb/SetSymbolMEGA_Dream_ex.png/40px-SetSymbolMEGA_Dream_ex.png",
+    "name_original": "MEGAドリームex",
+    "name": "MEGA Dream ex",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/MEGA_Dream_ex_(TCG)",
+    "card_stats": {
+      "cards": 193,
+      "special": null
+    },
+    "release_date": "November 28, 2025"
+  },
+  {
+    "series": "other-special",
+    "series_type": "promo",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/a/af/SetSymbolVending.png/30px-SetSymbolVending.png",
+    "name_original": "拡張シート",
+    "name": "Expansion Sheet: Vending Machine cards Series 1 (Blue)",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Vending_Machine_cards_(TCG)",
+    "card_stats": {
+      "cards": 36
+    },
+    "release_date": "March 23, 1998"
+  },
+  {
+    "series": "other-special",
+    "series_type": "promo",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/a/af/SetSymbolVending.png/30px-SetSymbolVending.png",
+    "name_original": "拡張シート",
+    "name": "Expansion Sheet: Vending Machine cards Series 2 (Red)",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Vending_Machine_cards_(TCG)",
+    "card_stats": {
+      "cards": 36
+    },
+    "release_date": "June 17, 1998"
+  },
+  {
+    "series": "other-special",
+    "series_type": "promo",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/a/af/SetSymbolVending.png/30px-SetSymbolVending.png",
+    "name_original": "拡張シート",
+    "name": "Expansion Sheet: Vending Machine cards Series 3 (Green)",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Vending_Machine_cards_(TCG)",
+    "card_stats": {
+      "cards": 36,
+      "non-standard": 17
+    },
+    "release_date": "November 24, 1998"
+  },
+  {
+    "series": "other-special",
+    "series_type": "promo",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/9/96/SetSymbolSouthern_Islands.png/40px-SetSymbolSouthern_Islands.png",
+    "name_original": "サザンアイランド",
+    "name": "Southern Islands",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Southern_Islands_(TCG)",
+    "card_stats": {
+      "cards": 18
+    },
+    "release_date": "July 17, 1999"
+  },
+  {
+    "series": "other-special",
+    "series_type": "promo",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/5/58/SetSymbolPromo.png/40px-SetSymbolPromo.png",
+    "name": "P Promotional cards",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/P_Promotional_cards_(TCG)",
+    "card_stats": {
+      "cards": 47
+    },
+    "release_date": "July 2001 – July 2002"
+  },
+  {
+    "series": "other-special",
+    "series_type": "promo",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/5/58/SetSymbolPromo.png/40px-SetSymbolPromo.png",
+    "name": "J Promotional cards",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/J_Promotional_cards_(TCG)",
+    "card_stats": {
+      "cards": 2
+    },
+    "release_date": "August 2001 – July 2002"
+  },
+  {
+    "series": "other-special",
+    "series_type": "promo",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/5/58/SetSymbolPromo.png/40px-SetSymbolPromo.png",
+    "name": "T Promotional cards",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/T_Promotional_cards_(TCG)",
+    "card_stats": {
+      "cards": 24
+    },
+    "release_date": "January 2002 – March 2003"
+  },
+  {
+    "series": "other-special",
+    "series_type": "promo",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/8/8b/SetSymbolMcDonalds_Minimum_Pack.png/30px-SetSymbolMcDonalds_Minimum_Pack.png",
+    "name_original": "マクドナルドオリジナル ミニマム★パック",
+    "name": "McDonald's Original Minimum★Pack",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/McDonald%27s_Pok%C3%A9mon-e_Minimum_Pack_(TCG)",
+    "card_stats": {
+      "cards": 30
+    },
+    "release_date": "January 26 – February 24, 2002"
+  },
+  {
+    "series": "other-special",
+    "series_type": "promo",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/5/58/SetSymbolPromo.png/40px-SetSymbolPromo.png",
+    "name": "ADV-P Promotional cards",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/ADV-P_Promotional_cards_(TCG)",
+    "card_stats": {
+      "cards": 63
+    },
+    "release_date": "January 2003 – February 2004"
+  },
+  {
+    "series": "other-special",
+    "series_type": "promo",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/5/5f/SetSymbolPok%C3%A9mon_Players.png",
+    "name": "PLAY Promotional cards",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/PLAY_Promotional_cards_(TCG)",
+    "card_stats": {
+      "cards": 32
+    },
+    "release_date": "January 2003 – January 2006"
+  },
+  {
+    "series": "other-special",
+    "series_type": "promo",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/5/58/SetSymbolPromo.png/40px-SetSymbolPromo.png",
+    "name": "PCG-P Promotional cards",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/PCG-P_Promotional_cards_(TCG)",
+    "card_stats": {
+      "cards": 154
+    },
+    "release_date": "February 2004 – July 2006"
+  },
+  {
+    "series": "other-special",
+    "series_type": "promo",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/5/58/SetSymbolPromo.png/40px-SetSymbolPromo.png",
+    "name": "DP-P Promotional cards",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/DP-P_Promotional_cards_(TCG)",
+    "card_stats": {
+      "cards": 127
+    },
+    "release_date": "December 2006 – January 2009"
+  },
+  {
+    "series": "other-special",
+    "series_type": "promo",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/5/5f/SetSymbolPok%C3%A9mon_Players.png",
+    "name": "PPP Promotional cards",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/PPP_Promotional_cards_(TCG)",
+    "card_stats": {
+      "cards": 7
+    },
+    "release_date": "May 2007"
+  },
+  {
+    "series": "other-special",
+    "series_type": "promo",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/c/c3/SetSymbol10th_Movie_Commemoration_Set.png",
+    "name_original": "映画10周年記念　プレミアムシート",
+    "name": "Movie 10: 10th Anniversary Premium Sheet",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/10th_Movie_Commemoration_Set_(TCG)",
+    "card_stats": {
+      "cards": 11
+    },
+    "release_date": "July 14, 2007"
+  },
+  {
+    "series": "other-special",
+    "series_type": "promo",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/f/f3/SetSymbol11th_Movie_Commemoration_Set.png",
+    "name_original": "映画公開記念　プレミアムシート",
+    "name": "Movie Commemoration Premium Sheet",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/11th_Movie_Commemoration_Set_(TCG)",
+    "card_stats": {
+      "cards": 9
+    },
+    "release_date": "July 19, 2008"
+  },
+  {
+    "series": "other-special",
+    "series_type": "promo",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/5/58/SetSymbolPromo.png/40px-SetSymbolPromo.png",
+    "name": "DPt-P Promotional cards",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/DPt-P_Promotional_cards_(TCG)",
+    "card_stats": {
+      "cards": 51
+    },
+    "release_date": "October 2008 – August 2009"
+  },
+  {
+    "series": "other-special",
+    "series_type": "promo",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/5/58/SetSymbolPromo.png/40px-SetSymbolPromo.png",
+    "name": "L-P Promotional cards",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/L-P_Promotional_cards_(TCG)",
+    "card_stats": {
+      "cards": 79
+    },
+    "release_date": "September 2009 – August 2010"
+  },
+  {
+    "series": "other-special",
+    "series_type": "promo",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/6/63/SetSymbolPikachu_World_Collection_2010.png",
+    "name": "World Collection",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/World_Collection_(TCG)",
+    "card_stats": {
+      "cards": 10,
+      "notes": [
+        "Including 1 that has a green background variant, found only in Pokémon Centers and 7-11 stores"
+      ]
+    },
+    "release_date": "July 8, 2010"
+  },
+  {
+    "series": "other-special",
+    "series_type": "promo",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/5/58/SetSymbolPromo.png/40px-SetSymbolPromo.png",
+    "name": "BW-P Promotional cards",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/BW-P_Promotional_cards_(TCG)",
+    "card_stats": {
+      "cards": 229,
+      "notes": [
+        "Numbered up to 236, but 7 cards remain unreleased"
+      ]
+    },
+    "release_date": "December 2010 – September 2013"
+  },
+  {
+    "series": "other-special",
+    "series_type": "promo",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/6/6c/SetSymbolJourney_Partners_Collection.png/40px-SetSymbolJourney_Partners_Collection.png",
+    "name_original": "コレクションシート 旅立ちの仲間",
+    "name": "Collection Sheet Journey Partners",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/McDonald%27s_Collection_(TCG)",
+    "card_stats": {
+      "cards": 9
+    },
+    "release_date": "September 18, 2010"
+  },
+  {
+    "series": "other-special",
+    "series_type": "promo",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/5/58/SetSymbolPromo.png/40px-SetSymbolPromo.png",
+    "name": "XY-P Promotional cards",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/XY-P_Promotional_cards_(TCG)",
+    "card_stats": {
+      "cards": 298,
+      "unnumbered": 155
+    },
+    "release_date": "August 2013 – February 2017"
+  },
+  {
+    "series": "other-special",
+    "series_type": "promo",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/d/d3/SetSymbol_SMPromo.png/40px-SetSymbol_SMPromo.png",
+    "name": "SM-P Promotional cards",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/SM-P_Promotional_cards_(TCG)",
+    "card_stats": {
+      "cards": 408,
+      "unnumbered": 29
+    },
+    "release_date": "November 2016 – October 2019"
+  },
+  {
+    "series": "other-special",
+    "series_type": "promo",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/d/d3/SetSymbol_SMPromo.png/40px-SetSymbol_SMPromo.png",
+    "name": "S-P Promotional cards",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/S-P_Promotional_cards_(TCG)",
+    "card_stats": {
+      "cards": 350,
+      "unnumbered": 24
+    },
+    "release_date": "November 2019 - December 2022"
+  },
+  {
+    "series": "other-special",
+    "series_type": "promo",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/3/36/SetSymbolGreat_Detective_Pikachu.png/40px-SetSymbolGreat_Detective_Pikachu.png",
+    "name_original": "ムービースペシャルパック 名探偵ピカチュウ",
+    "name": "Movie Special Pack Great Detective Pikachu",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Great_Detective_Pikachu_(TCG)",
+    "card_stats": {
+      "cards": 24
+    },
+    "release_date": "April 26, 2019"
+  },
+  {
+    "series": "other-special",
+    "series_type": "promo",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/5/54/SetSymbolPromo_Card_Pack_25th_Anniversary_Edition.png/40px-SetSymbolPromo_Card_Pack_25th_Anniversary_Edition.png",
+    "name_original": "プロモカードパック 25th ANNIVERSARY edition",
+    "name": "Promo Card Pack 25th Anniversary Edition",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Promo_Card_Pack_25th_Anniversary_Edition_(TCG)",
+    "card_stats": {
+      "cards": 25
+    },
+    "release_date": "October 22, 2021"
+  },
+  {
+    "series": "other-special",
+    "series_type": "promo",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/d/d3/SetSymbol_SMPromo.png/40px-SetSymbol_SMPromo.png",
+    "name": "SV-P Promotional cards",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/SV-P_Promotional_cards_(TCG)",
+    "card_stats": {
+      "cards": 290,
+      "unnumbered": 13
+    },
+    "release_date": "November 2022 - August 2025"
+  },
+  {
+    "series": "other-special",
+    "series_type": "promo",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/d/d3/SetSymbol_SMPromo.png/40px-SetSymbol_SMPromo.png",
+    "name": "M-P Promotional cards",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/M-P_Promotional_cards_(TCG)",
+    "card_stats": {
+      "cards": null
+    },
+    "release_date": "August 1, 2025 - Present"
+  }
+]

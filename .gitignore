@@ -34,3 +34,6 @@ playwright-report/
 
 # build statistics
 bundle-visualization.html
+
+# generated files
+out/

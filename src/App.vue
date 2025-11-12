@@ -68,7 +68,7 @@ const breadcrumbs = computed(() =>
         <v-list-item link title="Cards" :to="{ name: 'cards' }"></v-list-item>
         <v-list-item link title="Transactions" :to="{ name: 'transactions' }"></v-list-item>
         <v-spacer></v-spacer>
-        <v-list-group value="Management" class="mb-3" nav>
+        <v-list-group value="Management" nav>
           <template #activator="{ props }">
             <v-list-item v-bind="props" title="Management"></v-list-item>
           </template>
@@ -82,6 +82,13 @@ const breadcrumbs = computed(() =>
           <v-list-item link title="Database" :to="{ name: 'database' }"></v-list-item>
           <v-list-item link title="TCGDex API" :to="{ name: 'tcgdex' }"></v-list-item>
           <v-list-item link title="Audit Log" :to="{ name: 'audit' }"></v-list-item>
+        </v-list-group>
+        <v-list-group value="About" class="mb-3" nav>
+          <template #activator="{ props }">
+            <v-list-item v-bind="props" title="About"></v-list-item>
+          </template>
+          <v-list-item link title="About this App" :to="{ name: 'about' }"></v-list-item>
+          <v-list-item link title="Credits" :to="{ name: 'credits' }"></v-list-item>
         </v-list-group>
       </v-list>
     </v-navigation-drawer>

@@ -1,5 +1,7 @@
 import type { RouteRecordRaw } from 'vue-router'
 
+import AboutCredits from '@/pages/AboutCredits.vue'
+import AboutOverview from '@/pages/AboutOverview.vue'
 import CardDetails from '@/pages/CardDetails.vue'
 import CardEditor from '@/pages/CardEditor.vue'
 import CardList from '@/pages/CardList.vue'
@@ -197,6 +199,26 @@ export default [
         name: 'audit',
         component: ManagementAuditLog,
         meta: { breadcrumb_name: 'Audit Log' },
+      },
+    ],
+  },
+  // about/credits/help
+  {
+    path: '/about',
+    meta: { breadcrumb_name: 'About' },
+    redirect: { name: 'about' },
+    children: [
+      {
+        path: 'overview',
+        name: 'about',
+        component: AboutOverview,
+        meta: { breadcrumb_name: 'About' },
+      },
+      {
+        path: 'credits',
+        name: 'credits',
+        component: AboutCredits,
+        meta: { breadcrumb_name: 'Credits' },
       },
     ],
   },

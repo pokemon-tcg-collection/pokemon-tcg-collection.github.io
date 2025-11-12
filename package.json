@@ -5,7 +5,7 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/poke-tcg-collector/poke-tcg-collector.github.io.git"
+    "url": "https://github.com/pokemon-tcg-collection/pokemon-tcg-collection.github.io.git"
   },
   "type": "module",
   "engines": {

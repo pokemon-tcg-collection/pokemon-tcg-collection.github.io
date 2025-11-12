@@ -34,10 +34,10 @@ export const CARD_LANGUAGES = [
   { code: 'pl', short: 'POL', name: 'Polish', base: 'en' },
   { code: 'ru', short: 'RUS', name: 'Russian', base: 'en' },
   // Asian languages
-  // catch-up series without JA base
+  // NOTE: catch-up series without JA base
   { code: 'ja', short: 'JP', name: 'Japanese' },
   { code: 'ko', short: 'KOR', name: 'Korean', base: 'ja' },
-  // https://iso639-3.sil.org/code/zho ?
+  // TODO: https://iso639-3.sil.org/code/zho ?
   { code: 'zh-tw', short: 'T-CHN', name: 'Chinese (Traditional)', base: 'ja' },
   { code: 'id', short: 'IND', name: 'Indonesian', base: 'ja' },
   { code: 'th', short: 'THA', name: 'Thai', base: 'ja' },

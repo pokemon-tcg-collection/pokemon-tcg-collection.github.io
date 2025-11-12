@@ -339,8 +339,8 @@ async function onLoadPreloadData() {
   const { default: preloadData } = await import('@/stores/.data/preload')
   await loadData(preloadData)
 
-  const { default: privateData } = await import(`@/stores/.data/private`)
-  await loadData(privateData)
+  // const { default: privateData } = await import(`@/stores/.data/private`)
+  // await loadData(privateData)
 }
 </script>
 

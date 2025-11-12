@@ -1,0 +1,7 @@
+User-Agent: *
+Content-Signal: ai-train=no, search=yes, ai-input=no
+Crawl-delay: 10
+Disallow: /
+
+User-agent: AdsBot-Google
+Disallow: /

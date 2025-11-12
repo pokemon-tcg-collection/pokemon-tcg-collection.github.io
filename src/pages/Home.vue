@@ -60,5 +60,14 @@ const itemsStore = useItemsStore()
     >
       Settings, database, APIs
     </OverviewLinkCard>
+
+    <OverviewLinkCard
+      icon="mdi-information"
+      title="About"
+      :to="{ name: 'about' }"
+      to-label="About this App"
+    >
+      Information, help and credits
+    </OverviewLinkCard>
   </OverviewLinkCardContainer>
 </template>

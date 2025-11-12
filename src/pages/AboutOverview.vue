@@ -10,9 +10,14 @@ import OverviewLinkCardContainer from '@/components/OverviewLinkCardContainer.vu
 
   <h2 class="mb-3">What is this?</h2>
   <p>
-    This website is a small webapp around the Pokémon Trading Card Game (TCG). It allows to keep
-    track of transactions (with places, items and the actual transaction details) and card
-    collections (with card counts and metadata).
+    This website is a small webapp around the
+    <a href="https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_Trading_Card_Game"
+      >Pokémon Trading Card Game (TCG)</a
+    >. It allows to keep track of
+    <RouterLink :to="{ name: 'transactions' }">transactions</RouterLink> (with places, items and the
+    actual transaction details) and
+    <RouterLink :to="{ name: 'cards' }">card collections</RouterLink> (with card counts and
+    metadata).
   </p>
   <p>
     This website should also be installable as a
@@ -20,7 +25,7 @@ import OverviewLinkCardContainer from '@/components/OverviewLinkCardContainer.vu
     a internet connection to download images etc.).
   </p>
   <p>
-    All the recorded data is only stored on the client (i.e. web browser), so using the
+    All the recorded data is only stored on the client (i.e. your web browser), so using the
     <RouterLink :to="{ name: 'database' }">import/export database</RouterLink> feature for backups
     is important!
   </p>

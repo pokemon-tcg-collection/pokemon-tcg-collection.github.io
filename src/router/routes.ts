@@ -40,7 +40,7 @@ export default [
         path: 'overview',
         name: 'cards',
         component: CardOverview,
-        meta: { breadcrumb_name: 'Cards' },
+        meta: { breadcrumb_name: 'Dashboard' },
       },
       {
         path: 'list',
@@ -209,10 +209,9 @@ export default [
     redirect: { name: 'about' },
     children: [
       {
-        path: 'overview',
+        path: 'info',
         name: 'about',
         component: AboutOverview,
-        meta: { breadcrumb_name: 'About' },
       },
       {
         path: 'credits',

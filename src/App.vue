@@ -38,9 +38,10 @@ const breadcrumbs = computed(() =>
           (route.name !== undefined ||
             (allRoutes.length > idx + 1 && allRoutes[idx + 1]?.path !== route.path)),
       )
+      .filter((route) => !!route.meta.breadcrumb_name as unknown as string)
       .map((route) => ({
         to: { path: route.path },
-        title: (route.meta.breadcrumb_name as unknown as string) ?? route.name ?? 'a',
+        title: (route.meta.breadcrumb_name as unknown as string) ?? route.name ?? '?',
       })),
   ),
 )
@@ -63,7 +64,7 @@ const breadcrumbs = computed(() =>
     </v-app-bar>
 
     <v-navigation-drawer name="drawer" v-model="drawer" temporary>
-      <v-list class="fill-height d-flex flex-column" nav>
+      <v-list class="fill-height d-flex flex-column" open-strategy="single" nav>
         <v-list-item link title="Home" :to="{ name: 'home' }"></v-list-item>
         <v-list-item link title="Cards" :to="{ name: 'cards' }"></v-list-item>
         <v-list-item link title="Transactions" :to="{ name: 'transactions' }"></v-list-item>

@@ -160,6 +160,40 @@ const items = [
     },
   },
   {
+    id: 'e5c2b21c-3b73-4bdd-821d-03bfa196e2e5',
+    name: 'Battle Partners (SV9)',
+    type: 'booster-display',
+    cost_unit: 'EUR',
+    language: 'ja',
+    contents: [],
+    related_urls: [
+      {
+        url: 'https://yonko-tcg.de/products/jp-pokemon-display-battle-partners-sv9',
+        name: 'Yonko TCG listing',
+      },
+    ],
+    _meta: {
+      created: new Date(),
+    },
+  },
+  {
+    id: 'a20a05a1-e1d1-43bd-89e2-9da26b8e24b1',
+    name: 'Heat Wave Arena (SV9a)',
+    type: 'booster-display',
+    cost_unit: 'EUR',
+    language: 'ja',
+    contents: [],
+    related_urls: [
+      {
+        url: 'https://yonko-tcg.de/products/jp-pokemon-display-heat-wave-arena-sv9a',
+        name: 'Yonko TCG listing',
+      },
+    ],
+    _meta: {
+      created: new Date(),
+    },
+  },
+  {
     id: 'e5d74130-0bae-4a37-9253-29aced48112d',
     name: 'Gem Pack Vol. 3 (CBB3)',
     type: 'booster-display',
@@ -378,6 +412,27 @@ const items = [
       {
         url: 'https://www.gate-to-the-games.de/Pokemon-Karmesin-Purpur-Prismatische-Entwicklungen-Nachtara-Mini-Tin-deutsch',
         name: 'Gate to the Games listing (de)',
+      },
+    ],
+    _meta: {
+      created: new Date(),
+    },
+  },
+  {
+    id: '7acba2f1-5fff-4309-bd42-ccab6dd6a6af',
+    name: 'Hyperball Gift Box (CSJ2)',
+    type: 'tin',
+    cost_unit: 'EUR',
+    language: 'zh-cn',
+    contents: [],
+    related_urls: [
+      {
+        url: 'https://yonko-tcg.de/products/s-chn-pokemon-pokeball-hyperball-gift-box-pokemon-art-illustration-celebration',
+        name: 'Yonko TCG listing',
+      },
+      {
+        url: 'https://toy-treasure.com/Pokemon-Gift-Box-Hyperball-CSJ2-CN/TT-201109',
+        name: 'Toy Treasure listing',
       },
     ],
     _meta: {

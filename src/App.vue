@@ -137,4 +137,12 @@ const breadcrumbs = computed(() =>
   </v-app>
 </template>
 
-<style scoped></style>
+<style lang="css" scoped>
+.v-theme--dark .text-grey-darken-2 {
+  color: #e0e0e0 !important; /* grey-lighten-2 */
+}
+.v-theme--dark .bg-grey-lighten-4 {
+  color: unset !important;
+  background-color: unset !important;
+}
+</style>

@@ -177,27 +177,30 @@ export type Place = PlaceLocalStore | PlaceLocalFair | PlaceOnlineShop | PlaceOn
 // -------------------------------------------------------------------------
 
 export type ItemType = (typeof ITEM_TYPES)[number]['id']
+export type ItemTypeTypes = (typeof ITEM_TYPES)[number]['type']
 export const ITEM_TYPES = [
   // https://www.cardmarket.com/de/Pokemon/Products
   // https://www.cardmarket.com/de/Pokemon/Products/Sealed-Products
-  { id: 'booster', label: 'Booster Pack' },
-  { id: 'jumbo-booster', label: 'Jumbo Booster Pack' },
-  { id: 'booster-display', label: 'Booster Display' }, // ? smaller boxes
-  { id: 'tin', label: 'Tin' }, // mini-tin?
-  { id: 'etb', label: 'Elite Trainer Box (ETB)' },
-  { id: 'collection', label: 'Collection' }, // ?
-  { id: 'box-set', label: 'Box Set' },
-  { id: 'blister', label: 'Blister' },
+  { id: 'booster', label: 'Booster Pack', type: 'booster' },
+  { id: 'jumbo-booster', label: 'Jumbo Booster Pack', type: 'booster' },
+  { id: 'booster-display', label: 'Booster Display', type: 'booster' }, // ? smaller boxes
+  { id: 'tin', label: 'Tin', type: 'sets' }, // mini-tin, pokeball-tin?
+  { id: 'etb', label: 'Elite Trainer Box (ETB)', type: 'sets' },
+  { id: 'collection', label: 'Collection', type: 'sets' }, // ?
+  { id: 'box-set', label: 'Box Set', type: 'sets' }, // ?
+  { id: 'blister', label: 'Blister', type: 'sets' },
   // ...
-  { id: 'sleeves', label: 'Sleeves' },
-  { id: 'toploader', label: 'Toploader' },
+  { id: 'sleeves', label: 'Sleeves', type: 'accessories' },
+  { id: 'toploader', label: 'Toploader', type: 'accessories' },
+  { id: 'binder', label: 'Binder', type: 'accessories' },
   // ...
-  { id: 'fan-booster', label: 'Fan-made Booster' },
-  { id: 'fan-card', label: 'Fan-made Card' },
+  { id: 'fan-booster', label: 'Fan-made Booster', type: 'fan-made' },
+  { id: 'fan-card', label: 'Fan-made Card', type: 'fan-made' },
   // ...
-  { id: 'scam', label: 'Scam' },
-  { id: 'shipping-taxes', label: 'Shipping & Taxes' },
-  { id: 'other', label: 'Other' },
+  { id: 'scam', label: 'Scam', type: 'other' },
+  { id: 'shipping-taxes', label: 'Shipping & Taxes', type: 'other' },
+  { id: 'discount', label: 'Discount', type: 'other' },
+  { id: 'other', label: 'Other', type: 'other' },
   // etc.
 ] as const
 
@@ -208,7 +211,6 @@ export const ITEM_PART_TYPES = [
   { id: 'dice', label: 'Dice' },
   { id: 'damage-dice-set', label: 'Damage Dice Set' },
   { id: 'card-set-energy', label: 'Energy Card Set' },
-  { id: 'discount', label: 'Discount' },
 ] as const
 
 export interface Item extends Base {

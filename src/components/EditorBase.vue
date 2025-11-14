@@ -83,7 +83,7 @@ function onUserConfirmDeletion() {
   <v-form v-if="object">
     <slot :object="object" :object-type="objectType"></slot>
 
-    <EditorFieldsRelatedURLs v-model="object"></EditorFieldsRelatedURLs>
+    <EditorFieldsRelatedURLs v-model="object" :object-type="objectType"></EditorFieldsRelatedURLs>
 
     <EditorFieldsRelated
       v-if="settings.editorShowObjectRelations"

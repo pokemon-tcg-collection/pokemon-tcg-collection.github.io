@@ -40,6 +40,7 @@ const items = computed(() =>
     <thead>
       <tr>
         <th scope="col">Type</th>
+        <th scope="col">Language</th>
         <th scope="col">Name</th>
         <th scope="col">Actions</th>
       </tr>
@@ -47,9 +48,8 @@ const items = computed(() =>
     <tbody>
       <tr v-for="item in items" :key="item.id">
         <td class="fit">{{ item.type }}</td>
-        <td class="">
-          <template v-if="item.language">[{{ item.language }}] </template>{{ item.name }}
-        </td>
+        <td class="fit">{{ item.language }}</td>
+        <td class="">{{ item.name }}</td>
         <td class="fit">
           <v-btn-group density="compact" variant="text">
             <v-btn :to="{ name: 'item-edit', params: { id: item.id } }" prepend-icon="mdi-file-edit"

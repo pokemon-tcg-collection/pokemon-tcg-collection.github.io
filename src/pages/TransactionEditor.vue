@@ -107,6 +107,9 @@ function onAddItemToTransaction() {
     cost: 0,
     cost_unit: 'EUR',
   })
+
+  // clear input
+  newItemId.value = ''
 }
 
 async function onRelationEdit(id: string, type: string) {
@@ -245,7 +248,7 @@ async function onLeave(type: 'save' | 'save-draft' | 'discard-changes') {
                     <v-time-picker
                       v-model="transactionTime"
                       format="24hr"
-                      view-mode="second"
+                      view-mode="hour"
                       :use-seconds="true"
                     ></v-time-picker>
                   </v-menu>
@@ -274,49 +277,60 @@ async function onLeave(type: 'save' | 'save-draft' | 'discard-changes') {
       </EditorFieldset>
 
       <EditorFieldset label="Items" :class="{ ['pt-6']: transaction.items.length > 0 }">
-        <v-row class="gc-5 ms-0 me-0" v-for="(item, i) in transaction.items" :key="i">
-          <v-number-input
-            v-model="item.amount"
-            :min="1"
-            :control-variant="xs ? 'hidden' : 'default'"
-            label="Amount"
-            min-width="5rem"
-            width="max-content"
-          ></v-number-input>
+        <v-row class="ms-0 me-0" v-for="(item, i) in transaction.items" :key="i">
+          <v-col cols="12" lg="6" class="d-flex flex-row gc-5" :class="{ ['pb-0']: smAndDown }">
+            <v-number-input
+              v-model="item.amount"
+              :min="1"
+              :control-variant="xs ? 'hidden' : 'default'"
+              label="Amount"
+              min-width="5rem"
+              width="max-content"
+              hideDetails
+            ></v-number-input>
 
-          <!-- decimal-separator="," -->
-          <v-number-input
-            v-model="item.cost"
-            :control-variant="xs ? 'hidden' : 'default'"
-            :precision="2"
-            :min="0.0"
-            min-width="10rem"
-            label="Cost (per unit)"
-          ></v-number-input>
-          <v-select
-            v-model="item.cost_unit"
-            :items="costUnits"
-            item-value="id"
-            item-title="title"
-            min-width="5rem"
-            label="Currency"
-          ></v-select>
-
-          <v-autocomplete
-            v-model="item.item_id"
-            :items="item_ids"
-            item-title="label"
-            item-value="id"
-            readonly
-            label="Item"
-          >
-            <template #append>
-              <v-btn flat icon="mdi-delete" @click="() => onRemoveItem(i)"></v-btn>
-            </template>
-          </v-autocomplete>
+            <!-- decimal-separator="," -->
+            <v-number-input
+              v-model="item.cost"
+              :control-variant="xs ? 'hidden' : 'default'"
+              :precision="2"
+              :min="0.0"
+              min-width="10rem"
+              label="Cost (per unit)"
+              hideDetails
+            ></v-number-input>
+            <v-select
+              v-model="item.cost_unit"
+              :items="costUnits"
+              item-value="id"
+              item-title="title"
+              min-width="5rem"
+              label="Currency"
+              hideDetails
+            ></v-select>
+          </v-col>
+          <v-col cols="12" lg="6" :class="{ ['pb-0']: smAndDown }">
+            <v-autocomplete
+              v-model="item.item_id"
+              :items="item_ids"
+              item-title="label"
+              item-value="id"
+              readonly
+              label="Item"
+              hideDetails
+            >
+              <template #append>
+                <v-btn flat icon="mdi-delete" @click="() => onRemoveItem(i)"></v-btn>
+              </template>
+            </v-autocomplete>
+          </v-col>
         </v-row>
 
-        <v-divider class="mt-2 mb-4" v-if="transaction.items?.length > 0"></v-divider>
+        <v-divider
+          class="mt-4 mb-4"
+          :class="{ ['mt-7']: smAndDown }"
+          v-if="transaction.items?.length > 0"
+        ></v-divider>
 
         <v-autocomplete
           v-model="newItemId"
@@ -325,6 +339,7 @@ async function onLeave(type: 'save' | 'save-draft' | 'discard-changes') {
           item-value="id"
           clearable
           label="Items"
+          hide-details
         >
           <template #no-data>
             <v-list-item>

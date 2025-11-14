@@ -50,12 +50,12 @@ export default {
 </script>
 
 <template>
-  <v-row v-if="mdAndUp">
+  <v-row v-if="mdAndUp" class="d-flex flex-wrap justify-center">
     <v-col v-for="(card, i) in linkCards" :key="i" cols="4" class="d-flex flex-column">
       <component :is="card"></component>
     </v-col>
   </v-row>
-  <v-container v-else class="ga-5 d-flex flex-row flex-wrap">
+  <v-container v-else class="ga-5 d-flex flex-row flex-wrap justify-center">
     <template v-for="(card, i) in linkCards" :key="i">
       <component :is="card"></component>
     </template>

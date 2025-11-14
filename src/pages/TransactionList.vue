@@ -1,8 +1,9 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 
-import type { CostUnits } from '@/model/interfaces'
+import useTransactionsStats from '@/composables/useTransactionsStats'
 import { useTransactionsStore } from '@/stores/transactions'
+import { formatCurrencyNumber } from '@/utils/locale'
 
 const transactionsStore = useTransactionsStore()
 
@@ -24,29 +25,7 @@ const transactions = computed(() =>
     }),
 )
 
-function costToEUR(cost: number, cost_unit: CostUnits) {
-  // TODO: implement currency conversion
-  if (cost_unit !== 'EUR') {
-    console.warn('Non-EUR currency. Conversion required')
-    return 0
-  }
-  return cost
-}
-
-const costs = computed(() =>
-  transactions.value.map(
-    (transaction) =>
-      costToEUR(transaction.transaction.cost, transaction.transaction.cost_unit) *
-      (transaction.transaction.type === 'buy' ? -1 : 1),
-  ),
-)
-const sumSpent = computed(() =>
-  costs.value.filter((cost) => cost < 0).reduce((sum, cost) => sum + cost, 0),
-)
-const sumEarned = computed(() =>
-  costs.value.filter((cost) => cost > 0).reduce((sum, cost) => sum + cost, 0),
-)
-const sumTotal = computed(() => sumEarned.value + sumSpent.value)
+const { sumSpent, sumEarned, sumTotal } = useTransactionsStats()
 </script>
 
 <template>
@@ -79,16 +58,25 @@ const sumTotal = computed(() => sumEarned.value + sumSpent.value)
         </td>
         <td class="stretch">{{ transaction.name ?? '–' }}</td>
         <td class="fit money" v-if="transaction.transaction.type">
-          {{
-            transaction.transaction.type === 'buy'
-              ? '-'
-              : transaction.transaction.type === 'sell'
-                ? '+'
-                : ''
-          }}{{ transaction.transaction.cost }} {{ transaction.transaction.cost_unit }}
+          <span
+            :class="{
+              ['text-green-darken-3']: transaction.transaction.type === 'sell',
+              ['text-red-darken-3']: transaction.transaction.type === 'buy',
+            }"
+          >
+            {{
+              transaction.transaction.type === 'buy'
+                ? '-'
+                : transaction.transaction.type === 'sell'
+                  ? '+'
+                  : ''
+            }}{{ formatCurrencyNumber(transaction.transaction.cost) }}
+          </span>
+          {{ transaction.transaction.cost_unit }}
         </td>
         <td class="fit money" v-else>
-          {{ transaction.transaction.cost }} {{ transaction.transaction.cost_unit }}
+          {{ formatCurrencyNumber(transaction.transaction.cost) }}
+          {{ transaction.transaction.cost_unit }}
         </td>
         <td class="fit">
           <v-btn-group density="compact" variant="text">
@@ -108,24 +96,29 @@ const sumTotal = computed(() => sumEarned.value + sumSpent.value)
 
       <tr>
         <td colspan="2" class="border-t-lg stretch money-label text-button">Spent</td>
-        <td class="fit money border-t-lg text-red-darken-3">{{ sumSpent.toFixed(2) }} EUR</td>
+        <td class="fit money border-t-lg">
+          <span class="text-red-darken-3">{{ formatCurrencyNumber(sumSpent) }}</span> EUR
+        </td>
         <td class="border-t-lg"></td>
       </tr>
       <tr>
         <td colspan="2" class="stretch money-label text-button">Earned</td>
-        <td class="fit money text-green-darken-3">{{ sumEarned.toFixed(2) }} EUR</td>
+        <td class="fit money">
+          <span class="text-green-darken-3">{{ formatCurrencyNumber(sumEarned) }}</span> EUR
+        </td>
         <td></td>
       </tr>
       <tr>
         <td colspan="2" class="stretch money-label text-button">Total</td>
-        <td
-          :class="{
-            ['fit money font-weight-bold']: true,
-            ['text-green-darken-3']: sumTotal > 0,
-            ['text-red-darken-3']: sumTotal < 0,
-          }"
-        >
-          {{ sumTotal.toFixed(2) }} EUR
+        <td class="fit money font-weight-bold">
+          <span
+            :class="{
+              ['text-green-darken-3']: sumTotal > 0,
+              ['text-red-darken-3']: sumTotal < 0,
+            }"
+            >{{ formatCurrencyNumber(sumTotal) }}</span
+          >
+          EUR
         </td>
         <td></td>
       </tr>

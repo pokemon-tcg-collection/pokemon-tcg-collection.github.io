@@ -92,6 +92,16 @@ const places = [
       created: new Date(),
     },
   },
+  {
+    id: 'ae7cd51a-f9e4-4152-901f-b794f2f8164b',
+    name: 'Amazon DE',
+    type: 'online-marketplace',
+    marketplace: 'amazon',
+    url: 'https://www.amazon.de/',
+    _meta: {
+      created: new Date(),
+    },
+  },
   // fan-made
   {
     id: '3a4a0a37-9bd6-4fc1-b52d-3a599ea115cf',
@@ -457,6 +467,27 @@ const items = [
       created: new Date(),
     },
   },
+  {
+    id: '59921e0c-a607-4994-81dd-24d089ccd16a',
+    name: "Team Rocket's Zapdos, Articuno & Tyranitar Enhanced 2-Pack Blister",
+    type: 'blister',
+    cost_unit: 'EUR',
+    language: 'de',
+    contents: [],
+    related_urls: [
+      {
+        url: 'https://www.cardmarket.com/de/Pokemon/Products/Blisters/Team-Rockets-Zapdos-Articuno-Tyranitar-Enhanced-2-Pack-Blister',
+        name: 'CardMarket',
+      },
+      {
+        url: 'https://www.amazon.de/Pok%C3%A9mon-Sammelkartenspiel-Aufgewerteter-2er-Pack-Blister-holografische-Boosterpacks/dp/B0FTG2JC8J',
+        name: 'Amazon listing',
+      },
+    ],
+    _meta: {
+      created: new Date(),
+    },
+  },
   // box set?
   {
     id: 'd4ea143e-d267-4226-acb7-7a25cdd167c2',
@@ -555,6 +586,38 @@ const items = [
       {
         url: 'https://toy-treasure.com/sammelkarten-zubehoer/kartenhuellen/ultra-pro-card-sleeves-regular-100-stueck',
         name: 'Toy Treasure listing',
+      },
+    ],
+    _meta: {
+      created: new Date(),
+    },
+  },
+  {
+    id: '34e837ce-58ed-4564-8e31-0a545ccc9efd',
+    name: 'Ultra PRO Toploader 3x4 für Pokemon Karten - 100 Stück',
+    type: 'toploader',
+    cost_unit: 'EUR',
+    contents: [],
+    related_urls: [
+      {
+        url: 'https://www.amazon.de/gp/aw/d/B0812Z3RPY',
+        name: 'Amazon listing',
+      },
+    ],
+    _meta: {
+      created: new Date(),
+    },
+  },
+  {
+    id: '0fbc53b8-ab1e-4e2c-b5e6-6e96a0cb0fe8',
+    name: 'Ultra PRO Kartenhüllen Sleeve 300 Stück',
+    type: 'sleeves',
+    cost_unit: 'EUR',
+    contents: [],
+    related_urls: [
+      {
+        url: 'https://www.amazon.de/gp/aw/d/B085DSTKWG',
+        name: 'Amazon listing',
       },
     ],
     _meta: {

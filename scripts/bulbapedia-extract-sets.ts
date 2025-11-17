@@ -867,7 +867,7 @@ function parseSubSetTableJP(table: HTMLTableElement) {
     for (let col_idx = 0; col_idx < cols.length; col_idx++) {
       const col = cols[col_idx]!
 
-      let headerIdx = col_idx
+      const headerIdx = col_idx
 
       const headerColKey = headerKeys[headerIdx]!
       const fieldTransforms = transformTableSubSetCellJP.get(headerColKey)!
@@ -1098,6 +1098,275 @@ function parseSetsJP(document: Document) {
 
 // -------------------------------------------------------------------------
 
+// + approx mapping between Bulbapedia and TCGdex API
+// (japanese might have some smaller series that are part of others?)
+const mapSeriesBublbaToTCGdex = new Map<string, string | string[] | null>([
+  ['original', ['base', 'gym']],
+  ['neo', 'neo'],
+  ['legendary-collection', 'lc'],
+  ['e-card', 'ecard'],
+  ['ex', 'ex'],
+  ['diamond-pearl', 'dp'],
+  ['platinum', 'pl'],
+  ['heartgold-soulsilver', 'hgss'],
+  ['call-of-legends', 'col'],
+  ['black-white', 'bw'],
+  ['xy', 'xy'],
+  ['sun-moon', 'sm'],
+  ['sword-shield', 'swsh'],
+  ['scarlet-violet', 'sv'],
+  ['mega-evolution', 'me'],
+  ['black-star-promo', ['base', 'dp', 'hgss', 'bw', 'xy', 'sm', 'swsh', 'sv', 'me']],
+  ['mcdonalds', 'mc'],
+  ['pop-play', 'pop'],
+  ['other-misc', 'misc'],
+  ['basic-energy', null],
+  ['trick-or-trade', null],
+  // [null, ['tk', 'tcgp']], // no mapping?
+])
+
+// from TCGdex API
+const mapTCGdexSetNameToID = new Map<string, string>([
+  ['Base Set', 'base1'],
+  ['Jungle', 'base2'],
+  ['Wizards Black Star Promos', 'basep'],
+  ['W Promotional', 'wp'],
+  ['Fossil', 'base3'],
+  ['Jumbo cards', 'jumbo'],
+  ['Base Set 2', 'base4'],
+  ['Team Rocket', 'base5'],
+  ['Gym Heroes', 'gym1'],
+  ['Gym Challenge', 'gym2'],
+  ['Neo Genesis', 'neo1'],
+  ['Neo Discovery', 'neo2'],
+  ['Southern Islands', 'si1'],
+  ['Neo Revelation', 'neo3'],
+  ['Neo Destiny', 'neo4'],
+  ['Legendary Collection', 'lc'],
+  ['Sample', 'sp'],
+  ['Expedition Base Set', 'ecard1'],
+  ['Best of game', 'bog'],
+  ['Aquapolis', 'ecard2'],
+  ['Skyridge', 'ecard3'],
+  ['Ruby & Sapphire', 'ex1'],
+  ['Sandstorm', 'ex2'],
+  ['Nintendo Black Star Promos', 'np'],
+  ['Dragon', 'ex3'],
+  ['Team Magma vs Team Aqua', 'ex4'],
+  ['Hidden Legends', 'ex5'],
+  ['Poké Card Creator Pack', 'ex5.5'],
+  ['EX trainer Kit (Latios)', 'tk-ex-latio'],
+  ['EX trainer Kit (Latias)', 'tk-ex-latia'],
+  ['FireRed & LeafGreen', 'ex6'],
+  ['POP Series 1', 'pop1'],
+  ['Team Rocket Returns', 'ex7'],
+  ['Deoxys', 'ex8'],
+  ['Emerald', 'ex9'],
+  ['POP Series 2', 'pop2'],
+  ['Unseen Forces Unown Collection', 'exu'],
+  ['Unseen Forces', 'ex10'],
+  ['Delta Species', 'ex11'],
+  ['Legend Maker', 'ex12'],
+  ['EX trainer Kit 2 (Plusle)', 'tk-ex-p'],
+  ['EX trainer Kit 2 (Minun)', 'tk-ex-m'],
+  ['POP Series 3', 'pop3'],
+  ['Holon Phantoms', 'ex13'],
+  ['POP Series 4', 'pop4'],
+  ['Crystal Guardians', 'ex14'],
+  ['Dragon Frontiers', 'ex15'],
+  ['Power Keepers', 'ex16'],
+  ['POP Series 5', 'pop5'],
+  ['Diamond & Pearl', 'dp1'],
+  ['DP Black Star Promos', 'dpp'],
+  ['Mysterious Treasures', 'dp2'],
+  ['POP Series 6', 'pop6'],
+  ['DP trainer Kit (Lucario)', 'tk-dp-l'],
+  ['DP trainer Kit (Manaphy)', 'tk-dp-m'],
+  ['Secret Wonders', 'dp3'],
+  ['Great Encounters', 'dp4'],
+  ['POP Series 7', 'pop7'],
+  ['Majestic Dawn', 'dp5'],
+  ['Legends Awakened', 'dp6'],
+  ['POP Series 8', 'pop8'],
+  ['Stormfront', 'dp7'],
+  ['Platinum', 'pl1'],
+  ['POP Series 9', 'pop9'],
+  ['Rising Rivals', 'pl2'],
+  ['Supreme Victors', 'pl3'],
+  ['Arceus', 'pl4'],
+  ['Pokémon Rumble', 'ru1'],
+  ['HeartGold SoulSilver', 'hgss1'],
+  ['HGSS Black Star Promos', 'hgssp'],
+  ['HS trainer Kit (Gyarados)', 'tk-hs-g'],
+  ['HS trainer Kit (Raichu)', 'tk-hs-r'],
+  ['Unleashed', 'hgss2'],
+  ['Undaunted', 'hgss3'],
+  ['Triumphant', 'hgss4'],
+  ['Call of Legends', 'col1'],
+  ['Black & White', 'bw1'],
+  ['BW Black Star Promos', 'bwp'],
+  ["Macdonald's Collection 2011", '2011bw'],
+  ['Emerging Powers', 'bw2'],
+  ['BW trainer Kit (Zoroark)', 'tk-bw-z'],
+  ['BW trainer Kit (Excadrill)', 'tk-bw-e'],
+  ['Noble Victories', 'bw3'],
+  ['Next Destinies', 'bw4'],
+  ['Dark Explorers', 'bw5'],
+  ["Macdonald's Collection 2012", '2012bw'],
+  ['Dragons Exalted', 'bw6'],
+  ['Dragon Vault', 'dv1'],
+  ['Boundaries Crossed', 'bw7'],
+  ['Plasma Storm', 'bw8'],
+  ['Plasma Freeze', 'bw9'],
+  ['Plasma Blast', 'bw10'],
+  ['XY Black Star Promos', 'xyp'],
+  ['Radiant Collection', 'rc'],
+  ['Legendary Treasures', 'bw11'],
+  ['Kalos Starter Set', 'xy0'],
+  ['XY', 'xy1'],
+  ['Yello A Alternate', 'xya'],
+  ['XY trainer Kit (Sylveon)', 'tk-xy-sy'],
+  ['XY trainer Kit (Noivern)', 'tk-xy-n'],
+  ['Flashfire', 'xy2'],
+  ["Macdonald's Collection 2014", '2014xy'],
+  ['Furious Fists', 'xy3'],
+  ['XY trainer Kit (Bisharp)', 'tk-xy-b'],
+  ['XY trainer Kit (Wigglytuff)', 'tk-xy-w'],
+  ['Phantom Forces', 'xy4'],
+  ['Primal Clash', 'xy5'],
+  ['Double Crisis', 'dc1'],
+  ['XY trainer Kit (Latias)', 'tk-xy-latia'],
+  ['XY trainer Kit (Latios)', 'tk-xy-latio'],
+  ['Roaring Skies', 'xy6'],
+  ['Ancient Origins', 'xy7'],
+  ['BREAKthrough', 'xy8'],
+  ["Macdonald's Collection 2015", '2015xy'],
+  ['BREAKpoint', 'xy9'],
+  ['Generations', 'g1'],
+  ['XY trainer Kit (Pikachu Libre)', 'tk-xy-p'],
+  ['XY trainer Kit (Suicune)', 'tk-xy-su'],
+  ['Fates Collide', 'xy10'],
+  ['Steam Siege', 'xy11'],
+  ["Macdonald's Collection 2016", '2016xy'],
+  ['Evolutions', 'xy12'],
+  ['Sun & Moon', 'sm1'],
+  ['SM Black Star Promos', 'smp'],
+  ['SM trainer Kit (Lycanroc)', 'tk-sm-l'],
+  ['SM trainer Kit (Alolan Raichu)', 'tk-sm-r'],
+  ['Guardians Rising', 'sm2'],
+  ["Macdonald's Collection 2017", '2017sm'],
+  ['Burning Shadows', 'sm3'],
+  ['Shining Legends', 'sm3.5'],
+  ['Crimson Invasion', 'sm4'],
+  ['Ultra Prism', 'sm5'],
+  ['Forbidden Light', 'sm6'],
+  ['Celestial Storm', 'sm7'],
+  ['Dragon Majesty', 'sm7.5'],
+  ["Macdonald's Collection 2018", '2018sm'],
+  ['Lost Thunder', 'sm8'],
+  ['Team Up', 'sm9'],
+  ['Detective Pikachu', 'det1'],
+  ['Unbroken Bonds', 'sm10'],
+  ['Unified Minds', 'sm11'],
+  ['Hidden Fates', 'sm115'],
+  ['Yellow A Alternate', 'sma'],
+  ["Macdonald's Collection 2019", '2019sm'],
+  ['Cosmic Eclipse', 'sm12'],
+  ['SWSH Black Star Promos', 'swshp'],
+  ['Sword & Shield', 'swsh1'],
+  ['Rebel Clash', 'swsh2'],
+  ['Darkness Ablaze', 'swsh3'],
+  ['Pokémon Futsal 2020', 'fut2020'],
+  ["Champion's Path", 'swsh3.5'],
+  ['Vivid Voltage', 'swsh4'],
+  ["Macdonald's Collection 2021", '2021swsh'],
+  ['Shining Fates', 'swsh4.5'],
+  ['Battle Styles', 'swsh5'],
+  ['Chilling Reign', 'swsh6'],
+  ['Evolving Skies', 'swsh7'],
+  ['Celebrations', 'cel25'],
+  ['Fusion Strike', 'swsh8'],
+  ['Brilliant Stars', 'swsh9'],
+  ['Astral Radiance', 'swsh10'],
+  ['Pokémon GO', 'swsh10.5'],
+  ['Lost Origin', 'swsh11'],
+  ['Silver Tempest', 'swsh12'],
+  ['Crown Zenith', 'swsh12.5'],
+  ['SVP Black Star Promos', 'svp'],
+  ['Scarlet & Violet', 'sv01'],
+  ['Paldea Evolved', 'sv02'],
+  ['Obsidian Flames', 'sv03'],
+  ['151', 'sv03.5'],
+  ['Paradox Rift', 'sv04'],
+  ['Paldean Fates', 'sv04.5'],
+  ['Temporal Forces', 'sv05'],
+  ['Twilight Masquerade', 'sv06'],
+  ['Shrouded Fable', 'sv06.5'],
+  ['Stellar Crown', 'sv07'],
+  ['Genetic Apex', 'A1'],
+  ['Promos-A', 'P-A'],
+  ['Surging Sparks', 'sv08'],
+  ['Mythical Island', 'A1a'],
+  ['Prismatic Evolutions', 'sv08.5'],
+  ['Space-Time Smackdown', 'A2'],
+  ['Triumphant Light', 'A2a'],
+  ['Shining Revelry', 'A2b'],
+  ['Journey Together', 'sv09'],
+  ['Celestial Guardians', 'A3'],
+  ['Extradimensional Crisis', 'A3a'],
+  ['Destined Rivals', 'sv10'],
+  ['Eevee Grove', 'A3b'],
+  ['Black Bolt', 'sv10.5b'],
+  ['White Flare', 'sv10.5w'],
+  ['Wisdom of Sea and Sky', 'A4'],
+  ['Secluded Springs', 'A4a'],
+  ['Mega Evolution', 'me01'],
+  ['MEP Black Star Promos', 'mep'],
+  ['Mega Rising', 'B1'],
+])
+
+function getTCGdexSetID(setName: string): [string | undefined, string] {
+  let name = setName
+  let id = mapTCGdexSetNameToID.get(name)
+
+  if (id === undefined) {
+    const prefixes = [
+      'Black & White—',
+      'Diamond & Pearl—',
+      'Scarlet & Violet—',
+      'Sword & Shield—',
+      'Sun & Moon—',
+      'XY—',
+      'HS—',
+      'Platinum—',
+      'EX ',
+      'Pokémon TCG: ',
+    ]
+    for (const prefix of prefixes) {
+      if (name.startsWith(prefix)) {
+        name = name.slice(prefix.length)
+        break
+      }
+    }
+    id = mapTCGdexSetNameToID.get(name)
+  }
+
+  if (id === undefined) {
+    if (name.startsWith("McDonald's Collection ")) {
+      name = name.replace("McDonald's", "Macdonald's")
+    } else if (name === 'Best of Game') {
+      name = 'Best of game'
+    } else if (name === 'HeartGold & SoulSilver') {
+      name = 'HeartGold SoulSilver'
+    }
+    id = mapTCGdexSetNameToID.get(name)
+  }
+
+  return [id, name]
+}
+
+// -------------------------------------------------------------------------
+
 const DN_OUTPUT = 'out'
 
 // TODO: manual fixing
@@ -1111,6 +1380,34 @@ async function processSetsEN() {
   writeFileSync(
     pathJoin(DN_OUTPUT, 'bulbapedia-en-sets.json'),
     JSON.stringify(result, undefined, 2),
+  )
+}
+
+async function _checkTCGdexSetIDMapping() {
+  const document = await fetchAndParseToDocument(
+    urlBase + 'List_of_Pokémon_Trading_Card_Game_expansions',
+  )
+  const result = parseSetsEN(document)
+
+  const found: [string, string, string][] = []
+  const missing: string[] = []
+  result?.forEach((entry) => {
+    const [id, name] = getTCGdexSetID(entry.name)
+    if (id !== undefined) {
+      found.push([entry.name, id, name])
+    } else {
+      missing.push(entry.name)
+    }
+  })
+  const candidates = Array.from(mapTCGdexSetNameToID.keys()).filter(
+    (name) => found.find(([en, ei, efn]) => efn === name) === undefined,
+  )
+
+  console.log('found', found)
+  console.log('missing', missing.sort())
+  console.log('candidates', candidates.sort())
+  console.log(
+    `Found: ${found.length}, Missing: ${missing.length}, Remaining Condidates: ${candidates.length}`,
   )
 }
 
@@ -1132,5 +1429,7 @@ mkdirSync(DN_OUTPUT, { recursive: true })
 
 processSetsEN()
 processSetsJA()
+
+// _checkTCGdexSetIDMapping()
 
 // -------------------------------------------------------------------------

@@ -20,6 +20,7 @@ const {
   delete: deletePlace,
   discardChanges,
   navigateTo,
+  reload: reloadPlace,
 } = useEditorObject('place')
 
 function isValidURL(val: string) {
@@ -51,8 +52,8 @@ async function onDelete() {
     v-model="place"
     object-type="place"
     :object-changed="placeChanged"
+    :object-source="placeSource"
     :exists-in-store="existsInStore"
-    :is-draft="placeSource === 'wip'"
     title="Place / Location Editor"
     :save="savePlace"
     :save-as-draft="savePlaceAsDraft"
@@ -60,6 +61,7 @@ async function onDelete() {
     :delete="deletePlace"
     :discard-changes="discardChanges"
     :navigate-to="navigateTo"
+    :reload="reloadPlace"
     @save="onSave"
     @delete="onDelete"
   >

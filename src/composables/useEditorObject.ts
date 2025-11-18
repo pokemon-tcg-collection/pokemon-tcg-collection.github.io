@@ -79,7 +79,11 @@ export type NavigateToFunc = (
   name: NavigateToName,
   params?: RouteParamsRawGeneric | undefined,
 ) => Promise<void>
+export type ReloadFunc = (opts?: { ignoreTemplate?: boolean }) => Promise<void>
 
+export type ObjectSource = 'store' | 'wip' | 'template' | 'new'
+
+// TODO: refactor into Pinia store to share state between components?
 export default function useEditorObject<
   TN extends keyof TypeMap,
   TC extends TypeMap[TN]['object'],
@@ -143,7 +147,7 @@ export default function useEditorObject<
 
   const newObjectIsFromTemplate = computed(() => templatesStore.has(type))
 
-  const objectSource = ref<'store' | 'wip' | 'template' | 'new'>()
+  const objectSource = ref<ObjectSource>()
   const objectBase = ref<TC>()
   const object = ref<TC>()
 
@@ -167,7 +171,7 @@ export default function useEditorObject<
     return false
   })
 
-  onMounted(async () => {
+  async function _loadObject({ ignoreTemplate = false }: { ignoreTemplate?: boolean } = {}) {
     let objectGot: TC | undefined = undefined
     if (objectIdFromParam.value !== undefined) {
       await until(
@@ -185,7 +189,7 @@ export default function useEditorObject<
     } else {
       await until(() => templatesStore.$isHydrated).toBeTruthy()
 
-      const [newObj, isFromTemplate] = createNewObject(type)
+      const [newObj, isFromTemplate] = createNewObject(type, !ignoreTemplate)
       objectGot = newObj
       objectSource.value = isFromTemplate ? 'template' : 'new'
     }
@@ -193,7 +197,9 @@ export default function useEditorObject<
       objectBase.value = structuredClone(objectGot)
       object.value = objectGot
     }
-  })
+  }
+
+  onMounted(_loadObject)
 
   async function save(replaceHistory: boolean = true) {
     if (!object.value) return
@@ -244,15 +250,17 @@ export default function useEditorObject<
     }
   }
 
-  async function setAsTemplate() {
+  async function setAsTemplate(replaceObjectBase: boolean = false) {
     if (!object.value) return
 
     // only update template for type
     await templatesStore.add(type, toRawDeep(object.value))
 
-    // update base version?, so no edit changes should be found
-    objectBase.value = structuredClone(toRawDeep(object.value))
-    objectSource.value = 'template'
+    if (replaceObjectBase) {
+      // update base version?, so no edit changes should be found
+      objectBase.value = structuredClone(toRawDeep(object.value))
+      objectSource.value = 'template'
+    }
   }
 
   function discardChanges() {
@@ -317,5 +325,6 @@ export default function useEditorObject<
     delete: remove,
     discardChanges,
     navigateTo,
+    reload: _loadObject,
   }
 }

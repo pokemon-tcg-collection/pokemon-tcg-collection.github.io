@@ -29,6 +29,7 @@ const {
   delete: deleteItem,
   discardChanges,
   navigateTo,
+  reload: reloadItem,
 } = useEditorObject('item')
 
 const itemTypes = readonly(ITEM_TYPES)
@@ -103,8 +104,8 @@ async function onDelete() {
     v-model="item"
     object-type="item"
     :object-changed="itemChanged"
+    :object-source="itemSource"
     :exists-in-store="existsInStore"
-    :is-draft="itemSource === 'wip'"
     title="Item Editor"
     :save="saveItem"
     :save-as-draft="saveItemAsDraft"
@@ -112,6 +113,7 @@ async function onDelete() {
     :delete="deleteItem"
     :discard-changes="discardChanges"
     :navigate-to="navigateTo"
+    :reload="reloadItem"
     @save="onSave"
     @delete="onDelete"
   >

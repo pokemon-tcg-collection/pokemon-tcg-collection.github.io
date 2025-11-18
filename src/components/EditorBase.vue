@@ -8,13 +8,15 @@ import EditorConfirmDeletionDialog from '@/components/EditorConfirmDeletionDialo
 import EditorFieldsInternals from '@/components/EditorFieldsInternals.vue'
 import EditorFieldsRelated from '@/components/EditorFieldsRelated.vue'
 import EditorFieldsRelatedURLs from '@/components/EditorFieldsRelatedURLs.vue'
-import type { NavigateToFunc } from '@/composables/useEditorObject'
+import type { NavigateToFunc, ObjectSource, ReloadFunc } from '@/composables/useEditorObject'
 import type { Card, Item, Place, Transaction } from '@/model/interfaces'
 import type { EditRouteNames } from '@/router/routes'
 import { useSettingsStore } from '@/stores/settings'
 import { useTemplatesStore } from '@/stores/templates'
+import { useWorkInProgressStore } from '@/stores/workInProgress'
 
 const settings = useSettingsStore()
+const wipStore = useWorkInProgressStore()
 const templatesStore = useTemplatesStore()
 
 const object = defineModel<Item | Transaction | Place | Card>()
@@ -22,9 +24,9 @@ const object = defineModel<Item | Transaction | Place | Card>()
 const {
   objectType,
   objectChanged,
+  objectSource,
   existsInStore,
   showSetAsTemplate = true,
-  isDraft,
   title,
   save: saveObject,
   saveAsDraft: saveObjectAsDraft,
@@ -32,19 +34,21 @@ const {
   delete: deleteObject,
   discardChanges,
   navigateTo,
+  reload: reloadObject,
 } = defineProps<{
   objectType: 'item' | 'transaction' | 'place' | 'card'
   objectChanged: boolean
+  objectSource: ObjectSource | undefined
   existsInStore: boolean
   showSetAsTemplate?: boolean
-  isDraft: boolean
   title: string
   save: () => Promise<void>
   saveAsDraft: (replaceHistory?: boolean) => Promise<void>
-  setAsTemplate: () => Promise<void>
+  setAsTemplate: (replaceObjectBase?: boolean) => Promise<void>
   delete: () => Promise<void>
   discardChanges: () => void
   navigateTo: NavigateToFunc
+  reload: ReloadFunc
 }>()
 
 const emit = defineEmits<{
@@ -57,12 +61,13 @@ const emit = defineEmits<{
 //   default(props: { object: Item | Transaction | Place | Card }): any
 // }>()
 
+const objectTypeTitleCase = objectType.slice(0, 1).toUpperCase() + objectType.slice(1)
+
 const dialogToAskUserAboutChanges = ref<boolean>(false)
 const dialogToAskUserToConfirmDeletion = ref<boolean>(false)
 
+const isDraft = computed(() => objectSource === 'wip')
 const hasTemplate = computed(() => templatesStore.has(objectType))
-// only "from template" if not already saved as wip or normal object in store
-const objectIsLikelyOnlyTemplate = computed(() => hasTemplate.value && !(existsInStore || isDraft))
 
 onBeforeRouteLeave(async (to, from) => {
   if (!object.value) return true
@@ -107,7 +112,13 @@ async function onSetAsTemplate() {
   if (!object.value) return
   console.log('Set as Template', objectType, toRaw(object.value))
 
-  await setObjectAsTemplate()
+  const shouldReplaceObjectBase = !(existsInStore || isDraft.value)
+  console.debug('Replace object base?', shouldReplaceObjectBase, {
+    existsInStore,
+    isDraft: isDraft.value,
+  })
+
+  await setObjectAsTemplate(shouldReplaceObjectBase)
 }
 function onDiscardChanges() {
   discardChanges()
@@ -139,13 +150,85 @@ async function onUserConfirmDeletion() {
 
   emit('delete')
 }
+
+async function onDiscardDraft() {
+  if (!object.value) return
+  console.log('Discard draft/wip', objectType, toRaw(object.value))
+
+  // TODO: ask for confirmation / show changes
+
+  await wipStore.remove(object.value.id)
+
+  // do a reload
+  // NOTE: do no use browser reload, to harsh
+  // router.go(0)
+  // NOTE: also do not use replace with same route, as component is already loaded, no effect
+  // await router.replace(router.currentRoute.value)
+  // attempt to reload object in composable (if wiped from wipStore, it should load from store)
+  await reloadObject()
+}
+async function onIgnoreTemplateStartBlank() {
+  console.debug('Ignore template start from blank', objectType, toRaw(object.value), {
+    objectSource,
+  })
+
+  // NOTE: this will only be called if a new object has been created (no stored objects)
+  await reloadObject({ ignoreTemplate: true })
+}
+async function onDiscardTemplateStartBlank() {
+  console.debug('Discard template start from blank', objectType, toRaw(object.value), {
+    objectSource,
+  })
+
+  // remove template
+  await templatesStore.remove(objectType)
+  // reload object (should now be a new blank one)
+  await reloadObject()
+}
 </script>
 
 <template>
-  <h1 class="mb-3">
-    {{ title }}<template v-if="objectChanged"> [changed]</template
-    ><template v-if="objectIsLikelyOnlyTemplate"> [from Template]</template>
-  </h1>
+  <h1 class="mb-3">{{ title }}<template v-if="objectChanged"> [changed]</template></h1>
+
+  <p v-if="objectSource === 'template'">
+    <span class="text-amber-lighten-1">New {{ objectTypeTitleCase }} created from template!</span>
+    <v-btn
+      class="ms-2"
+      variant="plain"
+      density="comfortable"
+      slim
+      :style="{ 'vertical-align': 'baseline' }"
+      @click="onIgnoreTemplateStartBlank"
+      >Ignore Template, start blank?</v-btn
+    >
+    <v-btn
+      variant="plain"
+      density="comfortable"
+      slim
+      :style="{ 'vertical-align': 'baseline' }"
+      @click="onDiscardTemplateStartBlank"
+      >Discard Template, start blank?</v-btn
+    >
+  </p>
+  <p v-if="isDraft">
+    <span class="text-grey-darken-1">Loaded {{ objectTypeTitleCase }} from draft version!</span>
+    <span v-if="existsInStore" class="text-amber-lighten-1">
+      (Draft might differ from version saved in database.)</span
+    >
+    <v-btn
+      v-if="existsInStore"
+      class="ps-2"
+      variant="plain"
+      density="comfortable"
+      slim
+      :style="{ 'vertical-align': 'baseline' }"
+      @click="onDiscardDraft"
+      >Discard Changes?</v-btn
+    >
+  </p>
+  <p v-if="existsInStore" class="text-grey-darken-1">
+    A saved version of {{ objectTypeTitleCase }} exists in database.
+  </p>
 
   <v-form v-if="object">
     <slot :object="object" :object-type="objectType"></slot>

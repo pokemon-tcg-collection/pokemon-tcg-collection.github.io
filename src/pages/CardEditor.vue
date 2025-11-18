@@ -29,6 +29,7 @@ const {
   delete: deleteCard,
   discardChanges,
   navigateTo,
+  reload: reloadCard,
 } = useEditorObject('card')
 
 // const cards = ref<{ id: string; label: string; card?: CardResume }[]>([])
@@ -93,7 +94,7 @@ async function onDelete() {
     object-type="card"
     :object-changed="cardChanged"
     :exists-in-store="existsInStore"
-    :is-draft="cardSource === 'wip'"
+    :object-source="cardSource"
     title="Card Editor"
     :save="saveCard"
     :save-as-draft="saveCardAsDraft"
@@ -101,6 +102,7 @@ async function onDelete() {
     :delete="deleteCard"
     :discard-changes="discardChanges"
     :navigate-to="navigateTo"
+    :reload="reloadCard"
     @save="onSave"
     @delete="onDelete"
   >

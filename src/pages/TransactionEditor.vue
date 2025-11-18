@@ -30,6 +30,7 @@ const {
   delete: deleteTransaction,
   discardChanges,
   navigateTo,
+  reload: reloadTransaction,
 } = useEditorObject('transaction')
 
 const transactionDate = computed({
@@ -137,8 +138,8 @@ async function onDelete() {
     v-model="transaction"
     object-type="transaction"
     :object-changed="transactionChanged"
+    :object-source="transactionSource"
     :exists-in-store="existsInStore"
-    :is-draft="transactionSource === 'wip'"
     title="Transaction Editor"
     :save="saveTransaction"
     :save-as-draft="saveTransactionAsDraft"
@@ -146,6 +147,7 @@ async function onDelete() {
     :delete="deleteTransaction"
     :discard-changes="discardChanges"
     :navigate-to="navigateTo"
+    :reload="reloadTransaction"
     @save="onSave"
     @delete="onDelete"
   >

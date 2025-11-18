@@ -3,6 +3,11 @@ import { RouterLink } from 'vue-router'
 
 import OverviewLinkCard from '@/components/OverviewLinkCard.vue'
 import OverviewLinkCardContainer from '@/components/OverviewLinkCardContainer.vue'
+
+const version = import.meta.env.PACKAGE_VERSION
+const gitRepoUrl = import.meta.env.GIT_INFO_REPOSITORY
+const gitInfoSha = import.meta.env.GIT_INFO_SHA
+const gitInfoDate = import.meta.env.GIT_INFO_DATE
 </script>
 
 <template>
@@ -30,6 +35,16 @@ import OverviewLinkCardContainer from '@/components/OverviewLinkCardContainer.vu
     is important!
   </p>
 
+  <h2 class="mt-5 mb-3">Source Code</h2>
+  <p>
+    The application version is <code>{{ version }}</code
+    >. Commit: <code>{{ gitInfoSha }}</code> ({{ new Date(gitInfoDate).toLocaleString() }}).
+  </p>
+  <p v-if="gitRepoUrl">
+    The source code is available on
+    <v-icon icon="mdi-github" class="icon-in-text" size="small" /><a :href="gitRepoUrl">GitHub</a>.
+  </p>
+
   <v-divider class="my-6"></v-divider>
 
   <OverviewLinkCardContainer>
@@ -47,5 +62,10 @@ import OverviewLinkCardContainer from '@/components/OverviewLinkCardContainer.vu
 <style lang="css" scoped>
 p {
   margin-block-end: 0.5rem;
+}
+.icon-in-text {
+  vertical-align: text-bottom;
+  margin-inline-start: 0.3rem;
+  margin-inline-end: 0.3rem;
 }
 </style>

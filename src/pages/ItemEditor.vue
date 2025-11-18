@@ -98,6 +98,12 @@ async function onSave() {
     await router.push(returnLocation.value)
   }
 }
+async function onSaveAsDraft() {
+  if (!item.value) return
+  console.log('Save Item (as draft)', toRaw(item.value))
+
+  await saveItemAsDraft()
+}
 async function onSetAsTemplate() {
   if (!item.value) return
   console.log('Set Item as Template', toRaw(item.value))
@@ -138,6 +144,7 @@ async function onLeave(type: 'save' | 'save-draft' | 'set-as-template' | 'discar
     :is-draft="itemSource === 'wip'"
     title="Item Editor"
     @save="onSave"
+    @save-as-draft="onSaveAsDraft"
     @set-as-template="onSetAsTemplate"
     @discard-changes="discardChanges"
     @delete="onDelete"

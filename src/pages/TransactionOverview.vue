@@ -26,8 +26,8 @@ const { numItems, numItemsPerTypeType } = useItemsStats()
         class="px-6 d-flex flex-column ga-2"
         :class="{ ['border-b-md']: smAndDown }"
       >
-        <p class="text-h4 text-center">Transactions</p>
-        <p class="text-h5 text-center">
+        <p class="text-h6 text-center">Transactions</p>
+        <p class="text-h4 text-center">
           # <span class="font-weight-bold">{{ numTransactions }}</span>
         </p>
         <div>
@@ -71,8 +71,8 @@ const { numItems, numItemsPerTypeType } = useItemsStats()
         class="px-6 d-flex flex-column ga-2"
         :class="{ ['border-b-md']: smAndDown }"
       >
-        <p class="text-h4 text-center">Places</p>
-        <p class="text-h5 text-center">
+        <p class="text-h6 text-center">Places</p>
+        <p class="text-h4 text-center">
           # <span class="font-weight-bold">{{ numPlaces }}</span>
         </p>
         <div>
@@ -96,8 +96,8 @@ const { numItems, numItemsPerTypeType } = useItemsStats()
         class="px-6 d-flex flex-column ga-2"
         :class="{ ['border-b-md']: smAndDown }"
       >
-        <p class="text-h4 text-center">Items</p>
-        <p class="text-h5 text-center">
+        <p class="text-h6 text-center">Items</p>
+        <p class="text-h4 text-center">
           # <span class="font-weight-bold">{{ numItems }}</span>
         </p>
         <div>

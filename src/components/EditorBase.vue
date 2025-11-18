@@ -36,6 +36,7 @@ const {
 const emit = defineEmits<{
   relationEdit: [id: string, type: string]
   save: []
+  saveAsDraft: []
   setAsTemplate: []
   discardChanges: []
   delete: []
@@ -76,6 +77,9 @@ function onRelationEdit(id: string, type: string) {
 // explicit user save/delete actions
 function onSave() {
   emit('save')
+}
+function onSaveAsDraft() {
+  emit('saveAsDraft')
 }
 function onSetAsTemplate() {
   emit('setAsTemplate')
@@ -123,6 +127,12 @@ function onUserConfirmDeletion() {
 
     <div class="d-flex flex-column flex-sm-row ga-3 mt-3">
       <v-btn color="primary" text="Save" @click="onSave"></v-btn>
+      <v-btn
+        v-if="objectChanged || hasTemplate"
+        color="secondary"
+        text="Save as Draft"
+        @click="onSaveAsDraft"
+      ></v-btn>
       <v-btn
         v-if="showSetAsTemplate"
         color="secondary"

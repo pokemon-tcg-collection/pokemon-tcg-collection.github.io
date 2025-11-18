@@ -17,6 +17,7 @@ import { useAuditLogStore } from '@/stores/auditLog'
 import { useCardsStore } from '@/stores/cards'
 import { useItemsStore } from '@/stores/items'
 import { usePlacesStore } from '@/stores/places'
+import { useTemplatesStore } from '@/stores/templates'
 import { useTransactionsStore } from '@/stores/transactions'
 import { useWorkInProgressStore } from '@/stores/workInProgress'
 
@@ -25,9 +26,17 @@ const transactionsStore = useTransactionsStore()
 const placesStore = usePlacesStore()
 const itemsStore = useItemsStore()
 const wipStore = useWorkInProgressStore()
+const templatesStore = useTemplatesStore()
 const auditLogStore = useAuditLogStore()
 
-type ExportableObjects = 'cards' | 'transactions' | 'places' | 'items' | 'wip' | 'audit'
+type ExportableObjects =
+  | 'cards'
+  | 'transactions'
+  | 'places'
+  | 'items'
+  | 'wip'
+  | 'templates'
+  | 'audit'
 
 const FILENAME_BAGIT = 'bagit.txt'
 const FILENAME_CARDS = 'data/cards.json'
@@ -35,6 +44,7 @@ const FILENAME_TRANSACTIONS = 'data/transactions.json'
 const FILENAME_PLACES = 'data/places.json'
 const FILENAME_ITEMS = 'data/items.json'
 const FILENAME_WIPOBJS = 'data/wipobjs.json'
+const FILENAME_TMPLOBJS = 'data/tmplobjs.json'
 const FILENAME_AUDITLOG = 'data/auditLog.json'
 
 const exportItems = ref<ExportableObjects[]>(['cards', 'transactions', 'places', 'items'])
@@ -106,6 +116,16 @@ async function createZipBlob(objects: ExportableObjects[]) {
     const data = wipStore.$serialize()
 
     const filename = FILENAME_WIPOBJS
+    const dataHash = await digestData(data)
+    hashes.set(filename, dataHash)
+
+    const reader = new TextReader(data)
+    await zipWriter.add(filename, reader)
+  }
+  if (objects.includes('templates')) {
+    const data = templatesStore.$serialize()
+
+    const filename = FILENAME_TMPLOBJS
     const dataHash = await digestData(data)
     hashes.set(filename, dataHash)
 
@@ -251,6 +271,8 @@ async function loadData(
     result &&= resultForItems
   }
 
+  // TODO: wips/templates
+
   await zipReader.close()
 
   return result
@@ -299,6 +321,7 @@ async function onDelete() {
   placesStore.$reset()
   itemsStore.$reset()
   wipStore.$reset()
+  templatesStore.$reset()
 
   const { clear: clearCardsFromIDB } = usePokemonTCGCollectionIDB('cards')
   await clearCardsFromIDB()
@@ -310,6 +333,8 @@ async function onDelete() {
   await clearItemsFromIDB()
   const { clear: clearWIPObjFromIDB } = usePokemonTCGCollectionIDB('workInProgress')
   await clearWIPObjFromIDB()
+  const { clear: clearTemplatesFromIDB } = usePokemonTCGCollectionIDB('templates')
+  await clearTemplatesFromIDB()
 
   // NOTE: does it make sense to delete audit logs? Let's keep them
 }
@@ -364,6 +389,9 @@ async function onLoadPreloadData() {
       <v-card title="Work in Progress">
         <v-card-item>{{ wipStore.objects.size }} WIP objects</v-card-item>
       </v-card>
+      <v-card title="Templates">
+        <v-card-item>{{ templatesStore.templates.size }} templates</v-card-item>
+      </v-card>
       <v-card title="Audit Log">
         <v-card-item>{{ auditLogStore.logs.length }} log entries</v-card-item>
       </v-card>
@@ -406,6 +434,13 @@ async function onLoadPreloadData() {
         multiple
         hide-details
         label="Work-in-Progress Objects"
+      ></v-checkbox>
+      <v-checkbox
+        v-model="exportItems"
+        value="templates"
+        multiple
+        hide-details
+        label="Templates"
       ></v-checkbox>
       <v-checkbox
         v-model="exportItems"

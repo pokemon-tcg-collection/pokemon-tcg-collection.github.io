@@ -132,6 +132,12 @@ async function onSave() {
     await router.push(returnLocation.value)
   }
 }
+async function onSaveAsDraft() {
+  if (!transaction.value) return
+  console.log('Save Transaction (as draft)', toRaw(transaction.value))
+
+  await saveTransactionAsDraft()
+}
 async function onSetAsTemplate() {
   if (!transaction.value) return
   console.log('Set Transaction as Template', toRaw(transaction.value))
@@ -173,6 +179,7 @@ async function onLeave(type: 'save' | 'save-draft' | 'set-as-template' | 'discar
     :is-draft="transactionSource === 'wip'"
     title="Transaction Editor"
     @save="onSave"
+    @save-as-draft="onSaveAsDraft"
     @set-as-template="onSetAsTemplate"
     @discard-changes="discardChanges"
     @delete="onDelete"

@@ -47,6 +47,12 @@ async function onSave() {
     await router.push(returnLocation.value)
   }
 }
+async function onSaveAsDraft() {
+  if (!place.value) return
+  console.log('Save Place (as draft)', toRaw(place.value))
+
+  await savePlaceAsDraft()
+}
 async function onSetAsTemplate() {
   if (!place.value) return
   console.log('Set Place as Template', toRaw(place.value))
@@ -87,6 +93,7 @@ async function onLeave(type: 'save' | 'save-draft' | 'set-as-template' | 'discar
     :is-draft="placeSource === 'wip'"
     title="Place / Location Editor"
     @save="onSave"
+    @save-as-draft="onSaveAsDraft"
     @set-as-template="onSetAsTemplate"
     @discard-changes="discardChanges"
     @delete="onDelete"

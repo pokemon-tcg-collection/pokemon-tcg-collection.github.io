@@ -86,6 +86,12 @@ async function onSave() {
     await router.push(returnLocation.value)
   }
 }
+async function onSaveAsDraft() {
+  if (!card.value) return
+  console.log('Save Card (as draft)', toRaw(card.value))
+
+  await saveCardAsDraft()
+}
 async function onSetAsTemplate() {
   if (!card.value) return
   console.log('Set Card as Template', toRaw(card.value))
@@ -126,6 +132,7 @@ async function onLeave(type: 'save' | 'save-draft' | 'set-as-template' | 'discar
     :is-draft="cardSource === 'wip'"
     title="Card Editor"
     @save="onSave"
+    @save-as-draft="onSaveAsDraft"
     @set-as-template="onSetAsTemplate"
     @discard-changes="discardChanges"
     @delete="onDelete"

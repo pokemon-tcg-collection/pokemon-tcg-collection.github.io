@@ -1,5 +1,6 @@
 import { v4 as uuidv4 } from 'uuid'
 
+import { toRawDeep } from '@/utils/reactivity'
 import type {
   Card,
   DataEditInfo,
@@ -18,7 +19,7 @@ export function createNewRefID() {
   return uuidv4()
 }
 
-function createEditMeta() {
+export function createEditMeta() {
   return {
     created: new Date(),
     edited: undefined,
@@ -29,7 +30,7 @@ function createEditMeta() {
 
 export function createNewCard(): Card {
   return {
-    id: uuidv4(),
+    id: createNewRefID(),
     name: '',
     language: 'en',
     number: '',
@@ -41,7 +42,7 @@ export function createNewCard(): Card {
 
 export function createNewTransaction(): Transaction {
   return {
-    id: uuidv4(),
+    id: createNewRefID(),
     name: '',
     type: 'buy',
     cost: 0,
@@ -54,7 +55,7 @@ export function createNewTransaction(): Transaction {
 
 export function createNewPlace(): Place {
   return {
-    id: uuidv4(),
+    id: createNewRefID(),
     name: '',
     type: 'online-shop',
     url: '',
@@ -64,12 +65,27 @@ export function createNewPlace(): Place {
 
 export function createNewItem(): Item {
   return {
-    id: uuidv4(),
+    id: createNewRefID(),
     name: '',
     cost_unit: 'EUR',
     contents: [],
     _meta: createEditMeta(),
   } satisfies Item
+}
+
+// -------------------------------------------------------------------------
+
+export function makeObjectUniqueCopy<T extends Card | Transaction | Place | Item>(
+  obj: T,
+  copyFirst: boolean = true,
+): T {
+  const copy = copyFirst ? structuredClone(toRawDeep(obj)) : obj
+
+  // override ID/metadata, important! so each new templated object is unique
+  copy.id = createNewRefID()
+  copy._meta = createEditMeta()
+
+  return copy
 }
 
 // -------------------------------------------------------------------------

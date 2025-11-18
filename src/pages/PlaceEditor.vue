@@ -16,6 +16,7 @@ const {
   objectChanged: placeChanged,
   existsInStore,
   returnLocation,
+  setAsTemplate: setPlaceAsTemplate,
   saveAsDraft: savePlaceAsDraft,
   save: savePlace,
   delete: deletePlace,
@@ -46,6 +47,12 @@ async function onSave() {
     await router.push(returnLocation.value)
   }
 }
+async function onSetAsTemplate() {
+  if (!place.value) return
+  console.log('Set Place as Template', toRaw(place.value))
+
+  await setPlaceAsTemplate()
+}
 async function onDelete() {
   if (!place.value) return
   console.log('Delete Place', toRaw(place.value))
@@ -58,11 +65,13 @@ async function onDelete() {
     await router.push(returnLocation.value)
   }
 }
-async function onLeave(type: 'save' | 'save-draft' | 'discard-changes') {
+async function onLeave(type: 'save' | 'save-draft' | 'set-as-template' | 'discard-changes') {
   if (type === 'save') {
     await savePlace()
   } else if (type === 'save-draft') {
     await savePlaceAsDraft()
+  } else if (type === 'set-as-template') {
+    await setPlaceAsTemplate()
   } else if (type === 'discard-changes') {
     discardChanges()
   }
@@ -78,6 +87,8 @@ async function onLeave(type: 'save' | 'save-draft' | 'discard-changes') {
     :is-draft="placeSource === 'wip'"
     title="Place / Location Editor"
     @save="onSave"
+    @set-as-template="onSetAsTemplate"
+    @discard-changes="discardChanges"
     @delete="onDelete"
     @leave-action="onLeave"
     @relation-edit="onRelationEdit"

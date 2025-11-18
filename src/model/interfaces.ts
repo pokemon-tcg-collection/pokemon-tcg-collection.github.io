@@ -263,7 +263,7 @@ export interface Card extends Base {
   /** name of card */
   name: string
   /** number in set (generally a number but may also be more complex so a string) */
-  number: string
+  number: number | string
 
   /** set/expansion */
   set: RefID
@@ -283,7 +283,7 @@ export interface Card extends Base {
 
   // availability? (for statistics (pull-rates), but e.g. card might have been sold/gifted-away)
 
-  /** PokeAPI pokemon id */
+  /** PokeAPI pokemon national dex id */
   pokeapi_pokemon_id?: number
   /** TCGDex API identifier for metadata */
   tcgdex_id?: string

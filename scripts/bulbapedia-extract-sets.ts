@@ -5,9 +5,10 @@
  *   node bulbapedia-extract-sets.ts
  */
 
-import { JSDOM } from 'jsdom'
-import { writeFileSync, mkdirSync } from 'node:fs'
+import { mkdirSync, writeFileSync } from 'node:fs'
 import { join as pathJoin } from 'node:path'
+
+import { JSDOM } from 'jsdom'
 
 // -------------------------------------------------------------------------
 // generic
@@ -40,6 +41,7 @@ interface SetInfoBriefEN {
   release_date?: string
   abbrev: string
   bulbapedia_url: string
+  tcgdex_id?: string | undefined
 }
 
 interface SetInfoFullEN extends SetInfoBriefEN {
@@ -1376,6 +1378,20 @@ async function processSetsEN() {
     urlBase + 'List_of_Pokémon_Trading_Card_Game_expansions',
   )
   const result = parseSetsEN(document)
+  if (result === undefined) {
+    console.warn('Unable to parse EN Sets?')
+    return
+  }
+
+  result.forEach((set) => {
+    const [id, name] = getTCGdexSetID(set.name)
+    if (id !== undefined) {
+      set.tcgdex_id = id
+      if (name !== set.name) {
+        console.warn('Matched EN Set name:', [set.name, name], [set.series])
+      }
+    }
+  })
 
   writeFileSync(
     pathJoin(DN_OUTPUT, 'bulbapedia-en-sets.json'),
@@ -1383,6 +1399,7 @@ async function processSetsEN() {
   )
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 async function _checkTCGdexSetIDMapping() {
   const document = await fetchAndParseToDocument(
     urlBase + 'List_of_Pokémon_Trading_Card_Game_expansions',
@@ -1418,6 +1435,10 @@ async function processSetsJA() {
     urlBase + 'List_of_Japanese_Pokémon_Trading_Card_Game_expansions',
   )
   const result = parseSetsJP(document)
+  if (result === undefined) {
+    console.warn('Unable to parse JP Sets?')
+    return
+  }
 
   writeFileSync(
     pathJoin(DN_OUTPUT, 'bulbapedia-ja-sets.json'),

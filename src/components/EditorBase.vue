@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
 import { onBeforeRouteLeave } from 'vue-router'
 
 import type { ResultTypes } from '@/components/EditorConfirmChangesDialog.vue'
@@ -10,15 +10,25 @@ import EditorFieldsRelated from '@/components/EditorFieldsRelated.vue'
 import EditorFieldsRelatedURLs from '@/components/EditorFieldsRelatedURLs.vue'
 import type { Card, Item, Place, Transaction } from '@/model/interfaces'
 import { useSettingsStore } from '@/stores/settings'
+import { useTemplatesStore } from '@/stores/templates'
 
 const settings = useSettingsStore()
+const templatesStore = useTemplatesStore()
 
 const object = defineModel<Item | Transaction | Place | Card>()
 
-const { objectType, objectChanged, existsInStore, title } = defineProps<{
+const {
+  objectType,
+  objectChanged,
+  existsInStore,
+  showSetAsTemplate = true,
+  isDraft,
+  title,
+} = defineProps<{
   objectType: 'item' | 'transaction' | 'place' | 'card'
   objectChanged: boolean
   existsInStore: boolean
+  showSetAsTemplate?: boolean
   isDraft: boolean
   title: string
 }>()
@@ -26,6 +36,8 @@ const { objectType, objectChanged, existsInStore, title } = defineProps<{
 const emit = defineEmits<{
   relationEdit: [id: string, type: string]
   save: []
+  setAsTemplate: []
+  discardChanges: []
   delete: []
   leaveAction: [type: ResultTypes]
 }>()
@@ -36,6 +48,8 @@ const emit = defineEmits<{
 
 const dialogToAskUserAboutChanges = ref<boolean>(false)
 const dialogToAskUserToConfirmDeletion = ref<boolean>(false)
+
+const hasTemplate = computed(() => templatesStore.has(objectType))
 
 onBeforeRouteLeave(async (to, from) => {
   if (!object.value) return true
@@ -63,6 +77,12 @@ function onRelationEdit(id: string, type: string) {
 function onSave() {
   emit('save')
 }
+function onSetAsTemplate() {
+  emit('setAsTemplate')
+}
+function onDiscardChanges() {
+  emit('discardChanges')
+}
 function onDelete() {
   // show confirm deletion dialog
   dialogToAskUserToConfirmDeletion.value = true
@@ -78,7 +98,10 @@ function onUserConfirmDeletion() {
 </script>
 
 <template>
-  <h1 class="mb-3">{{ title }}<template v-if="objectChanged"> [changed]</template></h1>
+  <h1 class="mb-3">
+    {{ title }}<template v-if="objectChanged"> [changed]</template
+    ><template v-if="hasTemplate"> [from Template]</template>
+  </h1>
 
   <v-form v-if="object">
     <slot :object="object" :object-type="objectType"></slot>
@@ -100,6 +123,18 @@ function onUserConfirmDeletion() {
 
     <div class="d-flex flex-column flex-sm-row ga-3 mt-3">
       <v-btn color="primary" text="Save" @click="onSave"></v-btn>
+      <v-btn
+        v-if="showSetAsTemplate"
+        color="secondary"
+        :text="hasTemplate ? 'Set as new Template' : 'Set as Template'"
+        @click="onSetAsTemplate"
+      ></v-btn>
+      <v-btn
+        v-if="objectChanged"
+        color="warning"
+        text="Discard Changes"
+        @click="onDiscardChanges"
+      ></v-btn>
       <v-btn v-if="existsInStore" color="error" text="Delete" @click="onDelete"></v-btn>
     </div>
   </v-form>
@@ -109,6 +144,8 @@ function onUserConfirmDeletion() {
   <EditorConfirmChangesDialog
     v-model="dialogToAskUserAboutChanges"
     :is-draft="isDraft"
+    :has-template="hasTemplate"
+    :show-set-as-template-button="showSetAsTemplate"
     @result="onUserChoice"
   ></EditorConfirmChangesDialog>
   <EditorConfirmDeletionDialog

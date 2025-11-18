@@ -8,6 +8,7 @@ import { toRawDeep } from '@/utils/reactivity'
 
 export type WIPObjectType = 'card-edit' | 'transaction-edit' | 'item-edit' | 'place-edit'
 export type WIPObjectData = Transaction | Card | Place | Item
+
 export interface WIPObject {
   /** global unique internal id (no duplicates across different object types) */
   id: string

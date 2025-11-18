@@ -24,6 +24,7 @@ const {
   objectChanged: cardChanged,
   existsInStore,
   returnLocation,
+  setAsTemplate: setCardAsTemplate,
   saveAsDraft: saveCardAsDraft,
   save: saveCard,
   delete: deleteCard,
@@ -85,6 +86,12 @@ async function onSave() {
     await router.push(returnLocation.value)
   }
 }
+async function onSetAsTemplate() {
+  if (!card.value) return
+  console.log('Set Card as Template', toRaw(card.value))
+
+  await setCardAsTemplate()
+}
 async function onDelete() {
   if (!card.value) return
   console.log('Delete Card', toRaw(card.value))
@@ -97,11 +104,13 @@ async function onDelete() {
     await router.push(returnLocation.value)
   }
 }
-async function onLeave(type: 'save' | 'save-draft' | 'discard-changes') {
+async function onLeave(type: 'save' | 'save-draft' | 'set-as-template' | 'discard-changes') {
   if (type === 'save') {
     await saveCard()
   } else if (type === 'save-draft') {
     await saveCardAsDraft()
+  } else if (type === 'set-as-template') {
+    await setCardAsTemplate()
   } else if (type === 'discard-changes') {
     discardChanges()
   }
@@ -117,6 +126,8 @@ async function onLeave(type: 'save' | 'save-draft' | 'discard-changes') {
     :is-draft="cardSource === 'wip'"
     title="Card Editor"
     @save="onSave"
+    @set-as-template="onSetAsTemplate"
+    @discard-changes="discardChanges"
     @delete="onDelete"
     @leave-action="onLeave"
     @relation-edit="onRelationEdit"

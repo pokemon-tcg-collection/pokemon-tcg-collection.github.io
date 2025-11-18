@@ -24,6 +24,7 @@ const {
   existsInStore,
   objectIdFromParam: itemIdFromParam,
   returnLocation,
+  setAsTemplate: setItemAsTemplate,
   saveAsDraft: saveItemAsDraft,
   save: saveItem,
   delete: deleteItem,
@@ -97,6 +98,12 @@ async function onSave() {
     await router.push(returnLocation.value)
   }
 }
+async function onSetAsTemplate() {
+  if (!item.value) return
+  console.log('Set Item as Template', toRaw(item.value))
+
+  await setItemAsTemplate()
+}
 async function onDelete() {
   if (!item.value) return
   console.log('Delete Item', toRaw(item.value))
@@ -109,11 +116,13 @@ async function onDelete() {
     await router.push(returnLocation.value)
   }
 }
-async function onLeave(type: 'save' | 'save-draft' | 'discard-changes') {
+async function onLeave(type: 'save' | 'save-draft' | 'set-as-template' | 'discard-changes') {
   if (type === 'save') {
     await saveItem()
   } else if (type === 'save-draft') {
     await saveItemAsDraft()
+  } else if (type === 'set-as-template') {
+    await setItemAsTemplate()
   } else if (type === 'discard-changes') {
     discardChanges()
   }
@@ -129,6 +138,8 @@ async function onLeave(type: 'save' | 'save-draft' | 'discard-changes') {
     :is-draft="itemSource === 'wip'"
     title="Item Editor"
     @save="onSave"
+    @set-as-template="onSetAsTemplate"
+    @discard-changes="discardChanges"
     @delete="onDelete"
     @leave-action="onLeave"
     @relation-edit="onRelationEdit"

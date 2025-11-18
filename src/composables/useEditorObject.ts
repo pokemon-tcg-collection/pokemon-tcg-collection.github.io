@@ -24,6 +24,7 @@ import { useAuditLogStore } from '@/stores/auditLog'
 import { useCardsStore } from '@/stores/cards'
 import { useItemsStore } from '@/stores/items'
 import { usePlacesStore } from '@/stores/places'
+import { useTemplatesStore } from '@/stores/templates'
 import { useTransactionsStore } from '@/stores/transactions'
 import { useWorkInProgressStore } from '@/stores/workInProgress'
 import { toRawDeep } from '@/utils/reactivity'
@@ -74,6 +75,7 @@ export default function useEditorObject<
   const route = useRoute()
 
   const wipStore = useWorkInProgressStore()
+  const templatesStore = useTemplatesStore()
   const auditLog = useAuditLogStore()
 
   const objectIdFromParam = computed(() => route.params.id as string | undefined)
@@ -91,17 +93,29 @@ export default function useEditorObject<
     return undefined
   }
 
-  function createNewObject(type: 'item'): Item
-  function createNewObject(type: 'transaction'): Transaction
-  function createNewObject(type: 'place'): Place
-  function createNewObject(type: 'card'): Card
-  function createNewObject(type: TN): TC
-  function createNewObject<TN extends keyof TypeMap>(type: TN) {
-    if (type === 'item') return createNewItem()
-    if (type === 'transaction') return createNewTransaction()
-    if (type === 'place') return createNewPlace()
-    if (type === 'card') return createNewCard()
-    return undefined
+  function createNewObject(type: 'item', checkForTemplateFirst?: boolean): [Item, boolean]
+  function createNewObject(
+    type: 'transaction',
+    checkForTemplateFirst?: boolean,
+  ): [Transaction, boolean]
+  function createNewObject(type: 'place', checkForTemplateFirst?: boolean): [Place, boolean]
+  function createNewObject(type: 'card', checkForTemplateFirst?: boolean): [Card, boolean]
+  function createNewObject(type: TN, checkForTemplateFirst?: boolean): [TC, boolean]
+  function createNewObject<TN extends keyof TypeMap>(
+    type: TN,
+    checkForTemplateFirst: boolean = true,
+  ) {
+    if (checkForTemplateFirst && templatesStore.has(type)) {
+      const object = templatesStore.get(type)
+      if (object !== undefined) return [object, true]
+    }
+
+    if (type === 'item') return [createNewItem(), false]
+    if (type === 'transaction') return [createNewTransaction(), false]
+    if (type === 'place') return [createNewPlace(), false]
+    if (type === 'card') return [createNewCard(), false]
+
+    return [undefined, false]
   }
 
   const objectsStore = getStore(type)
@@ -113,7 +127,9 @@ export default function useEditorObject<
     () => objectIdFromParam.value !== undefined && objectsStore.has(objectIdFromParam.value),
   )
 
-  const objectSource = ref<'store' | 'wip' | 'new'>()
+  const newObjectIsFromTemplate = computed(() => templatesStore.has(type))
+
+  const objectSource = ref<'store' | 'wip' | 'template' | 'new'>()
   const objectBase = ref<TC>()
   const object = ref<TC>()
 
@@ -152,8 +168,11 @@ export default function useEditorObject<
         objectSource.value = 'store'
       }
     } else {
-      objectGot = createNewObject(type)
-      objectSource.value = 'new'
+      await until(() => templatesStore.$isHydrated).toBeTruthy()
+
+      const [newObj, isFromTemplate] = createNewObject(type)
+      objectGot = newObj
+      objectSource.value = isFromTemplate ? 'template' : 'new'
     }
     if (objectGot !== undefined) {
       objectBase.value = structuredClone(objectGot)
@@ -208,6 +227,17 @@ export default function useEditorObject<
         query: route.query,
       })
     }
+  }
+
+  async function setAsTemplate() {
+    if (!object.value) return
+
+    // only update template for type
+    await templatesStore.add(type, toRawDeep(object.value))
+
+    // update base version?, so no edit changes should be found
+    objectBase.value = structuredClone(toRawDeep(object.value))
+    objectSource.value = 'template'
   }
 
   function discardChanges() {
@@ -267,9 +297,11 @@ export default function useEditorObject<
     objectIdFromParam,
     existsAsDraft,
     existsInStore,
+    newObjectIsFromTemplate,
     returnLocation,
     save,
     saveAsDraft,
+    setAsTemplate,
     delete: remove,
     discardChanges,
     navigateTo,

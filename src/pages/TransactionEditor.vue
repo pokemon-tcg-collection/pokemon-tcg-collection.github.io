@@ -25,6 +25,7 @@ const {
   objectChanged: transactionChanged,
   existsInStore,
   returnLocation,
+  setAsTemplate: setTransactionAsTemplate,
   saveAsDraft: saveTransactionAsDraft,
   save: saveTransaction,
   delete: deleteTransaction,
@@ -131,6 +132,12 @@ async function onSave() {
     await router.push(returnLocation.value)
   }
 }
+async function onSetAsTemplate() {
+  if (!transaction.value) return
+  console.log('Set Transaction as Template', toRaw(transaction.value))
+
+  await setTransactionAsTemplate()
+}
 async function onDelete() {
   if (!transaction.value) return
   console.log('Delete Transaction', toRaw(transaction.value))
@@ -144,11 +151,13 @@ async function onDelete() {
   }
 }
 
-async function onLeave(type: 'save' | 'save-draft' | 'discard-changes') {
+async function onLeave(type: 'save' | 'save-draft' | 'set-as-template' | 'discard-changes') {
   if (type === 'save') {
     await saveTransaction()
   } else if (type === 'save-draft') {
     await saveTransactionAsDraft()
+  } else if (type === 'set-as-template') {
+    await setTransactionAsTemplate()
   } else if (type === 'discard-changes') {
     discardChanges()
   }
@@ -164,6 +173,8 @@ async function onLeave(type: 'save' | 'save-draft' | 'discard-changes') {
     :is-draft="transactionSource === 'wip'"
     title="Transaction Editor"
     @save="onSave"
+    @set-as-template="onSetAsTemplate"
+    @discard-changes="discardChanges"
     @delete="onDelete"
     @leave-action="onLeave"
     @relation-edit="onRelationEdit"

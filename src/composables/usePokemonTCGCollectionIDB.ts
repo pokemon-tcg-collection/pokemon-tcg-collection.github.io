@@ -2,6 +2,7 @@ import type { DBSchema, IDBPDatabase, IDBPTransaction, StoreNames, StoreValue } 
 
 import type { Card, Item, Place, Transaction } from '@/model/interfaces'
 import type { AuditMessage } from '@/stores/auditLog'
+import type { TemplateObject } from '@/stores/templates'
 import type { WIPObject } from '@/stores/workInProgress'
 import useIndexedDB from './useIndexedDB'
 
@@ -32,6 +33,10 @@ export interface PokemonTCGCollectionDB extends DBSchema {
     key: string
     value: WIPObject
   }
+  templates: {
+    key: string
+    value: TemplateObject
+  }
 }
 
 function upgrade(
@@ -49,19 +54,35 @@ function upgrade(
 ): void {
   console.log(`Updating IndexedDB schema from '${oldVersion}' to '${newVersion}'`)
 
-  database.createObjectStore('cards', { keyPath: 'id' })
-  database.createObjectStore('transactions', { keyPath: 'id' })
-  database.createObjectStore('places', { keyPath: 'id' })
-  database.createObjectStore('items', { keyPath: 'id' })
-  database.createObjectStore('workInProgress', { keyPath: 'id' })
-  database.createObjectStore('auditLog', { keyPath: 'id' })
+  if (!database.objectStoreNames.contains('cards')) {
+    database.createObjectStore('cards', { keyPath: 'id' })
+  }
+  if (!database.objectStoreNames.contains('transactions')) {
+    database.createObjectStore('transactions', { keyPath: 'id' })
+  }
+  if (!database.objectStoreNames.contains('places')) {
+    database.createObjectStore('places', { keyPath: 'id' })
+  }
+  if (!database.objectStoreNames.contains('items')) {
+    database.createObjectStore('items', { keyPath: 'id' })
+  }
+  if (!database.objectStoreNames.contains('workInProgress')) {
+    database.createObjectStore('workInProgress', { keyPath: 'id' })
+  }
+  if (!database.objectStoreNames.contains('auditLog')) {
+    database.createObjectStore('auditLog', { keyPath: 'id' })
+  }
+
+  if (!database.objectStoreNames.contains('templates')) {
+    database.createObjectStore('templates', { keyPath: 'type' })
+  }
 }
 
 export default function usePokemonTCGCollectionIDB<
   StoreName extends StoreNames<PokemonTCGCollectionDB>,
   StoreKey extends IDBKeyRange | PokemonTCGCollectionDB[StoreName]['key'],
 >(store: StoreName) {
-  const { getDB } = useIndexedDB<PokemonTCGCollectionDB>('pokemon-tcg-collection', 1, { upgrade })
+  const { getDB } = useIndexedDB<PokemonTCGCollectionDB>('pokemon-tcg-collection', 2, { upgrade })
 
   async function put(value: StoreValue<PokemonTCGCollectionDB, StoreName>) {
     const dbHdl = await getDB()

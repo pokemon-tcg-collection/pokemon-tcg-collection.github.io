@@ -1,11 +1,9 @@
 <script setup lang="ts">
-import { toRaw } from 'vue'
 import { useRouter } from 'vue-router'
 
 import EditorBase from '@/components/EditorBase.vue'
 import EditorFieldset from '@/components/EditorFieldset.vue'
 import useEditorObject from '@/composables/useEditorObject'
-import type { EditRouteNames } from '@/router/routes'
 import { ONLINE_MARKETPLACE } from '@/model/interfaces'
 
 const router = useRouter()
@@ -28,58 +26,22 @@ function isValidURL(val: string) {
   return URL.canParse(val)
 }
 
-async function onRelationEdit(id: string, type: string) {
-  if (!place.value) return
-
-  await savePlaceAsDraft()
-  await navigateTo(`${type}-edit` as EditRouteNames, { id })
-}
-
 async function onSave() {
   if (!place.value) return
-  console.log('Save Place', toRaw(place.value))
-
-  await savePlace()
 
   if (returnLocation.value === undefined) {
     await router.push({ name: 'place-list' })
   } else {
     await router.push(returnLocation.value)
   }
-}
-async function onSaveAsDraft() {
-  if (!place.value) return
-  console.log('Save Place (as draft)', toRaw(place.value))
-
-  await savePlaceAsDraft()
-}
-async function onSetAsTemplate() {
-  if (!place.value) return
-  console.log('Set Place as Template', toRaw(place.value))
-
-  await setPlaceAsTemplate()
 }
 async function onDelete() {
   if (!place.value) return
-  console.log('Delete Place', toRaw(place.value))
-
-  await deletePlace()
 
   if (returnLocation.value === undefined) {
     await router.push({ name: 'place-list' })
   } else {
     await router.push(returnLocation.value)
-  }
-}
-async function onLeave(type: 'save' | 'save-draft' | 'set-as-template' | 'discard-changes') {
-  if (type === 'save') {
-    await savePlace()
-  } else if (type === 'save-draft') {
-    await savePlaceAsDraft()
-  } else if (type === 'set-as-template') {
-    await setPlaceAsTemplate()
-  } else if (type === 'discard-changes') {
-    discardChanges()
   }
 }
 </script>
@@ -92,13 +54,14 @@ async function onLeave(type: 'save' | 'save-draft' | 'set-as-template' | 'discar
     :exists-in-store="existsInStore"
     :is-draft="placeSource === 'wip'"
     title="Place / Location Editor"
+    :save="savePlace"
+    :save-as-draft="savePlaceAsDraft"
+    :set-as-template="setPlaceAsTemplate"
+    :delete="deletePlace"
+    :discard-changes="discardChanges"
+    :navigate-to="navigateTo"
     @save="onSave"
-    @save-as-draft="onSaveAsDraft"
-    @set-as-template="onSetAsTemplate"
-    @discard-changes="discardChanges"
     @delete="onDelete"
-    @leave-action="onLeave"
-    @relation-edit="onRelationEdit"
   >
     <template v-if="place">
       <v-input hide-details>

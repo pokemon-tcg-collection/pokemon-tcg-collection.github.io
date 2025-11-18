@@ -106,6 +106,9 @@ export interface Transaction extends Base {
   /** contents */
   items: TransactionItem[]
 
+  // TODO: related transactions
+  // to account for transactions with multiple partners (e.g., amazon)
+
   /** binary attachments (e.g. images, pdf) */
   attachment_ids?: RefID[]
 }

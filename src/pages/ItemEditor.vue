@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, readonly, toRaw } from 'vue'
+import { computed, readonly } from 'vue'
 import { useRouter } from 'vue-router'
 import { useDisplay } from 'vuetify'
 
@@ -8,7 +8,6 @@ import EditorFieldset from '@/components/EditorFieldset.vue'
 import useEditorObject from '@/composables/useEditorObject'
 import type { Item, ItemPart } from '@/model/interfaces'
 import { CARD_LANGUAGES, COST_UNITS, ITEM_TYPES } from '@/model/interfaces'
-import type { EditRouteNames } from '@/router/routes'
 import { useItemsStore } from '@/stores/items'
 
 const { smAndDown, xs } = useDisplay()
@@ -79,58 +78,22 @@ function onItemPartItemSelected(part: ItemPart) {
   }
 }
 
-async function onRelationEdit(id: string, type: string) {
-  if (!item.value) return
-
-  await saveItemAsDraft()
-  await navigateTo(`${type}-edit` as EditRouteNames, { id })
-}
-
 async function onSave() {
   if (!item.value) return
-  console.log('Save Item', toRaw(item.value))
-
-  await saveItem()
 
   if (returnLocation.value === undefined) {
     await router.push({ name: 'item-list' })
   } else {
     await router.push(returnLocation.value)
   }
-}
-async function onSaveAsDraft() {
-  if (!item.value) return
-  console.log('Save Item (as draft)', toRaw(item.value))
-
-  await saveItemAsDraft()
-}
-async function onSetAsTemplate() {
-  if (!item.value) return
-  console.log('Set Item as Template', toRaw(item.value))
-
-  await setItemAsTemplate()
 }
 async function onDelete() {
   if (!item.value) return
-  console.log('Delete Item', toRaw(item.value))
-
-  await deleteItem()
 
   if (returnLocation.value === undefined) {
     await router.push({ name: 'item-list' })
   } else {
     await router.push(returnLocation.value)
-  }
-}
-async function onLeave(type: 'save' | 'save-draft' | 'set-as-template' | 'discard-changes') {
-  if (type === 'save') {
-    await saveItem()
-  } else if (type === 'save-draft') {
-    await saveItemAsDraft()
-  } else if (type === 'set-as-template') {
-    await setItemAsTemplate()
-  } else if (type === 'discard-changes') {
-    discardChanges()
   }
 }
 </script>
@@ -143,13 +106,14 @@ async function onLeave(type: 'save' | 'save-draft' | 'set-as-template' | 'discar
     :exists-in-store="existsInStore"
     :is-draft="itemSource === 'wip'"
     title="Item Editor"
+    :save="saveItem"
+    :save-as-draft="saveItemAsDraft"
+    :set-as-template="setItemAsTemplate"
+    :delete="deleteItem"
+    :discard-changes="discardChanges"
+    :navigate-to="navigateTo"
     @save="onSave"
-    @save-as-draft="onSaveAsDraft"
-    @set-as-template="onSetAsTemplate"
-    @discard-changes="discardChanges"
     @delete="onDelete"
-    @leave-action="onLeave"
-    @relation-edit="onRelationEdit"
   >
     <template v-if="item">
       <EditorFieldset label="Details">

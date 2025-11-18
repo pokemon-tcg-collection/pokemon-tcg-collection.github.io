@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, readonly, ref, toRaw } from 'vue'
+import { computed, readonly, ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { useDisplay } from 'vuetify'
 
@@ -8,7 +8,6 @@ import EditorFieldset from '@/components/EditorFieldset.vue'
 import useEditorObject from '@/composables/useEditorObject'
 import type { Item, Place } from '@/model/interfaces'
 import { COST_UNITS, TRANSACTION_TYPE } from '@/model/interfaces'
-import type { EditRouteNames } from '@/router/routes'
 import { useItemsStore } from '@/stores/items'
 import { usePlacesStore } from '@/stores/places'
 
@@ -113,18 +112,8 @@ function onAddItemToTransaction() {
   newItemId.value = ''
 }
 
-async function onRelationEdit(id: string, type: string) {
-  if (!transaction.value) return
-
-  await saveTransactionAsDraft()
-  await navigateTo(`${type}-edit` as EditRouteNames, { id })
-}
-
 async function onSave() {
   if (!transaction.value) return
-  console.log('Save Transaction', toRaw(transaction.value))
-
-  await saveTransaction()
 
   if (returnLocation.value === undefined) {
     await router.push({ name: 'transaction', params: { id: transaction.value.id } })
@@ -132,40 +121,13 @@ async function onSave() {
     await router.push(returnLocation.value)
   }
 }
-async function onSaveAsDraft() {
-  if (!transaction.value) return
-  console.log('Save Transaction (as draft)', toRaw(transaction.value))
-
-  await saveTransactionAsDraft()
-}
-async function onSetAsTemplate() {
-  if (!transaction.value) return
-  console.log('Set Transaction as Template', toRaw(transaction.value))
-
-  await setTransactionAsTemplate()
-}
 async function onDelete() {
   if (!transaction.value) return
-  console.log('Delete Transaction', toRaw(transaction.value))
-
-  await deleteTransaction()
 
   if (returnLocation.value === undefined) {
     await router.push({ name: 'transaction-list' })
   } else {
     await router.push(returnLocation.value)
-  }
-}
-
-async function onLeave(type: 'save' | 'save-draft' | 'set-as-template' | 'discard-changes') {
-  if (type === 'save') {
-    await saveTransaction()
-  } else if (type === 'save-draft') {
-    await saveTransactionAsDraft()
-  } else if (type === 'set-as-template') {
-    await setTransactionAsTemplate()
-  } else if (type === 'discard-changes') {
-    discardChanges()
   }
 }
 </script>
@@ -178,13 +140,14 @@ async function onLeave(type: 'save' | 'save-draft' | 'set-as-template' | 'discar
     :exists-in-store="existsInStore"
     :is-draft="transactionSource === 'wip'"
     title="Transaction Editor"
+    :save="saveTransaction"
+    :save-as-draft="saveTransactionAsDraft"
+    :set-as-template="setTransactionAsTemplate"
+    :delete="deleteTransaction"
+    :discard-changes="discardChanges"
+    :navigate-to="navigateTo"
     @save="onSave"
-    @save-as-draft="onSaveAsDraft"
-    @set-as-template="onSetAsTemplate"
-    @discard-changes="discardChanges"
     @delete="onDelete"
-    @leave-action="onLeave"
-    @relation-edit="onRelationEdit"
   >
     <template v-if="transaction">
       <EditorFieldset label="Description">

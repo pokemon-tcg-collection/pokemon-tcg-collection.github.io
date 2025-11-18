@@ -66,6 +66,20 @@ interface TypeMap {
   }
 }
 
+// TODO: how to access dynamic return of "navigateTo"
+// NOTE: only works with: ReturnType<typeof useEditorObject<"item", Item, ItemsStore>>
+// export type useEditorObjectReturn<
+//   TN extends keyof TypeMap,
+//   TC extends TypeMap[TN]['object'],
+//   TS extends TypeMap[TN]['store'],
+// > = ReturnType<typeof useEditorObject<TN, TC, TS>>
+
+export type NavigateToName = EditRouteNames | 'item-new' | 'transaction-new' | 'place-new'
+export type NavigateToFunc = (
+  name: NavigateToName,
+  params?: RouteParamsRawGeneric | undefined,
+) => Promise<void>
+
 export default function useEditorObject<
   TN extends keyof TypeMap,
   TC extends TypeMap[TN]['object'],
@@ -160,6 +174,7 @@ export default function useEditorObject<
         () => wipStore.$isHydrated && (objectsStore as unknown as NullStore).$isHydrated,
       ).toBeTruthy()
 
+      // TODO: do chain with checks for undefined?
       if (existsAsDraft.value) {
         objectGot = wipStore.get<TC>(objectIdFromParam.value)!
         objectSource.value = 'wip'
@@ -269,10 +284,7 @@ export default function useEditorObject<
         | undefined,
   )
 
-  async function navigateTo(
-    name: EditRouteNames | 'item-new' | 'transaction-new' | 'place-new',
-    params?: RouteParamsRawGeneric | undefined,
-  ) {
+  async function navigateTo(name: NavigateToName, params?: RouteParamsRawGeneric | undefined) {
     if (!object.value) return
 
     await router.push({

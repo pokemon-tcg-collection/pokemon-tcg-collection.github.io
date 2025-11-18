@@ -31,5 +31,8 @@ const settings = useSettingsStore()
         label="Show object relations (in-/outgoing)"
       ></v-checkbox>
     </EditorFieldset>
+
+    <!-- Templates: enabled -->
+    <!-- Privacy: hide transactions, currency numbers -->
   </v-form>
 </template>

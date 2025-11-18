@@ -9,7 +9,6 @@ import EditorFieldset from '@/components/EditorFieldset.vue'
 import EditorFieldsTCGDexCardSelector from '@/components/EditorFieldsTCGDexCardSelector.vue'
 import useEditorObject from '@/composables/useEditorObject'
 import type { Item, Transaction } from '@/model/interfaces'
-import type { EditRouteNames } from '@/router/routes'
 import { useItemsStore } from '@/stores/items'
 import { useTransactionsStore } from '@/stores/transactions'
 
@@ -67,18 +66,9 @@ async function onAddNewTransaction() {
   await saveCardAsDraft()
   await navigateTo('transaction-new')
 }
-async function onRelationEdit(id: string, type: string) {
-  if (!card.value) return
-
-  await saveCardAsDraft()
-  await navigateTo(`${type}-edit` as EditRouteNames, { id })
-}
 
 async function onSave() {
   if (!card.value) return
-  console.log('Save Card', toRaw(card.value))
-
-  await saveCard()
 
   if (returnLocation.value === undefined) {
     await router.push({ name: 'card', params: { id: card.value.id } })
@@ -86,39 +76,13 @@ async function onSave() {
     await router.push(returnLocation.value)
   }
 }
-async function onSaveAsDraft() {
-  if (!card.value) return
-  console.log('Save Card (as draft)', toRaw(card.value))
-
-  await saveCardAsDraft()
-}
-async function onSetAsTemplate() {
-  if (!card.value) return
-  console.log('Set Card as Template', toRaw(card.value))
-
-  await setCardAsTemplate()
-}
 async function onDelete() {
   if (!card.value) return
-  console.log('Delete Card', toRaw(card.value))
-
-  await deleteCard()
 
   if (returnLocation.value === undefined) {
     await router.push({ name: 'card-list' })
   } else {
     await router.push(returnLocation.value)
-  }
-}
-async function onLeave(type: 'save' | 'save-draft' | 'set-as-template' | 'discard-changes') {
-  if (type === 'save') {
-    await saveCard()
-  } else if (type === 'save-draft') {
-    await saveCardAsDraft()
-  } else if (type === 'set-as-template') {
-    await setCardAsTemplate()
-  } else if (type === 'discard-changes') {
-    discardChanges()
   }
 }
 </script>
@@ -131,13 +95,14 @@ async function onLeave(type: 'save' | 'save-draft' | 'set-as-template' | 'discar
     :exists-in-store="existsInStore"
     :is-draft="cardSource === 'wip'"
     title="Card Editor"
+    :save="saveCard"
+    :save-as-draft="saveCardAsDraft"
+    :set-as-template="setCardAsTemplate"
+    :delete="deleteCard"
+    :discard-changes="discardChanges"
+    :navigate-to="navigateTo"
     @save="onSave"
-    @save-as-draft="onSaveAsDraft"
-    @set-as-template="onSetAsTemplate"
-    @discard-changes="discardChanges"
     @delete="onDelete"
-    @leave-action="onLeave"
-    @relation-edit="onRelationEdit"
   >
     <template v-if="card">
       <EditorFieldset label="Set info">

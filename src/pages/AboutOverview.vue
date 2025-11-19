@@ -26,8 +26,8 @@ const gitInfoDate = import.meta.env.GIT_INFO_DATE
   </p>
   <p>
     This website should also be installable as a
-    <abbrev title="Progressive Web App">PWA</abbrev> for offline use (almost, some API might require
-    a internet connection to download images etc.).
+    <abbr title="Progressive Web App">PWA</abbr> for offline use (almost, some API might require a
+    internet connection to download images etc.).
   </p>
   <p>
     All the recorded data is only stored on the client (i.e. your web browser), so using the

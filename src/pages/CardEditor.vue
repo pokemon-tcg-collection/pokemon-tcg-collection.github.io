@@ -1,22 +1,18 @@
 <script setup lang="ts">
 import type { SupportedLanguages, Card as TCGCard } from '@tcgdex/sdk'
 import { computed, ref, toRaw, watch } from 'vue'
-import { useRouter } from 'vue-router'
 
 import AutocompletePokeAPIPokemon from '@/components/AutocompletePokeAPIPokemon.vue'
+import AutocompleteTransactions from '@/components/AutocompleteTransactions.vue'
 import EditorBase from '@/components/EditorBase.vue'
 import EditorFieldset from '@/components/EditorFieldset.vue'
 import EditorTCGdexCardSelectorDialog from '@/components/EditorTCGdexCardSelectorDialog.vue'
 import useEditorObject from '@/composables/useEditorObject'
-import type { Item, Transaction } from '@/model/interfaces'
+import type { Item } from '@/model/interfaces'
 import { CARD_LANGUAGES } from '@/model/interfaces'
 import { useItemsStore } from '@/stores/items'
-import { useTransactionsStore } from '@/stores/transactions'
 
-const transactionsStore = useTransactionsStore()
 const itemsStore = useItemsStore()
-
-const router = useRouter()
 
 const {
   object: card,
@@ -40,13 +36,6 @@ const showTCGdexDialog = ref<boolean>(false)
 
 const item_ids = computed<{ id: string; label: string; item: Item }[]>(() =>
   Array.from(itemsStore.items.values()).map((item) => ({ id: item.id, label: item.name, item })),
-)
-const transaction_ids = computed<{ id: string; label: string; transaction: Transaction }[]>(() =>
-  (Array.from(transactionsStore.transactions.values()) as Transaction[]).map((transaction) => ({
-    id: transaction.id,
-    label: transaction.name,
-    transaction,
-  })),
 )
 
 watch(card, (n, o) => console.debug('Card data changed', { new: toRaw(n), old: toRaw(o) }))
@@ -95,25 +84,6 @@ async function onAddNewTransaction() {
   await saveCardAsDraft()
   await navigateTo('transaction-new')
 }
-
-async function onSave() {
-  if (!card.value) return
-
-  if (returnLocation.value === undefined) {
-    await router.push({ name: 'card', params: { id: card.value.id } })
-  } else {
-    await router.push(returnLocation.value)
-  }
-}
-async function onDelete() {
-  if (!card.value) return
-
-  if (returnLocation.value === undefined) {
-    await router.push({ name: 'card-list' })
-  } else {
-    await router.push(returnLocation.value)
-  }
-}
 </script>
 
 <template>
@@ -124,6 +94,11 @@ async function onDelete() {
     :exists-in-store="existsInStore"
     :object-source="cardSource"
     title="Card Editor"
+    :return-location="returnLocation"
+    :saved-go-to-location="
+      card !== undefined ? { name: 'card', params: { id: card.id } } : undefined
+    "
+    :deleted-go-to-location="{ name: 'card-list' }"
     :save="saveCard"
     :save-as-draft="saveCardAsDraft"
     :set-as-template="setCardAsTemplate"
@@ -131,8 +106,6 @@ async function onDelete() {
     :discard-changes="discardChanges"
     :navigate-to="navigateTo"
     :reload="reloadCard"
-    @save="onSave"
-    @delete="onDelete"
   >
     <template v-if="card">
       <EditorFieldset label="Autofill helpers">
@@ -236,25 +209,10 @@ async function onDelete() {
             </v-list-item>
           </template>
         </v-autocomplete>
-        <v-autocomplete
+        <AutocompleteTransactions
           v-model="card.transaction_ids"
-          :items="transaction_ids"
-          item-title="label"
-          item-value="id"
-          chips
-          closable-chips
-          clearable
-          multiple
-          label="Related Transactions"
-        >
-          <template #no-data>
-            <v-list-item>
-              <v-list-item-action @click="onAddNewTransaction"
-                >Create new Transaction</v-list-item-action
-              >
-            </v-list-item>
-          </template>
-        </v-autocomplete>
+          @add-new-transaction="onAddNewTransaction"
+        ></AutocompleteTransactions>
       </EditorFieldset>
 
       <EditorTCGdexCardSelectorDialog

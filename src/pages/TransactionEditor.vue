@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { computed, readonly, ref } from 'vue'
-import { useRouter } from 'vue-router'
 import { useDisplay } from 'vuetify'
 
 import EditorBase from '@/components/EditorBase.vue'
@@ -15,8 +14,6 @@ const { smAndDown, xs } = useDisplay()
 
 const placesStore = usePlacesStore()
 const itemsStore = useItemsStore()
-
-const router = useRouter()
 
 const {
   object: transaction,
@@ -112,25 +109,6 @@ function onAddItemToTransaction() {
   // clear input
   newItemId.value = ''
 }
-
-async function onSave() {
-  if (!transaction.value) return
-
-  if (returnLocation.value === undefined) {
-    await router.push({ name: 'transaction', params: { id: transaction.value.id } })
-  } else {
-    await router.push(returnLocation.value)
-  }
-}
-async function onDelete() {
-  if (!transaction.value) return
-
-  if (returnLocation.value === undefined) {
-    await router.push({ name: 'transaction-list' })
-  } else {
-    await router.push(returnLocation.value)
-  }
-}
 </script>
 
 <template>
@@ -141,6 +119,13 @@ async function onDelete() {
     :object-source="transactionSource"
     :exists-in-store="existsInStore"
     title="Transaction Editor"
+    :return-location="returnLocation"
+    :saved-go-to-location="
+      transaction !== undefined
+        ? { name: 'transaction', params: { id: transaction.id } }
+        : undefined
+    "
+    :deleted-go-to-location="{ name: 'transaction-list' }"
     :save="saveTransaction"
     :save-as-draft="saveTransactionAsDraft"
     :set-as-template="setTransactionAsTemplate"
@@ -148,8 +133,6 @@ async function onDelete() {
     :discard-changes="discardChanges"
     :navigate-to="navigateTo"
     :reload="reloadTransaction"
-    @save="onSave"
-    @delete="onDelete"
   >
     <template v-if="transaction">
       <EditorFieldset label="Description">

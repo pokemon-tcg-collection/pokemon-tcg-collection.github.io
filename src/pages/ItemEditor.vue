@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { computed, readonly } from 'vue'
-import { useRouter } from 'vue-router'
 import { useDisplay } from 'vuetify'
 
 import EditorBase from '@/components/EditorBase.vue'
@@ -13,8 +12,6 @@ import { useItemsStore } from '@/stores/items'
 const { smAndDown, xs } = useDisplay()
 
 const itemsStore = useItemsStore()
-
-const router = useRouter()
 
 const {
   object: item,
@@ -78,25 +75,6 @@ function onItemPartItemSelected(part: ItemPart) {
     }
   }
 }
-
-async function onSave() {
-  if (!item.value) return
-
-  if (returnLocation.value === undefined) {
-    await router.push({ name: 'item-list' })
-  } else {
-    await router.push(returnLocation.value)
-  }
-}
-async function onDelete() {
-  if (!item.value) return
-
-  if (returnLocation.value === undefined) {
-    await router.push({ name: 'item-list' })
-  } else {
-    await router.push(returnLocation.value)
-  }
-}
 </script>
 
 <template>
@@ -107,6 +85,9 @@ async function onDelete() {
     :object-source="itemSource"
     :exists-in-store="existsInStore"
     title="Item Editor"
+    :return-location="returnLocation"
+    :saved-go-to-location="{ name: 'item-list' }"
+    :deleted-go-to-location="{ name: 'item-list' }"
     :save="saveItem"
     :save-as-draft="saveItemAsDraft"
     :set-as-template="setItemAsTemplate"
@@ -114,8 +95,6 @@ async function onDelete() {
     :discard-changes="discardChanges"
     :navigate-to="navigateTo"
     :reload="reloadItem"
-    @save="onSave"
-    @delete="onDelete"
   >
     <template v-if="item">
       <EditorFieldset label="Details">

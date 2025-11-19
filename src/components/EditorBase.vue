@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed, ref, toRaw } from 'vue'
-import { onBeforeRouteLeave } from 'vue-router'
+import { onBeforeRouteLeave, useRouter } from 'vue-router'
 
 import type { ResultTypes } from '@/components/EditorConfirmChangesDialog.vue'
 import EditorConfirmChangesDialog from '@/components/EditorConfirmChangesDialog.vue'
@@ -9,12 +9,19 @@ import EditorFieldset from '@/components/EditorFieldset.vue'
 import EditorFieldsInternals from '@/components/EditorFieldsInternals.vue'
 import EditorFieldsRelated from '@/components/EditorFieldsRelated.vue'
 import EditorFieldsRelatedURLs from '@/components/EditorFieldsRelatedURLs.vue'
-import type { NavigateToFunc, ObjectSource, ReloadFunc } from '@/composables/useEditorObject'
+import type {
+  NavigateToFunc,
+  ObjectSource,
+  ReloadFunc,
+  RouteLocation,
+} from '@/composables/useEditorObject'
 import type { Card, Item, Place, Transaction } from '@/model/interfaces'
 import type { EditRouteNames } from '@/router/routes'
 import { useSettingsStore } from '@/stores/settings'
 import { useTemplatesStore } from '@/stores/templates'
 import { useWorkInProgressStore } from '@/stores/workInProgress'
+
+const router = useRouter()
 
 const settings = useSettingsStore()
 const wipStore = useWorkInProgressStore()
@@ -29,6 +36,9 @@ const {
   existsInStore,
   showSetAsTemplate = true,
   title,
+  returnLocation,
+  savedGoToLocation,
+  deletedGoToLocation,
   save: saveObject,
   saveAsDraft: saveObjectAsDraft,
   setAsTemplate: setObjectAsTemplate,
@@ -43,6 +53,9 @@ const {
   existsInStore: boolean
   showSetAsTemplate?: boolean
   title: string
+  returnLocation: RouteLocation
+  savedGoToLocation?: RouteLocation
+  deletedGoToLocation?: RouteLocation
   save: () => Promise<void>
   saveAsDraft: (replaceHistory?: boolean) => Promise<void>
   setAsTemplate: (replaceObjectBase?: boolean) => Promise<void>
@@ -53,8 +66,6 @@ const {
 }>()
 
 const emit = defineEmits<{
-  save: []
-  delete: []
   leaveAction: [type: ResultTypes]
 }>()
 
@@ -101,7 +112,11 @@ async function onSave() {
 
   await saveObject()
 
-  emit('save')
+  if (returnLocation !== undefined) {
+    await router.push(returnLocation)
+  } else if (savedGoToLocation !== undefined) {
+    await router.push(savedGoToLocation)
+  }
 }
 async function onSaveAsDraft() {
   if (!object.value) return
@@ -149,7 +164,11 @@ async function onUserConfirmDeletion() {
 
   await deleteObject()
 
-  emit('delete')
+  if (returnLocation !== undefined) {
+    await router.push(returnLocation)
+  } else if (deletedGoToLocation !== undefined) {
+    await router.push(deletedGoToLocation)
+  }
 }
 
 async function onDiscardDraft() {

@@ -74,6 +74,11 @@ interface TypeMap {
 //   TS extends TypeMap[TN]['store'],
 // > = ReturnType<typeof useEditorObject<TN, TC, TS>>
 
+export type RouteLocation =
+  | string
+  | RouteLocationAsRelativeGeneric
+  | RouteLocationAsPathGeneric
+  | undefined
 export type NavigateToName = EditRouteNames | 'item-new' | 'transaction-new' | 'place-new'
 export type NavigateToFunc = (
   name: NavigateToName,
@@ -285,11 +290,7 @@ export default function useEditorObject<
     () =>
       (route.query.returnTo !== undefined
         ? JSON.parse(route.query.returnTo as string)
-        : undefined) as
-        | string
-        | RouteLocationAsRelativeGeneric
-        | RouteLocationAsPathGeneric
-        | undefined,
+        : undefined) as RouteLocation,
   )
 
   async function navigateTo(name: NavigateToName, params?: RouteParamsRawGeneric | undefined) {

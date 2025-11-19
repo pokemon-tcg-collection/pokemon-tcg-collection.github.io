@@ -5,8 +5,8 @@ import type { RouteLocationAsPathGeneric, RouteLocationAsRelativeGeneric } from 
 import { useRoute } from 'vue-router'
 import { useDisplay } from 'vuetify'
 
+import usePWA from '@/composables/usePWA'
 import { useWorkInProgressStore } from '@/stores/workInProgress'
-import usePWA from './composables/usePWA'
 
 const { xs } = useDisplay()
 const { isOnline } = useNetwork()

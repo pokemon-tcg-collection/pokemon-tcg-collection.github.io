@@ -1,12 +1,8 @@
 <script setup lang="ts">
-import { useRouter } from 'vue-router'
-
 import EditorBase from '@/components/EditorBase.vue'
 import EditorFieldset from '@/components/EditorFieldset.vue'
 import useEditorObject from '@/composables/useEditorObject'
 import { ONLINE_MARKETPLACE } from '@/model/interfaces'
-
-const router = useRouter()
 
 const {
   object: place,
@@ -26,25 +22,6 @@ const {
 function isValidURL(val: string) {
   return URL.canParse(val)
 }
-
-async function onSave() {
-  if (!place.value) return
-
-  if (returnLocation.value === undefined) {
-    await router.push({ name: 'place-list' })
-  } else {
-    await router.push(returnLocation.value)
-  }
-}
-async function onDelete() {
-  if (!place.value) return
-
-  if (returnLocation.value === undefined) {
-    await router.push({ name: 'place-list' })
-  } else {
-    await router.push(returnLocation.value)
-  }
-}
 </script>
 
 <template>
@@ -55,6 +32,9 @@ async function onDelete() {
     :object-source="placeSource"
     :exists-in-store="existsInStore"
     title="Place / Location Editor"
+    :return-location="returnLocation"
+    :saved-go-to-location="{ name: 'place-list' }"
+    :deleted-go-to-location="{ name: 'place-list' }"
     :save="savePlace"
     :save-as-draft="savePlaceAsDraft"
     :set-as-template="setPlaceAsTemplate"
@@ -62,8 +42,6 @@ async function onDelete() {
     :discard-changes="discardChanges"
     :navigate-to="navigateTo"
     :reload="reloadPlace"
-    @save="onSave"
-    @delete="onDelete"
   >
     <template v-if="place">
       <v-input hide-details>

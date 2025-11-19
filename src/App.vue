@@ -64,7 +64,7 @@ const breadcrumbs = computed(() =>
     </v-app-bar>
 
     <v-navigation-drawer name="drawer" v-model="drawer" temporary>
-      <v-list class="fill-height d-flex flex-column" open-strategy="single" nav>
+      <v-list class="fill-height overflow-auto d-flex flex-column" open-strategy="single" nav>
         <v-list-item link title="Home" :to="{ name: 'home' }"></v-list-item>
         <v-list-item link title="Cards" :to="{ name: 'cards' }"></v-list-item>
         <v-list-item link title="Transactions" :to="{ name: 'transactions' }"></v-list-item>

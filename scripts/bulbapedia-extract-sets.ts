@@ -9,6 +9,8 @@ import { mkdirSync, writeFileSync } from 'node:fs'
 import { join as pathJoin } from 'node:path'
 
 import { JSDOM } from 'jsdom'
+import type { SupportedLanguages } from '@tcgdex/sdk'
+import TCGdex from '@tcgdex/sdk'
 
 // -------------------------------------------------------------------------
 // generic
@@ -76,7 +78,7 @@ interface SetInfoFullJA extends SetInfoBriefJA {
 }
 
 // -------------------------------------------------------------------------
-// mappings
+// mappings (bulbapedia, manual)
 
 const mapCardStatsRawEN = new Map<string, string>([
   ['Secret card', 'secret'],
@@ -716,11 +718,13 @@ function parseSetsEN(document: Document) {
 
     if (child.tagName === 'H2') {
       const value = child.textContent.trim()
-      lastSeriesTypeHeader = mapSeriesTypesRawEN.get(value)!
+      lastSeriesTypeHeader = mapSeriesTypesRawEN.get(value) ?? null
+      if (lastSeriesTypeHeader === null) console.error('Found unknown series type!', value)
       lastSeriesHeader = null
     } else if (child.tagName === 'H3') {
       const value = child.textContent.trim()
-      lastSeriesHeader = mapSeriesRawEN.get(value)!
+      lastSeriesHeader = mapSeriesRawEN.get(value) ?? null
+      if (lastSeriesHeader === null) console.error('Found unknown series!', value)
     } else if (child.tagName === 'TABLE') {
       const table = child as HTMLTableElement
 
@@ -1099,235 +1103,12 @@ function parseSetsJP(document: Document) {
 }
 
 // -------------------------------------------------------------------------
+// TCGdex mappings
 
-// + approx mapping between Bulbapedia and TCGdex API
-// (japanese might have some smaller series that are part of others?)
-const mapSeriesBublbaToTCGdex = new Map<string, string | string[] | null>([
-  ['original', ['base', 'gym']],
-  ['neo', 'neo'],
-  ['legendary-collection', 'lc'],
-  ['e-card', 'ecard'],
-  ['ex', 'ex'],
-  ['diamond-pearl', 'dp'],
-  ['platinum', 'pl'],
-  ['heartgold-soulsilver', 'hgss'],
-  ['call-of-legends', 'col'],
-  ['black-white', 'bw'],
-  ['xy', 'xy'],
-  ['sun-moon', 'sm'],
-  ['sword-shield', 'swsh'],
-  ['scarlet-violet', 'sv'],
-  ['mega-evolution', 'me'],
-  ['black-star-promo', ['base', 'dp', 'hgss', 'bw', 'xy', 'sm', 'swsh', 'sv', 'me']],
-  ['mcdonalds', 'mc'],
-  ['pop-play', 'pop'],
-  ['other-misc', 'misc'],
-  ['basic-energy', null],
-  ['trick-or-trade', null],
-  // [null, ['tk', 'tcgp']], // no mapping?
-])
-
-// from TCGdex API
-const mapTCGdexSetNameToID = new Map<string, string>([
-  ['Base Set', 'base1'],
-  ['Jungle', 'base2'],
-  ['Wizards Black Star Promos', 'basep'],
-  ['W Promotional', 'wp'],
-  ['Fossil', 'base3'],
-  ['Jumbo cards', 'jumbo'],
-  ['Base Set 2', 'base4'],
-  ['Team Rocket', 'base5'],
-  ['Gym Heroes', 'gym1'],
-  ['Gym Challenge', 'gym2'],
-  ['Neo Genesis', 'neo1'],
-  ['Neo Discovery', 'neo2'],
-  ['Southern Islands', 'si1'],
-  ['Neo Revelation', 'neo3'],
-  ['Neo Destiny', 'neo4'],
-  ['Legendary Collection', 'lc'],
-  ['Sample', 'sp'],
-  ['Expedition Base Set', 'ecard1'],
-  ['Best of game', 'bog'],
-  ['Aquapolis', 'ecard2'],
-  ['Skyridge', 'ecard3'],
-  ['Ruby & Sapphire', 'ex1'],
-  ['Sandstorm', 'ex2'],
-  ['Nintendo Black Star Promos', 'np'],
-  ['Dragon', 'ex3'],
-  ['Team Magma vs Team Aqua', 'ex4'],
-  ['Hidden Legends', 'ex5'],
-  ['Poké Card Creator Pack', 'ex5.5'],
-  ['EX trainer Kit (Latios)', 'tk-ex-latio'],
-  ['EX trainer Kit (Latias)', 'tk-ex-latia'],
-  ['FireRed & LeafGreen', 'ex6'],
-  ['POP Series 1', 'pop1'],
-  ['Team Rocket Returns', 'ex7'],
-  ['Deoxys', 'ex8'],
-  ['Emerald', 'ex9'],
-  ['POP Series 2', 'pop2'],
-  ['Unseen Forces Unown Collection', 'exu'],
-  ['Unseen Forces', 'ex10'],
-  ['Delta Species', 'ex11'],
-  ['Legend Maker', 'ex12'],
-  ['EX trainer Kit 2 (Plusle)', 'tk-ex-p'],
-  ['EX trainer Kit 2 (Minun)', 'tk-ex-m'],
-  ['POP Series 3', 'pop3'],
-  ['Holon Phantoms', 'ex13'],
-  ['POP Series 4', 'pop4'],
-  ['Crystal Guardians', 'ex14'],
-  ['Dragon Frontiers', 'ex15'],
-  ['Power Keepers', 'ex16'],
-  ['POP Series 5', 'pop5'],
-  ['Diamond & Pearl', 'dp1'],
-  ['DP Black Star Promos', 'dpp'],
-  ['Mysterious Treasures', 'dp2'],
-  ['POP Series 6', 'pop6'],
-  ['DP trainer Kit (Lucario)', 'tk-dp-l'],
-  ['DP trainer Kit (Manaphy)', 'tk-dp-m'],
-  ['Secret Wonders', 'dp3'],
-  ['Great Encounters', 'dp4'],
-  ['POP Series 7', 'pop7'],
-  ['Majestic Dawn', 'dp5'],
-  ['Legends Awakened', 'dp6'],
-  ['POP Series 8', 'pop8'],
-  ['Stormfront', 'dp7'],
-  ['Platinum', 'pl1'],
-  ['POP Series 9', 'pop9'],
-  ['Rising Rivals', 'pl2'],
-  ['Supreme Victors', 'pl3'],
-  ['Arceus', 'pl4'],
-  ['Pokémon Rumble', 'ru1'],
-  ['HeartGold SoulSilver', 'hgss1'],
-  ['HGSS Black Star Promos', 'hgssp'],
-  ['HS trainer Kit (Gyarados)', 'tk-hs-g'],
-  ['HS trainer Kit (Raichu)', 'tk-hs-r'],
-  ['Unleashed', 'hgss2'],
-  ['Undaunted', 'hgss3'],
-  ['Triumphant', 'hgss4'],
-  ['Call of Legends', 'col1'],
-  ['Black & White', 'bw1'],
-  ['BW Black Star Promos', 'bwp'],
-  ["Macdonald's Collection 2011", '2011bw'],
-  ['Emerging Powers', 'bw2'],
-  ['BW trainer Kit (Zoroark)', 'tk-bw-z'],
-  ['BW trainer Kit (Excadrill)', 'tk-bw-e'],
-  ['Noble Victories', 'bw3'],
-  ['Next Destinies', 'bw4'],
-  ['Dark Explorers', 'bw5'],
-  ["Macdonald's Collection 2012", '2012bw'],
-  ['Dragons Exalted', 'bw6'],
-  ['Dragon Vault', 'dv1'],
-  ['Boundaries Crossed', 'bw7'],
-  ['Plasma Storm', 'bw8'],
-  ['Plasma Freeze', 'bw9'],
-  ['Plasma Blast', 'bw10'],
-  ['XY Black Star Promos', 'xyp'],
-  ['Radiant Collection', 'rc'],
-  ['Legendary Treasures', 'bw11'],
-  ['Kalos Starter Set', 'xy0'],
-  ['XY', 'xy1'],
-  ['Yello A Alternate', 'xya'],
-  ['XY trainer Kit (Sylveon)', 'tk-xy-sy'],
-  ['XY trainer Kit (Noivern)', 'tk-xy-n'],
-  ['Flashfire', 'xy2'],
-  ["Macdonald's Collection 2014", '2014xy'],
-  ['Furious Fists', 'xy3'],
-  ['XY trainer Kit (Bisharp)', 'tk-xy-b'],
-  ['XY trainer Kit (Wigglytuff)', 'tk-xy-w'],
-  ['Phantom Forces', 'xy4'],
-  ['Primal Clash', 'xy5'],
-  ['Double Crisis', 'dc1'],
-  ['XY trainer Kit (Latias)', 'tk-xy-latia'],
-  ['XY trainer Kit (Latios)', 'tk-xy-latio'],
-  ['Roaring Skies', 'xy6'],
-  ['Ancient Origins', 'xy7'],
-  ['BREAKthrough', 'xy8'],
-  ["Macdonald's Collection 2015", '2015xy'],
-  ['BREAKpoint', 'xy9'],
-  ['Generations', 'g1'],
-  ['XY trainer Kit (Pikachu Libre)', 'tk-xy-p'],
-  ['XY trainer Kit (Suicune)', 'tk-xy-su'],
-  ['Fates Collide', 'xy10'],
-  ['Steam Siege', 'xy11'],
-  ["Macdonald's Collection 2016", '2016xy'],
-  ['Evolutions', 'xy12'],
-  ['Sun & Moon', 'sm1'],
-  ['SM Black Star Promos', 'smp'],
-  ['SM trainer Kit (Lycanroc)', 'tk-sm-l'],
-  ['SM trainer Kit (Alolan Raichu)', 'tk-sm-r'],
-  ['Guardians Rising', 'sm2'],
-  ["Macdonald's Collection 2017", '2017sm'],
-  ['Burning Shadows', 'sm3'],
-  ['Shining Legends', 'sm3.5'],
-  ['Crimson Invasion', 'sm4'],
-  ['Ultra Prism', 'sm5'],
-  ['Forbidden Light', 'sm6'],
-  ['Celestial Storm', 'sm7'],
-  ['Dragon Majesty', 'sm7.5'],
-  ["Macdonald's Collection 2018", '2018sm'],
-  ['Lost Thunder', 'sm8'],
-  ['Team Up', 'sm9'],
-  ['Detective Pikachu', 'det1'],
-  ['Unbroken Bonds', 'sm10'],
-  ['Unified Minds', 'sm11'],
-  ['Hidden Fates', 'sm115'],
-  ['Yellow A Alternate', 'sma'],
-  ["Macdonald's Collection 2019", '2019sm'],
-  ['Cosmic Eclipse', 'sm12'],
-  ['SWSH Black Star Promos', 'swshp'],
-  ['Sword & Shield', 'swsh1'],
-  ['Rebel Clash', 'swsh2'],
-  ['Darkness Ablaze', 'swsh3'],
-  ['Pokémon Futsal 2020', 'fut2020'],
-  ["Champion's Path", 'swsh3.5'],
-  ['Vivid Voltage', 'swsh4'],
-  ["Macdonald's Collection 2021", '2021swsh'],
-  ['Shining Fates', 'swsh4.5'],
-  ['Battle Styles', 'swsh5'],
-  ['Chilling Reign', 'swsh6'],
-  ['Evolving Skies', 'swsh7'],
-  ['Celebrations', 'cel25'],
-  ['Fusion Strike', 'swsh8'],
-  ['Brilliant Stars', 'swsh9'],
-  ['Astral Radiance', 'swsh10'],
-  ['Pokémon GO', 'swsh10.5'],
-  ['Lost Origin', 'swsh11'],
-  ['Silver Tempest', 'swsh12'],
-  ['Crown Zenith', 'swsh12.5'],
-  ['SVP Black Star Promos', 'svp'],
-  ['Scarlet & Violet', 'sv01'],
-  ['Paldea Evolved', 'sv02'],
-  ['Obsidian Flames', 'sv03'],
-  ['151', 'sv03.5'],
-  ['Paradox Rift', 'sv04'],
-  ['Paldean Fates', 'sv04.5'],
-  ['Temporal Forces', 'sv05'],
-  ['Twilight Masquerade', 'sv06'],
-  ['Shrouded Fable', 'sv06.5'],
-  ['Stellar Crown', 'sv07'],
-  ['Genetic Apex', 'A1'],
-  ['Promos-A', 'P-A'],
-  ['Surging Sparks', 'sv08'],
-  ['Mythical Island', 'A1a'],
-  ['Prismatic Evolutions', 'sv08.5'],
-  ['Space-Time Smackdown', 'A2'],
-  ['Triumphant Light', 'A2a'],
-  ['Shining Revelry', 'A2b'],
-  ['Journey Together', 'sv09'],
-  ['Celestial Guardians', 'A3'],
-  ['Extradimensional Crisis', 'A3a'],
-  ['Destined Rivals', 'sv10'],
-  ['Eevee Grove', 'A3b'],
-  ['Black Bolt', 'sv10.5b'],
-  ['White Flare', 'sv10.5w'],
-  ['Wisdom of Sea and Sky', 'A4'],
-  ['Secluded Springs', 'A4a'],
-  ['Mega Evolution', 'me01'],
-  ['MEP Black Star Promos', 'mep'],
-  ['Mega Rising', 'B1'],
-])
-
-function getTCGdexSetID(setName: string): [string | undefined, string] {
+function getTCGdexSetID(
+  mapTCGdexSetNameToID: Map<string, string>,
+  setName: string,
+): [string | undefined, string] {
   let name = setName
   let id = mapTCGdexSetNameToID.get(name)
 
@@ -1367,40 +1148,149 @@ function getTCGdexSetID(setName: string): [string | undefined, string] {
   return [id, name]
 }
 
-// -------------------------------------------------------------------------
+async function getTCGdexSets(language: string = 'en') {
+  const tcgdex = new TCGdex(language as SupportedLanguages)
 
-const DN_OUTPUT = 'out'
+  // const tcgSeriesListPreview = await tcgdex.serie.list()
 
-// TODO: manual fixing
-// - "invalid" card_stats --> note
-async function processSetsEN() {
-  const document = await fetchAndParseToDocument(
-    urlBase + 'List_of_Pokémon_Trading_Card_Game_expansions',
-  )
-  const result = parseSetsEN(document)
-  if (result === undefined) {
-    console.warn('Unable to parse EN Sets?')
-    return
+  const sets = await tcgdex.set.list()
+  const setNameWithID = sets.map((set) => [set.name, set.id] as const)
+  const mapTCGdexSetNameToID = new Map<string, string>(setNameWithID)
+  if (setNameWithID.length !== mapTCGdexSetNameToID.size) {
+    console.error('Mapping swallowed some items?', [
+      setNameWithID.length,
+      mapTCGdexSetNameToID.size,
+    ])
+    return undefined
   }
 
-  result.forEach((set) => {
-    const [id, name] = getTCGdexSetID(set.name)
-    if (id !== undefined) {
-      set.tcgdex_id = id
-      if (name !== set.name) {
-        console.warn('Matched EN Set name:', [set.name, name], [set.series])
+  return mapTCGdexSetNameToID
+}
+
+// + approx mapping between Bulbapedia and TCGdex API
+// (japanese might have some smaller series that are part of others?)
+async function getTCGdexSeriesEN(
+  mapTCGdexSetNameToID: Map<string, string> | undefined = undefined,
+  bulbapediaSetInfo: SetInfoFullEN[] | undefined = undefined,
+  language: string = 'en',
+  delay: number | undefined = 200,
+) {
+  // if not supplied, try to parse
+  if (bulbapediaSetInfo === undefined) {
+    const document = await fetchAndParseToDocument(
+      urlBase + 'List_of_Pokémon_Trading_Card_Game_expansions',
+    )
+    bulbapediaSetInfo = parseSetsEN(document)
+  }
+  if (bulbapediaSetInfo === undefined) {
+    console.error('No parsed data!')
+    return undefined
+  }
+
+  // if not supplied, compute
+  if (mapTCGdexSetNameToID === undefined) {
+    mapTCGdexSetNameToID = await getTCGdexSets(language)
+  }
+  if (mapTCGdexSetNameToID === undefined) {
+    console.error('No tcgdex set data!')
+    return undefined
+  }
+
+  const tcgdex = new TCGdex(language as SupportedLanguages)
+
+  // build lookup of tcgdex set id to tcgdex series ids
+  const series = await tcgdex.serie.list()
+  const mapSetSeriesStuff = (
+    await Promise.all(
+      series.map(async (serie) => {
+        const serieFull = await serie.getSerie()
+        // lets be nice and also avoid errors
+        if (delay !== undefined && delay > 0) {
+          await new Promise((resolve) => setTimeout(resolve, 200))
+        }
+
+        return serieFull.sets.map((set) => [set.id, [serie.name, serie.id]] as const)
+      }),
+    )
+  ).flat(1)
+  const mapSetWithInfos = new Map<string, readonly [string, string]>(mapSetSeriesStuff)
+  if (mapSetSeriesStuff.length !== mapSetWithInfos.size) {
+    console.error('Some set/series info got lost', [mapSetSeriesStuff.length, mapSetWithInfos.size])
+    return undefined
+  }
+
+  // now match based on set name to find parent series
+  const found: [string, string, string][] = []
+  bulbapediaSetInfo.forEach((entry) => {
+    const [tcgdexSetId, matchedName] = getTCGdexSetID(mapTCGdexSetNameToID, entry.name)
+    if (tcgdexSetId !== undefined) {
+      const serieInfo = mapSetWithInfos.get(tcgdexSetId)
+      if (serieInfo === undefined) {
+        console.warn('Set not found?!', tcgdexSetId, [entry.name, matchedName])
+        return
       }
+
+      // bulbapedia series key, tcgdex series ID, tcgdex series name
+      found.push([entry.series, serieInfo[1], serieInfo[0]])
+    } else {
+      // TODO: do we need to keep track of it? Let's do it at the end for any we missed
     }
   })
-
-  writeFileSync(
-    pathJoin(DN_OUTPUT, 'bulbapedia-en-sets.json'),
-    JSON.stringify(result, undefined, 2),
+  // deduplicate based on ids
+  const foundDedup = found.toSorted().reduce(
+    (list, cur) => {
+      const found = list.findIndex((ele) => ele[0] === cur[0] && ele[1] === cur[1]) !== -1
+      if (!found) list.push(cur)
+      return list
+    },
+    [] as [string, string, string][],
   )
+  // now group by bulbapedia id
+  const foundMapping = foundDedup.reduce((map, cur) => {
+    const bulbaID = cur[0]
+    const tcgdexIDs = map.get(bulbaID) ?? []
+    tcgdexIDs.push(cur[1])
+    map.set(bulbaID, tcgdexIDs)
+    return map
+  }, new Map<string | null, string[]>())
+
+  // find difference
+  // include bulbapedia series that have no corresponding tcgdex series
+  mapSeriesRawEN
+    .values()
+    .filter((bulbaSeriesID) => !foundMapping.has(bulbaSeriesID))
+    .forEach((bulbaSseriesID) => {
+      foundMapping.set(bulbaSseriesID, [])
+    })
+
+  // TODO: should we keep series where single sets are not matches but others are?
+  const leftOverTcgdexSeriesIDs = Array.from(
+    mapSetSeriesStuff
+      .map(([, [, tcgdexSeriesID]]) => tcgdexSeriesID)
+      .reduce((set, cur) => set.add(cur), new Set<string>())
+      .keys()
+      .filter(
+        (tcgdexSeriesID) => !Array.from(foundMapping.values()).flat(1).includes(tcgdexSeriesID),
+      ),
+  )
+  if (leftOverTcgdexSeriesIDs.length > 0) {
+    console.log('Left over TCGdex series IDs:', leftOverTcgdexSeriesIDs)
+    foundMapping.set(null, leftOverTcgdexSeriesIDs)
+  }
+
+  return foundMapping
 }
+
+// -------------------------------------------------------------------------
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 async function _checkTCGdexSetIDMapping() {
+  const mapTCGdexSetNameToID = await getTCGdexSets()
+  if (mapTCGdexSetNameToID === undefined) {
+    console.error('Unable to get TCGdex set data')
+    return
+  }
+
   const document = await fetchAndParseToDocument(
     urlBase + 'List_of_Pokémon_Trading_Card_Game_expansions',
   )
@@ -1409,7 +1299,7 @@ async function _checkTCGdexSetIDMapping() {
   const found: [string, string, string][] = []
   const missing: string[] = []
   result?.forEach((entry) => {
-    const [id, name] = getTCGdexSetID(entry.name)
+    const [id, name] = getTCGdexSetID(mapTCGdexSetNameToID, entry.name)
     if (id !== undefined) {
       found.push([entry.name, id, name])
     } else {
@@ -1417,7 +1307,7 @@ async function _checkTCGdexSetIDMapping() {
     }
   })
   const candidates = Array.from(mapTCGdexSetNameToID.keys()).filter(
-    (name) => found.find(([en, ei, efn]) => efn === name) === undefined,
+    (name) => found.find(([, , efn]) => efn === name) === undefined,
   )
 
   console.log('found', found)
@@ -1428,9 +1318,102 @@ async function _checkTCGdexSetIDMapping() {
   )
 }
 
+// TODO: maybe better to use set mapping to build series mapping
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+async function _checkTCGdexSeriesIDMapping() {
+  console.log('[bulbapedia] mapSeriesRawEN', mapSeriesRawEN)
+
+  const tcgdex = new TCGdex('en' as SupportedLanguages)
+  const series = await tcgdex.serie.list()
+  const seriesNameWithID = series.map((serie) => [serie.name, serie.id] as const)
+  console.log('[tcgdex] seriesNameWithID', seriesNameWithID)
+
+  const found: [string, string, string, string][] = []
+  const missing: string[] = []
+
+  // find matches
+  seriesNameWithID.forEach(([seriesName, seriesId]) => {
+    let name = seriesName
+    let id = mapSeriesRawEN.get(name)
+
+    if (id === undefined) {
+      const candidateName = `${name} Series`
+      id = mapSeriesRawEN.get(candidateName)
+      if (id !== undefined) name = candidateName
+    }
+
+    if (id !== undefined) {
+      found.push([seriesName, name, id, seriesId])
+    } else {
+      missing.push(seriesName)
+    }
+  })
+
+  // what is left over
+  const candidates = Array.from(mapSeriesRawEN.keys()).filter(
+    (name) => found.find(([, nn, ,]) => nn === name) === undefined,
+  )
+
+  console.log('found', found)
+  console.log('[tcgdex] missing', missing.sort())
+  console.log('[bulbapedia] candidates', candidates.sort())
+  console.log(
+    `Found: ${found.length}, Missing: ${missing.length}, Remaining Condidates: ${candidates.length}`,
+  )
+}
+
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+async function _checkTCGdexSeriesIDMappingBySets() {
+  const foundMapping = await getTCGdexSeriesEN()
+  console.log(foundMapping)
+}
+
+// for manual review
+// await _checkTCGdexSetIDMapping()
+// await _checkTCGdexSeriesIDMapping()
+// await _checkTCGdexSeriesIDMappingBySets()
+
+// -------------------------------------------------------------------------
+
+const DN_OUTPUT = 'out'
+
 // TODO: manual fixing
 // - "invalid" card_stats --> note
-async function processSetsJA() {
+async function processSetsEN(dn_output: string) {
+  const mapTCGdexSetNameToID = await getTCGdexSets()
+  if (mapTCGdexSetNameToID === undefined) {
+    console.error('Unable to get TCGdex set data')
+    return
+  }
+
+  const document = await fetchAndParseToDocument(
+    urlBase + 'List_of_Pokémon_Trading_Card_Game_expansions',
+  )
+  const result = parseSetsEN(document)
+  if (result === undefined) {
+    console.warn('Unable to parse EN Sets?')
+    return
+  }
+
+  result.forEach((set) => {
+    const [id, name] = getTCGdexSetID(mapTCGdexSetNameToID, set.name)
+    if (id !== undefined) {
+      set.tcgdex_id = id
+      if (name !== set.name) {
+        console.warn('Matched EN Set name:', [set.name, name], [set.series])
+      }
+    }
+  })
+
+  writeFileSync(
+    pathJoin(dn_output, 'bulbapedia-en-sets.json'),
+    JSON.stringify(result, undefined, 2),
+  )
+}
+
+// TODO: manual fixing
+// - "invalid" card_stats --> note
+async function processSetsJA(dn_output: string) {
   const document = await fetchAndParseToDocument(
     urlBase + 'List_of_Japanese_Pokémon_Trading_Card_Game_expansions',
   )
@@ -1441,16 +1424,14 @@ async function processSetsJA() {
   }
 
   writeFileSync(
-    pathJoin(DN_OUTPUT, 'bulbapedia-ja-sets.json'),
+    pathJoin(dn_output, 'bulbapedia-ja-sets.json'),
     JSON.stringify(result, undefined, 2),
   )
 }
 
 mkdirSync(DN_OUTPUT, { recursive: true })
 
-processSetsEN()
-processSetsJA()
-
-// _checkTCGdexSetIDMapping()
+processSetsEN(DN_OUTPUT)
+processSetsJA(DN_OUTPUT)
 
 // -------------------------------------------------------------------------

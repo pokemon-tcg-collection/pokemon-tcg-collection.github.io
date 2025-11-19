@@ -41,7 +41,7 @@ interface SetInfoBriefEN {
   name: string
   cards_stats: { [key: string]: number | string[] }
   release_date?: string
-  abbrev: string
+  abbrev: string | null
   bulbapedia_url: string
   tcgdex_id?: string | undefined
 }
@@ -263,7 +263,16 @@ const transformTableCellEN = new Map<
   ],
   [
     'Set abb.',
-    [{ field: 'abbrev', transform: (td: HTMLTableCellElement) => td.textContent.trim() }],
+    [
+      {
+        field: 'abbrev',
+        transform: (td: HTMLTableCellElement) => {
+          const text = td.textContent.trim()
+          if (text === '—') return null
+          return text
+        },
+      },
+    ],
   ],
   [
     'Release period',

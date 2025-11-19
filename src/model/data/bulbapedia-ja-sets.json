@@ -2068,12 +2068,14 @@
     "language": "ja",
     "no": "11",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/a/a2/SetSymbolBlackBolt.png/40px-SetSymbolBlackBolt.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/f/f4/SV11_Logo_JP.png/110px-SV11_Logo_JP.png",
     "name_original": "ブラックボルト",
     "name": "Black Bolt",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Black_Bolt/White_Flare_(TCG)",
     "name_en_equivalent": "Black Bolt & White Flare",
     "card_stats": {
-      "cards": 172
+      "cards": 86,
+      "special": 88
     },
     "release_date": "June 6, 2025"
   },
@@ -2083,12 +2085,14 @@
     "language": "ja",
     "no": "11",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/1/13/SetSymbolWhiteFlare.png/40px-SetSymbolWhiteFlare.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/f/f4/SV11_Logo_JP.png/110px-SV11_Logo_JP.png",
     "name_original": "ホワイトフレア",
     "name": "White Flare",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Black_Bolt/White_Flare_(TCG)",
     "name_en_equivalent": "Black Bolt & White Flare",
     "card_stats": {
-      "cards": 172
+      "cards": 86,
+      "special": 88
     },
     "release_date": "June 6, 2025"
   },
@@ -2132,12 +2136,14 @@
     "language": "ja",
     "no": "2",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/4/46/SetSymbolInferno_X.png/40px-SetSymbolInferno_X.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/c/c7/M2_Logo_JP.png/110px-M2_Logo_JP.png",
     "name_original": "インフェルノX",
     "name": "Inferno X",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Inferno_X_(TCG)",
+    "name_en_equivalent": "Phantasmal Flames",
     "card_stats": {
       "cards": 80,
-      "special": null
+      "special": 36
     },
     "release_date": "September 26, 2025"
   },
@@ -2968,12 +2974,12 @@
     "series_type": "high-class-expansion",
     "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/c/cb/SetSymbolMEGA_Dream_ex.png/40px-SetSymbolMEGA_Dream_ex.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/6/65/M2a_MEGA_Dream_ex_Logo.png/110px-M2a_MEGA_Dream_ex_Logo.png",
     "name_original": "MEGAドリームex",
     "name": "MEGA Dream ex",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/MEGA_Dream_ex_(TCG)",
     "card_stats": {
-      "cards": 193,
-      "special": null
+      "cards": 193
     },
     "release_date": "November 28, 2025"
   },

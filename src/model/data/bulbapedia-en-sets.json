@@ -11,7 +11,8 @@
       "cards": 102
     },
     "release_date": "January 9, 1999",
-    "abbrev": "BS"
+    "abbrev": "BS",
+    "tcgdex_id": "base1"
   },
   {
     "series": "original",
@@ -27,7 +28,8 @@
       "cards": 64
     },
     "release_date": "June 16, 1999",
-    "abbrev": "JU"
+    "abbrev": "JU",
+    "tcgdex_id": "base2"
   },
   {
     "series": "original",
@@ -43,7 +45,8 @@
       "cards": 62
     },
     "release_date": "October 10, 1999",
-    "abbrev": "FO"
+    "abbrev": "FO",
+    "tcgdex_id": "base3"
   },
   {
     "series": "original",
@@ -59,7 +62,8 @@
       "cards": 130
     },
     "release_date": "February 24, 2000",
-    "abbrev": "B2"
+    "abbrev": "B2",
+    "tcgdex_id": "base4"
   },
   {
     "series": "original",
@@ -76,7 +80,8 @@
       "secret": 1
     },
     "release_date": "April 24, 2000",
-    "abbrev": "TR"
+    "abbrev": "TR",
+    "tcgdex_id": "base5"
   },
   {
     "series": "original",
@@ -92,7 +97,8 @@
       "cards": 132
     },
     "release_date": "August 14, 2000",
-    "abbrev": "G1"
+    "abbrev": "G1",
+    "tcgdex_id": "gym1"
   },
   {
     "series": "original",
@@ -108,7 +114,8 @@
       "cards": 132
     },
     "release_date": "October 16, 2000",
-    "abbrev": "G2"
+    "abbrev": "G2",
+    "tcgdex_id": "gym2"
   },
   {
     "series": "neo",
@@ -124,7 +131,8 @@
       "cards": 111
     },
     "release_date": "December 16, 2000",
-    "abbrev": "N1"
+    "abbrev": "N1",
+    "tcgdex_id": "neo1"
   },
   {
     "series": "neo",
@@ -140,7 +148,8 @@
       "cards": 75
     },
     "release_date": "June 1, 2001",
-    "abbrev": "N2"
+    "abbrev": "N2",
+    "tcgdex_id": "neo2"
   },
   {
     "series": "neo",
@@ -157,7 +166,8 @@
       "secret": 2
     },
     "release_date": "September 21, 2001",
-    "abbrev": "N3"
+    "abbrev": "N3",
+    "tcgdex_id": "neo3"
   },
   {
     "series": "neo",
@@ -174,7 +184,8 @@
       "secret": 8
     },
     "release_date": "February 28, 2002",
-    "abbrev": "N4"
+    "abbrev": "N4",
+    "tcgdex_id": "neo4"
   },
   {
     "series": "legendary-collection",
@@ -190,7 +201,8 @@
       "cards": 110
     },
     "release_date": "May 24, 2002",
-    "abbrev": "LC"
+    "abbrev": "LC",
+    "tcgdex_id": "lc"
   },
   {
     "series": "e-card",
@@ -206,7 +218,8 @@
       "cards": 165
     },
     "release_date": "September 15, 2002",
-    "abbrev": "EX"
+    "abbrev": "EX",
+    "tcgdex_id": "ecard1"
   },
   {
     "series": "e-card",
@@ -224,7 +237,8 @@
       "secret": 3
     },
     "release_date": "January 15, 2003",
-    "abbrev": "AQ"
+    "abbrev": "AQ",
+    "tcgdex_id": "ecard2"
   },
   {
     "series": "e-card",
@@ -242,7 +256,8 @@
       "secret": 6
     },
     "release_date": "May 12, 2003",
-    "abbrev": "SK"
+    "abbrev": "SK",
+    "tcgdex_id": "ecard3"
   },
   {
     "series": "ex",
@@ -258,7 +273,8 @@
       "cards": 109
     },
     "release_date": "July 18, 2003",
-    "abbrev": "RS"
+    "abbrev": "RS",
+    "tcgdex_id": "ex1"
   },
   {
     "series": "ex",
@@ -274,7 +290,8 @@
       "cards": 100
     },
     "release_date": "September 18, 2003",
-    "abbrev": "SS"
+    "abbrev": "SS",
+    "tcgdex_id": "ex2"
   },
   {
     "series": "ex",
@@ -291,7 +308,8 @@
       "secret": 3
     },
     "release_date": "November 24, 2003",
-    "abbrev": "DR"
+    "abbrev": "DR",
+    "tcgdex_id": "ex3"
   },
   {
     "series": "ex",
@@ -308,7 +326,8 @@
       "secret": 2
     },
     "release_date": "March 15, 2004",
-    "abbrev": "MA"
+    "abbrev": "MA",
+    "tcgdex_id": "ex4"
   },
   {
     "series": "ex",
@@ -325,7 +344,8 @@
       "secret": 1
     },
     "release_date": "June 14, 2004",
-    "abbrev": "HL"
+    "abbrev": "HL",
+    "tcgdex_id": "ex5"
   },
   {
     "series": "ex",
@@ -342,7 +362,8 @@
       "secret": 4
     },
     "release_date": "August 30, 2004",
-    "abbrev": "RG"
+    "abbrev": "RG",
+    "tcgdex_id": "ex6"
   },
   {
     "series": "ex",
@@ -359,7 +380,8 @@
       "secret": 2
     },
     "release_date": "November 8, 2004",
-    "abbrev": "TRR"
+    "abbrev": "TRR",
+    "tcgdex_id": "ex7"
   },
   {
     "series": "ex",
@@ -376,7 +398,8 @@
       "secret": 1
     },
     "release_date": "February 14, 2005",
-    "abbrev": "DX"
+    "abbrev": "DX",
+    "tcgdex_id": "ex8"
   },
   {
     "series": "ex",
@@ -393,7 +416,8 @@
       "secret": 1
     },
     "release_date": "May 9, 2005",
-    "abbrev": "EM"
+    "abbrev": "EM",
+    "tcgdex_id": "ex9"
   },
   {
     "series": "ex",
@@ -411,7 +435,8 @@
       "unown": 28
     },
     "release_date": "August 22, 2005",
-    "abbrev": "UF"
+    "abbrev": "UF",
+    "tcgdex_id": "ex10"
   },
   {
     "series": "ex",
@@ -428,7 +453,8 @@
       "secret": 1
     },
     "release_date": "October 31, 2005",
-    "abbrev": "DS"
+    "abbrev": "DS",
+    "tcgdex_id": "ex11"
   },
   {
     "series": "ex",
@@ -445,7 +471,8 @@
       "secret": 1
     },
     "release_date": "February 13, 2006",
-    "abbrev": "LM"
+    "abbrev": "LM",
+    "tcgdex_id": "ex12"
   },
   {
     "series": "ex",
@@ -462,7 +489,8 @@
       "secret": 1
     },
     "release_date": "May 3, 2006",
-    "abbrev": "HP"
+    "abbrev": "HP",
+    "tcgdex_id": "ex13"
   },
   {
     "series": "ex",
@@ -478,7 +506,8 @@
       "cards": 100
     },
     "release_date": "August 30, 2006",
-    "abbrev": "CG"
+    "abbrev": "CG",
+    "tcgdex_id": "ex14"
   },
   {
     "series": "ex",
@@ -494,7 +523,8 @@
       "cards": 101
     },
     "release_date": "November 8, 2006",
-    "abbrev": "DF"
+    "abbrev": "DF",
+    "tcgdex_id": "ex15"
   },
   {
     "series": "ex",
@@ -510,7 +540,8 @@
       "cards": 108
     },
     "release_date": "February 14, 2007",
-    "abbrev": "PK"
+    "abbrev": "PK",
+    "tcgdex_id": "ex16"
   },
   {
     "series": "diamond-pearl",
@@ -526,7 +557,8 @@
       "cards": 130
     },
     "release_date": "May 23, 2007",
-    "abbrev": "DP"
+    "abbrev": "DP",
+    "tcgdex_id": "dp1"
   },
   {
     "series": "diamond-pearl",
@@ -543,7 +575,8 @@
       "secret": 1
     },
     "release_date": "August 22, 2007",
-    "abbrev": "MT"
+    "abbrev": "MT",
+    "tcgdex_id": "dp2"
   },
   {
     "series": "diamond-pearl",
@@ -559,7 +592,8 @@
       "cards": 132
     },
     "release_date": "November 7, 2007",
-    "abbrev": "SW"
+    "abbrev": "SW",
+    "tcgdex_id": "dp3"
   },
   {
     "series": "diamond-pearl",
@@ -575,7 +609,8 @@
       "cards": 106
     },
     "release_date": "February 13, 2008",
-    "abbrev": "GE"
+    "abbrev": "GE",
+    "tcgdex_id": "dp4"
   },
   {
     "series": "diamond-pearl",
@@ -591,7 +626,8 @@
       "cards": 100
     },
     "release_date": "May 21, 2008",
-    "abbrev": "MD"
+    "abbrev": "MD",
+    "tcgdex_id": "dp5"
   },
   {
     "series": "diamond-pearl",
@@ -607,7 +643,8 @@
       "cards": 146
     },
     "release_date": "August 20, 2008",
-    "abbrev": "LA"
+    "abbrev": "LA",
+    "tcgdex_id": "dp6"
   },
   {
     "series": "diamond-pearl",
@@ -625,7 +662,8 @@
       "shiny": 3
     },
     "release_date": "November 5, 2008",
-    "abbrev": "SF"
+    "abbrev": "SF",
+    "tcgdex_id": "dp7"
   },
   {
     "series": "platinum",
@@ -643,7 +681,8 @@
       "shiny": 3
     },
     "release_date": "February 11, 2009",
-    "abbrev": "PL"
+    "abbrev": "PL",
+    "tcgdex_id": "pl1"
   },
   {
     "series": "platinum",
@@ -661,7 +700,8 @@
       "rotom": 6
     },
     "release_date": "May 16, 2009",
-    "abbrev": "RR"
+    "abbrev": "RR",
+    "tcgdex_id": "pl2"
   },
   {
     "series": "platinum",
@@ -679,7 +719,8 @@
       "shiny": 3
     },
     "release_date": "August 19, 2009",
-    "abbrev": "SV"
+    "abbrev": "SV",
+    "tcgdex_id": "pl3"
   },
   {
     "series": "platinum",
@@ -697,7 +738,8 @@
       "shiny": 3
     },
     "release_date": "November 4, 2009",
-    "abbrev": "AR"
+    "abbrev": "AR",
+    "tcgdex_id": "pl4"
   },
   {
     "series": "heartgold-soulsilver",
@@ -714,7 +756,8 @@
       "alpha-ligthograph": 1
     },
     "release_date": "February 10, 2010",
-    "abbrev": "HS"
+    "abbrev": "HS",
+    "tcgdex_id": "hgss1"
   },
   {
     "series": "heartgold-soulsilver",
@@ -731,7 +774,8 @@
       "alpha-ligthograph": 1
     },
     "release_date": "May 12, 2010",
-    "abbrev": "UL"
+    "abbrev": "UL",
+    "tcgdex_id": "hgss2"
   },
   {
     "series": "heartgold-soulsilver",
@@ -748,7 +792,8 @@
       "alpha-ligthograph": 1
     },
     "release_date": "August 18, 2010",
-    "abbrev": "UD"
+    "abbrev": "UD",
+    "tcgdex_id": "hgss3"
   },
   {
     "series": "heartgold-soulsilver",
@@ -765,7 +810,8 @@
       "alpha-ligthograph": 1
     },
     "release_date": "November 3, 2010",
-    "abbrev": "TM"
+    "abbrev": "TM",
+    "tcgdex_id": "hgss4"
   },
   {
     "series": "call-of-legends",
@@ -782,7 +828,8 @@
       "shiny-legendary": 11
     },
     "release_date": "February 9, 2011",
-    "abbrev": "CL"
+    "abbrev": "CL",
+    "tcgdex_id": "col1"
   },
   {
     "series": "black-white",
@@ -799,7 +846,8 @@
       "secret": 1
     },
     "release_date": "April 25, 2011",
-    "abbrev": "BLW"
+    "abbrev": "BLW",
+    "tcgdex_id": "bw1"
   },
   {
     "series": "black-white",
@@ -815,7 +863,8 @@
       "cards": 98
     },
     "release_date": "August 31, 2011",
-    "abbrev": "EPO"
+    "abbrev": "EPO",
+    "tcgdex_id": "bw2"
   },
   {
     "series": "black-white",
@@ -832,7 +881,8 @@
       "secret": 1
     },
     "release_date": "November 16, 2011",
-    "abbrev": "NVI"
+    "abbrev": "NVI",
+    "tcgdex_id": "bw3"
   },
   {
     "series": "black-white",
@@ -849,7 +899,8 @@
       "secret": 4
     },
     "release_date": "February 8, 2012",
-    "abbrev": "NXD"
+    "abbrev": "NXD",
+    "tcgdex_id": "bw4"
   },
   {
     "series": "black-white",
@@ -866,7 +917,8 @@
       "secret": 3
     },
     "release_date": "May 9, 2012",
-    "abbrev": "DEX"
+    "abbrev": "DEX",
+    "tcgdex_id": "bw5"
   },
   {
     "series": "black-white",
@@ -883,7 +935,8 @@
       "secret": 4
     },
     "release_date": "August 15, 2012",
-    "abbrev": "DRX"
+    "abbrev": "DRX",
+    "tcgdex_id": "bw6"
   },
   {
     "series": "black-white",
@@ -900,7 +953,8 @@
       "secret": 1
     },
     "release_date": "October 5, 2012",
-    "abbrev": "DRV"
+    "abbrev": "DRV",
+    "tcgdex_id": "dv1"
   },
   {
     "series": "black-white",
@@ -917,7 +971,8 @@
       "secret": 4
     },
     "release_date": "November 7, 2012",
-    "abbrev": "BCR"
+    "abbrev": "BCR",
+    "tcgdex_id": "bw7"
   },
   {
     "series": "black-white",
@@ -934,7 +989,8 @@
       "secret": 3
     },
     "release_date": "February 6, 2013",
-    "abbrev": "PLS"
+    "abbrev": "PLS",
+    "tcgdex_id": "bw8"
   },
   {
     "series": "black-white",
@@ -951,7 +1007,8 @@
       "secret": 6
     },
     "release_date": "May 8, 2013",
-    "abbrev": "PLF"
+    "abbrev": "PLF",
+    "tcgdex_id": "bw9"
   },
   {
     "series": "black-white",
@@ -968,7 +1025,8 @@
       "secret": 4
     },
     "release_date": "August 14, 2013",
-    "abbrev": "PLB"
+    "abbrev": "PLB",
+    "tcgdex_id": "bw10"
   },
   {
     "series": "black-white",
@@ -986,7 +1044,8 @@
       "radiant": 25
     },
     "release_date": "November 6, 2013",
-    "abbrev": "LTR"
+    "abbrev": "LTR",
+    "tcgdex_id": "bw11"
   },
   {
     "series": "xy",
@@ -1002,7 +1061,8 @@
       "cards": 39
     },
     "release_date": "November 8, 2013",
-    "abbrev": "KSS"
+    "abbrev": "KSS",
+    "tcgdex_id": "xy0"
   },
   {
     "series": "xy",
@@ -1018,7 +1078,8 @@
       "cards": 146
     },
     "release_date": "February 5, 2014",
-    "abbrev": "XY"
+    "abbrev": "XY",
+    "tcgdex_id": "xy1"
   },
   {
     "series": "xy",
@@ -1035,7 +1096,8 @@
       "secret": 3
     },
     "release_date": "May 7, 2014",
-    "abbrev": "FLF"
+    "abbrev": "FLF",
+    "tcgdex_id": "xy2"
   },
   {
     "series": "xy",
@@ -1052,7 +1114,8 @@
       "secret": 2
     },
     "release_date": "August 13, 2014",
-    "abbrev": "FFI"
+    "abbrev": "FFI",
+    "tcgdex_id": "xy3"
   },
   {
     "series": "xy",
@@ -1069,7 +1132,8 @@
       "secret": 3
     },
     "release_date": "November 5, 2014",
-    "abbrev": "PHF"
+    "abbrev": "PHF",
+    "tcgdex_id": "xy4"
   },
   {
     "series": "xy",
@@ -1086,7 +1150,8 @@
       "secret": 4
     },
     "release_date": "February 4, 2015",
-    "abbrev": "PRC"
+    "abbrev": "PRC",
+    "tcgdex_id": "xy5"
   },
   {
     "series": "xy",
@@ -1102,7 +1167,8 @@
       "cards": 34
     },
     "release_date": "March 25, 2015",
-    "abbrev": "DCR"
+    "abbrev": "DCR",
+    "tcgdex_id": "dc1"
   },
   {
     "series": "xy",
@@ -1119,7 +1185,8 @@
       "secret": 2
     },
     "release_date": "May 6, 2015",
-    "abbrev": "ROS"
+    "abbrev": "ROS",
+    "tcgdex_id": "xy6"
   },
   {
     "series": "xy",
@@ -1136,7 +1203,8 @@
       "secret": 2
     },
     "release_date": "August 12, 2015",
-    "abbrev": "AOR"
+    "abbrev": "AOR",
+    "tcgdex_id": "xy7"
   },
   {
     "series": "xy",
@@ -1153,7 +1221,8 @@
       "secret": 2
     },
     "release_date": "November 4, 2015",
-    "abbrev": "BKT"
+    "abbrev": "BKT",
+    "tcgdex_id": "xy8"
   },
   {
     "series": "xy",
@@ -1170,7 +1239,8 @@
       "secret": 1
     },
     "release_date": "February 3, 2016",
-    "abbrev": "BKP"
+    "abbrev": "BKP",
+    "tcgdex_id": "xy9"
   },
   {
     "series": "xy",
@@ -1187,7 +1257,8 @@
       "radiant": 32
     },
     "release_date": "February 22, 2016",
-    "abbrev": "GEN"
+    "abbrev": "GEN",
+    "tcgdex_id": "g1"
   },
   {
     "series": "xy",
@@ -1204,7 +1275,8 @@
       "secret": 1
     },
     "release_date": "May 2, 2016",
-    "abbrev": "FCO"
+    "abbrev": "FCO",
+    "tcgdex_id": "xy10"
   },
   {
     "series": "xy",
@@ -1221,7 +1293,8 @@
       "secret": 2
     },
     "release_date": "August 3, 2016",
-    "abbrev": "STS"
+    "abbrev": "STS",
+    "tcgdex_id": "xy11"
   },
   {
     "series": "xy",
@@ -1238,7 +1311,8 @@
       "secret": 5
     },
     "release_date": "November 2, 2016",
-    "abbrev": "EVO"
+    "abbrev": "EVO",
+    "tcgdex_id": "xy12"
   },
   {
     "series": "sun-moon",
@@ -1255,7 +1329,8 @@
       "secret": 14
     },
     "release_date": "February 3, 2017",
-    "abbrev": "SUM"
+    "abbrev": "SUM",
+    "tcgdex_id": "sm1"
   },
   {
     "series": "sun-moon",
@@ -1272,7 +1347,8 @@
       "secret": 24
     },
     "release_date": "May 5, 2017",
-    "abbrev": "GRI"
+    "abbrev": "GRI",
+    "tcgdex_id": "sm2"
   },
   {
     "series": "sun-moon",
@@ -1289,7 +1365,8 @@
       "secret": 22
     },
     "release_date": "August 4, 2017",
-    "abbrev": "BUS"
+    "abbrev": "BUS",
+    "tcgdex_id": "sm3"
   },
   {
     "series": "sun-moon",
@@ -1306,7 +1383,8 @@
       "secret": 5
     },
     "release_date": "October 6, 2017",
-    "abbrev": "SLG"
+    "abbrev": "SLG",
+    "tcgdex_id": "sm3.5"
   },
   {
     "series": "sun-moon",
@@ -1323,7 +1401,8 @@
       "secret": 13
     },
     "release_date": "November 3, 2017",
-    "abbrev": "CIN"
+    "abbrev": "CIN",
+    "tcgdex_id": "sm4"
   },
   {
     "series": "sun-moon",
@@ -1340,7 +1419,8 @@
       "secret": 17
     },
     "release_date": "February 2, 2018",
-    "abbrev": "UPR"
+    "abbrev": "UPR",
+    "tcgdex_id": "sm5"
   },
   {
     "series": "sun-moon",
@@ -1357,7 +1437,8 @@
       "secret": 15
     },
     "release_date": "May 4, 2018",
-    "abbrev": "FLI"
+    "abbrev": "FLI",
+    "tcgdex_id": "sm6"
   },
   {
     "series": "sun-moon",
@@ -1374,7 +1455,8 @@
       "secret": 15
     },
     "release_date": "August 3, 2018",
-    "abbrev": "CES"
+    "abbrev": "CES",
+    "tcgdex_id": "sm7"
   },
   {
     "series": "sun-moon",
@@ -1391,7 +1473,8 @@
       "secret": 8
     },
     "release_date": "September 7, 2018",
-    "abbrev": "DRM"
+    "abbrev": "DRM",
+    "tcgdex_id": "sm7.5"
   },
   {
     "series": "sun-moon",
@@ -1408,7 +1491,8 @@
       "secret": 22
     },
     "release_date": "November 2, 2018",
-    "abbrev": "LOT"
+    "abbrev": "LOT",
+    "tcgdex_id": "sm8"
   },
   {
     "series": "sun-moon",
@@ -1425,7 +1509,8 @@
       "secret": 15
     },
     "release_date": "February 1, 2019",
-    "abbrev": "TEU"
+    "abbrev": "TEU",
+    "tcgdex_id": "sm9"
   },
   {
     "series": "sun-moon",
@@ -1441,7 +1526,8 @@
       "cards": 18
     },
     "release_date": "March 29, 2019",
-    "abbrev": "DET"
+    "abbrev": "DET",
+    "tcgdex_id": "det1"
   },
   {
     "series": "sun-moon",
@@ -1458,7 +1544,8 @@
       "secret": 20
     },
     "release_date": "May 3, 2019",
-    "abbrev": "UNB"
+    "abbrev": "UNB",
+    "tcgdex_id": "sm10"
   },
   {
     "series": "sun-moon",
@@ -1475,7 +1562,8 @@
       "secret": 22
     },
     "release_date": "August 2, 2019",
-    "abbrev": "UNM"
+    "abbrev": "UNM",
+    "tcgdex_id": "sm11"
   },
   {
     "series": "sun-moon",
@@ -1493,7 +1581,8 @@
       "shiny-vault": 94
     },
     "release_date": "August 23, 2019",
-    "abbrev": "HIF"
+    "abbrev": "HIF",
+    "tcgdex_id": "sm115"
   },
   {
     "series": "sun-moon",
@@ -1510,7 +1599,8 @@
       "secret": 35
     },
     "release_date": "November 1, 2019",
-    "abbrev": "CEC"
+    "abbrev": "CEC",
+    "tcgdex_id": "sm12"
   },
   {
     "series": "sword-shield",
@@ -1527,7 +1617,8 @@
       "secret": 14
     },
     "release_date": "February 7, 2020",
-    "abbrev": "SSH"
+    "abbrev": "SSH",
+    "tcgdex_id": "swsh1"
   },
   {
     "series": "sword-shield",
@@ -1544,7 +1635,8 @@
       "secret": 17
     },
     "release_date": "May 1, 2020",
-    "abbrev": "RCL"
+    "abbrev": "RCL",
+    "tcgdex_id": "swsh2"
   },
   {
     "series": "sword-shield",
@@ -1561,7 +1653,8 @@
       "secret": 12
     },
     "release_date": "August 14, 2020",
-    "abbrev": "DAA"
+    "abbrev": "DAA",
+    "tcgdex_id": "swsh3"
   },
   {
     "series": "sword-shield",
@@ -1578,7 +1671,8 @@
       "secret": 7
     },
     "release_date": "September 25, 2020",
-    "abbrev": "CPA"
+    "abbrev": "CPA",
+    "tcgdex_id": "swsh3.5"
   },
   {
     "series": "sword-shield",
@@ -1595,7 +1689,8 @@
       "secret": 18
     },
     "release_date": "November 13, 2020",
-    "abbrev": "VIV"
+    "abbrev": "VIV",
+    "tcgdex_id": "swsh4"
   },
   {
     "series": "sword-shield",
@@ -1613,7 +1708,8 @@
       "shiny-vault": 122
     },
     "release_date": "February 19, 2021",
-    "abbrev": "SHF"
+    "abbrev": "SHF",
+    "tcgdex_id": "swsh4.5"
   },
   {
     "series": "sword-shield",
@@ -1630,7 +1726,8 @@
       "secret": 20
     },
     "release_date": "March 19, 2021",
-    "abbrev": "BST"
+    "abbrev": "BST",
+    "tcgdex_id": "swsh5"
   },
   {
     "series": "sword-shield",
@@ -1647,7 +1744,8 @@
       "secret": 35
     },
     "release_date": "June 18, 2021",
-    "abbrev": "CRE"
+    "abbrev": "CRE",
+    "tcgdex_id": "swsh6"
   },
   {
     "series": "sword-shield",
@@ -1664,7 +1762,8 @@
       "secret": 34
     },
     "release_date": "August 27, 2021",
-    "abbrev": "EVS"
+    "abbrev": "EVS",
+    "tcgdex_id": "swsh7"
   },
   {
     "series": "sword-shield",
@@ -1681,7 +1780,8 @@
       "classic": 25
     },
     "release_date": "October 8, 2021",
-    "abbrev": "CEL"
+    "abbrev": "CEL",
+    "tcgdex_id": "cel25"
   },
   {
     "series": "sword-shield",
@@ -1698,7 +1798,8 @@
       "secret": 20
     },
     "release_date": "November 12, 2021",
-    "abbrev": "FST"
+    "abbrev": "FST",
+    "tcgdex_id": "swsh8"
   },
   {
     "series": "sword-shield",
@@ -1716,7 +1817,8 @@
       "trainer-gallery": 30
     },
     "release_date": "February 25, 2022",
-    "abbrev": "BRS"
+    "abbrev": "BRS",
+    "tcgdex_id": "swsh9"
   },
   {
     "series": "sword-shield",
@@ -1734,7 +1836,8 @@
       "trainer-gallery": 30
     },
     "release_date": "May 27, 2022",
-    "abbrev": "ASR"
+    "abbrev": "ASR",
+    "tcgdex_id": "swsh10"
   },
   {
     "series": "sword-shield",
@@ -1751,7 +1854,8 @@
       "secret": 10
     },
     "release_date": "July 1, 2022",
-    "abbrev": "PGO"
+    "abbrev": "PGO",
+    "tcgdex_id": "swsh10.5"
   },
   {
     "series": "sword-shield",
@@ -1769,7 +1873,8 @@
       "trainer-gallery": 30
     },
     "release_date": "September 9, 2022",
-    "abbrev": "LOR"
+    "abbrev": "LOR",
+    "tcgdex_id": "swsh11"
   },
   {
     "series": "sword-shield",
@@ -1787,7 +1892,8 @@
       "trainer-gallery": 30
     },
     "release_date": "November 11, 2022",
-    "abbrev": "SIT"
+    "abbrev": "SIT",
+    "tcgdex_id": "swsh12"
   },
   {
     "series": "sword-shield",
@@ -1805,7 +1911,8 @@
       "galarian-gallery": 70
     },
     "release_date": "January 20, 2023",
-    "abbrev": "CRZ"
+    "abbrev": "CRZ",
+    "tcgdex_id": "swsh12.5"
   },
   {
     "series": "scarlet-violet",
@@ -1822,7 +1929,8 @@
       "secret": 60
     },
     "release_date": "March 31, 2023",
-    "abbrev": "SVI"
+    "abbrev": "SVI",
+    "tcgdex_id": "sv01"
   },
   {
     "series": "scarlet-violet",
@@ -1839,7 +1947,8 @@
       "secret": 86
     },
     "release_date": "June 9, 2023",
-    "abbrev": "PAL"
+    "abbrev": "PAL",
+    "tcgdex_id": "sv02"
   },
   {
     "series": "scarlet-violet",
@@ -1856,7 +1965,8 @@
       "secret": 33
     },
     "release_date": "August 11, 2023",
-    "abbrev": "OBF"
+    "abbrev": "OBF",
+    "tcgdex_id": "sv03"
   },
   {
     "series": "scarlet-violet",
@@ -1873,7 +1983,8 @@
       "secret": 42
     },
     "release_date": "September 22, 2023",
-    "abbrev": "MEW"
+    "abbrev": "MEW",
+    "tcgdex_id": "sv03.5"
   },
   {
     "series": "scarlet-violet",
@@ -1890,7 +2001,8 @@
       "secret": 84
     },
     "release_date": "November 3, 2023",
-    "abbrev": "PAR"
+    "abbrev": "PAR",
+    "tcgdex_id": "sv04"
   },
   {
     "series": "scarlet-violet",
@@ -1907,7 +2019,8 @@
       "secret": 154
     },
     "release_date": "January 26, 2024",
-    "abbrev": "PAF"
+    "abbrev": "PAF",
+    "tcgdex_id": "sv04.5"
   },
   {
     "series": "scarlet-violet",
@@ -1924,7 +2037,8 @@
       "secret": 56
     },
     "release_date": "March 22, 2024",
-    "abbrev": "TEF"
+    "abbrev": "TEF",
+    "tcgdex_id": "sv05"
   },
   {
     "series": "scarlet-violet",
@@ -1941,7 +2055,8 @@
       "secret": 59
     },
     "release_date": "May 24, 2024",
-    "abbrev": "TWM"
+    "abbrev": "TWM",
+    "tcgdex_id": "sv06"
   },
   {
     "series": "scarlet-violet",
@@ -1958,7 +2073,8 @@
       "secret": 35
     },
     "release_date": "August 2, 2024",
-    "abbrev": "SFA"
+    "abbrev": "SFA",
+    "tcgdex_id": "sv06.5"
   },
   {
     "series": "scarlet-violet",
@@ -1975,7 +2091,8 @@
       "secret": 33
     },
     "release_date": "September 13, 2024",
-    "abbrev": "SCR"
+    "abbrev": "SCR",
+    "tcgdex_id": "sv07"
   },
   {
     "series": "scarlet-violet",
@@ -1992,7 +2109,8 @@
       "secret": 61
     },
     "release_date": "November 8, 2024",
-    "abbrev": "SSP"
+    "abbrev": "SSP",
+    "tcgdex_id": "sv08"
   },
   {
     "series": "scarlet-violet",
@@ -2009,7 +2127,8 @@
       "secret": 49
     },
     "release_date": "January 17, 2025",
-    "abbrev": "PRE"
+    "abbrev": "PRE",
+    "tcgdex_id": "sv08.5"
   },
   {
     "series": "scarlet-violet",
@@ -2026,7 +2145,8 @@
       "secret": 31
     },
     "release_date": "March 28, 2025",
-    "abbrev": "JTG"
+    "abbrev": "JTG",
+    "tcgdex_id": "sv09"
   },
   {
     "series": "scarlet-violet",
@@ -2043,7 +2163,8 @@
       "secret": 62
     },
     "release_date": "May 30, 2025",
-    "abbrev": "DRI"
+    "abbrev": "DRI",
+    "tcgdex_id": "sv10"
   },
   {
     "series": "scarlet-violet",
@@ -2060,7 +2181,8 @@
       "secret": 86
     },
     "release_date": "July 18, 2025",
-    "abbrev": "BLK"
+    "abbrev": "BLK",
+    "tcgdex_id": "sv10.5b"
   },
   {
     "series": "scarlet-violet",
@@ -2077,14 +2199,15 @@
       "secret": 87
     },
     "release_date": "July 18, 2025",
-    "abbrev": "WHT"
+    "abbrev": "WHT",
+    "tcgdex_id": "sv10.5w"
   },
   {
     "series": "mega-evolution",
     "series_type": "post-wizards-of-the-coast",
     "language": "en",
     "no": "1",
-    "symbol_url": "https://archives.bulbagarden.net/media/upload/f/fc/SetSymbolMega_Evolution.png",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/f/fc/SetSymbolMega_Evolution.png/40px-SetSymbolMega_Evolution.png",
     "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/b/be/ME1_Logo_EN.png/150px-ME1_Logo_EN.png",
     "name": "Mega Evolution",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Mega_Evolution_(TCG)",
@@ -2094,25 +2217,26 @@
       "secret": 56
     },
     "release_date": "September 26, 2025",
-    "abbrev": "MEG"
+    "abbrev": "MEG",
+    "tcgdex_id": "me01"
   },
   {
     "series": "mega-evolution",
     "series_type": "post-wizards-of-the-coast",
     "language": "en",
     "no": "2",
-    "symbol_url": "https://archives.bulbagarden.net/media/upload/7/7f/SetSymbolPhantasmal_Flames.png",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/7/7f/SetSymbolPhantasmal_Flames.png/40px-SetSymbolPhantasmal_Flames.png",
     "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/f/fa/ME2_Logo_EN.png/150px-ME2_Logo_EN.png",
     "name": "Phantasmal Flames",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Phantasmal_Flames_(TCG)",
     "type": "main-series",
     "cards_stats": {
       "cards": 94,
-      "secret": 26,
-      "notes": ["Over 26 Secret cards"]
+      "secret": 36
     },
     "release_date": "November 14, 2025",
-    "abbrev": "PFL"
+    "abbrev": "PFL",
+    "tcgdex_id": "me02"
   },
   {
     "series": "basic-energy",
@@ -2149,7 +2273,8 @@
       "cards": 53
     },
     "release_date": "July 1999 – March 2003",
-    "abbrev": "WP"
+    "abbrev": "WP",
+    "tcgdex_id": "basep"
   },
   {
     "series": "black-star-promo",
@@ -2161,7 +2286,8 @@
       "cards": 40
     },
     "release_date": "October 2003 – September 2006",
-    "abbrev": "NP"
+    "abbrev": "NP",
+    "tcgdex_id": "np"
   },
   {
     "series": "black-star-promo",
@@ -2173,7 +2299,8 @@
       "cards": 56
     },
     "release_date": "May 2007 – December 2009",
-    "abbrev": "DPP"
+    "abbrev": "DPP",
+    "tcgdex_id": "dpp"
   },
   {
     "series": "black-star-promo",
@@ -2185,7 +2312,8 @@
       "cards": 25
     },
     "release_date": "February 2010 – February 2011",
-    "abbrev": "HSP"
+    "abbrev": "HSP",
+    "tcgdex_id": "hgssp"
   },
   {
     "series": "black-star-promo",
@@ -2195,10 +2323,13 @@
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/BW_Black_Star_Promos_(TCG)",
     "cards_stats": {
       "cards": 99,
-      "notes": ["Numbered up to 101, but 2 remain unreleased"]
+      "notes": [
+        "Numbered up to 101, but 2 remain unreleased"
+      ]
     },
     "release_date": "March 2011 – December 2013",
-    "abbrev": "BWP"
+    "abbrev": "BWP",
+    "tcgdex_id": "bwp"
   },
   {
     "series": "black-star-promo",
@@ -2210,7 +2341,8 @@
       "cards": 211
     },
     "release_date": "October 2013 – May 2017",
-    "abbrev": "XYP"
+    "abbrev": "XYP",
+    "tcgdex_id": "xyp"
   },
   {
     "series": "black-star-promo",
@@ -2222,7 +2354,8 @@
       "cards": 248
     },
     "release_date": "November 2016 – November 2021",
-    "abbrev": "SMP"
+    "abbrev": "SMP",
+    "tcgdex_id": "smp"
   },
   {
     "series": "black-star-promo",
@@ -2234,7 +2367,8 @@
       "cards": 307
     },
     "release_date": "November 2019 – August 2023",
-    "abbrev": "SSP"
+    "abbrev": "SSP",
+    "tcgdex_id": "swshp"
   },
   {
     "series": "black-star-promo",
@@ -2247,7 +2381,8 @@
       "cards": null
     },
     "release_date": "January 2023 – Present",
-    "abbrev": "SVP"
+    "abbrev": "SVP",
+    "tcgdex_id": "svp"
   },
   {
     "series": "black-star-promo",
@@ -2260,7 +2395,8 @@
       "cards": null
     },
     "release_date": "September 2025 – Present",
-    "abbrev": "MEP"
+    "abbrev": "MEP",
+    "tcgdex_id": "mep"
   },
   {
     "series": "mcdonalds",
@@ -2273,7 +2409,8 @@
       "cards": 12
     },
     "release_date": "June 17, 2011",
-    "abbrev": "M11"
+    "abbrev": "M11",
+    "tcgdex_id": "2011bw"
   },
   {
     "series": "mcdonalds",
@@ -2286,7 +2423,8 @@
       "cards": 12
     },
     "release_date": "June 15, 2012",
-    "abbrev": "M12"
+    "abbrev": "M12",
+    "tcgdex_id": "2012bw"
   },
   {
     "series": "mcdonalds",
@@ -2312,7 +2450,8 @@
       "cards": 12
     },
     "release_date": "May 23, 2014",
-    "abbrev": "M14"
+    "abbrev": "M14",
+    "tcgdex_id": "2014xy"
   },
   {
     "series": "mcdonalds",
@@ -2325,7 +2464,8 @@
       "cards": 12
     },
     "release_date": "October 14, 2015",
-    "abbrev": "M15"
+    "abbrev": "M15",
+    "tcgdex_id": "2015xy"
   },
   {
     "series": "mcdonalds",
@@ -2338,7 +2478,8 @@
       "cards": 12
     },
     "release_date": "August 19, 2016",
-    "abbrev": "M16"
+    "abbrev": "M16",
+    "tcgdex_id": "2016xy"
   },
   {
     "series": "mcdonalds",
@@ -2351,7 +2492,8 @@
       "cards": 12
     },
     "release_date": "July 2017",
-    "abbrev": "M17"
+    "abbrev": "M17",
+    "tcgdex_id": "2017sm"
   },
   {
     "series": "mcdonalds",
@@ -2364,7 +2506,8 @@
       "cards": 12
     },
     "release_date": "October 16, 2018",
-    "abbrev": "M18"
+    "abbrev": "M18",
+    "tcgdex_id": "2018sm"
   },
   {
     "series": "mcdonalds",
@@ -2377,7 +2520,8 @@
       "cards": 12
     },
     "release_date": "October 15, 2019",
-    "abbrev": "M19"
+    "abbrev": "M19",
+    "tcgdex_id": "2019sm"
   },
   {
     "series": "mcdonalds",
@@ -2390,7 +2534,8 @@
       "cards": 25
     },
     "release_date": "February 9, 2021",
-    "abbrev": "M21"
+    "abbrev": "M21",
+    "tcgdex_id": "2021swsh"
   },
   {
     "series": "mcdonalds",
@@ -2481,7 +2626,8 @@
       "cards": 17
     },
     "release_date": "September 2004",
-    "abbrev": "POP1"
+    "abbrev": "POP1",
+    "tcgdex_id": "pop1"
   },
   {
     "series": "pop-play",
@@ -2494,7 +2640,8 @@
       "cards": 17
     },
     "release_date": "August 2005",
-    "abbrev": "POP2"
+    "abbrev": "POP2",
+    "tcgdex_id": "pop2"
   },
   {
     "series": "pop-play",
@@ -2507,7 +2654,8 @@
       "cards": 17
     },
     "release_date": "April 2006",
-    "abbrev": "POP3"
+    "abbrev": "POP3",
+    "tcgdex_id": "pop3"
   },
   {
     "series": "pop-play",
@@ -2520,7 +2668,8 @@
       "cards": 17
     },
     "release_date": "August 2006",
-    "abbrev": "POP4"
+    "abbrev": "POP4",
+    "tcgdex_id": "pop4"
   },
   {
     "series": "pop-play",
@@ -2533,7 +2682,8 @@
       "cards": 17
     },
     "release_date": "March 2007",
-    "abbrev": "POP5"
+    "abbrev": "POP5",
+    "tcgdex_id": "pop5"
   },
   {
     "series": "pop-play",
@@ -2546,7 +2696,8 @@
       "cards": 17
     },
     "release_date": "September 2007",
-    "abbrev": "POP6"
+    "abbrev": "POP6",
+    "tcgdex_id": "pop6"
   },
   {
     "series": "pop-play",
@@ -2559,7 +2710,8 @@
       "cards": 17
     },
     "release_date": "March 2008",
-    "abbrev": "POP7"
+    "abbrev": "POP7",
+    "tcgdex_id": "pop7"
   },
   {
     "series": "pop-play",
@@ -2572,7 +2724,8 @@
       "cards": 17
     },
     "release_date": "September 2008",
-    "abbrev": "POP8"
+    "abbrev": "POP8",
+    "tcgdex_id": "pop8"
   },
   {
     "series": "pop-play",
@@ -2585,7 +2738,8 @@
       "cards": 17
     },
     "release_date": "March 2009",
-    "abbrev": "POP9"
+    "abbrev": "POP9",
+    "tcgdex_id": "pop9"
   },
   {
     "series": "pop-play",
@@ -2683,7 +2837,8 @@
       "cards": 18
     },
     "release_date": "July 31, 2001",
-    "abbrev": "SI"
+    "abbrev": "SI",
+    "tcgdex_id": "si1"
   },
   {
     "series": "other-misc",
@@ -2696,7 +2851,8 @@
       "cards": 9
     },
     "release_date": "December 2002",
-    "abbrev": "—"
+    "abbrev": null,
+    "tcgdex_id": "bog"
   },
   {
     "series": "other-misc",
@@ -2709,7 +2865,8 @@
       "cards": 5
     },
     "release_date": "July 2004",
-    "abbrev": "CC"
+    "abbrev": "CC",
+    "tcgdex_id": "ex5.5"
   },
   {
     "series": "other-misc",
@@ -2723,7 +2880,8 @@
       "cards": 16
     },
     "release_date": "December 2, 2009",
-    "abbrev": "RM"
+    "abbrev": "RM",
+    "tcgdex_id": "ru1"
   },
   {
     "series": "other-misc",
@@ -2747,7 +2905,9 @@
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_Trading_Card_Game_Classic_(TCG)",
     "cards_stats": {
       "cards": 102,
-      "notes": ["comprised of 3 deck lists, each deck list contains 34 unique cards"]
+      "notes": [
+        "comprised of 3 deck lists, each deck list contains 34 unique cards"
+      ]
     },
     "release_date": "November 17, 2023",
     "abbrev": "CL"

@@ -217,6 +217,7 @@ export function isCardChanged(base: Card | undefined, other: Card | undefined) {
   }
 
   if (base.name !== other.name) return true
+  if (!areValuesSame(base.notes, other.notes)) return true
   if (!isRelatedURLsSame(base.related_urls, other.related_urls)) return true
 
   if (base.amount !== other.amount) return true
@@ -249,6 +250,7 @@ export function isCardChanged(base: Card | undefined, other: Card | undefined) {
 
   if (!areNumbersSame(base.pokeapi_pokemon_id, other.pokeapi_pokemon_id, undefined)) return true
   if (!areValuesSame(base.tcgdex_id, other.tcgdex_id)) return true
+  if (!areValuesSame(base.bulbapedia_url, other.bulbapedia_url)) return true
 
   return false
 }
@@ -266,6 +268,7 @@ export function isTransactionChanged(
   }
 
   if (base.name !== other.name) return true
+  if (!areValuesSame(base.notes, other.notes)) return true
   if (!isRelatedURLsSame(base.related_urls, other.related_urls)) return true
 
   if (base.type !== other.type) return true
@@ -303,11 +306,11 @@ export function isPlaceChanged(base: Place | undefined, other: Place | undefined
   }
 
   if (base.name !== other.name) return true
+  if (!areValuesSame(base.notes, other.notes)) return true
   if (!isRelatedURLsSame(base.related_urls, other.related_urls)) return true
 
   if (base.type !== other.type) return true
   if (!areValuesSame(base.url, other.url)) return true
-  if (!areValuesSame(base.notes, other.notes)) return true
 
   if (base.type === 'local-fair') {
     if (!areValuesSame((base as PlaceLocal).address, (other as PlaceLocal).address)) return true
@@ -339,6 +342,7 @@ export function isItemChanged(base: Item | undefined, other: Item | undefined) {
   }
 
   if (base.name !== other.name) return true
+  if (!areValuesSame(base.notes, other.notes)) return true
   if (!isRelatedURLsSame(base.related_urls, other.related_urls)) return true
 
   if (base.cost_unit !== other.cost_unit) return true
@@ -386,6 +390,7 @@ export function getCardChanges(base: Card | undefined, other: Card | undefined):
   const changes = []
 
   if (base.name !== other.name) changes.push('name')
+  if (!areValuesSame(base.notes, other.notes)) changes.push('notes')
   if (!isRelatedURLsSame(base.related_urls, other.related_urls)) changes.push('related_urls')
 
   if (base.amount !== other.amount) changes.push('amount')
@@ -420,6 +425,7 @@ export function getCardChanges(base: Card | undefined, other: Card | undefined):
   if (!areNumbersSame(base.pokeapi_pokemon_id, other.pokeapi_pokemon_id, undefined))
     changes.push('pokeapi_pokemon_id')
   if (!areValuesSame(base.tcgdex_id, other.tcgdex_id)) changes.push('tcgdex_id')
+  if (!areValuesSame(base.bulbapedia_url, other.bulbapedia_url)) changes.push('bulbapedia_url')
 
   return changes
 }
@@ -439,6 +445,7 @@ export function getTransactionChanges(
   const changes = []
 
   if (base.name !== other.name) changes.push('name')
+  if (!areValuesSame(base.notes, other.notes)) changes.push('notes')
   if (!isRelatedURLsSame(base.related_urls, other.related_urls)) changes.push('related_urls')
 
   if (base.type !== other.type) changes.push('type')
@@ -479,11 +486,11 @@ export function getPlaceChanges(base: Place | undefined, other: Place | undefine
   const changes = []
 
   if (base.name !== other.name) changes.push('name')
+  if (!areValuesSame(base.notes, other.notes)) changes.push('notes')
   if (!isRelatedURLsSame(base.related_urls, other.related_urls)) changes.push('related_urls')
 
   if (base.type !== other.type) changes.push('type')
   if (!areValuesSame(base.url, other.url)) changes.push('url')
-  if (!areValuesSame(base.notes, other.notes)) changes.push('notes')
 
   if (base.type === 'local-fair') {
     if (!areValuesSame((base as PlaceLocal).address, (other as PlaceLocal).address))
@@ -520,6 +527,7 @@ export function getItemChanges(base: Item | undefined, other: Item | undefined):
   const changes = []
 
   if (base.name !== other.name) changes.push('name')
+  if (!areValuesSame(base.notes, other.notes)) changes.push('notes')
   if (!isRelatedURLsSame(base.related_urls, other.related_urls)) changes.push('related_urls')
 
   if (base.cost_unit !== other.cost_unit) changes.push('cost_unit')

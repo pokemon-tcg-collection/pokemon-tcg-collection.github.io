@@ -5,6 +5,7 @@ import { onBeforeRouteLeave } from 'vue-router'
 import type { ResultTypes } from '@/components/EditorConfirmChangesDialog.vue'
 import EditorConfirmChangesDialog from '@/components/EditorConfirmChangesDialog.vue'
 import EditorConfirmDeletionDialog from '@/components/EditorConfirmDeletionDialog.vue'
+import EditorFieldset from '@/components/EditorFieldset.vue'
 import EditorFieldsInternals from '@/components/EditorFieldsInternals.vue'
 import EditorFieldsRelated from '@/components/EditorFieldsRelated.vue'
 import EditorFieldsRelatedURLs from '@/components/EditorFieldsRelatedURLs.vue'
@@ -232,6 +233,10 @@ async function onDiscardTemplateStartBlank() {
 
   <v-form v-if="object">
     <slot :object="object" :object-type="objectType"></slot>
+
+    <EditorFieldset label="Additional">
+      <v-textarea v-model="object.notes" label="Notes"></v-textarea>
+    </EditorFieldset>
 
     <EditorFieldsRelatedURLs v-model="object" :object-type="objectType"></EditorFieldsRelatedURLs>
 

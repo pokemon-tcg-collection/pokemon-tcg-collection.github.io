@@ -8,7 +8,7 @@ import type {
   Card as TCGCard,
 } from '@tcgdex/sdk'
 import TCGdex, { CardResumeModel, Query, SetResumeModel } from '@tcgdex/sdk'
-import { computed, readonly, ref, watch } from 'vue'
+import { computed, ref, watch } from 'vue'
 
 import { CARD_LANGUAGES, TCGDEX_LANGUAGES } from '@/model/interfaces'
 import { highlightAutocompleteItem } from '@/utils/autocomplete'
@@ -20,9 +20,8 @@ interface SetItem {
   set?: SetResume
 }
 
-const emit = defineEmits<{ cardSelected: [card: TCGCard] }>()
+const emit = defineEmits<{ cardSelected: [card: TCGCard, language: SupportedLanguages] }>()
 
-const languages = readonly(CARD_LANGUAGES)
 const sets = ref<(SetItem | { type: 'subheader'; title: string })[]>([])
 const cards = ref<{ id: string; nr: string; label: string; image?: string; card?: CardResume }[]>(
   [],
@@ -167,7 +166,7 @@ async function onCardSelected(cardId: string) {
   boosters.value =
     tcgCard.boosters?.map((booster) => ({ id: booster.id, label: booster.name })) ?? []
 
-  emit('cardSelected', tcgCard)
+  emit('cardSelected', tcgCard, language.value)
 }
 
 // on load and on language change, update set list
@@ -194,7 +193,7 @@ watch(
 <template>
   <v-autocomplete
     v-model="language"
-    :items="languages"
+    :items="CARD_LANGUAGES"
     item-value="code"
     item-title="name"
     label="Language"
@@ -287,7 +286,7 @@ watch(
     </template>
   </v-autocomplete>
 
-  <v-autocomplete
+  <!-- <v-autocomplete
     v-model="booster"
     :items="boosters"
     item-value="id"
@@ -295,5 +294,5 @@ watch(
     label="Booster"
     clearable
     hide-no-data
-  ></v-autocomplete>
+  ></v-autocomplete> -->
 </template>

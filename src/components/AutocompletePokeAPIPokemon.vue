@@ -4,7 +4,7 @@ import { ref } from 'vue'
 import { pokemon } from '@/apis/pokeapi'
 import { highlightAutocompleteItem } from '@/utils/autocomplete'
 
-const pokemon_lookup = new Map(pokemon.map((entry) => [entry.id, entry.name]))
+const pokemon_lookup = new Map(pokemon.map((entry) => [entry.id, entry]))
 
 const model = defineModel<number | undefined>()
 const emit = defineEmits<{
@@ -14,7 +14,7 @@ const emit = defineEmits<{
 const search = ref<string>('')
 
 function onUpdateModelValue(value: number) {
-  emit('update:model-value:title', pokemon_lookup.get(value))
+  emit('update:model-value:title', pokemon_lookup.get(value)?.name)
 }
 </script>
 
@@ -29,10 +29,15 @@ function onUpdateModelValue(value: number) {
     @update:search="(val) => (search = val)"
     @update:model-value="onUpdateModelValue"
   >
+    <template #prepend><slot name="prepend"></slot></template>
     <template #prepend-inner>
       <v-avatar
+        class="me-2"
         :image="model ? `/pokeapi-sprites/${model}.png` : '/pokeapi-sprites/0.png'"
       ></v-avatar>
+      <span v-if="model" class="ms-1 me-1 text-grey-lighten-1"
+        >#{{ pokemon_lookup.get(model)?.sid }}</span
+      >
     </template>
     <template #item="{ props, item }">
       <v-list-item
@@ -41,6 +46,10 @@ function onUpdateModelValue(value: number) {
         :subtitle="`Generation: ${item.raw.generation.toLocaleUpperCase()}`"
         :title="item.raw.name"
       >
+        <template #prepend>
+          <v-avatar></v-avatar>
+          <span class="ms-4 text-grey-lighten-1">#{{ item.raw.sid }}</span>
+        </template>
         <template #title
           ><component :is="() => highlightAutocompleteItem(item, search)"
         /></template>

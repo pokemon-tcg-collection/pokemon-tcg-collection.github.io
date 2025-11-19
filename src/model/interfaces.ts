@@ -67,6 +67,9 @@ export interface Base {
   /** label (display string for inputs, short description) (should be unique per object) */
   name: string
 
+  /** user notes */
+  notes?: string
+
   /** an optional list of related URLs (images, articles, shop pages, etc.) */
   related_urls?: RelatedURL[]
 
@@ -145,8 +148,6 @@ export const ONLINE_MARKETPLACE = [
 interface PlaceGeneric extends Base {
   type: PlaceType
   url?: string
-
-  notes?: string
 }
 
 export interface PlaceLocal extends PlaceGeneric {

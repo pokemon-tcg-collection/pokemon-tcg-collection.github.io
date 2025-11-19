@@ -131,10 +131,6 @@ async function onDelete() {
           ]"
         ></v-text-field>
       </EditorFieldset>
-
-      <EditorFieldset label="Additional">
-        <v-textarea v-model="place.notes" label="Notes"></v-textarea>
-      </EditorFieldset>
     </template>
   </EditorBase>
 </template>

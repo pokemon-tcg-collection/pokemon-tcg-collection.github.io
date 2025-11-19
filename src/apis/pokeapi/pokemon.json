@@ -495,7 +495,14 @@
     "generation": "i",
     "sprite": true
   },
-  { "id": 63, "sid": 63, "identifier": "abra", "name": "Abra", "generation": "i", "sprite": true },
+  {
+    "id": 63,
+    "sid": 63,
+    "identifier": "abra",
+    "name": "Abra",
+    "generation": "i",
+    "sprite": true
+  },
   {
     "id": 64,
     "sid": 64,
@@ -672,7 +679,14 @@
     "generation": "i",
     "sprite": true
   },
-  { "id": 86, "sid": 86, "identifier": "seel", "name": "Seel", "generation": "i", "sprite": true },
+  {
+    "id": 86,
+    "sid": 86,
+    "identifier": "seel",
+    "name": "Seel",
+    "generation": "i",
+    "sprite": true
+  },
   {
     "id": 87,
     "sid": 87,
@@ -689,7 +703,14 @@
     "generation": "i",
     "sprite": true
   },
-  { "id": 89, "sid": 89, "identifier": "muk", "name": "Muk", "generation": "i", "sprite": true },
+  {
+    "id": 89,
+    "sid": 89,
+    "identifier": "muk",
+    "name": "Muk",
+    "generation": "i",
+    "sprite": true
+  },
   {
     "id": 90,
     "sid": 90,
@@ -730,7 +751,14 @@
     "generation": "i",
     "sprite": true
   },
-  { "id": 95, "sid": 95, "identifier": "onix", "name": "Onix", "generation": "i", "sprite": true },
+  {
+    "id": 95,
+    "sid": 95,
+    "identifier": "onix",
+    "name": "Onix",
+    "generation": "i",
+    "sprite": true
+  },
   {
     "id": 96,
     "sid": 96,
@@ -1171,7 +1199,14 @@
     "generation": "i",
     "sprite": true
   },
-  { "id": 151, "sid": 151, "identifier": "mew", "name": "Mew", "generation": "i", "sprite": true },
+  {
+    "id": 151,
+    "sid": 151,
+    "identifier": "mew",
+    "name": "Mew",
+    "generation": "i",
+    "sprite": true
+  },
   {
     "id": 152,
     "sid": 152,

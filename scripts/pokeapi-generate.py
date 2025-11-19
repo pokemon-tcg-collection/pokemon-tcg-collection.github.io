@@ -4,10 +4,11 @@ Generate Pokemon list with minimal info and sprites.
 Requires:
 - sprites from https://github.com/PokeAPI/sprites
 - pokemon data from https://github.com/PokeAPI/pokeapi
+- NOTE: this requires ~3GB of disk space
 
 Run:
-    git clone git@github.com:PokeAPI/sprites.git
-    git clone git@github.com:PokeAPI/pokeapi.git
+    git clone --depth 1 git@github.com:PokeAPI/sprites.git
+    git clone --depth 1 git@github.com:PokeAPI/pokeapi.git
     python3 pokeapi-generate.py
 
 Generates:

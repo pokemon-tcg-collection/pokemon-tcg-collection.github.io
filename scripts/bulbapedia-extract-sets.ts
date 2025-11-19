@@ -1167,13 +1167,36 @@ async function getTCGdexSets(language: string = 'en') {
   return mapTCGdexSetNameToID
 }
 
+/** build lookup of tcgdex set id to tcgdex series ids */
+async function _getSetSeriesInfoMap(tcgdex: TCGdex, delay: number | undefined = 200) {
+  const series = await tcgdex.serie.list()
+  const mapSetSeriesStuff = (
+    await Promise.all(
+      series.map(async (serie) => {
+        const serieFull = await serie.getSerie()
+        // lets be nice and also avoid errors
+        if (delay !== undefined && delay > 0) {
+          await new Promise((resolve) => setTimeout(resolve, 200))
+        }
+
+        return serieFull.sets.map((set) => [set.id, [serie.name, serie.id]] as const)
+      }),
+    )
+  ).flat(1)
+  const mapSetWithInfos = new Map<string, readonly [string, string]>(mapSetSeriesStuff)
+  if (mapSetSeriesStuff.length !== mapSetWithInfos.size) {
+    console.error('Some set/series info got lost', [mapSetSeriesStuff.length, mapSetWithInfos.size])
+    return undefined
+  }
+  return mapSetWithInfos
+}
+
 // + approx mapping between Bulbapedia and TCGdex API
 // (japanese might have some smaller series that are part of others?)
 async function getTCGdexSeriesEN(
   mapTCGdexSetNameToID: Map<string, string> | undefined = undefined,
   bulbapediaSetInfo: SetInfoFullEN[] | undefined = undefined,
   language: string = 'en',
-  delay: number | undefined = 200,
 ) {
   // if not supplied, try to parse
   if (bulbapediaSetInfo === undefined) {
@@ -1199,25 +1222,8 @@ async function getTCGdexSeriesEN(
   const tcgdex = new TCGdex(language as SupportedLanguages)
 
   // build lookup of tcgdex set id to tcgdex series ids
-  const series = await tcgdex.serie.list()
-  const mapSetSeriesStuff = (
-    await Promise.all(
-      series.map(async (serie) => {
-        const serieFull = await serie.getSerie()
-        // lets be nice and also avoid errors
-        if (delay !== undefined && delay > 0) {
-          await new Promise((resolve) => setTimeout(resolve, 200))
-        }
-
-        return serieFull.sets.map((set) => [set.id, [serie.name, serie.id]] as const)
-      }),
-    )
-  ).flat(1)
-  const mapSetWithInfos = new Map<string, readonly [string, string]>(mapSetSeriesStuff)
-  if (mapSetSeriesStuff.length !== mapSetWithInfos.size) {
-    console.error('Some set/series info got lost', [mapSetSeriesStuff.length, mapSetWithInfos.size])
-    return undefined
-  }
+  const mapSetWithInfos = await _getSetSeriesInfoMap(tcgdex)
+  if (mapSetWithInfos === undefined) return undefined
 
   // now match based on set name to find parent series
   const found: [string, string, string][] = []
@@ -1265,8 +1271,9 @@ async function getTCGdexSeriesEN(
 
   // TODO: should we keep series where single sets are not matches but others are?
   const leftOverTcgdexSeriesIDs = Array.from(
-    mapSetSeriesStuff
-      .map(([, [, tcgdexSeriesID]]) => tcgdexSeriesID)
+    mapSetWithInfos
+      .values()
+      .map(([, tcgdexSeriesID]) => tcgdexSeriesID)
       .reduce((set, cur) => set.add(cur), new Set<string>())
       .keys()
       .filter(

@@ -21,7 +21,7 @@ function onUpdateModelValue(value: number) {
 <template>
   <v-autocomplete
     v-model="model"
-    label="Pokemon (from PokeAPI)"
+    label="Pokémon species (from PokéAPI)"
     :items="pokemon"
     item-value="id"
     item-title="name"

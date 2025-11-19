@@ -1,3 +1,4 @@
+import type { SupportedLanguages } from '@tcgdex/sdk'
 import { acceptHMRUpdate, defineStore } from 'pinia'
 import { ref } from 'vue'
 
@@ -10,6 +11,10 @@ export const useSettingsStore = defineStore(
     const editorShowInternalID = ref(true)
     const editorShowObjectInternals = ref(true)
     const editorShowObjectRelations = ref(true)
+
+    const tcgdexDefaultLanguage = ref<SupportedLanguages>('en')
+    /** request delay after each TCGdex API call (if used in a loop) */
+    const tcgdexRequestDelay = ref<number>(250)
 
     // -----------------------------------------------------------------------
     // actions
@@ -27,6 +32,8 @@ export const useSettingsStore = defineStore(
       editorShowInternalID,
       editorShowObjectInternals,
       editorShowObjectRelations,
+      tcgdexDefaultLanguage,
+      tcgdexRequestDelay,
       // actions
       // internals
       $reset: _reset,

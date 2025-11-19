@@ -11,6 +11,7 @@ import TCGdex, { CardResumeModel, Query, SetResumeModel } from '@tcgdex/sdk'
 import { computed, ref, watch } from 'vue'
 
 import { CARD_LANGUAGES, TCGDEX_LANGUAGES } from '@/model/interfaces'
+import { useSettingsStore } from '@/stores/settings'
 import { highlightAutocompleteItem } from '@/utils/autocomplete'
 
 interface SetItem {
@@ -22,6 +23,8 @@ interface SetItem {
 
 const emit = defineEmits<{ cardSelected: [card: TCGCard, language: SupportedLanguages] }>()
 
+const settings = useSettingsStore()
+
 const sets = ref<(SetItem | { type: 'subheader'; title: string })[]>([])
 const cards = ref<{ id: string; nr: string; label: string; image?: string; card?: CardResume }[]>(
   [],
@@ -29,7 +32,7 @@ const cards = ref<{ id: string; nr: string; label: string; image?: string; card?
 const boosters = ref<{ id: string; label: string }[]>([])
 
 // TODO: maybe use settings for default
-const language = ref<SupportedLanguages>('en')
+const language = ref<SupportedLanguages>(settings.tcgdexDefaultLanguage)
 const set = ref<string>()
 const booster = ref<string>()
 const tcgdex_id = ref<string>()
@@ -56,13 +59,18 @@ async function updateTCGData() {
     return
   }
 
+  const reqDelay = settings.tcgdexRequestDelay
   console.debug('Updating TCG data ...')
 
   isLoadingSets.value = true
 
   const tcgSeriesListPreview = await tcgdex.value.serie.list()
   const tcgSeriesList = (await Promise.all(
-    tcgSeriesListPreview.map(async (series) => await series.getSerie()),
+    tcgSeriesListPreview.map(async (series) => {
+      const info = await series.getSerie()
+      await new Promise((resolve) => setTimeout(resolve, reqDelay))
+      return info
+    }),
   )) as SerieModel[]
   Object.assign(window, { tcgSeriesList })
 

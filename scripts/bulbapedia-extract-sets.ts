@@ -1177,7 +1177,7 @@ async function getTCGdexSets(language: string = 'en') {
 }
 
 /** build lookup of tcgdex set id to tcgdex series ids */
-async function _getSetSeriesInfoMap(tcgdex: TCGdex, delay: number | undefined = 200) {
+async function _getSetSeriesInfoMap(tcgdex: TCGdex, delay: number | undefined = 250) {
   const series = await tcgdex.serie.list()
   const mapSetSeriesStuff = (
     await Promise.all(

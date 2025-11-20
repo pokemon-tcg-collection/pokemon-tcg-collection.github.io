@@ -56,15 +56,14 @@ function onUserChoiceDiscardChanges() {
       text="Some inputs have changed. Please save or discard before continuing."
       class="pa-2"
     >
-      <template #actions>
+      <v-card-actions class="flex-wrap">
         <v-btn @click="onUserChoiceSave" variant="tonal" color="primary">{{
           isDraft ? 'Save and finish Draft' : 'Save'
         }}</v-btn>
         <v-btn @click="onUserChoiceSaveDraft" variant="tonal">{{
           isDraft ? 'Update Draft' : 'Save as Draft'
         }}</v-btn>
-        <template v-if="showSetAsTemplateButton"
-          ><v-spacer></v-spacer>
+        <template v-if="showSetAsTemplateButton">
           <v-btn @click="onUserChoiceSetAsTemplate" variant="tonal">{{
             hasTemplate ? 'Replace Template' : 'Set as Template'
           }}</v-btn></template
@@ -73,7 +72,7 @@ function onUserChoiceDiscardChanges() {
         <v-btn @click="onUserChoiceDiscardChanges" variant="tonal" color="warning"
           >Discard Changes</v-btn
         >
-      </template>
+      </v-card-actions>
     </v-card>
   </v-dialog>
 </template>

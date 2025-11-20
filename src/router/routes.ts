@@ -1,6 +1,7 @@
 import type { RouteRecordRaw } from 'vue-router'
 
 import AboutCredits from '@/pages/about/AboutCredits.vue'
+import AboutDebug from '@/pages/about/AboutDebug.vue'
 import AboutOverview from '@/pages/about/AboutOverview.vue'
 import CardDetails from '@/pages/cards/CardDetails.vue'
 import CardEditor from '@/pages/cards/CardEditor.vue'
@@ -218,6 +219,12 @@ export default [
         name: 'credits',
         component: AboutCredits,
         meta: { breadcrumb_name: 'Credits' },
+      },
+      {
+        path: 'debug',
+        name: 'debug',
+        component: AboutDebug,
+        meta: { breadcrumb_name: 'Debug' },
       },
     ],
   },

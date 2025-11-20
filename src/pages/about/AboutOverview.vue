@@ -56,6 +56,15 @@ const gitInfoDate = import.meta.env.GIT_INFO_DATE
     >
       What is all included? Who gets the credit?
     </OverviewLinkCard>
+
+    <OverviewLinkCard
+      icon="mdi-copyright"
+      title="Debug Information"
+      :to="{ name: 'debug' }"
+      to-label="See dependencies"
+    >
+      Only for development or bug hunts<br />🐌 🐞 🦠 🕷️ 🕸️ 🐜 🪰 🐛
+    </OverviewLinkCard>
   </OverviewLinkCardContainer>
 </template>
 

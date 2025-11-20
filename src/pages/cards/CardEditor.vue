@@ -162,7 +162,7 @@ async function onAddNewTransaction() {
 
         <v-divider></v-divider>
 
-        <p class="ms-14 mt-2 mb-4">
+        <p class="ms-0 ms-sm-14 mt-2 mb-4">
           <span class="text-grey-darken-1 me-2">
             Manually changing the TCGdex information is not recommended. Use the input dialog to
             ensure consistency.

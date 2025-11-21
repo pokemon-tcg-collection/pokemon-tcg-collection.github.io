@@ -168,7 +168,7 @@ const transformTableCellEN = new Map<
     field: string
     transform: (
       td: HTMLTableCellElement,
-    ) => string | undefined | string[] | { [key: string]: string | number }
+    ) => string | undefined | null | string[] | { [key: string]: string | number }
   }[]
 >([
   ['Set no.', [{ field: 'no', transform: (td: HTMLTableCellElement) => td.textContent.trim() }]],

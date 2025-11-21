@@ -38,6 +38,12 @@ function onShowAuditInfo(log: AuditMessage) {
   selectedAuditInfo.value = log
   showAuditInfoDialog.value = true
 }
+async function onCopyAuditParamsJSON(event: MouseEvent) {
+  // stop auto-focus change to textarea
+  event.stopPropagation()
+  // copy
+  await copy()
+}
 </script>
 
 <template>
@@ -113,7 +119,7 @@ function onShowAuditInfo(log: AuditMessage) {
               class="position-absolute right-0 me-3"
               :icon="copied ? 'mdi-check' : 'mdi-content-copy'"
               :readonly="copied"
-              @click="copy()"
+              @click="onCopyAuditParamsJSON"
             ></v-btn>
           </template>
         </v-textarea>

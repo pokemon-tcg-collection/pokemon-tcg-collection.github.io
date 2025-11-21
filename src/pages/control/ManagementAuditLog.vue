@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { useClipboard } from '@vueuse/core'
 import { computed, ref } from 'vue'
 
 import type { AuditMessage } from '@/stores/auditLog'
@@ -24,6 +25,12 @@ const auditParamsJSON = computed(() => {
 
   return JSON.stringify(selectedAuditInfo.value.params, undefined, 2)
 })
+
+const {
+  copy,
+  copied,
+  isSupported: isClipboardSupported,
+} = useClipboard({ source: auditParamsJSON })
 
 function onShowAuditInfo(log: AuditMessage) {
   if (!log) return
@@ -100,7 +107,16 @@ function onShowAuditInfo(log: AuditMessage) {
           counter
           persistent-counter
           class="font-monospace"
-        ></v-textarea>
+        >
+          <template #append-inner v-if="isClipboardSupported">
+            <v-btn
+              class="position-absolute right-0 me-3"
+              :icon="copied ? 'mdi-check' : 'mdi-content-copy'"
+              :readonly="copied"
+              @click="copy()"
+            ></v-btn>
+          </template>
+        </v-textarea>
       </v-card-text>
       <v-divider></v-divider>
       <v-card-actions>

@@ -140,6 +140,7 @@ export type OnlineMarketplace = (typeof ONLINE_MARKETPLACE)[number]['id']
 export const ONLINE_MARKETPLACE = [
   { id: 'amazon', label: 'Amazon' },
   { id: 'ebay', label: 'Ebay' },
+  { id: 'ebay-marketplace', label: 'Ebay Marketplace' },
   { id: 'etsy', label: 'Etsy' },
   { id: 'cardmarket', label: 'Cardmarket' },
   // etc.
@@ -202,7 +203,7 @@ export const ITEM_TYPES = [
   { id: 'fan-card', label: 'Fan-made Card', type: 'fan-made' },
   // ...
   { id: 'scam', label: 'Scam', type: 'other' },
-  { id: 'shipping-taxes', label: 'Shipping & Taxes', type: 'other' },
+  { id: 'shipping-taxes', label: 'Shipping, Insurance & Taxes', type: 'other' },
   { id: 'discount', label: 'Discount', type: 'other' },
   { id: 'other', label: 'Other', type: 'other' },
   // etc.

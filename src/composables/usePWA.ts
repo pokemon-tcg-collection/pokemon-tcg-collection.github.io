@@ -20,11 +20,13 @@ declare global {
   }
 }
 
+// share state since this should probably be global if `usePWA` is used multiple times
+const rawPrompt = shallowRef<BeforeInstallPromptEvent>()
+
 export default function usePWA({
   blockAutomaticPrompt = false,
 }: { blockAutomaticPrompt?: boolean } = {}) {
   const isInstalled = useMediaQuery('(display-mode: standalone)')
-  const rawPrompt = shallowRef<BeforeInstallPromptEvent>()
 
   const canBeInstalled = computed(() => rawPrompt.value !== undefined)
 

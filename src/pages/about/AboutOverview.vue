@@ -58,7 +58,7 @@ const gitInfoDate = import.meta.env.GIT_INFO_DATE
     </OverviewLinkCard>
 
     <OverviewLinkCard
-      icon="mdi-copyright"
+      icon="mdi-bug"
       title="Debug Information"
       :to="{ name: 'debug' }"
       to-label="See dependencies"

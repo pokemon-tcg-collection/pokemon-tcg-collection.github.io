@@ -9,7 +9,7 @@ import usePWA from '@/composables/usePWA'
 import { useWorkInProgressStore } from '@/stores/workInProgress'
 
 const { xs } = useDisplay()
-const { isOnline } = useNetwork()
+const { isSupported: isNetworkSupported, isOnline } = useNetwork()
 const { isInstalled, canBeInstalled, promptInstall } = usePWA({ blockAutomaticPrompt: true })
 
 const wipStore = useWorkInProgressStore()
@@ -59,7 +59,11 @@ const breadcrumbs = computed(() =>
           :icon="isInstalled ? 'mdi-view-grid' : 'mdi-view-grid-plus'"
           @click="promptInstall"
         ></v-btn>
-        <v-icon :icon="isOnline ? 'mdi-wifi' : 'mdi-wifi-off'" class="mx-3"></v-icon>
+        <v-icon
+          v-if="isNetworkSupported"
+          :icon="isOnline ? 'mdi-wifi' : 'mdi-wifi-off'"
+          class="mx-3"
+        ></v-icon>
       </template>
     </v-app-bar>
 

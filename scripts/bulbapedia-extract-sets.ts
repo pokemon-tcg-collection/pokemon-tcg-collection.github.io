@@ -100,6 +100,20 @@ interface SetInfoFullZHCN extends SetInfoBriefZHCN {
   language: 'zh-cn'
 }
 
+interface SetInfoBriefENOther {
+  symbol_url?: string | undefined
+  name: string
+
+  names_translated: { [language: string]: string }
+
+  bulbapedia_url?: string | undefined
+}
+
+interface SetInfoFullENOther extends SetInfoBriefENOther {
+  series: string
+  language: 'en'
+}
+
 // -------------------------------------------------------------------------
 // mappings (bulbapedia, manual)
 
@@ -707,6 +721,93 @@ const transformTableMainSetCellZHCN = new Map<
   ],
 ])
 
+function makeFieldTransform(languageCode: string) {
+  return {
+    field: 'names_translated',
+    merge: true,
+    transform: (td: HTMLTableCellElement) => {
+      const text = td.textContent.trim()
+      if (text === '—') return undefined
+      if (text === '—*') {
+        console.warn('Handle manually', { html: td.innerHTML })
+        return { [`notes:${languageCode}`]: td.innerHTML.trim() }
+      }
+      return { [languageCode]: text }
+    },
+  } as const
+}
+
+const transformTableMainSetENOther = new Map<
+  string,
+  {
+    field: string
+    merge?: boolean
+    transform: (td: HTMLTableCellElement) => string | { [key: string]: string } | undefined
+  }[]
+>([
+  [
+    'Symbol',
+    [
+      {
+        field: 'symbol_url',
+        transform: (td: HTMLTableCellElement) => td.querySelector('img')?.src,
+      },
+    ],
+  ],
+  [
+    'English',
+    [
+      {
+        field: 'name',
+        transform: (td: HTMLTableCellElement) => td.textContent.trim(),
+      },
+      {
+        field: 'bulbapedia_url',
+        transform: (td: HTMLTableCellElement) => td.querySelector('a')?.href,
+      },
+    ],
+  ],
+  ['Dutch', [makeFieldTransform('nl')]],
+  ['French', [makeFieldTransform('fr')]],
+  ['German', [makeFieldTransform('de')]],
+  ['Italian', [makeFieldTransform('it')]],
+  ['Polish', [makeFieldTransform('pl')]],
+  ['Brazilian Portuguese', [makeFieldTransform('pt-br')]],
+  ['Spanish', [makeFieldTransform('es')]],
+  ['Spanish (Spain)', [makeFieldTransform('es')]],
+  ['Spanish (Latin America)', [makeFieldTransform('es-mx')]],
+  ['Russian', [makeFieldTransform('ru')]],
+  [
+    'Other',
+    [
+      {
+        field: 'names_translated',
+        merge: true,
+        transform: (td: HTMLTableCellElement) => {
+          const text = td.textContent.trim()
+          if (text === '—') return undefined
+
+          return Object.fromEntries(
+            Array.from(td.childNodes)
+              .filter((node) => node.nodeType === 3) // Node.TEXT_NODE
+              .map((node) => node.nodeValue?.trim())
+              .filter((text) => text !== undefined)
+              // NOTE: not sure if this will swallow future updates that I did not consider...
+              .filter((text) => text.includes(': '))
+              .map((text) => {
+                const parts = text.split(': ')
+                const language = parts[0]
+                const languageCode = { Korean: 'ko', 'Traditional Chinese': 'zh-tw' }[language]
+                const name = parts.slice(1).join(': ')
+                return [languageCode ?? language, name]
+              }),
+          )
+        },
+      },
+    ],
+  ],
+])
+
 // -------------------------------------------------------------------------
 
 function parseSetTableEN(table: HTMLTableElement) {
@@ -1018,7 +1119,7 @@ function parsePromoTableJP(table: HTMLTableElement) {
       }
 
       const headerColKey = headerKeys[headerIdx]!
-      const fieldTransforms = transformTablePromoCellJP.get(headerColKey)!
+      const fieldTransforms = transformTablePromoCellJP.get(headerColKey)
       if (fieldTransforms) {
         for (const { field, transform } of fieldTransforms) {
           const value = transform(col)
@@ -1223,7 +1324,7 @@ function parseSetsTableZHCN(table: HTMLTableElement) {
       const headerIdx = col_idx
 
       const headerColKey = headerKeys[headerIdx]!
-      const fieldTransforms = transformTableMainSetCellZHCN.get(headerColKey)!
+      const fieldTransforms = transformTableMainSetCellZHCN.get(headerColKey)
       if (fieldTransforms) {
         for (const { field, transform } of fieldTransforms) {
           const values = transform(col)
@@ -1303,6 +1404,152 @@ function parseSetsZHCN(document: Document) {
           ...entry,
         }))
         .forEach((entry) => data.push(entry as SetInfoFullZHCN))
+
+      lastSeriesHeader = null
+    } else {
+      console.warn('Unknown child!', { idx, child })
+    }
+  }
+
+  return data
+}
+
+function parseSetsTableENOther(table: HTMLTableElement) {
+  const tbody = table.tBodies[0]!
+  if (!tbody.children || tbody.children.length < 2) {
+    console.warn('Empty table?', { table })
+    return undefined
+  }
+
+  const headerRow = Array.from(tbody.children[0]!.children)
+  if (!headerRow.every((th) => th.tagName === 'TH')) {
+    console.warn('No header in table found!', { table, headerRow })
+    return undefined
+  }
+
+  const headerKeys = headerRow.map((th) => th.textContent.trim())
+
+  // Symbol
+  // English
+  // [Language...]
+
+  const data = []
+  const rows = Array.from(tbody.children).slice(1)
+  for (const row of rows) {
+    const cols = Array.from(row.children) as HTMLTableCellElement[]
+    const setInfo = {}
+
+    let colSpanCntr = 0
+    let headerIdx = 0
+    for (let col_idx = 0; col_idx < cols.length; col_idx++) {
+      const col = cols[col_idx]!
+      colSpanCntr = col.colSpan
+
+      // due to col spans, iterate over "virtual" columns
+      for (let colSpan_idx = 0; colSpan_idx < colSpanCntr; colSpan_idx++) {
+        const headerColKey = headerKeys[headerIdx]!
+
+        const fieldTransforms = transformTableMainSetENOther.get(headerColKey)
+        if (fieldTransforms) {
+          for (const { field, merge = false, transform } of fieldTransforms) {
+            const value = transform(col)
+            // console.log('value', { field, value, merge, col, headerColKey })
+            if (merge) {
+              if (!Object.hasOwn(setInfo, field)) {
+                Object.assign(setInfo, { [field]: {} })
+              }
+              Object.assign((setInfo as { [key: string]: object })[field], value)
+            } else {
+              Object.assign(setInfo, { [field]: value })
+            }
+            // console.log('setInfo', setInfo)
+          }
+        } else {
+          // NOTE: might also be due to invalid colSpan (too long)
+          console.warn('Unsupported column', {
+            col_idx,
+            headerIdx,
+            colSpan: col.colSpan,
+            headerColKey,
+          })
+        }
+
+        headerIdx++
+      }
+    }
+    data.push(setInfo as SetInfoBriefENOther)
+  }
+  return data
+}
+
+function parseSetsENOther(document: Document) {
+  const contentRoot = document.getElementById('mw-content-text')?.firstChild
+  if (contentRoot === undefined) return undefined
+
+  const allChildren = Array.from((contentRoot as HTMLDivElement).children)
+  const idxEnglishHeader = allChildren.findIndex(
+    (child) =>
+      child.tagName === 'H2' &&
+      child.childElementCount === 1 &&
+      child.firstElementChild?.tagName === 'SPAN' &&
+      child.firstElementChild.id === 'English_sets',
+  )
+  if (idxEnglishHeader === -1) {
+    throw Error('Unable to find English_sets element (start marker)!')
+  }
+  const idxJapaneseHeader = allChildren.findIndex(
+    (child) =>
+      child.tagName === 'H2' &&
+      child.childElementCount === 1 &&
+      child.firstElementChild?.tagName === 'SPAN' &&
+      child.firstElementChild.id === 'Japanese_sets',
+  )
+  if (idxJapaneseHeader === -1) {
+    throw Error('Unable to find Japanese_sets element (end marker)!')
+  }
+  const enOtherChildren = allChildren
+    .slice(idxEnglishHeader + 1, idxJapaneseHeader)
+    .filter((child) => child.tagName !== 'P')
+  if (idxJapaneseHeader < idxEnglishHeader) {
+    console.warn('Japanese header should follow after English header!', {
+      idxEnglishHeader,
+      idxJapaneseHeader,
+    })
+    throw Error('Japanese header should follow after English header!')
+  }
+  const shouldNotHaveOtherH2Header = enOtherChildren.find((child) => child.tagName === 'H2')
+  if (shouldNotHaveOtherH2Header !== undefined) {
+    console.warn('Between English and Japanese header should not be another H2 headder!', {
+      shouldNotHaveOtherH2Header,
+    })
+    throw Error('Between English and Japanese header should not be another H2 headder!')
+  }
+
+  const data: SetInfoFullENOther[] = []
+
+  let lastSeriesHeader: string | null = null
+  for (let idx = 0; idx < enOtherChildren.length; idx++) {
+    const child: Element = enOtherChildren[idx]!
+    // h3 -> table
+
+    if (child.tagName === 'H3') {
+      const value = child.textContent.trim()
+      lastSeriesHeader = mapSeriesRawEN.get(value)!
+    } else if (child.tagName === 'TABLE') {
+      const table = child as HTMLTableElement
+
+      const tableData = parseSetsTableENOther(table)
+      if (tableData === undefined) {
+        console.warn('No table data?', { idx })
+        continue
+      }
+
+      tableData
+        .map((entry) => ({
+          series: lastSeriesHeader,
+          ...entry,
+        }))
+        .forEach((entry) => data.push(entry as SetInfoFullENOther))
 
       lastSeriesHeader = null
     } else {
@@ -1707,8 +1954,13 @@ export async function processSetsOther(dn_output: string) {
     urlBase + 'List_of_Pokémon_Trading_Card_Game_expansions_in_other_languages',
   )
 
+  const resultENMappings = parseSetsENOther(document)
   const resultZHSimple = parseSetsZHCN(document)
 
+  writeFileSync(
+    pathJoin(dn_output, 'bulbapedia-en-other-sets.json'),
+    JSON.stringify(resultENMappings, undefined, 2),
+  )
   writeFileSync(
     pathJoin(dn_output, 'bulbapedia-zh-cn-sets.json'),
     JSON.stringify(resultZHSimple, undefined, 2),

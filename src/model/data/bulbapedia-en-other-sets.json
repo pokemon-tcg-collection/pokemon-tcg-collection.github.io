@@ -1,0 +1,1496 @@
+[
+  {
+    "series": "original",
+    "name": "Base Set",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Base_Set_(TCG)",
+    "names_translated": {
+      "nl": "Basis Set",
+      "fr": "Set de Base",
+      "de": "Grundset",
+      "it": "Set Base",
+      "pt-br": "Coleção Básica",
+      "es": "Base Set",
+      "ko": "기본 세트",
+      "zh-tw": "基本系列"
+    }
+  },
+  {
+    "series": "original",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/2/2f/SetSymbolJungle.png/40px-SetSymbolJungle.png",
+    "name": "Jungle",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Jungle_(TCG)",
+    "names_translated": {
+      "nl": "Jungle",
+      "fr": "Jungle",
+      "de": "Dschungel",
+      "it": "Jungle",
+      "pt-br": "Selva",
+      "es": "Jungla"
+    }
+  },
+  {
+    "series": "original",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/e/e6/SetSymbolFossil.png/40px-SetSymbolFossil.png",
+    "name": "Fossil",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Fossil_(TCG)",
+    "names_translated": {
+      "nl": "Fossiel",
+      "fr": "Fossile",
+      "de": "Fossil",
+      "it": "Fossil",
+      "pt-br": "Fóssil",
+      "es": "Fósil"
+    }
+  },
+  {
+    "series": "original",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/3/36/SetSymbolBase_Set_2.png/40px-SetSymbolBase_Set_2.png",
+    "name": "Base Set 2",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Base_Set_2_(TCG)",
+    "names_translated": {}
+  },
+  {
+    "series": "original",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/7/7e/SetSymbolTeam_Rocket.png/40px-SetSymbolTeam_Rocket.png",
+    "name": "Team Rocket",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Team_Rocket_(TCG)",
+    "names_translated": {
+      "fr": "Team Rocket",
+      "de": "Team Rocket",
+      "it": "Team Rocket"
+    }
+  },
+  {
+    "series": "original",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/8/8f/SetSymbolGym_Heroes.png/40px-SetSymbolGym_Heroes.png",
+    "name": "Gym Heroes",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Gym_Heroes_(TCG)",
+    "names_translated": {}
+  },
+  {
+    "series": "original",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/c/c4/SetSymbolGym_Challenge.png/40px-SetSymbolGym_Challenge.png",
+    "name": "Gym Challenge",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Gym_Challenge_(TCG)",
+    "names_translated": {}
+  },
+  {
+    "series": "neo",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/7/75/SetSymbolNeo_Genesis.png/40px-SetSymbolNeo_Genesis.png",
+    "name": "Neo Genesis",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Neo_Genesis_(TCG)",
+    "names_translated": {
+      "fr": "Neo Genesis",
+      "de": "Neo Genesis",
+      "it": "Neo Genesis",
+      "es": "Neo Génesis"
+    }
+  },
+  {
+    "series": "neo",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/f/f8/SetSymbolNeo_Discovery.png/40px-SetSymbolNeo_Discovery.png",
+    "name": "Neo Discovery",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Neo_Discovery_(TCG)",
+    "names_translated": {
+      "fr": "Neo Discovery",
+      "de": "Neo Entdeckung",
+      "it": "Neo Discovery"
+    }
+  },
+  {
+    "series": "neo",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/1/1e/SetSymbolSouthern_IslandsENG.png/40px-SetSymbolSouthern_IslandsENG.png",
+    "name": "Southern Islands",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Southern_Islands_(TCG)",
+    "names_translated": {}
+  },
+  {
+    "series": "neo",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/c/c6/SetSymbolNeo_Revelation.png/40px-SetSymbolNeo_Revelation.png",
+    "name": "Neo Revelation",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Neo_Revelation_(TCG)",
+    "names_translated": {
+      "fr": "Neo Revelation",
+      "de": "Neo Revelation",
+      "it": "Neo Revelation"
+    }
+  },
+  {
+    "series": "neo",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/8/88/SetSymbolNeo_Destiny.png/40px-SetSymbolNeo_Destiny.png",
+    "name": "Neo Destiny",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Neo_Destiny_(TCG)",
+    "names_translated": {
+      "fr": "Neo Destiny",
+      "de": "Neo Destiny",
+      "it": "Neo Destiny"
+    }
+  },
+  {
+    "series": "legendary-collection",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/a/a8/SetSymbolLegendary_Collection.png/20px-SetSymbolLegendary_Collection.png",
+    "name": "Legendary Collection",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Legendary_Collection_(TCG)",
+    "names_translated": {}
+  },
+  {
+    "series": "e-card",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/4/4f/SetSymbolExpedition.png/40px-SetSymbolExpedition.png",
+    "name": "Expedition Base Set",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Expedition_Base_Set_(TCG)",
+    "names_translated": {
+      "fr": "Expedition Édition de Base",
+      "de": "Expedition Base Set",
+      "it": "Expedition Set Base"
+    }
+  },
+  {
+    "series": "e-card",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/2/27/SetSymbolAquapolis.png/40px-SetSymbolAquapolis.png",
+    "name": "Aquapolis",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Aquapolis_(TCG)",
+    "names_translated": {
+      "fr": "Aquapolis",
+      "de": "Aquapolis",
+      "it": "Aquapolis"
+    }
+  },
+  {
+    "series": "e-card",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/5/56/SetSymbolSkyridge.png/40px-SetSymbolSkyridge.png",
+    "name": "Skyridge",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Skyridge_(TCG)",
+    "names_translated": {
+      "de": "Skyridge",
+      "it": "Skyridge"
+    }
+  },
+  {
+    "series": "ex",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/f/f2/SetSymbolRuby_and_Sapphire.png/40px-SetSymbolRuby_and_Sapphire.png",
+    "name": "EX Ruby & Sapphire",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/EX_Ruby_%26_Sapphire_(TCG)",
+    "names_translated": {
+      "fr": "EX Rubis & Saphir",
+      "de": "EX Rubin & Saphir",
+      "it": "EX Rubino & Zaffiro",
+      "pt-br": "EX Rubi e Safira",
+      "es": "EX Rubí & Zafiro"
+    }
+  },
+  {
+    "series": "ex",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/6/6a/SetSymbolSandstorm.png/40px-SetSymbolSandstorm.png",
+    "name": "EX Sandstorm",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/EX_Sandstorm_(TCG)",
+    "names_translated": {
+      "fr": "EX Tempête de Sable",
+      "de": "EX Sandsturm",
+      "it": "EX Tempesta di Sabbia"
+    }
+  },
+  {
+    "series": "ex",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/0/08/SetSymbolDragon.png/40px-SetSymbolDragon.png",
+    "name": "EX Dragon",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/EX_Dragon_(TCG)",
+    "names_translated": {
+      "fr": "EX Dragon",
+      "de": "EX Drache",
+      "it": "EX Drago"
+    }
+  },
+  {
+    "series": "ex",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/b/b9/SetSymbolTeam_Magma_vs_Team_Aqua.png/40px-SetSymbolTeam_Magma_vs_Team_Aqua.png",
+    "name": "EX Team Magma vs Team Aqua",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/EX_Team_Magma_vs_Team_Aqua_(TCG)",
+    "names_translated": {
+      "fr": "EX Team Magma vs Team Aqua",
+      "de": "EX Team Magma vs Team Aqua",
+      "it": "EX Team Magma vs Team Idro"
+    }
+  },
+  {
+    "series": "ex",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/6/66/SetSymbolHidden_Legends.png/40px-SetSymbolHidden_Legends.png",
+    "name": "EX Hidden Legends",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/EX_Hidden_Legends_(TCG)",
+    "names_translated": {
+      "fr": "EX Légendes Oubliées",
+      "it": "EX Leggende Nascoste"
+    }
+  },
+  {
+    "series": "ex",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/f/f6/SetSymbolFireRed_and_LeafGreen.png/40px-SetSymbolFireRed_and_LeafGreen.png",
+    "name": "EX FireRed & LeafGreen",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/EX_FireRed_%26_LeafGreen_(TCG)",
+    "names_translated": {
+      "fr": "EX Rouge Feu & Vert Feuille",
+      "de": "EX Feuerrot & Blattgrün",
+      "it": "EX RossoFuoco e VerdeFoglia"
+    }
+  },
+  {
+    "series": "ex",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/a/a0/SetSymbolTeam_Rocket_Returns.png/40px-SetSymbolTeam_Rocket_Returns.png",
+    "name": "EX Team Rocket Returns",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/EX_Team_Rocket_Returns_(TCG)",
+    "names_translated": {
+      "pt-br": "EX O Retorno da Equipe Rocket"
+    }
+  },
+  {
+    "series": "ex",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/7/73/SetSymbolDeoxys.png/40px-SetSymbolDeoxys.png",
+    "name": "EX Deoxys",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/EX_Deoxys_(TCG)",
+    "names_translated": {
+      "fr": "EX Deoxys",
+      "de": "EX Deoxys",
+      "it": "EX Deoxys",
+      "pt-br": "EX Deoxys"
+    }
+  },
+  {
+    "series": "ex",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/5/5b/SetSymbolEmerald.png/40px-SetSymbolEmerald.png",
+    "name": "EX Emerald",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/EX_Emerald_(TCG)",
+    "names_translated": {
+      "fr": "EX Émeraude",
+      "de": "EX Smaragd",
+      "it": "EX Smeraldo",
+      "pt-br": "EX Esmeralda"
+    }
+  },
+  {
+    "series": "ex",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/6/63/SetSymbolUnseen_Forces.png/40px-SetSymbolUnseen_Forces.png",
+    "name": "EX Unseen Forces",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/EX_Unseen_Forces_(TCG)",
+    "names_translated": {
+      "fr": "EX Forces Cachées",
+      "de": "EX Verborgene Mächte",
+      "it": "EX Forze Segrete",
+      "pt-br": "EX Forças Ocultas",
+      "es": "EX Fuerzas Ocultas"
+    }
+  },
+  {
+    "series": "ex",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/1/14/SetSymbolDelta_Species.png/40px-SetSymbolDelta_Species.png",
+    "name": "EX Delta Species",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/EX_Delta_Species_(TCG)",
+    "names_translated": {
+      "fr": "EX Espèces Delta",
+      "de": "EX Delta Species",
+      "it": "EX Specie Delta"
+    }
+  },
+  {
+    "series": "ex",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/2/2c/SetSymbolLegend_Maker.png/40px-SetSymbolLegend_Maker.png",
+    "name": "EX Legend Maker",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/EX_Legend_Maker_(TCG)",
+    "names_translated": {
+      "fr": "EX Créateurs de légendes",
+      "de": "EX Legend Maker",
+      "it": "EX La Leggenda di Mew",
+      "pt-br": "EX Origem das Lendas",
+      "zh-tw": "EX 傳說的締造者"
+    }
+  },
+  {
+    "series": "ex",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/b/ba/SetSymbolHolon_Phantoms.png/40px-SetSymbolHolon_Phantoms.png",
+    "name": "EX Holon Phantoms",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/EX_Holon_Phantoms_(TCG)",
+    "names_translated": {
+      "fr": "EX Fantômes Holon",
+      "de": "EX Holon Phantoms",
+      "it": "EX Fantasmi di Holon"
+    }
+  },
+  {
+    "series": "ex",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/e/e9/SetSymbolCrystal_Guardians.png/40px-SetSymbolCrystal_Guardians.png",
+    "name": "EX Crystal Guardians",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/EX_Crystal_Guardians_(TCG)",
+    "names_translated": {
+      "fr": "EX Gardiens de Cristal",
+      "de": "EX Crystal Guardians",
+      "it": "EX Guardiani dei Cristalli"
+    }
+  },
+  {
+    "series": "ex",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/e/e3/SetSymbolDragon_Frontiers.png/40px-SetSymbolDragon_Frontiers.png",
+    "name": "EX Dragon Frontiers",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/EX_Dragon_Frontiers_(TCG)",
+    "names_translated": {
+      "fr": "EX Île des Dragons",
+      "de": "EX Dragon Frontiers",
+      "it": "EX L'Isola dei Draghi"
+    }
+  },
+  {
+    "series": "ex",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/5/5b/SetSymbolPower_Keepers.png/40px-SetSymbolPower_Keepers.png",
+    "name": "EX Power Keepers",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/EX_Power_Keepers_(TCG)",
+    "names_translated": {
+      "fr": "EX Gardiens du Pouvoir",
+      "de": "EX Power Keepers"
+    }
+  },
+  {
+    "series": "diamond-pearl",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/1/1f/SetSymbolDiamond_and_Pearl.png/40px-SetSymbolDiamond_and_Pearl.png",
+    "name": "Diamond & Pearl",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Diamond_%26_Pearl_(TCG)",
+    "names_translated": {
+      "fr": "Diamant & Perle",
+      "de": "Diamant & Perl",
+      "it": "Diamante & Perla",
+      "pl": "Diament i Perla",
+      "pt-br": "Diamante & Pérola",
+      "es": "Diamante y Perla"
+    }
+  },
+  {
+    "series": "diamond-pearl",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/e/e2/SetSymbolMysterious_Treasures.png/40px-SetSymbolMysterious_Treasures.png",
+    "name": "Mysterious Treasures",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Mysterious_Treasures_(TCG)",
+    "names_translated": {
+      "fr": "Trésors Mystérieux",
+      "de": "Geheimnisvolle Schätze",
+      "it": "Tesori Misteriosi",
+      "pl": "Tajemne Skarby",
+      "pt-br": "Tesouros Misteriosos",
+      "es": "Tesoros Misteriosos"
+    }
+  },
+  {
+    "series": "diamond-pearl",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/9/9c/SetSymbolSecret_Wonders.png/40px-SetSymbolSecret_Wonders.png",
+    "name": "Secret Wonders",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Secret_Wonders_(TCG)",
+    "names_translated": {
+      "fr": "Merveilles Secrètes",
+      "de": "Rätselhafte Wunder",
+      "it": "Prodigi Segreti",
+      "pt-br": "Maravilhas Secretas",
+      "es": "Maravillas Secretas"
+    }
+  },
+  {
+    "series": "diamond-pearl",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/e/e8/SetSymbolGreat_Encounters.png/40px-SetSymbolGreat_Encounters.png",
+    "name": "Great Encounters",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Great_Encounters_(TCG)",
+    "names_translated": {
+      "fr": "Duels au Sommet",
+      "de": "Epische Begegnungen",
+      "it": "Incontri Leggendari",
+      "es": "Grandes Encuentros"
+    }
+  },
+  {
+    "series": "diamond-pearl",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/7/7b/SetSymbolMajestic_Dawn.png/40px-SetSymbolMajestic_Dawn.png",
+    "name": "Majestic Dawn",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Majestic_Dawn_(TCG)",
+    "names_translated": {
+      "fr": "Aube Majestueuse",
+      "de": "Majestätischer Morgen",
+      "it": "Alba Suprema"
+    }
+  },
+  {
+    "series": "diamond-pearl",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/2/28/SetSymbolLegends_Awakened.png/40px-SetSymbolLegends_Awakened.png",
+    "name": "Legends Awakened",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Legends_Awakened_(TCG)",
+    "names_translated": {
+      "fr": "Éveil des Légendes",
+      "de": "Erwachte Legenden",
+      "it": "Il Risveglio dei Miti",
+      "es": "Despertar de las Leyendas"
+    }
+  },
+  {
+    "series": "diamond-pearl",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/7/72/SetSymbolStormfront.png/40px-SetSymbolStormfront.png",
+    "name": "Stormfront",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Stormfront_(TCG)",
+    "names_translated": {
+      "fr": "Tempête",
+      "de": "Sturmtief",
+      "it": "Fronte di Tempesta",
+      "es": "Frente Tormentoso"
+    }
+  },
+  {
+    "series": "platinum",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/7/7c/SetSymbolPlatinum.png/40px-SetSymbolPlatinum.png",
+    "name": "Platinum",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Platinum_(TCG)",
+    "names_translated": {
+      "fr": "Platine",
+      "de": "Platin",
+      "it": "Platino",
+      "es": "Platino"
+    }
+  },
+  {
+    "series": "platinum",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/6/64/SetSymbolRising_Rivals.png/40px-SetSymbolRising_Rivals.png",
+    "name": "Rising Rivals",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Rising_Rivals_(TCG)",
+    "names_translated": {
+      "fr": "Rivaux Émergeants",
+      "de": "Aufstieg der Rivalen",
+      "it": "L'Ascesa dei Rivali"
+    }
+  },
+  {
+    "series": "platinum",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/f/f3/SetSymbolSupreme_Victors.png/40px-SetSymbolSupreme_Victors.png",
+    "name": "Supreme Victors",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Supreme_Victors_(TCG)",
+    "names_translated": {
+      "fr": "Vainqueurs Suprêmes",
+      "de": "Ultimative Sieger"
+    }
+  },
+  {
+    "series": "platinum",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/9/96/SetSymbolArceus.png/40px-SetSymbolArceus.png",
+    "name": "Arceus",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Platinum:_Arceus_(TCG)",
+    "names_translated": {
+      "de": "Arceus",
+      "it": "Arceus"
+    }
+  },
+  {
+    "series": "heartgold-soulsilver",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/3/30/SetSymbolHeartGold_and_SoulSilver.png/40px-SetSymbolHeartGold_and_SoulSilver.png",
+    "name": "HeartGold & SoulSilver",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/HeartGold_%26_SoulSilver_(TCG)",
+    "names_translated": {
+      "fr": "HeartGold & SoulSilver",
+      "de": "HeartGold & SoulSilver",
+      "it": "HeartGold & SoulSilver",
+      "pt-br": "HeartGold SoulSilver",
+      "es": "HeartGold y SoulSilver"
+    }
+  },
+  {
+    "series": "heartgold-soulsilver",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/4/42/SetSymbolUnleashed.png/40px-SetSymbolUnleashed.png",
+    "name": "Unleashed",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Unleashed_(TCG)",
+    "names_translated": {
+      "fr": "Déchaînement",
+      "de": "Entfesselt",
+      "it": "Forze Scatenate",
+      "pt-br": "Revelado",
+      "es": "Liberados"
+    }
+  },
+  {
+    "series": "heartgold-soulsilver",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/7/73/SetSymbolUndaunted.png/40px-SetSymbolUndaunted.png",
+    "name": "Undaunted",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Undaunted_(TCG)",
+    "names_translated": {
+      "fr": "Indomptable",
+      "de": "Unerschrocken",
+      "it": "Senza Paura"
+    }
+  },
+  {
+    "series": "heartgold-soulsilver",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/0/00/SetSymbolTriumphant.png/40px-SetSymbolTriumphant.png",
+    "name": "Triumphant",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Triumphant_(TCG)",
+    "names_translated": {
+      "fr": "Triomphe",
+      "de": "Triumph",
+      "it": "Battaglie Trionfali"
+    }
+  },
+  {
+    "series": "call-of-legends",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/5/5b/SetSymbolCall_of_Legends.png/40px-SetSymbolCall_of_Legends.png",
+    "name": "Call of Legends",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Call_of_Legends_(TCG)",
+    "names_translated": {
+      "fr": "L'Appel des Légendes",
+      "de": "Ruf der Legenden",
+      "it": "Richiamo delle Leggende"
+    }
+  },
+  {
+    "series": "black-white",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/6/64/SetSymbolBlack_and_White.png/40px-SetSymbolBlack_and_White.png",
+    "name": "Black & White",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Black_%26_White_(TCG)",
+    "names_translated": {
+      "fr": "Noir & Blanc",
+      "de": "Schwarz & Weiß",
+      "it": "Nero e Bianco",
+      "pt-br": "Black & White",
+      "es": "Negro y Blanco"
+    }
+  },
+  {
+    "series": "black-white",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/4/43/SetSymbolEmerging_Powers.png/40px-SetSymbolEmerging_Powers.png",
+    "name": "Emerging Powers",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Emerging_Powers_(TCG)",
+    "names_translated": {
+      "fr": "Pouvoirs Émergents",
+      "de": "Aufstreben der Mächtigen",
+      "it": "Nuove Forze",
+      "pt-br": "Poderes Emergentes",
+      "es": "Fuerzas Emergentes"
+    }
+  },
+  {
+    "series": "black-white",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/b/b3/SetSymbolNoble_Victories.png/40px-SetSymbolNoble_Victories.png",
+    "name": "Noble Victories",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Noble_Victories_(TCG)",
+    "names_translated": {
+      "fr": "Nobles Victoires",
+      "de": "Königliche Siege",
+      "it": "Vittorie Regali",
+      "pt-br": "Vitórias Nobres",
+      "es": "Nobles Victorias"
+    }
+  },
+  {
+    "series": "black-white",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/6/63/SetSymbolNext_Destinies.png/40px-SetSymbolNext_Destinies.png",
+    "name": "Next Destinies",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Next_Destinies_(TCG)",
+    "names_translated": {
+      "fr": "Destinées Futures",
+      "de": "Kommende Schicksale",
+      "it": "Destini Futuri",
+      "pt-br": "Próximos Destinos",
+      "es": "Próximos Destinos"
+    }
+  },
+  {
+    "series": "black-white",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/2/25/SetSymbolDark_Explorers.png/40px-SetSymbolDark_Explorers.png",
+    "name": "Dark Explorers",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Dark_Explorers_(TCG)",
+    "names_translated": {
+      "fr": "Explorateurs Obscurs",
+      "de": "Erforscher der Finsternis",
+      "it": "Esploratori delle Tenebre",
+      "pt-br": "Exploradores da Escuridão"
+    }
+  },
+  {
+    "series": "black-white",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/a/af/SetSymbolDragons_Exalted.png/40px-SetSymbolDragons_Exalted.png",
+    "name": "Dragons Exalted",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Dragons_Exalted_(TCG)",
+    "names_translated": {
+      "fr": "Dragons Exaltés",
+      "de": "Hoheit der Drachen",
+      "it": "Stirpe dei Draghi",
+      "pt-br": "Dragões Enaltecidos",
+      "es": "Dragones Majestuosos"
+    }
+  },
+  {
+    "series": "black-white",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/0/09/SetSymbolDragon_Vault.png/40px-SetSymbolDragon_Vault.png",
+    "name": "Dragon Vault",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Dragon_Vault_(TCG)",
+    "names_translated": {
+      "fr": "Coffre des Dragons",
+      "it": "Tesoro dei Draghi",
+      "notes:es": "Only 1 card (Cosmos Holo Salamence) from a Single Pack Blister"
+    }
+  },
+  {
+    "series": "black-white",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/a/a4/SetSymbolBoundaries_Crossed.png/40px-SetSymbolBoundaries_Crossed.png",
+    "name": "Boundaries Crossed",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Boundaries_Crossed_(TCG)",
+    "names_translated": {
+      "fr": "Frontières Franchies",
+      "de": "Überschrittene Schwellen",
+      "it": "Confini Varcati",
+      "pt-br": "Fronteiras Cruzadas",
+      "es": "Fronteras Cruzadas"
+    }
+  },
+  {
+    "series": "black-white",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/9/93/SetSymbolPlasma_Storm.png/40px-SetSymbolPlasma_Storm.png",
+    "name": "Plasma Storm",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Plasma_Storm_(TCG)",
+    "names_translated": {
+      "fr": "Tempête Plasma",
+      "de": "Plasma-Sturm",
+      "it": "Uragano Plasma",
+      "pt-br": "Tempestade de Plasma",
+      "es": "Tormenta Plasma"
+    }
+  },
+  {
+    "series": "black-white",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/4/49/SetSymbolPlasma_Freeze.png/40px-SetSymbolPlasma_Freeze.png",
+    "name": "Plasma Freeze",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Plasma_Freeze_(TCG)",
+    "names_translated": {
+      "fr": "Glaciation Plasma",
+      "de": "Plasma-Frost",
+      "it": "Glaciazione Plasma",
+      "pt-br": "Congelamento de Plasma",
+      "es": "Glaciación Plasma"
+    }
+  },
+  {
+    "series": "black-white",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/6/60/SetSymbolPlasma_Blast.png/40px-SetSymbolPlasma_Blast.png",
+    "name": "Plasma Blast",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Plasma_Blast_(TCG)",
+    "names_translated": {
+      "fr": "Explosion Plasma",
+      "de": "Plasma-Blaster",
+      "it": "Esplosione Plasma",
+      "pt-br": "Explosão de Plasma"
+    }
+  },
+  {
+    "series": "black-white",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/3/3c/SetSymbolLegendary_Treasures.png/40px-SetSymbolLegendary_Treasures.png",
+    "name": "Legendary Treasures",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Legendary_Treasures_(TCG)",
+    "names_translated": {}
+  },
+  {
+    "series": "xy",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/0/0b/SetSymbolKalos_Starter_Set.png/40px-SetSymbolKalos_Starter_Set.png",
+    "name": "Kalos Starter Set",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Kalos_Starter_Set_(TCG)",
+    "names_translated": {
+      "fr": "Bienvenue à Kalos",
+      "de": "Willkommen in Kalos",
+      "it": "Benvenuti a Kalos",
+      "ru": "Стартовый Набор Калоса",
+      "notes:es": "Only 4 cards from Theme decks"
+    }
+  },
+  {
+    "series": "xy",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/6/6b/SetSymbolXY.png/40px-SetSymbolXY.png",
+    "name": "XY",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/XY_(TCG)",
+    "names_translated": {
+      "fr": "XY",
+      "de": "XY",
+      "it": "XY",
+      "pt-br": "XY",
+      "ru": "XY",
+      "es": "XY"
+    }
+  },
+  {
+    "series": "xy",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/1/1f/SetSymbolFlashfire.png/40px-SetSymbolFlashfire.png",
+    "name": "Flashfire",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Flashfire_(TCG)",
+    "names_translated": {
+      "fr": "Étincelles",
+      "de": "Flammenmeer",
+      "it": "Fuoco Infernale",
+      "pt-br": "Flash de Fogo",
+      "ru": "Огненная Вспышка",
+      "es": "Destellos de Fuego"
+    }
+  },
+  {
+    "series": "xy",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/0/07/SetSymbolFurious_Fists.png/40px-SetSymbolFurious_Fists.png",
+    "name": "Furious Fists",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Furious_Fists_(TCG)",
+    "names_translated": {
+      "fr": "Poings Furieux",
+      "de": "Fliegende Fäuste",
+      "it": "Colpi Furiosi",
+      "pt-br": "Punhos Furiosos",
+      "ru": "Яростный Кулак",
+      "es": "Puños Furiosos"
+    }
+  },
+  {
+    "series": "xy",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/1/10/SetSymbolPhantom_Forces.png/40px-SetSymbolPhantom_Forces.png",
+    "name": "Phantom Forces",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Phantom_Forces_(TCG)",
+    "names_translated": {
+      "fr": "Vigueur Spectrale",
+      "de": "Phantomkräfte",
+      "it": "Forze Spettrali",
+      "pt-br": "Força Fantasma",
+      "ru": "Призрачные Силы",
+      "es": "Fuerzas Fantasmales"
+    }
+  },
+  {
+    "series": "xy",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/e/e3/SetSymbolPrimal_Clash.png/40px-SetSymbolPrimal_Clash.png",
+    "name": "Primal Clash",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Primal_Clash_(TCG)",
+    "names_translated": {
+      "fr": "Primo-Choc",
+      "de": "Protoschock",
+      "it": "Scontro Primordiale",
+      "pt-br": "Conflito Primitivo",
+      "ru": "Первобытная Дуэль",
+      "es": "Duelos Primigenios"
+    }
+  },
+  {
+    "series": "xy",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/0/06/SetSymbolDouble_Crisis.png/40px-SetSymbolDouble_Crisis.png",
+    "name": "Double Crisis",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Double_Crisis_(TCG)",
+    "names_translated": {
+      "fr": "Double Danger",
+      "pt-br": "Crise Dupla"
+    }
+  },
+  {
+    "series": "xy",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/b/b1/SetSymbolRoaring_Skies.png/40px-SetSymbolRoaring_Skies.png",
+    "name": "Roaring Skies",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Roaring_Skies_(TCG)",
+    "names_translated": {
+      "fr": "Ciel Rugissant",
+      "de": "Drachenleuchten",
+      "it": "Furie Volanti",
+      "pt-br": "Céus Estrondosos",
+      "ru": "Грохочущие Небеса",
+      "es": "Cielos Rugientes"
+    }
+  },
+  {
+    "series": "xy",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/4/4e/SetSymbolAncient_Origins.png/40px-SetSymbolAncient_Origins.png",
+    "name": "Ancient Origins",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Ancient_Origins_(TCG)",
+    "names_translated": {
+      "fr": "Origines Antiques",
+      "de": "Ewiger Anfang",
+      "it": "Antiche Origini",
+      "pt-br": "Origens Ancestrais",
+      "ru": "Древние Истоки",
+      "es": "Antiguos Orígenes"
+    }
+  },
+  {
+    "series": "xy",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/0/0f/SetSymbolBREAKthrough.png/40px-SetSymbolBREAKthrough.png",
+    "name": "BREAKthrough",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/BREAKthrough_(TCG)",
+    "names_translated": {
+      "fr": "Impulsion TURBO",
+      "de": "TURBOstart",
+      "it": "Turboblitz",
+      "pt-br": "Turbo Revolução",
+      "ru": "Турбо Импульс",
+      "es": "TURBOimpulso"
+    }
+  },
+  {
+    "series": "xy",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/d/d4/SetSymbolBREAKpoint.png/40px-SetSymbolBREAKpoint.png",
+    "name": "BREAKpoint",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/BREAKpoint_(TCG)",
+    "names_translated": {
+      "fr": "Rupture TURBO",
+      "de": "TURBOfieber",
+      "it": "Turbocrash",
+      "pt-br": "Turbo Colisão",
+      "es": "TURBOlímite"
+    }
+  },
+  {
+    "series": "xy",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/5/54/SetSymbolGenerations.png/40px-SetSymbolGenerations.png",
+    "name": "Generations",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Generations_(TCG)",
+    "names_translated": {
+      "fr": "Générations",
+      "de": "Generationen",
+      "it": "Generazioni",
+      "pt-br": "Gerações",
+      "es": "Generaciones"
+    }
+  },
+  {
+    "series": "xy",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/f/f2/SetSymbolFates_Collide.png/40px-SetSymbolFates_Collide.png",
+    "name": "Fates Collide",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Fates_Collide_(TCG)",
+    "names_translated": {
+      "fr": "Impact des Destins",
+      "de": "Schicksalsschmiede",
+      "it": "Destini Incrociati",
+      "pt-br": "Fusão de Destinos",
+      "es": "Destinos Enfrentados"
+    }
+  },
+  {
+    "series": "xy",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/7/7b/SetSymbolSteam_Siege.png/40px-SetSymbolSteam_Siege.png",
+    "name": "Steam Siege",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Steam_Siege_(TCG)",
+    "names_translated": {
+      "fr": "Offensive Vapeur",
+      "de": "Dampfkessel",
+      "it": "Vapori Accesi",
+      "pt-br": "Cerco de Vapor",
+      "es": "Asedio de Vapor"
+    }
+  },
+  {
+    "series": "xy",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/2/2b/SetSymbolEvolutions.png/40px-SetSymbolEvolutions.png",
+    "name": "Evolutions",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Evolutions_(TCG)",
+    "names_translated": {
+      "fr": "Évolutions",
+      "de": "Evolution",
+      "it": "Evoluzioni",
+      "es": "Evoluciones"
+    }
+  },
+  {
+    "series": "sun-moon",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/c/cb/SetSymbolSun_and_Moon.png/40px-SetSymbolSun_and_Moon.png",
+    "name": "Sun & Moon",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Sun_%26_Moon_(TCG)",
+    "names_translated": {
+      "fr": "Soleil et Lune",
+      "de": "Sonne & Mond",
+      "it": "Sole e Luna",
+      "pt-br": "Sol e Lua",
+      "es": "Sol y Luna"
+    }
+  },
+  {
+    "series": "sun-moon",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/6/68/SetSymbolGuardians_Rising.png/40px-SetSymbolGuardians_Rising.png",
+    "name": "Guardians Rising",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Guardians_Rising_(TCG)",
+    "names_translated": {
+      "fr": "Gardiens Ascendants",
+      "de": "Stunde der Wächter",
+      "it": "Guardiani Nascenti",
+      "pt-br": "Guardiões Ascendentes",
+      "es": "Albor de Guardianes"
+    }
+  },
+  {
+    "series": "sun-moon",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/5/5f/SetSymbolBurning_Shadows.png/40px-SetSymbolBurning_Shadows.png",
+    "name": "Burning Shadows",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Burning_Shadows_(TCG)",
+    "names_translated": {
+      "fr": "Ombres Ardentes",
+      "de": "Nacht in Flammen",
+      "it": "Ombre Infuocate",
+      "pt-br": "Sombras Ardentes",
+      "es": "Sombras Ardientes"
+    }
+  },
+  {
+    "series": "sun-moon",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/5/54/SetSymbolShining_Legends.png/40px-SetSymbolShining_Legends.png",
+    "name": "Shining Legends",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Shining_Legends_(TCG)",
+    "names_translated": {
+      "fr": "Légendes Brillantes",
+      "de": "Schimmernde Legenden",
+      "it": "Leggende Iridescenti",
+      "pt-br": "Lendas Luminescentes",
+      "es": "Leyendas Luminosas"
+    }
+  },
+  {
+    "series": "sun-moon",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/4/46/SetSymbolCrimson_Invasion.png/40px-SetSymbolCrimson_Invasion.png",
+    "name": "Crimson Invasion",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Crimson_Invasion_(TCG)",
+    "names_translated": {
+      "fr": "Invasion Carmin",
+      "de": "Aufziehen der Sturmröte",
+      "it": "Invasione Scarlatta",
+      "pt-br": "Invasão Carmim",
+      "es": "Invasión Carmesí"
+    }
+  },
+  {
+    "series": "sun-moon",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/b/b8/SetSymbolUltra_Prism.png/40px-SetSymbolUltra_Prism.png",
+    "name": "Ultra Prism",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Ultra_Prism_(TCG)",
+    "names_translated": {
+      "fr": "Ultra-Prisme",
+      "de": "Ultra-Prisma",
+      "it": "Ultraprisma",
+      "pt-br": "Ultra Prisma",
+      "es": "Ultraprisma"
+    }
+  },
+  {
+    "series": "sun-moon",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/8/8a/SetSymbolForbidden_Light.png/40px-SetSymbolForbidden_Light.png",
+    "name": "Forbidden Light",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Forbidden_Light_(TCG)",
+    "names_translated": {
+      "fr": "Lumière Interdite",
+      "de": "Grauen der Lichtfinsternis",
+      "it": "Apocalisse di Luce",
+      "pt-br": "Luz Proibida",
+      "es": "Luz Prohibida"
+    }
+  },
+  {
+    "series": "sun-moon",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/4/4a/SetSymbolCelestial_Storm.png/40px-SetSymbolCelestial_Storm.png",
+    "name": "Celestial Storm",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Celestial_Storm_(TCG)",
+    "names_translated": {
+      "fr": "Tempête Céleste",
+      "de": "Sturm am Firmament",
+      "it": "Tempesta Astrale",
+      "pt-br": "Tempestade Celestial",
+      "es": "Tormenta Celestial"
+    }
+  },
+  {
+    "series": "sun-moon",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/4/43/SetSymbolDragon_Majesty.png/40px-SetSymbolDragon_Majesty.png",
+    "name": "Dragon Majesty",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Dragon_Majesty_(TCG)",
+    "names_translated": {
+      "fr": "Majesté des Dragons",
+      "de": "Majestät der Drachen",
+      "it": "Trionfo dei Draghi",
+      "pt-br": "Dragões Soberanos",
+      "es": "Majestad de Dragones"
+    }
+  },
+  {
+    "series": "sun-moon",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/c/c8/SetSymbolLost_Thunder.png/40px-SetSymbolLost_Thunder.png",
+    "name": "Lost Thunder",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Lost_Thunder_(TCG)",
+    "names_translated": {
+      "fr": "Tonnerre Perdu",
+      "de": "Echo des Donners",
+      "it": "Tuoni Perduti",
+      "pt-br": "Trovões Perdidos",
+      "es": "Truenos Perdidos"
+    }
+  },
+  {
+    "series": "sun-moon",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/2/27/SetSymbolTeam_Up.png/40px-SetSymbolTeam_Up.png",
+    "name": "Team Up",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Team_Up_(TCG)",
+    "names_translated": {
+      "fr": "Duo de Choc",
+      "de": "Teams sind Trumpf",
+      "it": "Gioco di Squadra",
+      "pt-br": "União de Aliados",
+      "es": "Unión de Aliados"
+    }
+  },
+  {
+    "series": "sun-moon",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/6/6a/SetSymbolDetective_Pikachu.png/40px-SetSymbolDetective_Pikachu.png",
+    "name": "Detective Pikachu",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Detective_Pikachu_(TCG)",
+    "names_translated": {
+      "fr": "Détective Pikachu",
+      "de": "Meisterdetektiv Pikachu",
+      "it": "Detective Pikachu",
+      "pt-br": "Detetive Pikachu",
+      "es": "Detective Pikachu"
+    }
+  },
+  {
+    "series": "sun-moon",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/e/eb/SetSymbolUnbroken_Bonds.png/40px-SetSymbolUnbroken_Bonds.png",
+    "name": "Unbroken Bonds",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Unbroken_Bonds_(TCG)",
+    "names_translated": {
+      "fr": "Alliance Infaillible",
+      "de": "Kräfte im Einklang",
+      "it": "Legami Inossidabili",
+      "pt-br": "Elos Inquebráveis",
+      "es": "Vínculos Indestructibles"
+    }
+  },
+  {
+    "series": "sun-moon",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/e/e5/SetSymbolUnified_Minds.png/40px-SetSymbolUnified_Minds.png",
+    "name": "Unified Minds",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Unified_Minds_(TCG)",
+    "names_translated": {
+      "fr": "Harmonie des Esprits",
+      "de": "Bund der Gleichgesinnten",
+      "it": "Sintonia Mentale",
+      "pt-br": "Sintonia Mental",
+      "es": "Mentes Unidas"
+    }
+  },
+  {
+    "series": "sun-moon",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/1/14/SetSymbolHidden_Fates.png/40px-SetSymbolHidden_Fates.png",
+    "name": "Hidden Fates",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Hidden_Fates_(TCG)",
+    "names_translated": {
+      "fr": "Destinées Occultes",
+      "de": "Verborgenes Schicksal",
+      "it": "Destino Sfuggente",
+      "pt-br": "Destinos Ocultos",
+      "es": "Destinos Ocultos"
+    }
+  },
+  {
+    "series": "sun-moon",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/3/3a/SetSymbolCosmic_Eclipse.png/40px-SetSymbolCosmic_Eclipse.png",
+    "name": "Cosmic Eclipse",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Cosmic_Eclipse_(TCG)",
+    "names_translated": {
+      "fr": "Éclipse Cosmique",
+      "de": "Welten im Wandel",
+      "it": "Eclissi Cosmica",
+      "pt-br": "Eclipse Cósmico",
+      "es": "Eclipse Cósmico"
+    }
+  },
+  {
+    "series": "sword-shield",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/5/51/SetSymbolSword_and_Shield.png/40px-SetSymbolSword_and_Shield.png",
+    "name": "Sword & Shield",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Sword_%26_Shield_(TCG)",
+    "names_translated": {
+      "fr": "Épée et Bouclier",
+      "de": "Schwert & Schild",
+      "it": "Spada e Scudo",
+      "pt-br": "Espada e Escudo",
+      "es": "Espada y Escudo"
+    }
+  },
+  {
+    "series": "sword-shield",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/0/0f/SetSymbolRebel_Clash.png/40px-SetSymbolRebel_Clash.png",
+    "name": "Rebel Clash",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Rebel_Clash_(TCG)",
+    "names_translated": {
+      "fr": "Clash des Rebelles",
+      "de": "Clash der Rebellen",
+      "it": "Fragore Ribelle",
+      "pt-br": "Rixa Rebelde",
+      "es": "Choque Rebelde"
+    }
+  },
+  {
+    "series": "sword-shield",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/d/d9/SetSymbolDarkness_Ablaze.png/40px-SetSymbolDarkness_Ablaze.png",
+    "name": "Darkness Ablaze",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Darkness_Ablaze_(TCG)",
+    "names_translated": {
+      "fr": "Ténèbres Embrasées",
+      "de": "Flammende Finsternis",
+      "it": "Fiamme Oscure",
+      "pt-br": "Escuridão Incandescente",
+      "es": "Oscuridad Incandescente"
+    }
+  },
+  {
+    "series": "sword-shield",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/4/4d/SetSymbolChampion_Path.png/40px-SetSymbolChampion_Path.png",
+    "name": "Champion's Path",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Champion%27s_Path_(TCG)",
+    "names_translated": {
+      "fr": "La Voie du Maître",
+      "de": "Weg des Champs",
+      "it": "Futuri Campioni",
+      "pt-br": "Caminho do Campeão",
+      "es": "Camino de Campeones"
+    }
+  },
+  {
+    "series": "sword-shield",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/9/9b/SetSymbolVivid_Voltage.png/40px-SetSymbolVivid_Voltage.png",
+    "name": "Vivid Voltage",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Vivid_Voltage_(TCG)",
+    "names_translated": {
+      "fr": "Voltage Éclatant",
+      "de": "Farbenschock",
+      "it": "Voltaggio Sfolgorante",
+      "pt-br": "Voltagem Vívida",
+      "es": "Voltaje Vívido"
+    }
+  },
+  {
+    "series": "sword-shield",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/6/64/SetSymbolShining_Fates.png/40px-SetSymbolShining_Fates.png",
+    "name": "Shining Fates",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Shining_Fates_(TCG)",
+    "names_translated": {
+      "fr": "Destinées Radieuses",
+      "de": "Glänzendes Schicksal",
+      "it": "Destino Splendente",
+      "pt-br": "Destinos Brilhantes",
+      "es": "Destinos Brillantes"
+    }
+  },
+  {
+    "series": "sword-shield",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/1/16/SetSymbolBattle_Styles.png/40px-SetSymbolBattle_Styles.png",
+    "name": "Battle Styles",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Battle_Styles_(TCG)",
+    "names_translated": {
+      "fr": "Styles de Combat",
+      "de": "Kampfstile",
+      "it": "Stili di Lotta",
+      "pt-br": "Estilos de Batalha",
+      "es": "Estilos de Combate"
+    }
+  },
+  {
+    "series": "sword-shield",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/0/02/SetSymbolChilling_Reign.png/40px-SetSymbolChilling_Reign.png",
+    "name": "Chilling Reign",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Chilling_Reign_(TCG)",
+    "names_translated": {
+      "fr": "Règne de Glace",
+      "de": "Schaurige Herrschaft",
+      "it": "Regno Glaciale",
+      "pt-br": "Reinado Arrepiante",
+      "es": "Reinado Escalofriante"
+    }
+  },
+  {
+    "series": "sword-shield",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/c/cb/SetSymbolEvolving_Skies.png/40px-SetSymbolEvolving_Skies.png",
+    "name": "Evolving Skies",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Evolving_Skies_(TCG)",
+    "names_translated": {
+      "fr": "Évolution Céleste",
+      "de": "Drachenwandel",
+      "it": "Evoluzioni Eteree",
+      "pt-br": "Céus em Evolução",
+      "es": "Cielos Evolutivos"
+    }
+  },
+  {
+    "series": "sword-shield",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/3/32/SetSymbolCelebrations.png/40px-SetSymbolCelebrations.png",
+    "name": "Celebrations",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Celebrations_(TCG)",
+    "names_translated": {
+      "fr": "Célébrations",
+      "de": "Celebrations",
+      "it": "Gran Festa",
+      "pt-br": "Celebrações",
+      "es": "Celebraciones"
+    }
+  },
+  {
+    "series": "sword-shield",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/7/79/SetSymbolFusion_Strike.png/40px-SetSymbolFusion_Strike.png",
+    "name": "Fusion Strike",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Fusion_Strike_(TCG)",
+    "names_translated": {
+      "fr": "Poing de Fusion",
+      "de": "Fusionsangriff",
+      "it": "Colpo Fusione",
+      "pt-br": "Golpe Fusão",
+      "es": "Golpe Fusión"
+    }
+  },
+  {
+    "series": "sword-shield",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/0/00/SetSymbolBrilliant_Stars.png/40px-SetSymbolBrilliant_Stars.png",
+    "name": "Brilliant Stars",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Brilliant_Stars_(TCG)",
+    "names_translated": {
+      "fr": "Stars Étincelantes",
+      "de": "Strahlende Sterne",
+      "it": "Astri Lucenti",
+      "pt-br": "Astros Cintilantes",
+      "es": "Astros Brillantes"
+    }
+  },
+  {
+    "series": "sword-shield",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/7/7b/SetSymbolAstral_Radiance.png/40px-SetSymbolAstral_Radiance.png",
+    "name": "Astral Radiance",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Astral_Radiance_(TCG)",
+    "names_translated": {
+      "fr": "Astres Radieux",
+      "de": "Astralglanz",
+      "it": "Lucentezza Siderale",
+      "pt-br": "Estrelas Radiantes",
+      "es": "Resplandor Astral"
+    }
+  },
+  {
+    "series": "sword-shield",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/0/01/SetSymbolPok%C3%A9mon_GO.png/40px-SetSymbolPok%C3%A9mon_GO.png",
+    "name": "Pokémon GO",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_GO_(TCG)",
+    "names_translated": {
+      "fr": "Pokémon GO",
+      "de": "Pokémon GO",
+      "it": "Pokémon GO",
+      "pt-br": "Pokémon GO",
+      "es": "Pokémon GO"
+    }
+  },
+  {
+    "series": "sword-shield",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/7/7e/SetSymbolLost_Origin.png/40px-SetSymbolLost_Origin.png",
+    "name": "Lost Origin",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Lost_Origin_(TCG)",
+    "names_translated": {
+      "fr": "Origine Perdue",
+      "de": "Verlorener Ursprung",
+      "it": "Origine Perduta",
+      "pt-br": "Origem Perdida",
+      "es": "Origen Perdido"
+    }
+  },
+  {
+    "series": "sword-shield",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/5/55/SetSymbolSilver_Tempest.png/40px-SetSymbolSilver_Tempest.png",
+    "name": "Silver Tempest",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Silver_Tempest_(TCG)",
+    "names_translated": {
+      "fr": "Tempête Argentée",
+      "de": "Silberne Sturmwinde",
+      "it": "Tempesta Argentata",
+      "pt-br": "Tempestade Prateada",
+      "es": "Tempestad Plateada"
+    }
+  },
+  {
+    "series": "sword-shield",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/2/21/SetSymbolCrown_Zenith.png/40px-SetSymbolCrown_Zenith.png",
+    "name": "Crown Zenith",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Crown_Zenith_(TCG)",
+    "names_translated": {
+      "fr": "Zénith Suprême",
+      "de": "Zenit der Könige",
+      "it": "Zenit Regale",
+      "pt-br": "Realeza Absoluta",
+      "es": "Cenit Supremo"
+    }
+  },
+  {
+    "series": "scarlet-violet",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/9/9c/SetSymbolScarlet_and_Violet.png/40px-SetSymbolScarlet_and_Violet.png",
+    "name": "Scarlet & Violet",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Scarlet_%26_Violet_(TCG)",
+    "names_translated": {
+      "fr": "Écarlate et Violet",
+      "de": "Karmesin & Purpur",
+      "it": "Scarlatto e Violetto",
+      "pt-br": "Escarlate e Violeta",
+      "es": "Escarlata y Púrpura"
+    }
+  },
+  {
+    "series": "scarlet-violet",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/8/8d/SetSymbolPaldea_Evolved.png/40px-SetSymbolPaldea_Evolved.png",
+    "name": "Paldea Evolved",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Paldea_Evolved_(TCG)",
+    "names_translated": {
+      "fr": "Évolutions à Paldea",
+      "de": "Entwicklungen in Paldea",
+      "it": "Evoluzioni a Paldea",
+      "pt-br": "Evoluções em Paldea",
+      "es": "Evoluciones en Paldea"
+    }
+  },
+  {
+    "series": "scarlet-violet",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/3/3d/SetSymbolObsidian_Flames.png/40px-SetSymbolObsidian_Flames.png",
+    "name": "Obsidian Flames",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Obsidian_Flames_(TCG)",
+    "names_translated": {
+      "fr": "Flammes Obsidiennes",
+      "de": "Obsidianflammen",
+      "it": "Ossidiana Infuocata",
+      "pt-br": "Obsidiana em Chamas",
+      "es": "Llamas Obsidianas"
+    }
+  },
+  {
+    "series": "scarlet-violet",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/7/71/SetSymbol151.png/40px-SetSymbol151.png",
+    "name": "151",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/151_(TCG)",
+    "names_translated": {
+      "fr": "151",
+      "de": "151",
+      "it": "151",
+      "pt-br": "151",
+      "es": "151"
+    }
+  },
+  {
+    "series": "scarlet-violet",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/f/fa/SetSymbolParadox_Rift.png/40px-SetSymbolParadox_Rift.png",
+    "name": "Paradox Rift",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Paradox_Rift_(TCG)",
+    "names_translated": {
+      "fr": "Faille Paradoxe",
+      "de": "Paradoxrift",
+      "it": "Paradosso Temporale",
+      "pt-br": "Fenda Paradoxal",
+      "es": "Brecha Paradójica"
+    }
+  },
+  {
+    "series": "scarlet-violet",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/e/ea/SetSymbolPaldean_Fates.png/40px-SetSymbolPaldean_Fates.png",
+    "name": "Paldean Fates",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Paldean_Fates_(TCG)",
+    "names_translated": {
+      "fr": "Destinées de Paldea",
+      "de": "Paldeas Schicksale",
+      "it": "Destino di Paldea",
+      "pt-br": "Destinos de Paldea",
+      "es": "Destinos de Paldea"
+    }
+  },
+  {
+    "series": "scarlet-violet",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/3/33/SetSymbolTemporal_Forces.png/40px-SetSymbolTemporal_Forces.png",
+    "name": "Temporal Forces",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Temporal_Forces_(TCG)",
+    "names_translated": {
+      "fr": "Forces Temporelles",
+      "de": "Gewalten der Zeit",
+      "it": "Cronoforze",
+      "pt-br": "Forças Temporais",
+      "es": "Fuerzas Temporales"
+    }
+  },
+  {
+    "series": "scarlet-violet",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/6/65/SetSymbolTwilight_Masquerade.png/40px-SetSymbolTwilight_Masquerade.png",
+    "name": "Twilight Masquerade",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Twilight_Masquerade_(TCG)",
+    "names_translated": {
+      "fr": "Mascarade Crépusculaire",
+      "de": "Maskerade im Zwielicht",
+      "it": "Crepuscolo Mascherato",
+      "pt-br": "Máscaras do Crepúsculo",
+      "es": "Mascarada Crepuscular"
+    }
+  },
+  {
+    "series": "scarlet-violet",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/7/74/SetSymbolShrouded_Fable.png/40px-SetSymbolShrouded_Fable.png",
+    "name": "Shrouded Fable",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Shrouded_Fable_(TCG)",
+    "names_translated": {
+      "fr": "Fable Nébuleuse",
+      "de": "Nebel der Sagen",
+      "it": "Segreto Fiabesco",
+      "pt-br": "Fábulas Nebulosas",
+      "es": "Fábula Sombría"
+    }
+  },
+  {
+    "series": "scarlet-violet",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/f/f1/SetSymbolStellar_Crown.png/40px-SetSymbolStellar_Crown.png",
+    "name": "Stellar Crown",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Stellar_Crown_(TCG)",
+    "names_translated": {
+      "fr": "Couronne Stellaire",
+      "de": "Stellarkrone",
+      "it": "Corona Astrale",
+      "pt-br": "Coroa Estelar",
+      "es": "Corona Astral"
+    }
+  },
+  {
+    "series": "scarlet-violet",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/d/de/SetSymbolSurging_Sparks.png/40px-SetSymbolSurging_Sparks.png",
+    "name": "Surging Sparks",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Surging_Sparks_(TCG)",
+    "names_translated": {
+      "fr": "Étincelles Déferlantes",
+      "de": "Stürmische Funken",
+      "it": "Scintille Folgoranti",
+      "pt-br": "Fagulhas Impetuosas",
+      "es": "Chispas Fulgurantes"
+    }
+  },
+  {
+    "series": "scarlet-violet",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/a/a2/SetSymbolPrismatic_Evolutions.png/40px-SetSymbolPrismatic_Evolutions.png",
+    "name": "Prismatic Evolutions",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Prismatic_Evolutions_(TCG)",
+    "names_translated": {
+      "fr": "Évolutions Prismatiques",
+      "de": "Prismatische Entwicklungen",
+      "it": "Evoluzioni Prismatiche",
+      "pt-br": "Evoluções Prismáticas",
+      "es": "Evoluciones Prismáticas"
+    }
+  },
+  {
+    "series": "scarlet-violet",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/5/51/SetSymbolJourney_Together.png/40px-SetSymbolJourney_Together.png",
+    "name": "Journey Together",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Journey_Together_(TCG)",
+    "names_translated": {
+      "fr": "Aventures Ensemble",
+      "de": "Reisegefährten",
+      "it": "Avventure Insieme",
+      "pt-br": "Amigos de Jornada",
+      "es-mx": "Aventuras Compartidas",
+      "es": "Juntos de Aventuras"
+    }
+  },
+  {
+    "series": "scarlet-violet",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/d/d9/SetSymbolDestined_Rivals.png/40px-SetSymbolDestined_Rivals.png",
+    "name": "Destined Rivals",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Destined_Rivals_(TCG)",
+    "names_translated": {
+      "fr": "Rivalités Destinées",
+      "de": "Ewige Rivalen",
+      "it": "Rivali Predestinati",
+      "pt-br": "Rivais Predestinados",
+      "es-mx": "Rivales Predestinados",
+      "es": "Rivales Predestinados"
+    }
+  }
+]

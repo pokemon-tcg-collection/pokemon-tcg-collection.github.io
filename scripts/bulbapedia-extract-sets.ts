@@ -13,7 +13,7 @@ import type { SupportedLanguages } from '@tcgdex/sdk'
 import TCGdex from '@tcgdex/sdk'
 
 // -------------------------------------------------------------------------
-// generic
+// document retrieval and DOM parsing
 
 const urlBase = 'https://bulbapedia.bulbagarden.net/wiki/'
 const headers = {
@@ -22,14 +22,24 @@ const headers = {
 }
 
 async function fetchAndParseToDocument(url: string) {
-  const response = await fetch(url, { headers })
-  const data = await response.text()
+  let data = undefined
+  // try cache first else fetch
+  if (fetchTextCache.has(url)) {
+    data = fetchTextCache.get(url)
+  }
+  if (data === undefined) {
+    const response = await fetch(url, { headers })
+    data = await response.text()
+    fetchTextCache.set(url, data)
+  }
 
   const dom = new JSDOM(data, { url, contentType: 'text/html' })
   const document = dom.window.document
 
   return document
 }
+
+const fetchTextCache: Map<string, string> = new Map<string, string>()
 
 // -------------------------------------------------------------------------
 // types
@@ -1306,6 +1316,13 @@ function parseSetsZHCN(document: Document) {
 // -------------------------------------------------------------------------
 // TCGdex mappings
 
+/**
+ * Map a Bulbapedia set name to the TCGdex set id (with certain known transformation/mapping rules).
+ *
+ * @param mapTCGdexSetNameToID mapping of TCGdex set name to id
+ * @param setName a set name to retrieve the TCGdex set id for
+ * @returns resolved TCGdex set id (if found else `undefined`) and set search name (may be modified to match TCGdex set name)
+ */
 function getTCGdexSetID(
   mapTCGdexSetNameToID: Map<string, string>,
   setName: string,
@@ -1313,8 +1330,10 @@ function getTCGdexSetID(
   let name = setName
   let id = mapTCGdexSetNameToID.get(name)
 
+  // check common prefixes
   if (id === undefined) {
     const prefixes = [
+      'Mega Evolution—',
       'Black & White—',
       'Diamond & Pearl—',
       'Scarlet & Violet—',
@@ -1335,20 +1354,35 @@ function getTCGdexSetID(
     id = mapTCGdexSetNameToID.get(name)
   }
 
+  // known special cases
   if (id === undefined) {
+    // reset
+    name = setName
+
     if (name.startsWith("McDonald's Collection ")) {
       name = name.replace("McDonald's", "Macdonald's")
+      // NOTE that TCGdex both has "McDonald's Collection" and "Promo McDonald's" names
+      // "Promo" for French, the other for international releases
     } else if (name === 'Best of Game') {
       name = 'Best of game'
     } else if (name === 'HeartGold & SoulSilver') {
       name = 'HeartGold SoulSilver'
+    } else if (name === 'Pokémon Futsal') {
+      // NOTE: release of future futsal sets might need fixing here
+      name = 'Pokémon Futsal 2020'
     }
     id = mapTCGdexSetNameToID.get(name)
   }
 
-  return [id, name]
+  return [id, name] as const
 }
 
+/**
+ * Build a mapping of set name to id using the TCGdex API.
+ *
+ * @param language TCGdex language code
+ * @returns mapping of TCGdex set name to TCGdex set id
+ */
 async function getTCGdexSets(language: string = 'en') {
   const tcgdex = new TCGdex(language as SupportedLanguages)
 
@@ -1368,7 +1402,15 @@ async function getTCGdexSets(language: string = 'en') {
   return mapTCGdexSetNameToID
 }
 
-/** build lookup of tcgdex set id to tcgdex series ids */
+/**
+ * Build a lookup of TCGdex set id to TCGdex series ids.
+ *
+ * Lookup is `set.id` to (`serie.name` + `serie.id`).
+ *
+ * @param tcgdex TCGdex API adapter
+ * @param delay nice request delay for parallel requests to TCGdex API
+ * @returns mapping of TCGdex set id to tuple of TCGdex series name and id, `undefined` if the was some set id collision
+ */
 async function _getSetSeriesInfoMap(tcgdex: TCGdex, delay: number | undefined = 250) {
   const series = await tcgdex.serie.list()
   const mapSetSeriesStuff = (
@@ -1394,7 +1436,15 @@ async function _getSetSeriesInfoMap(tcgdex: TCGdex, delay: number | undefined = 
 
 // + approx mapping between Bulbapedia and TCGdex API
 // (japanese might have some smaller series that are part of others?)
-async function getTCGdexSeriesEN(
+/**
+ * Generate mapping of Bulbapedia series to TCGdex series. Uses the list of sets in a series that can be more easily mapped to then derive the series that should be equivalent or at least be similar based on shared sets.
+ *
+ * @param mapTCGdexSetNameToID mapping of TCGdex set names to their id, can be `undefined` to automaticall be retrieve by `getTCGdexSets`
+ * @param bulbapediaSetInfo list of Bulbapedia set infos, if `undefined` will be fetch again with `parseSetsEN`
+ * @param language language for TCGdex API (`en`)
+ * @returns mapping of bulbapedia series id to list of TCGdex series ids, both sides may be undefined/empty to account for series only defined by one but not the other
+ */
+export async function getTCGdexSeriesEN(
   mapTCGdexSetNameToID: Map<string, string> | undefined = undefined,
   bulbapediaSetInfo: SetInfoFullEN[] | undefined = undefined,
   language: string = 'en',
@@ -1491,8 +1541,12 @@ async function getTCGdexSeriesEN(
 
 // -------------------------------------------------------------------------
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-async function _checkTCGdexSetIDMapping() {
+/**
+ * Test mapping between Bulbapedia and TCGdex sets.
+ *
+ * @see {@link getTCGdexSetID} the actual set name mapper
+ */
+export async function _checkTCGdexSetIDMapping() {
   const mapTCGdexSetNameToID = await getTCGdexSets()
   if (mapTCGdexSetNameToID === undefined) {
     console.error('Unable to get TCGdex set data')
@@ -1518,17 +1572,24 @@ async function _checkTCGdexSetIDMapping() {
     (name) => found.find(([, , efn]) => efn === name) === undefined,
   )
 
-  console.log('found', found)
-  console.log('missing', missing.sort())
-  console.log('candidates', candidates.sort())
+  console.log('found mappings between Bulbapedia and TCGdex', found)
+  console.log('no match/missing in TCGdex', missing.sort())
+  console.log('candidates without match in TCGdex', candidates.sort())
   console.log(
     `Found: ${found.length}, Missing: ${missing.length}, Remaining Condidates: ${candidates.length}`,
   )
 }
 
 // TODO: maybe better to use set mapping to build series mapping
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-async function _checkTCGdexSeriesIDMapping() {
+/**
+ * Mapping of Bulbapedia to TCGdex series. Will try to use the series names only.
+ *
+ * NOTE: maybe not use this as it is not as successful as {@link getTCGdexSeriesEN}.
+ *
+ * @see {@link _checkTCGdexSeriesIDMappingBySets}
+ * @see {@link getTCGdexSeriesEN} better mapping using the sets contained in each series
+ */
+export async function _checkTCGdexSeriesIDMapping() {
   console.log('[bulbapedia] mapSeriesRawEN', mapSeriesRawEN)
 
   const tcgdex = new TCGdex('en' as SupportedLanguages)
@@ -1570,8 +1631,12 @@ async function _checkTCGdexSeriesIDMapping() {
   )
 }
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-async function _checkTCGdexSeriesIDMappingBySets() {
+/**
+ * Only for outputting the matches between Bulbapedia and TCGdex series. Uses matching of sets to find similar series.
+ *
+ * @see {@link getTCGdexSeriesEN} actual matching method
+ */
+export async function _checkTCGdexSeriesIDMappingBySets() {
   const foundMapping = await getTCGdexSeriesEN()
   console.log(foundMapping)
 }

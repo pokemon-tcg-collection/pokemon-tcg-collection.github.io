@@ -2235,7 +2235,8 @@
       "secret": 36
     },
     "release_date": "November 14, 2025",
-    "abbrev": "PFL"
+    "abbrev": "PFL",
+    "tcgdex_id": "me02"
   },
   {
     "series": "mega-evolution",
@@ -2911,7 +2912,8 @@
       "cards": 5
     },
     "release_date": "September 11, 2020",
-    "abbrev": "FUT20"
+    "abbrev": "FUT20",
+    "tcgdex_id": "fut2020"
   },
   {
     "series": "other-misc",

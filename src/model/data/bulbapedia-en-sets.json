@@ -2227,7 +2227,7 @@
     "no": "2",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/7/7f/SetSymbolPhantasmal_Flames.png/40px-SetSymbolPhantasmal_Flames.png",
     "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/f/fa/ME2_Logo_EN.png/150px-ME2_Logo_EN.png",
-    "name": "Phantasmal Flames",
+    "name": "Mega Evolution—Phantasmal Flames",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Phantasmal_Flames_(TCG)",
     "type": "main-series",
     "cards_stats": {
@@ -2235,8 +2235,24 @@
       "secret": 36
     },
     "release_date": "November 14, 2025",
-    "abbrev": "PFL",
-    "tcgdex_id": "me02"
+    "abbrev": "PFL"
+  },
+  {
+    "series": "mega-evolution",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "2.5",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/0/0e/SetSymbolAscended_Heroes.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/b/b9/ME2.5_Logo_EN.png/150px-ME2.5_Logo_EN.png",
+    "name": "Mega Evolution—Ascended Heroes",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Ascended_Heroes_(TCG)",
+    "type": "special",
+    "cards_stats": {
+      "cards": 217,
+      "secret": 73
+    },
+    "release_date": "January 30, 2026",
+    "abbrev": "ASC"
   },
   {
     "series": "basic-energy",

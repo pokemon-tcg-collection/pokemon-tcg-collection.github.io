@@ -20,7 +20,7 @@
     "build-only": "vite build",
     "type-check": "vue-tsc --build",
     "lint": "eslint . --fix",
-    "format": "prettier --write src/",
+    "format": "prettier --write src/ scripts/",
     "generate-pwa-assets": "pwa-assets-generator --preset minimal-2023 public/logo.png"
   },
   "dependencies": {

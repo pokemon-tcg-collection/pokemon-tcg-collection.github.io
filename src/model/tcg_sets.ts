@@ -52,10 +52,12 @@ export const SERIES = [
 
 const { default: BulbapediaSetsEN } = await import('./data/bulbapedia-en-sets.json')
 const { default: BulbapediaSetsJA } = await import('./data/bulbapedia-ja-sets.json')
+const { default: BulbapediaSetsZHCN } = await import('./data/bulbapedia-zh-cn-sets.json')
 
 export const SETS = [
   // NOTE: this template literal string interpolation stuff does not work with typescript as intended
   ...BulbapediaSetsEN.map((set) => ({ ...set, id: `${set.language}:${set.abbrev}` }) as const),
   // TODO: no abbrev for JA sets?!
   ...BulbapediaSetsJA.map((set, idx) => ({ ...set, id: `${set.language}:${idx}` }) as const),
+  ...BulbapediaSetsZHCN.map((set, idx) => ({ ...set, id: `${set.language}:${idx}` }) as const),
 ] as const

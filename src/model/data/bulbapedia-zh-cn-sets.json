@@ -1,0 +1,295 @@
+[
+  {
+    "series": "sun-moon",
+    "series_type": "main-series",
+    "language": "zh-cn",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/d/dc/SetSymbolCSM1a.png/40px-SetSymbolCSM1a.png",
+    "name": "Storming Emergence: Radiant",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Storming_Emergence_(ATCG)",
+    "name_original": "横空出世 赫"
+  },
+  {
+    "series": "sun-moon",
+    "series_type": "main-series",
+    "language": "zh-cn",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/e/ea/SetSymbolCSM1b.png/40px-SetSymbolCSM1b.png",
+    "name": "Storming Emergence: Verdant",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Storming_Emergence_(ATCG)",
+    "name_original": "横空出世 苍"
+  },
+  {
+    "series": "sun-moon",
+    "series_type": "main-series",
+    "language": "zh-cn",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/9/96/SetSymbolCSM1c.png/40px-SetSymbolCSM1c.png",
+    "name": "Storming Emergence: Abundant",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Storming_Emergence_(ATCG)",
+    "name_original": "横空出世 泽"
+  },
+  {
+    "series": "sun-moon",
+    "series_type": "main-series",
+    "language": "zh-cn",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/6/69/SetSymbol_Battle_Elite.png/40px-SetSymbol_Battle_Elite.png",
+    "name": "Battle Elite",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Battle_Elite_(ATCG)",
+    "name_original": "对战精英"
+  },
+  {
+    "series": "sun-moon",
+    "series_type": "main-series",
+    "language": "zh-cn",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/6/67/SetSymbolCSM2a.png/40px-SetSymbolCSM2a.png",
+    "name": "Shining Synergy: Shower",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Shining_Synergy_(ATCG)",
+    "name_original": "交相辉映 沐"
+  },
+  {
+    "series": "sun-moon",
+    "series_type": "main-series",
+    "language": "zh-cn",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/c/cf/SetSymbolCSM2b.png/40px-SetSymbolCSM2b.png",
+    "name": "Shining Synergy: Supreme",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Shining_Synergy_(ATCG)",
+    "name_original": "交相辉映 魁"
+  },
+  {
+    "series": "sun-moon",
+    "series_type": "main-series",
+    "language": "zh-cn",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/c/c8/SetSymbolCSM2c.png/40px-SetSymbolCSM2c.png",
+    "name": "Shining Synergy: Summon",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Shining_Synergy_(ATCG)",
+    "name_original": "交相辉映 唤"
+  },
+  {
+    "series": "sun-moon",
+    "series_type": "main-series",
+    "language": "zh-cn",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/6/62/SetSymbolCSM25.png/40px-SetSymbolCSM25.png",
+    "name": "Striking Competition",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Striking_Competition_(ATCG)",
+    "name_original": "炫奇争胜"
+  },
+  {
+    "series": "sword-shield",
+    "series_type": "main-series",
+    "language": "zh-cn",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/e/e9/SetSymbolCS1a.png/40px-SetSymbolCS1a.png",
+    "name": "Dynamax Clash: Thunder",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Dynamax_Clash_(ATCG)",
+    "name_original": "极巨争锋 雷"
+  },
+  {
+    "series": "sword-shield",
+    "series_type": "main-series",
+    "language": "zh-cn",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/c/c0/SetSymbolCS1b.png/40px-SetSymbolCS1b.png",
+    "name": "Dynamax Clash: Flame",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Dynamax_Clash_(ATCG)",
+    "name_original": "极巨争锋 焰"
+  },
+  {
+    "series": "sword-shield",
+    "series_type": "main-series",
+    "language": "zh-cn",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/c/cf/SetSymbolCS15.png/40px-SetSymbolCS15.png",
+    "name": "Dynamax Tactics",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Dynamax_Tactics_(ATCG)",
+    "name_original": "极巨攻防"
+  },
+  {
+    "series": "sword-shield",
+    "series_type": "main-series",
+    "language": "zh-cn",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/f/f6/SetSymbolCS2a.png/40px-SetSymbolCS2a.png",
+    "name": "Vivid Portrayals: Obsidian",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Vivid_Portrayals_(ATCG)",
+    "name_original": "浓墨重彩 黎"
+  },
+  {
+    "series": "sword-shield",
+    "series_type": "main-series",
+    "language": "zh-cn",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/3/31/SetSymbolCS2b.png/40px-SetSymbolCS2b.png",
+    "name": "Vivid Portrayals: Indigo",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Vivid_Portrayals_(ATCG)",
+    "name_original": "浓墨重彩 靛"
+  },
+  {
+    "series": "sword-shield",
+    "series_type": "main-series",
+    "language": "zh-cn",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/7/7c/SetSymbolCS25.png/40px-SetSymbolCS25.png",
+    "name": "Brilliant Counterattack",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Brilliant_Counterattack_(ATCG)",
+    "name_original": "璀璨反击"
+  },
+  {
+    "series": "sword-shield",
+    "series_type": "main-series",
+    "language": "zh-cn",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/4/4c/SetSymbolCS3a.png/40px-SetSymbolCS3a.png",
+    "name": "Primordial Arts: Overgrow",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Primordial_Arts_(ATCG)",
+    "name_original": "洪荒演武 茂"
+  },
+  {
+    "series": "sword-shield",
+    "series_type": "main-series",
+    "language": "zh-cn",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/f/fb/SetSymbolCS3b.png/40px-SetSymbolCS3b.png",
+    "name": "Primordial Arts: Torrent",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Primordial_Arts_(ATCG)",
+    "name_original": "洪荒演武 激"
+  },
+  {
+    "series": "sword-shield",
+    "series_type": "main-series",
+    "language": "zh-cn",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/e/e4/SetSymbolCS35.png/40px-SetSymbolCS35.png",
+    "name": "Scorching Skies",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Scorching_Skies_(ATCG)",
+    "name_original": "怒炎灼天"
+  },
+  {
+    "series": "sword-shield",
+    "series_type": "main-series",
+    "language": "zh-cn",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/5/5d/SetSymbolCS4a.png/40px-SetSymbolCS4a.png",
+    "name": "Polychromatic Gathering: Friends",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Polychromatic_Gathering_(ATCG)",
+    "name_original": "九彩汇聚 朋"
+  },
+  {
+    "series": "sword-shield",
+    "series_type": "main-series",
+    "language": "zh-cn",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/e/e1/SetSymbolCS4b.png/40px-SetSymbolCS4b.png",
+    "name": "Polychromatic Gathering: Origin",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Polychromatic_Gathering_(ATCG)",
+    "name_original": "九彩汇聚 源"
+  },
+  {
+    "series": "sword-shield",
+    "series_type": "main-series",
+    "language": "zh-cn",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/e/ee/SetSymbolCS45.png/40px-SetSymbolCS45.png",
+    "name": "Flame Dance of the End",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Flame_Dance_of_the_End_(ATCG)",
+    "name_original": "终末炎舞"
+  },
+  {
+    "series": "sword-shield",
+    "series_type": "main-series",
+    "language": "zh-cn",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/9/9b/SetSymbolCS5a.png/40px-SetSymbolCS5a.png",
+    "name": "Gallant Galaxy: Charm",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Gallant_Galaxy_(ATCG)",
+    "name_original": "勇魅群星 魅"
+  },
+  {
+    "series": "sword-shield",
+    "series_type": "main-series",
+    "language": "zh-cn",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/7/7e/SetSymbolCS5b.png/40px-SetSymbolCS5b.png",
+    "name": "Gallant Galaxy: Brave",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Gallant_Galaxy_(ATCG)",
+    "name_original": "勇魅群星 勇"
+  },
+  {
+    "series": "sword-shield",
+    "series_type": "main-series",
+    "language": "zh-cn",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/1/1c/SetSymbolCS55.png/40px-SetSymbolCS55.png",
+    "name": "Overshadowed Radiance",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Overshadowed_Radiance_(ATCG)",
+    "name_original": "暗影夺辉"
+  },
+  {
+    "series": "sword-shield",
+    "series_type": "main-series",
+    "language": "zh-cn",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/9/91/SetSymbolCS6a.png/40px-SetSymbolCS6a.png",
+    "name": "Marine Shadow: Roar",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Marine_Shadow_(ATCG)",
+    "name_original": "碧海暗影 啸"
+  },
+  {
+    "series": "sword-shield",
+    "series_type": "main-series",
+    "language": "zh-cn",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/1/1f/SetSymbolCS6b.png/40px-SetSymbolCS6b.png",
+    "name": "Marine Shadow: Banish",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Marine_Shadow_(ATCG)",
+    "name_original": "碧海暗影 逐"
+  },
+  {
+    "series": "sword-shield",
+    "series_type": "main-series",
+    "language": "zh-cn",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/2/2e/SetSymbolCS65.png/40px-SetSymbolCS65.png",
+    "name": "Victory Lodestar",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Victory_Lodestar_(ATCG)",
+    "name_original": "胜象星引"
+  },
+  {
+    "series": "scarlet-violet",
+    "series_type": "main-series",
+    "language": "zh-cn",
+    "name": "Gem Pack Volume 1",
+    "name_original": "宝石包第一弹"
+  },
+  {
+    "series": "scarlet-violet",
+    "series_type": "main-series",
+    "language": "zh-cn",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/8/87/SetSymbolCSV1.png/40px-SetSymbolCSV1.png",
+    "name": "Ancient Times, Future Progress",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Ancient_Times,_Future_Progress_(ATCG)",
+    "name_original": "亘古开来"
+  },
+  {
+    "series": "scarlet-violet",
+    "series_type": "main-series",
+    "language": "zh-cn",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/7/70/SetSymbolCollection_151.png/40px-SetSymbolCollection_151.png",
+    "name": "Collection 151 Journey",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Collection_151_(ATCG)",
+    "name_original": "收集啦151 旅"
+  },
+  {
+    "series": "scarlet-violet",
+    "series_type": "main-series",
+    "language": "zh-cn",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/8/80/SetSymbolCSV2.png/40px-SetSymbolCSV2.png",
+    "name": "Miracle Journey",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Miracle_Journey_(ATCG)",
+    "name_original": "奇迹启程"
+  },
+  {
+    "series": "scarlet-violet",
+    "series_type": "main-series",
+    "language": "zh-cn",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/7/70/SetSymbolCollection_151.png/40px-SetSymbolCollection_151.png",
+    "name": "Collection 151 Hope",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Collection_151_(ATCG)",
+    "name_original": "收集啦151 望"
+  },
+  {
+    "series": "scarlet-violet",
+    "series_type": "main-series",
+    "language": "zh-cn",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/7/7e/SetSymbolCSV3.png/40px-SetSymbolCSV3.png",
+    "name": "Fearless Terastal",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Fearless_Terastal_(ATCG)",
+    "name_original": "无畏太晶"
+  },
+  {
+    "series": "scarlet-violet",
+    "series_type": "main-series",
+    "language": "zh-cn",
+    "name": "Gem Pack Volume 2",
+    "name_original": "宝石包VOL.2"
+  }
+]

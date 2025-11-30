@@ -77,6 +77,19 @@ interface SetInfoFullJA extends SetInfoBriefJA {
   language: 'ja'
 }
 
+interface SetInfoBriefZHCN {
+  symbol_url?: string | undefined
+  name: string
+  name_original: string
+  bulbapedia_url?: string | undefined
+}
+
+interface SetInfoFullZHCN extends SetInfoBriefZHCN {
+  series: string
+  series_type: 'main-series'
+  language: 'zh-cn'
+}
+
 // -------------------------------------------------------------------------
 // mappings (bulbapedia, manual)
 
@@ -636,6 +649,54 @@ const transformTablePromoCellJP = new Map<
   ],
 ])
 
+const transformTableMainSetCellZHCN = new Map<
+  string,
+  {
+    field: string
+    transform: (td: HTMLTableCellElement) => (string | undefined)[]
+  }[]
+>([
+  [
+    'Symbol',
+    [
+      {
+        field: 'symbol_url',
+        transform: (td: HTMLTableCellElement) =>
+          Array.from(td.querySelectorAll('img')).map((img) => img.src),
+      },
+    ],
+  ],
+  [
+    'Translation',
+    [
+      {
+        field: 'name',
+        transform: (td: HTMLTableCellElement) =>
+          Array.from(td.querySelectorAll('a')).map((a) => a.textContent.trim()),
+      },
+      {
+        field: 'bulbapedia_url',
+        transform: (td: HTMLTableCellElement) =>
+          Array.from(td.querySelectorAll('a'))
+            .map((a) => a.href)
+            .map((url) => (url && url.endsWith('&action=edit&redlink=1') ? undefined : url)),
+      },
+    ],
+  ],
+  [
+    'Simplified Chinese',
+    [
+      {
+        field: 'name_original',
+        transform: (td: HTMLTableCellElement) =>
+          Array.from(td.childNodes)
+            .filter((node) => node.nodeType === 3) // Node.TEXT_NODE
+            .map((node) => node.nodeValue?.trim()),
+      },
+    ],
+  ],
+])
+
 // -------------------------------------------------------------------------
 
 function parseSetTableEN(table: HTMLTableElement) {
@@ -1112,6 +1173,137 @@ function parseSetsJP(document: Document) {
 }
 
 // -------------------------------------------------------------------------
+
+function parseSetsTableZHCN(table: HTMLTableElement) {
+  const tbody = table.tBodies[0]!
+  if (!tbody.children || tbody.children.length < 2) {
+    console.warn('Empty table?', { table })
+    return undefined
+  }
+
+  const headerRow = Array.from(tbody.children[0]!.children)
+  if (!headerRow.every((th) => th.tagName === 'TH')) {
+    console.warn('No header in table found!', { table, headerRow })
+    return undefined
+  }
+
+  const headerKeys = headerRow.map((th) => th.textContent.trim())
+
+  // Symbol
+  // Translation
+  // Simplified Chinese
+
+  const data = []
+  const rows = Array.from(tbody.children).slice(1)
+  for (const row of rows) {
+    const cols = Array.from(row.children) as HTMLTableCellElement[]
+
+    const isMultipleInRow =
+      headerKeys.length === 3 && headerKeys[0] === 'Symbol' && cols[0].childElementCount !== 1
+    const numInRow = isMultipleInRow
+      ? Array.from(cols[0].children).filter((child) => child.tagName === 'BR').length + 1
+      : 1
+
+    const setInfos = Array(numInRow)
+      .fill(undefined)
+      .map(() => ({}))
+
+    for (let col_idx = 0; col_idx < cols.length; col_idx++) {
+      const col = cols[col_idx]!
+      const headerIdx = col_idx
+
+      const headerColKey = headerKeys[headerIdx]!
+      const fieldTransforms = transformTableMainSetCellZHCN.get(headerColKey)!
+      if (fieldTransforms) {
+        for (const { field, transform } of fieldTransforms) {
+          const values = transform(col)
+          if (Array.isArray(values)) {
+            if (values.length === 0) {
+              console.warn('No value found in table cell', { col, col_idx })
+              continue
+            }
+
+            if (values.length !== numInRow) {
+              console.error('Not enought values found in table cell!', { values, numInRow })
+              throw Error('Unable to continue! Fix code first.')
+            }
+            for (let value_idx = 0; value_idx < values.length; value_idx++) {
+              Object.assign(setInfos[value_idx], { [field]: values[value_idx] })
+            }
+          }
+        }
+      }
+    }
+    data.push(...(setInfos as SetInfoBriefZHCN[]))
+  }
+  return data
+}
+
+function parseSetsZHCN(document: Document) {
+  const contentRoot = document.getElementById('mw-content-text')?.firstChild
+  if (contentRoot === undefined) return undefined
+
+  const allChildren = Array.from((contentRoot as HTMLDivElement).children)
+  const idxZNSimpleHeader = allChildren.findIndex(
+    (child) =>
+      child.tagName === 'H2' &&
+      child.childElementCount === 1 &&
+      child.firstElementChild?.tagName === 'SPAN' &&
+      child.firstElementChild.id === 'Simplified_Chinese_Catch-up_sets',
+  )
+  if (idxZNSimpleHeader === -1) {
+    throw Error('Unable to find Simplified_Chinese_Catch-up_sets element (start marker)!')
+  }
+  const idxNotice = allChildren.findIndex(
+    (child) =>
+      child.tagName === 'TABLE' && (child as HTMLTableElement).style.borderRadius === '80px',
+  )
+  if (idxNotice === -1) {
+    throw Error('Unable to find notice element ("article is part of Project TCG", stop marker)!')
+  }
+  const zhSimpleSetChildren = allChildren
+    .slice(idxZNSimpleHeader + 1, idxNotice)
+    .filter((child) => child.outerHTML !== '<div style="clear:both;"></div>')
+
+  const data: SetInfoFullZHCN[] = []
+
+  let lastSeriesHeader: string | null = null
+  for (let idx = 0; idx < zhSimpleSetChildren.length; idx++) {
+    const child: Element = zhSimpleSetChildren[idx]!
+    // h3 -> table
+
+    if (child.tagName === 'H3') {
+      const value = child.textContent.trim()
+      // NOTE: can reuse, same labels
+      lastSeriesHeader = mapSeriesRawJP.get(value)!
+    } else if (child.tagName === 'TABLE') {
+      const table = child as HTMLTableElement
+
+      const tableData = parseSetsTableZHCN(table)
+      if (tableData === undefined) {
+        console.warn('No table data?', { idx })
+        continue
+      }
+
+      tableData
+        .map((entry) => ({
+          series: lastSeriesHeader,
+          series_type: 'main-series',
+          language: 'zh-cn',
+          ...entry,
+        }))
+        .forEach((entry) => data.push(entry as SetInfoFullZHCN))
+
+      lastSeriesHeader = null
+    } else {
+      console.warn('Unknown child!', { idx, child })
+    }
+  }
+
+  return data
+}
+
+// -------------------------------------------------------------------------
 // TCGdex mappings
 
 function getTCGdexSetID(
@@ -1395,7 +1587,7 @@ const DN_OUTPUT = 'out'
 
 // TODO: manual fixing
 // - "invalid" card_stats --> note
-async function processSetsEN(dn_output: string) {
+export async function processSetsEN(dn_output: string) {
   const mapTCGdexSetNameToID = await getTCGdexSets()
   if (mapTCGdexSetNameToID === undefined) {
     console.error('Unable to get TCGdex set data')
@@ -1429,7 +1621,7 @@ async function processSetsEN(dn_output: string) {
 
 // TODO: manual fixing
 // - "invalid" card_stats --> note
-async function processSetsJA(dn_output: string) {
+export async function processSetsJA(dn_output: string) {
   const document = await fetchAndParseToDocument(
     urlBase + 'List_of_Japanese_Pokémon_Trading_Card_Game_expansions',
   )
@@ -1445,9 +1637,23 @@ async function processSetsJA(dn_output: string) {
   )
 }
 
+export async function processSetsOther(dn_output: string) {
+  const document = await fetchAndParseToDocument(
+    urlBase + 'List_of_Pokémon_Trading_Card_Game_expansions_in_other_languages',
+  )
+
+  const resultZHSimple = parseSetsZHCN(document)
+
+  writeFileSync(
+    pathJoin(dn_output, 'bulbapedia-zh-cn-sets.json'),
+    JSON.stringify(resultZHSimple, undefined, 2),
+  )
+}
+
 mkdirSync(DN_OUTPUT, { recursive: true })
 
 processSetsEN(DN_OUTPUT)
 processSetsJA(DN_OUTPUT)
+processSetsOther(DN_OUTPUT)
 
 // -------------------------------------------------------------------------

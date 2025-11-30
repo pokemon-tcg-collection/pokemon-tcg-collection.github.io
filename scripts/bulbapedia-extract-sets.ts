@@ -114,6 +114,20 @@ interface SetInfoFullENOther extends SetInfoBriefENOther {
   language: 'en'
 }
 
+interface SetInfoBriefJAOther {
+  symbol_url?: string | undefined
+  name: string
+
+  names_translated: { [language: string]: string }
+
+  bulbapedia_url?: string | undefined
+}
+
+interface SetInfoFullJAOther extends SetInfoBriefJAOther {
+  series: string
+  language: 'ja'
+}
+
 // -------------------------------------------------------------------------
 // mappings (bulbapedia, manual)
 
@@ -134,7 +148,7 @@ const mapCardStatsRawEN = new Map<string, string>([
   ['Galarian Gallery cards', 'galarian-gallery'],
 ])
 
-const mapCardStatsRawJP = new Map<string, string>([
+const mapCardStatsRawJA = new Map<string, string>([
   ['specialHolo energies', 'special-holo-energy'],
   ['non-standard cards', 'non-standard'],
   ['unnumbered with unique attributes', 'unnumbered'],
@@ -170,7 +184,7 @@ const mapSeriesRawEN = new Map<string, string>([
   ['Other Miscellaneous Sets', 'other-misc'],
 ])
 
-const mapSeriesRawJP = new Map<string, string>([
+const mapSeriesRawJA = new Map<string, string>([
   ['Original Era', 'original'],
   ['neo Era', 'neo'],
   ['VS Era', 'vs'], // ?
@@ -190,7 +204,7 @@ const mapSeriesRawJP = new Map<string, string>([
   ['MEGA Series', 'mega'],
 ])
 
-const mapSeriesSubRawJP = new Map<string, string>([
+const mapSeriesSubRawJA = new Map<string, string>([
   ['Concept Packs', 'concept'],
   ['Enhanced Expansion Packs', 'enhanced-expansion'],
   ['High Class Expansion Packs', 'high-class-expansion'],
@@ -317,7 +331,7 @@ const transformTableCellEN = new Map<
   ],
 ])
 
-const transformTableMainSetCellJP = new Map<
+const transformTableMainSetCellJA = new Map<
   string,
   {
     field: string
@@ -470,7 +484,7 @@ const transformTableMainSetCellJP = new Map<
   ],
 ])
 
-const transformTableSubSetCellJP = new Map<
+const transformTableSubSetCellJA = new Map<
   string,
   {
     field: string
@@ -564,9 +578,9 @@ const transformTableSubSetCellJP = new Map<
             const textExtra = text.substring(text.indexOf('+') + 1).trim()
 
             const cardsStatType = textExtra.split(' ').slice(1).join(' ')
-            if (mapCardStatsRawJP.has(cardsStatType)) {
+            if (mapCardStatsRawJA.has(cardsStatType)) {
               Object.assign(counts, {
-                [mapCardStatsRawJP.get(cardsStatType)!]: Number.parseInt(
+                [mapCardStatsRawJA.get(cardsStatType)!]: Number.parseInt(
                   textExtra.split(' ', 1)[0]!,
                 ),
               })
@@ -587,7 +601,7 @@ const transformTableSubSetCellJP = new Map<
   ],
 ])
 
-const transformTablePromoCellJP = new Map<
+const transformTablePromoCellJA = new Map<
   string,
   {
     field: string
@@ -649,9 +663,9 @@ const transformTablePromoCellJP = new Map<
 
             texts.slice(1).forEach((text) => {
               const cardsStatType = text.split(' ').slice(1).join(' ')
-              if (mapCardStatsRawJP.has(cardsStatType)) {
+              if (mapCardStatsRawJA.has(cardsStatType)) {
                 Object.assign(counts, {
-                  [mapCardStatsRawJP.get(cardsStatType)!]: Number.parseInt(text.split(' ', 1)[0]!),
+                  [mapCardStatsRawJA.get(cardsStatType)!]: Number.parseInt(text.split(' ', 1)[0]!),
                 })
               } else {
                 console.warn('Unexpected card stats string', { text, texts })
@@ -721,7 +735,7 @@ const transformTableMainSetCellZHCN = new Map<
   ],
 ])
 
-function makeFieldTransform(languageCode: string) {
+function makeENOtherFieldTransform(languageCode: string) {
   return {
     field: 'names_translated',
     merge: true,
@@ -767,16 +781,16 @@ const transformTableMainSetENOther = new Map<
       },
     ],
   ],
-  ['Dutch', [makeFieldTransform('nl')]],
-  ['French', [makeFieldTransform('fr')]],
-  ['German', [makeFieldTransform('de')]],
-  ['Italian', [makeFieldTransform('it')]],
-  ['Polish', [makeFieldTransform('pl')]],
-  ['Brazilian Portuguese', [makeFieldTransform('pt-br')]],
-  ['Spanish', [makeFieldTransform('es')]],
-  ['Spanish (Spain)', [makeFieldTransform('es')]],
-  ['Spanish (Latin America)', [makeFieldTransform('es-mx')]],
-  ['Russian', [makeFieldTransform('ru')]],
+  ['Dutch', [makeENOtherFieldTransform('nl')]],
+  ['French', [makeENOtherFieldTransform('fr')]],
+  ['German', [makeENOtherFieldTransform('de')]],
+  ['Italian', [makeENOtherFieldTransform('it')]],
+  ['Polish', [makeENOtherFieldTransform('pl')]],
+  ['Brazilian Portuguese', [makeENOtherFieldTransform('pt-br')]],
+  ['Spanish', [makeENOtherFieldTransform('es')]],
+  ['Spanish (Spain)', [makeENOtherFieldTransform('es')]],
+  ['Spanish (Latin America)', [makeENOtherFieldTransform('es-mx')]],
+  ['Russian', [makeENOtherFieldTransform('ru')]],
   [
     'Other',
     [
@@ -806,6 +820,96 @@ const transformTableMainSetENOther = new Map<
       },
     ],
   ],
+])
+
+function makeJAOtherFieldTransform(languageCode: string) {
+  return {
+    field: 'names_translated',
+    merge: true,
+    transform: (td: HTMLTableCellElement) => {
+      const text = td.textContent.trim()
+      if (text === '—') return undefined
+      // Scarlet & Violet Era - Korean (last row/column)
+      if (text.length === 0) return undefined
+
+      const texts = Array.from(td.childNodes)
+        .filter((node) => !(node.nodeType === 1 && (node as Element).tagName === 'BR')) // Node.ELEMENT_NODE
+        .map((node) => node.textContent?.trim())
+        .filter((text) => text !== undefined && text.length > 0) // filter out empty text after tag
+      return texts.map((text) => ({ [languageCode]: text }))
+    },
+  } as const
+}
+
+const transformTableMainSetJAOther = new Map<
+  string,
+  {
+    field: string
+    merge?: boolean
+    transform: (
+      td: HTMLTableCellElement,
+    ) =>
+      | string
+      | (string | undefined)[]
+      | ({ [key: string]: string } | undefined)[]
+      | { [key: string]: string | undefined }[]
+      | undefined
+  }[]
+>([
+  [
+    'Symbol',
+    [
+      {
+        field: 'symbol_url',
+        transform: (td: HTMLTableCellElement) =>
+          Array.from(td.querySelectorAll('img')).map((img) => img.src),
+      },
+    ],
+  ],
+  [
+    'Japanese',
+    [
+      {
+        field: 'name_original',
+        transform: (td: HTMLTableCellElement) => {
+          return Array.from(td.childNodes)
+            .filter((node) => !(node.nodeType === 1 && (node as Element).tagName === 'BR')) // Node.ELEMENT_NODE
+            .map((node) => node.textContent?.trim())
+            .filter((text) => text !== undefined && text.length > 0) // filter out empty text after tag
+        },
+      },
+    ],
+  ],
+  [
+    'Translation',
+    [
+      {
+        field: 'name',
+        transform: (td: HTMLTableCellElement) => {
+          const texts = Array.from(td.querySelector('a')!.childNodes)
+            .filter((node) => node.nodeType === 3) // Node.TEXT_NODE
+            .map((node) => node.nodeValue?.trim())
+
+          if (texts.length === 1) {
+            // handle special cases where plain text is not part of link
+            if (td.textContent.trim() !== texts[0]) {
+              return [td.textContent.trim()]
+            }
+          }
+
+          return texts
+        },
+      },
+      {
+        field: 'bulbapedia_url',
+        transform: (td: HTMLTableCellElement) => td.querySelector('a')!.href,
+      },
+    ],
+  ],
+  ['Korean', [makeJAOtherFieldTransform('ko')]],
+  ['Indonesian', [makeJAOtherFieldTransform('id')]],
+  ['Thai', [makeJAOtherFieldTransform('th')]],
+  ['Traditional Chinese', [makeJAOtherFieldTransform('zh-tw')]],
 ])
 
 // -------------------------------------------------------------------------
@@ -937,7 +1041,7 @@ function parseSetsEN(document: Document) {
 
 // -------------------------------------------------------------------------
 
-function parseMainSetTableJP(table: HTMLTableElement) {
+function parseMainSetTableJA(table: HTMLTableElement) {
   const tbody = table.tBodies[0]!
   if (!tbody.children || tbody.children.length < 2) {
     console.warn('Empty table?', { table })
@@ -995,7 +1099,7 @@ function parseMainSetTableJP(table: HTMLTableElement) {
       }
 
       const headerColKey = headerKeys[headerIdx]!
-      const fieldTransforms = transformTableMainSetCellJP.get(headerColKey)!
+      const fieldTransforms = transformTableMainSetCellJA.get(headerColKey)
       if (fieldTransforms) {
         for (const { field, transform } of fieldTransforms) {
           const value = transform(col)
@@ -1023,7 +1127,7 @@ function parseMainSetTableJP(table: HTMLTableElement) {
   return data
 }
 
-function parseSubSetTableJP(table: HTMLTableElement) {
+function parseSubSetTableJA(table: HTMLTableElement) {
   const tbody = table.tBodies[0]!
   if (!tbody.children || tbody.children.length < 2) {
     console.warn('Empty table?', { table })
@@ -1057,7 +1161,7 @@ function parseSubSetTableJP(table: HTMLTableElement) {
       const headerIdx = col_idx
 
       const headerColKey = headerKeys[headerIdx]!
-      const fieldTransforms = transformTableSubSetCellJP.get(headerColKey)!
+      const fieldTransforms = transformTableSubSetCellJA.get(headerColKey)
       if (fieldTransforms) {
         for (const { field, transform } of fieldTransforms) {
           const value = transform(col)
@@ -1070,7 +1174,7 @@ function parseSubSetTableJP(table: HTMLTableElement) {
   return data
 }
 
-function parsePromoTableJP(table: HTMLTableElement) {
+function parsePromoTableJA(table: HTMLTableElement) {
   const tbody = table.tBodies[0]!
   if (!tbody.children || tbody.children.length < 2) {
     console.warn('Empty table?', { table })
@@ -1119,7 +1223,7 @@ function parsePromoTableJP(table: HTMLTableElement) {
       }
 
       const headerColKey = headerKeys[headerIdx]!
-      const fieldTransforms = transformTablePromoCellJP.get(headerColKey)
+      const fieldTransforms = transformTablePromoCellJA.get(headerColKey)
       if (fieldTransforms) {
         for (const { field, transform } of fieldTransforms) {
           const value = transform(col)
@@ -1134,7 +1238,7 @@ function parsePromoTableJP(table: HTMLTableElement) {
   return data
 }
 
-function parseSetsJP(document: Document) {
+function parseSetsJA(document: Document) {
   const contentRoot = document.getElementById('mw-content-text')?.firstChild
   if (contentRoot === undefined) return undefined
 
@@ -1192,11 +1296,11 @@ function parseSetsJP(document: Document) {
 
     if (child.tagName === 'H3') {
       const value = child.textContent.trim()
-      lastSeriesHeader = mapSeriesRawJP.get(value)!
+      lastSeriesHeader = mapSeriesRawJA.get(value)!
     } else if (child.tagName === 'TABLE') {
       const table = child as HTMLTableElement
 
-      const tableData = parseMainSetTableJP(table)
+      const tableData = parseMainSetTableJA(table)
       if (tableData === undefined) {
         console.warn('No table data?', { idx })
         continue
@@ -1227,14 +1331,14 @@ function parseSetsJP(document: Document) {
 
     if (child.tagName === 'H3') {
       const value = child.textContent.trim()
-      lastSeriesHeader = mapSeriesRawJP.get(value)!
+      lastSeriesHeader = mapSeriesRawJA.get(value)!
     } else if (child.tagName === 'H4') {
       const value = child.textContent.trim()
-      lastSeriesSubHeader = mapSeriesSubRawJP.get(value) ?? null
+      lastSeriesSubHeader = mapSeriesSubRawJA.get(value) ?? null
     } else if (child.tagName === 'TABLE') {
       const table = child as HTMLTableElement
 
-      const tableData = parseSubSetTableJP(table)
+      const tableData = parseSubSetTableJA(table)
       if (tableData === undefined) {
         console.warn('No table data?', { idx })
         continue
@@ -1261,7 +1365,7 @@ function parseSetsJP(document: Document) {
     if (child.tagName === 'TABLE') {
       const table = child as HTMLTableElement
 
-      const tableData = parsePromoTableJP(table)
+      const tableData = parsePromoTableJA(table)
       if (tableData === undefined) {
         console.warn('No table data?', { idx })
         continue
@@ -1386,7 +1490,7 @@ function parseSetsZHCN(document: Document) {
     if (child.tagName === 'H3') {
       const value = child.textContent.trim()
       // NOTE: can reuse, same labels
-      lastSeriesHeader = mapSeriesRawJP.get(value)!
+      lastSeriesHeader = mapSeriesRawJA.get(value)!
     } else if (child.tagName === 'TABLE') {
       const table = child as HTMLTableElement
 
@@ -1550,6 +1654,182 @@ function parseSetsENOther(document: Document) {
           ...entry,
         }))
         .forEach((entry) => data.push(entry as SetInfoFullENOther))
+
+      lastSeriesHeader = null
+    } else {
+      console.warn('Unknown child!', { idx, child })
+    }
+  }
+
+  return data
+}
+
+function parseSetsTableJAOther(table: HTMLTableElement) {
+  const tbody = table.tBodies[0]!
+  if (!tbody.children || tbody.children.length < 2) {
+    console.warn('Empty table?', { table })
+    return undefined
+  }
+
+  const headerRow = Array.from(tbody.children[0]!.children)
+  if (!headerRow.every((th) => th.tagName === 'TH')) {
+    console.warn('No header in table found!', { table, headerRow })
+    return undefined
+  }
+
+  const headerKeys = headerRow.map((th) => th.textContent.trim())
+
+  // may be multi-lines
+  // Symbol
+  // Japanese
+  // Translation
+  // [Language...]
+
+  const data = []
+  const rows = Array.from(tbody.children).slice(1)
+  for (const row of rows) {
+    const cols = Array.from(row.children) as HTMLTableCellElement[]
+
+    const numInRow =
+      Array.from(cols[1].children).filter((child) => child.tagName === 'BR').length + 1
+    const setInfos = Array(numInRow)
+      .fill(undefined)
+      .map(() => ({}))
+
+    let colSpanCntr = 0
+    let headerIdx = 0
+    for (let col_idx = 0; col_idx < cols.length; col_idx++) {
+      const col = cols[col_idx]!
+      colSpanCntr = col.colSpan
+
+      // due to col spans, iterate over "virtual" columns
+      for (let colSpan_idx = 0; colSpan_idx < colSpanCntr; colSpan_idx++) {
+        const headerColKey = headerKeys[headerIdx]!
+
+        const fieldTransforms = transformTableMainSetJAOther.get(headerColKey)
+        if (fieldTransforms) {
+          for (const { field, merge = false, transform } of fieldTransforms) {
+            let values = transform(col)
+            if (!Array.isArray(values) && typeof values === 'string') {
+              // duplicate if simple string
+              values = Array(numInRow).fill(values)
+            }
+            if (Array.isArray(values)) {
+              if (values.length === 0) {
+                console.warn('No value found in table cell', { col, col_idx })
+                continue
+              }
+
+              if (values.length !== numInRow) {
+                console.error('Not enought values found in table cell!', { values, numInRow })
+                throw Error('Unable to continue! Fix code first.')
+              }
+              for (let value_idx = 0; value_idx < values.length; value_idx++) {
+                if (merge) {
+                  if (!Object.hasOwn(setInfos[value_idx], field)) {
+                    Object.assign(setInfos[value_idx], { [field]: {} })
+                  }
+                  Object.assign(
+                    (setInfos[value_idx] as { [key: string]: object })[field],
+                    values[value_idx],
+                  )
+                } else {
+                  Object.assign(setInfos[value_idx], { [field]: values[value_idx] })
+                }
+              }
+            }
+          }
+        } else {
+          // NOTE: might also be due to invalid colSpan (too long)
+          console.warn('Unsupported column', {
+            col_idx,
+            headerIdx,
+            colSpan: col.colSpan,
+            headerColKey,
+          })
+        }
+
+        headerIdx++
+      }
+    }
+    data.push(...(setInfos as SetInfoBriefJAOther[]))
+  }
+  return data
+}
+
+function parseSetsJAOther(document: Document) {
+  const contentRoot = document.getElementById('mw-content-text')?.firstChild
+  if (contentRoot === undefined) return undefined
+
+  const allChildren = Array.from((contentRoot as HTMLDivElement).children)
+  const idxJapaneseHeader = allChildren.findIndex(
+    (child) =>
+      child.tagName === 'H2' &&
+      child.childElementCount === 1 &&
+      child.firstElementChild?.tagName === 'SPAN' &&
+      child.firstElementChild.id === 'Japanese_sets',
+  )
+  if (idxJapaneseHeader === -1) {
+    throw Error('Unable to find Japanese_sets element (start marker)!')
+  }
+  const idxJapaneseAfterHeader = allChildren.findIndex(
+    (child) =>
+      child.tagName === 'H2' &&
+      child.childElementCount >= 1 &&
+      Array.from(child.children).filter(
+        (childsChild) =>
+          childsChild.tagName === 'SPAN' &&
+          childsChild.id === 'Thai,_Indonesian_&_Traditional_Chinese_Catch-up_sets',
+      ).length === 1,
+  )
+  if (idxJapaneseAfterHeader === -1) {
+    throw Error(
+      'Unable to find Thai,_Indonesian_&_Traditional_Chinese_Catch-up_sets element (end marker)!',
+    )
+  }
+  const jaOtherChildren = allChildren
+    .slice(idxJapaneseHeader + 1, idxJapaneseAfterHeader)
+    .filter((child) => child.tagName !== 'P')
+  if (idxJapaneseAfterHeader < idxJapaneseHeader) {
+    console.warn('Headers out of order!', {
+      idxJapaneseHeader,
+      idxJapaneseAfterHeader,
+    })
+    throw Error('Headers out of order!')
+  }
+  const shouldNotHaveOtherH2Header = jaOtherChildren.find((child) => child.tagName === 'H2')
+  if (shouldNotHaveOtherH2Header !== undefined) {
+    console.warn('Between Japanese and next catch-up header should not be another H2 headder!', {
+      shouldNotHaveOtherH2Header,
+    })
+    throw Error('Between Japanese and next catch-up header should not be another H2 headder!')
+  }
+
+  const data: SetInfoFullJAOther[] = []
+
+  let lastSeriesHeader: string | null = null
+  for (let idx = 0; idx < jaOtherChildren.length; idx++) {
+    const child: Element = jaOtherChildren[idx]!
+    // h3 -> table
+
+    if (child.tagName === 'H3') {
+      const value = child.textContent.trim()
+      lastSeriesHeader = mapSeriesRawJA.get(value)!
+    } else if (child.tagName === 'TABLE') {
+      const table = child as HTMLTableElement
+
+      const tableData = parseSetsTableJAOther(table)
+      if (tableData === undefined) {
+        console.warn('No table data?', { idx })
+        continue
+      }
+
+      tableData
+        .map((entry) => ({
+          series: lastSeriesHeader,
+          ...entry,
+        }))
+        .forEach((entry) => data.push(entry as SetInfoFullJAOther))
 
       lastSeriesHeader = null
     } else {
@@ -1902,25 +2182,27 @@ const DN_OUTPUT = 'out'
 export async function processSetsEN(dn_output: string) {
   const mapTCGdexSetNameToID = await getTCGdexSets()
   if (mapTCGdexSetNameToID === undefined) {
-    console.error('Unable to get TCGdex set data')
+    console.error('[!] Unable to get TCGdex set data')
     return
   }
 
   const document = await fetchAndParseToDocument(
     urlBase + 'List_of_Pokémon_Trading_Card_Game_expansions',
   )
+  console.log('[*] Extracting EN sets...')
   const result = parseSetsEN(document)
   if (result === undefined) {
-    console.warn('Unable to parse EN Sets?')
+    console.error('[!] Unable to parse EN Sets?')
     return
   }
 
+  console.log('[*] Mapping TCGdex set ids...')
   result.forEach((set) => {
     const [id, name] = getTCGdexSetID(mapTCGdexSetNameToID, set.name)
     if (id !== undefined) {
       set.tcgdex_id = id
       if (name !== set.name) {
-        console.warn('Matched EN Set name:', [set.name, name], [set.series])
+        console.warn('[?] Matched EN Set name:', [set.name, name], [set.series])
       }
     }
   })
@@ -1937,9 +2219,11 @@ export async function processSetsJA(dn_output: string) {
   const document = await fetchAndParseToDocument(
     urlBase + 'List_of_Japanese_Pokémon_Trading_Card_Game_expansions',
   )
-  const result = parseSetsJP(document)
+
+  console.log('[*] Extracting JA sets...')
+  const result = parseSetsJA(document)
   if (result === undefined) {
-    console.warn('Unable to parse JP Sets?')
+    console.error('[!] Unable to parse JA Sets?')
     return
   }
 
@@ -1954,12 +2238,20 @@ export async function processSetsOther(dn_output: string) {
     urlBase + 'List_of_Pokémon_Trading_Card_Game_expansions_in_other_languages',
   )
 
+  console.log('[*] Extracting EN set names in other languages...')
   const resultENMappings = parseSetsENOther(document)
+  console.log('[*] Extracting JA set names in other languages...')
+  const resultJAMappings = parseSetsJAOther(document)
+  console.log('[*] Extracting ZH-CN Catch-Up sets...')
   const resultZHSimple = parseSetsZHCN(document)
 
   writeFileSync(
     pathJoin(dn_output, 'bulbapedia-en-other-sets.json'),
     JSON.stringify(resultENMappings, undefined, 2),
+  )
+  writeFileSync(
+    pathJoin(dn_output, 'bulbapedia-ja-other-sets.json'),
+    JSON.stringify(resultJAMappings, undefined, 2),
   )
   writeFileSync(
     pathJoin(dn_output, 'bulbapedia-zh-cn-sets.json'),

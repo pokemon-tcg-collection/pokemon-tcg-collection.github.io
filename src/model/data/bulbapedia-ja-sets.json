@@ -754,7 +754,11 @@
       "cards": 53,
       "special": 3
     },
-    "release_date": "December 17, 2010"
+    "release_date": "December 17, 2010",
+    "names": {
+      "ja": "ブラックコレクション",
+      "ko": "블랙 컬렉션"
+    }
   },
   {
     "series": "black-white",
@@ -771,7 +775,11 @@
       "cards": 53,
       "special": 3
     },
-    "release_date": "December 17, 2010"
+    "release_date": "December 17, 2010",
+    "names": {
+      "ja": "ホワイトコレクション",
+      "ko": "화이트 컬렉션"
+    }
   },
   {
     "series": "black-white",
@@ -788,7 +796,11 @@
       "cards": 66,
       "special": 6
     },
-    "release_date": "July 15, 2011"
+    "release_date": "July 15, 2011",
+    "names": {
+      "ja": "レッドコレクション",
+      "ko": "레드 컬렉션"
+    }
   },
   {
     "series": "black-white",
@@ -805,7 +817,11 @@
       "cards": 52,
       "special": 5
     },
-    "release_date": "September 16, 2011"
+    "release_date": "September 16, 2011",
+    "names": {
+      "ja": "サイコドライブ",
+      "ko": "사이코 드라이브"
+    }
   },
   {
     "series": "black-white",
@@ -822,7 +838,11 @@
       "cards": 52,
       "special": 5
     },
-    "release_date": "September 16, 2011"
+    "release_date": "September 16, 2011",
+    "names": {
+      "ja": "ヘイルブリザード",
+      "ko": "헤일 블리자드"
+    }
   },
   {
     "series": "black-white",
@@ -839,7 +859,11 @@
       "cards": 69,
       "special": 7
     },
-    "release_date": "December 16, 2011"
+    "release_date": "December 16, 2011",
+    "names": {
+      "ja": "ダークラッシュ",
+      "ko": "다크러시"
+    }
   },
   {
     "series": "black-white",
@@ -856,7 +880,11 @@
       "cards": 50,
       "special": 5
     },
-    "release_date": "March 16, 2012"
+    "release_date": "March 16, 2012",
+    "names": {
+      "ja": "リューズブラスト",
+      "ko": "드래곤 블라스트"
+    }
   },
   {
     "series": "black-white",
@@ -873,7 +901,11 @@
       "cards": 50,
       "special": 5
     },
-    "release_date": "March 16, 2012"
+    "release_date": "March 16, 2012",
+    "names": {
+      "ja": "リューノブレード",
+      "ko": "드래곤 블레이드"
+    }
   },
   {
     "series": "black-white",
@@ -890,7 +922,11 @@
       "cards": 59,
       "special": 6
     },
-    "release_date": "July 13, 2012"
+    "release_date": "July 13, 2012",
+    "names": {
+      "ja": "フリーズボルト",
+      "ko": "프리즈볼트"
+    }
   },
   {
     "series": "black-white",
@@ -907,7 +943,11 @@
       "cards": 59,
       "special": 6
     },
-    "release_date": "July 13, 2012"
+    "release_date": "July 13, 2012",
+    "names": {
+      "ja": "コールドフレア",
+      "ko": "콜드플레어"
+    }
   },
   {
     "series": "black-white",
@@ -924,7 +964,11 @@
       "cards": 70,
       "special": 9
     },
-    "release_date": "September 14, 2012"
+    "release_date": "September 14, 2012",
+    "names": {
+      "ja": "プラズマゲイル",
+      "ko": "플라스마게일"
+    }
   },
   {
     "series": "black-white",
@@ -941,7 +985,11 @@
       "cards": 51,
       "special": 7
     },
-    "release_date": "December 14, 2012"
+    "release_date": "December 14, 2012",
+    "names": {
+      "ja": "ラセンフォース",
+      "ko": "스파이럴포스"
+    }
   },
   {
     "series": "black-white",
@@ -958,7 +1006,11 @@
       "cards": 51,
       "special": 7
     },
-    "release_date": "December 14, 2012"
+    "release_date": "December 14, 2012",
+    "names": {
+      "ja": "ライデンナックル",
+      "ko": "볼트너클"
+    }
   },
   {
     "series": "black-white",
@@ -975,7 +1027,11 @@
       "cards": 76,
       "special": 10
     },
-    "release_date": "March 15, 2013"
+    "release_date": "March 15, 2013",
+    "names": {
+      "ja": "メガロキャノン",
+      "ko": "메갈로캐논"
+    }
   },
   {
     "series": "xy",
@@ -992,7 +1048,11 @@
       "cards": 60,
       "special": 3
     },
-    "release_date": "December 13, 2013"
+    "release_date": "December 13, 2013",
+    "names": {
+      "ja": "コレクションX",
+      "ko": "X컬렉션"
+    }
   },
   {
     "series": "xy",
@@ -1009,7 +1069,11 @@
       "cards": 60,
       "special": 3
     },
-    "release_date": "December 13, 2013"
+    "release_date": "December 13, 2013",
+    "names": {
+      "ja": "コレクションY",
+      "ko": "Y컬렉션"
+    }
   },
   {
     "series": "xy",
@@ -1026,7 +1090,11 @@
       "cards": 80,
       "special": 10
     },
-    "release_date": "March 15, 2014"
+    "release_date": "March 15, 2014",
+    "names": {
+      "ja": "ワイルドブレイズ",
+      "ko": "와일드 블레이즈"
+    }
   },
   {
     "series": "xy",
@@ -1043,7 +1111,11 @@
       "cards": 96,
       "special": 9
     },
-    "release_date": "June 14, 2014"
+    "release_date": "June 14, 2014",
+    "names": {
+      "ja": "ライジングフィスト",
+      "ko": "라이징피스트"
+    }
   },
   {
     "series": "xy",
@@ -1060,7 +1132,11 @@
       "cards": 88,
       "special": 9
     },
-    "release_date": "September 13, 2014"
+    "release_date": "September 13, 2014",
+    "names": {
+      "ja": "ファントムゲート",
+      "ko": "팬텀게이트"
+    }
   },
   {
     "series": "xy",
@@ -1077,7 +1153,11 @@
       "cards": 70,
       "special": 10
     },
-    "release_date": "December 13, 2014"
+    "release_date": "December 13, 2014",
+    "names": {
+      "ja": "ガイアボルケーノ",
+      "ko": "가이아 볼케이노"
+    }
   },
   {
     "series": "xy",
@@ -1094,7 +1174,11 @@
       "cards": 70,
       "special": 10
     },
-    "release_date": "December 13, 2014"
+    "release_date": "December 13, 2014",
+    "names": {
+      "ja": "タイダルストーム",
+      "ko": "타이달스톰"
+    }
   },
   {
     "series": "xy",
@@ -1111,7 +1195,11 @@
       "cards": 78,
       "special": 13
     },
-    "release_date": "March 14, 2015"
+    "release_date": "March 14, 2015",
+    "names": {
+      "ja": "エメラルドブレイク",
+      "ko": "에메랄드 브레이크"
+    }
   },
   {
     "series": "xy",
@@ -1128,7 +1216,11 @@
       "cards": 81,
       "special": 16
     },
-    "release_date": "June 20, 2015"
+    "release_date": "June 20, 2015",
+    "names": {
+      "ja": "バンデットリング",
+      "ko": "밴디트링"
+    }
   },
   {
     "series": "xy-break",
@@ -1145,7 +1237,11 @@
       "cards": 59,
       "special": 6
     },
-    "release_date": "September 26, 2015"
+    "release_date": "September 26, 2015",
+    "names": {
+      "ja": "青い衝撃",
+      "ko": "푸른 충격"
+    }
   },
   {
     "series": "xy-break",
@@ -1162,7 +1258,11 @@
       "cards": 59,
       "special": 6
     },
-    "release_date": "September 26, 2015"
+    "release_date": "September 26, 2015",
+    "names": {
+      "ja": "赤い閃光",
+      "ko": "붉은 섬광"
+    }
   },
   {
     "series": "xy-break",
@@ -1179,7 +1279,11 @@
       "cards": 80,
       "special": 9
     },
-    "release_date": "December 11, 2015"
+    "release_date": "December 11, 2015",
+    "names": {
+      "ja": "破天の怒り",
+      "ko": "천공의 분노"
+    }
   },
   {
     "series": "xy-break",
@@ -1196,7 +1300,11 @@
       "cards": 78,
       "special": 10
     },
-    "release_date": "March 18, 2016"
+    "release_date": "March 18, 2016",
+    "names": {
+      "ja": "めざめる超王",
+      "ko": "초능력의 제왕"
+    }
   },
   {
     "series": "xy-break",
@@ -1213,7 +1321,11 @@
       "cards": 54,
       "special": 5
     },
-    "release_date": "June 17, 2016"
+    "release_date": "June 17, 2016",
+    "names": {
+      "ja": "爆熱の闘士",
+      "ko": "타오르는 투사"
+    }
   },
   {
     "series": "xy-break",
@@ -1230,7 +1342,11 @@
       "cards": 54,
       "special": 5
     },
-    "release_date": "June 17, 2016"
+    "release_date": "June 17, 2016",
+    "names": {
+      "ja": "冷酷の反逆者",
+      "ko": "냉혹한 반역자"
+    }
   },
   {
     "series": "sun-moon",
@@ -1261,7 +1377,11 @@
       "cards": 60,
       "special": 13
     },
-    "release_date": "December 9, 2016"
+    "release_date": "December 9, 2016",
+    "names": {
+      "ja": "コレクションサン",
+      "ko": "썬 컬렉션"
+    }
   },
   {
     "series": "sun-moon",
@@ -1278,7 +1398,11 @@
       "cards": 60,
       "special": 13
     },
-    "release_date": "December 9, 2016"
+    "release_date": "December 9, 2016",
+    "names": {
+      "ja": "コレクションムーン",
+      "ko": "문 컬렉션"
+    }
   },
   {
     "series": "sun-moon",
@@ -1295,7 +1419,11 @@
       "cards": 50,
       "special": 12
     },
-    "release_date": "March 17, 2017"
+    "release_date": "March 17, 2017",
+    "names": {
+      "ja": "キミを待つ島々",
+      "ko": "알로라의 햇빛"
+    }
   },
   {
     "series": "sun-moon",
@@ -1312,7 +1440,11 @@
       "cards": 50,
       "special": 12
     },
-    "release_date": "March 17, 2017"
+    "release_date": "March 17, 2017",
+    "names": {
+      "ja": "アローラの月光",
+      "ko": "알로라의 달빛"
+    }
   },
   {
     "series": "sun-moon",
@@ -1329,7 +1461,11 @@
       "cards": 51,
       "special": 13
     },
-    "release_date": "June 16, 2017"
+    "release_date": "June 16, 2017",
+    "names": {
+      "ja": "闘う虹を見たか",
+      "ko": "어둠을 밝힌 무지개"
+    }
   },
   {
     "series": "sun-moon",
@@ -1346,7 +1482,11 @@
       "cards": 51,
       "special": 13
     },
-    "release_date": "June 16, 2017"
+    "release_date": "June 16, 2017",
+    "names": {
+      "ja": "光を喰らう闇",
+      "ko": "빛을 삼킨 어둠"
+    }
   },
   {
     "series": "sun-moon",
@@ -1363,7 +1503,11 @@
       "cards": 50,
       "special": 12
     },
-    "release_date": "September 15, 2017"
+    "release_date": "September 15, 2017",
+    "names": {
+      "ja": "覚醒の勇者",
+      "ko": "각성의 용사"
+    }
   },
   {
     "series": "sun-moon",
@@ -1380,7 +1524,11 @@
       "cards": 50,
       "special": 12
     },
-    "release_date": "September 15, 2017"
+    "release_date": "September 15, 2017",
+    "names": {
+      "ja": "超次元の暴獣",
+      "ko": "초차원의 침략자"
+    }
   },
   {
     "series": "sun-moon",
@@ -1397,7 +1545,11 @@
       "cards": 66,
       "special": 12
     },
-    "release_date": "December 8, 2017"
+    "release_date": "December 8, 2017",
+    "names": {
+      "ja": "ウルトラサン",
+      "ko": "울트라썬"
+    }
   },
   {
     "series": "sun-moon",
@@ -1414,7 +1566,11 @@
       "cards": 66,
       "special": 12
     },
-    "release_date": "December 8, 2017"
+    "release_date": "December 8, 2017",
+    "names": {
+      "ja": "ウルトラムーン",
+      "ko": "울트라문"
+    }
   },
   {
     "series": "sun-moon",
@@ -1431,7 +1587,11 @@
       "cards": 94,
       "special": 16
     },
-    "release_date": "March 2, 2018"
+    "release_date": "March 2, 2018",
+    "names": {
+      "ja": "禁断の光",
+      "ko": "금단의 빛"
+    }
   },
   {
     "series": "sun-moon",
@@ -1448,7 +1608,11 @@
       "cards": 96,
       "special": 16
     },
-    "release_date": "June 1, 2018"
+    "release_date": "June 1, 2018",
+    "names": {
+      "ja": "裂空のカリスマ",
+      "ko": "창공의 카리스마"
+    }
   },
   {
     "series": "sun-moon",
@@ -1465,7 +1629,11 @@
       "cards": 95,
       "special": 16
     },
-    "release_date": "September 7, 2018"
+    "release_date": "September 7, 2018",
+    "names": {
+      "ja": "超爆インパクト",
+      "ko": "버스트임팩트"
+    }
   },
   {
     "series": "sun-moon",
@@ -1482,7 +1650,11 @@
       "cards": 95,
       "special": 23
     },
-    "release_date": "December 7, 2018"
+    "release_date": "December 7, 2018",
+    "names": {
+      "ja": "タッグボルト",
+      "ko": "태그볼트"
+    }
   },
   {
     "series": "sun-moon",
@@ -1499,7 +1671,11 @@
       "cards": 95,
       "special": 21
     },
-    "release_date": "March 1, 2019"
+    "release_date": "March 1, 2019",
+    "names": {
+      "ja": "ダブルブレイズ",
+      "ko": "더블블레이즈"
+    }
   },
   {
     "series": "sun-moon",
@@ -1516,7 +1692,11 @@
       "cards": 94,
       "special": 21
     },
-    "release_date": "May 31, 2019"
+    "release_date": "May 31, 2019",
+    "names": {
+      "ja": "ミラクルツイン",
+      "ko": "미라클트윈"
+    }
   },
   {
     "series": "sun-moon",
@@ -1533,7 +1713,11 @@
       "cards": 95,
       "special": 22
     },
-    "release_date": "September 6, 2019"
+    "release_date": "September 6, 2019",
+    "names": {
+      "ja": "オルタージェネシス",
+      "ko": "얼터제네시스"
+    }
   },
   {
     "series": "sword-shield",
@@ -1550,7 +1734,11 @@
       "cards": 60,
       "special": 15
     },
-    "release_date": "December 6, 2019"
+    "release_date": "December 6, 2019",
+    "names": {
+      "ja": "ソード",
+      "ko": "소드"
+    }
   },
   {
     "series": "sword-shield",
@@ -1567,7 +1755,11 @@
       "cards": 60,
       "special": 15
     },
-    "release_date": "December 6, 2019"
+    "release_date": "December 6, 2019",
+    "names": {
+      "ja": "シールド",
+      "ko": "실드"
+    }
   },
   {
     "series": "sword-shield",
@@ -1584,7 +1776,11 @@
       "cards": 96,
       "special": 19
     },
-    "release_date": "March 6, 2020"
+    "release_date": "March 6, 2020",
+    "names": {
+      "ja": "反逆クラッシュ",
+      "ko": "반역크래시"
+    }
   },
   {
     "series": "sword-shield",
@@ -1601,7 +1797,11 @@
       "cards": 100,
       "special": 19
     },
-    "release_date": "June 5, 2020"
+    "release_date": "June 5, 2020",
+    "names": {
+      "ja": "ムゲンゾーン",
+      "ko": "무한존"
+    }
   },
   {
     "series": "sword-shield",
@@ -1618,7 +1818,12 @@
       "cards": 100,
       "special": 21
     },
-    "release_date": "September 18, 2020"
+    "release_date": "September 18, 2020",
+    "names": {
+      "ja": "仰天のボルテッカー",
+      "zh-tw": "驚天伏特攻擊",
+      "ko": "앙천의 볼트태클"
+    }
   },
   {
     "series": "sword-shield",
@@ -1635,7 +1840,14 @@
       "cards": 70,
       "special": 21
     },
-    "release_date": "January 22, 2021"
+    "release_date": "January 22, 2021",
+    "names": {
+      "ja": "一撃マスター",
+      "zh-tw": "一撃大師",
+      "id": "Master Serangan Tunggal",
+      "th": "มาสเตอร์จู่โจมครั้งเดียว",
+      "ko": "일격마스터"
+    }
   },
   {
     "series": "sword-shield",
@@ -1652,7 +1864,14 @@
       "cards": 70,
       "special": 21
     },
-    "release_date": "January 22, 2021"
+    "release_date": "January 22, 2021",
+    "names": {
+      "ja": "連撃マスター",
+      "zh-tw": "連撃大師",
+      "id": "Master Serangan Beruntun",
+      "th": "มาสเตอร์จู่โจมต่อเนื่อง",
+      "ko": "연격마스터"
+    }
   },
   {
     "series": "sword-shield",
@@ -1669,7 +1888,14 @@
       "cards": 70,
       "special": 25
     },
-    "release_date": "April 23, 2021"
+    "release_date": "April 23, 2021",
+    "names": {
+      "ja": "白銀のランス",
+      "zh-tw": "銀白戰槍",
+      "id": "Ganjur Salju Perak",
+      "th": "หอกหิมะขาว",
+      "ko": "백은의 랜스"
+    }
   },
   {
     "series": "sword-shield",
@@ -1686,7 +1912,14 @@
       "cards": 70,
       "special": 25
     },
-    "release_date": "April 23, 2021"
+    "release_date": "April 23, 2021",
+    "names": {
+      "ja": "漆黒のガイスト",
+      "zh-tw": "漆黑幽魂",
+      "id": "Astral Gelap Gulita",
+      "th": "ภูตทมิฬ",
+      "ko": "칠흑의 가이스트"
+    }
   },
   {
     "series": "sword-shield",
@@ -1703,7 +1936,14 @@
       "cards": 67,
       "special": 23
     },
-    "release_date": "July 9, 2021"
+    "release_date": "July 9, 2021",
+    "names": {
+      "ja": "摩天パーフェクト",
+      "zh-tw": "摩天巔峰",
+      "id": "Pencakar Langit Sempurna",
+      "th": "เพอร์เฟคระฟ้า",
+      "ko": "마천퍼펙트"
+    }
   },
   {
     "series": "sword-shield",
@@ -1720,7 +1960,14 @@
       "cards": 67,
       "special": 23
     },
-    "release_date": "July 9, 2021"
+    "release_date": "July 9, 2021",
+    "names": {
+      "ja": "蒼空ストリーム",
+      "zh-tw": "蒼空烈流",
+      "id": "Arus Langit Biru",
+      "th": "สายน้ำแห่งนภา",
+      "ko": "창공의스트림"
+    }
   },
   {
     "series": "sword-shield",
@@ -1737,7 +1984,14 @@
       "cards": 100,
       "special": 29
     },
-    "release_date": "September 24, 2021"
+    "release_date": "September 24, 2021",
+    "names": {
+      "ja": "フュージョンアーツ",
+      "zh-tw": "匯流藝術",
+      "id": "Teknik Fusion",
+      "th": "ฟิวชันอาร์ต",
+      "ko": "퓨전아츠"
+    }
   },
   {
     "series": "sword-shield",
@@ -1754,7 +2008,14 @@
       "cards": 100,
       "special": 27
     },
-    "release_date": "January 14, 2022"
+    "release_date": "January 14, 2022",
+    "names": {
+      "ja": "スターバース",
+      "zh-tw": "星星誕生",
+      "id": "Star Birth",
+      "th": "สตาร์เบิร์ท",
+      "ko": "스타버스"
+    }
   },
   {
     "series": "sword-shield",
@@ -1771,7 +2032,14 @@
       "cards": 67,
       "special": 21
     },
-    "release_date": "April 8, 2022"
+    "release_date": "April 8, 2022",
+    "names": {
+      "ja": "タイムゲイザー",
+      "zh-tw": "時間觀察者",
+      "id": "Pengamat Waktu",
+      "th": "เจ้าแห่งกาลเวลา",
+      "ko": "타임게이저"
+    }
   },
   {
     "series": "sword-shield",
@@ -1788,7 +2056,14 @@
       "cards": 67,
       "special": 21
     },
-    "release_date": "April 8, 2022"
+    "release_date": "April 8, 2022",
+    "names": {
+      "ja": "スペースジャグラー",
+      "zh-tw": "空間魔術師",
+      "id": "Penyulap Ruang",
+      "th": "จอมมายาผ่ามิติ",
+      "ko": "스페이스저글러"
+    }
   },
   {
     "series": "sword-shield",
@@ -1805,7 +2080,14 @@
       "cards": 100,
       "special": 27
     },
-    "release_date": "July 15, 2022"
+    "release_date": "July 15, 2022",
+    "names": {
+      "ja": "ロストアビス",
+      "zh-tw": "迷途深淵",
+      "id": "Neraka Sirna",
+      "th": "ลอสต์เวิลด์",
+      "ko": "로스트어비스"
+    }
   },
   {
     "series": "sword-shield",
@@ -1822,7 +2104,14 @@
       "cards": 98,
       "special": 27
     },
-    "release_date": "October 21, 2022"
+    "release_date": "October 21, 2022",
+    "names": {
+      "ja": "パラダイムトリガー",
+      "zh-tw": "思維激盪",
+      "id": "Pemicu Paradigma",
+      "th": "ปฐมบทแห่งยุคใหม่",
+      "ko": "패러다임트리거"
+    }
   },
   {
     "series": "scarlet-violet",
@@ -1839,7 +2128,14 @@
       "cards": 78,
       "special": 30
     },
-    "release_date": "January 20, 2023"
+    "release_date": "January 20, 2023",
+    "names": {
+      "ja": "スカーレットex",
+      "zh-tw": "朱ex",
+      "id": "Scarlet ex",
+      "th": "สการ์เล็ต ex",
+      "ko": "스칼렛ex"
+    }
   },
   {
     "series": "scarlet-violet",
@@ -1856,7 +2152,14 @@
       "cards": 78,
       "special": 30
     },
-    "release_date": "January 20, 2023"
+    "release_date": "January 20, 2023",
+    "names": {
+      "ja": "バイオレットex",
+      "zh-tw": "紫ex",
+      "id": "Violet ex",
+      "th": "ไวโอเล็ต ex",
+      "ko": "바이올렛ex"
+    }
   },
   {
     "series": "scarlet-violet",
@@ -1873,7 +2176,14 @@
       "cards": 71,
       "special": 28
     },
-    "release_date": "April 14, 2023"
+    "release_date": "April 14, 2023",
+    "names": {
+      "ja": "スノーハザード",
+      "zh-tw": "冰雪險境",
+      "id": "Mara Bahaya Salju",
+      "th": "สโนว์ฮาซาร์ด",
+      "ko": "스노해저드"
+    }
   },
   {
     "series": "scarlet-violet",
@@ -1890,7 +2200,14 @@
       "cards": 71,
       "special": 28
     },
-    "release_date": "April 14, 2023"
+    "release_date": "April 14, 2023",
+    "names": {
+      "ja": "クレイバースト",
+      "zh-tw": "碟旋暴擊",
+      "id": "Letusan Tanah",
+      "th": "เคลย์เบิสต์",
+      "ko": "클레이버스트"
+    }
   },
   {
     "series": "scarlet-violet",
@@ -1907,7 +2224,13 @@
       "cards": 108,
       "special": 33
     },
-    "release_date": "July 28, 2023"
+    "release_date": "July 28, 2023",
+    "names": {
+      "ja": "黒炎の支配者",
+      "zh-tw": "黯焰支配者",
+      "th": "ราชาแห่งเพลิงกาฬ",
+      "ko": "흑염의 지배자"
+    }
   },
   {
     "series": "scarlet-violet",
@@ -1924,7 +2247,13 @@
       "cards": 66,
       "special": 29
     },
-    "release_date": "October 27, 2023"
+    "release_date": "October 27, 2023",
+    "names": {
+      "ja": "古代の咆哮",
+      "zh-tw": "古代咆哮",
+      "th": "เสียงคำรามจากอดีต",
+      "ko": "고대의 포효"
+    }
   },
   {
     "series": "scarlet-violet",
@@ -1941,7 +2270,13 @@
       "cards": 66,
       "special": 29
     },
-    "release_date": "October 27, 2023"
+    "release_date": "October 27, 2023",
+    "names": {
+      "ja": "未来の一閃",
+      "zh-tw": "未來閃光",
+      "th": "ประกายแสงจากอนาคต",
+      "ko": "미래의 일섬"
+    }
   },
   {
     "series": "scarlet-violet",
@@ -1958,7 +2293,13 @@
       "cards": 71,
       "special": 29
     },
-    "release_date": "January 26, 2024"
+    "release_date": "January 26, 2024",
+    "names": {
+      "ja": "ワイルドフォース",
+      "zh-tw": "狂野之力",
+      "th": "อำนาจอนารยะ",
+      "ko": "와일드포스"
+    }
   },
   {
     "series": "scarlet-violet",
@@ -1975,7 +2316,13 @@
       "cards": 71,
       "special": 29
     },
-    "release_date": "January 26, 2024"
+    "release_date": "January 26, 2024",
+    "names": {
+      "ja": "サイバージャッジ",
+      "zh-tw": "異度審判",
+      "th": "ตุลาการไซเบอร์",
+      "ko": "사이버저지"
+    }
   },
   {
     "series": "scarlet-violet",
@@ -1992,7 +2339,13 @@
       "cards": 101,
       "special": 32
     },
-    "release_date": "April 26, 2024"
+    "release_date": "April 26, 2024",
+    "names": {
+      "ja": "変幻の仮面",
+      "zh-tw": "變幻假面",
+      "th": "หน้ากากจอมลวงตา",
+      "ko": "변환의 가면"
+    }
   },
   {
     "series": "scarlet-violet",
@@ -2009,7 +2362,12 @@
       "cards": 102,
       "special": 33
     },
-    "release_date": "July 19, 2024"
+    "release_date": "July 19, 2024",
+    "names": {
+      "ja": "ステラミラクル",
+      "zh-tw": "星晶奇跡",
+      "ko": "스텔라미라클"
+    }
   },
   {
     "series": "scarlet-violet",
@@ -2026,7 +2384,12 @@
       "cards": 106,
       "special": 32
     },
-    "release_date": "October 18, 2024"
+    "release_date": "October 18, 2024",
+    "names": {
+      "ja": "超電ブレイカー",
+      "zh-tw": "超電突圍",
+      "ko": "초전브레이커"
+    }
   },
   {
     "series": "scarlet-violet",
@@ -2043,7 +2406,12 @@
       "cards": 100,
       "special": 32
     },
-    "release_date": "January 24, 2025"
+    "release_date": "January 24, 2025",
+    "names": {
+      "ja": "バトルパートナーズ",
+      "zh-tw": "對戰搭檔",
+      "ko": "배틀파트너즈"
+    }
   },
   {
     "series": "scarlet-violet",
@@ -2060,7 +2428,11 @@
       "cards": 98,
       "special": 34
     },
-    "release_date": "April 18, 2025"
+    "release_date": "April 18, 2025",
+    "names": {
+      "ja": "ロケット団の栄光",
+      "zh-tw": "火箭隊的榮耀"
+    }
   },
   {
     "series": "scarlet-violet",
@@ -2189,7 +2561,11 @@
     "card_stats": {
       "cards": 20
     },
-    "release_date": "January 27, 2012"
+    "release_date": "January 27, 2012",
+    "names": {
+      "ja": "ドラゴンセレクション",
+      "ko": "드래곤 컬렉션"
+    }
   },
   {
     "series": "black-white",
@@ -2205,7 +2581,11 @@
       "cards": 20,
       "special": 5
     },
-    "release_date": "February 1, 2013"
+    "release_date": "February 1, 2013",
+    "names": {
+      "ja": "シャイニーコレクション",
+      "ko": "샤이니 컬렉션"
+    }
   },
   {
     "series": "black-white",
@@ -2221,7 +2601,11 @@
       "cards": 93,
       "special": 6
     },
-    "release_date": "July 13, 2013"
+    "release_date": "July 13, 2013",
+    "names": {
+      "ja": "EXバトルブースト",
+      "ko": "EX 배틀 부스트"
+    }
   },
   {
     "series": "xy",
@@ -2236,7 +2620,11 @@
     "card_stats": {
       "cards": 34
     },
-    "release_date": "January 30, 2015"
+    "release_date": "January 30, 2015",
+    "names": {
+      "ja": "マグマ団VSアクア団 ダブルクライシス",
+      "ko": "마그마단vs아쿠아단 더블크라이시스"
+    }
   },
   {
     "series": "xy",
@@ -2251,7 +2639,11 @@
     "card_stats": {
       "cards": 27
     },
-    "release_date": "July 18, 2015"
+    "release_date": "July 18, 2015",
+    "names": {
+      "ja": "伝説キラコレクション",
+      "ko": "레전드 컬렉션"
+    }
   },
   {
     "series": "xy-break",
@@ -2266,7 +2658,11 @@
     "card_stats": {
       "cards": 32
     },
-    "release_date": "January 29, 2016"
+    "release_date": "January 29, 2016",
+    "names": {
+      "ja": "ポケキュンコレクション",
+      "ko": "포켓심쿵 컬렉션"
+    }
   },
   {
     "series": "xy-break",
@@ -2280,7 +2676,11 @@
     "card_stats": {
       "cards": 131
     },
-    "release_date": "April 16, 2016"
+    "release_date": "April 16, 2016",
+    "names": {
+      "ja": "プレミアムチャンピオンパック EX×M×BREAK",
+      "ko": "프리미엄 챔피언팩"
+    }
   },
   {
     "series": "xy-break",
@@ -2295,7 +2695,11 @@
       "cards": 36,
       "special": 2
     },
-    "release_date": "July 16, 2016"
+    "release_date": "July 16, 2016",
+    "names": {
+      "ja": "幻・伝説ドリームキラコレクション",
+      "ko": "환상・전설 드림 컬렉션"
+    }
   },
   {
     "series": "xy-break",
@@ -2310,7 +2714,11 @@
       "cards": 87,
       "special": 16
     },
-    "release_date": "September 16, 2016"
+    "release_date": "September 16, 2016",
+    "names": {
+      "ja": "ポケットモンスターカードゲーム 拡張パック 20th Anniversary",
+      "ko": "BASE PACK 20th Anniversary"
+    }
   },
   {
     "series": "xy-break",
@@ -2325,7 +2733,11 @@
       "cards": 171,
       "special": 17
     },
-    "release_date": "April 21, 2017"
+    "release_date": "April 21, 2017",
+    "names": {
+      "ja": "THE BEST OF XY",
+      "ko": "THE BEST OF XY"
+    }
   },
   {
     "series": "sun-moon",
@@ -2341,7 +2753,11 @@
       "cards": 51,
       "special": 17
     },
-    "release_date": "January 27, 2017"
+    "release_date": "January 27, 2017",
+    "names": {
+      "ja": "サン＆ムーン",
+      "ko": "썬&문"
+    }
   },
   {
     "series": "sun-moon",
@@ -2357,7 +2773,11 @@
       "cards": 49,
       "special": 17
     },
-    "release_date": "April 21, 2017"
+    "release_date": "April 21, 2017",
+    "names": {
+      "ja": "新たなる試練の向こう",
+      "ko": "새로운 시련"
+    }
   },
   {
     "series": "sun-moon",
@@ -2373,7 +2793,11 @@
       "cards": 72,
       "special": 10
     },
-    "release_date": "July 15, 2017"
+    "release_date": "July 15, 2017",
+    "names": {
+      "ja": "ひかる伝説",
+      "ko": "빛나는 전설"
+    }
   },
   {
     "series": "sun-moon",
@@ -2389,7 +2813,11 @@
       "cards": 50,
       "special": 13
     },
-    "release_date": "January 19, 2018"
+    "release_date": "January 19, 2018",
+    "names": {
+      "ja": "ウルトラフォース",
+      "ko": "울트라포스"
+    }
   },
   {
     "series": "sun-moon",
@@ -2405,7 +2833,11 @@
       "cards": 53,
       "special": 13
     },
-    "release_date": "April 6, 2018"
+    "release_date": "April 6, 2018",
+    "names": {
+      "ja": "ドラゴンストーム",
+      "ko": "드래곤스톰"
+    }
   },
   {
     "series": "sun-moon",
@@ -2421,7 +2853,11 @@
       "cards": 66,
       "special": 20
     },
-    "release_date": "May 30, 2018"
+    "release_date": "May 30, 2018",
+    "names": {
+      "ja": "チャンピオンロード",
+      "ko": "챔피언로드"
+    }
   },
   {
     "series": "sun-moon",
@@ -2437,7 +2873,11 @@
       "cards": 60,
       "special": 13
     },
-    "release_date": "July 6, 2018"
+    "release_date": "July 6, 2018",
+    "names": {
+      "ja": "迅雷スパーク",
+      "ko": "플라스마 스파크"
+    }
   },
   {
     "series": "sun-moon",
@@ -2453,7 +2893,11 @@
       "cards": 50,
       "special": 13
     },
-    "release_date": "August 3, 2018"
+    "release_date": "August 3, 2018",
+    "names": {
+      "ja": "フェアリーライズ",
+      "ko": "페어리라이즈"
+    }
   },
   {
     "series": "sun-moon",
@@ -2469,7 +2913,11 @@
       "cards": 52,
       "special": 13
     },
-    "release_date": "October 5, 2018"
+    "release_date": "October 5, 2018",
+    "names": {
+      "ja": "ダークオーダー",
+      "ko": "다크오더"
+    }
   },
   {
     "series": "sun-moon",
@@ -2485,7 +2933,11 @@
       "cards": 55,
       "special": 15
     },
-    "release_date": "January 11, 2019"
+    "release_date": "January 11, 2019",
+    "names": {
+      "ja": "ナイトユニゾン",
+      "ko": "나이트유니슨"
+    }
   },
   {
     "series": "sun-moon",
@@ -2501,7 +2953,11 @@
       "cards": 54,
       "special": 15
     },
-    "release_date": "February 1, 2019"
+    "release_date": "February 1, 2019",
+    "names": {
+      "ja": "フルメタルウォール",
+      "ko": "풀메탈월"
+    }
   },
   {
     "series": "sun-moon",
@@ -2517,7 +2973,11 @@
       "cards": 54,
       "special": 15
     },
-    "release_date": "April 5, 2019"
+    "release_date": "April 5, 2019",
+    "names": {
+      "ja": "ジージーエンド",
+      "ko": "GG엔드"
+    }
   },
   {
     "series": "sun-moon",
@@ -2533,7 +2993,11 @@
       "cards": 54,
       "special": 15
     },
-    "release_date": "April 26, 2019"
+    "release_date": "April 26, 2019",
+    "names": {
+      "ja": "スカイレジェンド",
+      "ko": "스카이레전드"
+    }
   },
   {
     "series": "sun-moon",
@@ -2549,7 +3013,11 @@
       "cards": 64,
       "special": 16
     },
-    "release_date": "July 5, 2019"
+    "release_date": "July 5, 2019",
+    "names": {
+      "ja": "リミックスバウト",
+      "ko": "리믹스바우트"
+    }
   },
   {
     "series": "sun-moon",
@@ -2565,7 +3033,11 @@
       "cards": 49,
       "special": 26
     },
-    "release_date": "August 2, 2019"
+    "release_date": "August 2, 2019",
+    "names": {
+      "ja": "ドリームリーグ",
+      "ko": "드림리그"
+    }
   },
   {
     "series": "sun-moon",
@@ -2581,7 +3053,11 @@
       "cards": 114,
       "special": 11
     },
-    "release_date": "October 20, 2017"
+    "release_date": "October 20, 2017",
+    "names": {
+      "ja": "GXバトルブースト",
+      "ko": "GX 배틀부스트"
+    }
   },
   {
     "series": "sun-moon",
@@ -2597,7 +3073,11 @@
       "cards": 150,
       "special": 100
     },
-    "release_date": "November 2, 2018"
+    "release_date": "November 2, 2018",
+    "names": {
+      "ja": "GXウルトラシャイニ",
+      "ko": "GX 울트라샤이니 ULTIMATE"
+    }
   },
   {
     "series": "sun-moon",
@@ -2612,7 +3092,11 @@
       "cards": 173,
       "special": 53
     },
-    "release_date": "October 4, 2019"
+    "release_date": "October 4, 2019",
+    "names": {
+      "ja": "TAG TEAM GX タッグオールスターズ",
+      "ko": "TAG TEAM GX 태그올스타즈"
+    }
   },
   {
     "series": "sword-shield",
@@ -2628,7 +3112,11 @@
       "cards": 70,
       "special": 16
     },
-    "release_date": "February 7, 2020"
+    "release_date": "February 7, 2020",
+    "names": {
+      "ja": "VMAXライジング",
+      "ko": "VMAX라이징"
+    }
   },
   {
     "series": "sword-shield",
@@ -2644,7 +3132,11 @@
       "cards": 70,
       "special": 16
     },
-    "release_date": "April 24, 2020"
+    "release_date": "April 24, 2020",
+    "names": {
+      "ja": "爆炎ウォーカー",
+      "ko": "폭염워커"
+    }
   },
   {
     "series": "sword-shield",
@@ -2660,7 +3152,11 @@
       "cards": 76,
       "special": 18
     },
-    "release_date": "July 10, 2020"
+    "release_date": "July 10, 2020",
+    "names": {
+      "ja": "伝説の鼓動",
+      "ko": "전설의 고동"
+    }
   },
   {
     "series": "sword-shield",
@@ -2676,7 +3172,14 @@
       "cards": 70,
       "special": 16
     },
-    "release_date": "March 19, 2021"
+    "release_date": "March 19, 2021",
+    "names": {
+      "ja": "双璧のファイター",
+      "zh-tw": "雙璧戰士",
+      "id": "Dua Pilar Petarung",
+      "th": "สองยอดนักสู้",
+      "ko": "쌍벽의 파이터"
+    }
   },
   {
     "series": "sword-shield",
@@ -2692,7 +3195,14 @@
       "cards": 69,
       "special": 32
     },
-    "release_date": "May 28, 2021"
+    "release_date": "May 28, 2021",
+    "names": {
+      "ja": "イーブイヒーローズ",
+      "zh-tw": "伊布英雄",
+      "id": "Para Eevee Pahlawan",
+      "th": "อีวุยฮีโร",
+      "ko": "이브이 히어로즈"
+    }
   },
   {
     "series": "sword-shield",
@@ -2709,7 +3219,14 @@
       "special": 2,
       "special-holo-energy": 8
     },
-    "release_date": "October 22, 2021"
+    "release_date": "October 22, 2021",
+    "names": {
+      "ja": "25th アニバーサリーコレクション",
+      "zh-tw": "25th Anniversary",
+      "id": "25th Anniversary",
+      "th": "25th Anniversary",
+      "ko": "25th Anniversary"
+    }
   },
   {
     "series": "sword-shield",
@@ -2725,7 +3242,14 @@
       "cards": 67,
       "special": 26
     },
-    "release_date": "February 25, 2022"
+    "release_date": "February 25, 2022",
+    "names": {
+      "ja": "バトルリージョン",
+      "zh-tw": "對戰地區",
+      "id": "Pertarungan Daerah",
+      "th": "พสุธามหายุทธ",
+      "ko": "배틀리전"
+    }
   },
   {
     "series": "sword-shield",
@@ -2741,7 +3265,14 @@
       "cards": 71,
       "special": 28
     },
-    "release_date": "May 13, 2022"
+    "release_date": "May 13, 2022",
+    "names": {
+      "ja": "ダークファンタズマ",
+      "zh-tw": "黑暗亡靈",
+      "id": "Fantom Kegelapan",
+      "th": "อันธการลวงตา",
+      "ko": "다크판타스마"
+    }
   },
   {
     "series": "sword-shield",
@@ -2758,7 +3289,14 @@
       "special": 22,
       "special-holo-energy": 8
     },
-    "release_date": "June 17, 2022"
+    "release_date": "June 17, 2022",
+    "names": {
+      "ja": "Pokémon GO",
+      "zh-tw": "Pokémon GO",
+      "id": "Pokémon GO",
+      "th": "Pokémon GO",
+      "ko": "Pokémon GO"
+    }
   },
   {
     "series": "sword-shield",
@@ -2774,7 +3312,14 @@
       "cards": 68,
       "special": 26
     },
-    "release_date": "September 2, 2022"
+    "release_date": "September 2, 2022",
+    "names": {
+      "ja": "白熱のアルカナ",
+      "zh-tw": "白熱奧祕",
+      "id": "Arkana Memuncak",
+      "th": "อาร์คานาแห่งประกายแสง",
+      "ko": "백열의 아르카나"
+    }
   },
   {
     "series": "sword-shield",
@@ -2790,7 +3335,12 @@
       "cards": 190,
       "special": 140
     },
-    "release_date": "November 20, 2020"
+    "release_date": "November 20, 2020",
+    "names": {
+      "ja": "シャイニースターV",
+      "zh-tw": "閃色明星V",
+      "ko": "샤이니스타V"
+    }
   },
   {
     "series": "sword-shield",
@@ -2807,7 +3357,14 @@
       "special": 101,
       "special-holo-energy": 8
     },
-    "release_date": "December 3, 2021"
+    "release_date": "December 3, 2021",
+    "names": {
+      "ja": "VMAXクライマックス",
+      "zh-tw": "VMAX絕群壓軸",
+      "id": "VMAX Klimaks",
+      "th": "VMAX ไคลแมกซ์",
+      "ko": "VMAX 클라이맥스"
+    }
   },
   {
     "series": "sword-shield",
@@ -2823,7 +3380,14 @@
       "cards": 172,
       "special": 90
     },
-    "release_date": "December 2, 2022"
+    "release_date": "December 2, 2022",
+    "names": {
+      "ja": "VSTARユニバース",
+      "zh-tw": "天地萬物VSTAR",
+      "id": "VSTAR Semesta",
+      "th": "จักรวาลแห่งVSTAR",
+      "ko": "VSTAR 유니버스"
+    }
   },
   {
     "series": "scarlet-violet",
@@ -2839,7 +3403,14 @@
       "cards": 73,
       "special": 30
     },
-    "release_date": "March 10, 2023"
+    "release_date": "March 10, 2023",
+    "names": {
+      "ja": "トリプレットビート",
+      "zh-tw": "三連音爆",
+      "id": "Hantaman Triplet",
+      "th": "ทริปเปิลบีต",
+      "ko": "트리플렛비트"
+    }
   },
   {
     "series": "scarlet-violet",
@@ -2855,7 +3426,14 @@
       "cards": 165,
       "special": 45
     },
-    "release_date": "June 16, 2023"
+    "release_date": "June 16, 2023",
+    "names": {
+      "ja": "ポケモンカード151",
+      "zh-tw": "寶可夢卡牌151",
+      "id": "Kartu Pokémon 151",
+      "th": "โปเกมอนการ์ด 151",
+      "ko": "포켓몬 카드 151"
+    }
   },
   {
     "series": "scarlet-violet",
@@ -2871,7 +3449,13 @@
       "cards": 62,
       "special": 30
     },
-    "release_date": "September 22, 2023"
+    "release_date": "September 22, 2023",
+    "names": {
+      "ja": "レイジングサーフ",
+      "zh-tw": "激狂駭浪",
+      "th": "คลื่นพิโรธ",
+      "ko": "레이징서프"
+    }
   },
   {
     "series": "scarlet-violet",
@@ -2887,7 +3471,13 @@
       "cards": 66,
       "special": 30
     },
-    "release_date": "March 22, 2024"
+    "release_date": "March 22, 2024",
+    "names": {
+      "ja": "クリムゾンヘイズ",
+      "zh-tw": "緋紅薄霧",
+      "th": "หมอกสีชาด",
+      "ko": "크림슨헤이즈"
+    }
   },
   {
     "series": "scarlet-violet",
@@ -2903,7 +3493,12 @@
       "cards": 64,
       "special": 30
     },
-    "release_date": "June 7, 2024"
+    "release_date": "June 7, 2024",
+    "names": {
+      "ja": "ナイトワンダラー",
+      "zh-tw": "黑夜漫遊者",
+      "ko": "나이트원더러"
+    }
   },
   {
     "series": "scarlet-violet",
@@ -2919,7 +3514,12 @@
       "cards": 64,
       "special": 30
     },
-    "release_date": "September 13, 2024"
+    "release_date": "September 13, 2024",
+    "names": {
+      "ja": "楽園ドラゴーナ",
+      "zh-tw": "樂園騰龍",
+      "ko": "낙원드래고나"
+    }
   },
   {
     "series": "scarlet-violet",
@@ -2935,7 +3535,12 @@
       "cards": 63,
       "special": 29
     },
-    "release_date": "March 14, 2025"
+    "release_date": "March 14, 2025",
+    "names": {
+      "ja": "熱風のアリーナ",
+      "zh-tw": "熱風競技場",
+      "ko": "열풍의 아레나"
+    }
   },
   {
     "series": "scarlet-violet",
@@ -2951,7 +3556,14 @@
       "cards": 190,
       "special": 170
     },
-    "release_date": "December 1, 2023"
+    "release_date": "December 1, 2023",
+    "names": {
+      "ja": "シャイニートレジャーex",
+      "zh-tw": "閃色寶藏ex",
+      "id": "Harta Berkilau ex",
+      "th": "ไชนีเทรเชอร์ex",
+      "ko": "샤이니트레저 ex"
+    }
   },
   {
     "series": "scarlet-violet",
@@ -2967,7 +3579,14 @@
       "cards": 187,
       "special": 50
     },
-    "release_date": "December 6, 2024"
+    "release_date": "December 6, 2024",
+    "names": {
+      "ja": "テラスタルフェスex",
+      "zh-tw": "太晶慶典ex",
+      "id": "Festival Terastal ex",
+      "th": "เทศกาลเทรัสตัลex",
+      "ko": "테라스탈 페스타 ex"
+    }
   },
   {
     "series": "mega",
@@ -3288,7 +3907,11 @@
     "card_stats": {
       "cards": 24
     },
-    "release_date": "April 26, 2019"
+    "release_date": "April 26, 2019",
+    "names": {
+      "ja": "名探偵ピカチュウ",
+      "ko": "명탐정 피카츄"
+    }
   },
   {
     "series": "other-special",

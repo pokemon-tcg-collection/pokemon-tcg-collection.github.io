@@ -1,6 +1,7 @@
 [
   {
     "series": "original",
+    "language": "en",
     "name": "Base Set",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Base_Set_(TCG)",
     "names_translated": {
@@ -16,6 +17,7 @@
   },
   {
     "series": "original",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/2/2f/SetSymbolJungle.png/40px-SetSymbolJungle.png",
     "name": "Jungle",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Jungle_(TCG)",
@@ -30,6 +32,7 @@
   },
   {
     "series": "original",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/e/e6/SetSymbolFossil.png/40px-SetSymbolFossil.png",
     "name": "Fossil",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Fossil_(TCG)",
@@ -44,6 +47,7 @@
   },
   {
     "series": "original",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/3/36/SetSymbolBase_Set_2.png/40px-SetSymbolBase_Set_2.png",
     "name": "Base Set 2",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Base_Set_2_(TCG)",
@@ -51,6 +55,7 @@
   },
   {
     "series": "original",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/7/7e/SetSymbolTeam_Rocket.png/40px-SetSymbolTeam_Rocket.png",
     "name": "Team Rocket",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Team_Rocket_(TCG)",
@@ -62,6 +67,7 @@
   },
   {
     "series": "original",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/8/8f/SetSymbolGym_Heroes.png/40px-SetSymbolGym_Heroes.png",
     "name": "Gym Heroes",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Gym_Heroes_(TCG)",
@@ -69,6 +75,7 @@
   },
   {
     "series": "original",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/c/c4/SetSymbolGym_Challenge.png/40px-SetSymbolGym_Challenge.png",
     "name": "Gym Challenge",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Gym_Challenge_(TCG)",
@@ -76,6 +83,7 @@
   },
   {
     "series": "neo",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/7/75/SetSymbolNeo_Genesis.png/40px-SetSymbolNeo_Genesis.png",
     "name": "Neo Genesis",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Neo_Genesis_(TCG)",
@@ -88,6 +96,7 @@
   },
   {
     "series": "neo",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/f/f8/SetSymbolNeo_Discovery.png/40px-SetSymbolNeo_Discovery.png",
     "name": "Neo Discovery",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Neo_Discovery_(TCG)",
@@ -99,6 +108,7 @@
   },
   {
     "series": "neo",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/1/1e/SetSymbolSouthern_IslandsENG.png/40px-SetSymbolSouthern_IslandsENG.png",
     "name": "Southern Islands",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Southern_Islands_(TCG)",
@@ -106,6 +116,7 @@
   },
   {
     "series": "neo",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/c/c6/SetSymbolNeo_Revelation.png/40px-SetSymbolNeo_Revelation.png",
     "name": "Neo Revelation",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Neo_Revelation_(TCG)",
@@ -117,6 +128,7 @@
   },
   {
     "series": "neo",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/8/88/SetSymbolNeo_Destiny.png/40px-SetSymbolNeo_Destiny.png",
     "name": "Neo Destiny",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Neo_Destiny_(TCG)",
@@ -128,6 +140,7 @@
   },
   {
     "series": "legendary-collection",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/a/a8/SetSymbolLegendary_Collection.png/20px-SetSymbolLegendary_Collection.png",
     "name": "Legendary Collection",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Legendary_Collection_(TCG)",
@@ -135,6 +148,7 @@
   },
   {
     "series": "e-card",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/4/4f/SetSymbolExpedition.png/40px-SetSymbolExpedition.png",
     "name": "Expedition Base Set",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Expedition_Base_Set_(TCG)",
@@ -146,6 +160,7 @@
   },
   {
     "series": "e-card",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/2/27/SetSymbolAquapolis.png/40px-SetSymbolAquapolis.png",
     "name": "Aquapolis",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Aquapolis_(TCG)",
@@ -157,6 +172,7 @@
   },
   {
     "series": "e-card",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/5/56/SetSymbolSkyridge.png/40px-SetSymbolSkyridge.png",
     "name": "Skyridge",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Skyridge_(TCG)",
@@ -167,6 +183,7 @@
   },
   {
     "series": "ex",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/f/f2/SetSymbolRuby_and_Sapphire.png/40px-SetSymbolRuby_and_Sapphire.png",
     "name": "EX Ruby & Sapphire",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/EX_Ruby_%26_Sapphire_(TCG)",
@@ -180,6 +197,7 @@
   },
   {
     "series": "ex",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/6/6a/SetSymbolSandstorm.png/40px-SetSymbolSandstorm.png",
     "name": "EX Sandstorm",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/EX_Sandstorm_(TCG)",
@@ -191,6 +209,7 @@
   },
   {
     "series": "ex",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/0/08/SetSymbolDragon.png/40px-SetSymbolDragon.png",
     "name": "EX Dragon",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/EX_Dragon_(TCG)",
@@ -202,6 +221,7 @@
   },
   {
     "series": "ex",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/b/b9/SetSymbolTeam_Magma_vs_Team_Aqua.png/40px-SetSymbolTeam_Magma_vs_Team_Aqua.png",
     "name": "EX Team Magma vs Team Aqua",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/EX_Team_Magma_vs_Team_Aqua_(TCG)",
@@ -213,6 +233,7 @@
   },
   {
     "series": "ex",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/6/66/SetSymbolHidden_Legends.png/40px-SetSymbolHidden_Legends.png",
     "name": "EX Hidden Legends",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/EX_Hidden_Legends_(TCG)",
@@ -223,6 +244,7 @@
   },
   {
     "series": "ex",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/f/f6/SetSymbolFireRed_and_LeafGreen.png/40px-SetSymbolFireRed_and_LeafGreen.png",
     "name": "EX FireRed & LeafGreen",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/EX_FireRed_%26_LeafGreen_(TCG)",
@@ -234,6 +256,7 @@
   },
   {
     "series": "ex",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/a/a0/SetSymbolTeam_Rocket_Returns.png/40px-SetSymbolTeam_Rocket_Returns.png",
     "name": "EX Team Rocket Returns",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/EX_Team_Rocket_Returns_(TCG)",
@@ -243,6 +266,7 @@
   },
   {
     "series": "ex",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/7/73/SetSymbolDeoxys.png/40px-SetSymbolDeoxys.png",
     "name": "EX Deoxys",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/EX_Deoxys_(TCG)",
@@ -255,6 +279,7 @@
   },
   {
     "series": "ex",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/5/5b/SetSymbolEmerald.png/40px-SetSymbolEmerald.png",
     "name": "EX Emerald",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/EX_Emerald_(TCG)",
@@ -267,6 +292,7 @@
   },
   {
     "series": "ex",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/6/63/SetSymbolUnseen_Forces.png/40px-SetSymbolUnseen_Forces.png",
     "name": "EX Unseen Forces",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/EX_Unseen_Forces_(TCG)",
@@ -280,6 +306,7 @@
   },
   {
     "series": "ex",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/1/14/SetSymbolDelta_Species.png/40px-SetSymbolDelta_Species.png",
     "name": "EX Delta Species",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/EX_Delta_Species_(TCG)",
@@ -291,6 +318,7 @@
   },
   {
     "series": "ex",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/2/2c/SetSymbolLegend_Maker.png/40px-SetSymbolLegend_Maker.png",
     "name": "EX Legend Maker",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/EX_Legend_Maker_(TCG)",
@@ -304,6 +332,7 @@
   },
   {
     "series": "ex",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/b/ba/SetSymbolHolon_Phantoms.png/40px-SetSymbolHolon_Phantoms.png",
     "name": "EX Holon Phantoms",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/EX_Holon_Phantoms_(TCG)",
@@ -315,6 +344,7 @@
   },
   {
     "series": "ex",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/e/e9/SetSymbolCrystal_Guardians.png/40px-SetSymbolCrystal_Guardians.png",
     "name": "EX Crystal Guardians",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/EX_Crystal_Guardians_(TCG)",
@@ -326,6 +356,7 @@
   },
   {
     "series": "ex",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/e/e3/SetSymbolDragon_Frontiers.png/40px-SetSymbolDragon_Frontiers.png",
     "name": "EX Dragon Frontiers",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/EX_Dragon_Frontiers_(TCG)",
@@ -337,6 +368,7 @@
   },
   {
     "series": "ex",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/5/5b/SetSymbolPower_Keepers.png/40px-SetSymbolPower_Keepers.png",
     "name": "EX Power Keepers",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/EX_Power_Keepers_(TCG)",
@@ -347,6 +379,7 @@
   },
   {
     "series": "diamond-pearl",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/1/1f/SetSymbolDiamond_and_Pearl.png/40px-SetSymbolDiamond_and_Pearl.png",
     "name": "Diamond & Pearl",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Diamond_%26_Pearl_(TCG)",
@@ -361,6 +394,7 @@
   },
   {
     "series": "diamond-pearl",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/e/e2/SetSymbolMysterious_Treasures.png/40px-SetSymbolMysterious_Treasures.png",
     "name": "Mysterious Treasures",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Mysterious_Treasures_(TCG)",
@@ -375,6 +409,7 @@
   },
   {
     "series": "diamond-pearl",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/9/9c/SetSymbolSecret_Wonders.png/40px-SetSymbolSecret_Wonders.png",
     "name": "Secret Wonders",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Secret_Wonders_(TCG)",
@@ -388,6 +423,7 @@
   },
   {
     "series": "diamond-pearl",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/e/e8/SetSymbolGreat_Encounters.png/40px-SetSymbolGreat_Encounters.png",
     "name": "Great Encounters",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Great_Encounters_(TCG)",
@@ -400,6 +436,7 @@
   },
   {
     "series": "diamond-pearl",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/7/7b/SetSymbolMajestic_Dawn.png/40px-SetSymbolMajestic_Dawn.png",
     "name": "Majestic Dawn",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Majestic_Dawn_(TCG)",
@@ -411,6 +448,7 @@
   },
   {
     "series": "diamond-pearl",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/2/28/SetSymbolLegends_Awakened.png/40px-SetSymbolLegends_Awakened.png",
     "name": "Legends Awakened",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Legends_Awakened_(TCG)",
@@ -423,6 +461,7 @@
   },
   {
     "series": "diamond-pearl",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/7/72/SetSymbolStormfront.png/40px-SetSymbolStormfront.png",
     "name": "Stormfront",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Stormfront_(TCG)",
@@ -435,6 +474,7 @@
   },
   {
     "series": "platinum",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/7/7c/SetSymbolPlatinum.png/40px-SetSymbolPlatinum.png",
     "name": "Platinum",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Platinum_(TCG)",
@@ -447,6 +487,7 @@
   },
   {
     "series": "platinum",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/6/64/SetSymbolRising_Rivals.png/40px-SetSymbolRising_Rivals.png",
     "name": "Rising Rivals",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Rising_Rivals_(TCG)",
@@ -458,6 +499,7 @@
   },
   {
     "series": "platinum",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/f/f3/SetSymbolSupreme_Victors.png/40px-SetSymbolSupreme_Victors.png",
     "name": "Supreme Victors",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Supreme_Victors_(TCG)",
@@ -468,6 +510,7 @@
   },
   {
     "series": "platinum",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/9/96/SetSymbolArceus.png/40px-SetSymbolArceus.png",
     "name": "Arceus",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Platinum:_Arceus_(TCG)",
@@ -478,6 +521,7 @@
   },
   {
     "series": "heartgold-soulsilver",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/3/30/SetSymbolHeartGold_and_SoulSilver.png/40px-SetSymbolHeartGold_and_SoulSilver.png",
     "name": "HeartGold & SoulSilver",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/HeartGold_%26_SoulSilver_(TCG)",
@@ -491,6 +535,7 @@
   },
   {
     "series": "heartgold-soulsilver",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/4/42/SetSymbolUnleashed.png/40px-SetSymbolUnleashed.png",
     "name": "Unleashed",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Unleashed_(TCG)",
@@ -504,6 +549,7 @@
   },
   {
     "series": "heartgold-soulsilver",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/7/73/SetSymbolUndaunted.png/40px-SetSymbolUndaunted.png",
     "name": "Undaunted",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Undaunted_(TCG)",
@@ -515,6 +561,7 @@
   },
   {
     "series": "heartgold-soulsilver",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/0/00/SetSymbolTriumphant.png/40px-SetSymbolTriumphant.png",
     "name": "Triumphant",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Triumphant_(TCG)",
@@ -526,6 +573,7 @@
   },
   {
     "series": "call-of-legends",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/5/5b/SetSymbolCall_of_Legends.png/40px-SetSymbolCall_of_Legends.png",
     "name": "Call of Legends",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Call_of_Legends_(TCG)",
@@ -537,6 +585,7 @@
   },
   {
     "series": "black-white",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/6/64/SetSymbolBlack_and_White.png/40px-SetSymbolBlack_and_White.png",
     "name": "Black & White",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Black_%26_White_(TCG)",
@@ -550,6 +599,7 @@
   },
   {
     "series": "black-white",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/4/43/SetSymbolEmerging_Powers.png/40px-SetSymbolEmerging_Powers.png",
     "name": "Emerging Powers",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Emerging_Powers_(TCG)",
@@ -563,6 +613,7 @@
   },
   {
     "series": "black-white",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/b/b3/SetSymbolNoble_Victories.png/40px-SetSymbolNoble_Victories.png",
     "name": "Noble Victories",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Noble_Victories_(TCG)",
@@ -576,6 +627,7 @@
   },
   {
     "series": "black-white",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/6/63/SetSymbolNext_Destinies.png/40px-SetSymbolNext_Destinies.png",
     "name": "Next Destinies",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Next_Destinies_(TCG)",
@@ -589,6 +641,7 @@
   },
   {
     "series": "black-white",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/2/25/SetSymbolDark_Explorers.png/40px-SetSymbolDark_Explorers.png",
     "name": "Dark Explorers",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Dark_Explorers_(TCG)",
@@ -601,6 +654,7 @@
   },
   {
     "series": "black-white",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/a/af/SetSymbolDragons_Exalted.png/40px-SetSymbolDragons_Exalted.png",
     "name": "Dragons Exalted",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Dragons_Exalted_(TCG)",
@@ -614,6 +668,7 @@
   },
   {
     "series": "black-white",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/0/09/SetSymbolDragon_Vault.png/40px-SetSymbolDragon_Vault.png",
     "name": "Dragon Vault",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Dragon_Vault_(TCG)",
@@ -625,6 +680,7 @@
   },
   {
     "series": "black-white",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/a/a4/SetSymbolBoundaries_Crossed.png/40px-SetSymbolBoundaries_Crossed.png",
     "name": "Boundaries Crossed",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Boundaries_Crossed_(TCG)",
@@ -638,6 +694,7 @@
   },
   {
     "series": "black-white",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/9/93/SetSymbolPlasma_Storm.png/40px-SetSymbolPlasma_Storm.png",
     "name": "Plasma Storm",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Plasma_Storm_(TCG)",
@@ -651,6 +708,7 @@
   },
   {
     "series": "black-white",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/4/49/SetSymbolPlasma_Freeze.png/40px-SetSymbolPlasma_Freeze.png",
     "name": "Plasma Freeze",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Plasma_Freeze_(TCG)",
@@ -664,6 +722,7 @@
   },
   {
     "series": "black-white",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/6/60/SetSymbolPlasma_Blast.png/40px-SetSymbolPlasma_Blast.png",
     "name": "Plasma Blast",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Plasma_Blast_(TCG)",
@@ -676,6 +735,7 @@
   },
   {
     "series": "black-white",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/3/3c/SetSymbolLegendary_Treasures.png/40px-SetSymbolLegendary_Treasures.png",
     "name": "Legendary Treasures",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Legendary_Treasures_(TCG)",
@@ -683,6 +743,7 @@
   },
   {
     "series": "xy",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/0/0b/SetSymbolKalos_Starter_Set.png/40px-SetSymbolKalos_Starter_Set.png",
     "name": "Kalos Starter Set",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Kalos_Starter_Set_(TCG)",
@@ -696,6 +757,7 @@
   },
   {
     "series": "xy",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/6/6b/SetSymbolXY.png/40px-SetSymbolXY.png",
     "name": "XY",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/XY_(TCG)",
@@ -710,6 +772,7 @@
   },
   {
     "series": "xy",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/1/1f/SetSymbolFlashfire.png/40px-SetSymbolFlashfire.png",
     "name": "Flashfire",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Flashfire_(TCG)",
@@ -724,6 +787,7 @@
   },
   {
     "series": "xy",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/0/07/SetSymbolFurious_Fists.png/40px-SetSymbolFurious_Fists.png",
     "name": "Furious Fists",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Furious_Fists_(TCG)",
@@ -738,6 +802,7 @@
   },
   {
     "series": "xy",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/1/10/SetSymbolPhantom_Forces.png/40px-SetSymbolPhantom_Forces.png",
     "name": "Phantom Forces",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Phantom_Forces_(TCG)",
@@ -752,6 +817,7 @@
   },
   {
     "series": "xy",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/e/e3/SetSymbolPrimal_Clash.png/40px-SetSymbolPrimal_Clash.png",
     "name": "Primal Clash",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Primal_Clash_(TCG)",
@@ -766,6 +832,7 @@
   },
   {
     "series": "xy",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/0/06/SetSymbolDouble_Crisis.png/40px-SetSymbolDouble_Crisis.png",
     "name": "Double Crisis",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Double_Crisis_(TCG)",
@@ -776,6 +843,7 @@
   },
   {
     "series": "xy",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/b/b1/SetSymbolRoaring_Skies.png/40px-SetSymbolRoaring_Skies.png",
     "name": "Roaring Skies",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Roaring_Skies_(TCG)",
@@ -790,6 +858,7 @@
   },
   {
     "series": "xy",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/4/4e/SetSymbolAncient_Origins.png/40px-SetSymbolAncient_Origins.png",
     "name": "Ancient Origins",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Ancient_Origins_(TCG)",
@@ -804,6 +873,7 @@
   },
   {
     "series": "xy",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/0/0f/SetSymbolBREAKthrough.png/40px-SetSymbolBREAKthrough.png",
     "name": "BREAKthrough",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/BREAKthrough_(TCG)",
@@ -818,6 +888,7 @@
   },
   {
     "series": "xy",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/d/d4/SetSymbolBREAKpoint.png/40px-SetSymbolBREAKpoint.png",
     "name": "BREAKpoint",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/BREAKpoint_(TCG)",
@@ -831,6 +902,7 @@
   },
   {
     "series": "xy",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/5/54/SetSymbolGenerations.png/40px-SetSymbolGenerations.png",
     "name": "Generations",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Generations_(TCG)",
@@ -844,6 +916,7 @@
   },
   {
     "series": "xy",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/f/f2/SetSymbolFates_Collide.png/40px-SetSymbolFates_Collide.png",
     "name": "Fates Collide",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Fates_Collide_(TCG)",
@@ -857,6 +930,7 @@
   },
   {
     "series": "xy",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/7/7b/SetSymbolSteam_Siege.png/40px-SetSymbolSteam_Siege.png",
     "name": "Steam Siege",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Steam_Siege_(TCG)",
@@ -870,6 +944,7 @@
   },
   {
     "series": "xy",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/2/2b/SetSymbolEvolutions.png/40px-SetSymbolEvolutions.png",
     "name": "Evolutions",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Evolutions_(TCG)",
@@ -882,6 +957,7 @@
   },
   {
     "series": "sun-moon",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/c/cb/SetSymbolSun_and_Moon.png/40px-SetSymbolSun_and_Moon.png",
     "name": "Sun & Moon",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Sun_%26_Moon_(TCG)",
@@ -895,6 +971,7 @@
   },
   {
     "series": "sun-moon",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/6/68/SetSymbolGuardians_Rising.png/40px-SetSymbolGuardians_Rising.png",
     "name": "Guardians Rising",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Guardians_Rising_(TCG)",
@@ -908,6 +985,7 @@
   },
   {
     "series": "sun-moon",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/5/5f/SetSymbolBurning_Shadows.png/40px-SetSymbolBurning_Shadows.png",
     "name": "Burning Shadows",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Burning_Shadows_(TCG)",
@@ -921,6 +999,7 @@
   },
   {
     "series": "sun-moon",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/5/54/SetSymbolShining_Legends.png/40px-SetSymbolShining_Legends.png",
     "name": "Shining Legends",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Shining_Legends_(TCG)",
@@ -934,6 +1013,7 @@
   },
   {
     "series": "sun-moon",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/4/46/SetSymbolCrimson_Invasion.png/40px-SetSymbolCrimson_Invasion.png",
     "name": "Crimson Invasion",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Crimson_Invasion_(TCG)",
@@ -947,6 +1027,7 @@
   },
   {
     "series": "sun-moon",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/b/b8/SetSymbolUltra_Prism.png/40px-SetSymbolUltra_Prism.png",
     "name": "Ultra Prism",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Ultra_Prism_(TCG)",
@@ -960,6 +1041,7 @@
   },
   {
     "series": "sun-moon",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/8/8a/SetSymbolForbidden_Light.png/40px-SetSymbolForbidden_Light.png",
     "name": "Forbidden Light",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Forbidden_Light_(TCG)",
@@ -973,6 +1055,7 @@
   },
   {
     "series": "sun-moon",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/4/4a/SetSymbolCelestial_Storm.png/40px-SetSymbolCelestial_Storm.png",
     "name": "Celestial Storm",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Celestial_Storm_(TCG)",
@@ -986,6 +1069,7 @@
   },
   {
     "series": "sun-moon",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/4/43/SetSymbolDragon_Majesty.png/40px-SetSymbolDragon_Majesty.png",
     "name": "Dragon Majesty",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Dragon_Majesty_(TCG)",
@@ -999,6 +1083,7 @@
   },
   {
     "series": "sun-moon",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/c/c8/SetSymbolLost_Thunder.png/40px-SetSymbolLost_Thunder.png",
     "name": "Lost Thunder",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Lost_Thunder_(TCG)",
@@ -1012,6 +1097,7 @@
   },
   {
     "series": "sun-moon",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/2/27/SetSymbolTeam_Up.png/40px-SetSymbolTeam_Up.png",
     "name": "Team Up",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Team_Up_(TCG)",
@@ -1025,6 +1111,7 @@
   },
   {
     "series": "sun-moon",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/6/6a/SetSymbolDetective_Pikachu.png/40px-SetSymbolDetective_Pikachu.png",
     "name": "Detective Pikachu",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Detective_Pikachu_(TCG)",
@@ -1038,6 +1125,7 @@
   },
   {
     "series": "sun-moon",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/e/eb/SetSymbolUnbroken_Bonds.png/40px-SetSymbolUnbroken_Bonds.png",
     "name": "Unbroken Bonds",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Unbroken_Bonds_(TCG)",
@@ -1051,6 +1139,7 @@
   },
   {
     "series": "sun-moon",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/e/e5/SetSymbolUnified_Minds.png/40px-SetSymbolUnified_Minds.png",
     "name": "Unified Minds",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Unified_Minds_(TCG)",
@@ -1064,6 +1153,7 @@
   },
   {
     "series": "sun-moon",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/1/14/SetSymbolHidden_Fates.png/40px-SetSymbolHidden_Fates.png",
     "name": "Hidden Fates",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Hidden_Fates_(TCG)",
@@ -1077,6 +1167,7 @@
   },
   {
     "series": "sun-moon",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/3/3a/SetSymbolCosmic_Eclipse.png/40px-SetSymbolCosmic_Eclipse.png",
     "name": "Cosmic Eclipse",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Cosmic_Eclipse_(TCG)",
@@ -1090,6 +1181,7 @@
   },
   {
     "series": "sword-shield",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/5/51/SetSymbolSword_and_Shield.png/40px-SetSymbolSword_and_Shield.png",
     "name": "Sword & Shield",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Sword_%26_Shield_(TCG)",
@@ -1103,6 +1195,7 @@
   },
   {
     "series": "sword-shield",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/0/0f/SetSymbolRebel_Clash.png/40px-SetSymbolRebel_Clash.png",
     "name": "Rebel Clash",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Rebel_Clash_(TCG)",
@@ -1116,6 +1209,7 @@
   },
   {
     "series": "sword-shield",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/d/d9/SetSymbolDarkness_Ablaze.png/40px-SetSymbolDarkness_Ablaze.png",
     "name": "Darkness Ablaze",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Darkness_Ablaze_(TCG)",
@@ -1129,6 +1223,7 @@
   },
   {
     "series": "sword-shield",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/4/4d/SetSymbolChampion_Path.png/40px-SetSymbolChampion_Path.png",
     "name": "Champion's Path",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Champion%27s_Path_(TCG)",
@@ -1142,6 +1237,7 @@
   },
   {
     "series": "sword-shield",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/9/9b/SetSymbolVivid_Voltage.png/40px-SetSymbolVivid_Voltage.png",
     "name": "Vivid Voltage",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Vivid_Voltage_(TCG)",
@@ -1155,6 +1251,7 @@
   },
   {
     "series": "sword-shield",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/6/64/SetSymbolShining_Fates.png/40px-SetSymbolShining_Fates.png",
     "name": "Shining Fates",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Shining_Fates_(TCG)",
@@ -1168,6 +1265,7 @@
   },
   {
     "series": "sword-shield",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/1/16/SetSymbolBattle_Styles.png/40px-SetSymbolBattle_Styles.png",
     "name": "Battle Styles",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Battle_Styles_(TCG)",
@@ -1181,6 +1279,7 @@
   },
   {
     "series": "sword-shield",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/0/02/SetSymbolChilling_Reign.png/40px-SetSymbolChilling_Reign.png",
     "name": "Chilling Reign",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Chilling_Reign_(TCG)",
@@ -1194,6 +1293,7 @@
   },
   {
     "series": "sword-shield",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/c/cb/SetSymbolEvolving_Skies.png/40px-SetSymbolEvolving_Skies.png",
     "name": "Evolving Skies",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Evolving_Skies_(TCG)",
@@ -1207,6 +1307,7 @@
   },
   {
     "series": "sword-shield",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/3/32/SetSymbolCelebrations.png/40px-SetSymbolCelebrations.png",
     "name": "Celebrations",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Celebrations_(TCG)",
@@ -1220,6 +1321,7 @@
   },
   {
     "series": "sword-shield",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/7/79/SetSymbolFusion_Strike.png/40px-SetSymbolFusion_Strike.png",
     "name": "Fusion Strike",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Fusion_Strike_(TCG)",
@@ -1233,6 +1335,7 @@
   },
   {
     "series": "sword-shield",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/0/00/SetSymbolBrilliant_Stars.png/40px-SetSymbolBrilliant_Stars.png",
     "name": "Brilliant Stars",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Brilliant_Stars_(TCG)",
@@ -1246,6 +1349,7 @@
   },
   {
     "series": "sword-shield",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/7/7b/SetSymbolAstral_Radiance.png/40px-SetSymbolAstral_Radiance.png",
     "name": "Astral Radiance",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Astral_Radiance_(TCG)",
@@ -1259,6 +1363,7 @@
   },
   {
     "series": "sword-shield",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/0/01/SetSymbolPok%C3%A9mon_GO.png/40px-SetSymbolPok%C3%A9mon_GO.png",
     "name": "Pokémon GO",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_GO_(TCG)",
@@ -1272,6 +1377,7 @@
   },
   {
     "series": "sword-shield",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/7/7e/SetSymbolLost_Origin.png/40px-SetSymbolLost_Origin.png",
     "name": "Lost Origin",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Lost_Origin_(TCG)",
@@ -1285,6 +1391,7 @@
   },
   {
     "series": "sword-shield",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/5/55/SetSymbolSilver_Tempest.png/40px-SetSymbolSilver_Tempest.png",
     "name": "Silver Tempest",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Silver_Tempest_(TCG)",
@@ -1298,6 +1405,7 @@
   },
   {
     "series": "sword-shield",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/2/21/SetSymbolCrown_Zenith.png/40px-SetSymbolCrown_Zenith.png",
     "name": "Crown Zenith",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Crown_Zenith_(TCG)",
@@ -1311,6 +1419,7 @@
   },
   {
     "series": "scarlet-violet",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/9/9c/SetSymbolScarlet_and_Violet.png/40px-SetSymbolScarlet_and_Violet.png",
     "name": "Scarlet & Violet",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Scarlet_%26_Violet_(TCG)",
@@ -1324,6 +1433,7 @@
   },
   {
     "series": "scarlet-violet",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/8/8d/SetSymbolPaldea_Evolved.png/40px-SetSymbolPaldea_Evolved.png",
     "name": "Paldea Evolved",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Paldea_Evolved_(TCG)",
@@ -1337,6 +1447,7 @@
   },
   {
     "series": "scarlet-violet",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/3/3d/SetSymbolObsidian_Flames.png/40px-SetSymbolObsidian_Flames.png",
     "name": "Obsidian Flames",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Obsidian_Flames_(TCG)",
@@ -1350,6 +1461,7 @@
   },
   {
     "series": "scarlet-violet",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/7/71/SetSymbol151.png/40px-SetSymbol151.png",
     "name": "151",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/151_(TCG)",
@@ -1363,6 +1475,7 @@
   },
   {
     "series": "scarlet-violet",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/f/fa/SetSymbolParadox_Rift.png/40px-SetSymbolParadox_Rift.png",
     "name": "Paradox Rift",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Paradox_Rift_(TCG)",
@@ -1376,6 +1489,7 @@
   },
   {
     "series": "scarlet-violet",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/e/ea/SetSymbolPaldean_Fates.png/40px-SetSymbolPaldean_Fates.png",
     "name": "Paldean Fates",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Paldean_Fates_(TCG)",
@@ -1389,6 +1503,7 @@
   },
   {
     "series": "scarlet-violet",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/3/33/SetSymbolTemporal_Forces.png/40px-SetSymbolTemporal_Forces.png",
     "name": "Temporal Forces",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Temporal_Forces_(TCG)",
@@ -1402,6 +1517,7 @@
   },
   {
     "series": "scarlet-violet",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/6/65/SetSymbolTwilight_Masquerade.png/40px-SetSymbolTwilight_Masquerade.png",
     "name": "Twilight Masquerade",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Twilight_Masquerade_(TCG)",
@@ -1415,6 +1531,7 @@
   },
   {
     "series": "scarlet-violet",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/7/74/SetSymbolShrouded_Fable.png/40px-SetSymbolShrouded_Fable.png",
     "name": "Shrouded Fable",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Shrouded_Fable_(TCG)",
@@ -1428,6 +1545,7 @@
   },
   {
     "series": "scarlet-violet",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/f/f1/SetSymbolStellar_Crown.png/40px-SetSymbolStellar_Crown.png",
     "name": "Stellar Crown",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Stellar_Crown_(TCG)",
@@ -1441,6 +1559,7 @@
   },
   {
     "series": "scarlet-violet",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/d/de/SetSymbolSurging_Sparks.png/40px-SetSymbolSurging_Sparks.png",
     "name": "Surging Sparks",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Surging_Sparks_(TCG)",
@@ -1454,6 +1573,7 @@
   },
   {
     "series": "scarlet-violet",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/a/a2/SetSymbolPrismatic_Evolutions.png/40px-SetSymbolPrismatic_Evolutions.png",
     "name": "Prismatic Evolutions",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Prismatic_Evolutions_(TCG)",
@@ -1467,6 +1587,7 @@
   },
   {
     "series": "scarlet-violet",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/5/51/SetSymbolJourney_Together.png/40px-SetSymbolJourney_Together.png",
     "name": "Journey Together",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Journey_Together_(TCG)",
@@ -1481,6 +1602,7 @@
   },
   {
     "series": "scarlet-violet",
+    "language": "en",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/d/d9/SetSymbolDestined_Rivals.png/40px-SetSymbolDestined_Rivals.png",
     "name": "Destined Rivals",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Destined_Rivals_(TCG)",

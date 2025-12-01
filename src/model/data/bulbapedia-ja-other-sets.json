@@ -1,6 +1,7 @@
 [
   {
     "series": "black-white",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/5/55/SetSymbolBlack_Collection.png/40px-SetSymbolBlack_Collection.png",
     "name_original": "ブラックコレクション",
     "name": "Black Collection",
@@ -11,6 +12,7 @@
   },
   {
     "series": "black-white",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/f/f1/SetSymbolWhite_Collection.png/40px-SetSymbolWhite_Collection.png",
     "name_original": "ホワイトコレクション",
     "name": "White Collection",
@@ -21,6 +23,7 @@
   },
   {
     "series": "black-white",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/c/c6/SetSymbolRed_Collection.png/40px-SetSymbolRed_Collection.png",
     "name_original": "レッドコレクション",
     "name": "Red Collection",
@@ -31,6 +34,7 @@
   },
   {
     "series": "black-white",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/f/ff/SetSymbolPsycho_Drive.png/40px-SetSymbolPsycho_Drive.png",
     "name_original": "サイコドライブ",
     "name": "Psycho Drive",
@@ -41,6 +45,7 @@
   },
   {
     "series": "black-white",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/a/aa/SetSymbolHail_Blizzard.png/40px-SetSymbolHail_Blizzard.png",
     "name_original": "ヘイルブリザード",
     "name": "Hail Blizzard",
@@ -51,6 +56,7 @@
   },
   {
     "series": "black-white",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/e/ef/SetSymbolDark_Rush.png/40px-SetSymbolDark_Rush.png",
     "name_original": "ダークラッシュ",
     "name": "Dark Rush",
@@ -61,6 +67,7 @@
   },
   {
     "series": "black-white",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/7/7a/SetSymbolDragon_Selection.png/40px-SetSymbolDragon_Selection.png",
     "name_original": "ドラゴンセレクション",
     "name": "Dragon Selection",
@@ -71,6 +78,7 @@
   },
   {
     "series": "black-white",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/a/a4/SetSymbolDragon_Blast.png/40px-SetSymbolDragon_Blast.png",
     "name_original": "リューズブラスト",
     "name": "Dragon Blast",
@@ -81,6 +89,7 @@
   },
   {
     "series": "black-white",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/7/73/SetSymbolDragon_Blade.png/40px-SetSymbolDragon_Blade.png",
     "name_original": "リューノブレード",
     "name": "Dragon Blade",
@@ -91,6 +100,7 @@
   },
   {
     "series": "black-white",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/7/79/SetSymbolFreeze_Bolt.png/40px-SetSymbolFreeze_Bolt.png",
     "name_original": "フリーズボルト",
     "name": "Freeze Bolt",
@@ -101,6 +111,7 @@
   },
   {
     "series": "black-white",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/2/2d/SetSymbolCold_Flare.png/40px-SetSymbolCold_Flare.png",
     "name_original": "コールドフレア",
     "name": "Cold Flare",
@@ -111,6 +122,7 @@
   },
   {
     "series": "black-white",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/8/86/SetSymbolPlasma_Gale.png/40px-SetSymbolPlasma_Gale.png",
     "name_original": "プラズマゲイル",
     "name": "Plasma Gale",
@@ -121,6 +133,7 @@
   },
   {
     "series": "black-white",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/b/b5/SetSymbolSpiral_Force.png/40px-SetSymbolSpiral_Force.png",
     "name_original": "ラセンフォース",
     "name": "Spiral Force",
@@ -131,6 +144,7 @@
   },
   {
     "series": "black-white",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/3/36/SetSymbolThunder_Knuckle.png/40px-SetSymbolThunder_Knuckle.png",
     "name_original": "ライデンナックル",
     "name": "Thunder Knuckle",
@@ -141,6 +155,7 @@
   },
   {
     "series": "black-white",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/e/ef/SetSymbolShiny_Collection.png/40px-SetSymbolShiny_Collection.png",
     "name_original": "シャイニーコレクション",
     "name": "Shiny Collection",
@@ -151,6 +166,7 @@
   },
   {
     "series": "black-white",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/0/03/SetSymbolMegalo_Cannon.png/40px-SetSymbolMegalo_Cannon.png",
     "name_original": "メガロキャノン",
     "name": "Megalo Cannon",
@@ -161,6 +177,7 @@
   },
   {
     "series": "black-white",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/f/f2/SetSymbolEX_Battle_Boost.png/40px-SetSymbolEX_Battle_Boost.png",
     "name_original": "EXバトルブースト",
     "name": "EX Battle Boost",
@@ -171,6 +188,7 @@
   },
   {
     "series": "xy",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/a/a1/SetSymbolCollection_X.png",
     "name_original": "コレクションX",
     "name": "Collection X",
@@ -181,6 +199,7 @@
   },
   {
     "series": "xy",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/7/74/SetSymbolCollection_Y.png",
     "name_original": "コレクションY",
     "name": "Collection Y",
@@ -191,6 +210,7 @@
   },
   {
     "series": "xy",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/4/46/SetSymbolWild_Blaze.png",
     "name_original": "ワイルドブレイズ",
     "name": "Wild Blaze",
@@ -201,6 +221,7 @@
   },
   {
     "series": "xy",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/5/59/SetSymbolRising_Fist.png",
     "name_original": "ライジングフィスト",
     "name": "Rising Fist",
@@ -211,6 +232,7 @@
   },
   {
     "series": "xy",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/2/22/SetSymbolPhantom_Gate.png",
     "name_original": "ファントムゲート",
     "name": "Phantom Gate",
@@ -221,6 +243,7 @@
   },
   {
     "series": "xy",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/0/09/SetSymbolGaia_Volcano.png",
     "name_original": "ガイアボルケーノ",
     "name": "Gaia Volcano",
@@ -231,6 +254,7 @@
   },
   {
     "series": "xy",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/f/fd/SetSymbolTidal_Storm.png",
     "name_original": "タイダルストーム",
     "name": "Tidal Storm",
@@ -241,6 +265,7 @@
   },
   {
     "series": "xy",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/8/8f/SetSymbolDoubleCrisis.png",
     "name_original": "マグマ団VSアクア団 ダブルクライシス",
     "name": "Magma Gang VS Aqua Gang: Double Crisis",
@@ -251,6 +276,7 @@
   },
   {
     "series": "xy",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/0/03/SetSymbolEmerald_Break.png",
     "name_original": "エメラルドブレイク",
     "name": "Emerald Break",
@@ -261,6 +287,7 @@
   },
   {
     "series": "xy",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/6/6d/SetSymbolBandit_Ring.png/40px-SetSymbolBandit_Ring.png",
     "name_original": "バンデットリング",
     "name": "Bandit Ring",
@@ -271,6 +298,7 @@
   },
   {
     "series": "xy",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/5/51/SetSymbolLegendary_Shine_Collection.png",
     "name_original": "伝説キラコレクション",
     "name": "Legendary Shine Collection",
@@ -281,6 +309,7 @@
   },
   {
     "series": "xy-break",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/f/fc/SetSymbolBlue_Shock.png",
     "name_original": "青い衝撃",
     "name": "Blue Shock",
@@ -291,6 +320,7 @@
   },
   {
     "series": "xy-break",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/4/41/SetSymbolRed_Flash.png",
     "name_original": "赤い閃光",
     "name": "Red Flash",
@@ -301,6 +331,7 @@
   },
   {
     "series": "xy-break",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/d/dd/SetSymbolRage_of_the_Broken_Heavens.png",
     "name_original": "破天の怒り",
     "name": "Rage of the Broken Heavens",
@@ -311,6 +342,7 @@
   },
   {
     "series": "xy-break",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/a/a6/SetSymbolPok%C3%A9Kyun_Collection.png/40px-SetSymbolPok%C3%A9Kyun_Collection.png",
     "name_original": "ポケキュンコレクション",
     "name": "PokéKyun Collection",
@@ -321,6 +353,7 @@
   },
   {
     "series": "xy-break",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/5/5a/SetSymbolAwakening_Psychic_King.png",
     "name_original": "めざめる超王",
     "name": "Awakening Psychic King",
@@ -331,6 +364,7 @@
   },
   {
     "series": "xy-break",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/1/1b/SetSymbolPremium_Champion_Pack.png",
     "name_original": "プレミアムチャンピオンパック EX×M×BREAK",
     "name": "Premium Champion Pack EX×M×BREAK",
@@ -341,6 +375,7 @@
   },
   {
     "series": "xy-break",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/c/c7/SetSymbolFever-Burst_Fighter.png",
     "name_original": "爆熱の闘士",
     "name": "Fever-Burst Fighter",
@@ -351,6 +386,7 @@
   },
   {
     "series": "xy-break",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/8/8f/SetSymbolCruel_Traitor.png",
     "name_original": "冷酷の反逆者",
     "name": "Cruel Traitor",
@@ -361,6 +397,7 @@
   },
   {
     "series": "xy-break",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/d/de/SetSymbolMythical_Legendary_Dream_Shine_Collection.png",
     "name_original": "幻・伝説ドリームキラコレクション",
     "name": "Mythical & Legendary Dream Shine Collection",
@@ -371,6 +408,7 @@
   },
   {
     "series": "xy-break",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/1/1b/SetSymbolExpansion_Pack_20th_Anniversary.png/40px-SetSymbolExpansion_Pack_20th_Anniversary.png",
     "name_original": "ポケットモンスターカードゲーム 拡張パック 20th Anniversary",
     "name": "Pokémon Card Game Expansion Pack 20th Anniversary",
@@ -381,6 +419,7 @@
   },
   {
     "series": "xy-break",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/8/88/SetSymbolXY_reprint.png",
     "name_original": "THE BEST OF XY",
     "name": "THE BEST OF XY",
@@ -391,6 +430,7 @@
   },
   {
     "series": "sun-moon",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/6/61/SetSymbolCollection_Sun.png/40px-SetSymbolCollection_Sun.png",
     "name_original": "コレクションサン",
     "name": "Collection Sun",
@@ -401,6 +441,7 @@
   },
   {
     "series": "sun-moon",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/4/4c/SetSymbolCollection_Moon.png/40px-SetSymbolCollection_Moon.png",
     "name_original": "コレクションムーン",
     "name": "Collection Moon",
@@ -411,6 +452,7 @@
   },
   {
     "series": "sun-moon",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/d/dc/SetSymbolSM1Plus.png/40px-SetSymbolSM1Plus.png",
     "name_original": "サン＆ムーン",
     "name": "Sun & Moon",
@@ -421,6 +463,7 @@
   },
   {
     "series": "sun-moon",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/2/25/SetSymbolIslands_Await_You.png/40px-SetSymbolIslands_Await_You.png",
     "name_original": "キミを待つ島々",
     "name": "Islands Await You",
@@ -431,6 +474,7 @@
   },
   {
     "series": "sun-moon",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/2/24/SetSymbolAlolan_Moonlight.png/40px-SetSymbolAlolan_Moonlight.png",
     "name_original": "アローラの月光",
     "name": "Alolan Moonlight",
@@ -441,6 +485,7 @@
   },
   {
     "series": "sun-moon",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/c/c7/SetSymbolFacing_a_New_Trial.png/40px-SetSymbolFacing_a_New_Trial.png",
     "name_original": "新たなる試練の向こう",
     "name": "Facing a New Trial",
@@ -451,6 +496,7 @@
   },
   {
     "series": "sun-moon",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/c/c8/SetSymbolTo_Have_Seen_the_Battle_Rainbow.png/40px-SetSymbolTo_Have_Seen_the_Battle_Rainbow.png",
     "name_original": "闘う虹を見たか",
     "name": "To Have Seen the Battle Rainbow",
@@ -461,6 +507,7 @@
   },
   {
     "series": "sun-moon",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/6/62/SetSymbolDarkness_that_Consumes_Light.png/40px-SetSymbolDarkness_that_Consumes_Light.png",
     "name_original": "光を喰らう闇",
     "name": "Darkness that Consumes Light",
@@ -471,6 +518,7 @@
   },
   {
     "series": "sun-moon",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/9/97/SetSymbolShiningLegends.png/40px-SetSymbolShiningLegends.png",
     "name_original": "ひかる伝説",
     "name": "Shining Legends",
@@ -481,6 +529,7 @@
   },
   {
     "series": "sun-moon",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/8/81/SetSymbolAwakened_Heroes.png/40px-SetSymbolAwakened_Heroes.png",
     "name_original": "覚醒の勇者",
     "name": "Awakened Heroes",
@@ -491,6 +540,7 @@
   },
   {
     "series": "sun-moon",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/c/cb/SetSymbolUltradimensional_Beasts.png/40px-SetSymbolUltradimensional_Beasts.png",
     "name_original": "超次元の暴獣",
     "name": "Ultradimensional Beasts",
@@ -501,6 +551,7 @@
   },
   {
     "series": "sun-moon",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/6/6b/SetSymbolGX_Battle_Boost.png/40px-SetSymbolGX_Battle_Boost.png",
     "name_original": "GXバトルブースト",
     "name": "GX Battle Boost",
@@ -511,6 +562,7 @@
   },
   {
     "series": "sun-moon",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/d/d0/SetSymbolUltra_Sun.png/40px-SetSymbolUltra_Sun.png",
     "name_original": "ウルトラサン",
     "name": "Ultra Sun",
@@ -521,6 +573,7 @@
   },
   {
     "series": "sun-moon",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/d/d6/SetSymbolUltra_Moon.png/40px-SetSymbolUltra_Moon.png",
     "name_original": "ウルトラムーン",
     "name": "Ultra Moon",
@@ -531,6 +584,7 @@
   },
   {
     "series": "sun-moon",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/a/aa/SetSymbolUltra_Force.png",
     "name_original": "ウルトラフォース",
     "name": "Ultra Force",
@@ -541,6 +595,7 @@
   },
   {
     "series": "sun-moon",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/b/be/SetSymbolForbiddenLight.png",
     "name_original": "禁断の光",
     "name": "Forbidden Light",
@@ -551,6 +606,7 @@
   },
   {
     "series": "sun-moon",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/7/74/SetSymbolDragon_Storm.png/40px-SetSymbolDragon_Storm.png",
     "name_original": "ドラゴンストーム",
     "name": "Dragon Storm",
@@ -561,6 +617,7 @@
   },
   {
     "series": "sun-moon",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/9/93/SetSymbolChampion_Road.png/40px-SetSymbolChampion_Road.png",
     "name_original": "チャンピオンロード",
     "name": "Champion Road",
@@ -571,6 +628,7 @@
   },
   {
     "series": "sun-moon",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/5/52/SetSymbolSky-Splitting_Charisma.png/40px-SetSymbolSky-Splitting_Charisma.png",
     "name_original": "裂空のカリスマ",
     "name": "Sky-Splitting Charisma",
@@ -581,6 +639,7 @@
   },
   {
     "series": "sun-moon",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/c/c0/SetSymbolThunderclap_Spark.png/40px-SetSymbolThunderclap_Spark.png",
     "name_original": "迅雷スパーク",
     "name": "Thunderclap Spark",
@@ -591,6 +650,7 @@
   },
   {
     "series": "sun-moon",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/b/b9/SetSymbolFairy_Rise.png/40px-SetSymbolFairy_Rise.png",
     "name_original": "フェアリーライズ",
     "name": "Fairy Rise",
@@ -601,6 +661,7 @@
   },
   {
     "series": "sun-moon",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/f/f8/SetSymbolSuper-Burst_Impact.png/40px-SetSymbolSuper-Burst_Impact.png",
     "name_original": "超爆インパクト",
     "name": "Super-Burst Impact",
@@ -611,6 +672,7 @@
   },
   {
     "series": "sun-moon",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/c/c6/SetSymbolDark_Order.png/40px-SetSymbolDark_Order.png",
     "name_original": "ダークオーダー",
     "name": "Dark Order",
@@ -621,6 +683,7 @@
   },
   {
     "series": "sun-moon",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/f/fd/SetSymbolGX_Ultra_Shiny.png/40px-SetSymbolGX_Ultra_Shiny.png",
     "name_original": "GXウルトラシャイニ",
     "name": "GX Ultra Shiny",
@@ -631,6 +694,7 @@
   },
   {
     "series": "sun-moon",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/8/82/SetSymbolTag_Bolt.png/40px-SetSymbolTag_Bolt.png",
     "name_original": "タッグボルト",
     "name": "Tag Bolt",
@@ -641,6 +705,7 @@
   },
   {
     "series": "sun-moon",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/8/8f/SetSymbolNight_Unison.png/40px-SetSymbolNight_Unison.png",
     "name_original": "ナイトユニゾン",
     "name": "Night Unison",
@@ -651,6 +716,7 @@
   },
   {
     "series": "sun-moon",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/e/e1/SetSymbolFull_Metal_Wall.png/40px-SetSymbolFull_Metal_Wall.png",
     "name_original": "フルメタルウォール",
     "name": "Full Metal Wall",
@@ -661,6 +727,7 @@
   },
   {
     "series": "sun-moon",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/7/7d/SetSymbolDouble_Blaze.png/40px-SetSymbolDouble_Blaze.png",
     "name_original": "ダブルブレイズ",
     "name": "Double Blaze",
@@ -671,6 +738,7 @@
   },
   {
     "series": "sun-moon",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/a/ae/SetSymbolGG_End.png/40px-SetSymbolGG_End.png",
     "name_original": "ジージーエンド",
     "name": "GG End",
@@ -681,6 +749,7 @@
   },
   {
     "series": "sun-moon",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/3/38/SetSymbolSky_Legend.png/40px-SetSymbolSky_Legend.png",
     "name_original": "スカイレジェンド",
     "name": "Sky Legend",
@@ -691,6 +760,7 @@
   },
   {
     "series": "sun-moon",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/3/36/SetSymbolGreat_Detective_Pikachu.png/40px-SetSymbolGreat_Detective_Pikachu.png",
     "name_original": "名探偵ピカチュウ",
     "name": "Great Detective Pikachu",
@@ -701,6 +771,7 @@
   },
   {
     "series": "sun-moon",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/5/50/SetSymbolMiracle_Twin.png/40px-SetSymbolMiracle_Twin.png",
     "name_original": "ミラクルツイン",
     "name": "Miracle Twin",
@@ -711,6 +782,7 @@
   },
   {
     "series": "sun-moon",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/7/7c/SetSymbolRemix_Bout.png/40px-SetSymbolRemix_Bout.png",
     "name_original": "リミックスバウト",
     "name": "Remix Bout",
@@ -721,6 +793,7 @@
   },
   {
     "series": "sun-moon",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/e/e1/SetSymbolDream_League.png/40px-SetSymbolDream_League.png",
     "name_original": "ドリームリーグ",
     "name": "Dream League",
@@ -731,6 +804,7 @@
   },
   {
     "series": "sun-moon",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/7/7f/SetSymbolAlter_Genesis.png/40px-SetSymbolAlter_Genesis.png",
     "name_original": "オルタージェネシス",
     "name": "Alter Genesis",
@@ -741,6 +815,7 @@
   },
   {
     "series": "sun-moon",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/a/ac/SetSymbolTag_All_Stars.png/40px-SetSymbolTag_All_Stars.png",
     "name_original": "TAG TEAM GX タッグオールスターズ",
     "name": "TAG TEAM GX Tag All Stars",
@@ -751,6 +826,7 @@
   },
   {
     "series": "sword-shield",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/1/1a/SetSymbolSword.png/40px-SetSymbolSword.png",
     "name_original": "ソード",
     "name": "Sword",
@@ -761,6 +837,7 @@
   },
   {
     "series": "sword-shield",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/9/9b/SetSymbolShield.png/40px-SetSymbolShield.png",
     "name_original": "シールド",
     "name": "Shield",
@@ -771,6 +848,7 @@
   },
   {
     "series": "sword-shield",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/1/15/SetSymbolVMAX_Rising.png/40px-SetSymbolVMAX_Rising.png",
     "name_original": "VMAXライジング",
     "name": "VMAX Rising",
@@ -781,6 +859,7 @@
   },
   {
     "series": "sword-shield",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/f/fd/SetSymbolRebellion_Crash.png/40px-SetSymbolRebellion_Crash.png",
     "name_original": "反逆クラッシュ",
     "name": "Rebellion Crash",
@@ -791,6 +870,7 @@
   },
   {
     "series": "sword-shield",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/7/72/SetSymbolExplosive_Walker.png/40px-SetSymbolExplosive_Walker.png",
     "name_original": "爆炎ウォーカー",
     "name": "Explosive Walker",
@@ -801,6 +881,7 @@
   },
   {
     "series": "sword-shield",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/d/d4/SetSymbolInfinity_Zone.png/40px-SetSymbolInfinity_Zone.png",
     "name_original": "ムゲンゾーン",
     "name": "Infinity Zone",
@@ -811,6 +892,7 @@
   },
   {
     "series": "sword-shield",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/9/97/SetSymbolLegendary_Heartbeat.png/40px-SetSymbolLegendary_Heartbeat.png",
     "name_original": "伝説の鼓動",
     "name": "Legendary Heartbeat",
@@ -821,6 +903,7 @@
   },
   {
     "series": "sword-shield",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/b/ba/SetSymbolAmazing_Volt_Tackle.png/40px-SetSymbolAmazing_Volt_Tackle.png",
     "name_original": "仰天のボルテッカー",
     "name": "Amazing Volt Tackle",
@@ -832,6 +915,7 @@
   },
   {
     "series": "sword-shield",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/2/22/SetSymbolShiny_Star_V.png/40px-SetSymbolShiny_Star_V.png",
     "name_original": "シャイニースターV",
     "name": "Shiny Star V",
@@ -843,6 +927,7 @@
   },
   {
     "series": "sword-shield",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/3/3e/SetSymbolSingle_Strike_Master.png/40px-SetSymbolSingle_Strike_Master.png",
     "name_original": "一撃マスター",
     "name": "Single Strike Master",
@@ -856,6 +941,7 @@
   },
   {
     "series": "sword-shield",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/3/37/SetSymbolRapid_Strike_Master.png/40px-SetSymbolRapid_Strike_Master.png",
     "name_original": "連撃マスター",
     "name": "Rapid Strike Master",
@@ -869,6 +955,7 @@
   },
   {
     "series": "sword-shield",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/3/32/SetSymbolPeerless_Fighters.png/40px-SetSymbolPeerless_Fighters.png",
     "name_original": "双璧のファイター",
     "name": "Peerless Fighters",
@@ -882,6 +969,7 @@
   },
   {
     "series": "sword-shield",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/3/3c/SetSymbolSilver_Lance.png/40px-SetSymbolSilver_Lance.png",
     "name_original": "白銀のランス",
     "name": "Silver Lance",
@@ -895,6 +983,7 @@
   },
   {
     "series": "sword-shield",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/f/f9/SetSymbolJet-Black_Spirit.png/40px-SetSymbolJet-Black_Spirit.png",
     "name_original": "漆黒のガイスト",
     "name": "Jet-Black Spirit",
@@ -908,6 +997,7 @@
   },
   {
     "series": "sword-shield",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/5/57/SetSymbolEevee_Heroes.png/40px-SetSymbolEevee_Heroes.png",
     "name_original": "イーブイヒーローズ",
     "name": "Eievui Heroes",
@@ -921,6 +1011,7 @@
   },
   {
     "series": "sword-shield",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/7/70/SetSymbolSkyscraping_Perfection.png/40px-SetSymbolSkyscraping_Perfection.png",
     "name_original": "摩天パーフェクト",
     "name": "Skyscraping Perfection",
@@ -934,6 +1025,7 @@
   },
   {
     "series": "sword-shield",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/3/33/SetSymbolBlue_Sky_Stream.png/40px-SetSymbolBlue_Sky_Stream.png",
     "name_original": "蒼空ストリーム",
     "name": "Blue Sky Stream",
@@ -947,6 +1039,7 @@
   },
   {
     "series": "sword-shield",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/9/9f/SetSymbolFusion_Arts.png/40px-SetSymbolFusion_Arts.png",
     "name_original": "フュージョンアーツ",
     "name": "Fusion Arts",
@@ -960,6 +1053,7 @@
   },
   {
     "series": "sword-shield",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/f/f4/SetSymbol25th_Anniversary_Collection.png/40px-SetSymbol25th_Anniversary_Collection.png",
     "name_original": "25th アニバーサリーコレクション",
     "name": "25th Anniversary Collection",
@@ -973,6 +1067,7 @@
   },
   {
     "series": "sword-shield",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/2/2f/SetSymbolVMAX_Climax.png/40px-SetSymbolVMAX_Climax.png",
     "name_original": "VMAXクライマックス",
     "name": "VMAX Climax",
@@ -986,6 +1081,7 @@
   },
   {
     "series": "sword-shield",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/0/08/SetSymbolStar_Birth.png/40px-SetSymbolStar_Birth.png",
     "name_original": "スターバース",
     "name": "Star Birth",
@@ -999,6 +1095,7 @@
   },
   {
     "series": "sword-shield",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/9/95/SetSymbolBattle_Region.png/40px-SetSymbolBattle_Region.png",
     "name_original": "バトルリージョン",
     "name": "Battle Region",
@@ -1012,6 +1109,7 @@
   },
   {
     "series": "sword-shield",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/b/be/SetSymbolTime_Gazer.png/40px-SetSymbolTime_Gazer.png",
     "name_original": "タイムゲイザー",
     "name": "Time Gazer",
@@ -1025,6 +1123,7 @@
   },
   {
     "series": "sword-shield",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/4/41/SetSymbolSpace_Juggler.png/40px-SetSymbolSpace_Juggler.png",
     "name_original": "スペースジャグラー",
     "name": "Space Juggler",
@@ -1038,6 +1137,7 @@
   },
   {
     "series": "sword-shield",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/c/c6/SetSymbolDark_Phantasma.png/40px-SetSymbolDark_Phantasma.png",
     "name_original": "ダークファンタズマ",
     "name": "Dark Phantasma",
@@ -1051,6 +1151,7 @@
   },
   {
     "series": "sword-shield",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/3/3b/SetSymbolS10b.png/40px-SetSymbolS10b.png",
     "name_original": "Pokémon GO",
     "name": "Pokémon GO",
@@ -1064,6 +1165,7 @@
   },
   {
     "series": "sword-shield",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/0/05/SetSymbolLost_Abyss.png/40px-SetSymbolLost_Abyss.png",
     "name_original": "ロストアビス",
     "name": "Lost Abyss",
@@ -1077,6 +1179,7 @@
   },
   {
     "series": "sword-shield",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/6/65/SetSymbolIncandescent_Arcana.png/40px-SetSymbolIncandescent_Arcana.png",
     "name_original": "白熱のアルカナ",
     "name": "Incandescent Arcana",
@@ -1090,6 +1193,7 @@
   },
   {
     "series": "sword-shield",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/7/73/SetSymbolParadigm_Trigger.png/40px-SetSymbolParadigm_Trigger.png",
     "name_original": "パラダイムトリガー",
     "name": "Paradigm Trigger",
@@ -1103,6 +1207,7 @@
   },
   {
     "series": "sword-shield",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/3/3c/SetSymbolVSTAR_Universe.png/40px-SetSymbolVSTAR_Universe.png",
     "name_original": "VSTARユニバース",
     "name": "VSTAR Universe",
@@ -1116,6 +1221,7 @@
   },
   {
     "series": "scarlet-violet",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/7/7e/SetSymbolScarlet_ex.png/40px-SetSymbolScarlet_ex.png",
     "name_original": "スカーレットex",
     "name": "Scarlet ex",
@@ -1129,6 +1235,7 @@
   },
   {
     "series": "scarlet-violet",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/6/6a/SetSymbolViolet_ex.png/40px-SetSymbolViolet_ex.png",
     "name_original": "バイオレットex",
     "name": "Violet ex",
@@ -1142,6 +1249,7 @@
   },
   {
     "series": "scarlet-violet",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/5/51/SetSymbolTriplet_Beat.png/40px-SetSymbolTriplet_Beat.png",
     "name_original": "トリプレットビート",
     "name": "Triplet Beat",
@@ -1155,6 +1263,7 @@
   },
   {
     "series": "scarlet-violet",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/b/be/SetSymbolSnow_Hazard.png/40px-SetSymbolSnow_Hazard.png",
     "name_original": "スノーハザード",
     "name": "Snow Hazard",
@@ -1168,6 +1277,7 @@
   },
   {
     "series": "scarlet-violet",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/8/8a/SetSymbolClay_Burst.png/40px-SetSymbolClay_Burst.png",
     "name_original": "クレイバースト",
     "name": "Clay Burst",
@@ -1181,6 +1291,7 @@
   },
   {
     "series": "scarlet-violet",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/2/23/SetSymbolPok%C3%A9mon_Card_151.png/40px-SetSymbolPok%C3%A9mon_Card_151.png",
     "name_original": "ポケモンカード151",
     "name": "Pokémon Card 151",
@@ -1194,6 +1305,7 @@
   },
   {
     "series": "scarlet-violet",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/1/16/SetSymbolRuler_of_the_Black_Flame.png/40px-SetSymbolRuler_of_the_Black_Flame.png",
     "name_original": "黒炎の支配者",
     "name": "Ruler of the Black Flame",
@@ -1206,6 +1318,7 @@
   },
   {
     "series": "scarlet-violet",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/a/a2/SetSymbolRaging_Surf.png/40px-SetSymbolRaging_Surf.png",
     "name_original": "レイジングサーフ",
     "name": "Raging Surf",
@@ -1218,6 +1331,7 @@
   },
   {
     "series": "scarlet-violet",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/d/d3/SetSymbolAncient_Roar.png/40px-SetSymbolAncient_Roar.png",
     "name_original": "古代の咆哮",
     "name": "Ancient Roar",
@@ -1230,6 +1344,7 @@
   },
   {
     "series": "scarlet-violet",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/3/35/SetSymbolFuture_Flash.png/40px-SetSymbolFuture_Flash.png",
     "name_original": "未来の一閃",
     "name": "Future Flash",
@@ -1242,6 +1357,7 @@
   },
   {
     "series": "scarlet-violet",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/c/c7/SetSymbolShiny_Treasure_ex.png/40px-SetSymbolShiny_Treasure_ex.png",
     "name_original": "シャイニートレジャーex",
     "name": "Shiny Treasure ex",
@@ -1255,6 +1371,7 @@
   },
   {
     "series": "scarlet-violet",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/0/03/SetSymbolWild_Force.png/40px-SetSymbolWild_Force.png",
     "name_original": "ワイルドフォース",
     "name": "Wild Force",
@@ -1267,6 +1384,7 @@
   },
   {
     "series": "scarlet-violet",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/5/53/SetSymbolCyber_Judge.png/40px-SetSymbolCyber_Judge.png",
     "name_original": "サイバージャッジ",
     "name": "Cyber Judge",
@@ -1279,6 +1397,7 @@
   },
   {
     "series": "scarlet-violet",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/a/a0/SetSymbolCrimson_Haze.png/40px-SetSymbolCrimson_Haze.png",
     "name_original": "クリムゾンヘイズ",
     "name": "Crimson Haze",
@@ -1291,6 +1410,7 @@
   },
   {
     "series": "scarlet-violet",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/d/d6/SetSymbolTransformation_Mask.png/40px-SetSymbolTransformation_Mask.png",
     "name_original": "変幻の仮面",
     "name": "Transformation Mask",
@@ -1303,6 +1423,7 @@
   },
   {
     "series": "scarlet-violet",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/d/d5/SetSymbolNight_Wanderer.png/40px-SetSymbolNight_Wanderer.png",
     "name_original": "ナイトワンダラー",
     "name": "Night Wanderer",
@@ -1314,6 +1435,7 @@
   },
   {
     "series": "scarlet-violet",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/c/c8/SetSymbolStellar_Miracle.png/40px-SetSymbolStellar_Miracle.png",
     "name_original": "ステラミラクル",
     "name": "Stellar Miracle",
@@ -1325,6 +1447,7 @@
   },
   {
     "series": "scarlet-violet",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/c/cd/SetSymbolParadise_Dragona.png/40px-SetSymbolParadise_Dragona.png",
     "name_original": "楽園ドラゴーナ",
     "name": "Paradise Dragona",
@@ -1336,6 +1459,7 @@
   },
   {
     "series": "scarlet-violet",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/c/cc/SetSymbolSuper_Electric_Breaker.png/40px-SetSymbolSuper_Electric_Breaker.png",
     "name_original": "超電ブレイカー",
     "name": "Super Electric Breaker",
@@ -1347,6 +1471,7 @@
   },
   {
     "series": "scarlet-violet",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/c/ce/SetSymbolTerastal_Fest_ex.png/40px-SetSymbolTerastal_Fest_ex.png",
     "name_original": "テラスタルフェスex",
     "name": "Terastal Fest ex",
@@ -1360,6 +1485,7 @@
   },
   {
     "series": "scarlet-violet",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/a/a3/SetSymbolBattle_Partners.png/40px-SetSymbolBattle_Partners.png",
     "name_original": "バトルパートナーズ",
     "name": "Battle Partners",
@@ -1371,6 +1497,7 @@
   },
   {
     "series": "scarlet-violet",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/7/74/SetSymbolHot_Wind_Arena.png/40px-SetSymbolHot_Wind_Arena.png",
     "name_original": "熱風のアリーナ",
     "name": "Hot Wind Arena",
@@ -1382,6 +1509,7 @@
   },
   {
     "series": "scarlet-violet",
+    "language": "ja",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/4/4a/SetSymbolGlory_of_the_Rocket_Gang.png/40px-SetSymbolGlory_of_the_Rocket_Gang.png",
     "name_original": "ロケット団の栄光",
     "name": "Glory of the Rocket Gang",

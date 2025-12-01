@@ -62,6 +62,10 @@ interface SetInfoFullEN extends SetInfoBriefEN {
   language: 'en'
 }
 
+interface SetInfoFullENWithAltNames extends SetInfoFullEN {
+  names?: { [language: string]: string }
+}
+
 interface SetInfoBriefJA {
   no?: string
   symbol_url?: string | undefined
@@ -87,6 +91,10 @@ interface SetInfoFullJA extends SetInfoBriefJA {
   language: 'ja'
 }
 
+interface SetInfoFullJAWithAltNames extends SetInfoFullJA {
+  names?: { [language: string]: string }
+}
+
 interface SetInfoBriefZHCN {
   symbol_url?: string | undefined
   name: string
@@ -103,9 +111,7 @@ interface SetInfoFullZHCN extends SetInfoBriefZHCN {
 interface SetInfoBriefENOther {
   symbol_url?: string | undefined
   name: string
-
   names_translated: { [language: string]: string }
-
   bulbapedia_url?: string | undefined
 }
 
@@ -117,9 +123,8 @@ interface SetInfoFullENOther extends SetInfoBriefENOther {
 interface SetInfoBriefJAOther {
   symbol_url?: string | undefined
   name: string
-
+  name_original: string
   names_translated: { [language: string]: string }
-
   bulbapedia_url?: string | undefined
 }
 
@@ -1651,6 +1656,7 @@ function parseSetsENOther(document: Document) {
       tableData
         .map((entry) => ({
           series: lastSeriesHeader,
+          language: 'en',
           ...entry,
         }))
         .forEach((entry) => data.push(entry as SetInfoFullENOther))
@@ -1827,6 +1833,7 @@ function parseSetsJAOther(document: Document) {
       tableData
         .map((entry) => ({
           series: lastSeriesHeader,
+          language: 'ja',
           ...entry,
         }))
         .forEach((entry) => data.push(entry as SetInfoFullJAOther))
@@ -2175,6 +2182,282 @@ export async function _checkTCGdexSeriesIDMappingBySets() {
 
 // -------------------------------------------------------------------------
 
+export function fillInBulbapediaENAltNames(
+  sets: SetInfoFullEN[],
+  setAltNames: SetInfoFullENOther[],
+) {
+  const setAltNamesMapping = new Map<string, SetInfoFullENOther>(
+    setAltNames
+      .filter((info) => info.bulbapedia_url !== undefined)
+      .map((info) => [info.bulbapedia_url!, info]),
+  )
+  if (setAltNames.length !== setAltNamesMapping.size) {
+    console.warn('[?] Some EN set alt name infos might have same URL!', [
+      setAltNames.length,
+      setAltNamesMapping.size,
+    ])
+  }
+
+  sets.forEach((set) => {
+    const url = set.bulbapedia_url
+    if (setAltNamesMapping.has(url)) {
+      const info = setAltNamesMapping.get(url)!
+      if (info.name !== set.name && !set.name.endsWith(info.name)) {
+        console.warn('Found a possible set names mapping but names differ significantly!', {
+          set: set.name,
+          names: info.name,
+        })
+      }
+      if (info.symbol_url !== set.symbol_url) {
+        console.warn('Found a possible set names mapping but symbol_url are different?', {
+          set: set.symbol_url,
+          names: info.symbol_url,
+        })
+      }
+
+      if (info.names_translated && Object.getOwnPropertyNames(info.names_translated).length > 0) {
+        ;(set as SetInfoFullENWithAltNames).names = {
+          en: info.name,
+          ...info.names_translated,
+        }
+      }
+    } else {
+      // TODO: should we log or is this expected?
+    }
+  })
+
+  return sets as SetInfoFullENWithAltNames[]
+}
+
+export function fillInBulbapediaJAAltNames(
+  sets: SetInfoFullJA[],
+  setAltNames: SetInfoFullJAOther[],
+) {
+  const setAltNamesMappingByName = new Map<string, SetInfoFullJAOther>(
+    setAltNames.map((info) => [info.name, info]),
+  )
+  if (setAltNames.length !== setAltNamesMappingByName.size) {
+    console.warn('[?] Some JA set alt name infos might have same name!', [
+      setAltNames.length,
+      setAltNamesMappingByName.size,
+    ])
+  }
+
+  const found: string[] = []
+  sets.forEach((set) => {
+    const name = set.name
+    if (setAltNamesMappingByName.has(name)) {
+      found.push(name)
+      const info = setAltNamesMappingByName.get(name)!
+      if (info.name_original !== set.name_original) {
+        console.warn('Found a possible set names mapping but name_original are different!', {
+          set: set.name_original,
+          names: info.name_original,
+        })
+      }
+      if (info.bulbapedia_url !== set.bulbapedia_url) {
+        console.warn('Found a possible set names mapping but bulbapedia_url are different!', {
+          set: set.bulbapedia_url,
+          names: info.bulbapedia_url,
+        })
+      }
+      if (info.symbol_url !== set.symbol_url) {
+        console.warn('Found a possible set names mapping but symbol_url are different?', {
+          set: set.symbol_url,
+          names: info.symbol_url,
+        })
+      }
+
+      if (info.names_translated && Object.getOwnPropertyNames(info.names_translated).length > 0) {
+        ;(set as SetInfoFullJAWithAltNames).names = {
+          ja: info.name_original,
+          ...info.names_translated,
+        }
+      }
+    } else {
+      // TODO: should we log or is this expected?
+    }
+  })
+
+  const setAltNamesLeftOver = Array.from(
+    setAltNamesMappingByName
+      .entries()
+      .filter(([name]) => !found.includes(name))
+      .map(([, info]) => info),
+  )
+  const setAltNamesMappingByURL = new Map<string, SetInfoFullJAOther>(
+    setAltNamesLeftOver
+      .filter((info) => info.bulbapedia_url !== undefined)
+      .map((info) => [info.bulbapedia_url!, info]),
+  )
+
+  const found2: string[] = []
+  sets.forEach((set) => {
+    const url = set.bulbapedia_url
+    if (setAltNamesMappingByURL.has(url)) {
+      const info = setAltNamesMappingByURL.get(url)!
+      found2.push(info.name)
+      if (info.name !== set.name) {
+        console.warn('Found a possible set names mapping but name are different!', {
+          set: set.name,
+          names: info.name,
+        })
+      }
+      if (info.name_original !== set.name_original) {
+        console.warn('Found a possible set names mapping but name_original are different!', {
+          set: set.name_original,
+          names: info.name_original,
+        })
+      }
+      if (info.symbol_url !== set.symbol_url) {
+        console.warn('Found a possible set names mapping but symbol_url are different?', {
+          set: set.symbol_url,
+          names: info.symbol_url,
+        })
+      }
+
+      if (info.names_translated && Object.getOwnPropertyNames(info.names_translated).length > 0) {
+        ;(set as SetInfoFullJAWithAltNames).names = {
+          ja: info.name_original,
+          ...info.names_translated,
+        }
+      }
+    } else {
+      // TODO: should we log or is this expected?
+    }
+  })
+
+  const setAltNamesLeftOver2 = Array.from(
+    setAltNamesMappingByURL
+      .entries()
+      .filter(([, info]) => !found2.includes(info.name))
+      .map(([, info]) => info),
+  )
+  if (setAltNamesLeftOver2.length > 0) {
+    console.log(
+      'matching has leftover (match name)',
+      setAltNamesLeftOver.map((info) => info.name),
+    )
+    console.log(
+      'matching has leftover (match url)',
+      setAltNamesLeftOver2.map((info) => info.name),
+    )
+  }
+
+  return sets as SetInfoFullJAWithAltNames[]
+}
+
+export async function _checkBulbapediaENAltNameMapping() {
+  const documentENSets = await fetchAndParseToDocument(
+    urlBase + 'List_of_Pokémon_Trading_Card_Game_expansions',
+  )
+  const enSets = parseSetsEN(documentENSets)
+  if (enSets === undefined) {
+    console.error('[!] Unable to parse EN Sets?')
+    return
+  }
+
+  const documentOtherSets = await fetchAndParseToDocument(
+    urlBase + 'List_of_Pokémon_Trading_Card_Game_expansions_in_other_languages',
+  )
+  const enSetAltNames = parseSetsENOther(documentOtherSets)
+  if (enSetAltNames === undefined) {
+    console.error('[!] Unable to parse EN Set AltNames?')
+    return
+  }
+
+  const enSetAltNamesMappingByName = new Map<string, SetInfoFullENOther>(
+    enSetAltNames.map((info) => [info.name, info]),
+  )
+  const enSetAltNamesMappingByURL = new Map<string, SetInfoFullENOther>(
+    enSetAltNames
+      .filter((info) => info.bulbapedia_url !== undefined)
+      .map((info) => [info.bulbapedia_url!, info]),
+  )
+  if (enSetAltNames.length !== enSetAltNamesMappingByName.size) {
+    console.error('[!] Some EN set alt name infos might have same name!', [
+      enSetAltNames.length,
+      enSetAltNamesMappingByName.size,
+    ])
+    return
+  }
+  if (enSetAltNames.length !== enSetAltNamesMappingByURL.size) {
+    console.error('[!] Some EN set alt name infos might have same URL!', [
+      enSetAltNames.length,
+      enSetAltNamesMappingByURL.size,
+    ])
+    return
+  }
+
+  const foundByName: string[] = []
+  const foundByURL: string[] = []
+  const missing: string[] = []
+  const conflicting: [string, string, [string | undefined, string | undefined]][] = []
+  enSets.forEach((set) => {
+    // NOTE: matching via bulbapedia_url seems more reliable
+    const name = set.name
+    if (enSetAltNamesMappingByName.has(name)) {
+      foundByName.push(name)
+
+      const info = enSetAltNamesMappingByName.get(name)!
+      if (info.bulbapedia_url !== set.bulbapedia_url) {
+        conflicting.push([
+          'name BUT !bulbapedia_url',
+          name,
+          [info.bulbapedia_url, set.bulbapedia_url],
+        ])
+      }
+      if (info.symbol_url !== set.symbol_url) {
+        conflicting.push(['name BUT !symbol_url', name, [info.symbol_url, set.symbol_url]])
+      }
+
+      return
+    }
+
+    const url = set.bulbapedia_url
+    if (enSetAltNamesMappingByURL.has(url)) {
+      foundByURL.push(url)
+
+      const info = enSetAltNamesMappingByURL.get(url)!
+      if (info.name !== set.name) {
+        // is expected
+        if (set.name.endsWith(info.name)) {
+          conflicting.push(['bulbapedia_url BUT only name suffix', url, [info.name, set.name]])
+        } else {
+          conflicting.push(['bulbapedia_url BUT !name', url, [info.name, set.name]])
+        }
+      }
+      if (info.symbol_url !== set.symbol_url) {
+        conflicting.push(['bulbapedia_url BUT !symbol_url', url, [info.symbol_url, set.symbol_url]])
+      }
+
+      return
+    }
+
+    missing.push(url)
+  })
+  const available = enSetAltNames
+    .filter((info) => !foundByName.includes(info.name))
+    .filter(
+      (info) => !(info.bulbapedia_url !== undefined && foundByURL.includes(info.bulbapedia_url)),
+    )
+
+  console.log('Found name matches', foundByName.sort(), foundByURL.sort())
+  console.log('No name match found', missing.sort())
+  console.log('Set alt names available', available.sort())
+
+  console.log('Conflicts', conflicting.sort())
+
+  console.log(
+    `Found: ${foundByName.length} + ${foundByURL.length}, no set alt names found: ${missing.length}, leftover set alt names: ${available.length}`,
+  )
+}
+
+// for manual review
+// _checkBulbapediaENAltNameMapping()
+
+// -------------------------------------------------------------------------
+
 const DN_OUTPUT = 'out'
 
 // TODO: manual fixing
@@ -2207,9 +2490,20 @@ export async function processSetsEN(dn_output: string) {
     }
   })
 
+  console.log('[*] Adding alternative/translated names...')
+  const documentAltNames = await fetchAndParseToDocument(
+    urlBase + 'List_of_Pokémon_Trading_Card_Game_expansions_in_other_languages',
+  )
+  const resultENMappings = parseSetsENOther(documentAltNames)
+  if (resultENMappings === undefined) {
+    console.error('[!] Unable to parse EN Sets Alt names?')
+    return
+  }
+  const result2 = fillInBulbapediaENAltNames(result, resultENMappings)
+
   writeFileSync(
     pathJoin(dn_output, 'bulbapedia-en-sets.json'),
-    JSON.stringify(result, undefined, 2),
+    JSON.stringify(result2, undefined, 2),
   )
 }
 
@@ -2227,9 +2521,20 @@ export async function processSetsJA(dn_output: string) {
     return
   }
 
+  console.log('[*] Adding alternative/translated names...')
+  const documentAltNames = await fetchAndParseToDocument(
+    urlBase + 'List_of_Pokémon_Trading_Card_Game_expansions_in_other_languages',
+  )
+  const resultJAMappings = parseSetsJAOther(documentAltNames)
+  if (resultJAMappings === undefined) {
+    console.error('[!] Unable to parse JA Sets Alt names?')
+    return
+  }
+  const result2 = fillInBulbapediaJAAltNames(result, resultJAMappings)
+
   writeFileSync(
     pathJoin(dn_output, 'bulbapedia-ja-sets.json'),
-    JSON.stringify(result, undefined, 2),
+    JSON.stringify(result2, undefined, 2),
   )
 }
 
@@ -2242,6 +2547,10 @@ export async function processSetsOther(dn_output: string) {
   const resultENMappings = parseSetsENOther(document)
   console.log('[*] Extracting JA set names in other languages...')
   const resultJAMappings = parseSetsJAOther(document)
+
+  // TODO: Thai, Indonesian & Traditional Chinese Catch-up sets
+  // TODO: Indonesian & Thai sets
+
   console.log('[*] Extracting ZH-CN Catch-Up sets...')
   const resultZHSimple = parseSetsZHCN(document)
 

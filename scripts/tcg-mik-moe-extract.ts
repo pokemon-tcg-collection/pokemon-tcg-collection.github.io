@@ -86,15 +86,59 @@ export interface Card {
   effectId: string
   cardType: CardType
   yorenCode: string
-  is: CardTags[]
+  is: Mechanic[]
   setCodeEn: string
   cardIndexEn: string
   nameEn: string
 }
 
-export type CardType = 'Pokemon' | 'Item' | 'Tool' | 'Supporter' | 'Stadium' | 'Basic Energy'
-export type CardTags = 'Basic' | 'Stage 1' | 'Stage 2' | 'Future' | 'Ancient' | 'ex' | 'V' | 'VSTAR'
-export type CardRarity = 'C' | 'U' | 'R' | 'RR' | 'AR' | 'SR' | 'SAR' | 'UR' | '无标记'
+export type CardType =
+  | 'Pokemon'
+  | 'Item'
+  | 'Tool'
+  | 'Supporter'
+  | 'Stadium'
+  | 'Basic Energy'
+  | 'Special Energy'
+export type Mechanic =
+  | 'Basic'
+  | 'Stage 1'
+  | 'Stage 2'
+  | 'Future'
+  | 'Ancient'
+  | 'Single Strike'
+  | 'Rapid Strike'
+  | 'Fusion Strike'
+  | 'ex'
+  | 'V'
+  | 'VSTAR'
+  | 'GX'
+  | 'Ultra Beast'
+  | 'Prism Star'
+  | 'TAG TEAM'
+export type CardRarity =
+  | 'C'
+  | 'U'
+  | 'R'
+  | 'RR'
+  | 'RRR'
+  | 'A'
+  | 'AR'
+  | 'S'
+  | 'SR'
+  | 'SSR'
+  | 'SAR'
+  | 'UR'
+  | 'HR'
+  | 'SR'
+  | 'CHR'
+  | 'PR'
+  | '无标记'
+  | '●'
+  | '◆'
+  | '★'
+  | '★★'
+  | '★★★'
 
 export interface CardDetailResponse {
   code: number
@@ -104,19 +148,19 @@ export interface CardDetailResponse {
 
 export interface CardDetail {
   name: string
-  cardType: string
-  mechanic: null
+  cardType: Mechanic | null
+  mechanic: Mechanic[] | null
   label: null
   description: string
   yorenCode: string
-  pokemonAttr: PokemonAttr
+  pokemonAttr: PokemonAttr | null
   setCode: string
   cardIndex: string
   setCardsNum: string
   artist: string
-  rarity: string
+  rarity: CardRarity
   releaseDate: Date
-  regulationMark: string
+  regulationMark: RegulationMark
   effectId: string
   regulationLegal: RegulationLegal
   effectSameCards: Card[]
@@ -126,16 +170,22 @@ export interface CardDetail {
 }
 
 export interface PokemonAttr {
-  energyType: string
-  stage: string
+  energyType: Energy
+  stage: Mechanic
   hp: number
-  ability: unknown[]
+  ability: Ability[]
   ancientTrait: string
-  weakness: Weakness
-  resistance: null
+  weakness: WeaknessResistance | null
+  resistance: WeaknessResistance | null
   retreatCost: number
   attack: Attack[]
   evolvesFrom: string
+}
+
+export interface Ability {
+  name: string
+  text: string
+  isVStarPower: boolean
 }
 
 export interface Attack {
@@ -146,8 +196,8 @@ export interface Attack {
   isVStarPower: boolean
 }
 
-export interface Weakness {
-  energy: string
+export interface WeaknessResistance {
+  energy: Energy
   value: string
 }
 
@@ -156,6 +206,9 @@ export interface RegulationLegal {
   expanded: boolean
   smSeries: boolean
 }
+
+export type RegulationMark = 'D' | 'E' | 'A' | 'B' | 'C'
+export type Energy = 'G' | 'W' | 'L' | 'P' | 'D' | 'M' | 'C' | 'F' | 'R' | 'N' | 'Y'
 
 // -------------------------------------------------------------------------
 
@@ -526,7 +579,9 @@ process(DN_OUTPUT, {
   cardDetails: false,
   // but do not download card images
   cardImages: false,
-  // try to use existing (besides set list and card lists)
+  // restrict to main expansions only
+  onlyMainExpansion: true,
+  // try to use existing data (already written to disk) (but always refresh set list and card lists)
   force_refresh: false,
   // be nice
   req_delay: 345,

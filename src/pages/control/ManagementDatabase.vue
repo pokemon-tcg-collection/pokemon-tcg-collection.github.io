@@ -12,16 +12,18 @@ import { ref } from 'vue'
 
 import EditorFieldset from '@/components/EditorFieldset.vue'
 import usePokemonTCGCollectionIDB from '@/composables/usePokemonTCGCollectionIDB'
-import type { Card, Item, Place, Transaction } from '@/model/interfaces'
+import type { Card, Item, Place, Set, Transaction } from '@/model/interfaces'
 import { useAuditLogStore } from '@/stores/auditLog'
 import { useCardsStore } from '@/stores/cards'
 import { useItemsStore } from '@/stores/items'
 import { usePlacesStore } from '@/stores/places'
+import { useSetsStore } from '@/stores/sets'
 import { useTemplatesStore } from '@/stores/templates'
 import { useTransactionsStore } from '@/stores/transactions'
 import { useWorkInProgressStore } from '@/stores/workInProgress'
 
 const cardsStore = useCardsStore()
+const setsStore = useSetsStore()
 const transactionsStore = useTransactionsStore()
 const placesStore = usePlacesStore()
 const itemsStore = useItemsStore()
@@ -31,6 +33,7 @@ const auditLogStore = useAuditLogStore()
 
 type ExportableObjects =
   | 'cards'
+  | 'sets'
   | 'transactions'
   | 'places'
   | 'items'
@@ -40,6 +43,7 @@ type ExportableObjects =
 
 const FILENAME_BAGIT = 'bagit.txt'
 const FILENAME_CARDS = 'data/cards.json'
+const FILENAME_SETS = 'data/sets.json'
 const FILENAME_TRANSACTIONS = 'data/transactions.json'
 const FILENAME_PLACES = 'data/places.json'
 const FILENAME_ITEMS = 'data/items.json'
@@ -47,7 +51,7 @@ const FILENAME_WIPOBJS = 'data/wipobjs.json'
 const FILENAME_TMPLOBJS = 'data/tmplobjs.json'
 const FILENAME_AUDITLOG = 'data/auditLog.json'
 
-const exportItems = ref<ExportableObjects[]>(['cards', 'transactions', 'places', 'items'])
+const exportItems = ref<ExportableObjects[]>(['cards', 'sets', 'transactions', 'places', 'items'])
 const clearBeforeImport = ref(false)
 const overwriteExisting = ref(false)
 const uploadFile = ref<File>()
@@ -76,6 +80,16 @@ async function createZipBlob(objects: ExportableObjects[]) {
     const data = cardsStore.$serialize()
 
     const filename = FILENAME_CARDS
+    const dataHash = await digestData(data)
+    hashes.set(filename, dataHash)
+
+    const reader = new TextReader(data)
+    await zipWriter.add(filename, reader)
+  }
+  if (objects.includes('sets')) {
+    const data = setsStore.$serialize()
+
+    const filename = FILENAME_SETS
     const dataHash = await digestData(data)
     hashes.set(filename, dataHash)
 
@@ -215,6 +229,21 @@ async function loadData(
     result &&= resultForCards
   }
 
+  const setsEntry = entries.find(
+    (entry) =>
+      entry.filename === FILENAME_SETS && !entry.directory && Object.hasOwn(entry, 'getData'),
+  )
+  if (setsEntry !== undefined) {
+    const writer = new TextWriter()
+    const data = await (setsEntry as FileEntry).getData(writer)
+    const resultForSets = setsStore.$deserialize(data, { clearBefore, overwriteExisting })
+    if (!resultForSets) {
+      console.warn('Unable to cleanly import sets store!')
+      // TODO: should reset completely?
+    }
+    result &&= resultForSets
+  }
+
   const transactionsEntry = entries.find(
     (entry) =>
       entry.filename === FILENAME_TRANSACTIONS &&
@@ -325,6 +354,8 @@ async function onDelete() {
 
   const { clear: clearCardsFromIDB } = usePokemonTCGCollectionIDB('cards')
   await clearCardsFromIDB()
+  const { clear: clearSetsFromIDB } = usePokemonTCGCollectionIDB('sets')
+  await clearSetsFromIDB()
   const { clear: clearTransactionsFromIDB } = usePokemonTCGCollectionIDB('transactions')
   await clearTransactionsFromIDB()
   const { clear: clearPlacesFromIDB } = usePokemonTCGCollectionIDB('places')
@@ -343,9 +374,16 @@ async function onLoadPreloadData() {
     { name: 'places', store: placesStore },
     { name: 'items', store: itemsStore },
     { name: 'cards', store: cardsStore },
+    { name: 'sets', store: setsStore },
     { name: 'transactions', store: transactionsStore },
   ] as const
-  type Dataset = { places?: Place[]; items?: Item[]; transactions?: Transaction[]; cards?: Card[] }
+  type Dataset = {
+    places?: Place[]
+    items?: Item[]
+    transactions?: Transaction[]
+    cards?: Card[]
+    sets?: Set[]
+  }
 
   async function loadData(dataset: Dataset) {
     for (const { name, store } of nameWithStores) {
@@ -377,6 +415,9 @@ async function onLoadPreloadData() {
       <v-card title="Cards">
         <v-card-item>{{ cardsStore.cards.size }} card entries</v-card-item>
       </v-card>
+      <v-card title="Sets">
+        <v-card-item>{{ setsStore.sets.size }} set entries</v-card-item>
+      </v-card>
       <v-card title="Transactions">
         <v-card-item>{{ transactionsStore.transactions.size }} transaction entries</v-card-item>
       </v-card>
@@ -406,6 +447,13 @@ async function onLoadPreloadData() {
         multiple
         hide-details
         label="Cards"
+      ></v-checkbox>
+      <v-checkbox
+        v-model="exportItems"
+        value="sets"
+        multiple
+        hide-details
+        label="Sets"
       ></v-checkbox>
       <v-checkbox
         v-model="exportItems"

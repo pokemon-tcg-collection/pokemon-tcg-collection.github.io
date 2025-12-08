@@ -1,6 +1,6 @@
 import type { DBSchema, IDBPDatabase, IDBPTransaction, StoreNames, StoreValue } from 'idb'
 
-import type { Card, Item, Place, Transaction } from '@/model/interfaces'
+import type { Card, Item, Place, Set, Transaction } from '@/model/interfaces'
 import type { AuditMessage } from '@/stores/auditLog'
 import type { TemplateObject } from '@/stores/templates'
 import type { WIPObject } from '@/stores/workInProgress'
@@ -16,6 +16,10 @@ export interface PokemonTCGCollectionDB extends DBSchema {
   cards: {
     key: string
     value: Card
+  }
+  sets: {
+    key: string
+    value: Set
   }
   places: {
     key: string
@@ -57,6 +61,9 @@ function upgrade(
   if (!database.objectStoreNames.contains('cards')) {
     database.createObjectStore('cards', { keyPath: 'id' })
   }
+  if (!database.objectStoreNames.contains('sets')) {
+    database.createObjectStore('sets', { keyPath: 'id' })
+  }
   if (!database.objectStoreNames.contains('transactions')) {
     database.createObjectStore('transactions', { keyPath: 'id' })
   }
@@ -82,7 +89,7 @@ export default function usePokemonTCGCollectionIDB<
   StoreName extends StoreNames<PokemonTCGCollectionDB>,
   StoreKey extends IDBKeyRange | PokemonTCGCollectionDB[StoreName]['key'],
 >(store: StoreName) {
-  const { getDB } = useIndexedDB<PokemonTCGCollectionDB>('pokemon-tcg-collection', 2, { upgrade })
+  const { getDB } = useIndexedDB<PokemonTCGCollectionDB>('pokemon-tcg-collection', 3, { upgrade })
 
   async function put(value: StoreValue<PokemonTCGCollectionDB, StoreName>) {
     const dbHdl = await getDB()

@@ -3,7 +3,17 @@
 <template>
   <h1 class="mb-5">Credits</h1>
 
-  <h2 class="mb-3">Pokémon Metadata and Images</h2>
+  <h2 class="mt-5 mb-2">Disclaimer</h2>
+
+  <p class="mb-1">
+    The information presented on this website about the Pokémon Trading Card Game, including images
+    and text, is intellectual property of The Pokémon Company, Nintendo, Game Freak, Creatures
+    and/or Wizards of the Coast. The <i>Pokémon TCG Collection</i> application is not produced by,
+    endorsed by, supported by, or affiliated with any of these companies. Use of this intellectual
+    property must comply with the terms established by the respective companies.
+  </p>
+
+  <h2 class="mt-5 mb-2">Pokémon Metadata and Images</h2>
 
   <h3 class="mb-2">
     <v-avatar image="/service-logos/pokeapi_logo.png" rounded="0" start></v-avatar> PokéAPI
@@ -75,11 +85,37 @@
       >
     </li>
     <li>
+      Sets in other languages (translations for EN/JA, catch-up sets):
+      <v-icon icon="mdi-wikipedia" class="icon-in-text" size="small"></v-icon>
+      <a
+        href="https://bulbapedia.bulbagarden.net/wiki/List_of_Pok%C3%A9mon_Trading_Card_Game_expansions_in_other_languages"
+        >List of Pokémon Trading Card Game expansions in other languages</a
+      >
+    </li>
+    <li>
       License (in page metadata):
       <v-icon icon="mdi-license" class="icon-in-text" size="small"></v-icon>
       <a href="https://creativecommons.org/licenses/by-nc-sa/2.5/"
         >https://creativecommons.org/licenses/by-nc-sa/2.5/</a
       >
+    </li>
+  </ul>
+
+  <h3 class="mt-5 mb-2">
+    <v-avatar image="/service-logos/crysts_cards_database_logo.webp" rounded="0" start></v-avatar>
+    Cryst's Cards Database
+  </h3>
+  <p class="mb-1">
+    We use data about the Simplified Chinese Pokémon TCG cards from
+    <a href="https://tcg.mik.moe/home">Cryst's Cards Database</a>.
+  </p>
+  <p class="mb-1">Links:</p>
+  <ul>
+    <li>
+      <v-icon icon="mdi-web" class="icon-in-text" size="small"></v-icon>
+      <a href="https://tcg.mik.moe/cards">List of Sets</a>,
+      <v-icon icon="mdi-information" class="icon-in-text" size="small"></v-icon>
+      <a href="https://tcg.mik.moe/about">About</a>
     </li>
   </ul>
 

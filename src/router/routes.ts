@@ -3,6 +3,7 @@ import type { RouteRecordRaw } from 'vue-router'
 import AboutCredits from '@/pages/about/AboutCredits.vue'
 import AboutDebug from '@/pages/about/AboutDebug.vue'
 import AboutOverview from '@/pages/about/AboutOverview.vue'
+import AboutPrivacyPolicy from '@/pages/about/AboutPrivacyPolicy.vue'
 import CardDetails from '@/pages/cards/CardDetails.vue'
 import CardEditor from '@/pages/cards/CardEditor.vue'
 import CardList from '@/pages/cards/CardList.vue'
@@ -219,6 +220,12 @@ export default [
         name: 'credits',
         component: AboutCredits,
         meta: { breadcrumb_name: 'Credits' },
+      },
+      {
+        path: 'privacy',
+        name: 'privacy',
+        component: AboutPrivacyPolicy,
+        meta: { breadcrumb_name: 'Privacy Policy' },
       },
       {
         path: 'debug',

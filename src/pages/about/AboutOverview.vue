@@ -58,6 +58,15 @@ const gitInfoDate = import.meta.env.GIT_INFO_DATE
     </OverviewLinkCard>
 
     <OverviewLinkCard
+      icon="mdi-shield-account"
+      title="Privacy Policy"
+      :to="{ name: 'privacy' }"
+      to-label="See privacy statement"
+    >
+      What data do we collect about you?
+    </OverviewLinkCard>
+
+    <OverviewLinkCard
       icon="mdi-bug"
       title="Debug Information"
       :to="{ name: 'debug' }"

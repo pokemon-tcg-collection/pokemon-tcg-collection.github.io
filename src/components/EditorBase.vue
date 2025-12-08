@@ -15,7 +15,7 @@ import type {
   ReloadFunc,
   RouteLocation,
 } from '@/composables/useEditorObject'
-import type { Card, Item, Place, Transaction } from '@/model/interfaces'
+import type { Card, Item, Place, Set, Transaction } from '@/model/interfaces'
 import type { EditRouteNames } from '@/router/routes'
 import { useSettingsStore } from '@/stores/settings'
 import { useTemplatesStore } from '@/stores/templates'
@@ -27,7 +27,7 @@ const settings = useSettingsStore()
 const wipStore = useWorkInProgressStore()
 const templatesStore = useTemplatesStore()
 
-const object = defineModel<Item | Transaction | Place | Card>()
+const object = defineModel<Item | Set | Transaction | Place | Card>()
 
 const {
   objectType,
@@ -47,7 +47,7 @@ const {
   navigateTo,
   reload: reloadObject,
 } = defineProps<{
-  objectType: 'item' | 'transaction' | 'place' | 'card'
+  objectType: 'item' | 'set' | 'transaction' | 'place' | 'card'
   objectChanged: boolean
   objectSource: ObjectSource | undefined
   existsInStore: boolean

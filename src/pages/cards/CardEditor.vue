@@ -3,6 +3,7 @@ import type { SupportedLanguages, Card as TCGCard } from '@tcgdex/sdk'
 import { computed, ref, toRaw, watch } from 'vue'
 
 import AutocompletePokeAPIPokemon from '@/components/AutocompletePokeAPIPokemon.vue'
+import AutocompleteSet from '@/components/AutocompleteSet.vue'
 import AutocompleteTransactions from '@/components/AutocompleteTransactions.vue'
 import EditorBase from '@/components/EditorBase.vue'
 import EditorFieldset from '@/components/EditorFieldset.vue'
@@ -55,7 +56,7 @@ async function onCardSelected(tcg_card: TCGCard, language: SupportedLanguages, o
   if (overwrite || !card.value.number) card.value.number = tcg_card.localId
 
   // TODO: we might want to use our own set information?
-  // if (overwrite || !card.value.set) card.value.set = tcg_card.set.id
+  // if (overwrite || !card.value.set_id) card.value.set_id = tcg_card.set.id
 
   if (overwrite || !card.value.tcgdex_id) card.value.tcgdex_id = tcg_card.id
 
@@ -83,6 +84,10 @@ async function onAddNewItem() {
 async function onAddNewTransaction() {
   await saveCardAsDraft()
   await navigateTo('transaction-new')
+}
+async function onAddNewSet() {
+  await saveCardAsDraft()
+  await navigateTo('set-new')
 }
 </script>
 
@@ -140,7 +145,11 @@ async function onAddNewTransaction() {
           label="Card Language"
         ></v-autocomplete>
 
-        <v-text-field v-model="card.set" label="Card Set"></v-text-field>
+        <AutocompleteSet
+          v-model="card.set_id"
+          label="Card Set"
+          @add-new-set="onAddNewSet"
+        ></AutocompleteSet>
 
         <!-- <v-combobox
         v-model="card.boosters"

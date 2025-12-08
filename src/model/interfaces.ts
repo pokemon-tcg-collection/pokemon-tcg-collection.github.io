@@ -271,7 +271,7 @@ export interface Card extends Base {
   number: number | string
 
   /** set/expansion */
-  set: RefID
+  set_id: RefID
 
   boosters?: string[]
   rarity?: string

@@ -2,12 +2,14 @@
 import OverviewLinkCard from '@/components/OverviewLinkCard.vue'
 import OverviewLinkCardContainer from '@/components/OverviewLinkCardContainer.vue'
 import { useCardsStore } from '@/stores/cards'
+import { useSetsStore } from '@/stores/sets'
 
 const cardsStore = useCardsStore()
+const setsStore = useSetsStore()
 </script>
 
 <template>
-  <h1 class="mb-5">Cards Overview</h1>
+  <h1 class="mb-5">Cards and Sets</h1>
 
   <OverviewLinkCardContainer>
     <OverviewLinkCard
@@ -18,6 +20,16 @@ const cardsStore = useCardsStore()
     >
       {{ cardsStore.cards.size }} Cards in collection.
     </OverviewLinkCard>
+
+    <OverviewLinkCard
+      icon="mdi-cards-variant"
+      title="Set List"
+      :to="{ name: 'set-list' }"
+      to-label="See Set list"
+    >
+      {{ setsStore.sets.size }} Sets.
+    </OverviewLinkCard>
+
     <OverviewLinkCard
       icon="mdi-pencil-plus"
       title="New Card"
@@ -25,6 +37,15 @@ const cardsStore = useCardsStore()
       to-label="Add a new Card"
     >
       Create a new Card to add to your collection.
+    </OverviewLinkCard>
+
+    <OverviewLinkCard
+      icon="mdi-pencil-plus"
+      title="New Set"
+      :to="{ name: 'set-new' }"
+      to-label="Add a new Set"
+    >
+      Create a new Set.
     </OverviewLinkCard>
   </OverviewLinkCardContainer>
 </template>

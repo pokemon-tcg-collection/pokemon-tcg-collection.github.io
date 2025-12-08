@@ -225,7 +225,7 @@ export function isCardChanged(base: Card | undefined, other: Card | undefined) {
   if (base === undefined || other === undefined) return true
 
   if (base.id !== other.id) {
-    console.warn('Trying to compare different places according to ID!')
+    console.warn('Trying to compare different cards according to ID!')
     return true
   }
 
@@ -238,7 +238,6 @@ export function isCardChanged(base: Card | undefined, other: Card | undefined) {
   if (base.number !== other.number) return true
 
   // NOTE: WIP schema
-  if (!areValuesSame(base.set, other.set)) return true
   if (!areValuesSame(base.rarity, other.rarity)) return true
   if (!isValueListSame(base.boosters, other.boosters, true)) return true
 
@@ -258,10 +257,46 @@ export function isCardChanged(base: Card | undefined, other: Card | undefined) {
   )
     return true
 
+  if (!areValuesSame(base.set_id, other.set_id)) return true
   if (!isValueListSame(base.item_ids, other.item_ids, true)) return true
   if (!isValueListSame(base.transaction_ids, other.transaction_ids, true)) return true
 
   if (!areNumbersSame(base.pokeapi_pokemon_id, other.pokeapi_pokemon_id, undefined)) return true
+  if (!areValuesSame(base.tcgdex_id, other.tcgdex_id)) return true
+  if (!areValuesSame(base.bulbapedia_url, other.bulbapedia_url)) return true
+
+  return false
+}
+
+export function isSetChanged(base: Set | undefined, other: Set | undefined) {
+  if (base === other) return false
+  if (base === undefined || other === undefined) return true
+
+  if (base.id !== other.id) {
+    console.warn('Trying to compare different sets according to ID!')
+    return true
+  }
+
+  if (base.name !== other.name) return true
+  if (!areValuesSame(base.notes, other.notes)) return true
+  if (!isRelatedURLsSame(base.related_urls, other.related_urls)) return true
+
+  if (base.language !== other.language) return true
+  if (!areValuesSame(base.name_original, other.name_original)) return true
+  if (!areValuesSame(base.name_en_equivalent, other.name_en_equivalent)) return true
+  if (base.abbrev !== other.abbrev) return true
+
+  if (base.series !== other.series) return true
+  if (base.series_type !== other.series_type) return true
+  if (!areValuesSame(base.no, other.no)) return true
+
+  // TODO: cards_stats
+
+  if (!areValuesSame(base.release_date, other.release_date)) return true
+
+  if (!areValuesSame(base.symbol_url, other.symbol_url)) return true
+  if (!areValuesSame(base.logo_url, other.logo_url)) return true
+
   if (!areValuesSame(base.tcgdex_id, other.tcgdex_id)) return true
   if (!areValuesSame(base.bulbapedia_url, other.bulbapedia_url)) return true
 
@@ -276,7 +311,7 @@ export function isTransactionChanged(
   if (base === undefined || other === undefined) return true
 
   if (base.id !== other.id) {
-    console.warn('Trying to compare different places according to ID!')
+    console.warn('Trying to compare different transactions according to ID!')
     return true
   }
 
@@ -396,7 +431,7 @@ export function getCardChanges(base: Card | undefined, other: Card | undefined):
   if (base === undefined || other === undefined) return ['*']
 
   if (base.id !== other.id) {
-    console.warn('Trying to compare different places according to ID!')
+    console.warn('Trying to compare different cards according to ID!')
     return ['id']
   }
 
@@ -411,7 +446,6 @@ export function getCardChanges(base: Card | undefined, other: Card | undefined):
   if (base.number !== other.number) changes.push('number')
 
   // NOTE: WIP schema
-  if (!areValuesSame(base.set, other.set)) changes.push('set')
   if (!areValuesSame(base.rarity, other.rarity)) changes.push('rarity')
   if (!isValueListSame(base.boosters, other.boosters, true)) changes.push('boosters')
 
@@ -431,12 +465,51 @@ export function getCardChanges(base: Card | undefined, other: Card | undefined):
   )
     changes.push('cards')
 
+  if (!areValuesSame(base.set_id, other.set_id)) changes.push('set_id')
   if (!isValueListSame(base.item_ids, other.item_ids, true)) changes.push('item_ids')
   if (!isValueListSame(base.transaction_ids, other.transaction_ids, true))
     changes.push('transaction_ids')
 
   if (!areNumbersSame(base.pokeapi_pokemon_id, other.pokeapi_pokemon_id, undefined))
     changes.push('pokeapi_pokemon_id')
+  if (!areValuesSame(base.tcgdex_id, other.tcgdex_id)) changes.push('tcgdex_id')
+  if (!areValuesSame(base.bulbapedia_url, other.bulbapedia_url)) changes.push('bulbapedia_url')
+
+  return changes
+}
+
+export function getSetChanges(base: Set | undefined, other: Set | undefined): string[] {
+  if (base === other) return []
+  if (base === undefined || other === undefined) return ['*']
+
+  if (base.id !== other.id) {
+    console.warn('Trying to compare different sets according to ID!')
+    return ['id']
+  }
+
+  const changes = []
+
+  if (base.name !== other.name) changes.push('name')
+  if (!areValuesSame(base.notes, other.notes)) changes.push('notes')
+  if (!isRelatedURLsSame(base.related_urls, other.related_urls)) changes.push('related_urls')
+
+  if (base.language !== other.language) changes.push('language')
+  if (!areValuesSame(base.name_original, other.name_original)) changes.push('name_original')
+  if (!areValuesSame(base.name_en_equivalent, other.name_en_equivalent))
+    changes.push('name_en_equivalent')
+  if (base.abbrev !== other.abbrev) changes.push('abbrev')
+
+  if (base.series !== other.series) changes.push('series')
+  if (base.series_type !== other.series_type) changes.push('series_type')
+  if (!areValuesSame(base.no, other.no)) changes.push('no')
+
+  // TODO: cards_stats
+
+  if (!areValuesSame(base.release_date, other.release_date)) changes.push('release_date')
+
+  if (!areValuesSame(base.symbol_url, other.symbol_url)) changes.push('symbol_url')
+  if (!areValuesSame(base.logo_url, other.logo_url)) changes.push('logo_url')
+
   if (!areValuesSame(base.tcgdex_id, other.tcgdex_id)) changes.push('tcgdex_id')
   if (!areValuesSame(base.bulbapedia_url, other.bulbapedia_url)) changes.push('bulbapedia_url')
 
@@ -451,7 +524,7 @@ export function getTransactionChanges(
   if (base === undefined || other === undefined) return ['*']
 
   if (base.id !== other.id) {
-    console.warn('Trying to compare different places according to ID!')
+    console.warn('Trying to compare different transactions according to ID!')
     return ['id']
   }
 

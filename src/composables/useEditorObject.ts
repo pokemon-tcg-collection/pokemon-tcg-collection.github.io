@@ -8,15 +8,17 @@ import type {
 } from 'vue-router'
 import { useRoute, useRouter } from 'vue-router'
 
-import type { Card, Item, Place, Transaction } from '@/model/interfaces'
+import type { Card, Item, Place, Set, Transaction } from '@/model/interfaces'
 import {
   createNewCard,
   createNewItem,
   createNewPlace,
+  createNewSet,
   createNewTransaction,
   isCardChanged,
   isItemChanged,
   isPlaceChanged,
+  isSetChanged,
   isTransactionChanged,
 } from '@/model/utils'
 import type { EditRouteNames } from '@/router/routes'
@@ -24,6 +26,7 @@ import { useAuditLogStore } from '@/stores/auditLog'
 import { useCardsStore } from '@/stores/cards'
 import { useItemsStore } from '@/stores/items'
 import { usePlacesStore } from '@/stores/places'
+import { useSetsStore } from '@/stores/sets'
 import { useTemplatesStore } from '@/stores/templates'
 import { useTransactionsStore } from '@/stores/transactions'
 import { useWorkInProgressStore } from '@/stores/workInProgress'
@@ -46,6 +49,8 @@ type PlacesStore = ReturnType<typeof usePlacesStore>
 type PlacesStoreSGA = Omit<PlacesStore, keyof NullStore>
 type CardsStore = ReturnType<typeof useCardsStore>
 type CardsStoreSGA = Omit<CardsStore, keyof NullStore>
+type SetsStore = ReturnType<typeof useSetsStore>
+type SetsStoreSGA = Omit<SetsStore, keyof NullStore>
 
 interface TypeMap {
   item: {
@@ -64,6 +69,10 @@ interface TypeMap {
     object: Card
     store: CardsStoreSGA
   }
+  set: {
+    object: Set
+    store: SetsStoreSGA
+  }
 }
 
 // TODO: how to access dynamic return of "navigateTo"
@@ -79,7 +88,12 @@ export type RouteLocation =
   | RouteLocationAsRelativeGeneric
   | RouteLocationAsPathGeneric
   | undefined
-export type NavigateToName = EditRouteNames | 'item-new' | 'transaction-new' | 'place-new'
+export type NavigateToName =
+  | EditRouteNames
+  | 'set-new'
+  | 'item-new'
+  | 'transaction-new'
+  | 'place-new'
 export type NavigateToFunc = (
   name: NavigateToName,
   params?: RouteParamsRawGeneric | undefined,
@@ -107,12 +121,14 @@ export default function useEditorObject<
   function getStore(type: 'transaction'): TransactionsStoreSGA
   function getStore(type: 'place'): PlacesStoreSGA
   function getStore(type: 'card'): CardsStoreSGA
+  function getStore(type: 'set'): SetsStoreSGA
   function getStore(type: TN): TS
   function getStore<TN extends keyof TypeMap>(type: TN) {
     if (type === 'item') return useItemsStore() as ItemsStoreSGA
     if (type === 'transaction') return useTransactionsStore() as TransactionsStoreSGA
     if (type === 'place') return usePlacesStore() as PlacesStoreSGA
     if (type === 'card') return useCardsStore() as CardsStoreSGA
+    if (type === 'set') return useSetsStore() as SetsStoreSGA
     return undefined
   }
 
@@ -123,6 +139,7 @@ export default function useEditorObject<
   ): [Transaction, boolean]
   function createNewObject(type: 'place', checkForTemplateFirst?: boolean): [Place, boolean]
   function createNewObject(type: 'card', checkForTemplateFirst?: boolean): [Card, boolean]
+  function createNewObject(type: 'set', checkForTemplateFirst?: boolean): [Set, boolean]
   function createNewObject(type: TN, checkForTemplateFirst?: boolean): [TC, boolean]
   function createNewObject<TN extends keyof TypeMap>(
     type: TN,
@@ -137,6 +154,7 @@ export default function useEditorObject<
     if (type === 'transaction') return [createNewTransaction(), false]
     if (type === 'place') return [createNewPlace(), false]
     if (type === 'card') return [createNewCard(), false]
+    if (type === 'set') return [createNewSet(), false]
 
     return [undefined, false]
   }
@@ -172,6 +190,10 @@ export default function useEditorObject<
     if (type === 'card') {
       type OT = TypeMap['card']['object'] | undefined
       return isCardChanged(objectBase.value as OT, object.value as OT)
+    }
+    if (type === 'set') {
+      type OT = TypeMap['set']['object'] | undefined
+      return isSetChanged(objectBase.value as OT, object.value as OT)
     }
     return false
   })

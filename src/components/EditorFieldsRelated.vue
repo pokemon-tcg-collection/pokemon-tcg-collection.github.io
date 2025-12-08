@@ -6,11 +6,12 @@ import type { Base, Card, Item, Transaction } from '@/model/interfaces'
 import { useCardsStore } from '@/stores/cards'
 import { useItemsStore } from '@/stores/items'
 import { usePlacesStore } from '@/stores/places'
+import { useSetsStore } from '@/stores/sets'
 import { useSettingsStore } from '@/stores/settings'
 import { useTransactionsStore } from '@/stores/transactions'
 
 // TODO: + attachment, + image
-export type ObjectType = 'card' | 'item' | 'place' | 'transaction'
+export type ObjectType = 'card' | 'set' | 'item' | 'place' | 'transaction'
 type RelatedIDs = {
   id: string
   type: ObjectType
@@ -28,15 +29,16 @@ const emit = defineEmits<{ edit: [id: string, type: string] }>()
 
 const settings = useSettingsStore()
 const cardsStore = useCardsStore()
+const setsStore = useSetsStore()
 const itemsStore = useItemsStore()
 const placesStore = usePlacesStore()
 const transactionsStore = useTransactionsStore()
 
 function gatherRelations(
   object: Base,
-  objectType: 'item' | 'transaction' | 'place' | 'card',
+  objectType: 'item' | 'transaction' | 'place' | 'card' | 'set',
   direction: 'incoming' | 'outgoing' | 'both' | undefined,
-  checkOutgoingTargetExists: boolean = false,
+  checkOutgoingTargetExists: boolean = true,
 ) {
   const objectId = object.id
   if (objectId === undefined) return []
@@ -78,7 +80,6 @@ function gatherRelations(
         )
     } else if (objectType === 'place') {
       // transaction --> 1 place
-
       Array.from(transactionsStore.transactions.values())
         .filter((transaction) => transaction.place_id === objectId)
         .forEach((transaction) =>
@@ -99,6 +100,20 @@ function gatherRelations(
     } else if (objectType === 'card') {
       // ? --> ? card(s)
     }
+  } else if (objectType === 'set') {
+    // card --> 1 set
+    Array.from(cardsStore.cards.values())
+      .filter((card) => card.set_id === objectId)
+      .forEach((set) =>
+        related.push({
+          id: set.id,
+          name: set.name,
+          type: 'set',
+          direction: 'incoming',
+        }),
+      )
+
+    // TODO: item -> n sets
   }
 
   if (direction === 'outgoing' || direction === 'both') {
@@ -110,7 +125,7 @@ function gatherRelations(
         if (!itemContent.item_id) return
         const relItem = itemsStore.get(itemContent.item_id)
         if (!relItem) {
-          if (checkOutgoingTargetExists) {
+          if (!checkOutgoingTargetExists) {
             related.push({
               id: itemContent.item_id,
               name: undefined,
@@ -123,6 +138,8 @@ function gatherRelations(
         }
         related.push({ id: relItem.id, name: relItem.name, type: 'item', direction: 'outgoing' })
       })
+
+      // TODO: item --> n sets
     } else if (objectType === 'place') {
       // place --> ? ?
     } else if (objectType === 'transaction') {
@@ -134,7 +151,7 @@ function gatherRelations(
         if (place) {
           related.push({ id: place.id, name: place.name, type: 'place', direction: 'outgoing' })
         } else {
-          if (checkOutgoingTargetExists) {
+          if (!checkOutgoingTargetExists) {
             related.push({
               id: transaction.place_id,
               name: undefined,
@@ -150,7 +167,7 @@ function gatherRelations(
       transaction.items?.forEach((transactionItem) => {
         const item = itemsStore.get(transactionItem.item_id)
         if (!item) {
-          if (checkOutgoingTargetExists) {
+          if (!checkOutgoingTargetExists) {
             related.push({
               id: transactionItem.item_id,
               name: undefined,
@@ -170,7 +187,7 @@ function gatherRelations(
       card.item_ids?.forEach((id) => {
         const item = itemsStore.get(id)
         if (!item) {
-          if (checkOutgoingTargetExists) {
+          if (!checkOutgoingTargetExists) {
             related.push({
               id: id,
               name: undefined,
@@ -188,7 +205,7 @@ function gatherRelations(
       card.transaction_ids?.forEach((id) => {
         const transaction = transactionsStore.get(id)
         if (!transaction) {
-          if (checkOutgoingTargetExists) {
+          if (!checkOutgoingTargetExists) {
             related.push({
               id: id,
               name: undefined,
@@ -206,6 +223,26 @@ function gatherRelations(
           direction: 'outgoing',
         })
       })
+
+      // card --> 1 set
+      if (card.set_id) {
+        const set = setsStore.get(card.set_id)
+        if (set) {
+          related.push({ id: set.id, name: set.name, type: 'set', direction: 'outgoing' })
+        } else {
+          if (!checkOutgoingTargetExists) {
+            related.push({
+              id: card.set_id,
+              name: undefined,
+              type: 'set',
+              direction: 'outgoing',
+              outgoingTargetExists: false,
+            })
+          }
+        }
+      }
+    } else if (objectType === 'set') {
+      // set --> ? ?
     }
   }
 

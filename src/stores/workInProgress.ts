@@ -2,12 +2,17 @@ import { acceptHMRUpdate, defineStore } from 'pinia'
 import { readonly, ref, toRaw } from 'vue'
 
 import usePokemonTCGCollectionIDB from '@/composables/usePokemonTCGCollectionIDB'
-import type { Card, Item, Place, Transaction } from '@/model/interfaces'
+import type { Card, Item, Place, Set, Transaction } from '@/model/interfaces'
 import type { EditRouteNames } from '@/router/routes'
 import { toRawDeep } from '@/utils/reactivity'
 
-export type WIPObjectType = 'card-edit' | 'transaction-edit' | 'item-edit' | 'place-edit'
-export type WIPObjectData = Transaction | Card | Place | Item
+export type WIPObjectType =
+  | 'card-edit'
+  | 'set-edit'
+  | 'transaction-edit'
+  | 'item-edit'
+  | 'place-edit'
+export type WIPObjectData = Transaction | Set | Card | Place | Item
 
 export interface WIPObject {
   /** global unique internal id (no duplicates across different object types) */

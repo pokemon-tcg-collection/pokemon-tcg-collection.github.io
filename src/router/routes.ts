@@ -19,12 +19,19 @@ import ItemEditor from '@/pages/items/ItemEditor.vue'
 import ItemList from '@/pages/items/ItemList.vue'
 import PlaceEditor from '@/pages/places/PlaceEditor.vue'
 import PlaceList from '@/pages/places/PlaceList.vue'
+import SetEditor from '@/pages/sets/SetEditor.vue'
+import SetList from '@/pages/sets/SetList.vue'
 import Transaction from '@/pages/transactions/Transaction.vue'
 import TransactionEditor from '@/pages/transactions/TransactionEditor.vue'
 import TransactionList from '@/pages/transactions/TransactionList.vue'
 import TransactionOverview from '@/pages/transactions/TransactionOverview.vue'
 
-export type EditRouteNames = 'card-edit' | 'transaction-edit' | 'place-edit' | 'item-edit'
+export type EditRouteNames =
+  | 'card-edit'
+  | 'set-edit'
+  | 'transaction-edit'
+  | 'place-edit'
+  | 'item-edit'
 
 export default [
   {
@@ -67,6 +74,32 @@ export default [
         name: 'card',
         component: CardDetails,
         meta: { breadcrumb_name: 'Card Details' },
+      },
+    ],
+  },
+  // sets
+  {
+    path: '/sets',
+    meta: { breadcrumb_name: 'Cards' },
+    redirect: { name: 'cards' },
+    children: [
+      {
+        path: 'list',
+        name: 'set-list',
+        component: SetList,
+        meta: { breadcrumb_name: 'Set List' },
+      },
+      {
+        path: 'new',
+        name: 'set-new',
+        component: SetEditor,
+        meta: { breadcrumb_name: 'New Set' },
+      },
+      {
+        path: ':id/edit',
+        name: 'set-edit',
+        component: SetEditor,
+        meta: { breadcrumb_name: 'Edit Set' },
       },
     ],
   },

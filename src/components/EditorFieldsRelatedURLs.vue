@@ -6,9 +6,10 @@ import type { Base, RelatedURL } from '@/model/interfaces'
 import { useCardsStore } from '@/stores/cards'
 import { useItemsStore } from '@/stores/items'
 import { usePlacesStore } from '@/stores/places'
+import { useSetsStore } from '@/stores/sets'
 import { useTransactionsStore } from '@/stores/transactions'
 
-export type ObjectType = 'card' | 'item' | 'place' | 'transaction'
+export type ObjectType = 'card' | 'set' | 'item' | 'place' | 'transaction'
 
 const object = defineModel<Base>({ required: true })
 const { objectType } = defineProps<{
@@ -20,6 +21,8 @@ const relatedURLNames = computed(() => {
 
   if (objectType === 'card') {
     objects = Array.from(useCardsStore().cards.values())
+  } else if (objectType === 'set') {
+    objects = Array.from(useSetsStore().sets.values())
   } else if (objectType === 'item') {
     objects = Array.from(useItemsStore().items.values())
   } else if (objectType === 'place') {

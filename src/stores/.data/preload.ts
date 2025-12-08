@@ -71,6 +71,16 @@ const places = [
     },
   },
   {
+    id: '22f60c3c-6fb2-4cc4-ad33-1dbef1f39134',
+    name: 'Verkäufer (Pokemon Bulk/Holos)',
+    type: 'online-marketplace',
+    marketplace: 'ebay-marketplace',
+    url: 'https://www.kleinanzeigen.de/s-bestandsliste.html?userId=23441713',
+    _meta: {
+      created: new Date(),
+    },
+  },
+  {
     id: '3d260b7b-b164-49e1-a254-dd2fa1f53a57',
     name: 'Habibicards',
     type: 'online-shop',

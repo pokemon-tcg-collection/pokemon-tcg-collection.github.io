@@ -144,7 +144,7 @@ const mapCardStatsRawEN = new Map<string, string>([
   ['Shiny Pokémon cards', 'shiny'],
   ['Rotom cards', 'rotom'],
   ['Arceus cards', 'arceus'],
-  ['Alph Lithograph card', 'alpha-ligthograph'],
+  ['Alph Lithograph card', 'alpha-lithograph'],
   ['Shiny Legendary cards', 'shiny-legendary'],
   ['Radiant Collection cards', 'radiant'],
   ['Shiny Vault cards', 'shiny-vault'],

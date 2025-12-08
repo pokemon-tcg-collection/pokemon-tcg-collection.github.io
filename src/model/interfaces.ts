@@ -336,7 +336,7 @@ export interface Set extends Base {
     shiny?: number
     rotom?: number
     arceus?: number
-    'alpha-ligthograph'?: number
+    'alpha-lithograph'?: number
     'shiny-legendary'?: number
     radiant?: number
     'shiny-vault'?: number

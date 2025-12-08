@@ -325,9 +325,9 @@ export interface Set extends Base {
   series: SeriesID
   series_type: SetSeriesTypesEN | SetSeriesTypesJA
   /** set number */
-  no: string
+  no?: string
 
-  cards_stats: {
+  cards_stats?: {
     cards?: number
     // additional
     secret?: number
@@ -351,7 +351,7 @@ export interface Set extends Base {
     notes?: string[]
   }
 
-  release_date: string
+  release_date?: string
 
   // related set (jp<->en)
 

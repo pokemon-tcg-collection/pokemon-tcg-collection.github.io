@@ -15,7 +15,8 @@ export interface AuditMessage {
 }
 
 export const useAuditLogStore = defineStore('auditLog', () => {
-  const { put: idbPut, getAll: idbGetAll } = usePokemonTCGCollectionIDB('auditLog')
+  const idbName = 'auditLog'
+  const { put: idbPut, getAll: idbGetAll } = usePokemonTCGCollectionIDB(idbName)
 
   const route = useRoute()
 

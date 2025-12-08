@@ -6,11 +6,13 @@ import type { Transaction } from '@/model/interfaces'
 import { toRawDeep } from '@/utils/reactivity'
 
 export const useTransactionsStore = defineStore('transactions', () => {
+  const idbName = 'transactions'
   const {
     put: idbPut,
     getAll: idbGetAll,
     delete: idbDelete,
-  } = usePokemonTCGCollectionIDB('transactions')
+    clear: idbClear,
+  } = usePokemonTCGCollectionIDB(idbName)
 
   // -----------------------------------------------------------------------
   // state
@@ -54,6 +56,11 @@ export const useTransactionsStore = defineStore('transactions', () => {
     const removed = transactions.value.delete(id)
     if (removed) await idbDelete(id)
     return removed
+  }
+
+  async function clear() {
+    transactions.value.clear()
+    await idbClear()
   }
 
   // -----------------------------------------------------------------------
@@ -130,6 +137,7 @@ export const useTransactionsStore = defineStore('transactions', () => {
     get,
     has,
     remove,
+    clear,
     // internals
     $serialize: _serialize,
     $deserialize: _deserialize,

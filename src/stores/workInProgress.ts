@@ -21,12 +21,13 @@ export interface WIPObject {
 }
 
 export const useWorkInProgressStore = defineStore('workInProgress', () => {
+  const idbName = 'workInProgress'
   const {
     put: idbPut,
     getAll: idbGetAll,
     delete: idbDelete,
     clear: idbClear,
-  } = usePokemonTCGCollectionIDB('workInProgress')
+  } = usePokemonTCGCollectionIDB(idbName)
 
   // -----------------------------------------------------------------------
   // state

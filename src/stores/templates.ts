@@ -2,12 +2,12 @@ import { acceptHMRUpdate, defineStore } from 'pinia'
 import { readonly, ref, toRaw } from 'vue'
 
 import usePokemonTCGCollectionIDB from '@/composables/usePokemonTCGCollectionIDB'
-import type { Card, Item, Place, Transaction } from '@/model/interfaces'
+import type { Card, Item, Place, Set, Transaction } from '@/model/interfaces'
 import { makeObjectUniqueCopy } from '@/model/utils'
 import { toRawDeep } from '@/utils/reactivity'
 
-export type TemplateObjectType = 'transaction' | 'card' | 'place' | 'item'
-export type TemplateObjectData = Transaction | Card | Place | Item
+export type TemplateObjectType = 'transaction' | 'card' | 'set' | 'place' | 'item'
+export type TemplateObjectData = Transaction | Card | Set | Place | Item
 
 export interface TemplateObject {
   /** template object type */
@@ -17,12 +17,13 @@ export interface TemplateObject {
 }
 
 export const useTemplatesStore = defineStore('templates', () => {
+  const idbName = 'templates'
   const {
     put: idbPut,
     getAll: idbGetAll,
     delete: idbDelete,
     clear: idbClear,
-  } = usePokemonTCGCollectionIDB('templates')
+  } = usePokemonTCGCollectionIDB(idbName)
 
   // -----------------------------------------------------------------------
   // state
@@ -38,6 +39,7 @@ export const useTemplatesStore = defineStore('templates', () => {
     opts?: { overwrite?: boolean },
   ): Promise<boolean>
   async function add(type: 'card', template: Card, opts?: { overwrite?: boolean }): Promise<boolean>
+  async function add(type: 'set', template: Set, opts?: { overwrite?: boolean }): Promise<boolean>
   async function add(
     type: 'place',
     template: Place,
@@ -72,6 +74,7 @@ export const useTemplatesStore = defineStore('templates', () => {
 
   function get(type: 'transaction'): Transaction
   function get(type: 'card'): Card
+  function get(type: 'set'): Set
   function get(type: 'place'): Place
   function get(type: 'item'): Item
   function get(type: TemplateObjectType): TemplateObjectData

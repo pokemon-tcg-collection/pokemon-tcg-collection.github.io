@@ -7,7 +7,13 @@ import { sanitizePlace } from '@/model/utils'
 import { toRawDeep } from '@/utils/reactivity'
 
 export const usePlacesStore = defineStore('places', () => {
-  const { put: idbPut, getAll: idbGetAll, delete: idbDelete } = usePokemonTCGCollectionIDB('places')
+  const idbName = 'places'
+  const {
+    put: idbPut,
+    getAll: idbGetAll,
+    delete: idbDelete,
+    clear: idbClear,
+  } = usePokemonTCGCollectionIDB(idbName)
 
   // -----------------------------------------------------------------------
   // state
@@ -55,6 +61,11 @@ export const usePlacesStore = defineStore('places', () => {
     const removed = places.value.delete(id)
     if (removed) await idbDelete(id)
     return removed
+  }
+
+  async function clear() {
+    places.value.clear()
+    await idbClear()
   }
 
   // -----------------------------------------------------------------------
@@ -131,6 +142,7 @@ export const usePlacesStore = defineStore('places', () => {
     get,
     has,
     remove,
+    clear,
     // internals
     $serialize: _serialize,
     $deserialize: _deserialize,

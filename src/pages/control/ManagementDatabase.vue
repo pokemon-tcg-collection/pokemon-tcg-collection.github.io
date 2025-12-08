@@ -8,10 +8,9 @@ import {
   ZipWriter,
   type FileEntry,
 } from '@zip.js/zip.js'
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
 
 import EditorFieldset from '@/components/EditorFieldset.vue'
-import usePokemonTCGCollectionIDB from '@/composables/usePokemonTCGCollectionIDB'
 import type { Card, Item, Place, Set, Transaction } from '@/model/interfaces'
 import { useAuditLogStore } from '@/stores/auditLog'
 import { useCardsStore } from '@/stores/cards'
@@ -31,7 +30,7 @@ const wipStore = useWorkInProgressStore()
 const templatesStore = useTemplatesStore()
 const auditLogStore = useAuditLogStore()
 
-type ExportableObjects =
+type StoreObjects =
   | 'cards'
   | 'sets'
   | 'transactions'
@@ -40,6 +39,15 @@ type ExportableObjects =
   | 'wip'
   | 'templates'
   | 'audit'
+
+type DeleteableStoreObjects =
+  | 'cards'
+  | 'sets'
+  | 'transactions'
+  | 'places'
+  | 'items'
+  | 'wip'
+  | 'templates'
 
 const FILENAME_BAGIT = 'bagit.txt'
 const FILENAME_CARDS = 'data/cards.json'
@@ -51,7 +59,77 @@ const FILENAME_WIPOBJS = 'data/wipobjs.json'
 const FILENAME_TMPLOBJS = 'data/tmplobjs.json'
 const FILENAME_AUDITLOG = 'data/auditLog.json'
 
-const exportItems = ref<ExportableObjects[]>(['cards', 'sets', 'transactions', 'places', 'items'])
+const STORES = [
+  {
+    id: 'cards',
+    label: 'Cards',
+    allow: ['export', 'import', 'delete', 'preload'],
+    filename: FILENAME_CARDS,
+    store: cardsStore,
+  },
+  {
+    id: 'sets',
+    label: 'Sets',
+    allow: ['export', 'import', 'delete', 'preload'],
+    filename: FILENAME_SETS,
+    store: setsStore,
+  },
+  {
+    id: 'transactions',
+    label: 'Transactions',
+    allow: ['export', 'import', 'delete', 'preload'],
+    filename: FILENAME_TRANSACTIONS,
+    store: transactionsStore,
+  },
+  {
+    id: 'places',
+    label: 'Places',
+    allow: ['export', 'import', 'delete', 'preload'],
+    filename: FILENAME_PLACES,
+    store: placesStore,
+  },
+  {
+    id: 'items',
+    label: 'Items',
+    allow: ['export', 'import', 'delete', 'preload'],
+    filename: FILENAME_ITEMS,
+    store: itemsStore,
+  },
+  // NOT: import/preload
+  {
+    id: 'wip',
+    label: 'Work-in-Progress Objects',
+    allow: ['export', 'delete'],
+    filename: FILENAME_WIPOBJS,
+    store: wipStore,
+  },
+  {
+    id: 'templates',
+    label: 'Templates',
+    allow: ['export', 'delete'],
+    filename: FILENAME_TMPLOBJS,
+    store: templatesStore,
+  },
+  // NOT: delete?
+  {
+    id: 'audit',
+    label: 'Audit Log',
+    allow: ['export'],
+    filename: FILENAME_AUDITLOG,
+    store: auditLogStore,
+  },
+] as const
+
+const allowedExportItems = computed(() => STORES.filter((item) => item.allow.includes('export')))
+const allowedImportItems = computed(() =>
+  STORES.filter((item) => (item.allow as unknown as string[]).includes('import')),
+)
+
+const exportItems = ref<StoreObjects[]>(['cards', 'sets', 'transactions', 'places', 'items'])
+const importItems = ref<StoreObjects[]>(['cards', 'sets', 'transactions', 'places', 'items'])
+
+const statisticsDeleteLocked = ref<boolean>(true)
+
 const clearBeforeImport = ref(false)
 const overwriteExisting = ref(false)
 const uploadFile = ref<File>()
@@ -66,7 +144,7 @@ async function digestData(data: string, algorithm = 'SHA-256') {
   const hashHex = hashArray.map((b) => b.toString(16).padStart(2, '0')).join('')
   return hashHex
 }
-async function createZipBlob(objects: ExportableObjects[]) {
+async function createZipBlob(objects: StoreObjects[]) {
   const zipFileWriter = new BlobWriter()
   const zipWriter = new ZipWriter(zipFileWriter)
 
@@ -191,6 +269,7 @@ function triggerDownload(blob: Blob, filename: string) {
 }
 async function loadData(
   blob: Blob,
+  objects: StoreObjects[],
   {
     clearBefore = false,
     overwriteExisting = false,
@@ -214,90 +293,100 @@ async function loadData(
 
   let result = true
 
-  const cardsEntry = entries.find(
-    (entry) =>
-      entry.filename === FILENAME_CARDS && !entry.directory && Object.hasOwn(entry, 'getData'),
-  )
-  if (cardsEntry !== undefined) {
-    const writer = new TextWriter()
-    const data = await (cardsEntry as FileEntry).getData(writer)
-    const resultForCards = cardsStore.$deserialize(data, { clearBefore, overwriteExisting })
-    if (!resultForCards) {
-      console.warn('Unable to cleanly import cards store!')
-      // TODO: should reset completely?
+  if (objects.includes('cards')) {
+    const cardsEntry = entries.find(
+      (entry) =>
+        entry.filename === FILENAME_CARDS && !entry.directory && Object.hasOwn(entry, 'getData'),
+    )
+    if (cardsEntry !== undefined) {
+      const writer = new TextWriter()
+      const data = await (cardsEntry as FileEntry).getData(writer)
+      const resultForCards = cardsStore.$deserialize(data, { clearBefore, overwriteExisting })
+      if (!resultForCards) {
+        console.warn('Unable to cleanly import cards store!')
+        // TODO: should reset completely?
+      }
+      result &&= resultForCards
     }
-    result &&= resultForCards
   }
 
-  const setsEntry = entries.find(
-    (entry) =>
-      entry.filename === FILENAME_SETS && !entry.directory && Object.hasOwn(entry, 'getData'),
-  )
-  if (setsEntry !== undefined) {
-    const writer = new TextWriter()
-    const data = await (setsEntry as FileEntry).getData(writer)
-    const resultForSets = setsStore.$deserialize(data, { clearBefore, overwriteExisting })
-    if (!resultForSets) {
-      console.warn('Unable to cleanly import sets store!')
-      // TODO: should reset completely?
+  if (objects.includes('sets')) {
+    const setsEntry = entries.find(
+      (entry) =>
+        entry.filename === FILENAME_SETS && !entry.directory && Object.hasOwn(entry, 'getData'),
+    )
+    if (setsEntry !== undefined) {
+      const writer = new TextWriter()
+      const data = await (setsEntry as FileEntry).getData(writer)
+      const resultForSets = setsStore.$deserialize(data, { clearBefore, overwriteExisting })
+      if (!resultForSets) {
+        console.warn('Unable to cleanly import sets store!')
+        // TODO: should reset completely?
+      }
+      result &&= resultForSets
     }
-    result &&= resultForSets
   }
 
-  const transactionsEntry = entries.find(
-    (entry) =>
-      entry.filename === FILENAME_TRANSACTIONS &&
-      !entry.directory &&
-      Object.hasOwn(entry, 'getData'),
-  )
-  if (transactionsEntry !== undefined) {
-    const writer = new TextWriter()
-    const data = await (transactionsEntry as FileEntry).getData(writer)
-    const resultForTransactions = transactionsStore.$deserialize(data, {
-      clearBefore,
-      overwriteExisting,
-    })
-    if (!resultForTransactions) {
-      console.warn('Unable to cleanly import transactions store!')
-      // TODO: should reset completely?
+  if (objects.includes('transactions')) {
+    const transactionsEntry = entries.find(
+      (entry) =>
+        entry.filename === FILENAME_TRANSACTIONS &&
+        !entry.directory &&
+        Object.hasOwn(entry, 'getData'),
+    )
+    if (transactionsEntry !== undefined) {
+      const writer = new TextWriter()
+      const data = await (transactionsEntry as FileEntry).getData(writer)
+      const resultForTransactions = transactionsStore.$deserialize(data, {
+        clearBefore,
+        overwriteExisting,
+      })
+      if (!resultForTransactions) {
+        console.warn('Unable to cleanly import transactions store!')
+        // TODO: should reset completely?
+      }
+      result &&= resultForTransactions
     }
-    result &&= resultForTransactions
   }
 
-  const placesEntry = entries.find(
-    (entry) =>
-      entry.filename === FILENAME_PLACES && !entry.directory && Object.hasOwn(entry, 'getData'),
-  )
-  if (placesEntry !== undefined) {
-    const writer = new TextWriter()
-    const data = await (placesEntry as FileEntry).getData(writer)
-    const resultForPlaces = placesStore.$deserialize(data, {
-      clearBefore,
-      overwriteExisting,
-    })
-    if (!resultForPlaces) {
-      console.warn('Unable to cleanly import places store!')
-      // TODO: should reset completely?
+  if (objects.includes('places')) {
+    const placesEntry = entries.find(
+      (entry) =>
+        entry.filename === FILENAME_PLACES && !entry.directory && Object.hasOwn(entry, 'getData'),
+    )
+    if (placesEntry !== undefined) {
+      const writer = new TextWriter()
+      const data = await (placesEntry as FileEntry).getData(writer)
+      const resultForPlaces = placesStore.$deserialize(data, {
+        clearBefore,
+        overwriteExisting,
+      })
+      if (!resultForPlaces) {
+        console.warn('Unable to cleanly import places store!')
+        // TODO: should reset completely?
+      }
+      result &&= resultForPlaces
     }
-    result &&= resultForPlaces
   }
 
-  const itemsEntry = entries.find(
-    (entry) =>
-      entry.filename === FILENAME_ITEMS && !entry.directory && Object.hasOwn(entry, 'getData'),
-  )
-  if (itemsEntry !== undefined) {
-    const writer = new TextWriter()
-    const data = await (itemsEntry as FileEntry).getData(writer)
-    const resultForItems = itemsStore.$deserialize(data, {
-      clearBefore,
-      overwriteExisting,
-    })
-    if (!resultForItems) {
-      console.warn('Unable to cleanly import items store!')
-      // TODO: should reset completely?
+  if (objects.includes('items')) {
+    const itemsEntry = entries.find(
+      (entry) =>
+        entry.filename === FILENAME_ITEMS && !entry.directory && Object.hasOwn(entry, 'getData'),
+    )
+    if (itemsEntry !== undefined) {
+      const writer = new TextWriter()
+      const data = await (itemsEntry as FileEntry).getData(writer)
+      const resultForItems = itemsStore.$deserialize(data, {
+        clearBefore,
+        overwriteExisting,
+      })
+      if (!resultForItems) {
+        console.warn('Unable to cleanly import items store!')
+        // TODO: should reset completely?
+      }
+      result &&= resultForItems
     }
-    result &&= resultForItems
   }
 
   // TODO: wips/templates
@@ -316,12 +405,21 @@ async function onExport() {
   const filename = `pokemon-tcg-collection.${new Date().toISOString().substring(0, 10)}.zip`
   triggerDownload(zipFileBlob, filename)
 }
+async function onExportSingle(what: StoreObjects) {
+  await auditLogStore.add('Export database', { toExport: [what] })
+  const zipFileBlob = await createZipBlob([what])
+  const filename = `pokemon-tcg-collection.${what}.${new Date().toISOString().substring(0, 10)}.zip`
+  triggerDownload(zipFileBlob, filename)
+}
+
 async function onImport() {
+  if (importItems.value.length === 0) return
+
   console.debug('import', uploadFile.value)
   if (!uploadFile.value) return
 
   const zipFile = uploadFile.value
-  const result = await loadData(zipFile, {
+  const result = await loadData(zipFile, importItems.value, {
     clearBefore: clearBeforeImport.value,
     overwriteExisting: overwriteExisting.value,
   })
@@ -333,42 +431,62 @@ async function onImport() {
     clearBefore: clearBeforeImport.value,
     overwriteExisting: overwriteExisting.value,
     result: result,
+    toImport: importItems.value,
   })
 
   // clear afterwards
   uploadFile.value = undefined
 }
-async function onDelete() {
-  // TODO: confirm?
-  // see v-confirm-edit
 
+// TODO: confirm?
+// see v-confirm-edit
+async function onDelete() {
   // TODO: append database contents to entry?
   await auditLogStore.add('Delete database')
 
+  await cardsStore.clear()
   cardsStore.$reset()
-  transactionsStore.$reset()
-  placesStore.$reset()
-  itemsStore.$reset()
-  wipStore.$reset()
-  templatesStore.$reset()
 
-  const { clear: clearCardsFromIDB } = usePokemonTCGCollectionIDB('cards')
-  await clearCardsFromIDB()
-  const { clear: clearSetsFromIDB } = usePokemonTCGCollectionIDB('sets')
-  await clearSetsFromIDB()
-  const { clear: clearTransactionsFromIDB } = usePokemonTCGCollectionIDB('transactions')
-  await clearTransactionsFromIDB()
-  const { clear: clearPlacesFromIDB } = usePokemonTCGCollectionIDB('places')
-  await clearPlacesFromIDB()
-  const { clear: clearItemsFromIDB } = usePokemonTCGCollectionIDB('items')
-  await clearItemsFromIDB()
-  const { clear: clearWIPObjFromIDB } = usePokemonTCGCollectionIDB('workInProgress')
-  await clearWIPObjFromIDB()
-  const { clear: clearTemplatesFromIDB } = usePokemonTCGCollectionIDB('templates')
-  await clearTemplatesFromIDB()
+  await setsStore.clear()
+  setsStore.$reset()
+
+  await transactionsStore.clear()
+  transactionsStore.$reset()
+
+  await placesStore.clear()
+  placesStore.$reset()
+
+  await itemsStore.clear()
+  itemsStore.$reset()
+
+  await wipStore.clear()
+  wipStore.$reset()
+
+  await templatesStore.clear()
+  templatesStore.$reset()
 
   // NOTE: does it make sense to delete audit logs? Let's keep them
 }
+async function onDeleteSingle(what: DeleteableStoreObjects) {
+  if (statisticsDeleteLocked.value) return
+
+  const info = STORES.filter((item) => (item.allow as unknown as string).includes('delete')).find(
+    (item) => item.id === what,
+  )
+  if (info === undefined) {
+    console.warn('Requested object store was not found or is not deletable!', what)
+    return
+  }
+
+  await auditLogStore.add('Delete database', { toDelete: [what] })
+
+  // hack to avoid complex type check
+  const store = info.store as unknown as { clear(): Promise<void>; $reset(): void }
+
+  await store.clear()
+  store.$reset()
+}
+
 async function onLoadPreloadData() {
   const nameWithStores = [
     { name: 'places', store: placesStore },
@@ -412,91 +530,156 @@ async function onLoadPreloadData() {
 
   <EditorFieldset label="Statistics">
     <v-container class="d-flex flex-wrap flex-sm-column flex-md-row ga-3">
-      <v-card title="Cards">
-        <v-card-item>{{ cardsStore.cards.size }} card entries</v-card-item>
+      <v-card min-width="8rem">
+        <v-card-title class="text-center">{{ cardsStore.cards.size }}</v-card-title>
+        <v-card-subtitle class="text-center">Cards</v-card-subtitle>
+        <v-card-actions>
+          <v-btn
+            :disabled="cardsStore.cards.size === 0"
+            icon="mdi-download"
+            @click="onExportSingle('cards')"
+          ></v-btn>
+          <v-btn
+            :disabled="statisticsDeleteLocked || cardsStore.cards.size === 0"
+            :icon="statisticsDeleteLocked ? 'mdi-delete-off' : 'mdi-delete'"
+            @click="onDeleteSingle('cards')"
+          ></v-btn>
+        </v-card-actions>
       </v-card>
-      <v-card title="Sets">
-        <v-card-item>{{ setsStore.sets.size }} set entries</v-card-item>
+      <v-card min-width="8rem">
+        <v-card-title class="text-center">{{ setsStore.sets.size }}</v-card-title>
+        <v-card-subtitle class="text-center">Sets</v-card-subtitle>
+        <v-card-actions>
+          <v-btn
+            :disabled="setsStore.sets.size === 0"
+            icon="mdi-download"
+            @click="onExportSingle('sets')"
+          ></v-btn>
+          <v-btn
+            :disabled="statisticsDeleteLocked || setsStore.sets.size === 0"
+            :icon="statisticsDeleteLocked ? 'mdi-delete-off' : 'mdi-delete'"
+            @click="onDeleteSingle('sets')"
+          ></v-btn>
+        </v-card-actions>
       </v-card>
-      <v-card title="Transactions">
-        <v-card-item>{{ transactionsStore.transactions.size }} transaction entries</v-card-item>
+      <v-card min-width="8rem">
+        <v-card-title class="text-center">{{ transactionsStore.transactions.size }}</v-card-title>
+        <v-card-subtitle class="text-center">Transactions</v-card-subtitle>
+        <v-card-actions>
+          <v-btn
+            :disabled="transactionsStore.transactions.size === 0"
+            icon="mdi-download"
+            @click="onExportSingle('transactions')"
+          ></v-btn>
+          <v-btn
+            :disabled="statisticsDeleteLocked || transactionsStore.transactions.size === 0"
+            :icon="statisticsDeleteLocked ? 'mdi-delete-off' : 'mdi-delete'"
+            @click="onDeleteSingle('transactions')"
+          ></v-btn>
+        </v-card-actions>
       </v-card>
-      <v-card title="Places">
-        <v-card-item>{{ placesStore.places.size }} place entries</v-card-item>
+      <v-card min-width="8rem">
+        <v-card-title class="text-center">{{ placesStore.places.size }}</v-card-title>
+        <v-card-subtitle class="text-center">Places</v-card-subtitle>
+        <v-card-actions>
+          <v-btn
+            :disabled="placesStore.places.size === 0"
+            icon="mdi-download"
+            @click="onExportSingle('places')"
+          ></v-btn>
+          <v-btn
+            :disabled="statisticsDeleteLocked || placesStore.places.size === 0"
+            :icon="statisticsDeleteLocked ? 'mdi-delete-off' : 'mdi-delete'"
+            @click="onDeleteSingle('places')"
+          ></v-btn>
+        </v-card-actions>
       </v-card>
-      <v-card title="Items">
-        <v-card-item>{{ itemsStore.items.size }} item entries</v-card-item>
+      <v-card min-width="8rem">
+        <v-card-title class="text-center">{{ itemsStore.items.size }}</v-card-title>
+        <v-card-subtitle class="text-center">items</v-card-subtitle>
+        <v-card-actions>
+          <v-btn
+            :disabled="itemsStore.items.size === 0"
+            icon="mdi-download"
+            @click="onExportSingle('items')"
+          ></v-btn>
+          <v-btn
+            :disabled="statisticsDeleteLocked || itemsStore.items.size === 0"
+            :icon="statisticsDeleteLocked ? 'mdi-delete-off' : 'mdi-delete'"
+            @click="onDeleteSingle('items')"
+          ></v-btn>
+        </v-card-actions>
       </v-card>
-      <v-card title="Work in Progress">
-        <v-card-item>{{ wipStore.objects.size }} WIP objects</v-card-item>
+
+      <v-card min-width="8rem">
+        <v-card-title class="text-center">{{ wipStore.objects.size }}</v-card-title>
+        <v-card-subtitle class="text-center">Works in Progress</v-card-subtitle>
+        <v-card-actions>
+          <v-btn
+            :disabled="wipStore.objects.size === 0"
+            icon="mdi-download"
+            @click="onExportSingle('wip')"
+          ></v-btn>
+          <v-btn
+            :disabled="statisticsDeleteLocked || wipStore.objects.size === 0"
+            :icon="statisticsDeleteLocked ? 'mdi-delete-off' : 'mdi-delete'"
+            @click="onDeleteSingle('wip')"
+          ></v-btn>
+        </v-card-actions>
       </v-card>
-      <v-card title="Templates">
-        <v-card-item>{{ templatesStore.templates.size }} templates</v-card-item>
+      <v-card min-width="8rem">
+        <v-card-title class="text-center">{{ templatesStore.templates.size }}</v-card-title>
+        <v-card-subtitle class="text-center">Templates</v-card-subtitle>
+        <v-card-actions>
+          <v-btn
+            :disabled="templatesStore.templates.size === 0"
+            icon="mdi-download"
+            @click="onExportSingle('templates')"
+          ></v-btn>
+          <v-btn
+            :disabled="statisticsDeleteLocked || templatesStore.templates.size === 0"
+            :icon="statisticsDeleteLocked ? 'mdi-delete-off' : 'mdi-delete'"
+            @click="onDeleteSingle('templates')"
+          ></v-btn>
+        </v-card-actions>
       </v-card>
-      <v-card title="Audit Log">
-        <v-card-item>{{ auditLogStore.logs.length }} log entries</v-card-item>
+
+      <v-card min-width="8rem">
+        <v-card-title class="text-center">{{ auditLogStore.logs.length }}</v-card-title>
+        <v-card-subtitle class="text-center">Log entries</v-card-subtitle>
+        <v-card-actions>
+          <v-btn
+            :disabled="auditLogStore.logs.length === 0"
+            icon="mdi-download"
+            @click="onExportSingle('audit')"
+          ></v-btn>
+        </v-card-actions>
       </v-card>
     </v-container>
+
+    <v-checkbox
+      v-model="statisticsDeleteLocked"
+      :prepend-icon="statisticsDeleteLocked ? 'mdi-lock' : 'mdi-lock-open'"
+      class="ms-4"
+      :label="statisticsDeleteLocked ? 'Deletion disabled' : 'Deletion allowed'"
+      hide-details
+    ></v-checkbox>
   </EditorFieldset>
 
   <v-form>
     <EditorFieldset label="Export data">
-      <v-checkbox
+      <v-autocomplete
         v-model="exportItems"
-        value="cards"
-        multiple
+        :items="allowedExportItems"
+        item-value="id"
+        item-title="label"
+        label="Stores to export"
         hide-details
-        label="Cards"
-      ></v-checkbox>
-      <v-checkbox
-        v-model="exportItems"
-        value="sets"
+        chips
+        closable-chips
+        clearable
         multiple
-        hide-details
-        label="Sets"
-      ></v-checkbox>
-      <v-checkbox
-        v-model="exportItems"
-        value="transactions"
-        multiple
-        hide-details
-        label="Transactions"
-      ></v-checkbox>
-      <v-checkbox
-        v-model="exportItems"
-        value="places"
-        multiple
-        hide-details
-        label="Places"
-      ></v-checkbox>
-      <v-checkbox
-        v-model="exportItems"
-        value="items"
-        multiple
-        hide-details
-        label="Items"
-      ></v-checkbox>
-      <v-checkbox
-        v-model="exportItems"
-        value="wip"
-        multiple
-        hide-details
-        label="Work-in-Progress Objects"
-      ></v-checkbox>
-      <v-checkbox
-        v-model="exportItems"
-        value="templates"
-        multiple
-        hide-details
-        label="Templates"
-      ></v-checkbox>
-      <v-checkbox
-        v-model="exportItems"
-        value="audit"
-        multiple
-        hide-details
-        label="Audit Log"
-      ></v-checkbox>
+      ></v-autocomplete>
 
       <v-btn
         color="primary"
@@ -510,6 +693,20 @@ async function onLoadPreloadData() {
 
   <v-form>
     <EditorFieldset label="Import data">
+      <v-autocomplete
+        v-model="importItems"
+        :items="allowedImportItems"
+        item-value="id"
+        item-title="label"
+        label="Stores to import"
+        hint="Selection allows to limit import to the intersection of available store data in the import file and the user selection. Stores not selected will not imported! Stores not in the import file can't be imported even if selected!"
+        persistent-hint
+        chips
+        closable-chips
+        clearable
+        multiple
+      ></v-autocomplete>
+
       <v-checkbox
         v-model="clearBeforeImport"
         value="audit"
@@ -540,7 +737,7 @@ async function onLoadPreloadData() {
       </v-file-upload>
 
       <v-btn
-        :disabled="uploadFile === undefined"
+        :disabled="uploadFile === undefined || importItems.length === 0"
         color="primary"
         class="mt-3"
         @click="onImport"

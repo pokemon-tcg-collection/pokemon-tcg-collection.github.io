@@ -10,6 +10,7 @@ import type {
   PlaceLocalFair,
   PlaceOnlineMarketplace,
   RelatedURL,
+  Set,
   Transaction,
 } from './interfaces'
 
@@ -38,6 +39,18 @@ export function createNewCard(): Card {
     amount: 1,
     _meta: createEditMeta(),
   } satisfies Card
+}
+
+export function createNewSet(): Set {
+  return {
+    id: createNewRefID(),
+    name: '',
+    language: 'en',
+    abbrev: '',
+    series: 'original',
+    series_type: 'main-series',
+    _meta: createEditMeta(),
+  } satisfies Set
 }
 
 export function createNewTransaction(): Transaction {
@@ -75,7 +88,7 @@ export function createNewItem(): Item {
 
 // -------------------------------------------------------------------------
 
-export function makeObjectUniqueCopy<T extends Card | Transaction | Place | Item>(
+export function makeObjectUniqueCopy<T extends Card | Set | Transaction | Place | Item>(
   obj: T,
   copyFirst: boolean = true,
 ): T {

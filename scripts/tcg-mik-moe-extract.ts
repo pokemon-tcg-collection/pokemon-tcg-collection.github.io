@@ -45,6 +45,18 @@ export interface ProductListResponse {
   msg: 'OK.' | string
 }
 
+export interface ProductDetailResponse {
+  code: 200 | number
+  data: Set
+  msg: 'OK.' | string
+}
+
+export interface CardDetailResponse {
+  code: number
+  data: CardDetail
+  msg: string
+}
+
 export interface ProductListData {
   list: Product[]
 }
@@ -59,17 +71,9 @@ export interface Product {
   cardsNum: number
 }
 
-type Series = 'Scarlet & Violet' | 'Sun & Moon' | 'Sword & Shield'
-
-export interface ProductDetailResponse {
-  code: 200 | number
-  data: Set
-  msg: 'OK.' | string
-}
-
 export interface Set {
   name: string
-  setCode: string
+  setCode: SetCode | string
   setId: string
   releaseDate: Date
   series: string
@@ -79,7 +83,7 @@ export interface Set {
 }
 
 export interface Card {
-  setCode: string
+  setCode: SetCode | string
   cardIndex: string
   cardName: string
   rarity: CardRarity
@@ -87,74 +91,20 @@ export interface Card {
   cardType: CardType
   yorenCode: string
   is: Mechanic[]
-  setCodeEn: string
+  setCodeEn: SetCodeEn | string
   cardIndexEn: string
   nameEn: string
 }
 
-export type CardType =
-  | 'Pokemon'
-  | 'Item'
-  | 'Tool'
-  | 'Supporter'
-  | 'Stadium'
-  | 'Basic Energy'
-  | 'Special Energy'
-export type Mechanic =
-  | 'Basic'
-  | 'Stage 1'
-  | 'Stage 2'
-  | 'Future'
-  | 'Ancient'
-  | 'Single Strike'
-  | 'Rapid Strike'
-  | 'Fusion Strike'
-  | 'ex'
-  | 'V'
-  | 'VSTAR'
-  | 'GX'
-  | 'Ultra Beast'
-  | 'Prism Star'
-  | 'TAG TEAM'
-export type CardRarity =
-  | 'C'
-  | 'U'
-  | 'R'
-  | 'RR'
-  | 'RRR'
-  | 'A'
-  | 'AR'
-  | 'S'
-  | 'SR'
-  | 'SSR'
-  | 'SAR'
-  | 'UR'
-  | 'HR'
-  | 'SR'
-  | 'CHR'
-  | 'PR'
-  | '无标记'
-  | '●'
-  | '◆'
-  | '★'
-  | '★★'
-  | '★★★'
-
-export interface CardDetailResponse {
-  code: number
-  data: CardDetail
-  msg: string
-}
-
 export interface CardDetail {
   name: string
-  cardType: Mechanic | null
-  mechanic: Mechanic[] | null
-  label: null
+  cardType: CardType
+  mechanic: Mechanic | null
+  label: Mechanic[] | null
   description: string
   yorenCode: string
   pokemonAttr: PokemonAttr | null
-  setCode: string
+  setCode: SetCode | string
   cardIndex: string
   setCardsNum: string
   artist: string
@@ -164,7 +114,7 @@ export interface CardDetail {
   effectId: string
   regulationLegal: RegulationLegal
   effectSameCards: Card[]
-  setCodeEn: string
+  setCodeEn: SetCodeEn | string
   cardIndexEn: string
   nameEn: string
 }
@@ -207,8 +157,219 @@ export interface RegulationLegal {
   smSeries: boolean
 }
 
-export type RegulationMark = 'D' | 'E' | 'A' | 'B' | 'C'
+type Series = 'Scarlet & Violet' | 'Sun & Moon' | 'Sword & Shield'
+
+export type CardType =
+  | 'Pokemon'
+  | 'Item'
+  | 'Tool'
+  | 'Supporter'
+  | 'Stadium'
+  | 'Basic Energy'
+  | 'Special Energy'
+export type Mechanic =
+  | 'Basic'
+  | 'Stage 1'
+  | 'Stage 2'
+  | 'Future'
+  | 'Ancient'
+  | 'Single Strike'
+  | 'Rapid Strike'
+  | 'Fusion Strike'
+  | 'ex'
+  | 'V'
+  | 'VMAX'
+  | 'VSTAR'
+  | 'V-UNION'
+  | 'GX'
+  | 'Ultra Beast'
+  | 'Prism Star'
+  | 'Radiant'
+  | 'TAG TEAM'
+export type CardRarity =
+  | 'C'
+  | 'U'
+  | 'R'
+  | 'RR'
+  | 'RRR'
+  | 'A'
+  | 'AR'
+  | 'S'
+  | 'SR'
+  | 'SSR'
+  | 'SAR'
+  | 'UR'
+  | 'HR'
+  | 'SR'
+  | 'CSR'
+  | 'CHR'
+  | 'PR'
+  | 'K'
+  | '无标记'
+  | '●'
+  | '◆'
+  | '★'
+  | '★★'
+  | '★★★'
+
+export type RegulationMark = 'A' | 'B' | 'C' | 'D' | 'E' | 'F' | 'G'
 export type Energy = 'G' | 'W' | 'L' | 'P' | 'D' | 'M' | 'C' | 'F' | 'R' | 'N' | 'Y'
+
+export type SetCode =
+  | '151C'
+  | 'CBB1C'
+  | 'CBB2C'
+  | 'CBB3C'
+  | 'CS0LC'
+  | 'CS1.5C'
+  | 'CS1aC'
+  | 'CS1bC'
+  | 'CS1DC'
+  | 'CS2.1C'
+  | 'CS2.5C'
+  | 'CS2aC'
+  | 'CS2bC'
+  | 'CS2DaC'
+  | 'CS3.5C'
+  | 'CS3aC'
+  | 'CS3bC'
+  | 'CS3DC'
+  | 'CS4.1C'
+  | 'CS4.5C'
+  | 'CS4aC'
+  | 'CS4bC'
+  | 'CS4DaC'
+  | 'CS5.1C'
+  | 'CS5.5C'
+  | 'CS5aC'
+  | 'CS5bC'
+  | 'CS5DC'
+  | 'CS6.1C'
+  | 'CS6.5C'
+  | 'CS6aC'
+  | 'CS6bC'
+  | 'CSAC'
+  | 'CSBC'
+  | 'CSCC'
+  | 'CSDC'
+  | 'CSEC'
+  | 'CSFC'
+  | 'CSGC'
+  | 'CSHC'
+  | 'CSIC'
+  | 'CSJC'
+  | 'CSM1.5C'
+  | 'CSM1aC'
+  | 'CSM1bC'
+  | 'CSM1cC'
+  | 'CSM1DC'
+  | 'CSM2.1C'
+  | 'CSM2.5C'
+  | 'CSM2aC'
+  | 'CSM2bC'
+  | 'CSM2cC'
+  | 'CSM2DC'
+  | 'CSMAC'
+  | 'CSMC'
+  | 'CSMJC'
+  | 'CSMLC'
+  | 'CSMPaC'
+  | 'CSMPbC'
+  | 'CSMPcC'
+  | 'CSMPdC'
+  | 'CSMPeC'
+  | 'CSMPfC'
+  | 'CSMPgC'
+  | 'CSMPhC'
+  | 'CSMPiC'
+  | 'CSMPjC'
+  | 'CSMPkC'
+  | 'CSMPlC'
+  | 'CSMPmC'
+  | 'CSMPnC'
+  | 'CSMPoC'
+  | 'CSMPpC'
+  | 'CSMPqC'
+  | 'CSMYC'
+  | 'CSNC'
+  | 'CSOC'
+  | 'CSUC'
+  | 'CSV1C'
+  | 'CSV2C'
+  | 'CSV3C'
+  | 'CSV4C'
+  | 'CSV5C'
+  | 'CSV6C'
+  | 'CSVE1C'
+  | 'CSVE1pC'
+  | 'CSVE2C'
+  | 'CSVE2pC'
+  | 'CSVH1aC'
+  | 'CSVH1C'
+  | 'CSVH1pC'
+  | 'CSVH2aC'
+  | 'CSVH2C'
+  | 'CSVH2pC'
+  | 'CSVH3aC'
+  | 'CSVH3C'
+  | 'CSVH3pC'
+  | 'CSVL1C'
+  | 'CSVL2C'
+  | 'CSXC'
+  | 'CSYC'
+  | 'CSZC'
+  | 'SMP'
+  | 'SSP'
+  | 'SVP'
+export type SetCodeEn =
+  | 'ASR'
+  | 'BRS'
+  | 'BST'
+  | 'BUS'
+  | 'CEC'
+  | 'CEL'
+  | 'CES'
+  | 'CIN'
+  | 'CPA'
+  | 'CRE'
+  | 'CRZ'
+  | 'DAA'
+  | 'DRM'
+  | 'Energy'
+  | 'EVS'
+  | 'FLI'
+  | 'FST'
+  | 'GRI'
+  | 'HIF'
+  | 'LOR'
+  | 'LOT'
+  | 'MEW'
+  | 'OBF'
+  | 'PAF'
+  | 'PAL'
+  | 'PAR'
+  | 'PGO'
+  | 'PRE'
+  | 'RCL'
+  | 'SCR'
+  | 'SHF'
+  | 'SIT'
+  | 'SLG'
+  | 'SMP'
+  | 'SP'
+  | 'SSH'
+  | 'SSP'
+  | 'SUM'
+  | 'SVE'
+  | 'SVI'
+  | 'SVP'
+  | 'TEF'
+  | 'TEU'
+  | 'TWM'
+  | 'UNB'
+  | 'UNM'
+  | 'UPR'
+  | 'VIV'
 
 // -------------------------------------------------------------------------
 
@@ -371,7 +532,8 @@ async function _download_card_details(urlCardSet: string, setId: string, cardInd
   })
   const contentCardDetail = (await respCardDetail.json()) as CardDetailResponse
 
-  if (contentCardDetail.code !== 200) {
+  if (contentCardDetail.code !== 200 && contentCardDetail.code !== 400) {
+    // NOTE: some missing cards set status to 400, everything else is 200
     console.error('Invalid response status code', contentCardDetail)
     throw Error('Unexpected status for /card/card-detail')
   }
@@ -398,7 +560,13 @@ export async function downloadSetImages(
     const filename = pathJoin(dn_output, `${setId}.webp`)
 
     if (force_refresh || !existsSync(filename)) {
-      console.debug(' - Downloading set image/logo %s: %s', set.setId, set.name)
+      console.debug(
+        ' - (%d/%d) Downloading set image/logo %s: %s',
+        set_idx + 1,
+        sets.length,
+        set.setId,
+        set.name,
+      )
 
       const image = await _download_product_image(urlCards, setId)
 
@@ -425,7 +593,13 @@ export async function downloadCardImages(
     const filename = pathJoin(dn_output, `${cardIndex}.webp`)
 
     if (force_refresh || !existsSync(filename)) {
-      console.debug(' - Downloading card image %s: %s', card.cardIndex, card.cardName)
+      console.debug(
+        ' - (%d/%d) Downloading card image %s: %s',
+        card_idx + 1,
+        cards.length,
+        card.cardIndex,
+        card.cardName,
+      )
 
       const image = await _download_card_image(urlCards, setId, cardIndex)
 
@@ -490,13 +664,23 @@ export async function processSetCards(
       const filename = pathJoin(pathCardDetails, `${card.cardIndex}-detail.json`)
 
       if (force_refresh || !existsSync(filename)) {
-        console.debug(' - Downloading card details %s: %s', card.cardIndex, card.cardName)
+        console.debug(
+          ' - (%d/%d) Downloading card details %s: %s',
+          card_idx + 1,
+          cards.length,
+          card.cardIndex,
+          card.cardName,
+        )
 
         const [urlCard, cardDetail] = await _download_card_details(
           urlCardSet,
           set.setId,
           card.cardIndex,
         )
+        if (!cardDetail) {
+          console.warn('[!] no card details for %s: %s', card.cardIndex, card.cardName)
+          continue
+        }
 
         await writeFile(filename, JSON.stringify(cardDetail, undefined, 2))
 
@@ -575,8 +759,8 @@ process(DN_OUTPUT, {
   setImages: true,
   // download card list / set brief
   cards: true,
-  // but do not download card details
-  cardDetails: false,
+  // download card details
+  cardDetails: true,
   // but do not download card images
   cardImages: false,
   // restrict to main expansions only

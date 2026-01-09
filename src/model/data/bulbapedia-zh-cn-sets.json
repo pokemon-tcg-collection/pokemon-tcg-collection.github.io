@@ -30,7 +30,7 @@
     "series": "sun-moon",
     "series_type": "main-series",
     "language": "zh-cn",
-    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/6/69/SetSymbol_Battle_Elite.png/40px-SetSymbol_Battle_Elite.png",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/a/a5/SetSymbolCSM15.png/40px-SetSymbolCSM15.png",
     "name": "Battle Elite",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Battle_Elite_(ATCG)",
     "name_original": "对战精英"
@@ -237,6 +237,7 @@
     "series": "scarlet-violet",
     "series_type": "main-series",
     "language": "zh-cn",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/7/7c/SetSymbolCBB1.png/40px-SetSymbolCBB1.png",
     "name": "Gem Pack Volume 1",
     "name_original": "宝石包第一弹"
   },
@@ -289,6 +290,7 @@
     "series": "scarlet-violet",
     "series_type": "main-series",
     "language": "zh-cn",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/c/c5/SetSymbolCBB2.png/40px-SetSymbolCBB2.png",
     "name": "Gem Pack Volume 2",
     "name_original": "宝石包VOL.2"
   }

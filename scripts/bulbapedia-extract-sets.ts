@@ -1476,7 +1476,10 @@ function parseSetsZHCN(document: Document) {
   }
   const idxNotice = allChildren.findIndex(
     (child) =>
-      child.tagName === 'TABLE' && (child as HTMLTableElement).style.borderRadius === '80px',
+      child.tagName === 'TABLE' &&
+      (child as HTMLTableElement).textContent.includes(
+        'This article is part of Project TCG, a Bulbapedia project that aims to report on every aspect of the Pokémon Trading Card Game.',
+      ),
   )
   if (idxNotice === -1) {
     throw Error('Unable to find notice element ("article is part of Project TCG", stop marker)!')

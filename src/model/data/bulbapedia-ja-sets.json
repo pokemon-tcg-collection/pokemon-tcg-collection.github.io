@@ -2431,7 +2431,8 @@
     "release_date": "April 18, 2025",
     "names": {
       "ja": "ロケット団の栄光",
-      "zh-tw": "火箭隊的榮耀"
+      "zh-tw": "火箭隊的榮耀",
+      "ko": "로켓단의 영광"
     }
   },
   {
@@ -2449,7 +2450,12 @@
       "cards": 86,
       "special": 88
     },
-    "release_date": "June 6, 2025"
+    "release_date": "June 6, 2025",
+    "names": {
+      "ja": "ブラックボルト",
+      "zh-tw": "漆黑伏特",
+      "ko": "블랙볼트"
+    }
   },
   {
     "series": "scarlet-violet",
@@ -2466,7 +2472,12 @@
       "cards": 86,
       "special": 88
     },
-    "release_date": "June 6, 2025"
+    "release_date": "June 6, 2025",
+    "names": {
+      "ja": "ホワイトフレア",
+      "zh-tw": "純白閃焰",
+      "ko": "화이트플레어"
+    }
   },
   {
     "series": "mega",
@@ -2483,7 +2494,12 @@
       "cards": 63,
       "special": 29
     },
-    "release_date": "August 1, 2025"
+    "release_date": "August 1, 2025",
+    "names": {
+      "ja": "メガブレイブ",
+      "zh-tw": "超級勇氣",
+      "ko": "메가브레이브"
+    }
   },
   {
     "series": "mega",
@@ -2500,7 +2516,12 @@
       "cards": 63,
       "special": 29
     },
-    "release_date": "August 1, 2025"
+    "release_date": "August 1, 2025",
+    "names": {
+      "ja": "メガシンフォニア",
+      "zh-tw": "超級交響樂",
+      "ko": "메가심포니아"
+    }
   },
   {
     "series": "mega",
@@ -2517,7 +2538,32 @@
       "cards": 80,
       "special": 36
     },
-    "release_date": "September 26, 2025"
+    "release_date": "September 26, 2025",
+    "names": {
+      "ja": "インフェルノX",
+      "zh-tw": "烈獄狂火X",
+      "ko": "인페르노X"
+    }
+  },
+  {
+    "series": "mega",
+    "series_type": "main-series",
+    "language": "ja",
+    "no": "3",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/6/61/SetSymbolNihil_Zero.png/40px-SetSymbolNihil_Zero.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/7/70/M3_Logo_JP.png/110px-M3_Logo_JP.png",
+    "name_original": "ムニキスゼロ",
+    "name": "Nihil Zero",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Nihil_Zero_(TCG)",
+    "card_stats": {
+      "cards": 80,
+      "special": null
+    },
+    "release_date": "January 23, 2026",
+    "names": {
+      "ja": "ムニキスゼロ",
+      "zh-tw": "虛無歸零"
+    }
   },
   {
     "series": "adv",
@@ -3597,10 +3643,19 @@
     "name_original": "MEGAドリームex",
     "name": "MEGA Dream ex",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/MEGA_Dream_ex_(TCG)",
+    "name_en_equivalent": "Ascended Heroes",
     "card_stats": {
-      "cards": 193
+      "cards": 193,
+      "special": 57
     },
-    "release_date": "November 28, 2025"
+    "release_date": "November 28, 2025",
+    "names": {
+      "ja": "MEGAドリームex",
+      "zh-tw": "超級進化夢想ex",
+      "id": "Evolusi Mega Impian ex",
+      "th": "วิวัฒนาการเมก้า ดรีมex",
+      "ko": "MEGA 드림 ex"
+    }
   },
   {
     "series": "other-special",

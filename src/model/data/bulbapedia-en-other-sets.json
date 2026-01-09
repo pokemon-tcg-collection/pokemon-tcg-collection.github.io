@@ -1614,5 +1614,95 @@
       "es-mx": "Rivales Predestinados",
       "es": "Rivales Predestinados"
     }
+  },
+  {
+    "series": "scarlet-violet",
+    "language": "en",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/7/78/SetSymbolBlack_Bolt.png/40px-SetSymbolBlack_Bolt.png",
+    "name": "Black Bolt",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Black_Bolt_%26_White_Flare_(TCG)",
+    "names_translated": {
+      "fr": "Foudre Noire",
+      "de": "Schwarze Blitze",
+      "it": "Luce Nera",
+      "pt-br": "Raio Preto",
+      "es-mx": "Fulgor Negro",
+      "es": "Fulgor Negro"
+    }
+  },
+  {
+    "series": "scarlet-violet",
+    "language": "en",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/4/49/SetSymbolWhite_Flare.png/60px-SetSymbolWhite_Flare.png",
+    "name": "White Flare",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Black_Bolt_%26_White_Flare_(TCG)",
+    "names_translated": {
+      "fr": "Flamme Blanche",
+      "de": "Weiße Flammen",
+      "it": "Fuoco Bianco",
+      "pt-br": "Fogo Branco",
+      "es-mx": "Llama Blanca",
+      "es": "Llama Blanca"
+    }
+  },
+  {
+    "series": "mega-evolution",
+    "language": "en",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/f/fc/SetSymbolMega_Evolution.png/40px-SetSymbolMega_Evolution.png",
+    "name": "Mega Evolution",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Mega_Evolution_(TCG)",
+    "names_translated": {
+      "fr": "Méga-Évolution",
+      "de": "Mega-Entwicklung",
+      "it": "Megaevoluzione",
+      "pt-br": "Megaevolução",
+      "es-mx": "Megaevolución",
+      "es": "Megaevolución"
+    }
+  },
+  {
+    "series": "mega-evolution",
+    "language": "en",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/7/7f/SetSymbolPhantasmal_Flames.png/40px-SetSymbolPhantasmal_Flames.png",
+    "name": "Phantasmal Flames",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Phantasmal_Flames_(TCG)",
+    "names_translated": {
+      "fr": "Flammes Fantasmagoriques",
+      "de": "Fatale Flammen",
+      "it": "Fiamme Spettrali",
+      "pt-br": "Fogo Fantasmagórico",
+      "es-mx": "Llamaradas Fantasmales",
+      "es": "Fuegos Fantasmales"
+    }
+  },
+  {
+    "series": "mega-evolution",
+    "language": "en",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/0/0e/SetSymbolAscended_Heroes.png",
+    "name": "Ascended Heroes",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Ascended_Heroes_(TCG)",
+    "names_translated": {
+      "fr": "Héros Transcendants",
+      "de": "Erhabene Helden",
+      "it": "Ascesa Eroica",
+      "pt-br": "Heróis Excelsos",
+      "es-mx": "Ascenso Heroico",
+      "es": "Héroes Ascendentes"
+    }
+  },
+  {
+    "series": "mega-evolution",
+    "language": "en",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/0/09/SetSymbolPerfect_Order.png",
+    "name": "Perfect Order",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Perfect_Order_(TCG)",
+    "names_translated": {
+      "fr": "Équilibre Parfait",
+      "de": "Optimale Ordnung",
+      "it": "Equilibrio Perfetto",
+      "pt-br": "Equilíbrio Perfeito",
+      "es-mx": "Equilibrio Perfecto",
+      "es": "Equilibrio Perfecto"
+    }
   }
 ]

@@ -1515,7 +1515,93 @@
     "name": "Glory of the Rocket Gang",
     "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Glory_of_the_Rocket_Gang_(TCG)",
     "names_translated": {
-      "zh-tw": "火箭隊的榮耀"
+      "zh-tw": "火箭隊的榮耀",
+      "ko": "로켓단의 영광"
+    }
+  },
+  {
+    "series": "scarlet-violet",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/a/a2/SetSymbolBlackBolt.png/40px-SetSymbolBlackBolt.png",
+    "name_original": "ブラックボルト",
+    "name": "Black Bolt",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Black_Bolt/White_Flare_(TCG)",
+    "names_translated": {
+      "zh-tw": "漆黑伏特",
+      "ko": "블랙볼트"
+    }
+  },
+  {
+    "series": "scarlet-violet",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/1/13/SetSymbolWhiteFlare.png/40px-SetSymbolWhiteFlare.png",
+    "name_original": "ホワイトフレア",
+    "name": "White Flare",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Black_Bolt/White_Flare_(TCG)",
+    "names_translated": {
+      "zh-tw": "純白閃焰",
+      "ko": "화이트플레어"
+    }
+  },
+  {
+    "series": "mega",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/e/e9/SetSymbolMega_Brave.png/40px-SetSymbolMega_Brave.png",
+    "name_original": "メガブレイブ",
+    "name": "Mega Brave",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Mega_Brave/Mega_Symphonia_(TCG)",
+    "names_translated": {
+      "zh-tw": "超級勇氣",
+      "ko": "메가브레이브"
+    }
+  },
+  {
+    "series": "mega",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/d/df/SetSymbolMega_Symphonia.png/40px-SetSymbolMega_Symphonia.png",
+    "name_original": "メガシンフォニア",
+    "name": "Mega Symphonia",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Mega_Brave/Mega_Symphonia_(TCG)",
+    "names_translated": {
+      "zh-tw": "超級交響樂",
+      "ko": "메가심포니아"
+    }
+  },
+  {
+    "series": "mega",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/4/46/SetSymbolInferno_X.png/40px-SetSymbolInferno_X.png",
+    "name_original": "インフェルノX",
+    "name": "Inferno X",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Inferno_X_(TCG)",
+    "names_translated": {
+      "zh-tw": "烈獄狂火X",
+      "ko": "인페르노X"
+    }
+  },
+  {
+    "series": "mega",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/c/cb/SetSymbolMEGA_Dream_ex.png/40px-SetSymbolMEGA_Dream_ex.png",
+    "name_original": "MEGAドリームex",
+    "name": "MEGA Dream ex",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/MEGA_Dream_ex_(TCG)",
+    "names_translated": {
+      "zh-tw": "超級進化夢想ex",
+      "id": "Evolusi Mega Impian ex",
+      "th": "วิวัฒนาการเมก้า ดรีมex",
+      "ko": "MEGA 드림 ex"
+    }
+  },
+  {
+    "series": "mega",
+    "language": "ja",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/6/61/SetSymbolNihil_Zero.png/40px-SetSymbolNihil_Zero.png",
+    "name_original": "ムニキスゼロ",
+    "name": "Nihil Zero",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Nihil_Zero_(TCG)",
+    "names_translated": {
+      "zh-tw": "虛無歸零"
     }
   }
 ]

@@ -3055,7 +3055,16 @@
     },
     "release_date": "July 18, 2025",
     "abbrev": "BLK",
-    "tcgdex_id": "sv10.5b"
+    "tcgdex_id": "sv10.5b",
+    "names": {
+      "en": "Black Bolt",
+      "fr": "Foudre Noire",
+      "de": "Schwarze Blitze",
+      "it": "Luce Nera",
+      "pt-br": "Raio Preto",
+      "es-mx": "Fulgor Negro",
+      "es": "Fulgor Negro"
+    }
   },
   {
     "series": "scarlet-violet",
@@ -3073,13 +3082,22 @@
     },
     "release_date": "July 18, 2025",
     "abbrev": "WHT",
-    "tcgdex_id": "sv10.5w"
+    "tcgdex_id": "sv10.5w",
+    "names": {
+      "en": "White Flare",
+      "fr": "Flamme Blanche",
+      "de": "Weiße Flammen",
+      "it": "Fuoco Bianco",
+      "pt-br": "Fogo Branco",
+      "es-mx": "Llama Blanca",
+      "es": "Llama Blanca"
+    }
   },
   {
     "series": "mega-evolution",
     "series_type": "post-wizards-of-the-coast",
     "language": "en",
-    "no": "1",
+    "no": "ME1",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/f/fc/SetSymbolMega_Evolution.png/40px-SetSymbolMega_Evolution.png",
     "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/b/be/ME1_Logo_EN.png/150px-ME1_Logo_EN.png",
     "name": "Mega Evolution",
@@ -3091,13 +3109,22 @@
     },
     "release_date": "September 26, 2025",
     "abbrev": "MEG",
-    "tcgdex_id": "me01"
+    "tcgdex_id": "me01",
+    "names": {
+      "en": "Mega Evolution",
+      "fr": "Méga-Évolution",
+      "de": "Mega-Entwicklung",
+      "it": "Megaevoluzione",
+      "pt-br": "Megaevolução",
+      "es-mx": "Megaevolución",
+      "es": "Megaevolución"
+    }
   },
   {
     "series": "mega-evolution",
     "series_type": "post-wizards-of-the-coast",
     "language": "en",
-    "no": "2",
+    "no": "ME2",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/thumb/7/7f/SetSymbolPhantasmal_Flames.png/40px-SetSymbolPhantasmal_Flames.png",
     "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/f/fa/ME2_Logo_EN.png/150px-ME2_Logo_EN.png",
     "name": "Mega Evolution—Phantasmal Flames",
@@ -3109,13 +3136,22 @@
     },
     "release_date": "November 14, 2025",
     "abbrev": "PFL",
-    "tcgdex_id": "me02"
+    "tcgdex_id": "me02",
+    "names": {
+      "en": "Phantasmal Flames",
+      "fr": "Flammes Fantasmagoriques",
+      "de": "Fatale Flammen",
+      "it": "Fiamme Spettrali",
+      "pt-br": "Fogo Fantasmagórico",
+      "es-mx": "Llamaradas Fantasmales",
+      "es": "Fuegos Fantasmales"
+    }
   },
   {
     "series": "mega-evolution",
     "series_type": "post-wizards-of-the-coast",
     "language": "en",
-    "no": "2.5",
+    "no": "ME2.5",
     "symbol_url": "https://archives.bulbagarden.net/media/upload/0/0e/SetSymbolAscended_Heroes.png",
     "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/b/b9/ME2.5_Logo_EN.png/150px-ME2.5_Logo_EN.png",
     "name": "Mega Evolution—Ascended Heroes",
@@ -3126,7 +3162,42 @@
       "secret": 73
     },
     "release_date": "January 30, 2026",
-    "abbrev": "ASC"
+    "abbrev": "ASC",
+    "names": {
+      "en": "Ascended Heroes",
+      "fr": "Héros Transcendants",
+      "de": "Erhabene Helden",
+      "it": "Ascesa Eroica",
+      "pt-br": "Heróis Excelsos",
+      "es-mx": "Ascenso Heroico",
+      "es": "Héroes Ascendentes"
+    }
+  },
+  {
+    "series": "mega-evolution",
+    "series_type": "post-wizards-of-the-coast",
+    "language": "en",
+    "no": "ME3",
+    "symbol_url": "https://archives.bulbagarden.net/media/upload/0/09/SetSymbolPerfect_Order.png",
+    "logo_url": "https://archives.bulbagarden.net/media/upload/thumb/a/ae/ME3_Logo_EN.png/150px-ME3_Logo_EN.png",
+    "name": "Mega Evolution—Perfect Order",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Perfect_Order_(TCG)",
+    "type": "main-series",
+    "cards_stats": {
+      "cards": 88,
+      "secret": 32
+    },
+    "release_date": "March 27, 2026",
+    "abbrev": "POR",
+    "names": {
+      "en": "Perfect Order",
+      "fr": "Équilibre Parfait",
+      "de": "Optimale Ordnung",
+      "it": "Equilibrio Perfetto",
+      "pt-br": "Equilíbrio Perfeito",
+      "es-mx": "Equilibrio Perfecto",
+      "es": "Equilibrio Perfecto"
+    }
   },
   {
     "series": "basic-energy",
@@ -3714,6 +3785,18 @@
     },
     "release_date": "August 14, 2025",
     "abbrev": "PPS7"
+  },
+  {
+    "series": "pop-play",
+    "series_type": "other",
+    "language": "en",
+    "name": "Play! Pokémon Prize Pack Series Eight",
+    "bulbapedia_url": "https://bulbapedia.bulbagarden.net/wiki/Play!_Pok%C3%A9mon_Prize_Pack_Series_Eight_(TCG)",
+    "cards_stats": {
+      "cards": 91
+    },
+    "release_date": "January 1, 2026",
+    "abbrev": "PPS8"
   },
   {
     "series": "other-misc",

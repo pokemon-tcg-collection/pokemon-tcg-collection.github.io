@@ -9182,5 +9182,141 @@
     "name": "Mega Falinks",
     "generation": "viii",
     "sprite": false
+  },
+  {
+    "id": 10306,
+    "sid": 358,
+    "identifier": "chimecho-mega",
+    "name": "Mega Chimecho",
+    "generation": "iii",
+    "sprite": false
+  },
+  {
+    "id": 10308,
+    "sid": 398,
+    "identifier": "staraptor-mega",
+    "name": "Mega Staraptor",
+    "generation": "iv",
+    "sprite": false
+  },
+  {
+    "id": 10311,
+    "sid": 485,
+    "identifier": "heatran-mega",
+    "name": "Mega Heatran",
+    "generation": "iv",
+    "sprite": false
+  },
+  {
+    "id": 10312,
+    "sid": 491,
+    "identifier": "darkrai-mega",
+    "name": "Mega Darkrai",
+    "generation": "iv",
+    "sprite": false
+  },
+  {
+    "id": 10313,
+    "sid": 623,
+    "identifier": "golurk-mega",
+    "name": "Mega Golurk",
+    "generation": "v",
+    "sprite": false
+  },
+  {
+    "id": 10314,
+    "sid": 678,
+    "identifier": "meowstic-mega",
+    "name": "Mega Meowstic",
+    "generation": "vi",
+    "sprite": false
+  },
+  {
+    "id": 10315,
+    "sid": 740,
+    "identifier": "crabominable-mega",
+    "name": "Mega Crabominable",
+    "generation": "vii",
+    "sprite": false
+  },
+  {
+    "id": 10316,
+    "sid": 768,
+    "identifier": "golisopod-mega",
+    "name": "Mega Golisopod",
+    "generation": "vii",
+    "sprite": false
+  },
+  {
+    "id": 10317,
+    "sid": 801,
+    "identifier": "magearna-mega",
+    "name": "Mega Magearna",
+    "generation": "vii",
+    "sprite": false
+  },
+  {
+    "id": 10318,
+    "sid": 801,
+    "identifier": "magearna-original-mega",
+    "name": "Mega Magearna",
+    "generation": "vii",
+    "sprite": false
+  },
+  {
+    "id": 10319,
+    "sid": 807,
+    "identifier": "zeraora-mega",
+    "name": "Mega Zeraora",
+    "generation": "vii",
+    "sprite": false
+  },
+  {
+    "id": 10320,
+    "sid": 952,
+    "identifier": "scovillain-mega",
+    "name": "Mega Scovillain",
+    "generation": "ix",
+    "sprite": false
+  },
+  {
+    "id": 10321,
+    "sid": 970,
+    "identifier": "glimmora-mega",
+    "name": "Mega Glimmora",
+    "generation": "ix",
+    "sprite": false
+  },
+  {
+    "id": 10322,
+    "sid": 978,
+    "identifier": "tatsugiri-curly-mega",
+    "name": "Mega Tatsugiri",
+    "generation": "ix",
+    "sprite": false
+  },
+  {
+    "id": 10323,
+    "sid": 978,
+    "identifier": "tatsugiri-droopy-mega",
+    "name": "Mega Tatsugiri",
+    "generation": "ix",
+    "sprite": false
+  },
+  {
+    "id": 10324,
+    "sid": 978,
+    "identifier": "tatsugiri-stretchy-mega",
+    "name": "Mega Tatsugiri",
+    "generation": "ix",
+    "sprite": false
+  },
+  {
+    "id": 10325,
+    "sid": 998,
+    "identifier": "baxcalibur-mega",
+    "name": "Mega Baxcalibur",
+    "generation": "ix",
+    "sprite": false
   }
 ]

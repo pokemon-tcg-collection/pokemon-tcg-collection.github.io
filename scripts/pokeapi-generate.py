@@ -388,7 +388,7 @@ def main():
 
     os.makedirs(os.path.dirname(FN_OUTPUT_INFO), exist_ok=True)
     with open(FN_OUTPUT_INFO, "w") as fp:
-        json.dump(entries, fp)
+        json.dump(entries, fp, indent=2)
 
     print(f"[*] Wrote {len(entries)} Pokemon info to '{FN_OUTPUT_INFO}'.")
 

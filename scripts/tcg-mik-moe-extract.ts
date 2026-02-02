@@ -619,20 +619,30 @@ export async function processSetCards(
     cardImages: doDownloadCardImages = true,
     force_refresh = false,
     req_delay = 100,
+    idx_set = undefined,
+    num_sets = undefined,
   }: {
     cardDetails?: boolean
     cardImages?: boolean
     force_refresh?: boolean
     req_delay?: number
+    idx_set?: number
+    num_sets?: number
   } = {},
 ) {
-  console.log('[*] Downloading product/set details (card list) %s: %s', set.setId, set.name)
+  console.log(
+    '[*] %sDownloading product/set details (card list) %s: %s',
+    idx_set !== undefined && num_sets !== undefined ? `(${idx_set + 1}/${num_sets}) ` : '',
+    set.setId,
+    set.name,
+  )
   const [urlCardSet, setDetails] = await _download_product_details(urlCards, set.setId)
   const cards = setDetails.cards
 
   if (req_delay > 0) await delay(req_delay)
 
   // write short info
+  console.log('[*] Write %sx card info for %s ...', cards.length, set.setId)
   const pathCardInfo = pathJoin(dn_output, 'info')
   await mkdir(pathCardInfo, { recursive: true })
   for (let card_idx = 0; card_idx < cards.length; card_idx++) {
@@ -723,11 +733,17 @@ export async function process(
   await writeFile(pathJoin(dn_output, 'sets.json'), JSON.stringify(products, undefined, 2))
 
   // filter sets (main-expansion)
-  const sets = onlyMainExpansion ? products.filter((set) => set.mainExpansion) : products
+  const productsMainExpansion = products.filter((set) => set.mainExpansion)
+  const sets = onlyMainExpansion ? productsMainExpansion : products
+  console.log(
+    'Number of sets: all=%s, main-expansion=%s',
+    products.length,
+    productsMainExpansion.length,
+  )
 
   // write set images/logos
   if (doDownloadSetImages) {
-    console.log('[*] Downloading product/set images ...')
+    console.log('[*] Downloading %sx product/set images ...', sets.length)
 
     const pathSetImages = pathJoin(dn_output, 'images')
     await mkdir(pathSetImages, { recursive: true })
@@ -736,6 +752,12 @@ export async function process(
   }
 
   if (doDownloadCards) {
+    console.log(
+      '[*] Downloading cards (info, details=%s, images=%s) ...',
+      doDownloadCardDetails,
+      doDownloadCardImages,
+    )
+
     for (let set_idx = 0; set_idx < sets.length; set_idx++) {
       const set = sets[set_idx]
 
@@ -747,6 +769,8 @@ export async function process(
         cardImages: doDownloadCardImages,
         force_refresh,
         req_delay,
+        idx_set: set_idx,
+        num_sets: sets.length,
       })
     }
   }

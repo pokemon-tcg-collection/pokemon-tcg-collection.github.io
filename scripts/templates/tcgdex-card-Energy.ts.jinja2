@@ -1,0 +1,23 @@
+import { Card } from "../../../interfaces"
+import Set from "../{{ setCode }}"
+
+const card: Card = {
+	set: Set,
+
+	name: {
+		'zh-cn': "{{ name }}"
+	},
+
+	effect: {
+		'zh-cn': "{{ description | trim | replace("\n", "\\n") }}"
+	},
+
+	illustrator: "{{ artist }}",
+	category: "Energy",
+	energyType: "{{ cardType | cardType2energyType }}",
+
+	regulationMark: "{{ regulationMark }}",
+	rarity: "{{ rarity | rarity2str }}"
+}
+
+export default card

@@ -1,0 +1,90 @@
+import { Card } from "../../../interfaces"
+import Set from "../{{ setCode }}"
+
+const card: Card = {
+	set: Set,
+
+	name: {
+		'zh-cn': "{{ name }}"
+	},
+
+	illustrator: "{{ artist }}",
+	category: "Pokemon",
+	{% if dexId -%}
+	dexId: [{{ dexId }}],
+	{%- endif %}
+	hp: {{ pokemonAttr.hp }},
+	types: ["{{ pokemonAttr.energyType | energy2str }}"],
+
+	{# NOTE: this might simply be some text on the card, not the actual description! -#}
+	{#
+	description: {
+		'zh-cn': "{{ description | trim | replace("\n", "\\n") }}"
+	},
+	-#}
+
+	stage: "{{ pokemonAttr.stage | stage2stage }}",
+	{% if mechanic is knownMechanic -%}
+	suffix: "{{ mechanic | mechanic2suffix }}",
+	{%- endif %}
+
+	{% if pokemonAttr.ability -%}
+	abilities: [
+		{%- for ability in pokemonAttr.ability -%}
+	{
+		type: "Ability",
+		name: "{{ ability.name }}",
+		effect: "{{ ability.text }}"
+	}
+		{%- if not loop.last %}, {% endif -%}
+		{%- endfor -%}
+	],
+	{%- endif %}
+
+	{% if pokemonAttr.attack -%}
+	attacks: [
+		{%- for attack in pokemonAttr.attack -%}
+	{
+		name: {
+			'zh-cn': "{{ attack.name }}"
+		},
+		{% if attack.text -%}
+		effect: {
+			'zh-cn': "{{ attack.text }}"
+		},
+		{% endif -%}
+		{% if attack.damage -%}
+		damage: "{{ attack.damage }}",
+		{% endif -%}
+		{% if attack.cost == "0" -%}
+		cost: []
+		{%- else -%}
+		cost: [{{ attack.cost | map("energy2str") | map("tojson") | join(", ") }}]
+		{%- endif %}
+	}
+	{%- if not loop.last %}, {% endif -%}
+	{%- endfor -%}
+	],
+	{%- endif %}
+
+	{% if pokemonAttr.weakness -%}
+	weaknesses: [{
+		type: "{{ pokemonAttr.weakness.energy | energy2str }}",
+		value: "{{ pokemonAttr.weakness.value }}"
+	}],
+	{%- endif %}
+
+	{% if pokemonAttr.resistance -%}
+	resistances: [{
+		type: "{{ pokemonAttr.resistance.energy | energy2str }}",
+		value: "{{ pokemonAttr.resistance.value }}"
+	}],
+	{%- endif %}
+
+	retreat: {{ pokemonAttr.retreatCost }},
+
+	regulationMark: "{{ regulationMark }}",
+	rarity: "{{ rarity | rarity2str }}"
+}
+
+export default card

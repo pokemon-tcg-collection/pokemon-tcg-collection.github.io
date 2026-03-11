@@ -8,6 +8,7 @@ import { useCardsStore } from '@/stores/cards'
 import { useItemsStore } from '@/stores/items'
 import { usePlacesStore } from '@/stores/places'
 import { useTransactionsStore } from '@/stores/transactions'
+import { useWorkInProgressStore } from '@/stores/workInProgress'
 
 const GUARDS = [
   { names: ['card', 'card-edit'], storeFn: useCardsStore, fallback: { name: 'card-list' } },
@@ -35,9 +36,18 @@ export async function beforeEachCheckValidObjectIDs(
         const store = guard.storeFn()
         await until(() => store.$isHydrated).toBeTruthy()
         // check if invalid
-        if (to.params.id === undefined || !store.has(to.params.id as string)) {
-          console.warn('No Card found with ID', to.params.id)
-          return guard.fallback
+        const objId = to.params.id
+        if (objId === undefined || !store.has(objId as string)) {
+          console.warn('No object found with ID', objId)
+
+          // try to check work-in-progess store (may be a new object)
+          const wipStore = useWorkInProgressStore()
+          await until(() => wipStore.$isHydrated).toBeTruthy()
+          if (!wipStore.has(objId as string)) {
+            console.warn('No object (work-in-progress state) found with ID', objId)
+            return guard.fallback
+          }
+          // TODO: do we want to type-check?
         }
         // is valid, do navigate
         return true

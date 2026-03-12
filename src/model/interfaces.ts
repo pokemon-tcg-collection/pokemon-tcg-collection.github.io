@@ -194,6 +194,8 @@ export const ITEM_TYPES = [
   { id: 'collection', label: 'Collection', type: 'sets' }, // ?
   { id: 'box-set', label: 'Box Set', type: 'sets' }, // ?
   { id: 'blister', label: 'Blister', type: 'sets' },
+  { id: 'theme-deck', label: 'Theme Deck', type: 'deck' },
+  { id: 'card-holder', label: 'Card Holder', type: 'accessories' },
   // ...
   { id: 'sleeves', label: 'Sleeves', type: 'accessories' },
   { id: 'toploader', label: 'Toploader', type: 'accessories' },

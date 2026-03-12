@@ -1,6 +1,7 @@
 import type { Item, Place } from '@/model/interfaces'
 
 const places = [
+  // local
   {
     id: '72864d29-48df-4004-b864-fa675ba92832',
     type: 'local-store',
@@ -12,6 +13,18 @@ const places = [
       created: new Date(),
     },
   },
+  {
+    id: '9e0fc862-adfc-4646-9b0d-8a186ff2d077',
+    type: 'local-store',
+    name: 'Butti Cards',
+    url: 'https://www.butticards.at/',
+    address:
+      'Butti Cards e.U.\nInhaber Christoph Buttura\n\n1100 Wien\nPuchsbaumgasse 1/2/2\nAustria\n\nE-Mail: office@butticards.at\nTel.: +4367764812820',
+    _meta: {
+      created: new Date(),
+    },
+  },
+  // online
   {
     id: '2cfd2e90-a768-4617-8767-6d06588be925',
     type: 'online-shop',
@@ -31,6 +44,24 @@ const places = [
     },
   },
   {
+    id: 'b8047858-343a-4bb3-8339-69bd82991ba7',
+    name: 'God of Cards',
+    type: 'online-shop',
+    url: 'https://godofcards.com/',
+    _meta: {
+      created: new Date(),
+    },
+  },
+  {
+    id: 'cc44bfe2-978b-4347-9851-244565af8829',
+    name: 'Card Cosmos',
+    type: 'online-shop',
+    url: 'https://cardcosmos.de/',
+    _meta: {
+      created: new Date(),
+    },
+  },
+  {
     id: 'c46fc7ce-f1af-4c55-a450-b10b62db62b6',
     type: 'online-shop',
     name: 'Toy Treasure',
@@ -39,17 +70,7 @@ const places = [
       created: new Date(),
     },
   },
-  {
-    id: '9e0fc862-adfc-4646-9b0d-8a186ff2d077',
-    type: 'local-store',
-    name: 'Butti Cards',
-    url: 'https://www.butticards.at/',
-    address:
-      'Butti Cards e.U.\nInhaber Christoph Buttura\n\n1100 Wien\nPuchsbaumgasse 1/2/2\nAustria\n\nE-Mail: office@butticards.at\nTel.: +4367764812820',
-    _meta: {
-      created: new Date(),
-    },
-  },
+  // müller
   {
     id: 'a6f837d5-0fa3-4897-97ac-d85f7f0128ce',
     type: 'local-store',
@@ -60,6 +81,7 @@ const places = [
       created: new Date(),
     },
   },
+  // ebay
   {
     id: '3fbaff46-2c95-4ce4-9625-4ea6cc0aba18',
     name: 'The Superb Collections (cttccommer0)',
@@ -80,6 +102,34 @@ const places = [
       created: new Date(),
     },
   },
+  // cardmarket
+  {
+    id: '85d7d451-6688-4cde-b823-946a41d5c475',
+    name: 'CrazyCardsEU',
+    type: 'online-marketplace',
+    marketplace: 'cardmarket',
+    url: 'https://www.cardmarket.com/de/Pokemon/Users/CrazyCardsEU',
+    related_urls: [
+      {
+        url: 'https://www.crazycards.eu/',
+        name: 'Shop Website',
+      },
+    ],
+    _meta: {
+      created: new Date(),
+    },
+  },
+  {
+    id: 'eedf229e-813f-4c73-ad14-8b5baa91192b',
+    name: 'cernyrytir',
+    type: 'online-marketplace',
+    marketplace: 'cardmarket',
+    url: 'https://www.cardmarket.com/de/Pokemon/Users/cernyrytir',
+    _meta: {
+      created: new Date(),
+    },
+  },
+  // online
   {
     id: '3d260b7b-b164-49e1-a254-dd2fa1f53a57',
     name: 'Habibicards',
@@ -92,6 +142,7 @@ const places = [
       created: new Date(),
     },
   },
+  // amazon
   {
     id: '68d2e84d-5cf3-43e4-9bf9-b79ce839c1a9',
     name: 'Amazon UK',
@@ -162,6 +213,125 @@ const items = [
     },
   },
   // displays
+  {
+    id: 'cd89c514-31c7-42d0-8e28-4cf19a84d2e0',
+    name: 'Mega Brave',
+    type: 'booster-display',
+    cost_unit: 'EUR',
+    language: 'ko',
+    contents: [],
+    related_urls: [
+      {
+        url: 'https://cardcosmos.de/products/pokemon-mega-brave-booster-display-koreanisch',
+        name: 'CardCosmos listing',
+      },
+    ],
+    _meta: {
+      created: new Date(),
+    },
+  },
+  {
+    id: 'b69c2383-39a1-4e98-a1f7-60eb1f555c75',
+    name: 'Mega Symphonia',
+    type: 'booster-display',
+    cost_unit: 'EUR',
+    language: 'ko',
+    contents: [],
+    related_urls: [
+      {
+        url: 'https://cardcosmos.de/products/pokemon-mega-symphonia-booster-display-koreanisch',
+        name: 'CardCosmos listing',
+      },
+    ],
+    _meta: {
+      created: new Date(),
+    },
+  },
+  {
+    id: 'd21113dc-4f1d-4dc6-9d09-948e5391fb58',
+    name: 'Mega Inferno X',
+    type: 'booster-display',
+    cost_unit: 'EUR',
+    language: 'ko',
+    contents: [],
+    related_urls: [
+      {
+        url: 'https://cardcosmos.de/products/pokemon-mega-inferno-x-booster-display-koreanisch',
+        name: 'CardCosmos listing',
+      },
+    ],
+    _meta: {
+      created: new Date(),
+    },
+  },
+  {
+    id: '3cd738f2-68da-4c02-a0a4-322b6c6d5d64',
+    name: 'Glory of Team Rocket',
+    type: 'booster-display',
+    cost_unit: 'EUR',
+    language: 'ko',
+    contents: [],
+    related_urls: [
+      {
+        url: 'https://cardcosmos.de/products/pokemon-glory-of-team-rocket-booster-display-kor',
+        name: 'CardCosmos listing',
+      },
+    ],
+    _meta: {
+      created: new Date(),
+    },
+  },
+  {
+    id: 'ca781128-9559-4104-9b2b-2a1c84d94758',
+    name: 'Triple Beat 30er (SV1a)',
+    type: 'booster-display',
+    cost_unit: 'EUR',
+    language: 'ko',
+    contents: [],
+    related_urls: [
+      {
+        url: 'https://godofcards.com/products/pokemon-triple-beat-display-koreanisch',
+        name: 'God of Cards listing',
+      },
+    ],
+    _meta: {
+      created: new Date(),
+    },
+  },
+  {
+    id: '0a582616-c1eb-455c-8abc-16e051aca490',
+    name: 'Battle Partners 30er (SV9)',
+    type: 'booster-display',
+    cost_unit: 'EUR',
+    language: 'ko',
+    contents: [],
+    related_urls: [
+      {
+        url: 'https://godofcards.com/products/pokemon-battle-partners-display-koreanisch',
+        name: 'God of Cards listing',
+      },
+    ],
+    _meta: {
+      created: new Date(),
+    },
+  },
+  {
+    id: 'a5eeb031-11e5-4a00-9610-5ce368388962',
+    name: 'Incandescent Arcana 20er (S11a)',
+    type: 'booster-display',
+    cost_unit: 'EUR',
+    language: 'ko',
+    contents: [],
+    related_urls: [
+      {
+        url: 'https://godofcards.com/products/pokemon-incandescent-arcana-display-koreanisch',
+        name: 'God of Cards listing',
+      },
+    ],
+    _meta: {
+      created: new Date(),
+    },
+  },
   {
     id: '907baf43-b2f4-42e7-a3b4-66e8a7b57ab9',
     name: 'Mega Inferno X (M2)',
@@ -270,7 +440,7 @@ const items = [
   },
   {
     id: 'a2c290e2-2627-4b02-a118-121ce3c2b3e9',
-    name: 'Eevee Heroes - S6a',
+    name: 'Eevee Heroes (S6a)',
     type: 'booster-display',
     cost_unit: 'EUR',
     language: 'ko',
@@ -319,6 +489,57 @@ const items = [
       created: new Date(),
     },
   },
+  {
+    id: 'b52d8555-4d2a-4ca2-857b-1790d60dcf9e',
+    name: 'VSTAR Universe Display',
+    type: 'booster-display',
+    cost_unit: 'EUR',
+    language: 'ko',
+    contents: [],
+    related_urls: [
+      {
+        url: 'https://www.cardmarket.com/de/Pokemon/Products/Booster-Boxes/VSTAR-Universe-Booster-Box',
+        name: 'CardMarket listing',
+      },
+    ],
+    _meta: {
+      created: new Date(),
+    },
+  },
+  {
+    id: '5548520f-5505-4590-a0e3-d52ebdb2eef9',
+    name: 'Heat Wave Arena Display',
+    type: 'booster-display',
+    cost_unit: 'EUR',
+    language: 'ko',
+    contents: [],
+    related_urls: [
+      {
+        url: 'https://www.cardmarket.com/de/Pokemon/Products/Booster-Boxes/Heat-Wave-Arena-Booster-Box',
+        name: 'CardMarket listing',
+      },
+    ],
+    _meta: {
+      created: new Date(),
+    },
+  },
+  {
+    id: '226b015d-2b63-41e9-9a02-8de5e0e203e1',
+    name: 'Wild Force',
+    type: 'booster-display',
+    cost_unit: 'EUR',
+    language: 'ko',
+    contents: [],
+    related_urls: [
+      {
+        url: 'https://www.cardmarket.com/de/Pokemon/Products/Booster-Boxes/Wild-Force-Booster-Box',
+        name: 'CardMarket listing',
+      },
+    ],
+    _meta: {
+      created: new Date(),
+    },
+  },
   // boxes
   {
     id: '42d4a480-4a2c-4de6-86f4-b017794a0a37',
@@ -357,13 +578,30 @@ const items = [
   {
     id: 'b99b24af-be52-4171-ae90-e04e4bb3a105',
     name: 'Radiant Energy Gift Box Mew (CSP1)',
-    type: 'etb',
+    type: 'box-set',
     cost_unit: 'EUR',
     language: 'zh-cn',
     contents: [],
     related_urls: [
       {
         url: 'https://yonko-tcg.de/products/s-chn-pokemon-box-radiant-energy-mew',
+        name: 'Yonko TCG listing',
+      },
+    ],
+    _meta: {
+      created: new Date(),
+    },
+  },
+  {
+    id: 'd7856e96-53ed-435d-b710-e6dba63138a0',
+    name: 'Journey Gift Box - Mew (JGB-01)',
+    type: 'box-set',
+    cost_unit: 'EUR',
+    language: 'zh-cn',
+    contents: [],
+    related_urls: [
+      {
+        url: 'https://yonko-tcg.de/products/s-chn-pokemon-box-journey-gift-box?variant=51794449531208',
         name: 'Yonko TCG listing',
       },
     ],
@@ -399,6 +637,24 @@ const items = [
     cost_unit: 'EUR',
     language: 'de',
     contents: [],
+    _meta: {
+      created: new Date(),
+    },
+  },
+  {
+    id: 'c11d9197-9353-46b6-bf81-fad4046cc04b',
+    name: 'Top-Trainer-Box Mega-Entwicklung - Fatale Flammen',
+    type: 'etb',
+    cost_unit: 'EUR',
+    language: 'de',
+    contents: [],
+    related_urls: [
+      {
+        url: 'https://www.amazon.de/Pok%C3%A9mon-Sammelkartenspiel-Top-Trainer-Box-Mega-Entwicklung-Vollbild-Promokarte-Boosterpacks/dp/B0FTG22Q2H',
+        name: 'Amazon listing',
+      },
+    ],
+    notes: 'ASIN: B0FTG22Q2H',
     _meta: {
       created: new Date(),
     },
@@ -461,6 +717,24 @@ const items = [
   },
   // blister
   {
+    id: 'a6a9090d-2b22-4a82-a18c-ea70743e6fa3',
+    name: 'Tech-Sticker-Kollektion Mega-Entwicklung - Erhabene Helden: Nebulak',
+    type: 'blister',
+    cost_unit: 'EUR',
+    language: 'de',
+    contents: [],
+    related_urls: [
+      {
+        url: 'https://www.amazon.de/Pokémon-Sammelkartenspiel-Tech-Sticker-Kollektion-Mega-Entwicklung-holografische-Boosterpacks/dp/B0G4RQZB49',
+        name: 'Amazon listing',
+      },
+    ],
+    notes: 'ASIN: B0G4RQZB49',
+    _meta: {
+      created: new Date(),
+    },
+  },
+  {
     id: 'ff1a347d-8ab8-4a4c-9ac0-bc9ee3630dcb',
     name: 'Karmesin & Purpur Prismatische Entwicklungen Tech-Sticker-Kollektion - Folipurba',
     type: 'blister',
@@ -498,6 +772,23 @@ const items = [
       created: new Date(),
     },
   },
+  {
+    id: '59a1ae62-c9bf-40f7-a26f-e2feef57fc1b',
+    name: 'Paradoxrift Checklane Blister Tannza / Fatalitee',
+    type: 'blister',
+    cost_unit: 'EUR',
+    language: 'de',
+    contents: [],
+    related_urls: [
+      {
+        url: 'https://godofcards.com/products/pokemon-paradoxrift-checklane-blister-tannza-fatalitee',
+        name: 'God of Cards listing',
+      },
+    ],
+    _meta: {
+      created: new Date(),
+    },
+  },
   // box set?
   {
     id: 'd4ea143e-d267-4226-acb7-7a25cdd167c2',
@@ -510,6 +801,76 @@ const items = [
       {
         url: 'https://toy-treasure.com/Pokemon-Simplified-Chines-SWSH-Trainer-Collection-Gift-Box-CSL-CN/TT-200952',
         name: 'Toy Treasure listing',
+      },
+    ],
+    _meta: {
+      created: new Date(),
+    },
+  },
+  {
+    id: 'b8bcd1f5-fc96-4ef7-a01a-18ff38963e33',
+    name: 'Scarlet & Violet ex Special Set',
+    type: 'box-set',
+    cost_unit: 'EUR',
+    language: 'ja',
+    contents: [],
+    related_urls: [
+      {
+        url: 'https://godofcards.com/products/pokemon-scarlet-violet-ex-special-set-japanisch',
+        name: 'God of Cards listing',
+      },
+    ],
+    _meta: {
+      created: new Date(),
+    },
+  },
+  // deck
+  {
+    id: '64f6b3c8-48e6-4139-bee5-a73da1b130fc',
+    name: 'Happy Card Set (CSVH1C)',
+    type: 'theme-deck',
+    cost_unit: 'EUR',
+    language: 'zh-cn',
+    contents: [],
+    related_urls: [
+      {
+        url: 'https://godofcards.com/products/pokemon-happy-card-set-s-chinesisch',
+        name: 'God of Cards listing',
+      },
+    ],
+    _meta: {
+      created: new Date(),
+    },
+  },
+  // accessories and stuff
+  {
+    id: '14f45cab-6c23-4d03-9d20-a11c833c6bca',
+    name: 'Glurak Kartenhalter (CSM)',
+    type: 'card-holder',
+    cost_unit: 'EUR',
+    language: 'zh-cn',
+    contents: [],
+    related_urls: [
+      {
+        url: 'https://yonko-tcg.de/products/s-chn-pokemon-box-evoli-kartenhalter-csg-kopie',
+        name: 'Yonko TCG listing',
+      },
+    ],
+    _meta: {
+      created: new Date(),
+    },
+  },
+  {
+    id: '0975bfed-f60f-42df-8f5d-e3684fd066b5',
+    name: 'Gengar Kartenhalter (CSU)',
+    type: 'card-holder',
+    cost_unit: 'EUR',
+    language: 'zh-cn',
+    contents: [],
+    related_urls: [
+      {
+        url: 'https://yonko-tcg.de/products/s-chn-pokemon-box-gengar-kartenhalter-csu',
+        name: 'Yonko TCG listing',
       },
     ],
     _meta: {
@@ -627,6 +988,93 @@ const items = [
     related_urls: [
       {
         url: 'https://www.amazon.de/gp/aw/d/B085DSTKWG',
+        name: 'Amazon listing',
+      },
+    ],
+    _meta: {
+      created: new Date(),
+    },
+  },
+  {
+    id: 'c23a1777-5847-4c4c-a87e-5b18b9b77b95',
+    name: 'Ultimate Guard Precise-Fit Sleeves Side-Loading, Standardgröße, 100 Stück',
+    type: 'sleeves',
+    cost_unit: 'EUR',
+    cost: 3.99,
+    contents: [],
+    related_urls: [
+      {
+        url: 'https://www.amazon.de/Ultimate-Guard-UGD010478-Side-Loading-Standardgröße/dp/B01891HGTE',
+        name: 'Amazon listing',
+      },
+    ],
+    _meta: {
+      created: new Date(),
+    },
+  },
+  {
+    id: 'ff99a8c7-85b5-4516-9f4d-aa4cc57ecfb3',
+    name: 'Ultra Pro Standard Regular Soft 1000 Stück Penny Sleeves, Standardgröße',
+    type: 'sleeves',
+    cost_unit: 'EUR',
+    cost: 10.04,
+    contents: [],
+    related_urls: [
+      {
+        url: 'https://www.amazon.de/Ultra-Pro-Standard-Kartenfolien-Kartenhüllen/dp/B085DBMS88',
+        name: 'Amazon listing',
+      },
+    ],
+    _meta: {
+      created: new Date(),
+    },
+  },
+  {
+    id: '9742ce80-3970-4377-809e-60324c7619b7',
+    name: 'Ultra Pro Kinder 3" X 4" Clear for Collectible Trading Cards (Includes Toploaders and 100 Sleeves)',
+    type: 'toploader',
+    cost_unit: 'EUR',
+    cost: 14.94,
+    contents: [],
+    related_urls: [
+      {
+        url: 'www.amazon.de/Ultra-Pro-Collectible-100-toploaders-100-Sleeves/dp/B076V4V2QQ',
+        name: 'Amazon listing',
+      },
+    ],
+    description: '100x Toploader 3"x4"\n100x Penny Sleeves',
+    _meta: {
+      created: new Date(),
+    },
+  },
+  // binder
+  {
+    id: '8074286f-2e60-40c5-8f99-db1393e11acf',
+    name: 'TCGUARD Toploader Album (112x Fächer, 4x4 Layout, für 3"x4" Rigid Toploader, blau)',
+    type: 'binder',
+    cost_unit: 'EUR',
+    cost: 23.69,
+    contents: [],
+    related_urls: [
+      {
+        url: 'https://www.amazon.de/TCGUARD-Toploader-Sammelkarten-MTG-Karten-Kartensammelalben/dp/B0DPHH5Q8Y',
+        name: 'Amazon listing',
+      },
+    ],
+    _meta: {
+      created: new Date(),
+    },
+  },
+  {
+    id: 'e561280d-43eb-4f61-b45a-527a892cc65e',
+    name: 'Vault X 4-Taschen-Trading-Kartenordner mit Gurt, 160 Karten, Standardgröße, 20 seitlich ladbare Seiten (Schwarz) ',
+    type: 'binder',
+    cost_unit: 'EUR',
+    cost: 11.99,
+    contents: [],
+    related_urls: [
+      {
+        url: 'https://www.amazon.de/Vault-4-Taschen-Trading-Kartenordner-Standardgröße-Sammelordner-Sammelkartenspiele/dp/B0718ZYRZF',
         name: 'Amazon listing',
       },
     ],

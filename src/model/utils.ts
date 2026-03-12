@@ -35,7 +35,7 @@ export function createNewCard(): Card {
     name: '',
     language: 'en',
     number: '',
-    set: '',
+    set_id: '',
     amount: 1,
     _meta: createEditMeta(),
   } satisfies Card

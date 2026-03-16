@@ -12,7 +12,7 @@ import { computed, ref, watch } from 'vue'
 
 import { CARD_LANGUAGES, TCGDEX_LANGUAGES } from '@/model/interfaces'
 import { useSettingsStore } from '@/stores/settings'
-import { highlightAutocompleteItem } from '@/utils/autocomplete'
+import { highlightAutocompleteItem, highlightAutocompleteItemValue } from '@/utils/autocomplete'
 
 interface SetItem {
   id: string
@@ -209,9 +209,10 @@ watch(
 
   <v-autocomplete
     v-model="set"
+    v-model:search="searchSet"
     @update:model-value="onSetSelected"
-    @update:search="(val) => (searchSet = val)"
     :items="sets"
+    :filter-keys="['title', 'raw.id']"
     item-value="id"
     item-title="label"
     :loading="isLoadingSets"
@@ -262,16 +263,18 @@ watch(
               (item.raw as SetItem).set!.cardCount.official
             }})</template
           >
-          Cards</template
-        >
+          Cards{{ ' | '
+          }}<component
+            :is="() => highlightAutocompleteItemValue((item.raw as SetItem).id, searchSet)"
+        /></template>
       </v-list-item>
     </template>
   </v-autocomplete>
 
   <v-autocomplete
     v-model="tcgdex_id"
+    v-model:search="searchCard"
     @update:model-value="onCardSelected"
-    @update:search="(val) => (searchCard = val)"
     :items="cards"
     item-value="id"
     item-title="label"

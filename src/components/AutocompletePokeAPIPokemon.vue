@@ -21,12 +21,12 @@ function onUpdateModelValue(value: number) {
 <template>
   <v-autocomplete
     v-model="model"
+    v-model:search="search"
     label="Pokémon species (from PokéAPI)"
     :items="pokemon"
     item-value="id"
     item-title="name"
     clearable
-    @update:search="(val) => (search = val)"
     @update:model-value="onUpdateModelValue"
   >
     <template #prepend><slot name="prepend"></slot></template>

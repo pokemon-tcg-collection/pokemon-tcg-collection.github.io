@@ -60,16 +60,16 @@ function onNewItem() {
   >
     <template #item="{ props, item }">
       <v-list-item v-bind="props">
-        <template #prepend="{ isSelected }">
-          <v-checkbox-btn
+        <template #prepend="{ isSelected }"
+          ><v-checkbox-btn
             :key="props.value as string"
             :model-value="isSelected"
             :ripple="false"
             tabindex="-1"
             aria-hidden
             @click="(event: MouseEvent) => event.preventDefault()"
-          ></v-checkbox-btn>
-        </template>
+          ></v-checkbox-btn
+        ></template>
         <template #title
           ><component :is="() => highlightAutocompleteItem(item, search)"
         /></template>

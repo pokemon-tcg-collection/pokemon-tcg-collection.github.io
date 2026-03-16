@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import type { SupportedLanguages, Card as TCGCard } from '@tcgdex/sdk'
-import { computed, ref, toRaw, watch } from 'vue'
+import { ref, toRaw, watch } from 'vue'
 
+import AutocompleteItems from '@/components/AutocompleteItems.vue'
 import AutocompletePokeAPIPokemon from '@/components/AutocompletePokeAPIPokemon.vue'
 import AutocompleteSet from '@/components/AutocompleteSet.vue'
 import AutocompleteTransactions from '@/components/AutocompleteTransactions.vue'
@@ -9,11 +10,7 @@ import EditorBase from '@/components/EditorBase.vue'
 import EditorFieldset from '@/components/EditorFieldset.vue'
 import EditorTCGdexCardSelectorDialog from '@/components/EditorTCGdexCardSelectorDialog.vue'
 import useEditorObject from '@/composables/useEditorObject'
-import type { Item } from '@/model/interfaces'
 import { CARD_LANGUAGES } from '@/model/interfaces'
-import { useItemsStore } from '@/stores/items'
-
-const itemsStore = useItemsStore()
 
 const {
   object: card,
@@ -34,10 +31,6 @@ const showTCGdexDialog = ref<boolean>(false)
 
 // const cards = ref<{ id: string; label: string; card?: CardResume }[]>([])
 // const boosters = computed<{ id: string; label: string }[]>(() => [])
-
-const item_ids = computed<{ id: string; label: string; item: Item }[]>(() =>
-  Array.from(itemsStore.items.values()).map((item) => ({ id: item.id, label: item.name, item })),
-)
 
 watch(card, (n, o) => console.debug('Card data changed', { new: toRaw(n), old: toRaw(o) }))
 
@@ -201,23 +194,7 @@ async function onAddNewSet() {
       </EditorFieldset>
 
       <EditorFieldset label="Relations">
-        <v-autocomplete
-          v-model="card.item_ids"
-          :items="item_ids"
-          item-title="label"
-          item-value="id"
-          chips
-          closable-chips
-          clearable
-          multiple
-          label="Related Items"
-        >
-          <template #no-data>
-            <v-list-item>
-              <v-list-item-action @click="onAddNewItem">Create new Item</v-list-item-action>
-            </v-list-item>
-          </template>
-        </v-autocomplete>
+        <AutocompleteItems v-model="card.item_ids" @on-new-item="onAddNewItem"></AutocompleteItems>
         <AutocompleteTransactions
           v-model="card.transaction_ids"
           @add-new-transaction="onAddNewTransaction"

@@ -2,18 +2,14 @@
 import { computed, readonly, ref } from 'vue'
 import { useDisplay } from 'vuetify'
 
+import AutocompleteItem from '@/components/AutocompleteItem.vue'
+import AutocompletePlace from '@/components/AutocompletePlace.vue'
 import EditorBase from '@/components/EditorBase.vue'
 import EditorFieldset from '@/components/EditorFieldset.vue'
 import useEditorObject from '@/composables/useEditorObject'
-import type { Item, Place } from '@/model/interfaces'
 import { COST_UNITS, TRANSACTION_TYPE } from '@/model/interfaces'
-import { useItemsStore } from '@/stores/items'
-import { usePlacesStore } from '@/stores/places'
 
 const { smAndDown, xs } = useDisplay()
-
-const placesStore = usePlacesStore()
-const itemsStore = useItemsStore()
 
 const {
   object: transaction,
@@ -58,7 +54,7 @@ const transactionTime = computed({
     newDate.setHours(Number.parseInt(parts[0]!))
     newDate.setMinutes(Number.parseInt(parts[1]!))
     newDate.setSeconds(parts[2] ? Number.parseInt(parts[2]) : 0)
-    console.log('[transactionTime:set]', newDate)
+    console.debug('[transactionTime:set]', newDate)
     transaction.value.date = newDate
   },
 })
@@ -66,17 +62,6 @@ const transactionTimeDisplay = computed(() => transactionTime.value.toLocaleTime
 
 const costUnits = readonly(COST_UNITS)
 const transactionTypes = readonly(TRANSACTION_TYPE)
-
-const item_ids = computed<{ id: string; label: string; item: Item }[]>(() =>
-  Array.from(itemsStore.items.values()).map((item) => ({ id: item.id, label: item.name, item })),
-)
-const place_ids = computed<{ id: string; label: string; place: Place }[]>(() =>
-  (Array.from(placesStore.places.values()) as Place[]).map((place) => ({
-    id: place.id,
-    label: place.name,
-    place,
-  })),
-)
 
 const newItemId = ref<string>()
 
@@ -221,23 +206,11 @@ function onAddItemToTransaction() {
                 </v-text-field>
               </v-col>
             </v-row>
-            <v-autocomplete
+            <AutocompletePlace
               v-model="transaction.place_id"
-              :items="place_ids"
-              item-title="label"
-              item-value="id"
-              clearable
-              label="Location"
-              prepend-icon="mdi-store-marker"
-            >
-              <template #no-data>
-                <v-list-item>
-                  <v-list-item-action @click="onAddNewLocation"
-                    >Create a new Location</v-list-item-action
-                  >
-                </v-list-item>
-              </template>
-            </v-autocomplete>
+              :show-number-of-transactions="true"
+              @add-new-place="onAddNewLocation"
+            ></AutocompletePlace>
           </v-col>
         </v-row>
       </EditorFieldset>
@@ -276,19 +249,11 @@ function onAddItemToTransaction() {
             ></v-select>
           </v-col>
           <v-col cols="12" lg="6" :class="{ ['pb-0']: smAndDown }">
-            <v-autocomplete
-              v-model="item.item_id"
-              :items="item_ids"
-              item-title="label"
-              item-value="id"
-              readonly
-              label="Item"
-              hideDetails
-            >
+            <AutocompleteItem v-model="item.item_id" readonly :clearable="false">
               <template #append>
                 <v-btn flat icon="mdi-delete" @click="() => onRemoveItem(i)"></v-btn>
               </template>
-            </v-autocomplete>
+            </AutocompleteItem>
           </v-col>
         </v-row>
 
@@ -298,24 +263,11 @@ function onAddItemToTransaction() {
           v-if="transaction.items?.length > 0"
         ></v-divider>
 
-        <v-autocomplete
-          v-model="newItemId"
-          :items="item_ids"
-          item-title="label"
-          item-value="id"
-          clearable
-          label="Items"
-          hide-details
-        >
-          <template #no-data>
-            <v-list-item>
-              <v-list-item-action @click="onAddNewItem">Create new Item</v-list-item-action>
-            </v-list-item>
-          </template>
+        <AutocompleteItem v-model="newItemId" @on-new-item="onAddNewItem">
           <template #append>
             <v-btn @click="onAddItemToTransaction">Add item</v-btn>
           </template>
-        </v-autocomplete>
+        </AutocompleteItem>
       </EditorFieldset>
 
       <!-- TODO: attachments -->

@@ -671,3 +671,5 @@ export function sanitizePlace<T extends Place>(place: T): T {
 }
 
 // TODO: Base object sanitization/normalization (`Date` when de-/serialized?)
+
+// -------------------------------------------------------------------------

@@ -1,5 +1,4 @@
 import { until } from '@vueuse/core'
-import type { defineStore } from 'pinia'
 import { computed, onMounted, readonly, ref, toRaw } from 'vue'
 import type {
   RouteLocationAsPathGeneric,
@@ -24,6 +23,15 @@ import {
 import type { EditRouteNames } from '@/router/routes'
 import { useAuditLogStore } from '@/stores/auditLog'
 import { useCardsStore } from '@/stores/cards'
+import type {
+  CardsStoreSGA,
+  ItemsStoreSGA,
+  NullStore,
+  PlacesStoreSGA,
+  SetsStoreSGA,
+  TransactionsStoreSGA,
+  TypeMap,
+} from '@/stores/_generic'
 import { useItemsStore } from '@/stores/items'
 import { usePlacesStore } from '@/stores/places'
 import { useSetsStore } from '@/stores/sets'
@@ -31,49 +39,6 @@ import { useTemplatesStore } from '@/stores/templates'
 import { useTransactionsStore } from '@/stores/transactions'
 import { useWorkInProgressStore } from '@/stores/workInProgress'
 import { toRawDeep } from '@/utils/reactivity'
-
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export type PiniaStore<T extends (...args: any) => any> = Omit<
-  ReturnType<T>,
-  keyof ReturnType<typeof defineStore>
->
-
-// see: https://github.com/vuejs/pinia/discussions/1054#discussioncomment-2172110
-type UseNullStore = ReturnType<typeof defineStore>
-type NullStore = ReturnType<UseNullStore>
-type ItemsStore = ReturnType<typeof useItemsStore>
-type ItemsStoreSGA = Omit<ItemsStore, keyof NullStore>
-type TransactionsStore = ReturnType<typeof useTransactionsStore>
-type TransactionsStoreSGA = Omit<TransactionsStore, keyof NullStore>
-type PlacesStore = ReturnType<typeof usePlacesStore>
-type PlacesStoreSGA = Omit<PlacesStore, keyof NullStore>
-type CardsStore = ReturnType<typeof useCardsStore>
-type CardsStoreSGA = Omit<CardsStore, keyof NullStore>
-type SetsStore = ReturnType<typeof useSetsStore>
-type SetsStoreSGA = Omit<SetsStore, keyof NullStore>
-
-interface TypeMap {
-  item: {
-    object: Item
-    store: ItemsStoreSGA
-  }
-  transaction: {
-    object: Transaction
-    store: TransactionsStoreSGA
-  }
-  place: {
-    object: Place
-    store: PlacesStoreSGA
-  }
-  card: {
-    object: Card
-    store: CardsStoreSGA
-  }
-  set: {
-    object: Set
-    store: SetsStoreSGA
-  }
-}
 
 // TODO: how to access dynamic return of "navigateTo"
 // NOTE: only works with: ReturnType<typeof useEditorObject<"item", Item, ItemsStore>>

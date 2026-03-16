@@ -1,8 +1,11 @@
 <script setup lang="ts">
+import { ref } from 'vue'
+
 import EditorBase from '@/components/EditorBase.vue'
 import EditorFieldset from '@/components/EditorFieldset.vue'
 import useEditorObject from '@/composables/useEditorObject'
 import { ONLINE_MARKETPLACE } from '@/model/interfaces'
+import { highlightAutocompleteItem } from '@/utils/autocomplete'
 
 const {
   object: place,
@@ -18,6 +21,8 @@ const {
   navigateTo,
   reload: reloadPlace,
 } = useEditorObject('place')
+
+const marketplaceSearch = ref<string>('')
 
 function isValidURL(val: string) {
   return URL.canParse(val)
@@ -93,11 +98,23 @@ function isValidURL(val: string) {
         <v-autocomplete
           v-if="place.type === 'online-marketplace'"
           v-model="place.marketplace"
+          v-model:search="marketplaceSearch"
           :items="ONLINE_MARKETPLACE"
           item-value="id"
           item-title="label"
           label="Marketplace"
-        ></v-autocomplete>
+        >
+          <template #item="{ props, item }">
+            <v-list-item v-bind="props" :prepend-avatar="`/marketplace-logos/${item.value}.png`">
+              <template #prepend>
+                <v-avatar :style="{ '--v-avatar-height': '24px' }"></v-avatar>
+              </template>
+              <template #title
+                ><component :is="() => highlightAutocompleteItem(item, marketplaceSearch)"
+              /></template>
+            </v-list-item>
+          </template>
+        </v-autocomplete>
 
         <v-text-field
           v-model="place.url"

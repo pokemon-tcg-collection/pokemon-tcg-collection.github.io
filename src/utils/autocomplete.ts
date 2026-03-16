@@ -34,6 +34,21 @@ export function highlightAutocompleteItem(item: ListItem, query: string) {
   return vnodes
 }
 
+export function highlightAutocompleteItemValue(value: string | undefined, query: string) {
+  if (!value) return undefined
+  if (!query) return value
+
+  // default autocomplete search filter
+  const match = defaultFilter(value, query, undefined)
+  if (!match) return value
+
+  // TODO: is this required, it is called in filter processing
+  const matchNormalized = normaliseMatch(match, query)
+
+  const vnodes = highlightResult('v-autocomplete', value, matchNormalized)
+  return vnodes
+}
+
 // Non-public helper function, might not be required?
 // see: vuetify/lib/composables/filter
 // https://github.com/vuetifyjs/vuetify/blob/v3.8.12/packages/vuetify/src/composables/filter.tsx

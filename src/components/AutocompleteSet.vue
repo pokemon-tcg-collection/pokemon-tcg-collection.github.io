@@ -36,9 +36,7 @@ function onAddNewSet() {
     label="Set"
   >
     <template #no-data>
-      <v-list-item>
-        <v-list-item-action @click="onAddNewSet">Add new Set</v-list-item-action>
-      </v-list-item>
+      <v-list-item @click="onAddNewSet">Add new Set</v-list-item>
     </template>
   </v-autocomplete>
 </template>

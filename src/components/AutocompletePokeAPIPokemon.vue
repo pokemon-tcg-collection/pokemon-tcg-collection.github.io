@@ -39,19 +39,19 @@ function onUpdateModelValue(value: number) {
         >#{{ pokemon_lookup.get(model)?.sid }}</span
       >
     </template>
-    <template #item="{ props, item }">
+    <template #item="{ props, internalItem, item }">
       <v-list-item
         v-bind="props"
-        :prepend-avatar="`/pokeapi-sprites/${item.raw.sprite ? item.raw.id : 0}.png`"
-        :subtitle="`Generation: ${item.raw.generation.toLocaleUpperCase()}`"
-        :title="item.raw.name"
+        :prepend-avatar="`/pokeapi-sprites/${item.sprite ? item.id : 0}.png`"
+        :subtitle="`Generation: ${item.generation.toLocaleUpperCase()}`"
+        :title="item.name"
       >
         <template #prepend>
           <v-avatar></v-avatar>
-          <span class="ms-4 text-grey-lighten-1">#{{ item.raw.sid }}</span>
+          <span class="ms-4 text-grey-lighten-1">#{{ item.sid }}</span>
         </template>
         <template #title
-          ><component :is="() => highlightAutocompleteItem(item, search)"
+          ><component :is="() => highlightAutocompleteItem(internalItem, search)"
         /></template>
       </v-list-item>
     </template>

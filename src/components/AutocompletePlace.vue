@@ -72,24 +72,23 @@ function onAddNewPlace() {
     label="Location"
     prepend-icon="mdi-store-marker"
   >
-    <template #item="{ props, item }">
+    <template #item="{ props, internalItem, item }">
       <v-list-item v-bind="props">
         <template #title
-          ><component :is="() => highlightAutocompleteItem(item, search)"
+          ><component :is="() => highlightAutocompleteItem(internalItem, search)"
         /></template>
         <template #subtitle
           ><component
-            :is="() => highlightAutocompleteItemValue(item.raw.type_label, search)"
-          /><template v-if="item.raw.marketplace_label"
+            :is="() => highlightAutocompleteItemValue(item.type_label, search)"
+          /><template v-if="item.marketplace_label"
             >{{ ' | '
             }}<component
               :is="
-                () => highlightAutocompleteItemValue(item.raw.marketplace_label, search)
+                () => highlightAutocompleteItemValue(item.marketplace_label, search)
               " /></template
-          ><template
-            v-if="item.raw.numberOfTransactions !== undefined && item.raw.numberOfTransactions > 0"
-            >{{ ' | ' }}{{ item.raw.numberOfTransactions }} transaction{{
-              item.raw.numberOfTransactions !== 1 ? 's' : ''
+          ><template v-if="item.numberOfTransactions !== undefined && item.numberOfTransactions > 0"
+            >{{ ' | ' }}{{ item.numberOfTransactions }} transaction{{
+              item.numberOfTransactions !== 1 ? 's' : ''
             }}</template
           ></template
         >

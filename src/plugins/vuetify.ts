@@ -6,7 +6,7 @@
 
 // Styles
 import '@mdi/font/css/materialdesignicons.css'
-import 'vuetify/styles'
+import '@/styles/main.scss'
 
 import { VFileUpload } from 'vuetify/labs/VFileUpload'
 

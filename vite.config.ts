@@ -77,6 +77,7 @@ export default defineConfig({
     // https://github.com/vuetifyjs/vuetify-loader/tree/master/packages/vite-plugin#readme
     vuetify({
       styles: {
+        // https://vuetifyjs.com/en/features/sass-variables/#usage
         configFile: 'src/styles/settings.scss',
       },
     }),

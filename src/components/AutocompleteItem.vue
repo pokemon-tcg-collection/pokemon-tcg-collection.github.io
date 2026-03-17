@@ -56,17 +56,17 @@ function onNewItem() {
     label="Items"
     hide-details
   >
-    <template #item="{ props, item }">
+    <template #item="{ props, internalItem, item }">
       <v-list-item v-bind="props">
         <template #title
-          ><component :is="() => highlightAutocompleteItem(item, search)"
+          ><component :is="() => highlightAutocompleteItem(internalItem, search)"
         /></template>
         <template #subtitle
-          ><template v-if="item.raw.language_label"
-            ><component
-              :is="() => highlightAutocompleteItemValue(item.raw.language_label, search)"
-            />{{ ' | ' }}</template
-          ><component :is="() => highlightAutocompleteItemValue(item.raw.type_label, search)"
+          ><template v-if="item.language_label"
+            ><component :is="() => highlightAutocompleteItemValue(item.language_label, search)" />{{
+              ' | '
+            }}</template
+          ><component :is="() => highlightAutocompleteItemValue(item.type_label, search)"
         /></template>
       </v-list-item>
     </template>

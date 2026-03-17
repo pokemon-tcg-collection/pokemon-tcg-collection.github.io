@@ -18,20 +18,20 @@ const { numItems, numItemsPerTypeType } = useItemsStats()
 <template>
   <h1 class="d-sr-only">Transactions</h1>
 
-  <v-sheet elevation="4" class="mt-5 mb-5 mx-auto px-4" rounded="lg">
-    <v-row class="d-flex justify-space-around">
+  <v-sheet elevation="2" class="mt-5 mb-5 mx-auto px-4" rounded="lg">
+    <v-row class="d-flex justify-space-around gr-0">
       <v-col
         cols="12"
         md="4"
-        class="px-6 d-flex flex-column ga-2"
+        class="px-6 py-3 d-flex flex-column ga-2"
         :class="{ ['border-b-md']: smAndDown }"
       >
-        <p class="text-h6 text-center">Transactions</p>
-        <p class="text-h4 text-center">
+        <p class="text-title-medium text-center my-0">Transactions</p>
+        <p class="text-display-medium text-center my-0">
           # <span class="font-weight-bold">{{ numTransactions }}</span>
         </p>
         <div>
-          <p class="text-h5 pe-lg-4 d-flex flex-nowrap gc-2 justify-space-between">
+          <p class="text-headline-small pe-lg-4 d-flex flex-nowrap my-0 gc-2 justify-space-between">
             <span class="font-weight-light">Spent</span>
             <span>
               <span class="font-weight-bold text-red-darken-3">{{
@@ -40,7 +40,7 @@ const { numItems, numItemsPerTypeType } = useItemsStats()
               EUR
             </span>
           </p>
-          <p class="text-h5 pe-lg-4 d-flex flex-nowrap gc-2 justify-space-between">
+          <p class="text-headline-small pe-lg-4 d-flex flex-nowrap my-0 gc-2 justify-space-between">
             <span class="font-weight-light">Earned</span>
             <span
               ><span class="font-weight-bold text-green-darken-3">{{
@@ -49,7 +49,7 @@ const { numItems, numItemsPerTypeType } = useItemsStats()
               EUR</span
             >
           </p>
-          <p class="text-h5 pe-lg-4 d-flex flex-nowrap gc-2 justify-space-between">
+          <p class="text-headline-small pe-lg-4 d-flex flex-nowrap my-0 gc-2 justify-space-between">
             <span class="font-weight-light">Total</span>
             <span>
               <span
@@ -68,21 +68,21 @@ const { numItems, numItemsPerTypeType } = useItemsStats()
       <v-col
         cols="12"
         md="4"
-        class="px-6 d-flex flex-column ga-2"
+        class="px-6 py-3 d-flex flex-column ga-2"
         :class="{ ['border-b-md']: smAndDown }"
       >
-        <p class="text-h6 text-center">Places</p>
-        <p class="text-h4 text-center">
+        <p class="text-title-medium text-center my-0">Places</p>
+        <p class="text-display-medium text-center my-0">
           # <span class="font-weight-bold">{{ numPlaces }}</span>
         </p>
         <div>
-          <p class="text-h5 pe-lg-4 d-flex flex-nowrap gc-2 justify-space-between">
+          <p class="text-headline-small pe-lg-4 d-flex flex-nowrap my-0 gc-2 justify-space-between">
             <span class="font-weight-light">Online</span>
             <span>
               <span class="font-weight-bold text-yellow-darken-2">{{ numOnline }}</span>
             </span>
           </p>
-          <p class="text-h5 pe-lg-4 d-flex flex-nowrap gc-2 justify-space-between">
+          <p class="text-headline-small pe-lg-4 d-flex flex-nowrap my-0 gc-2 justify-space-between">
             <span class="font-weight-light">Local</span>
             <span>
               <span class="font-weight-bold text-light-blue-darken-4">{{ numLocal }}</span>
@@ -90,21 +90,16 @@ const { numItems, numItemsPerTypeType } = useItemsStats()
           </p>
         </div>
       </v-col>
-      <v-col
-        cols="12"
-        md="4"
-        class="px-6 d-flex flex-column ga-2"
-        :class="{ ['border-b-md']: smAndDown }"
-      >
-        <p class="text-h6 text-center">Items</p>
-        <p class="text-h4 text-center">
+      <v-col cols="12" md="4" class="px-6 py-3 d-flex flex-column ga-2">
+        <p class="text-title-medium text-center my-0">Items</p>
+        <p class="text-display-medium text-center my-0">
           # <span class="font-weight-bold">{{ numItems }}</span>
         </p>
         <div>
           <p
             v-for="[type, amount] in numItemsPerTypeType.entries()"
             :key="type"
-            class="text-h5 pe-lg-4 d-flex flex-nowrap gc-2 justify-space-between"
+            class="text-headline-small pe-lg-4 d-flex flex-nowrap my-0 gc-2 justify-space-between"
           >
             <span class="font-weight-light">{{
               type.slice(0, 1).toUpperCase() + type.slice(1)

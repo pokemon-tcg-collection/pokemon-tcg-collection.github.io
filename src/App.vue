@@ -112,7 +112,7 @@ const breadcrumbs = computed(() =>
     </v-main>
 
     <v-footer name="footer" class="flex-1-0-0 align-end px-0 pb-0">
-      <div class="flex-1-0-100 text-center text-caption bg-grey-lighten-4 py-1">
+      <div class="flex-1-0-100 text-center text-body-small bg-grey-lighten-4 py-1">
         <template v-if="gitRepoUrl">
           <v-icon icon="mdi-source-repository" size="small" />
           <v-btn

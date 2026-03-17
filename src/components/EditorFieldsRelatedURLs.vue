@@ -58,7 +58,7 @@ function onRemoveURL(url_idx: number) {
 <template>
   <EditorFieldset label="Related URLs">
     <v-row
-      class="gc-5 ms-0 me-0"
+      class="gc-5 ms-0 me-0 mt-0"
       :class="{ ['mt-0']: i === 0 }"
       v-for="(url, i) in object.related_urls"
       :key="i"
@@ -79,7 +79,7 @@ function onRemoveURL(url_idx: number) {
     </v-row>
 
     <v-divider
-      class="mt-2 mb-4"
+      class="mt-0 mb-4"
       v-if="object.related_urls !== undefined && object.related_urls.length > 0"
     ></v-divider>
 

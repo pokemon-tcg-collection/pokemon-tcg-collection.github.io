@@ -240,32 +240,29 @@ watch(
         </template>
       </v-list-item>
     </template>
-    <template #item="{ item, props }">
+    <template #item="{ props, internalItem, item }">
       <v-list-item v-bind="props">
         <template #prepend>
           <v-avatar rounded="0">
-            <v-img :src="(item.raw as SetItem).image" :cover="false"></v-img>
+            <v-img :src="(item as SetItem).image" :cover="false"></v-img>
           </v-avatar>
         </template>
         <template #title
-          ><component :is="() => highlightAutocompleteItem(item, searchSet)"
+          ><component :is="() => highlightAutocompleteItem(internalItem, searchSet)"
         /></template>
-        <template #subtitle v-if="(item.raw as SetItem).set"
-          >{{ (item.raw as SetItem).set!.cardCount.official
+        <template #subtitle v-if="(item as SetItem).set"
+          >{{ (item as SetItem).set!.cardCount.official
           }}<template
             v-if="
-              (item.raw as SetItem).set!.cardCount.official !==
-              (item.raw as SetItem).set!.cardCount.total
+              (item as SetItem).set!.cardCount.official !== (item as SetItem).set!.cardCount.total
             "
           >
             (+{{
-              (item.raw as SetItem).set!.cardCount.total -
-              (item.raw as SetItem).set!.cardCount.official
+              (item as SetItem).set!.cardCount.total - (item as SetItem).set!.cardCount.official
             }})</template
           >
           Cards{{ ' | '
-          }}<component
-            :is="() => highlightAutocompleteItemValue((item.raw as SetItem).id, searchSet)"
+          }}<component :is="() => highlightAutocompleteItemValue((item as SetItem).id, searchSet)"
         /></template>
       </v-list-item>
     </template>
@@ -284,14 +281,14 @@ watch(
     hide-no-data
     :menu="true"
   >
-    <template #item="{ item, props }">
+    <template #item="{ props, internalItem, item }">
       <v-list-item v-bind="props">
         <template #prepend>
-          <v-avatar :image="item.raw.image" rounded="0"></v-avatar>
-          <span class="ms-4 text-grey-lighten-1">#{{ item.raw.nr }}</span>
+          <v-avatar :image="item.image" rounded="0"></v-avatar>
+          <span class="ms-4 text-grey-lighten-1">#{{ item.nr }}</span>
         </template>
         <template #title
-          ><component :is="() => highlightAutocompleteItem(item, searchCard)"
+          ><component :is="() => highlightAutocompleteItem(internalItem, searchCard)"
         /></template>
       </v-list-item>
     </template>

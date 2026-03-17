@@ -64,7 +64,7 @@ function onAddNewTransaction() {
     multiple
     label="Related Transactions"
   >
-    <template #item="{ props, item }">
+    <template #item="{ props, internalItem, item }">
       <v-list-item v-bind="props">
         <template #prepend="{ isSelected }"
           ><v-checkbox-btn
@@ -77,15 +77,15 @@ function onAddNewTransaction() {
           ></v-checkbox-btn
         ></template>
         <template #title
-          ><component :is="() => highlightAutocompleteItem(item, search)"
+          ><component :is="() => highlightAutocompleteItem(internalItem, search)"
         /></template>
         <template #subtitle
           ><component
-            :is="() => highlightAutocompleteItemValue(item.raw.date_label, search)" /><template
-            v-if="item.raw.place_label !== undefined"
+            :is="() => highlightAutocompleteItemValue(item.date_label, search)" /><template
+            v-if="item.place_label !== undefined"
             >{{ ' | '
             }}<component
-              :is="() => highlightAutocompleteItemValue(item.raw.place_label, search)" /></template
+              :is="() => highlightAutocompleteItemValue(item.place_label, search)" /></template
         ></template>
       </v-list-item>
     </template>

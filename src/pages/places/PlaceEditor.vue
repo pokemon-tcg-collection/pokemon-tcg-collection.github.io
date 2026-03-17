@@ -104,13 +104,16 @@ function isValidURL(val: string) {
           item-title="label"
           label="Marketplace"
         >
-          <template #item="{ props, item }">
-            <v-list-item v-bind="props" :prepend-avatar="`/marketplace-logos/${item.value}.png`">
+          <template #item="{ props, internalItem }">
+            <v-list-item
+              v-bind="props"
+              :prepend-avatar="`/marketplace-logos/${internalItem.value}.png`"
+            >
               <template #prepend>
                 <v-avatar :style="{ '--v-avatar-height': '24px' }"></v-avatar>
               </template>
               <template #title
-                ><component :is="() => highlightAutocompleteItem(item, marketplaceSearch)"
+                ><component :is="() => highlightAutocompleteItem(internalItem, marketplaceSearch)"
               /></template>
             </v-list-item>
           </template>

@@ -137,7 +137,7 @@ function onAddItemToTransaction() {
       </EditorFieldset>
 
       <EditorFieldset label="Transaction Details">
-        <v-row justify="space-around">
+        <v-row class="justify-space-around">
           <v-col col="12" md="6">
             <v-select
               v-model="transaction.type"

@@ -31,7 +31,7 @@ const { sumSpent, sumEarned, sumTotal } = useTransactionsStats()
 <template>
   <h1 class="mb-3">List of Transaction</h1>
 
-  <v-row class="mb-1 align-center">
+  <v-row class="align-center mb-2">
     <v-col>{{ transactions.length }} Transactions</v-col>
     <v-col class="d-flex justify-end">
       <v-btn :to="{ name: 'transaction-new' }" prepend-icon="mdi-pencil-plus">Add new</v-btn>
@@ -95,21 +95,21 @@ const { sumSpent, sumEarned, sumTotal } = useTransactionsStats()
       </tr>
 
       <tr>
-        <td colspan="2" class="border-t-lg stretch money-label text-button">Spent</td>
+        <td colspan="2" class="border-t-lg stretch money-label text-label-large">Spent</td>
         <td class="fit money border-t-lg">
           <span class="text-red-darken-3">{{ formatCurrencyNumber(sumSpent) }}</span> EUR
         </td>
         <td class="border-t-lg"></td>
       </tr>
       <tr>
-        <td colspan="2" class="stretch money-label text-button">Earned</td>
+        <td colspan="2" class="stretch money-label text-label-large">Earned</td>
         <td class="fit money">
           <span class="text-green-darken-3">{{ formatCurrencyNumber(sumEarned) }}</span> EUR
         </td>
         <td></td>
       </tr>
       <tr>
-        <td colspan="2" class="stretch money-label text-button">Total</td>
+        <td colspan="2" class="stretch money-label text-label-large">Total</td>
         <td class="fit money font-weight-bold">
           <span
             :class="{

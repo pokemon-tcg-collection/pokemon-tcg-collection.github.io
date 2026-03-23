@@ -1,7 +1,7 @@
 import { fileURLToPath, URL } from 'node:url'
 
 import vue from '@vitejs/plugin-vue'
-import type { RenderedChunk } from 'rollup'
+import type { RenderedChunk } from 'rolldown'
 import { visualizer } from 'rollup-plugin-visualizer'
 import type { SimpleGit, SimpleGitOptions } from 'simple-git'
 import { simpleGit } from 'simple-git'
@@ -112,9 +112,10 @@ export default defineConfig({
     }),
   ],
   build: {
-    rollupOptions: {
+    license: true,
+    rolldownOptions: {
       output: {
-        banner: getBanner,
+        postBanner: getBanner,
       },
     },
     sourcemap: 'hidden',

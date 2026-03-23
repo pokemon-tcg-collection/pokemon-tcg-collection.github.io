@@ -23,6 +23,7 @@ interface PlaceItem {
   label: string
   type_label: string | undefined
   marketplace_label: string | undefined
+  fair_label: string | undefined
   numberOfTransactions: number | undefined
   place: Place
 }
@@ -32,8 +33,13 @@ const placeItems = computed<PlaceItem[]>(() =>
     const placeTypeLabel = PLACE_TYPE.find((pt) => pt.id == placeType)?.label
 
     let marketplaceLabel: string | undefined = undefined
-    if (placeType == 'online-marketplace') {
+    if (placeType === 'online-marketplace') {
       marketplaceLabel = ONLINE_MARKETPLACE.find((om) => om.id == place.marketplace)?.label
+    }
+
+    let fairLabel: string | undefined = undefined
+    if (placeType === 'local-fair') {
+      fairLabel = place.fair
     }
 
     // compute number of transactions (all references?)
@@ -48,11 +54,29 @@ const placeItems = computed<PlaceItem[]>(() =>
       label: place.name,
       type_label: placeTypeLabel,
       marketplace_label: marketplaceLabel,
+      fair_label: fairLabel,
       numberOfTransactions: numberOfTransactions,
       place,
     }
   }),
 )
+
+const placeItemsGrouped = computed(() => {
+  const items: (PlaceItem | { type: 'subheader'; title: string } | { type: 'divider' })[] = []
+
+  PLACE_TYPE.forEach(({ id: placeType, label }) => {
+    const subitems = placeItems.value.filter((pi) => pi.place.type == placeType)
+    if (subitems.length > 0) {
+      if (items.length > 0) {
+        items.push({ type: 'divider' })
+      }
+      items.push({ type: 'subheader', title: label })
+      items.push(...subitems)
+    }
+  })
+
+  return items
+})
 
 function onAddNewPlace() {
   // TODO: use `v-model:search="input"` to use suggestion text as new place title (prefill form)
@@ -64,14 +88,22 @@ function onAddNewPlace() {
   <v-autocomplete
     v-model="model"
     v-model:search="search"
-    :items="placeItems"
-    :filter-keys="['title', 'raw.type_label', 'raw.marketplace_label']"
+    :items="placeItemsGrouped"
+    :filter-keys="['title', 'raw.type_label', 'raw.marketplace_label', 'raw.fair_label']"
     item-title="label"
     item-value="id"
+    item-type="type"
+    auto-select-first
     clearable
     label="Location"
     prepend-icon="mdi-store-marker"
   >
+    <template #divider="{ props, index }">
+      <v-divider v-if="index > 0" v-bind="props" :key="`divider-${index}`" class="mt-3"></v-divider>
+    </template>
+    <template #subheader="{ props, index }">
+      <v-list-subheader v-bind="props" :key="`subheader-${index}`"></v-list-subheader>
+    </template>
     <template #item="{ props, internalItem, item }">
       <v-list-item v-bind="props">
         <template #title
@@ -79,16 +111,26 @@ function onAddNewPlace() {
         /></template>
         <template #subtitle
           ><component
-            :is="() => highlightAutocompleteItemValue(item.type_label, search)"
-          /><template v-if="item.marketplace_label"
+            :is="() => highlightAutocompleteItemValue((item as PlaceItem).type_label, search)"
+          /><template v-if="(item as PlaceItem).marketplace_label"
             >{{ ' | '
             }}<component
               :is="
-                () => highlightAutocompleteItemValue(item.marketplace_label, search)
+                () => highlightAutocompleteItemValue((item as PlaceItem).marketplace_label, search)
               " /></template
-          ><template v-if="item.numberOfTransactions !== undefined && item.numberOfTransactions > 0"
-            >{{ ' | ' }}{{ item.numberOfTransactions }} transaction{{
-              item.numberOfTransactions !== 1 ? 's' : ''
+          ><template v-if="(item as PlaceItem).fair_label"
+            >{{ ' | '
+            }}<component
+              :is="
+                () => highlightAutocompleteItemValue((item as PlaceItem).fair_label, search)
+              " /></template
+          ><template
+            v-if="
+              (item as PlaceItem).numberOfTransactions !== undefined &&
+              ((item as PlaceItem).numberOfTransactions as number) > 0
+            "
+            >{{ ' | ' }}{{ (item as PlaceItem).numberOfTransactions }} transaction{{
+              (item as PlaceItem).numberOfTransactions !== 1 ? 's' : ''
             }}</template
           ></template
         >

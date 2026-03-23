@@ -1,8 +1,11 @@
 <script setup lang="ts">
 import { storeToRefs } from 'pinia'
 import { computed, toRaw, triggerRef } from 'vue'
+import type { DataTableHeader, DataTableSortItem } from 'vuetify'
 
-import { useWorkInProgressStore, type WIPObject } from '@/stores/workInProgress'
+import type { WIPObject } from '@/stores/workInProgress'
+import { useWorkInProgressStore } from '@/stores/workInProgress'
+import { sortDates } from '@/utils/sorting'
 
 const wipStore = useWorkInProgressStore()
 
@@ -25,6 +28,40 @@ const wipObjects = computed(() =>
   })),
 )
 
+const headers: DataTableHeader[] = [
+  {
+    title: 'Date',
+    key: 'transaction.date',
+    value: (item) =>
+      item.wipObject.date ? new Date(item.wipObject.date).toLocaleDateString() : '–',
+    sortRaw: (a, b) => sortDates(a.wipObject.date, b.wipObject.date),
+    cellProps: ({ item }) => ({
+      title: item.wipObject.date,
+    }),
+    minWidth: 'fit-content',
+    width: 0,
+  },
+  {
+    title: 'Type',
+    key: 'typeName',
+    minWidth: 'fit-content',
+    width: 0,
+  },
+  {
+    title: 'Name',
+    key: 'label',
+    width: 'max-content',
+  },
+  {
+    title: 'Actions',
+    key: 'actions',
+    sortable: false,
+    minWidth: 'fit-content',
+    width: 0,
+  },
+]
+const sortBy: DataTableSortItem[] = []
+
 async function onDeleteDraftObject(obj: WIPObject) {
   console.log('Delete WIP object', toRaw(obj))
 
@@ -38,50 +75,31 @@ async function onDeleteDraftObject(obj: WIPObject) {
 
   <p class="mb-3">{{ wipObjectRef.size }} unfinished edits</p>
 
-  <v-table v-if="wipObjectRef.size > 0" striped="even" fixed-header density="compact">
-    <thead>
-      <tr>
-        <th scope="col">Date</th>
-        <th scope="col">Type</th>
-        <th scope="col">Name</th>
-        <th scope="col">Actions</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr v-for="wipObject in wipObjects" :key="wipObject.id">
-        <td class="fit">
-          {{ wipObject.wipObject.date ? new Date(wipObject.wipObject.date).toLocaleString() : '–' }}
-        </td>
-        <td class="fit">{{ wipObject.typeName }}</td>
-        <td class="stretch">{{ wipObject.label }}</td>
-        <td class="fit">
-          <v-btn-group density="compact" variant="text">
-            <v-btn
-              :to="{ name: wipObject.wipObject.type, params: { id: wipObject.wipObject.id } }"
-              prepend-icon="mdi-file-edit"
-              >Edit</v-btn
-            >
-            <v-btn
-              prepend-icon="mdi-file-document-remove"
-              @click="() => onDeleteDraftObject(wipObject.wipObject as WIPObject)"
-              >Delete</v-btn
-            >
-          </v-btn-group>
-        </td>
-      </tr>
-    </tbody>
-  </v-table>
+  <v-data-table
+    v-if="wipObjectRef.size > 0"
+    :headers="headers"
+    :items="wipObjects"
+    item-key="id"
+    :sort-by="sortBy"
+    :multi-sort="{ mode: 'append', key: 'ctrl' }"
+    :hide-default-footer="wipObjects.length < 11"
+    density="compact"
+    striped="even"
+  >
+    <!-- eslint-disable-next-line vue/valid-v-slot -->
+    <template #item.actions="{ item }">
+      <v-btn-group density="compact" variant="text">
+        <v-btn
+          :to="{ name: item.wipObject.type, params: { id: item.wipObject.id } }"
+          prepend-icon="mdi-file-edit"
+          >Edit</v-btn
+        >
+        <v-btn
+          prepend-icon="mdi-file-document-remove"
+          @click="() => onDeleteDraftObject(item.wipObject as WIPObject)"
+          >Delete</v-btn
+        >
+      </v-btn-group>
+    </template>
+  </v-data-table>
 </template>
-
-<style lang="css" scoped>
-tr > td {
-  /* max-width: 0; */
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-tr > td.fit {
-  min-width: fit-content;
-  width: 0;
-  white-space: nowrap;
-}
-</style>

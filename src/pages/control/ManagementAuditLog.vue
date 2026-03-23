@@ -1,9 +1,11 @@
 <script setup lang="ts">
 import { useClipboard } from '@vueuse/core'
 import { computed, ref } from 'vue'
+import type { DataTableHeader, DataTableSortItem } from 'vuetify'
 
 import type { AuditMessage } from '@/stores/auditLog'
 import { useAuditLogStore } from '@/stores/auditLog'
+import { sortDates } from '@/utils/sorting'
 
 const auditLogStore = useAuditLogStore()
 
@@ -32,6 +34,53 @@ const {
   isSupported: isClipboardSupported,
 } = useClipboard({ source: auditParamsJSON })
 
+const headers: DataTableHeader[] = [
+  {
+    title: 'Date',
+    key: 'date',
+    value: (item) => (item.date ? new Date(item.date).toLocaleString() : '–'),
+    sortRaw: (a, b) => sortDates(a.date, b.date),
+    cellProps: ({ item }) => ({
+      title: item.date,
+      style: { whiteSpace: 'nowrap' },
+    }),
+    minWidth: 'fit-content',
+    width: 0,
+  },
+  {
+    title: 'Message',
+    key: 'msg',
+  },
+  {
+    title: 'URL Route',
+    key: 'path',
+  },
+  {
+    title: 'Extra Params',
+    key: 'params',
+    value: (item) => (!!item.params ? `${JSON.stringify(item.params).length} B` : '–'),
+    sortRaw: (a, b) =>
+      (!!a.params ? JSON.stringify(a.params).length : 0) -
+      (!!b.params ? JSON.stringify(b.params).length : 0),
+    minWidth: 'fit-content',
+    width: 0,
+    headerProps: {
+      style: { whiteSpace: 'nowrap' },
+    },
+    cellProps: {
+      style: { whiteSpace: 'nowrap' },
+    },
+  },
+  {
+    title: 'Actions',
+    key: 'actions',
+    sortable: false,
+    minWidth: 'fit-content',
+    width: 0,
+  },
+]
+const sortBy: DataTableSortItem[] = [{ key: 'date', order: 'desc' }]
+
 function onShowAuditInfo(log: AuditMessage) {
   if (!log) return
 
@@ -50,31 +99,25 @@ async function onCopyAuditParamsJSON(event: MouseEvent) {
   <h1 class="mb-3">Audit Log</h1>
 
   <p class="mb-3">{{ auditLogStore.logs.length }} entries</p>
-  <v-table v-if="auditLogStore.logs.length > 0" striped="even">
-    <thead>
-      <tr>
-        <th scope="col">Date</th>
-        <th scope="col">Message</th>
-        <th scope="col">URL Route</th>
-        <th scope="col">Extra Params</th>
-        <th scope="col">Actions</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr v-for="(entry, i) in auditLogStore.logs" :key="i">
-        <td scope="row">{{ entry.date.toLocaleString() }}</td>
-        <td>{{ entry.msg }}</td>
-        <td>{{ entry.path }}</td>
-        <td v-if="!!entry.params">{{ JSON.stringify(entry.params).length }} B</td>
-        <td v-else>–</td>
-        <td>
-          <v-btn-group density="compact" variant="text">
-            <v-btn @click="() => onShowAuditInfo(entry)" prepend-icon="mdi-eye">Inspect</v-btn>
-          </v-btn-group>
-        </td>
-      </tr>
-    </tbody>
-  </v-table>
+
+  <v-data-table
+    v-if="auditLogStore.logs.length > 0"
+    :headers="headers"
+    :items="auditLogStore.logs"
+    item-key="id"
+    :sort-by="sortBy"
+    :multi-sort="{ mode: 'append', key: 'ctrl' }"
+    :hide-default-footer="auditLogStore.logs.length < 11"
+    density="compact"
+    striped="even"
+  >
+    <!-- eslint-disable-next-line vue/valid-v-slot -->
+    <template #item.actions="{ item }">
+      <v-btn-group density="compact" variant="text">
+        <v-btn @click="() => onShowAuditInfo(item)" prepend-icon="mdi-eye">Inspect</v-btn>
+      </v-btn-group>
+    </template>
+  </v-data-table>
 
   <v-dialog v-model="showAuditInfoDialog">
     <v-card :title="dialogTitle">
@@ -132,13 +175,6 @@ async function onCopyAuditParamsJSON(event: MouseEvent) {
   </v-dialog>
 </template>
 
-<style lang="css" scoped>
-tr > td {
-  /* max-width: 0; */
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-</style>
 <style lang="css">
 /* too confusing */
 .v-textarea.font-monospace textarea {

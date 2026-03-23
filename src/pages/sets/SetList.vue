@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
+import type { DataTableHeader, DataTableSortItem } from 'vuetify'
 
 import { useSetsStore } from '@/stores/sets'
 
@@ -12,51 +13,56 @@ const sets = computed(() =>
     set,
   })),
 )
+
+const headers: DataTableHeader[] = [
+  {
+    title: 'Series',
+    key: 'set.series',
+    width: 'max-content',
+  },
+  {
+    title: 'Name',
+    key: 'name',
+    width: 'max-content',
+  },
+  {
+    title: 'Actions',
+    key: 'actions',
+    sortable: false,
+    minWidth: 'fit-content',
+    width: 0,
+  },
+]
+const sortBy: DataTableSortItem[] = []
 </script>
 
 <template>
   <h1 class="mb-3">Set List</h1>
 
-  <v-row class="mb-1 align-center">
+  <v-row class="mb-3 align-center">
     <v-col>{{ sets.length }} Sets</v-col>
     <v-col class="d-flex justify-end">
       <v-btn :to="{ name: 'set-new' }" prepend-icon="mdi-pencil-plus">Add new</v-btn>
     </v-col>
   </v-row>
 
-  <v-table striped="even" fixed-header density="compact">
-    <thead>
-      <tr>
-        <th scope="col">Series</th>
-        <th scope="col">Name</th>
-        <th scope="col">Actions</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr v-for="set in sets" :key="set.id">
-        <td class="fit">{{ set.set.series }}</td>
-        <td class="">{{ set.name }}</td>
-        <td class="fit">
-          <v-btn-group density="compact" variant="text">
-            <v-btn :to="{ name: 'set-edit', params: { id: set.id } }" prepend-icon="mdi-file-edit"
-              >Edit</v-btn
-            >
-          </v-btn-group>
-        </td>
-      </tr>
-    </tbody>
-  </v-table>
+  <v-data-table
+    :headers="headers"
+    :items="sets"
+    item-key="id"
+    :sort-by="sortBy"
+    :multi-sort="{ mode: 'append', key: 'ctrl' }"
+    :hide-default-footer="sets.length < 11"
+    density="compact"
+    striped="even"
+  >
+    <!-- eslint-disable-next-line vue/valid-v-slot -->
+    <template #item.actions="{ item }">
+      <v-btn-group density="compact" variant="text">
+        <v-btn :to="{ name: 'set-edit', params: { id: item.id } }" prepend-icon="mdi-file-edit"
+          >Edit</v-btn
+        >
+      </v-btn-group>
+    </template>
+  </v-data-table>
 </template>
-
-<style lang="css" scoped>
-tr > td {
-  /* max-width: 0; */
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-tr > td.fit {
-  min-width: fit-content;
-  width: 0;
-  white-space: nowrap;
-}
-</style>

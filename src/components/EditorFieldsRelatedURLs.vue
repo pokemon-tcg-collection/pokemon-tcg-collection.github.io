@@ -19,6 +19,7 @@ const { objectType } = defineProps<{
 const relatedURLNames = computed(() => {
   let objects: unknown[] | undefined = undefined
 
+  // TODO: refactor for generic object usage
   if (objectType === 'card') {
     objects = Array.from(useCardsStore().cards.values())
   } else if (objectType === 'set') {

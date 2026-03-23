@@ -1,11 +1,15 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
 
 import EditorBase from '@/components/EditorBase.vue'
 import EditorFieldset from '@/components/EditorFieldset.vue'
 import useEditorObject from '@/composables/useEditorObject'
+import type { PlaceLocalFair } from '@/model/interfaces'
 import { ONLINE_MARKETPLACE } from '@/model/interfaces'
+import { usePlacesStore } from '@/stores/places'
 import { highlightAutocompleteItem } from '@/utils/autocomplete'
+
+const placesStore = usePlacesStore()
 
 const {
   object: place,
@@ -23,9 +27,46 @@ const {
 } = useEditorObject('place')
 
 const marketplaceSearch = ref<string>('')
+const fairSearch = ref<string>('')
+
+interface NameWithCountItem {
+  name: string
+  count: number
+}
+const fairNames = computed(() => {
+  // TODO: may be able to autocomplete address or other details?
+  const localFairs = Array.from(placesStore.places.values()).filter(
+    (place) => place.type === 'local-fair',
+  )
+
+  const names = localFairs
+    .map((fairPlace) => fairPlace.fair)
+    .reduce((map, cur) => map.set(cur, (map.get(cur) ?? 0) + 1), new Map<string, number>())
+
+  return Array.from(names.entries())
+    .sort()
+    .map(([name, count]) => ({ name, count })) as NameWithCountItem[]
+})
+const marketplaceNameToCount = computed(() => {
+  const onlineMarketplaces = Array.from(placesStore.places.values()).filter(
+    (place) => place.type === 'online-marketplace',
+  )
+
+  const names = onlineMarketplaces
+    .map((mpPlace) => mpPlace.marketplace)
+    .reduce((map, cur) => map.set(cur, (map.get(cur) ?? 0) + 1), new Map<string, number>())
+
+  return names
+})
 
 function isValidURL(val: string) {
   return URL.canParse(val)
+}
+function isValidFairName(val: string | NameWithCountItem) {
+  if (typeof val === 'object' && Object.hasOwn(val, 'name')) {
+    val = val.name
+  }
+  return !!val && typeof val === 'string' && val.trim().length > 0
 }
 </script>
 
@@ -82,12 +123,26 @@ function isValidURL(val: string) {
           :rules="[(val: string) => !!val && val.trim().length > 0]"
         ></v-text-field>
 
-        <v-text-field
+        <v-combobox
           v-if="place.type === 'local-fair'"
-          v-model="place.fair"
+          v-model="(place as PlaceLocalFair).fair"
+          v-model:search="fairSearch"
+          :items="fairNames"
+          item-value="name"
+          item-title="name"
           label="Trade Fair / Show"
-          :rules="[(val: string) => !!val && val.trim().length > 0]"
-        ></v-text-field>
+          clearable
+          :rules="[isValidFairName]"
+        >
+          <template #item="{ props, item, internalItem }">
+            <v-list-item v-bind="props">
+              <template #title
+                ><component :is="() => highlightAutocompleteItem(internalItem, fairSearch)"
+              /></template>
+              <template #subtitle>{{ item.count }} place{{ item.count !== 1 ? 's' : '' }}</template>
+            </v-list-item>
+          </template>
+        </v-combobox>
 
         <v-textarea
           v-if="place.type === 'local-store' || place.type === 'local-fair'"
@@ -104,17 +159,22 @@ function isValidURL(val: string) {
           item-title="label"
           label="Marketplace"
         >
-          <template #item="{ props, internalItem }">
+          <template #item="{ props, item, internalItem }">
             <v-list-item
               v-bind="props"
               :prepend-avatar="`/marketplace-logos/${internalItem.value}.png`"
             >
-              <template #prepend>
-                <v-avatar :style="{ '--v-avatar-height': '24px' }"></v-avatar>
-              </template>
+              <template #prepend
+                ><v-avatar :style="{ '--v-avatar-height': '24px' }"></v-avatar
+              ></template>
               <template #title
                 ><component :is="() => highlightAutocompleteItem(internalItem, marketplaceSearch)"
               /></template>
+              <template #subtitle
+                >{{ marketplaceNameToCount.get(item.id) ?? 0 }} place{{
+                  (marketplaceNameToCount.get(item.id) ?? 0) !== 1 ? 's' : ''
+                }}</template
+              >
             </v-list-item>
           </template>
         </v-autocomplete>

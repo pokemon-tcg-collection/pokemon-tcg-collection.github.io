@@ -1,13 +1,15 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
 
-import type { RefID, Item } from '@/model/interfaces'
-import { ITEM_TYPES, CARD_LANGUAGES } from '@/model/interfaces'
+import type { Item, RefID } from '@/model/interfaces'
+import { CARD_LANGUAGES, ITEM_TYPES } from '@/model/interfaces'
 import { useItemsStore } from '@/stores/items'
 import { highlightAutocompleteItem, highlightAutocompleteItemValue } from '@/utils/autocomplete'
 
 const model = defineModel<RefID | undefined>()
 const search = ref<string>('')
+
+const { excludedItemIds } = defineProps<{ excludedItemIds?: RefID[] }>()
 
 const emit = defineEmits<{
   onNewItem: []
@@ -23,20 +25,22 @@ interface ItemItem {
   item: Item
 }
 const itemItems = computed<ItemItem[]>(() =>
-  Array.from(itemsStore.items.values()).map((item) => {
-    const itemType = item.type
-    const itemTypeLabel = ITEM_TYPES.find((it) => it.id == itemType)?.label
+  Array.from(itemsStore.items.values())
+    .filter(excludedItemIds ? (item) => !excludedItemIds.includes(item.id) : () => true)
+    .map((item) => {
+      const itemType = item.type
+      const itemTypeLabel = ITEM_TYPES.find((it) => it.id == itemType)?.label
 
-    const itemLanguageLabel = CARD_LANGUAGES.find((cl) => cl.code == item.language)?.short
+      const itemLanguageLabel = CARD_LANGUAGES.find((cl) => cl.code == item.language)?.short
 
-    return {
-      id: item.id,
-      label: item.name,
-      language_label: itemLanguageLabel,
-      type_label: itemTypeLabel,
-      item,
-    }
-  }),
+      return {
+        id: item.id,
+        label: item.name,
+        language_label: itemLanguageLabel,
+        type_label: itemTypeLabel,
+        item,
+      }
+    }),
 )
 
 function onNewItem() {

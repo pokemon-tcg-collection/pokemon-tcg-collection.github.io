@@ -24,6 +24,20 @@ const places = [
       created: new Date(),
     },
   },
+  // fan-made
+  {
+    id: '19bce07c-1c80-4a80-8484-22ac5cf4a470',
+    name: 'mizucat',
+    type: 'local-fair',
+    fair: 'Manga Comic Con 2026',
+    url: 'https://www.mizucat.com/',
+    address:
+      'Leipzig Book Fair 2026\n- https://www.leipziger-buchmesse.de/\n- https://www.manga-comic-con.de/',
+    _meta: {
+      created: new Date(),
+    },
+  },
+  // ---
   // online
   {
     id: '2cfd2e90-a768-4617-8767-6d06588be925',
@@ -92,6 +106,17 @@ const places = [
       created: new Date(),
     },
   },
+  {
+    id: 'a9753c9f-d0e1-4388-9d9f-2261d0584970',
+    name: 'kimjaqpete-0',
+    type: 'online-marketplace',
+    marketplace: 'ebay',
+    url: 'https://www.ebay.de/usr/kimjaqpete-0',
+    _meta: {
+      created: new Date(),
+    },
+  },
+  // ebay marketplace / kleinanzeigen
   {
     id: '22f60c3c-6fb2-4cc4-ad33-1dbef1f39134',
     name: 'Verkäufer (Pokemon Bulk/Holos)',
@@ -818,6 +843,29 @@ const items = [
       {
         url: 'https://godofcards.com/products/pokemon-scarlet-violet-ex-special-set-japanisch',
         name: 'God of Cards listing',
+      },
+    ],
+    _meta: {
+      created: new Date(),
+    },
+  },
+  // collection (Box Set?)
+  {
+    id: '7b067ba0-827c-4a4d-8bb4-29901a1e93a9',
+    name: 'Morpeko V Union Premium Spielunterlagen Kollektion',
+    type: 'collection',
+    cost_unit: 'EUR',
+    cost: 66.99,
+    language: 'de',
+    contents: [],
+    related_urls: [
+      {
+        url: 'https://www.ebay.de/itm/188094968491',
+        name: 'Ebay listing',
+      },
+      {
+        url: 'https://www.cardmarket.com/de/Pokemon/Products/Box-Sets/Crown-Zenith-Morpeko-V-UNION-Premium-Playmat-Collection',
+        name: 'CardMarket listing',
       },
     ],
     _meta: {

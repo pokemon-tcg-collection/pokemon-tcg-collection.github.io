@@ -1,11 +1,12 @@
 <script setup lang="ts">
-import { computed, readonly } from 'vue'
+import { readonly } from 'vue'
 import { useDisplay } from 'vuetify'
 
+import AutocompleteItem from '@/components/AutocompleteItem.vue'
 import EditorBase from '@/components/EditorBase.vue'
 import EditorFieldset from '@/components/EditorFieldset.vue'
 import useEditorObject from '@/composables/useEditorObject'
-import type { Item, ItemPart } from '@/model/interfaces'
+import type { ItemPart } from '@/model/interfaces'
 import { CARD_LANGUAGES, COST_UNITS, ITEM_TYPES } from '@/model/interfaces'
 import { useItemsStore } from '@/stores/items'
 
@@ -32,13 +33,10 @@ const {
 const itemTypes = readonly(ITEM_TYPES)
 const costUnits = readonly(COST_UNITS)
 
-const item_ids = computed<{ id: string; label: string; item: Item }[]>(() =>
-  Array.from(itemsStore.items.values())
-    // NOTE: remove self from list
-    // TODO: remove reference loops?
-    .filter((item2) => item2.id !== (item.value?.id ?? itemIdFromParam.value))
-    .map((item) => ({ id: item.id, label: item.name, item })),
-)
+// NOTE: remove self from list
+// TODO: remove reference loops?
+const self_id = item.value?.id ?? itemIdFromParam.value
+const excluded_item_ids = self_id ? [self_id] : []
 
 function onAddOneMorePart() {
   if (!item.value) return
@@ -148,26 +146,18 @@ function onItemPartItemSelected(part: ItemPart) {
             hide-details
             min-width="5rem"
           ></v-text-field>
-          <v-autocomplete
+          <AutocompleteItem
             v-model="part.item_id"
-            :items="item_ids"
-            item-title="label"
-            item-value="id"
+            :excluded-item-ids="excluded_item_ids"
             @update:model-value="() => onItemPartItemSelected(part)"
-            hide-details
-            clearable
+            @on-new-item="onAddNewItem"
             min-width="5rem"
             label="Item"
           >
-            <template #no-data>
-              <v-list-item>
-                <v-list-item-action @click="onAddNewItem">Create new Item</v-list-item-action>
-              </v-list-item>
-            </template>
             <template #append>
               <v-btn flat icon="mdi-delete" @click="() => onRemovePart(i)"></v-btn>
             </template>
-          </v-autocomplete>
+          </AutocompleteItem>
         </v-row>
 
         <v-btn @click="onAddOneMorePart">Add more parts</v-btn>

@@ -9,7 +9,7 @@ export const COST_UNITS = [
   { title: 'Euro (€)', id: 'EUR' },
   { title: 'US Dollar ($)', id: 'USD' },
   { title: 'Yen (¥)', id: 'YEN' },
-  // Pound, Yen
+  { title: 'Pound (£)', id: 'GBP' },
 ] as const
 
 // NOTE: manually since not exported

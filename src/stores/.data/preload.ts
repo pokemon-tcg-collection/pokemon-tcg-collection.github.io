@@ -116,6 +116,16 @@ const places = [
       created: new Date(),
     },
   },
+  {
+    id: '6b6a70ff-5dc0-4311-b426-3cc70b21a7cd',
+    name: 'Maple Pocket TCG',
+    type: 'online-marketplace',
+    marketplace: 'ebay',
+    url: 'https://www.ebay.de/str/japanhobbytop',
+    _meta: {
+      created: new Date(),
+    },
+  },
   // ebay marketplace / kleinanzeigen
   {
     id: '22f60c3c-6fb2-4cc4-ad33-1dbef1f39134',
@@ -884,6 +894,31 @@ const items = [
       {
         url: 'https://godofcards.com/products/pokemon-happy-card-set-s-chinesisch',
         name: 'God of Cards listing',
+      },
+    ],
+    _meta: {
+      created: new Date(),
+    },
+  },
+  {
+    id: '2b21440e-744c-4e99-9630-c64c7b1855ac',
+    name: 'MEGA Start Deck 100 Battle Collection',
+    type: 'theme-deck',
+    cost_unit: 'EUR',
+    language: 'ja',
+    contents: [],
+    related_urls: [
+      {
+        url: 'https://www.ebay.de/itm/147017587343',
+        name: 'Ebay listing',
+      },
+      {
+        url: 'https://www.card-corner.de/start-deck-100-battle-collection-card-list',
+        name: 'CardCosmos card list',
+      },
+      {
+        url: 'https://www.cardmarket.com/en/Pokemon/Products/Theme-Decks/MEGA-Start-Deck-100-Battle-Collection',
+        name: 'CardMarket listing',
       },
     ],
     _meta: {

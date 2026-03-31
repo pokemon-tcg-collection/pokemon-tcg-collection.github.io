@@ -10,7 +10,7 @@ import { sortDates } from '@/utils/sorting'
 
 const transactionsStore = useTransactionsStore()
 
-const { sumSpent, sumEarned, sumTotal } = useTransactionsStats()
+const { sumSpent, sumEarned, sumTotal, unit } = useTransactionsStats()
 
 interface TransactionItem {
   id: string
@@ -130,7 +130,7 @@ const sortBy: DataTableSortItem[] = [{ key: 'transaction.date', order: 'desc' }]
           :style="{ minWidth: 'fit-content', width: 0, whiteSpace: 'nowrap' }"
         >
           <span class="text-red-darken-3">{{ formatCurrencyNumber(sumSpent) }}</span>
-          EUR
+          {{ unit }}
         </td>
         <td class="v-data-table__td border-t-lg"></td>
       </tr>
@@ -143,7 +143,7 @@ const sortBy: DataTableSortItem[] = [{ key: 'transaction.date', order: 'desc' }]
           :style="{ minWidth: 'fit-content', width: 0, whiteSpace: 'nowrap' }"
         >
           <span class="text-green-darken-3">{{ formatCurrencyNumber(sumEarned) }}</span>
-          EUR
+          {{ unit }}
         </td>
         <td class="v-data-table__td"></td>
       </tr>
@@ -162,7 +162,7 @@ const sortBy: DataTableSortItem[] = [{ key: 'transaction.date', order: 'desc' }]
             }"
             >{{ formatCurrencyNumber(sumTotal) }}</span
           >
-          EUR
+          {{ unit }}
         </td>
         <td class="v-data-table__td"></td>
       </tr>

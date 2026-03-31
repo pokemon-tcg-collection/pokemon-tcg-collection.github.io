@@ -4,11 +4,12 @@ import type { SeriesID } from './tcg_sets'
 
 // -------------------------------------------------------------------------
 
+// ISO-4217-Code
 export type CostUnits = (typeof COST_UNITS)[number]['id']
 export const COST_UNITS = [
   { title: 'Euro (€)', id: 'EUR' },
   { title: 'US Dollar ($)', id: 'USD' },
-  { title: 'Yen (¥)', id: 'YEN' },
+  { title: 'Yen (¥)', id: 'JPY' },
   { title: 'Pound (£)', id: 'GBP' },
 ] as const
 

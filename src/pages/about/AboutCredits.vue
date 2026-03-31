@@ -200,6 +200,17 @@
       <a href="https://pictogrammers.com/docs/general/license/">Apache License 2.0</a>
     </li>
   </ul>
+  <ul class="mt-2">
+    <li>
+      Currency Exchange Rates API:
+      <v-icon icon="mdi-github" class="icon-in-text" size="small"></v-icon>
+      <a href="https://github.com/fawazahmed0/exchange-api">fawazahmed0/exchange-api</a>,
+      <v-icon icon="mdi-license" class="icon-in-text" size="small"></v-icon>
+      <a href="https://github.com/fawazahmed0/exchange-api/blob/main/LICENSE"
+        >Creative Commons Zero v1.0 Universal</a
+      >
+    </li>
+  </ul>
 </template>
 
 <style lang="css" scoped>

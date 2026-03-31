@@ -1,24 +1,29 @@
 import { computed } from 'vue'
 
 import type { CostUnits } from '@/model/interfaces'
+import { useCurrencyStore } from '@/stores/currency'
 import { useTransactionsStore } from '@/stores/transactions'
-
-function costToEUR(cost: number, cost_unit: CostUnits) {
-  // TODO: implement currency conversion
-  if (cost_unit !== 'EUR') {
-    console.warn('Non-EUR currency. Conversion required')
-    return 0
-  }
-  return cost
-}
 
 export default function useTransactionsStats() {
   const transactionsStore = useTransactionsStore()
+  const currencies = useCurrencyStore()
+
+  function convertCost(cost: number, cost_unit: CostUnits) {
+    const converted = currencies.convert(cost, cost_unit)
+    if (converted === undefined) {
+      console.warn('Unable to convert currency', { cost, cost_unit })
+      return 0 // TODO: what is a good fallback?
+    }
+    return converted
+  }
+
+  const unit = computed<CostUnits>(() => currencies.baseCurrency)
 
   const costs = computed(() =>
     Array.from(transactionsStore.transactions.values()).map(
       (transaction) =>
-        costToEUR(transaction.cost, transaction.cost_unit) * (transaction.type === 'buy' ? -1 : 1),
+        convertCost(transaction.cost, transaction.cost_unit) *
+        (transaction.type === 'buy' ? -1 : 1),
     ),
   )
 
@@ -32,5 +37,5 @@ export default function useTransactionsStats() {
   )
   const sumTotal = computed(() => sumEarned.value + sumSpent.value)
 
-  return { costs, numTransactions, sumSpent, sumEarned, sumTotal }
+  return { costs, numTransactions, sumSpent, sumEarned, sumTotal, unit }
 }

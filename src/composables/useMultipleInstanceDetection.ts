@@ -1,9 +1,10 @@
+import type { ConfigurableWindow } from '@vueuse/core'
 import { tryOnMounted, useBroadcastChannel, useStorage, useTimeout } from '@vueuse/core'
 import { v4 as uuidv4 } from 'uuid'
 import type { MaybeRefOrGetter } from 'vue'
 import { computed, readonly, ref, shallowRef, toRaw, toValue, watch } from 'vue'
 
-interface UseMultipleInstanceDetectionOptions {
+interface UseMultipleInstanceDetectionOptions extends ConfigurableWindow {
   instanceId?: MaybeRefOrGetter<string>
   pingTimeout?: MaybeRefOrGetter<number>
   key?: MaybeRefOrGetter<string>
@@ -19,11 +20,11 @@ interface PongMessage {
   pingId: string
 }
 
-export default function useMultipleInstanceDetection({
-  instanceId,
-  pingTimeout = 500,
-  key = 'multiple-instance-detection',
-}: UseMultipleInstanceDetectionOptions = {}) {
+export default function useMultipleInstanceDetection(
+  options: UseMultipleInstanceDetectionOptions = {},
+) {
+  const { instanceId, pingTimeout = 500, key = 'multiple-instance-detection', window } = options
+
   // unwrap
   const keyRaw = toValue(key)
   let instanceIdRaw = toValue(instanceId)
@@ -39,6 +40,7 @@ export default function useMultipleInstanceDetection({
     writeDefaults: true,
     mergeDefaults: false,
     listenToStorageChanges: false,
+    window,
   })
   if (instanceIdState.value !== instanceIdRaw) {
     console.warn('Found another instanceId in session storage? (reloaded page?)', {
@@ -53,6 +55,7 @@ export default function useMultipleInstanceDetection({
     writeDefaults: true,
     mergeDefaults: false,
     listenToStorageChanges: true,
+    window,
   })
 
   // ping to detect stale global instance id and possible other active instances
@@ -64,7 +67,7 @@ export default function useMultipleInstanceDetection({
     isSupported: isBroadcastSupported,
     data: broadcastData,
     post: broadcastPost,
-  } = useBroadcastChannel({ name: keyRaw })
+  } = useBroadcastChannel({ name: keyRaw, window })
 
   function sendPing() {
     const myInstanceId = instanceIdState.value

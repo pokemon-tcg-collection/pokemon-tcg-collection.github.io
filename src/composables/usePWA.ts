@@ -1,3 +1,4 @@
+import type { ConfigurableWindow } from '@vueuse/core'
 import { useEventListener, useMediaQuery } from '@vueuse/core'
 import { computed, shallowRef } from 'vue'
 
@@ -14,6 +15,10 @@ interface BeforeInstallPromptEvent extends Event {
   prompt(): Promise<UserChoice>
 }
 
+interface UsePWAOptions extends ConfigurableWindow {
+  blockAutomaticPrompt?: boolean
+}
+
 declare global {
   interface WindowEventMap {
     beforeinstallprompt: BeforeInstallPromptEvent
@@ -23,10 +28,10 @@ declare global {
 // share state since this should probably be global if `usePWA` is used multiple times
 const rawPrompt = shallowRef<BeforeInstallPromptEvent>()
 
-export default function usePWA({
-  blockAutomaticPrompt = false,
-}: { blockAutomaticPrompt?: boolean } = {}) {
-  const isInstalled = useMediaQuery('(display-mode: standalone)')
+export default function usePWA(options: UsePWAOptions = {}) {
+  const { blockAutomaticPrompt = false, window } = options
+
+  const isInstalled = useMediaQuery('(display-mode: standalone)', { window })
 
   const canBeInstalled = computed(() => rawPrompt.value !== undefined)
 

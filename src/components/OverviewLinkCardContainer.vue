@@ -1,5 +1,6 @@
 <script lang="ts">
-import { Fragment, type Slot, type VNode } from 'vue'
+import type { Slot, VNode } from 'vue'
+import { Fragment } from 'vue'
 import { useDisplay } from 'vuetify'
 
 // credit: https://github.com/orgs/vuejs/discussions/9414#discussion-5742965

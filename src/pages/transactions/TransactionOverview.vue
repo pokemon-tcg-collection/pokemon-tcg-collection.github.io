@@ -10,7 +10,7 @@ import { formatCurrencyNumber } from '@/utils/locale'
 
 const { smAndDown } = useDisplay()
 
-const { numTransactions, sumSpent, sumEarned, sumTotal } = useTransactionsStats()
+const { numTransactions, sumSpent, sumEarned, sumTotal, unit } = useTransactionsStats()
 const { numPlaces, numOnline, numLocal } = usePlacesStats()
 const { numItems, numItemsPerTypeType } = useItemsStats()
 </script>
@@ -37,7 +37,7 @@ const { numItems, numItemsPerTypeType } = useItemsStats()
               <span class="font-weight-bold text-red-darken-3">{{
                 formatCurrencyNumber(sumSpent)
               }}</span>
-              EUR
+              {{ unit }}
             </span>
           </p>
           <p class="text-headline-small pe-lg-4 d-flex flex-nowrap my-0 gc-2 justify-space-between">
@@ -46,7 +46,7 @@ const { numItems, numItemsPerTypeType } = useItemsStats()
               ><span class="font-weight-bold text-green-darken-3">{{
                 formatCurrencyNumber(sumEarned)
               }}</span>
-              EUR</span
+              {{ unit }}</span
             >
           </p>
           <p class="text-headline-small pe-lg-4 d-flex flex-nowrap my-0 gc-2 justify-space-between">
@@ -60,7 +60,7 @@ const { numItems, numItemsPerTypeType } = useItemsStats()
                 }"
                 >{{ formatCurrencyNumber(sumTotal) }}</span
               >
-              EUR
+              {{ unit }}
             </span>
           </p>
         </div>

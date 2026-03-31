@@ -5,12 +5,16 @@ import type { RouteLocationAsPathGeneric, RouteLocationAsRelativeGeneric } from 
 import { useRoute } from 'vue-router'
 import { useDisplay } from 'vuetify'
 
+import useMultipleInstanceDetection from '@/composables/useMultipleInstanceDetection'
 import usePWA from '@/composables/usePWA'
 import { useWorkInProgressStore } from '@/stores/workInProgress'
 
 const { xs } = useDisplay()
 const { isSupported: isNetworkSupported, isOnline } = useNetwork()
 const { isInstalled, canBeInstalled, promptInstall } = usePWA({ blockAutomaticPrompt: true })
+
+const { instanceId, mainInstanceId, otherInstanceIds, isMainInstance } =
+  useMultipleInstanceDetection({ key: 'pokemon-tcg-collection:multiple-instance-detection' })
 
 const wipStore = useWorkInProgressStore()
 
@@ -100,6 +104,36 @@ const breadcrumbs = computed(() =>
 
     <v-main>
       <v-container>
+        <v-alert
+          v-if="otherInstanceIds.length > 0 || !isMainInstance"
+          title="Multiple active tabs/windows detected!"
+          type="warning"
+          class="mb-4"
+          closable
+          :data-self-id="`${instanceId}`"
+          :data-main-id="`${mainInstanceId}`"
+          :data-other-ids="`${otherInstanceIds.join('|')}`"
+        >
+          <template #text>
+            <p class="my-1">
+              Multiple instances of this application have been detected. This application does not
+              reliably work with multiple instances as (parallel) database modifications may not
+              synchronize correctly and data loss may occur. Any editing should only be performed in
+              the main window/tab/application. Data can also be stale if editing happened in another
+              tab. To be sure, please refresh the page (F5) before doing any editing, so that a
+              fresh copy may be fetched from the database.
+            </p>
+            <p class="mt-1 mb-0">
+              This is <strong v-if="!isMainInstance">not</strong> the
+              <strong>main</strong> instance.
+              <template v-if="otherInstanceIds.length == 1">There is one other instance.</template>
+              <template v-else-if="otherInstanceIds.length >= 2"
+                >There are {{ otherInstanceIds.length }} other active instances.</template
+              >
+            </p>
+          </template>
+        </v-alert>
+
         <v-breadcrumbs :items="breadcrumbs" v-if="breadcrumbs.length > 1">
           <template #divider
             ><v-icon icon="mdi-pokeball"></v-icon><span class="d-sr-only">/</span></template

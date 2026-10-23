@@ -4,7 +4,6 @@ import { computed, ref } from 'vue'
 import type { RefID, Transaction } from '@/model/interfaces'
 import { usePlacesStore } from '@/stores/places'
 import { useTransactionsStore } from '@/stores/transactions'
-import { highlightAutocompleteItem, highlightAutocompleteItemValue } from '@/utils/autocomplete'
 
 const model = defineModel<RefID[] | undefined>()
 const search = ref<string>('')
@@ -64,7 +63,7 @@ function onAddNewTransaction() {
     multiple
     label="Related Transactions"
   >
-    <template #item="{ props, internalItem, item }">
+    <template #item="{ props, item }">
       <v-list-item v-bind="props">
         <template #prepend="{ isSelected }"
           ><v-checkbox-btn
@@ -76,16 +75,11 @@ function onAddNewTransaction() {
             @click="(event: MouseEvent) => event.preventDefault()"
           ></v-checkbox-btn
         ></template>
-        <template #title
-          ><component :is="() => highlightAutocompleteItem(internalItem, search)"
-        /></template>
+        <template #title><v-highlight :text="item.label" :query="search" /></template>
         <template #subtitle
-          ><component
-            :is="() => highlightAutocompleteItemValue(item.date_label, search)" /><template
+          ><v-highlight :text="item.date_label" :query="search" /><template
             v-if="item.place_label !== undefined"
-            >{{ ' | '
-            }}<component
-              :is="() => highlightAutocompleteItemValue(item.place_label, search)" /></template
+            >{{ ' | ' }}<v-highlight :text="item.place_label" :query="search" /></template
         ></template>
       </v-list-item>
     </template>

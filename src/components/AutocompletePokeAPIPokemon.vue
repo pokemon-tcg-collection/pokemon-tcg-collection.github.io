@@ -2,7 +2,6 @@
 import { ref } from 'vue'
 
 import { pokemon } from '@/apis/pokeapi'
-import { highlightAutocompleteItem } from '@/utils/autocomplete'
 
 const pokemon_lookup = new Map(pokemon.map((entry) => [entry.id, entry]))
 
@@ -39,7 +38,7 @@ function onUpdateModelValue(value: number) {
         >#{{ pokemon_lookup.get(model)?.sid }}</span
       >
     </template>
-    <template #item="{ props, internalItem, item }">
+    <template #item="{ props, item }">
       <v-list-item
         v-bind="props"
         :prepend-avatar="`/pokeapi-sprites/${item.sprite ? item.id : 0}.png`"
@@ -50,9 +49,7 @@ function onUpdateModelValue(value: number) {
           <v-avatar></v-avatar>
           <span class="ms-4 text-grey-lighten-1">#{{ item.sid }}</span>
         </template>
-        <template #title
-          ><component :is="() => highlightAutocompleteItem(internalItem, search)"
-        /></template>
+        <template #title><v-highlight :text="item.name" :query="search" /></template>
       </v-list-item>
     </template>
   </v-autocomplete>

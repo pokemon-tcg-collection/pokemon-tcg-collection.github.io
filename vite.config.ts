@@ -5,7 +5,6 @@ import type { RenderedChunk } from 'rolldown'
 import { visualizer } from 'rollup-plugin-visualizer'
 import type { SimpleGit, SimpleGitOptions } from 'simple-git'
 import { simpleGit } from 'simple-git'
-import fonts from 'unplugin-fonts/vite'
 import { defineConfig } from 'vite'
 import vueDevTools from 'vite-plugin-vue-devtools'
 import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
@@ -79,27 +78,6 @@ export default defineConfig({
       styles: {
         // https://vuetifyjs.com/en/features/sass-variables/#usage
         configFile: 'src/styles/settings.scss',
-      },
-    }),
-    fonts({
-      fontsource: {
-        // NOTE: math,symbols, ...
-        families: [
-          {
-            name: 'Roboto',
-            weights: [100, 300, 400, 500, 700, 900],
-            styles: ['normal', 'italic'],
-            subset: 'latin',
-          },
-          {
-            name: 'Roboto',
-            weights: [100, 300, 400, 500, 700, 900],
-            styles: ['normal', 'italic'],
-            subset: 'latin-ext',
-          },
-          // support of japanese/chinese/korean
-          // https://github.com/podlove/podlove-subscribe-button/issues/110#issuecomment-292117885
-        ],
       },
     }),
     vueDevTools(),

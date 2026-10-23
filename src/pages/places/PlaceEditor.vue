@@ -7,7 +7,6 @@ import useEditorObject from '@/composables/useEditorObject'
 import type { PlaceLocalFair } from '@/model/interfaces'
 import { ONLINE_MARKETPLACE } from '@/model/interfaces'
 import { usePlacesStore } from '@/stores/places'
-import { highlightAutocompleteItem } from '@/utils/autocomplete'
 
 const placesStore = usePlacesStore()
 
@@ -134,11 +133,9 @@ function isValidFairName(val: string | NameWithCountItem) {
           clearable
           :rules="[isValidFairName]"
         >
-          <template #item="{ props, item, internalItem }">
+          <template #item="{ props, item }">
             <v-list-item v-bind="props">
-              <template #title
-                ><component :is="() => highlightAutocompleteItem(internalItem, fairSearch)"
-              /></template>
+              <template #title><v-highlight :text="item.name" :query="fairSearch" /></template>
               <template #subtitle>{{ item.count }} place{{ item.count !== 1 ? 's' : '' }}</template>
             </v-list-item>
           </template>
@@ -168,7 +165,7 @@ function isValidFairName(val: string | NameWithCountItem) {
                 ><v-avatar :style="{ '--v-avatar-height': '24px' }"></v-avatar
               ></template>
               <template #title
-                ><component :is="() => highlightAutocompleteItem(internalItem, marketplaceSearch)"
+                ><v-highlight :text="item.label" :query="marketplaceSearch"
               /></template>
               <template #subtitle
                 >{{ marketplaceNameToCount.get(item.id) ?? 0 }} place{{

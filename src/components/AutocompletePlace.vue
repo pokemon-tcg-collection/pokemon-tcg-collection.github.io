@@ -5,7 +5,6 @@ import type { Place, RefID } from '@/model/interfaces'
 import { ONLINE_MARKETPLACE, PLACE_TYPE } from '@/model/interfaces'
 import { gatherPlaceIncomingRelations } from '@/stores/_relations'
 import { usePlacesStore } from '@/stores/places'
-import { highlightAutocompleteItem, highlightAutocompleteItemValue } from '@/utils/autocomplete'
 
 const model = defineModel<RefID | undefined>()
 const search = ref<string>('')
@@ -104,26 +103,21 @@ function onAddNewPlace() {
     <template #subheader="{ props, index }">
       <v-list-subheader v-bind="props" :key="`subheader-${index}`"></v-list-subheader>
     </template>
-    <template #item="{ props, internalItem, item }">
+    <template #item="{ props, item }">
       <v-list-item v-bind="props">
         <template #title
-          ><component :is="() => highlightAutocompleteItem(internalItem, search)"
+          ><v-highlight :text="(item as PlaceItem).label" :query="search"
         /></template>
         <template #subtitle
-          ><component
-            :is="() => highlightAutocompleteItemValue((item as PlaceItem).type_label, search)"
-          /><template v-if="(item as PlaceItem).marketplace_label"
+          ><v-highlight :text="(item as PlaceItem).type_label" :query="search" /><template
+            v-if="(item as PlaceItem).marketplace_label"
             >{{ ' | '
-            }}<component
-              :is="
-                () => highlightAutocompleteItemValue((item as PlaceItem).marketplace_label, search)
-              " /></template
+            }}<v-highlight
+              :text="(item as PlaceItem).marketplace_label"
+              :query="search" /></template
           ><template v-if="(item as PlaceItem).fair_label"
             >{{ ' | '
-            }}<component
-              :is="
-                () => highlightAutocompleteItemValue((item as PlaceItem).fair_label, search)
-              " /></template
+            }}<v-highlight :text="(item as PlaceItem).fair_label" :query="search" /></template
           ><template
             v-if="
               (item as PlaceItem).numberOfTransactions !== undefined &&

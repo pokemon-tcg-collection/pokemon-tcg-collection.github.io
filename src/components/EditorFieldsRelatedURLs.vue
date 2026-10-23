@@ -59,7 +59,7 @@ function onRemoveURL(url_idx: number) {
 <template>
   <EditorFieldset label="Related URLs">
     <v-row
-      class="gc-5 ms-0 me-0 mt-0"
+      class="gc-5 gr-2 ms-0 me-0 mt-0 mb-5"
       :class="{ ['mt-0']: i === 0 }"
       v-for="(url, i) in object.related_urls"
       :key="i"
@@ -70,9 +70,16 @@ function onRemoveURL(url_idx: number) {
         min-width="10rem"
         width="max-content"
         label="Description"
+        hide-details
         clearable
       ></v-combobox>
-      <v-text-field v-model="url.url" min-width="15rem" width="max-content" label="URL">
+      <v-text-field
+        v-model="url.url"
+        min-width="15rem"
+        width="max-content"
+        label="URL"
+        hide-details
+      >
         <template #append>
           <v-btn flat icon="mdi-delete" @click="() => onRemoveURL(i)"></v-btn>
         </template>

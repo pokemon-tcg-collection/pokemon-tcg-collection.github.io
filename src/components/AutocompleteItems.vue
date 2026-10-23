@@ -4,7 +4,6 @@ import { computed, ref } from 'vue'
 import type { RefID, Item } from '@/model/interfaces'
 import { ITEM_TYPES, CARD_LANGUAGES } from '@/model/interfaces'
 import { useItemsStore } from '@/stores/items'
-import { highlightAutocompleteItem, highlightAutocompleteItemValue } from '@/utils/autocomplete'
 
 const model = defineModel<RefID[] | undefined>()
 const search = ref<string>('')
@@ -58,7 +57,7 @@ function onNewItem() {
     multiple
     label="Related Items"
   >
-    <template #item="{ props, internalItem, item }">
+    <template #item="{ props, item }">
       <v-list-item v-bind="props">
         <template #prepend="{ isSelected }"
           ><v-checkbox-btn
@@ -70,15 +69,11 @@ function onNewItem() {
             @click="(event: MouseEvent) => event.preventDefault()"
           ></v-checkbox-btn
         ></template>
-        <template #title
-          ><component :is="() => highlightAutocompleteItem(internalItem, search)"
-        /></template>
+        <template #title><v-highlight :text="item.label" :query="search" /></template>
         <template #subtitle
           ><template v-if="item.language_label"
-            ><component :is="() => highlightAutocompleteItemValue(item.language_label, search)" />{{
-              ' | '
-            }}</template
-          ><component :is="() => highlightAutocompleteItemValue(item.type_label, search)"
+            ><v-highlight :text="item.language_label" :query="search" />{{ ' | ' }}</template
+          ><v-highlight :text="item.type_label" :query="search"
         /></template>
       </v-list-item>
     </template>

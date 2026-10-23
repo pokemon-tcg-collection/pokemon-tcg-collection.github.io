@@ -12,7 +12,6 @@ import { computed, ref, watch } from 'vue'
 
 import { CARD_LANGUAGES, TCGDEX_LANGUAGES } from '@/model/interfaces'
 import { useSettingsStore } from '@/stores/settings'
-import { highlightAutocompleteItem, highlightAutocompleteItemValue } from '@/utils/autocomplete'
 
 interface SetItem {
   id: string
@@ -78,8 +77,7 @@ async function updateTCGData() {
     .map((series) =>
       (
         [{ type: 'subheader', title: series.name, series: series }] as (
-          | SetItem
-          | { type: 'subheader'; title: string; series: SerieModel }
+          SetItem | { type: 'subheader'; title: string; series: SerieModel }
         )[]
       ).concat(
         series.sets.map((set) => ({
@@ -240,7 +238,7 @@ watch(
         </template>
       </v-list-item>
     </template>
-    <template #item="{ props, internalItem, item }">
+    <template #item="{ props, item }">
       <v-list-item v-bind="props">
         <template #prepend>
           <v-avatar rounded="0">
@@ -248,7 +246,7 @@ watch(
           </v-avatar>
         </template>
         <template #title
-          ><component :is="() => highlightAutocompleteItem(internalItem, searchSet)"
+          ><v-highlight :text="(item as SetItem).label" :query="searchSet"
         /></template>
         <template #subtitle v-if="(item as SetItem).set"
           >{{ (item as SetItem).set!.cardCount.official
@@ -261,8 +259,7 @@ watch(
               (item as SetItem).set!.cardCount.total - (item as SetItem).set!.cardCount.official
             }})</template
           >
-          Cards{{ ' | '
-          }}<component :is="() => highlightAutocompleteItemValue((item as SetItem).id, searchSet)"
+          Cards{{ ' | ' }}<v-highlight :text="(item as SetItem).id" :query="searchSet"
         /></template>
       </v-list-item>
     </template>
@@ -281,15 +278,13 @@ watch(
     hide-no-data
     :menu="true"
   >
-    <template #item="{ props, internalItem, item }">
+    <template #item="{ props, item }">
       <v-list-item v-bind="props">
         <template #prepend>
           <v-avatar :image="item.image" rounded="0"></v-avatar>
           <span class="ms-4 text-grey-lighten-1">#{{ item.nr }}</span>
         </template>
-        <template #title
-          ><component :is="() => highlightAutocompleteItem(internalItem, searchCard)"
-        /></template>
+        <template #title><v-highlight :text="item.label" :query="searchCard" /></template>
       </v-list-item>
     </template>
   </v-autocomplete>

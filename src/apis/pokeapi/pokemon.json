@@ -4730,7 +4730,7 @@
   {
     "id": 592,
     "sid": 592,
-    "identifier": "frillish",
+    "identifier": "frillish-male",
     "name": "Frillish",
     "generation": "v",
     "sprite": true
@@ -4738,7 +4738,7 @@
   {
     "id": 593,
     "sid": 593,
-    "identifier": "jellicent",
+    "identifier": "jellicent-male",
     "name": "Jellicent",
     "generation": "v",
     "sprite": true
@@ -5338,7 +5338,7 @@
   {
     "id": 668,
     "sid": 668,
-    "identifier": "pyroar",
+    "identifier": "pyroar-male",
     "name": "Pyroar",
     "generation": "vi",
     "sprite": true
@@ -8981,7 +8981,7 @@
     "identifier": "clefable-mega",
     "name": "Mega Clefable",
     "generation": "i",
-    "sprite": false
+    "sprite": true
   },
   {
     "id": 10279,
@@ -8989,7 +8989,7 @@
     "identifier": "victreebel-mega",
     "name": "Mega Victreebel",
     "generation": "i",
-    "sprite": false
+    "sprite": true
   },
   {
     "id": 10280,
@@ -8997,7 +8997,7 @@
     "identifier": "starmie-mega",
     "name": "Mega Starmie",
     "generation": "i",
-    "sprite": false
+    "sprite": true
   },
   {
     "id": 10281,
@@ -9005,7 +9005,7 @@
     "identifier": "dragonite-mega",
     "name": "Mega Dragonite",
     "generation": "i",
-    "sprite": false
+    "sprite": true
   },
   {
     "id": 10282,
@@ -9013,7 +9013,7 @@
     "identifier": "meganium-mega",
     "name": "Mega Meganium",
     "generation": "ii",
-    "sprite": false
+    "sprite": true
   },
   {
     "id": 10283,
@@ -9021,7 +9021,7 @@
     "identifier": "feraligatr-mega",
     "name": "Mega Feraligatr",
     "generation": "ii",
-    "sprite": false
+    "sprite": true
   },
   {
     "id": 10284,
@@ -9029,7 +9029,7 @@
     "identifier": "skarmory-mega",
     "name": "Mega Skarmory",
     "generation": "ii",
-    "sprite": false
+    "sprite": true
   },
   {
     "id": 10285,
@@ -9037,7 +9037,7 @@
     "identifier": "froslass-mega",
     "name": "Mega Froslass",
     "generation": "iv",
-    "sprite": false
+    "sprite": true
   },
   {
     "id": 10286,
@@ -9045,7 +9045,7 @@
     "identifier": "emboar-mega",
     "name": "Mega Emboar",
     "generation": "v",
-    "sprite": false
+    "sprite": true
   },
   {
     "id": 10287,
@@ -9053,7 +9053,7 @@
     "identifier": "excadrill-mega",
     "name": "Mega Excadrill",
     "generation": "v",
-    "sprite": false
+    "sprite": true
   },
   {
     "id": 10288,
@@ -9061,7 +9061,7 @@
     "identifier": "scolipede-mega",
     "name": "Mega Scolipede",
     "generation": "v",
-    "sprite": false
+    "sprite": true
   },
   {
     "id": 10289,
@@ -9069,7 +9069,7 @@
     "identifier": "scrafty-mega",
     "name": "Mega Scrafty",
     "generation": "v",
-    "sprite": false
+    "sprite": true
   },
   {
     "id": 10290,
@@ -9077,7 +9077,7 @@
     "identifier": "eelektross-mega",
     "name": "Mega Eelektross",
     "generation": "v",
-    "sprite": false
+    "sprite": true
   },
   {
     "id": 10291,
@@ -9085,7 +9085,7 @@
     "identifier": "chandelure-mega",
     "name": "Mega Chandelure",
     "generation": "v",
-    "sprite": false
+    "sprite": true
   },
   {
     "id": 10292,
@@ -9093,7 +9093,7 @@
     "identifier": "chesnaught-mega",
     "name": "Mega Chesnaught",
     "generation": "vi",
-    "sprite": false
+    "sprite": true
   },
   {
     "id": 10293,
@@ -9101,7 +9101,7 @@
     "identifier": "delphox-mega",
     "name": "Mega Delphox",
     "generation": "vi",
-    "sprite": false
+    "sprite": true
   },
   {
     "id": 10294,
@@ -9109,7 +9109,7 @@
     "identifier": "greninja-mega",
     "name": "Mega Greninja",
     "generation": "vi",
-    "sprite": false
+    "sprite": true
   },
   {
     "id": 10295,
@@ -9117,7 +9117,7 @@
     "identifier": "pyroar-mega",
     "name": "Mega Pyroar",
     "generation": "vi",
-    "sprite": false
+    "sprite": true
   },
   {
     "id": 10296,
@@ -9125,7 +9125,7 @@
     "identifier": "floette-mega",
     "name": "Mega Floette",
     "generation": "vi",
-    "sprite": false
+    "sprite": true
   },
   {
     "id": 10297,
@@ -9133,7 +9133,7 @@
     "identifier": "malamar-mega",
     "name": "Mega Malamar",
     "generation": "vi",
-    "sprite": false
+    "sprite": true
   },
   {
     "id": 10298,
@@ -9141,7 +9141,7 @@
     "identifier": "barbaracle-mega",
     "name": "Mega Barbaracle",
     "generation": "vi",
-    "sprite": false
+    "sprite": true
   },
   {
     "id": 10299,
@@ -9149,7 +9149,7 @@
     "identifier": "dragalge-mega",
     "name": "Mega Dragalge",
     "generation": "vi",
-    "sprite": false
+    "sprite": true
   },
   {
     "id": 10300,
@@ -9157,7 +9157,7 @@
     "identifier": "hawlucha-mega",
     "name": "Mega Hawlucha",
     "generation": "vi",
-    "sprite": false
+    "sprite": true
   },
   {
     "id": 10301,
@@ -9173,7 +9173,7 @@
     "identifier": "drampa-mega",
     "name": "Mega Drampa",
     "generation": "vii",
-    "sprite": false
+    "sprite": true
   },
   {
     "id": 10303,
@@ -9181,7 +9181,7 @@
     "identifier": "falinks-mega",
     "name": "Mega Falinks",
     "generation": "viii",
-    "sprite": false
+    "sprite": true
   },
   {
     "id": 10306,
@@ -9189,7 +9189,7 @@
     "identifier": "chimecho-mega",
     "name": "Mega Chimecho",
     "generation": "iii",
-    "sprite": false
+    "sprite": true
   },
   {
     "id": 10308,
@@ -9197,7 +9197,7 @@
     "identifier": "staraptor-mega",
     "name": "Mega Staraptor",
     "generation": "iv",
-    "sprite": false
+    "sprite": true
   },
   {
     "id": 10311,
@@ -9205,7 +9205,7 @@
     "identifier": "heatran-mega",
     "name": "Mega Heatran",
     "generation": "iv",
-    "sprite": false
+    "sprite": true
   },
   {
     "id": 10312,
@@ -9213,7 +9213,7 @@
     "identifier": "darkrai-mega",
     "name": "Mega Darkrai",
     "generation": "iv",
-    "sprite": false
+    "sprite": true
   },
   {
     "id": 10313,
@@ -9221,15 +9221,15 @@
     "identifier": "golurk-mega",
     "name": "Mega Golurk",
     "generation": "v",
-    "sprite": false
+    "sprite": true
   },
   {
     "id": 10314,
     "sid": 678,
-    "identifier": "meowstic-mega",
+    "identifier": "meowstic-male-mega",
     "name": "Mega Meowstic",
     "generation": "vi",
-    "sprite": false
+    "sprite": true
   },
   {
     "id": 10315,
@@ -9237,7 +9237,7 @@
     "identifier": "crabominable-mega",
     "name": "Mega Crabominable",
     "generation": "vii",
-    "sprite": false
+    "sprite": true
   },
   {
     "id": 10316,
@@ -9245,7 +9245,7 @@
     "identifier": "golisopod-mega",
     "name": "Mega Golisopod",
     "generation": "vii",
-    "sprite": false
+    "sprite": true
   },
   {
     "id": 10317,
@@ -9253,7 +9253,7 @@
     "identifier": "magearna-mega",
     "name": "Mega Magearna",
     "generation": "vii",
-    "sprite": false
+    "sprite": true
   },
   {
     "id": 10318,
@@ -9261,7 +9261,7 @@
     "identifier": "magearna-original-mega",
     "name": "Mega Magearna",
     "generation": "vii",
-    "sprite": false
+    "sprite": true
   },
   {
     "id": 10319,
@@ -9269,7 +9269,7 @@
     "identifier": "zeraora-mega",
     "name": "Mega Zeraora",
     "generation": "vii",
-    "sprite": false
+    "sprite": true
   },
   {
     "id": 10320,
@@ -9277,7 +9277,7 @@
     "identifier": "scovillain-mega",
     "name": "Mega Scovillain",
     "generation": "ix",
-    "sprite": false
+    "sprite": true
   },
   {
     "id": 10321,
@@ -9285,7 +9285,7 @@
     "identifier": "glimmora-mega",
     "name": "Mega Glimmora",
     "generation": "ix",
-    "sprite": false
+    "sprite": true
   },
   {
     "id": 10322,
@@ -9293,7 +9293,7 @@
     "identifier": "tatsugiri-curly-mega",
     "name": "Mega Tatsugiri",
     "generation": "ix",
-    "sprite": false
+    "sprite": true
   },
   {
     "id": 10323,
@@ -9301,7 +9301,7 @@
     "identifier": "tatsugiri-droopy-mega",
     "name": "Mega Tatsugiri",
     "generation": "ix",
-    "sprite": false
+    "sprite": true
   },
   {
     "id": 10324,
@@ -9309,7 +9309,7 @@
     "identifier": "tatsugiri-stretchy-mega",
     "name": "Mega Tatsugiri",
     "generation": "ix",
-    "sprite": false
+    "sprite": true
   },
   {
     "id": 10325,
@@ -9317,6 +9317,14 @@
     "identifier": "baxcalibur-mega",
     "name": "Mega Baxcalibur",
     "generation": "ix",
-    "sprite": false
+    "sprite": true
+  },
+  {
+    "id": 10326,
+    "sid": 678,
+    "identifier": "meowstic-female-mega",
+    "name": "Mega Meowstic",
+    "generation": "vi",
+    "sprite": true
   }
 ]

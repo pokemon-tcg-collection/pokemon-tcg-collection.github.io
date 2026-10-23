@@ -332,6 +332,12 @@ def main():
         pokemon_species = species[pokemon.species_id]
         names = species_names[pokemon_species.id]
 
+        # if pokemon.identifier.endswith("-male"):
+        #     pokemon.identifier = pokemon.identifier[:-5]
+        # elif pokemon.identifier.endswith("-female"):
+        #     pokemon.identifier = pokemon.identifier[:-7]
+        # TODO: gender also be contained inbetween
+
         special = not pokemon.is_default
 
         generation = generations[pokemon_species.generation_id].identifier
